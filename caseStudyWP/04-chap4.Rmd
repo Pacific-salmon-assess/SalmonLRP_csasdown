@@ -1,0 +1,28 @@
+# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK
+
+## CONTEXT
+
+-	SMU Description
+-	Which used? 
+-	Unique attributes of the case study
+
+## DATA
+
+-	Type of benchmarks 
+-	Sources
+-	Caveats
+
+
+## METHODS
+
+
+### EMPIRICAL LRPS
+
+
+### PROJECTED LRPS
+
+
+### RETROSPECTIVE EVALUATION
+
+
+## RESULTS
