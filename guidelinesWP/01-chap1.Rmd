@@ -1,26 +1,37 @@
-# INTRODUCTION
+# INTRODUCTION {#intro}
 
-Welcome to the R Markdown CSAS template. This template is based on (and in many places copied directly from) the huskydown R package, the thesisdown R package, and the CSAS LaTeX template. Hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using R Markdown will also allow you to easily keep track of your analyses in R chunks of code, with the resulting plots and output included as well. The hope is this R Markdown template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+## Background & Motivation for Project
+- Revised Fisheries Act received Royal Assent in June 2019.  
+-	Changes to the Act include fish stocks provisions that introduce legal requirements to promote sustainability, avoid Limit Reference Points (LRPs) and implement rebuilding plans for depleted stocks.
+-	Under these fish stock provisions, LRPs that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  LRPs define the trigger below which rebuilding plans will be required. 
+-	Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
+-	“The choice of LRP needs to be feasible (separate from, but can be operationalized by, appropriate management measures), defensible (consistent with best practices), reliably estimated, and in line with the intent of the Precautionary Approach Policy regarding serious harm (DFO 2009).“ (DFO NHQ) 
 
-Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted CSAS Res Doc. The use of LaTeX in combination with Markdown is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. After working with Markdown and R together for a few weeks, we are confident this will be your reporting style of choice going forward.
+Scales of Pacific salmon assessment reporting
 
-<!--  If you're still on the fence about using R Markdown, check out the resource for newbies available at <https://ismayc.github.io/rbasics-book/>.-->
+1. Wild Salmon Policy
+2. COSEWIC
+3. Pacific Salmon Treaty Management Units
+4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. Note to readers, we are not reviewing SMUs in this document. Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)
 
-## WHY USE IT?
+-	Establish that LRPs for salmon should be consistent with the WSP
+-	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
+-	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
 
-R Markdown creates a simple and straightforward way to interface with the beauty of LaTeX.  Packages have been written in R to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, R Markdown also allows you to read in your data, to analyze it and to visualize it using R functions, and also to provide the documentation and commentary on the results of your project.  Further, it allows for R results to be passed inline to the commentary of your results.  You'll see more on this later.
+##	Objectives of this Document
+text
 
-<!--  Having your code and commentary all together in one place has a plethora of benefits! -->
+##	Approach Taken to Develop Guidelines
+-	Describe Technical Working Group
+-	Explain how case studies were used by the TWG to develop guidance
 
-## WHO SHOULD USE IT?
-
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use R Markdown. Of particular use should be anyone in the sciences, but the user-friendly nature of Markdown and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a CSAS Res Doc.
 
 <!--
 The {#rmd-basics} text after the chapter declaration will allow us to link throughout the document back to the beginning of Chapter 1.  These labels will automatically be generated (if not specified) by changing the spaces to hyphens and capital letters to lowercase.  Look for the reference to this label at the beginning of Chapter 2.
 -->
+\  
 
-# R MARKDOWN BASICS {#rmd-basics}
+## R MARKDOWN BASICS {#rmd-basics}
 
 Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.
 

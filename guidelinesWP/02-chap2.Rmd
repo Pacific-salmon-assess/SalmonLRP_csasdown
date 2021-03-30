@@ -1,6 +1,61 @@
-# MATHEMATICS {#math-sci}
+# LRP Estimation Methods for Pacific Salmon {#est-methods}
 
-You can include most valid TeX math and it will render in all formats:
+This section will address the question: “What methods are available to develop SMU-level LRPs that are consistent with the WSP?”
+
+
+## Estimation of CU Status
+
+-	There are a variety of CU-level abundance based benchmarks, depending on species and data availability, etc. 
+-	When providing guidance in this paper, we focus on: 
+
+-	Stock-recruitment based benchmarks, 
+-	Percentile based benchmarks, 
+-	Watershed-area based benchmarks (as one example of a habitat-based benchmarks), 
+-	Distributional benchmarks
+
+
+-	We have not included metrics and benchmarks based on status of habitat or ecosystem status (strategies 2 and 3 of the WSP)
+
+## Estimation of LRPs: Aggregating CU Status to the SMU-level
+
+### Report status relative to benchmarks for individual CUs 
+
+- i.e., no roll-up
+- A benefit to no roll up is that it focuses attention directly on CUs with low status.  However, emerging policy (from NHQ) suggests that each stock should have a single established LPR (one stock = 1 LRP).
+
+###	Ppn of CUs with status greater than red 
+
+(for CUs where data are available)
+
+### Multidimensional approach to aggregating metrics across CUs 
+
+(where data are available)
+
+- While fully developing and applying this approach to a case study was outside the scope of this guidance document, we include it here as an option to be developed at a later date, as warranted.  
+- This approach is expected to be very case specific, and will need to be linked to a well-documented management procedure for a given stock management unit
+
+###	Aggregate abundances associated with ppns of CUs greater than benchmarks 
+
+(where data are available)
+- Empirical/historical (details and example below, Section 2.3.1)
+- Prospective (details and example below, Section 2.3.2)
+
+### Aggregate abundance not directly tied to CU status
+
+- There may be cases where work has been done to identify SMU-level limit reference points that are not directly linked to CU status. For example methods developed to support PST management.
+
+- If we rely on aggregate abundances (or indicators within an SMU) determined via other approaches, can we justify it because of evidence that CUs co-vary, e.g.,	they have similar threats, e.g., 
+- fisheries are sampled for GSI and proportions have not changed over time suggesting that smaller CUs are not being over harvested
+- available escapement data suggests CUs are stable,
+- evidence of covariance in spawner time-series (or productivity time-series where available)
+
+## Considerations When Selecting a LRP Estimation Method
+
+- Discussions of the advantages and challenges of each approach.  E.g.,	Do we need SMU-level LRPs if we have CU-level benchmarks that are reviewed and well documented? What are the criteria for being reviewed, well documented, and sufficiently up-to-date?
+
+
+
+
 
 \begin{equation}
   1 + 1 = 2

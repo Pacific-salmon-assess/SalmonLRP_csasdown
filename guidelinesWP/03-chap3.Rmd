@@ -2,9 +2,24 @@
 flights <- read.csv("data/flights.csv")
 ```
 
-# TABLES, GRAPHICS, REFERENCES, AND LABELS {#ref-labels}
+# Approaches for Setting Aggregate Abundance LRPs Based on CU Status {#approaches}
 
-## TABLES
+In this guidance document, we focus on providing guidance for the two aggregate abundance methods (Data-based and projected LRPs).  Here, we provide a more detailed description of these two methods.
+
+## Empirical LRPs (derived from logistic regression of historical data
+-	Description of logistic model approach, with illustrative figures, equations, etc
+-	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 
+-	Describe suggested model validation/checks for logistic regression and illustrate on an example SMU.
+-	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
+
+## Projection-based LRPs 
+-	Description of projected LRP approach, with illustrative figures, equations, etc
+-	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
+-	Develop LRPs from projections at specific proportions instead of logistic regression
+-	Note that all of the benchmarks provided in Table 1 can all be used as a basis for defining prospective LRPs 
+-	Describe approaches for estimating uncertainty, e.g., Combining projections from multiple operating model scenarios
+
+
 
 By far the easiest way to present tables in your report is to store the contents of the table in a CSV or Excel file, then read that file in to your R Markdown document as a data frame. Then you can style the table with the `kable` function, or functions in the [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) pacakge. We recommend using `csasdown::csas_table()`, which simply passes some necessary arguments to `knitr::kable()` so that the tables will render correctly for CSAS.
 
