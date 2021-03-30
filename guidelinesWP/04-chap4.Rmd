@@ -1,0 +1,16 @@
+# Case Studies Used to Support the Development of Guidance {#case-studies}
+
+-	Three case studies have been used to inform the guidelines presented in Section 4 of this document (Interior Fraser Coho SMU, West Coast Vancouver Island SMU, and South Coast Chum SMU). 
+-	These three case studies were used to demonstrate and quantitatively evaluate performance of the two aggregate-abundance based LRPs described in Section 2 (Empirical and Projection-based LRPs). A combination of retrospective analyses and simulations analyses were used (will give 1-2 sentence description of retrospective and simulation-based methods).
+-	In this section, we provide a brief description of each case study and associated LRPs.  
+-	More thorough descriptions of case studies, including SMU characteristics, data sources, analysis methods, and results, are available in a separate research document, A Case Study Application of LRP Estimation Methods to Pacific Salmon SMUs.
+
+##	Interior Fraser Coho
+
+##	West Coast Vancouver Island Chinook
+
+##	South Coast Chum (excluding Fraser)
+
+
+Table 1. Overview of benchmarks and LRP estimation methods examined for each case study.
+(to be included)
