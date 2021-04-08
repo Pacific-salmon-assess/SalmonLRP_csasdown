@@ -1,20 +1,85 @@
-# CASE STUDY 3: SOUTH COAST CHUM - NON-FRASER
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER
+
+[//]: # Add a comment in colour: *\textcolor{cyan}{LW: some text}*
 
 ## CONTEXT
 
--	SMU Description
+-SMU description
+The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:map-chum)). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
+
+```{r map-chum, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management unit (not including Lower Fraser and Fraser Canyon Conservation Units). Numbers indicate the Fishery Management Areas associated with these populations."}
+knitr::include_graphics(here::here("figure/fig_chum_CU_map.png"))
+```
+
+
 -	Which used? 
 -	Unique attributes of the case study
 
 ## DATA
 
--	Type of benchmarks 
--	Sources
--	Caveats
+This case study used essentially the same data used in `@holt_evaluating_2018`, updated with escapement data up to 2018. `@van_will_inner_2014` provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below.
 
+### Spawner counts / Escapement
+
+Escapement data were downloaded from the NUSEDS database. Escapement data record the estimates of total spawners by stream and CU for each year.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, and using fences or weirs on some rivers. If there was more than one count for a stream in a given year, total escapement was estimated using the area under the curve (AUC) method.
+
+### Fishery harvest
+
+The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. 
+
+### Data treatment
+
+The steps for preparing the data for analysis were:
+
+1. Infill total and wild escapement by CU and Area, (by stream for CUs with observations, by CU for years with no observations in a CU)
+2. Add fishery catch by CU and Area to total escapement to estimate total returns / recruitment / stock *\textcolor{cyan}{LW: not sure which term to use here. Recruitment might be confusing since it is recruits in a spawning year, not for a brood year}*
+3. Use proportion of wild:total escapement by CU and Area to estimate number of wild returns 
+4. Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU.
+5. Result: wild spawners and corresponding recruits by brood year for each CU
+
+#### Infilling of spawner escapement data 
+
+
+
+#### Run reconstruction to estimate recruitment
+
+
+### Subsets of data used
 
 ## METHODS
 
+### Benchmarks for Conservation Units
+
+#### Benchmark based on stock-recruit relationship - Sgen
+
+#### Benchmark based on historical abundance - Percentile
+
+### Regression forms
+
+Bernoulli vs. Binomial
+
+```{r table1, echo=FALSE}
+d1 <- tribble(
+  ~Year, ~`Value 1`, ~`Value 2`,
+   2018,       1.12,       31.9,
+   2019,       2.32,        2.8,
+   2020,       3.67,      112.2)
+if(french){
+  names(d1) <- c(rosettafish::en2fr("Year"),
+                 paste0(rosettafish::en2fr("Value"), 1),
+                 paste0(rosettafish::en2fr("Value"), 2))
+}
+csasdown::csas_table(d1,
+  align = c("c", "r", "r"),
+  caption = ifelse(french,
+                   "French goes here",
+                   "Test table (data is d1) with a caption will be numbered automatically."))
+```
 
 ### EMPIRICAL LRPS
 
