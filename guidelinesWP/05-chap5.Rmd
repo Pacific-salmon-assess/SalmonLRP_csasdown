@@ -1,108 +1,320 @@
-# Guidelines for Applying Aggregate Abundance LRP Estimation Methods {#guidelines}
+# Recommendations for Future Work {#recommendations}
+
+Should highlight the identification of questions / outstanding guidance that were beyond our scope
+
+- Specific questions about how well index sites within a CU represent the CU as a whole (i.e., representativeness question, but for sites within a CU instead of CUs within an SMU)
+
+- Consideration of additional habitat-based benchmarks
+
+- Suggestion to consider all three management levers in LRP development: harvest, hatcheries and habitat. Should LRPs be identified along those three dimensions and/or integrate information for those 3 levers?
+
+- Standard versus hierarchical stock-recruitment models for estimating benchmarks
 
 
-## Which LRP method should be used?
+## Extra text on R MARKDOWN BASICS: IGNORE {#rmd-basics}
+
+Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.
+
+Be careful with your spacing in _Markdown_ documents.  While whitespace largely is ignored, it does at times give _Markdown_ signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things if you do).
+
+## LISTS
+
+CSAS allows ordered lists:
+
+1. Item 1
+4. Item 2
+
+and bulleted lists:
+
+- Item 1
+- Item 2
+
+Notice in the ordered list that I intentionally mislabeled Item 2 as number 4.  _Markdown_ automatically figures this out!  You can put any numbers in the list and it will create the list.  Check it out below.
+
+To create sublists, just indent the values a bit (at least three spaces) and make sure there are no newlines between the items. (Here's one case where indentation is key!)
+
+1. Item 1
+1. Item 2
+1. Item 3
+   a. Item 3a
+   a. Item 3b
+      i. Item 3bi
+      i. Item 3bii
+      i. Item 3biii
+      i. Item 3biv
+      i. Item 3bv
+         1. Item 3bv1
+         1. Item 3bv2
+
+## LINE BREAKS
+
+Make sure to add white space between lines if you'd like to start a new paragraph.  Look at what happens below in the outputted document if you don't:
+
+Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
+This should be a new paragraph.
+
+*Now for the correct way:*
+
+Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
+
+This should be a new paragraph.
+
+## R CHUNKS
+
+When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (`cars` is a built-in **R** dataset):
+
+```{r cars2}
+summary(cars)
+```
+## INLINE CODE
+
+If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
+
+> The `cos` of $2 \pi$ is `r cos(2*pi)`.
+
+Another example would be the direct calculation of the standard deviation:
+
+> The standard deviation of `speed` in `cars` is `r sd(cars$speed)`.
+
+One last neat feature is the use of the `ifelse` conditional statement which can be used to output text depending on the result of an **R** calculation:
+
+> `r ifelse(sd(cars$speed) < 6, "The standard deviation is less than 6.", "The standard deviation is equal to or greater than 6.")`
+
+Note the use of `>` here, which signifies a quotation environment that will be indented.
+
+As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].
+
+## INCLUDING PLOTS
+
+You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
+```{r pressure2, echo=FALSE, cache=TRUE}
+plot(pressure)
+```
+Note that the `echo=FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
+
+Another useful chunk option is the setting of `cache=TRUE` as you see here.  If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance.  Later in this file, you'll see a way to reference plots created in **R** or external figures.
+
+## LOADING AND EXPLORING DATA
+
+Included in this template is a file called `flights.csv`.  This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014.  More information about this dataset and its **R** package is available at <http://github.com/ismayc/pnwflights14>.  This subset includes only Portland flights and only rows that were complete with no missing values.  Merges were also done with the `airports` and `airlines` data sets in the `pnwflights14` package to get more descriptive airport and airline names.
+
+\  
+
+We can load in this data set using the following command (`read_csv()` is from the package `readr`):
+```{r load_data2, echo=TRUE}
+flights <- read_csv(file.path("data", "flights.csv"))
+```  
+
+\  
+
+*Before we continue, note that to insert extra blank lines in text as we did above and below, we need to have a line with a backslash followed by two spaces. Look carefully at those lines in the code editor.*
+
+\  
+
+All your tabular data should be in `.csv` files and placed in the `data` directory. The function `here::here()` should always be used when loading data into the project because it will prepend the full root directory of the project onto the directories and files inside the call. This gives consistent file structure access across multiple machines and platforms.
+
+The data is now stored in the data frame called `flights` in **R**.  To get a better feel for the variables included in this dataset we can use a variety of functions.  Here we can see the dimensions (rows by columns) and also the names of the columns.
+
+```{r str2}
+dim(flights)
+names(flights)
+```
+\  
+
+Another good idea is to take a look at the dataset in table form.  With this dataset having more than 50,000 rows, we won't explicitly show the results of the command here.  I recommend you enter the command into the Console **_after_** you have run the **R** chunks above to load the data into **R**. To do that, you can use the command `View(flights)`.
+
+A simple and effective way to see the entire structure in one call is to use the `glimpse()` command like this:
+```{r glimpse_flights2, echo = TRUE}
+glimpse(flights)
+```
+
+```{r view_flights2, eval=FALSE}
+View(flights)
+```
+
+While not required, it is highly recommended you use the `dplyr` package to manipulate and summarize your data set as needed.  It uses a syntax that is easy to understand using chaining operations.  Below I've created a few examples of using `dplyr` to get information about the Portland flights in 2014.  You will also see the use of the `ggplot2` package, which produces beautiful, high-quality academic visuals.
+
+We begin by checking to ensure that needed packages are installed and then we load them into our current working environment:
+
+```{r load_pkgs2, message=FALSE, echo=TRUE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg)) {
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+}
+library(csasdown)
+```
+
+\clearpage
+
+The example we show here does the following:
+
+- Selects only the `carrier_name` and `arr_delay` from the `flights` dataset and then assigns this subset to a new variable called `flights2`.
+
+- Using `flights2`, we determine the largest arrival delay for each of the carriers.
+
+```{r max_delays2}
+library(dplyr)
+flights2 <- flights %>%
+  select(carrier_name, arr_delay)
+max_delays <- flights2 %>%
+  group_by(carrier_name) %>%
+  summarize(max_arr_delay = max(arr_delay, na.rm = TRUE))
+```
+
+A useful function in the `knitr` package for making nice tables in _R Markdown_ is called `kable`.  It is much easier to use than manually entering values into a table by copying and pasting values into Excel or LaTeX.  This again goes to show how nice reproducible documents can be! (Note the use of `results="asis"`, which will produce the table instead of the code to create the table.)  The `caption.short` argument is used to include a shorter title to appear in the List of Tables.
+
+Within CSAS you should use the function `csasdown::csas_table()` instead. It just calls the function `kable()`, but it adds some default argument values that will make the tables render correctly in both LaTeX and in Word documents.
 
 
+```{r maxdelays2, results="asis"}
+library(knitr)
+csas_table(max_delays,
+  col.names = c("Airline", "Max Arrival Delay"),
+  caption = "Maximum Delays by Airline"
+)
+```
 
-### When are aggregate abundance LRP methods appropriate?
+The last two options make the table a little easier-to-read.
 
--	Based on experience applying LRPs to case studies, develop recommendations on when aggregate abundance LRPs are appropriate or not (and when proportions of CUs $>$ red status, CU-level statuses without aggregation, or multi-dimensional approaches should be considered instead). Do these recommendations depend on the number of CUs (e.g., what if the SMU only has 1 or 2 CUs)?
--	General comment: when phrasing guidance, address when it is appropriate to use various methods as well as when it is NOT appropriate too use those methods
-
-### Empirical vs. projected approaches for aggregate-abundance LRPS
-
-Questions to provide guidance on:
--	How do projection-based and empirical LRPs (and their uncertainties) compare?
--	What type of data and level of data-quality is required to support historic LRPs? 	How robust are empirical LRPs to different underlying scenarios (model formulations, observation errors, time-varying productivity and capacity)?
-- What type of data and level of data-quality is required to support projected LRPs?  How robust are prospective LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, implementation error, observation errors, time-varying productivity and capacity)
-- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted?
--	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
+Let's make a plot of the data:
 
 
-## What proportional threshold value should be used for aggregate-abundance LRPs?
+```{r march3plot2, fig.height=3, fig.width=6, fig.cap="My caption."}
+library(ggplot2)
+flights %>%
+  ggplot(aes(x = dep_time, y = arr_delay)) +
+  geom_point()
+```
 
--	Default should be aggregate abundance associated with 100$\%$ of CUs being above their lower benchmark; however, there may be cases when a sub-set of CUs being below their lower benchmarks is permitted, such as where CUs are intrinsically at low levels and are not being significantly impacted by human threats such as fishing or habitat deterioration. 
--	These exceptions will need to be made on a case-by-case basis, with the rationale for these decisions well-documented.
--	Guidelines on rationale TBD
-
-While the acceptable proportion of CUs below lower benchmarks can be thought of as a trade-off decision to be made by decision-makers, LRPs are intended to be defined by Science and represent a level of serious harm. -	Question: could serious harm may mean extinction rather that in the red zone?  
-
--	Question: could serious harm may mean extinction rather that in the red zone?  
-
--	The question of whether a CU within a larger SMU can persist in the red zone is something that could be simulation tested; although, this would require harvest control rules to be specified for testing.  Such an approach would be case-specific and outside of the scope of our work.  However, we could consider recommending that if a decision is made for a CU to allow some proportion of CUs to be in the red zone, quantitative evaluation (e.g., simulation testing) should be used to demonstrate that red CUs will not be lost. [Although, we may still want to consider putting some bounds on what proportion would be allowed to be below their lower benchmark, i.e., a large proportion of CUs persisting in the red zone may not be acceptable ].
-
--if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
-
-##	Guidance on scale of diversity used to define aggregate-abundance LRPs
-
-Questions to provide guidance on:
--	When it is appropriate to group CUs together or split CUs into smaller sub-components?
+\ 
+Also, making equations in text:
 
 
-##	Guidance on the application of aggregate abundance LRPs
+\begin{equation}
+  1 + 1 = 2
+  (\#eq:reaction)
+\end{equation}
 
--	Modelling approaches: advantages and disadvantages of using integrated models to propagate uncertainty from stock-recruitment models through to LRP estimates (highlight integrated Sgen-LRP model and Watershed-Area model)
--	Recommended software: e.g., TMB, TMBstan, R
--	Recommended process:Do we recommend a CSAS review every time an LRP is identified for a SMU
-- One option- we could recommend a CSAP Science Response for relatively stratigh-forward appications of the two aggregate abundance methods that we focus on here. In cases where other approaches, (e.g., multi-dimensional) or unique circumstances arise that have not been covered in this guidance document, a full CSAS Science Review should be considered.
-- CSAS Special Science Responses (SSRs) could document and review LRPs for several SMUs at once (or review several SSR within one meeting)
-- In some cases, LRPs could be documented and reviewed within rebuilding plan. For LRPs, but this would not cover SMUs that are batched, but do not require rebuilding plans.
-- Look to National Working Group for guidance on required documentation and review of LRPs. What is required for other species?
-- Suggestion to provide some flexibility when applying these methods given local context and data (e.g,, local expertise required when providing justification for persistence of CUs in the red zone; enhancement).
+\clearpage 
+By far the easiest way to present tables in your report is to store the contents of the table in a CSV or Excel file, then read that file in to your R Markdown document as a data frame. Then you can style the table with the `kable` function, or functions in the [kableExtra](https://cran.r-project.org/web/packages/kableExtra/index.html) pacakge. We recommend using `csasdown::csas_table()`, which simply passes some necessary arguments to `knitr::kable()` so that the tables will render correctly for CSAS.
 
--	What is the appropriate measure of current abundances to compare against LRPs?
-- To minimize annual variability in assessments and be consistent with WSP assessments (and other jurisdictions), we recommend using aggregate generational average abundance when comparing current SMU abundance to LRPs
+In addition to the tables that can be automatically generated from a data frame in R that you saw in [R Markdown Basics] using the `kable` function, you can also create tables using pandoc. (More information is available at <http://pandoc.org/README.html#tables>.)  This might be useful if you don't have values specifically stored in R, but you'd like to display them in table form.  Below is an example.  Pay careful attention to the alignment in the table and hyphens to create the rows and columns. Generally we don't recommend this approach of typing the table directly into your R Markdown document.
 
-## Selection of CU-level benchmarks to use as a basis for LRP estimation (Placeholder) 
+----------------------------------------------------------------------------------
+  Factors                    Correlation between Parents & Child      Inherited
+------------------------- ----------------------------------------- --------------
+  Education                                -0.49                         Yes
+  
+  Socio-Economic Status                     0.28                        Slight   
+  
+  Income                                    0.08                          No
+  
+  Family Size                               0.18                        Slight
+  
+  Occupational Prestige                     0.21                        Slight
+------------------------- ----------------------------------------- --------------
+Table: (\#tab:inher) Correlation of Inheritance Factors for Parents and Child 
 
-Placeholder.  Thorough exploration of this topic may be out of scope for this Working Paper. We may decide that we do not need to go into this much detail given previous work that has been done to evaluate WSP benchmarks.
+We can also create a link to the table by doing the following: Table \@ref(tab:inher).  If you go back to [Loading and exploring data] and look at the `kable` table, we can create a reference to this max delays table too: Table \@ref(tab:maxdelays). The addition of the `(\#tab:inher)` option to the end of the table caption allows us to then make a reference to Table `\@ref(tab:label)`. Note that this reference could appear anywhere throughout the document after the table has appeared.  
 
-Intended to address TWG ToR objective: Evaluate and provide guidance on candidate lower biological benchmarks for data-limited CUs (e.g., percentile and watershed area-based approaches).
+\clearpage
 
+<!-- clearpage ends the page, and also dumps out all floats.
+  Floats are things like tables and figures. -->
 
-Questions to provide guidance on:
--	How do data availability and biological considerations interact to inform a decision about which CU-level benchmark to use? (e.g, Sgen from SSR vs. Sgen from Watershed-Area vs. percentile vs. distributional benchmarks, etc)?  
--	Under what conditions should Watershed-Area based LRPs be used?	
-- How do mean and distributions (uncertainties) of watershed-area based and stock-recruitment based benchmarks compare?
-- Under which levels of data uncertainties do stock-recruitment based LRPs outperform habitat-based LRPs? 
-- In cases where watershed-area based benchmarks and stock-recruitment based benchmarks are available, both should be presented and used to derive complementary LRPs to capture our underlying model uncertainties.
-- Alternatively, could be combined by using watershed area to inform prior on beta in the stock-recruitment model
-- What if stocks have different levels of data, e.g., Fraser Sockeye, where stock-recruitment as available for some CUs, while others have only escapement data.  When is it beneficial to use available data for data poor CUs vs when to exclude them?
+\begin{landscapepage}
+```{r widelong, results = "asis"}
+yrs <- 1:45
+ages <- 1:15
+widelong <- matrix(round(rnorm(length(yrs) * length(ages), 20), 4),
+                        nr = length(yrs),
+                        nc = length(ages),
+                   dimnames = list(year = yrs, age = ages))
+widelong_df <- data.frame(cbind(yrs, widelong))
 
-## Incorporating uncertainty in aggregate abundance LRP estimation
+# In landscape tables, you can change the font size if the table
+# is too large and overlaps the header and footer lines.
+csasdown::csas_table(widelong_df,
+                     col.names = c("Year", as.character(ages)),
+                     caption = "A long and wide table",
+                     format = "latex",
+                     font_size = 8)
+```
+\end{landscapepage}
+\clearpage
 
--	Parameter uncertainty can be incorporated through estimation methods (MLE with confidence intervals, Bayesian analyses, stochastic projections for the Projected LRP method).  However, larger structural uncertainties in model formulation will require consideration of reference and robustness scenarios to evaluate sensitivity of LRPs to those structural uncertainties.
--	When concerns exist about changes or trends in productivity or capacity, model scenarios that allow for such trends (e.g.,  Kalman filter on productivity parameters) can be explicitly incorporated into LRP formulation. Provide example from a case study.
--	How should uncertainty in benchmarks be incorporated in the LRP if different methods are used to estimate CU-level status within an SMU (i.e., some CUs have stock-recruitment benchmarks, while others rely on percentile-based or habitat-based benchmarks). Bootstrapping from uncertainties in CU-level benchmarks could be considered in these cases. Although, simulation testing of these scenarios may be outside the scope of this paper, guidance based on best-practices from the literature could be provided.
+## FIGURES
 
-Questions to provide guidance on:
--	How should alternative model formulations be considered when identifying LRPs?  (e.g., integrated into a single LRP or presented as two different LRPs?)
+If your report has a lot of figures, _R Markdown_ might behave better for you than that other word processor. One perk is that it will automatically number the figures accordingly in each chapter. You'll also be able to create a label for each figure, add a caption, and then reference the figure in a way similar to what we saw with tables earlier.  If you label your figures, you can move the figures around and _R Markdown_ will automatically adjust the numbering for you.  No need for you to remember!  So that you don't have to get too far into LaTeX to do this, a couple R functions have been created for you to assist.  You'll see their use below.
 
+<!--
+One thing that may be annoying is the way _R Markdown_ handles "floats" like tables and figures (it's really \LaTeX's fault). \LaTeX\ will try to find the best place to put your object based on the text around it and until you're really, truly done writing you should just leave it where it lies. There are some optional arguments specified in the options parameter of the `label` function.  If you need to shift your figure around, it might be good to look here on tweaking the options argument:  <https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions>
 
-##	Guidance on minimum number of years to estimate aggregate abundance LRPs
+If you need a graphic or tabular material to be part of the text, you can just put it inline. If you need it to appear in the list of figures or tables, it should be placed in a code chunk.
+-->
 
--	Synthesize retrospective analyses and simulation evaluations from 3 case studies described in Working Paper 2
+In the R chunk below, we will load in a picture stored as `uw.png` in our main directory.  We then give it the caption of "UW logo", the label of "uwlogo", and specify that this is a figure.  Make note of the different R chunk options that are given in the R Markdown file (not shown in the knitted document).
 
-## Guidance on developing aggregate abundance LRPs with missing CU-level data
+```{r example-fig, fig.cap="My caption"}
+plot(1:10)
+```
 
-Questions to provide guidance on:
--	When is infilling of escapement data appropriate?  
--	Synthesize retrospective evaluations and prospective evaluation for Working Paper 2. How do LRPs (and 95$\%$ CIs) vary with number of CUs (proportion of total within the SMU)?
--	What if data are only available for a portion of CUs within an MU? Under what conditions are those CUs representative of the MU? When is the MU considered data deficient? Are sampled CUs representative of other CUs?  Are their different threats within the SMU acting on different CUs? Is there any evidence for different CUs/populations responding differently to common threats?
--	What is the shape of the trade-off between number of years and number of CUs?
+Here is a reference to the figure: Figure \@ref(fig:example-fig).  Note the use of the `fig:` code here.  By naming the R chunk that contains the figure, we can then reference that figure later as done in the first sentence here.  We can also specify the caption for the figure via the R chunk option `fig.cap`.
 
-##	Enhanced stocks
+\clearpage 
 
-Questions to provide guidance on:
+<!-- starts a new page and stops trying to place floats such as tables and figures -->
 
--	Should highly enhanced systems always be excluded?  How is highly enhanced defined? (consider PNI groupings based on Withler et al. 2018, and WSP CK groupings, Brown et al. 2014 in revision).
+Below we will investigate how to save the output of an R plot and label it in a way similar to that done above.  Recall the `flights` dataset from Section \@ref(rmd-basics).  (Note that we've shown a different way to reference a section here.)  We will next explore a bar graph with the mean flight departure delays by airline from Portland for 2014.  Note also the use of the `scale` parameter which is discussed on the next page.
 
-## Defining SMUs where LRPs cannot be developed
+```{r delaysboxplot, warnings=FALSE, messages=FALSE, fig.cap="Mean Delays by Airline", fig.width=6}
+flights %>% group_by(carrier) %>%
+  summarize(mean_dep_delay = mean(dep_delay)) %>%
+  ggplot(aes(x = carrier, y = mean_dep_delay)) +
+  geom_bar(position = "identity", stat = "identity", fill = "red")
+```
 
--	Under which conditions is a SMU considered data-deficient?
+Here is a reference to this image: Figure \@ref(fig:delaysboxplot).
 
+A table linking these carrier codes to airline names is available at <https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv>.
 
+\clearpage
 
+## FOOTNOTES AND ENDNOTES
 
+You might want to footnote something. ^[footnote text] The footnote will be in a smaller font and placed appropriately. Endnotes work in much the same way. 
 
+## BIBLIOGRAPHIES
+
+Of course you will need to cite things, and you will probably accumulate an armful of sources. There are a variety of tools available for creating a bibliography database (stored with the .bib extension).  In addition to BibTeX suggested below, you may want to consider using the free and easy-to-use tool called Zotero. Some Zotero documentation is at <http://libguides.reed.edu/citation/zotero>.  In addition, a tutorial is available from Middlebury College at <http://sites.middlebury.edu/zoteromiddlebury/>.
+
+R Markdown uses pandoc (<http://pandoc.org/>) to build its bibliographies.  One nice caveat of this is that you won't have to do a second compile to load in references as standard LaTeX requires. To cite references in your report (after creating your bibliography database), place the reference name inside square brackets and precede it by the "at" symbol.  For example, here's a reference to a book about worrying:  [@francis2011].  This `francis2011` entry appears in a file called `refs.bib` in the `bib` folder.  This bibliography database file was created by a program called BibTeX.  You can call this file something else if you like (look at the YAML header in the main .Rmd file) and, by default, is to placed in the `bib` folder. Another example: @edwards2013 shows that... And another example: [e.g., @francis2011; @edwards2013] ...
+
+For more information about BibTeX and bibliographies, see (<http://web.reed.edu/cis/help/latex/index.html>). There are three pages on this topic:  _bibtex_ (which talks about using BibTeX, at <http://web.reed.edu/cis/help/latex/bibtex.html>), _bibtexstyles_ (about how to find and use the bibliography style that best suits your needs, at <http://web.reed.edu/cis/help/latex/bibtexstyles.html>) and _bibman_ (which covers how to make and maintain a bibliography by hand, without BibTeX, at <http://web.reed.edu/cis/help/latex/bibman.html>). The last page will not be useful unless you have only a few sources.
+
+**Tips for Bibliographies**
+
+- The cite key (a citation's label) needs to be unique from the other entries.
+- When you have more than one author or editor, you need to separate each author's name by the word "and" e.g. `Author = {Noble, Sam and Youngberg, Jessica},`.
+- Bibliographies made using BibTeX (whether manually or using a manager) accept LaTeX markup, so you can italicize and add symbols as necessary.
+- To force capitalization in an article title or where all lowercase is generally used, bracket the capitalized word in curly braces. E.g. `{Pacific Cod}`.
+
+CSAS style requires the bibliography to be before the appendices and before tables and figures if you keep those together at the end of your document.
+
+See the next file `04-references.Rmd` which will make the bibliography appear wherever that file is listed in `_bookdown.yml`.
+
+## ADDITIONAL RESOURCES
+
+- _Markdown_ Cheatsheet - <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+
+- _R Markdown_ Reference Guide - <https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf>
+
+- Introduction to `dplyr` - <https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html>
+
+- `ggplot2` Documentation - <http://docs.ggplot2.org/current/>

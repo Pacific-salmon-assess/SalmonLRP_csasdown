@@ -27,18 +27,28 @@ This section will address the question: “What methods are available to develop
 
 (for CUs where data are available)
 
-### Multidimensional approach to aggregating metrics across CUs 
+### Multidimensional approach to aggregating metrics within CUs 
 
-(where data are available)
+- It may be possible to extend this approach in the future to account for ecosystem components of serious harm and divergent levels of data quantity and quality among CUs. 
+- This approach could also be extended to management triggers that occur prior to LRP, e.g.., that require precautionary management and/or more monitoring 
 
-- While fully developing and applying this approach to a case study was outside the scope of this guidance document, we include it here as an option to be developed at a later date, as warranted.  
-- This approach is expected to be very case specific, and will need to be linked to a well-documented management procedure for a given stock management unit
 
-###	Aggregate abundances associated with ppns of CUs greater than benchmarks 
 
-(where data are available)
-- Empirical/historical (details and example below, Section 2.3.1)
-- Prospective (details and example below, Section 2.3.2)
+### Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)
+
+- Description of logistic model approach, with illustrative figures, equations, etc
+-	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 
+-	Describe suggested model validation/checks for logistic regression and illustrate on an example SMU.
+-	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
+
+### Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)
+
+-	Description of projected LRP approach, with illustrative figures, equations, etc
+-	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
+-	Develop LRPs from projections at specific proportions instead of logistic regression
+-	Note that all of the benchmarks provided in Table 1 can all be used as a basis for defining prospective LRPs 
+-	Describe approaches for estimating uncertainty, e.g., Combining projections from multiple operating model scenarios
+
 
 ### Aggregate abundance not directly tied to CU status
 
@@ -55,9 +65,3 @@ This section will address the question: “What methods are available to develop
 
 
 
-
-
-\begin{equation}
-  1 + 1 = 2
-  (\#eq:reaction)
-\end{equation}
