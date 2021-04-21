@@ -31,16 +31,16 @@
 \contentsline {subsection}{\numberline {4.7}Time-varying parameters and impacts on LRPs}{7}{subsection.0.4.7}%
 \contentsline {subsection}{\numberline {4.8}Guidance on minimum number of years to estimate aggregate abundance LRPs}{7}{subsection.0.4.8}%
 \contentsline {subsection}{\numberline {4.9}Guidance on developing aggregate abundance LRPs with missing CU-level data}{7}{subsection.0.4.9}%
-\contentsline {subsection}{\numberline {4.10}Enhanced stocks}{7}{subsection.0.4.10}%
+\contentsline {subsection}{\numberline {4.10}Enhanced stocks}{8}{subsection.0.4.10}%
 \contentsline {subsection}{\numberline {4.11}Defining SMUs where LRPs cannot be developed}{8}{subsection.0.4.11}%
 \contentsline {section}{\numberline {5}Recommendations for Future Work}{8}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Extra text on R MARKDOWN BASICS: IGNORE}{8}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}LISTS}{8}{subsection.0.5.2}%
 \contentsline {subsection}{\numberline {5.3}LINE BREAKS}{9}{subsection.0.5.3}%
 \contentsline {subsection}{\numberline {5.4}R CHUNKS}{9}{subsection.0.5.4}%
-\contentsline {subsection}{\numberline {5.5}INLINE CODE}{9}{subsection.0.5.5}%
+\contentsline {subsection}{\numberline {5.5}INLINE CODE}{10}{subsection.0.5.5}%
 \contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{10}{subsection.0.5.6}%
-\contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{10}{subsection.0.5.7}%
+\contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{11}{subsection.0.5.7}%
 \contentsline {subsection}{\numberline {5.8}FIGURES}{18}{subsection.0.5.8}%
 \contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{20}{subsection.0.5.9}%
 \contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{20}{subsection.0.5.10}%

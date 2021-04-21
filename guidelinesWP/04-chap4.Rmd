@@ -75,8 +75,9 @@ Questions to provide guidance on:
 ## Incorporating uncertainty in aggregate abundance LRP estimation
 
 -	Parameter uncertainty can be incorporated through estimation methods (MLE with confidence intervals, Bayesian analyses, stochastic projections for the Projected LRP method).  However, larger structural uncertainties in model formulation will require consideration of reference and robustness scenarios to evaluate sensitivity of LRPs to those structural uncertainties.
--	When concerns exist about changes or trends in productivity or capacity, model scenarios that allow for such trends (e.g.,  Kalman filter on productivity parameters) can be explicitly incorporated into LRP formulation. Provide example from a case study.
 -	How should uncertainty in benchmarks be incorporated in the LRP if different methods are used to estimate CU-level status within an SMU (i.e., some CUs have stock-recruitment benchmarks, while others rely on percentile-based or habitat-based benchmarks). Bootstrapping from uncertainties in CU-level benchmarks could be considered in these cases. Although, simulation testing of these scenarios may be outside the scope of this paper, guidance based on best-practices from the literature could be provided.
+- For abundance-based empirical LRPs uncertainty in the relationship between aggregate abundance and the probability of that all CUs are above their lower benchmarks is provided by the CI's from the logistic regression
+- Also, for both empirical and projected LRPs, that uncertainty can, to some extent, be demonstrated in sensitivity of the LRP to different choices of probability levels. If the LRP is very sensitive to probability level (50, 66, 90), this indicates the relationship between aggregate abundance and presence of CUs below their lower benchmark is uncertain. The the range in LRPs along various plausible p-values can be compared to the range of observed spawner abundances.
 
 Questions to provide guidance on:
 -	How should alternative model formulations be considered when identifying LRPs?  (e.g., integrated into a single LRP or presented as two different LRPs?)
@@ -84,7 +85,7 @@ Questions to provide guidance on:
 ##	Time-varying parameters and impacts on LRPs
 -	Briefly document evidence for time-varying productivity for Pacific salmon
 -	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications 
-- Summarize approach for considering time-varying productivity in WSP CU assessments
+- Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
 
 
 ##	Guidance on minimum number of years to estimate aggregate abundance LRPs
