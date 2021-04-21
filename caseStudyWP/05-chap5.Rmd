@@ -2,14 +2,16 @@
 
 ## CONTEXT
 
--	SMU Description
--	Which used? 
--	Unique attributes of the case study
+-	SMU Description (include map)
+-	Unique attributes of the case study (e.g., draw from Holt et al. CSAS paper to highlight previous data-limited work on percentile benchmarks)
 
 ## DATA
 
--	Type of benchmarks 
 -	Sources
+-- Hatchery stocks removed from data set (provide a few details)
+-- Escapement data: Infilling of escapement data: (i) summarize infilling methods (ii) show plot of infilled escapement series for all 7 CUs (iii) describe that we are only using 5 CUs without CU infilling for anlayses
+-- Recruitment data: use of run reconstruction model
+
 -	Caveats
 
 
@@ -18,11 +20,28 @@
 
 ### EMPIRICAL LRPS
 
+- We evaluate two empirical (data-based) approaches for developing aggregate abundance-based LRPs for Inside South Coast Chum using the 5 CUs with > 15 years of data [not sure this is the best way to descibe??; please fix]. Both approaches attempted to estimate LRPs by fitting logistic regression models to historically observed data; they differ in the metric used to represent CU-level lower benchmarks.
 
-### PROJECTED LRPS
+- The first approach uses Sgen ...
+
+- The second approach used percentile-based benchmarks ...
+
+- Due to poor logistic model fits using the entire 19xx - 2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logsitic model fits are highlighted in the results section below.
 
 
-### RETROSPECTIVE EVALUATION
+### PROJECTED LRPS (TBD)
 
+### MULTIDIMENSIONAL APPROACH (TBD)
 
 ## RESULTS
+
+### EMPIRICAL LRPS
+
+- Show poor model fits for each benchmark (using Bernoulli)
+- Summarize model fit diagnostics
+- Highlight low covariance and differences in scale, and describe how these make empirical LRPs unsuitable for this SMU
+- Also - include plots showing variation in Sgen and percentile benchmarks over time for the 5 CUs to highlight time-varying concerns.
+
+### PROJECTED LRPS (TBD)
+
+### MULTIDIMENSIONAL APPROACH (TBD)

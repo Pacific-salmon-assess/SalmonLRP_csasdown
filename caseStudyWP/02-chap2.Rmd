@@ -27,18 +27,22 @@ Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a lev
 between it and any level of abundance that could lead to a CU being
 considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review)
 
-A variety of methods for estimating lower benchmarks are considered within the three case studies presented in this working paper (Table \@ref(tab:csOverview)).
+Several of methods for estimating lower benchmarks are considered within the three case studies presented in this working paper (Table \@ref(tab:csOverview)).
 
 
 ## LOGISTIC REGRESSION LRPS
 
+*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??*
+
 Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Two alternative approaches can be used to fit a logistic regression to observed data: a proportional approach and a probability-based approach.  
+
+*Question: I have used 'proportional and probability-based because Carrie previously cautioned the Bernoulli and Binomial may not be super-intuitive. What do others think?  Other ideas??*
 
 In the proportional approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified *proportion* of CUs being above their lower benchmark ($S_i > LBM_i$, where i = a CU). For each year of observed data, CU-level status is quantified as the number or CUs with $S_i > LBM_i$. A logistic regression is then fit to predict the proportion of CUs with $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined).
 
 In the probability-based approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified *probability* of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU.  
 
-For both approaches, the annual proportion of CUs with $S_i > LBM_i$ (or, the probability that all CUs will have $S_i > LBM_i$) is modelled as a function of annual aggregate spawner abundance to the SMU using the logistic regression equation:
+The annual proportion of CUs with $S_i > LBM_i$ (or, the probability that all CUs will have $S_i > LBM_i$) is modelled as a function of annual aggregate spawner abundance to the SMU using the logistic regression equation:
 \begin{equation}
   \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
    (\#eq:logistic)
@@ -51,7 +55,7 @@ where, $p$ is the proportion (or probability), $B_0$ and $B_1$ are estimated log
   (\#eq:logisticLRP)
 \end{equation}
 
-When fitting equation \@ref(eq:logistic), we used a normally-distributed penalty function to constrain the logistic model fit to pass near the zero-intercept. This penalty was applied to the aggregate spawner abundance at which 1% of CUs would be above their LBM ($p^*$ = 0.01), which we donate as $AggS_{p=0.01}$.  
+When fitting equation \@ref(eq:logistic), we used a normally-distributed penalty function to constrain the logistic model fit to pass near the zero-intercept. This penalty was applied to the aggregate spawner abundance at which 1% of CUs would be above their LBM ($p^*$ = 0.01), which we denote as $AggS_{p=0.01}$.  
 
 \begin{equation}
 \begin{split}
@@ -61,7 +65,7 @@ When fitting equation \@ref(eq:logistic), we used a normally-distributed penalty
 \end{split}
 \end{equation}
   
-The $\mu_{SAg}$ and $\sigma_{SAg}$ parameters were specified by first identifying lower and upper limits of a plausible range for $AggS_{p=0.01}$.  For example, the lower limit was often based on the lowest LBM for any CUs within an SMU, while the upper limit was based on the sum over all CUs of their upper 95% confidence limits for the LBM. The $\mu_{SAg}$ parameter was then set at the mean of the upper and lower limits of the plausible range of $AggS_{p=0.01}$, while $\sigma_{SAg}$ was set at a value that corresponded to a 95% probability that $AggS_{p=0.01}$ would be below the upper and lower limits. Additional details for each case study, as well as sensitivity analyses to the assumed penalty function, are provided in each case study chapter below.  
+The $\mu_{SAg}$ and $\sigma_{SAg}$ parameters were specified by first identifying lower and upper limits of a plausible range for $AggS_{p=0.01}$.  For example, the lower limit was often based on the lowest LBM for any CUs within an SMU, while the upper limit was based on the sum of LBMs overall all CUs. The $\mu_{SAg}$ parameter was then set at the mean of the upper and lower limits of the plausible range of $AggS_{p=0.01}$, while $\sigma_{SAg}$ was set at a value that corresponded to a 95% probability that $AggS_{p=0.01}$ would be below the upper and lower limits. Additional details for each case study, as well as sensitivity analyses to the assumed penalty function, are provided in each case study chapter below.  
 
 An example logistic regression fit for the proportional approach is shown in Figure x. When determining the LRP in this example, we set the threshold proportion, $p^*$, near 100%, which means that all CUs are required to have $S_i > LBM_i$.  Note that in practice, a value of $p^*$ = 99% was used so that Equation \@ref(eq:logisticLRP) could be solved.  
 
