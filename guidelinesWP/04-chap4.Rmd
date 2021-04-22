@@ -4,23 +4,10 @@
 ## Which LRP method should be used?
 
 
-
-### When are aggregate abundance LRP methods appropriate?
-
--	Based on experience applying LRPs to case studies, develop recommendations on when aggregate abundance LRPs are appropriate or not (and when proportions of CUs $>$ red status, CU-level statuses without aggregation, or multi-dimensional approaches should be considered instead). Do these recommendations depend on the number of CUs (e.g., what if the SMU only has 1 or 2 CUs)?
+### Proportion of CUs above lower benchmarks.
+- Default LRP
+- conditions when this might be most appropriate and not appropriate
 -	General comment: when phrasing guidance, address when it is appropriate to use various methods as well as when it is NOT appropriate too use those methods
-
-### Empirical vs. projected approaches for aggregate-abundance LRPS
-
-Questions to provide guidance on:
--	How do projection-based and empirical LRPs (and their uncertainties) compare?
--	What type of data and level of data-quality is required to support historic LRPs? 	How robust are empirical LRPs to different underlying scenarios (model formulations, observation errors, time-varying productivity and capacity)?
-- What type of data and level of data-quality is required to support projected LRPs?  How robust are prospective LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, implementation error, observation errors, time-varying productivity and capacity)
-- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted?
--	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
-
-
-## LRP set at What proportion of CUs above red status?
 
 -	Default should be aggregate abundance associated with 100$\%$ of CUs being above their lower benchmark; however, there may be cases when a sub-set of CUs being below their lower benchmarks is permitted, such as where CUs are intrinsically at low levels and are not being significantly impacted by human threats such as fishing or habitat deterioration. 
 -	These exceptions will need to be made on a case-by-case basis, with the rationale for these decisions well-documented.
@@ -33,6 +20,32 @@ While the acceptable proportion of CUs below lower benchmarks can be thought of 
 -	The question of whether a CU within a larger SMU can persist in the red zone is something that could be simulation tested; although, this would require harvest control rules to be specified for testing.  Such an approach would be case-specific and outside of the scope of our work.  However, we could consider recommending that if a decision is made for a CU to allow some proportion of CUs to be in the red zone, quantitative evaluation (e.g., simulation testing) should be used to demonstrate that red CUs will not be lost. [Although, we may still want to consider putting some bounds on what proportion would be allowed to be below their lower benchmark, i.e., a large proportion of CUs persisting in the red zone may not be acceptable ].
 
 -if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
+
+
+### Multi-dimensional approach 
+- similar to proportion of CUs > lower benchmark, but using other dimensions of status (e.g., trends)
+- conditions when this might be most appropriate and not appropriate
+
+
+### Aggregate-abundance LRP based on aggregate data
+
+- conditions when this might be most appropriate and not appropriate
+- informed by quantitative evidence for covariance among component CUs
+- perhaps requiring simulation evaluation
+
+### Aggregate-abundance LRP based on CU-specific data
+
+-	Based on experience applying LRPs to case studies, develop recommendations on when aggregate abundance LRPs are appropriate or not. Do these recommendations depend on the number of CUs (e.g., what if the SMU only has 1 or 2 CUs)?
+
+### Empirical vs. projected approaches for aggregate-abundance LRPS
+
+Questions to provide guidance on:
+-	How do projection-based and empirical LRPs (and their uncertainties) compare?
+-	What type of data and level of data-quality is required to support historic LRPs? 	How robust are empirical LRPs to different underlying scenarios (model formulations, observation errors, time-varying productivity and capacity)?
+- What type of data and level of data-quality is required to support projected LRPs?  How robust are prospective LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, implementation error, observation errors, time-varying productivity and capacity)
+- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted?
+-	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
+
 
 ##	Guidance on scale of diversity used to define aggregate-abundance LRPs
 

@@ -61,7 +61,9 @@ This section will address the question: “What methods are available to develop
 
 ## Considerations When Selecting a LRP Estimation Method
 
-- Discussions of the advantages and challenges of each approach.  E.g.,	Do we need SMU-level LRPs if we have CU-level benchmarks that are reviewed and well documented? What are the criteria for being reviewed, well documented, and sufficiently up-to-date?
+- Decision tree for which LRP to use
+- With discussion of the advantages and challenges of each approach.  
+- maybe move to Section 4
 
 
 

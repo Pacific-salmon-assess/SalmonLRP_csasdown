@@ -21,31 +21,33 @@
 \contentsline {subsection}{\numberline {3.3}South Coast Chum (excluding Fraser)}{4}{subsection.0.3.3}%
 \contentsline {section}{\numberline {4}Guidelines for Applying Aggregate Abundance LRP Estimation Methods}{4}{section.0.4}%
 \contentsline {subsection}{\numberline {4.1}Which LRP method should be used?}{4}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}When are aggregate abundance LRP methods appropriate?}{4}{subsubsection.0.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Empirical vs.\nobreakspace {}projected approaches for aggregate-abundance LRPS}{4}{subsubsection.0.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}LRP set at What proportion of CUs above red status?}{5}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}Guidance on scale of diversity used to define aggregate-abundance LRPs}{5}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {4.4}Guidance on the application of aggregate abundance LRPs}{5}{subsection.0.4.4}%
-\contentsline {subsection}{\numberline {4.5}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{6}{subsection.0.4.5}%
-\contentsline {subsection}{\numberline {4.6}Incorporating uncertainty in aggregate abundance LRP estimation}{6}{subsection.0.4.6}%
-\contentsline {subsection}{\numberline {4.7}Time-varying parameters and impacts on LRPs}{7}{subsection.0.4.7}%
-\contentsline {subsection}{\numberline {4.8}Guidance on minimum number of years to estimate aggregate abundance LRPs}{7}{subsection.0.4.8}%
-\contentsline {subsection}{\numberline {4.9}Guidance on developing aggregate abundance LRPs with missing CU-level data}{7}{subsection.0.4.9}%
-\contentsline {subsection}{\numberline {4.10}Enhanced stocks}{8}{subsection.0.4.10}%
-\contentsline {subsection}{\numberline {4.11}Defining SMUs where LRPs cannot be developed}{8}{subsection.0.4.11}%
+\contentsline {subsubsection}{\numberline {4.1.1}Proportion of CUs above lower benchmarks.}{4}{subsubsection.0.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Multi-dimensional approach}{5}{subsubsection.0.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Aggregate-abundance LRP based on aggregate data}{5}{subsubsection.0.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Aggregate-abundance LRP based on CU-specific data}{5}{subsubsection.0.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Empirical vs.\nobreakspace {}projected approaches for aggregate-abundance LRPS}{5}{subsubsection.0.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Guidance on scale of diversity used to define aggregate-abundance LRPs}{5}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {4.3}Guidance on the application of aggregate abundance LRPs}{6}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4.4}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{6}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {4.5}Incorporating uncertainty in aggregate abundance LRP estimation}{7}{subsection.0.4.5}%
+\contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{7}{subsection.0.4.6}%
+\contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{7}{subsection.0.4.7}%
+\contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{8}{subsection.0.4.8}%
+\contentsline {subsection}{\numberline {4.9}Enhanced stocks}{8}{subsection.0.4.9}%
+\contentsline {subsection}{\numberline {4.10}Defining SMUs where LRPs cannot be developed}{8}{subsection.0.4.10}%
 \contentsline {section}{\numberline {5}Recommendations for Future Work}{8}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Extra text on R MARKDOWN BASICS: IGNORE}{8}{subsection.0.5.1}%
-\contentsline {subsection}{\numberline {5.2}LISTS}{8}{subsection.0.5.2}%
+\contentsline {subsection}{\numberline {5.2}LISTS}{9}{subsection.0.5.2}%
 \contentsline {subsection}{\numberline {5.3}LINE BREAKS}{9}{subsection.0.5.3}%
-\contentsline {subsection}{\numberline {5.4}R CHUNKS}{9}{subsection.0.5.4}%
+\contentsline {subsection}{\numberline {5.4}R CHUNKS}{10}{subsection.0.5.4}%
 \contentsline {subsection}{\numberline {5.5}INLINE CODE}{10}{subsection.0.5.5}%
 \contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{10}{subsection.0.5.6}%
 \contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{11}{subsection.0.5.7}%
-\contentsline {subsection}{\numberline {5.8}FIGURES}{18}{subsection.0.5.8}%
-\contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{20}{subsection.0.5.9}%
-\contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{20}{subsection.0.5.10}%
-\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{21}{subsection.0.5.11}%
-\contentsline {section}{\numberline {6}REFERENCES}{22}{section.0.6}%
+\contentsline {subsection}{\numberline {5.8}FIGURES}{19}{subsection.0.5.8}%
+\contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{21}{subsection.0.5.9}%
+\contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{21}{subsection.0.5.10}%
+\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{22}{subsection.0.5.11}%
+\contentsline {section}{\numberline {6}REFERENCES}{23}{section.0.6}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{APPENDIX\nobreakspace {}A. THE FIRST APPENDIX}{23}{section*.3}%
-\contentsline {chapter}{APPENDIX\nobreakspace {}B. THE SECOND APPENDIX, FOR FUN}{24}{section*.5}%
+\contentsline {chapter}{APPENDIX\nobreakspace {}A. THE FIRST APPENDIX}{24}{section*.3}%
+\contentsline {chapter}{APPENDIX\nobreakspace {}B. THE SECOND APPENDIX, FOR FUN}{25}{section*.5}%
