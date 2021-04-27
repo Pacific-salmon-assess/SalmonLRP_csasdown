@@ -9,6 +9,7 @@ output:
 
 ## CONTEXT
 
+<<<<<<< HEAD
 -SMU description
 The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:map-chum)). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
 
@@ -22,7 +23,7 @@ knitr::include_graphics(here::here("figure/fig_chum_CU_map.png"))
 
 ## DATA
 
-This case study used essentially the same data used in `@holt_evaluating_2018`, updated with escapement data up to 2018. `@van_will_inner_2014` provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below.
+We used essentially the same data used in `@holt_evaluating_2018`, updated with escapement data up to 2018. `@van_will_inner_2014` provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below.
 
 ### Spawner counts / Escapement
 
@@ -41,6 +42,19 @@ The steps for preparing the data for analysis were:
 3. Use proportion of wild:total escapement by CU and Area to estimate number of wild returns 
 4. Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU.
 5. Result: wild spawners and corresponding recruits by brood year for each CU
+=======
+
+-	Unique attributes of the case study (e.g., draw from Holt et al. CSAS paper to highlight previous data-limited work on percentile benchmarks)
+
+## DATA
+
+-	Sources
+-- Hatchery stocks removed from data set (provide a few details)
+-- Escapement data: Infilling of escapement data: (i) summarize infilling methods (ii) show plot of infilled escapement series for all 7 CUs (iii) describe that we are only using 5 CUs without CU infilling for anlayses
+-- Recruitment data: use of run reconstruction model
+
+-	Caveats
+
 
 #### Infilling of spawner escapement data 
 
@@ -83,11 +97,28 @@ csasdown::csas_table(d1,
 
 ### EMPIRICAL LRPS
 
+- We evaluate two empirical (data-based) approaches for developing aggregate abundance-based LRPs for Inside South Coast Chum using the 5 CUs with > 15 years of data [not sure this is the best way to descibe??; please fix]. Both approaches attempted to estimate LRPs by fitting logistic regression models to historically observed data; they differ in the metric used to represent CU-level lower benchmarks.
 
-### PROJECTED LRPS
+- The first approach uses Sgen ...
+
+- The second approach used percentile-based benchmarks ...
+
+- Due to poor logistic model fits using the entire 19xx - 2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logsitic model fits are highlighted in the results section below.
 
 
-### RETROSPECTIVE EVALUATION
+### PROJECTED LRPS (TBD)
 
+### MULTIDIMENSIONAL APPROACH (TBD)
 
 ## RESULTS
+
+### EMPIRICAL LRPS
+
+- Show poor model fits for each benchmark (using Bernoulli)
+- Summarize model fit diagnostics
+- Highlight low covariance and differences in scale, and describe how these make empirical LRPs unsuitable for this SMU
+- Also - include plots showing variation in Sgen and percentile benchmarks over time for the 5 CUs to highlight time-varying concerns.
+
+### PROJECTED LRPS (TBD)
+
+### MULTIDIMENSIONAL APPROACH (TBD)

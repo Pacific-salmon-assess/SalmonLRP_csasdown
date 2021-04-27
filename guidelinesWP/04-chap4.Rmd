@@ -1,0 +1,129 @@
+# Guidelines for Applying Aggregate Abundance LRP Estimation Methods {#guidelines}
+
+
+## Which LRP method should be used?
+
+
+### Proportion of CUs above lower benchmarks.
+- Default LRP
+- conditions when this might be most appropriate and not appropriate
+-	General comment: when phrasing guidance, address when it is appropriate to use various methods as well as when it is NOT appropriate too use those methods
+
+-	Default should be aggregate abundance associated with 100$\%$ of CUs being above their lower benchmark; however, there may be cases when a sub-set of CUs being below their lower benchmarks is permitted, such as where CUs are intrinsically at low levels and are not being significantly impacted by human threats such as fishing or habitat deterioration. 
+-	These exceptions will need to be made on a case-by-case basis, with the rationale for these decisions well-documented.
+-	Guidelines on rationale TBD
+
+While the acceptable proportion of CUs below lower benchmarks can be thought of as a trade-off decision to be made by decision-makers, LRPs are intended to be defined by Science and represent a level of serious harm. -	Question: could serious harm may mean extinction rather that in the red zone?  
+
+-	Question: could serious harm may mean extinction rather that in the red zone?  
+
+-	The question of whether a CU within a larger SMU can persist in the red zone is something that could be simulation tested; although, this would require harvest control rules to be specified for testing.  Such an approach would be case-specific and outside of the scope of our work.  However, we could consider recommending that if a decision is made for a CU to allow some proportion of CUs to be in the red zone, quantitative evaluation (e.g., simulation testing) should be used to demonstrate that red CUs will not be lost. [Although, we may still want to consider putting some bounds on what proportion would be allowed to be below their lower benchmark, i.e., a large proportion of CUs persisting in the red zone may not be acceptable ].
+
+-if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
+
+
+### Multi-dimensional approach 
+- similar to proportion of CUs > lower benchmark, but using other dimensions of status (e.g., trends)
+- conditions when this might be most appropriate and not appropriate
+
+
+### Aggregate-abundance LRP based on aggregate data
+
+- conditions when this might be most appropriate and not appropriate
+- informed by quantitative evidence for covariance among component CUs
+- perhaps requiring simulation evaluation
+
+### Aggregate-abundance LRP based on CU-specific data
+
+-	Based on experience applying LRPs to case studies, develop recommendations on when aggregate abundance LRPs are appropriate or not. Do these recommendations depend on the number of CUs (e.g., what if the SMU only has 1 or 2 CUs)?
+
+### Empirical vs. projected approaches for aggregate-abundance LRPS
+
+Questions to provide guidance on:
+-	How do projection-based and empirical LRPs (and their uncertainties) compare?
+-	What type of data and level of data-quality is required to support historic LRPs? 	How robust are empirical LRPs to different underlying scenarios (model formulations, observation errors, time-varying productivity and capacity)?
+- What type of data and level of data-quality is required to support projected LRPs?  How robust are prospective LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, implementation error, observation errors, time-varying productivity and capacity)
+- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted?
+-	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
+
+
+##	Guidance on scale of diversity used to define aggregate-abundance LRPs
+
+Questions to provide guidance on:
+-	When it is appropriate to group CUs together or split CUs into smaller sub-components?
+- This should be identified on an SMU-by-SMu basis
+- What (SMU-level) process should be recommended to decide the scale of assessment necessary to represent serious harm? 
+
+
+##	Guidance on the application of aggregate abundance LRPs
+
+-	Modelling approaches: advantages and disadvantages of using integrated models to propagate uncertainty from stock-recruitment models through to LRP estimates (highlight integrated Sgen-LRP model and Watershed-Area model)
+-	Recommended software: e.g., TMB, TMBstan, R
+-	Recommended process:Do we recommend a CSAS review every time an LRP is identified for a SMU
+- One option- we could recommend a CSAP Science Response for relatively stratigh-forward appications of the two aggregate abundance methods that we focus on here. In cases where other approaches, (e.g., multi-dimensional) or unique circumstances arise that have not been covered in this guidance document, a full CSAS Science Review should be considered.
+- CSAS Special Science Responses (SSRs) could document and review LRPs for several SMUs at once (or review several SSR within one meeting)
+- In some cases, LRPs could be documented and reviewed within rebuilding plan. For LRPs, but this would not cover SMUs that are batched, but do not require rebuilding plans.
+- Look to National Working Group for guidance on required documentation and review of LRPs. What is required for other species?
+- Suggestion to provide some flexibility when applying these methods given local context and data (e.g,, local expertise required when providing justification for persistence of CUs in the red zone; enhancement).
+
+-	What is the appropriate measure of current abundances to compare against LRPs?
+- To minimize annual variability in assessments and be consistent with WSP assessments (and other jurisdictions), we recommend using aggregate generational average abundance when comparing current SMU abundance to LRPs
+
+## Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder) 
+
+Placeholder.  Thorough exploration of this topic may be out of scope for this Working Paper. We may decide that we do not need to go into this much detail given previous work that has been done to evaluate WSP benchmarks.
+
+Intended to address TWG ToR objective: Evaluate and provide guidance on candidate lower biological benchmarks for data-limited CUs (e.g., percentile and watershed area-based approaches).
+
+
+Questions to provide guidance on:
+-	How do data availability and biological considerations interact to inform a decision about which CU-level benchmark to use? (e.g, Sgen from SSR vs. Sgen from Watershed-Area vs. percentile vs. distributional benchmarks, etc)?  
+-	Under what conditions should Watershed-Area based LRPs be used?	
+- How do mean and distributions (uncertainties) of watershed-area based and stock-recruitment based benchmarks compare?
+- Under which levels of data uncertainties do stock-recruitment based LRPs outperform habitat-based LRPs? 
+- In cases where watershed-area based benchmarks and stock-recruitment based benchmarks are available, both should be presented and used to derive complementary LRPs to capture our underlying model uncertainties.
+- Alternatively, could be combined by using watershed area to inform prior on beta in the stock-recruitment model
+- What if stocks have different levels of data, e.g., Fraser Sockeye, where stock-recruitment as available for some CUs, while others have only escapement data.  When is it beneficial to use available data for data poor CUs vs when to exclude them?
+
+## Incorporating uncertainty in aggregate abundance LRP estimation
+
+-	Parameter uncertainty can be incorporated through estimation methods (MLE with confidence intervals, Bayesian analyses, stochastic projections for the Projected LRP method).  However, larger structural uncertainties in model formulation will require consideration of reference and robustness scenarios to evaluate sensitivity of LRPs to those structural uncertainties.
+-	How should uncertainty in benchmarks be incorporated in the LRP if different methods are used to estimate CU-level status within an SMU (i.e., some CUs have stock-recruitment benchmarks, while others rely on percentile-based or habitat-based benchmarks). Bootstrapping from uncertainties in CU-level benchmarks could be considered in these cases. Although, simulation testing of these scenarios may be outside the scope of this paper, guidance based on best-practices from the literature could be provided.
+- For abundance-based empirical LRPs uncertainty in the relationship between aggregate abundance and the probability of that all CUs are above their lower benchmarks is provided by the CI's from the logistic regression
+- Also, for both empirical and projected LRPs, that uncertainty can, to some extent, be demonstrated in sensitivity of the LRP to different choices of probability levels. If the LRP is very sensitive to probability level (50, 66, 90), this indicates the relationship between aggregate abundance and presence of CUs below their lower benchmark is uncertain. The the range in LRPs along various plausible p-values can be compared to the range of observed spawner abundances.
+
+Questions to provide guidance on:
+-	How should alternative model formulations be considered when identifying LRPs?  (e.g., integrated into a single LRP or presented as two different LRPs?)
+
+##	Time-varying parameters and impacts on LRPs
+-	Briefly document evidence for time-varying productivity for Pacific salmon
+-	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications 
+- Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
+
+
+##	Guidance on minimum number of years to estimate aggregate abundance LRPs
+
+-	Synthesize retrospective analyses and simulation evaluations from 3 case studies described in Working Paper 2
+
+## Guidance on developing aggregate abundance LRPs with missing CU-level data
+
+Questions to provide guidance on:
+-	When is infilling of escapement data appropriate?  
+-	Synthesize retrospective evaluations and prospective evaluation for Working Paper 2. How do LRPs (and 95$\%$ CIs) vary with number of CUs (proportion of total within the SMU)?
+-	What if data are only available for a portion of CUs within an MU? Under what conditions are those CUs representative of the MU? When is the MU considered data deficient? Are sampled CUs representative of other CUs?  Are their different threats within the SMU acting on different CUs? Is there any evidence for different CUs/populations responding differently to common threats?
+-	What is the shape of the trade-off between number of years and number of CUs?
+
+##	Enhanced stocks
+
+Questions to provide guidance on:
+
+-	Should highly enhanced systems always be excluded?  How is highly enhanced defined? (consider PNI groupings based on Withler et al. 2018, and WSP CK groupings, Brown et al. 2014 in revision).
+
+## Defining SMUs where LRPs cannot be developed
+
+-	Under which conditions is a SMU considered data-deficient?
+
+
+
+
+

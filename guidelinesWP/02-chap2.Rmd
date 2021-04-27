@@ -1,8 +1,69 @@
-# MATHEMATICS {#math-sci}
+# LRP Estimation Methods for Pacific Salmon {#est-methods}
 
-You can include most valid TeX math and it will render in all formats:
+This section will address the question: “What methods are available to develop SMU-level LRPs that are consistent with the WSP?”
 
-\begin{equation}
-  1 + 1 = 2
-  (\#eq:reaction)
-\end{equation}
+
+## Estimation of CU Status
+
+-	There are a variety of CU-level abundance based benchmarks, depending on species and data availability, etc. 
+-	When providing guidance in this paper, we focus on: 
+
+-	Stock-recruitment based benchmarks, 
+-	Percentile based benchmarks, 
+-	Watershed-area based benchmarks (as one example of a habitat-based benchmarks), 
+-	Distributional benchmarks
+
+
+-	We have not included metrics and benchmarks based on status of habitat or ecosystem status (strategies 2 and 3 of the WSP)
+
+## Estimation of LRPs: Aggregating CU Status to the SMU-level
+
+### Report status relative to benchmarks for individual CUs 
+
+- i.e., no roll-up
+- A benefit to no roll up is that it focuses attention directly on CUs with low status.  However, emerging policy (from NHQ) suggests that each stock should have a single established LPR (one stock = 1 LRP).
+
+###	Ppn of CUs with status greater than red 
+
+(for CUs where data are available)
+
+### Multidimensional approach to aggregating metrics within CUs 
+
+- It may be possible to extend this approach in the future to account for ecosystem components of serious harm and divergent levels of data quantity and quality among CUs. 
+- This approach could also be extended to management triggers that occur prior to LRP, e.g.., that require precautionary management and/or more monitoring 
+
+
+
+### Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)
+
+- Description of logistic model approach, with illustrative figures, equations, etc
+-	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 
+-	Describe suggested model validation/checks for logistic regression and illustrate on an example SMU.
+-	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
+
+### Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)
+
+-	Description of projected LRP approach, with illustrative figures, equations, etc
+-	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
+-	Develop LRPs from projections at specific proportions instead of logistic regression
+-	Note that all of the benchmarks provided in Table 1 can all be used as a basis for defining prospective LRPs 
+-	Describe approaches for estimating uncertainty, e.g., Combining projections from multiple operating model scenarios
+
+
+### Aggregate abundance not directly tied to CU status
+
+- There may be cases where work has been done to identify SMU-level limit reference points that are not directly linked to CU status. For example methods developed to support PST management.
+
+- If we rely on aggregate abundances (or indicators within an SMU) determined via other approaches, can we justify it because of evidence that CUs co-vary, e.g.,	they have similar threats, e.g., 
+- fisheries are sampled for GSI and proportions have not changed over time suggesting that smaller CUs are not being over harvested
+- available escapement data suggests CUs are stable,
+- evidence of covariance in spawner time-series (or productivity time-series where available)
+
+## Considerations When Selecting a LRP Estimation Method
+
+- Decision tree for which LRP to use
+- With discussion of the advantages and challenges of each approach.  
+- maybe move to Section 4
+
+
+
