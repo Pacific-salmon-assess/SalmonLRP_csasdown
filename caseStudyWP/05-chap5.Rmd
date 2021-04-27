@@ -9,7 +9,6 @@ output:
 
 ## CONTEXT
 
-<<<<<<< HEAD
 -SMU description
 The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:map-chum)). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
 
@@ -19,9 +18,19 @@ knitr::include_graphics(here::here("figure/fig_chum_CU_map.png"))
 
 
 -	Which used? 
--	Unique attributes of the case study
+
+-	Unique attributes of the case study (e.g., draw from Holt et al. CSAS paper to highlight previous data-limited work on percentile benchmarks)
+
 
 ## DATA
+
+-	Sources
+
+
+-	Caveats
+
+### Subsets of data used
+
 
 We used essentially the same data used in `@holt_evaluating_2018`, updated with escapement data up to 2018. `@van_will_inner_2014` provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below.
 
@@ -35,6 +44,10 @@ The number of chum caught in fisheries in the Inside South Coast area were taken
 
 ### Data treatment
 
+-- Hatchery stocks removed from data set (provide a few details)
+-- Escapement data: Infilling of escapement data: (i) summarize infilling methods (ii) show plot of infilled escapement series for all 7 CUs (iii) describe that we are only using 5 CUs without CU infilling for anlayses
+-- Recruitment data: use of run reconstruction model
+
 The steps for preparing the data for analysis were:
 
 1. Infill total and wild escapement by CU and Area, (by stream for CUs with observations, by CU for years with no observations in a CU)
@@ -42,28 +55,11 @@ The steps for preparing the data for analysis were:
 3. Use proportion of wild:total escapement by CU and Area to estimate number of wild returns 
 4. Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU.
 5. Result: wild spawners and corresponding recruits by brood year for each CU
-=======
-
--	Unique attributes of the case study (e.g., draw from Holt et al. CSAS paper to highlight previous data-limited work on percentile benchmarks)
-
-## DATA
-
--	Sources
--- Hatchery stocks removed from data set (provide a few details)
--- Escapement data: Infilling of escapement data: (i) summarize infilling methods (ii) show plot of infilled escapement series for all 7 CUs (iii) describe that we are only using 5 CUs without CU infilling for anlayses
--- Recruitment data: use of run reconstruction model
-
--	Caveats
-
 
 #### Infilling of spawner escapement data 
 
-
-
 #### Run reconstruction to estimate recruitment
 
-
-### Subsets of data used
 
 ## METHODS
 
