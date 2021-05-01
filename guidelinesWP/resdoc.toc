@@ -30,7 +30,11 @@
 \contentsline {subsection}{\numberline {4.3}Guidance on the application of aggregate abundance LRPs}{6}{subsection.0.4.3}%
 \contentsline {subsection}{\numberline {4.4}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{7}{subsection.0.4.4}%
 \contentsline {subsection}{\numberline {4.5}Incorporating uncertainty in aggregate abundance LRP estimation}{7}{subsection.0.4.5}%
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{8}{subsection.0.4.6}%
+=======
+\contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{7}{subsection.0.4.6}%
+>>>>>>> e315a22dbb2709bc493e5fb7d14a75eb110ccc08
 \contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{8}{subsection.0.4.7}%
 \contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{8}{subsection.0.4.8}%
 \contentsline {subsection}{\numberline {4.9}Enhanced stocks}{8}{subsection.0.4.9}%
