@@ -25,10 +25,16 @@ This section will address the question: “What methods are available to develop
 
 ###	Ppn of CUs with status greater than red 
 
-(for CUs where data are available)
+- Based on WSP formal integrated assessments (for CUs where data are available)
+- Or approximated by abundance-based benchmarks
+- if status is approximated with abundance-based benchmarks, and the status on the metric is red, this could trigger an integrated status assesment to derived a formal WSP status prior to triggering LRP.
 
 ### Multidimensional approach to aggregating metrics within CUs 
 
+- Algorithm to approximate "integrated" status has been developed by the State of the Salmon program, and can be applied to LRP estimation
+- Valuable when abundance-based benchmark (e.g., Sgen) cannot be calculated and percentile-based benchmarks are not reliable (productivity low or HR high)
+- NB the algorithm defaults to abundance-based benchmarks when they are available
+- As above,  if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP.
 - It may be possible to extend this approach in the future to account for ecosystem components of serious harm and divergent levels of data quantity and quality among CUs. 
 - This approach could also be extended to management triggers that occur prior to LRP, e.g.., that require precautionary management and/or more monitoring 
 
