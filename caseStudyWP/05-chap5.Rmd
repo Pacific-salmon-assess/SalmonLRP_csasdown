@@ -9,7 +9,7 @@ output:
 
 ## CONTEXT
 
-The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:map-chum)). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
+The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum_map)). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
 
 `@holt_evaluating_2018` used these CUs to compare benchmarks from stock-recruit relationships and benchmarks based on abundance, as a case study for chum populations with limited data. They showed that benchmarks based on a percentile of abundances can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low. In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines. 
 
@@ -26,7 +26,7 @@ We chose Inside South Coast Chum as a case study because:
 - Low correlation in abundance levels among CUs over time
 
 
-```{r map-chum, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management unit (not including Lower Fraser and Fraser Canyon Conservation Units). Numbers indicate the Fishery Management Areas associated with these populations."}
+```{r chum_map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management unit (not including Lower Fraser and Fraser Canyon Conservation Units). Numbers indicate the Fishery Management Areas associated with these populations."}
 knitr::include_graphics(here::here("figure/fig_chum_CU_map.png"))
 ```
 
@@ -44,9 +44,15 @@ The number of chum caught in fisheries in the Inside South Coast area were taken
 
 ### Data treatment
 
- 
-
 -- Escapement data: Infilling of escapement data: (i) summarize infilling methods (ii) show plot of infilled escapement series for all 7 CUs (iii) describe that we are only using 5 CUs without CU infilling for anlayses
+
+We removed the summer run fish as all the data in regards the reconstruction work is 
+associated with populations that return in the fall.  
+
+To get wild escapement, we kept only wild spawners, removing hatchery spawners, spawners harvested at a facility, and spawners collected for brood stock. 
+
+We also removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River, as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We have little data in the enhanced contribution found in these returns but for the purposes of removing hatchery origin fish, we make the assumption that these streams had 100% hatchery origin spawners. 
+
 -- Recruitment data: use of run reconstruction model
 
 The steps for preparing the data for analysis were:
@@ -59,7 +65,27 @@ The steps for preparing the data for analysis were:
 
 #### Infilling of spawner escapement data 
 
+The data we used had years where not all streams were counted. When a CU had some streams counted in a year, we infilled by stream. When there were no counts of spawners for a CU in a given year, we infilled by CU for that year and CU. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling in the retrospective analysis of LRPs, as it assumes that escapement is correlated between CUs in a given year. 
+
+There were two puproses of infilling:
+1. Infill total and wild escapement by CU and Area in order to get wild returns by CU and Area, in order to estimate recruits for each brood year.
+2. Infill wild escapement by CU, in order to get a time series of wild escapement to use in retrospective analysis of LRPs.
+
+##### Infilling by stream
+
+
+
+##### Infilling by CU
+
+
+
+```{r chum_escapement_infill, fig.cap="Chum salmon escapement for the seven Conservation Units. Black points indicate actual counts, blue points are infilled by stream, and red points are infilled by Conservation Unit."}
+knitr::include_graphics(here::here("figure/fig_compare_actual_infill_by_stream_and_CU.png"))
+```
+
 #### Run reconstruction to estimate recruitment
+
+Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/tree/withChum *\textcolor{cyan}{LW:Update url when withChum branch merged with main}*
 
 ## METHODS
 
@@ -73,23 +99,6 @@ The steps for preparing the data for analysis were:
 
 Bernoulli vs. Binomial
 
-```{r table1, echo=FALSE}
-d1 <- tribble(
-  ~Year, ~`Value 1`, ~`Value 2`,
-   2018,       1.12,       31.9,
-   2019,       2.32,        2.8,
-   2020,       3.67,      112.2)
-if(french){
-  names(d1) <- c(rosettafish::en2fr("Year"),
-                 paste0(rosettafish::en2fr("Value"), 1),
-                 paste0(rosettafish::en2fr("Value"), 2))
-}
-csasdown::csas_table(d1,
-  align = c("c", "r", "r"),
-  caption = ifelse(french,
-                   "French goes here",
-                   "Test table (data is d1) with a caption will be numbered automatically."))
-```
 
 ### EMPIRICAL LRPS
 
