@@ -36,11 +36,11 @@ We used essentially the same data used in @holt_evaluating_2018, updated with es
 
 ### Spawner counts / Escapement
 
-Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program) *\textcolor{cyan}{LW: probably unneccesary detail}*. The number of chum salmon spawners that return to spawn (escapement) is typcially counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
+We used spawning escapement data forom 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program) *\textcolor{cyan}{LW: probably unneccesary detail}*. The number of chum salmon spawners that return to spawn (escapement) is typcially counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
 
 ### Fishery harvest, genetics, and age
 
-The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. Age distributions for each year were taken from the Johnstone Strait fishery aggregate, as age data for specific CUs or streams was not available. 
+The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. Age distributions for each year were taken from the Johnstone Strait fishery aggregate, as age data for specific CUs or streams was not available. Harvest data was not available for 1954-2018 *\textcolor{cyan}{LW: confirm with Pieter Van Will why 1953 had no harvest data}*. Age composition data as available for 1958-2018.
 
 ### Data treatment
 
@@ -64,7 +64,9 @@ After these removals, the steps for preparing the data for analysis were:
 The data we used had years where not all streams were counted. When a CU had some streams counted in a year, we infilled by stream (Figure \@ref(fig:chum-escapement-infill)). When there were no counts of spawners for a CU in a given year, we infilled by CU for that year and CU. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling in the retrospective analysis of LRPs, as it assumes that escapement is correlated between CUs in a given year. 
 
 There were two puproses of infilling:
+
 1. Infill total and wild escapement by CU and Area in order to get wild returns by CU and Area, in order to estimate recruits for each brood year.
+
 2. Infill wild escapement by CU, in order to get a time series of wild escapement to use in retrospective analysis of LRPs.
 
 ##### Infilling by stream
@@ -79,7 +81,7 @@ If there were no counts of any streams in a CU in a given year, a second round o
 
 Using by-stream infilled escapement summed for each CU, the CUs and years with missing data were infilled assuming the total CU escapement was correlated between CUs. The procedure was similar to that for infilling by stream, but a geometric average for each CU across all years was used to calculate the proportion of the average for each year, and then that was used to estimate escapement for the two CUs with no obervations.
 
-These CUs (Upper Knight and Bute Inlet) were not used for the retrospective analysis because the assumption that escapement is correlated between CUs ignores diversity between CUs and the potential for uncorrelated escapements. The reality of uncorrelated escapements must be taken into account to evaluate whether aggregate escapement is a meaningful predictor for the status of individual CUs. It should also be noted that these two CUs do not represent a random subset of the seven CUs in the Inside South Coast Chum SMU. Both have fewer streams than the other CUs and a higher proportion of summer-run populations of chum. These CUs also include long fjord systems with glaciers and watersheds that go deep into the mainland with headwaters in the Cariboo region. Environmental conditions including patterns of hydrology, geomorphology, and marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, leading to differences in productivity and responses to the regional climate. For example, productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality.
+*\textcolor{cyan}{LW: This might be better in the discussion}* These CUs (Upper Knight and Bute Inlet) were not used for the retrospective analysis because the assumption that escapement is correlated between CUs ignores diversity between CUs and the potential for uncorrelated escapements. The reality of uncorrelated escapements must be taken into account to evaluate whether aggregate escapement is a meaningful predictor for the status of individual CUs. It should also be noted that these two CUs do not represent a random subset of the seven CUs in the Inside South Coast Chum SMU. Both have fewer streams than the other CUs and a higher proportion of summer-run populations of chum. These CUs also include long fjord systems with glaciers and watersheds that go deep into the mainland with headwaters in the Cariboo region. Environmental conditions including patterns of hydrology, geomorphology, and marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, leading to differences in productivity and responses to the regional climate. For example, productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality.
 
 ```{r chum-escapement-infill, fig.cap="Chum salmon escapement for the seven Conservation Units. Black points indicate actual counts, blue points are infilled by stream, and red points are infilled by Conservation Unit.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics(here::here("figure/fig_compare_actual_infill_by_stream_and_CU.png"))
@@ -87,7 +89,7 @@ knitr::include_graphics(here::here("figure/fig_compare_actual_infill_by_stream_a
 
 #### Run reconstruction to estimate recruitment
 
-Using CU benchmarks based on stock-recruit parameters - in this case, Sgen - requires knowing the spawners and recruits (adult offspring produced by each brood year of spawners) for each brood year (spawning year). Estimating recruits requires knowing wild spawner escapement, number of wild fish caught in fisheries, and the age of these fish. 
+We reconstructed the returns for each brood year to give recruits for brood years 1955-2012 (age composition data from 1958-2018, minimum fish age was 3 years, maximum fish age was 6 years). Using CU benchmarks based on stock-recruit parameters - in this case, Sgen - requires knowing the spawners and recruits (adult offspring produced by each brood year of spawners) for each brood year (spawning year). Estimating recruits requires knowing wild spawner escapement, number of wild fish caught in fisheries, and the age of these fish. 
 
 To get these estimates, total (wild and hatchery origin) spawners based on the infilling methods above (both stream and CU level infilling) were calculated for each CU and Fishery Management Area (Figure \@ref(fig:chum-map)). The number of fish harvested in fisheries (wild and hatchery, by CU and Fishery Management Area) were added to the total escapement to get an estimate of totoal stock by CU and Fishery Management Area for each spawning year. This total stock number was multiplied by the proportion of wild spawners in each CU and Fishery Management Area based on the infilled wild and total spawner escapement. The product was an estimate of total wild stock (spawner escapement plus fishery harvest) by CU and Fishery Management Area for each brood year. Finally, the age composition of chum harvested in the Johnstone Strait aggregate fishery (ages 3, 4, 5 and 6) were used to assign fish from this total stock to brood years. As such, this analysis does not account for age diversity between CUs or streams.
 
@@ -97,15 +99,21 @@ Note that the two CUs requiring CU-level infilling correspond to only one Fisher
 
 ### Benchmarks for Conservation Units
 
-Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. 
+Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: Sgen (based on Ricker parameters) and 25th percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
+
+Recommendations from @holt_evaluating_2018:
+
 
 #### Benchmark based on stock-recruit relationship - Sgen
+
+
 
 #### Benchmark based on historical abundance - Percentile
 
 ### Regression forms
 
 Bernoulli vs. Binomial
+Regression forms are described in [Chapter 2][LOGISTIC REGRESSION LRPS]
 
 
 ### EMPIRICAL LRPS

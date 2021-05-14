@@ -40,14 +40,14 @@ Table: (\#tab:csOverview) Overview of benchmarks and LRP estimation methods exam
 ### Proportion of CUs above lower abundance benchmarks
 
 
-### Multi-dimensional approach to CU-assessments
+### Proportion of CUs with multi-dimensional status > red
 
 
 ## AGGREGATE ABUDNANCE-BASED LRPS
 
 ### Logistic regression LRPs
 
-*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??*
+*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??* *\textcolor{cyan}{LW: I like Logistic Regression LRPs, it's intuitive. Another option could be Aggregate LRPs?}*
 
 Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
 
