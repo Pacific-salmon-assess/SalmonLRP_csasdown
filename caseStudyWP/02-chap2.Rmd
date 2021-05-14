@@ -1,6 +1,19 @@
-# AGGREGATE ABUNDANCE LRP ESTIMATION METHODS
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# LRP ESTIMATION METHODS
 
-In this section, we provide an overview of methods used to develop aggregate abundance-based LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (South Coast Chum, excluding Fraser). An overview of benchmarks and LRP estimation methods examined for each case study is provided in Table \@ref(tab:csOverview).
+In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (South Coast Chum, excluding Fraser). 
+
+All LRP estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP using the methods described in sections 2.1 - 2.??.
+
+Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer
+between it and any level of abundance that could lead to a CU being
+considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
+
+An overview of CU benchmarks and LRP estimation methods examined for each case study is provided in Table \@ref(tab:csOverview).
 
 -------------------------------------------------------------------------------------
 Case Study              Benchmark Methods           LRP Estimation Methods
@@ -19,65 +32,72 @@ South Coast Chum        - Sgen from SRR             - Aggregate Abundance: Empir
 Table: (\#tab:csOverview) Overview of benchmarks and LRP estimation methods examined for each case study.
 
 
-## ESTIMATION OF CU STATUS
-
-Aggregate abundance-based estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP using the logistic regression and projection-based LRP methods described in the next two sections.
-
-Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer
-between it and any level of abundance that could lead to a CU being
-considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review)
-
-Several of methods for estimating lower benchmarks are considered within the three case studies presented in this working paper (Table \@ref(tab:csOverview)).
 
 
-## LOGISTIC REGRESSION LRPS
+
+## PROPORTION-BASED LRPS
+
+### Proportion of CUs above lower abundance benchmarks
+
+
+### Multi-dimensional approach to CU-assessments
+
+
+## AGGREGATE ABUDNANCE-BASED LRPS
+
+### Logistic regression LRPs
 
 *Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??*
 
-Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Two alternative approaches can be used to fit a logistic regression to observed data: a proportional approach and a probability-based approach.  
+Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
 
-*Question: I have used 'proportional and probability-based because Carrie previously cautioned the Bernoulli and Binomial may not be super-intuitive. What do others think?  Other ideas??*
-
-In the proportional approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified *proportion* of CUs being above their lower benchmark ($S_i > LBM_i$, where i = a CU). For each year of observed data, CU-level status is quantified as the number or CUs with $S_i > LBM_i$. A logistic regression is then fit to predict the proportion of CUs with $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined).
-
-In the probability-based approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified *probability* of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU.  
-
-The annual proportion of CUs with $S_i > LBM_i$ (or, the probability that all CUs will have $S_i > LBM_i$) is modelled as a function of annual aggregate spawner abundance to the SMU using the logistic regression equation:
 \begin{equation}
   \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
    (\#eq:logistic)
 \end{equation}
 
-where, $p$ is the proportion (or probability), $B_0$ and $B_1$ are estimated logistic regression parameters and $S_{i,t}$ is spawner abundance to CU $i$ in year $t$. Equation \@ref(eq:logistic) is then re-arranged calculate the LRP as the aggregate spawner abundance associated with the pre-specified proportion (or probability threshold) of $p^*$,
+where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression parameters and $S_{i,t}$ is spawner abundance to CU $i$ in year $t$. Equation \@ref(eq:logistic) is then re-arranged calculate the LRP as the aggregate spawner abundance associated with the pre-specified probability threshold of $p^*$,
 
 \begin{equation}
   LRP = \frac{log(\frac{p^*}{1-p^*}) - B_0}{B_1}
   (\#eq:logisticLRP)
 \end{equation}
 
-When fitting equation \@ref(eq:logistic), we used a normally-distributed penalty function to constrain the logistic model fit to pass near the zero-intercept. This penalty was applied to the aggregate spawner abundance at which 1% of CUs would be above their LBM ($p^*$ = 0.01), which we denote as $AggS_{p=0.01}$.  
 
-\begin{equation}
-\begin{split}
-  AggS_{p=0.01} = \frac{\log(\frac{0.01}{1-0.01})}{B_1} - B_0 \\
-  AggS_{p=0.01} \sim N(\mu_{SAg}, \sigma_{SAg})
-  (\#eq:logisticPen)
-\end{split}
-\end{equation}
-  
-The $\mu_{SAg}$ and $\sigma_{SAg}$ parameters were specified by first identifying lower and upper limits of a plausible range for $AggS_{p=0.01}$.  For example, the lower limit was often based on the lowest LBM for any CUs within an SMU, while the upper limit was based on the sum of LBMs overall all CUs. The $\mu_{SAg}$ parameter was then set at the mean of the upper and lower limits of the plausible range of $AggS_{p=0.01}$, while $\sigma_{SAg}$ was set at a value that corresponded to a 95% probability that $AggS_{p=0.01}$ would be below the upper and lower limits. Additional details for each case study, as well as sensitivity analyses to the assumed penalty function, are provided in each case study chapter below.  
-
-An example logistic regression fit for the proportional approach is shown in Figure x. When determining the LRP in this example, we set the threshold proportion, $p^*$, near 100%, which means that all CUs are required to have $S_i > LBM_i$.  Note that in practice, a value of $p^*$ = 99% was used so that Equation \@ref(eq:logisticLRP) could be solved.  
-
-Similarly, an example logistic regression fit for the probability-based approach is shown in Figure xx. When determining the LRP in this example, we set the threshold probability at 95%, $p^*$ = 95%, which means the LRP represents the aggregate abundance that is associated with a 95% probability of all CUs having $S_i > LBM_i$.
+An example logistic regression fit for the proportional approach is shown in Figure x. We show the estimation of LRPs based on this fit for two possible probability thresholds: $p^*$ = 50% and $p^*$ = 90%. LRP estimates therefore represent the aggregate abundance that is associated with a 50%, or 95%, probability of all CUs having $S_i > LBM_i$. Alternative $p^*$ values are presented in case-study applications below.
 
 
-*Question: should regression model diagnostics be added here?*
+#### LOGISTIC REGRESSION MODEL DIAGNOSTICS
+
+*To be added by Carrie*
+
+
+### PROJECTION-BASED LRPS
+
+
+Projected LRPs are estimated using stochastic projections of future stock size for individual CUs. Projected abundances are then used to characterize the implicit relationship between aggregate spawner abundance for the SMU and the probability that the required proportion of CUs will be above their individual lower abundance benchmarks (e.g. Sgen). 
+
+We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). The code for samSim is available on GitHub: https://github.com/Pacific-salmon-assess/samSim.  We created a modified version of samSim to support LRP estimation, which is also available on GitHub: https://github.com/Pacific-salmon-assess/samSim/tree/LRP  
+Updated functionality for the LRP version of samSim include:
+* The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution
+* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study; see Section x.x for more details)
+* The option to initialize population dynamics for individual CUs at unfished equilibrium when no historical recruitment data are available. Note that while this option would not be appropriate for projections aimed at estimating recovery from a current state, it can be used to estimate projection-based LRPs because we are only interested in the underlying relationship between aggregate abundance and the probability individual CUs will be above their lower benchmark.
+
+We incorporate uncertainty in key biological and management parameters that control CU dynamics into samSim through the specification of empirically-derived probability distributions.  Uncertainties represented this way include stock-recruitment parameters, age-at-maturity, and exploitation rates, as well uncertainty in the level of covariation in these processes among CUs.  Larger structural uncertainties in underlying data or model formulation were represented through the use of alternative operating models (OMs), with each OM intended to represent a plausible hypothesis about future stock dynamics. The selection of relevant OMs to be considered varied among case studies based on available data and knowledge.  
+
+Multiple sets of projections were undertaken for each OM; each with a different fixed exploitation rate strategy applied (including a no fishing strategy). This approach provided good contrast in projected dynamics over all scenarios ....   
+
+Observation error was not incorporated into forward projections because we ......
 
 
 
-## PROJECTION-BASED LRPS
 
+stochastic projections  under a range of levels of exploitation to establish an underlyning relationship between aggregate SMU-level a   
+
+
+
+Original outline:
+ 
 -	Description of projected LRP approach. This approach is described in more detail in the Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”
 
 -	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
