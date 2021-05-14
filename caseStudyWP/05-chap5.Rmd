@@ -99,6 +99,8 @@ Note that the two CUs requiring CU-level infilling correspond to only one Fisher
 
 ### Benchmarks for Conservation Units
 
+@hilborn_british_2012 used a percentile approach for Interior South Coast chum salmon 
+
 Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: Sgen (based on Ricker parameters) and 25th percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
 
 Recommendations from @holt_evaluating_2018:
@@ -106,7 +108,9 @@ Recommendations from @holt_evaluating_2018:
 
 #### Benchmark based on stock-recruit relationship - Sgen
 
+For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did account for marine survival (compared to Interior Fraser Coho). 
 
+We used a basic Ricker model to estimate the productivity (recruits )
 
 #### Benchmark based on historical abundance - Percentile
 
