@@ -32,7 +32,7 @@ Several of methods for estimating lower benchmarks are considered within the thr
 
 ## LOGISTIC REGRESSION LRPS
 
-*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??*
+*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??* *\textcolor{cyan}{LW: I like Logistic Regression LRPs, it's intuitive. Another option could be Aggregate LRPs?}*
 
 Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Two alternative approaches can be used to fit a logistic regression to observed data: a proportional approach and a probability-based approach.  
 
