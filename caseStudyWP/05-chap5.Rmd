@@ -110,7 +110,15 @@ Recommendations from @holt_evaluating_2018:
 
 For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did account for marine survival (compared to Interior Fraser Coho). 
 
-We used a basic Ricker model to estimate the productivity (recruits )
+We used a basic Ricker model to estimate the the predicted recruits $\hat{R}$ from spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ for each stock $i$ \@ref(eq:ricker). We used the log-transformed Ricker equation so that the residuals/error would be normally distributed. *\textcolor{cyan}{LW: is this correct about the residuals/error?}* 
+
+\begin{equation}
+  log(\hat{R}) = log(\alpha_i) + log(S) - e^{log(\beta_i)} * S 
+  (\#eq:ricker)
+\end{equation}
+
+\begin{equation}
+\end{equation}
 
 #### Benchmark based on historical abundance - Percentile
 
