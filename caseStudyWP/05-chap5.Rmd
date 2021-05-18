@@ -166,14 +166,26 @@ Based on the recommendations in *Guidelines Working Paper*, we used benchmarks a
 
 Recommendations from @holt_evaluating_2018:
 
+### Other sources of information to inform benchmarks
+
+Indigenous Knowledge
+
+- Two-Eyed Seeing - Etuaptmumk(Mi’kmaw) @reid_two-eyed_2020
+- Historical baseline before records from western science @eckert_diving_2018, @lee_diverse_2019, @ban_incorporate_2018
+
+Genetic tools and historical records
+
+- Skeena sockeye @price_genetics_2019, @price_portfolio_2021
+- Skeena chum @price_abundance_2013
+- Cannery records @meengs_estimating_2005
+
+Archaeological records
+
+- BC herring @mckechnie_archaeological_2014
 
 #### Benchmark based on stock-recruit relationship - Sgen
 
 For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did account for marine survival (compared to Interior Fraser Coho). 
-
-We used a basic Ricker model 
-
-
 
 The basic Ricker equation uses spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ to predict recruits $R$ (Equation \@ref(eq:ricker)). Note that recruits includes spawners and adults caught in fishereis. We used the log-transformed Ricker equation so that the residuals/error would be normally distributed (Equation \@ref(eq:logricker)). 
 
@@ -226,8 +238,10 @@ Warnings with $S_{gen}$ / ricker based benchmarks:
 
 #### Benchmark based on historical abundance - Percentile
 
-@hilborn_british_2012 used a percentile approach for Interior South Coast chum salmon 
+Estimating benchmarks for salmon populations without a long time series and without data on prodcutivity (only escapement, no recruits/smolt production) is challenging. Previous evaluations of Inside South Coast chum population status used a 25% benchmark (@hilborn_british_2012). This was based on previous work by the Alaska Department of Fish and Game that defined four tiers of populations based on conrast in spawner abunances, harvest rate, and precision of escapement data (@bue_escapement_2001, @otis_escapement_2004). The goal of these tiers was to choose a Sustainable Escapement Goal (an upper and lower percentile) to use as a goal for escapement to "represents a proxy for maintaining escapements within a range that encompasses $S_{MSY}$" (@clark_evaluation_2014). Tier 1 of this method was for high escapement contrast (greater than 8) and at least moderate harvest rate, with a SEG of 25th to 75th percentiles. @bue_escapement_2001 assessed this method on "11 selected stocks. The specific stocks examined were 2 sockeye salmon (Oncorhynchus nerka) and 2 Chinook salmon (O. tshawytscha) stocks from Upper Cook Inlet, and 7 sockeye salmon stocks from Bristol Bay (in @clark_evaluation_2014). @clark_evaluating_2014 tested the suitability of this 4 tier percentile approach by applying a theoretical, simulation, and meta-analysis on "76 stock-recruitment data sets from throughout Alaska using a standard linear regression approach (Appendix B; Ricker 1975). These data included historical stock-recruitment observations for 7 pink salmon (O. gorbuscha), 7 coho salmon (O. kisutch), 43 sockeye salmon, 6 chum salmon (O. keta) stocks, and 13 Chinook salmon stocks". They recommended a revised 3 tier system, which changed the Tier 1 lower perecntile to 20%. @hilborn_british_2012 adopted this 25% lower limit of SEG as a benchmark for evaluating the status of Inside South Coast CHum in BC for the purpose of certification with the Marine Stewardship Council (@hilborn_british_2012), despite it lacking testing for chum or British Columbia salmon. The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested whether a 25% percentile benchmark compared to $S_{gen}$. They found that...
 
+
+We used 25% of spawner abundance as a benchmark for this case study.  
 Warnings with percentile approach: 
 
 - Shifting baselines
