@@ -99,7 +99,68 @@ Note that the two CUs requiring CU-level infilling correspond to only one Fisher
 
 ### Benchmarks for Conservation Units
 
-@hilborn_british_2012 used a percentile approach for Interior South Coast chum salmon 
+*\textcolor{cyan}{LW: some of this might be better in the lit review/ guidelines working paper}*
+
+- The Wild Salmon Policy requires that salmon Conservation Units have set benchmarks dividing three levels of health: red, amber, green.
+- From @canada_canadas_2005: "The lower benchmark between Amber and Red will be established at a level of abundance high enough to ensure there is a **substantial** buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC. The buffer will account for uncertainty in data and control of harvest management."
+
+Level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC can be informed by several criteria:
+
+- @holt_indicators_2009: Table 2
+  - Spawner abundance
+  - Time trends in spawner abundance
+  - Distribution
+  - Likelihood of continued trends in abundance given fishing effort
+- @cosewic_cosewic_2019: Table 2
+  - Decline in total number of mature individuals over last 10 years or 3 generations (whichever is longer) where reduction or its causes may not have ceased or may not be understood of may not be reversible, based on (and specifying) any of: 
+      - direct observation
+      - an index of abundance appropriate to the taxon
+      - a decline in index of area of occupancy, extent of occurrence and/or quality of habitat
+      - actual or potential levels of exploitation
+      - the effects of introduced taxa, hybridization, pathogens, pollutants, competitors, or parasites
+  - Reduction of >= 70% = endangered
+  - reduction of >= 50% = threatened
+- @iucn_standards_and_petitions_committee_guidelines_2019: Table 2.1
+  - same as COSEWIC above, but uses "Vulnerable" instead of "Threatened"
+
+How do these line up with LRPs?
+
+- @government_of_canada_fishery_2009: A fishery decision-making framework incorporating the precautionary approach: 
+  - "LRP represents the stock status below which serious harm is occurring to the stock." 
+  - "At this stock level, there may also be resultant impacts to the ecosystem, associated species and a lont-term loss of fishing opportunities"
+  - "When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
+
+- @fisheries_and_oceans_canada_harvest_2006
+  - "The Limit reference point is the stock level below which productivity is sufficiently impaired to cause serious harm to the resource but **above the level where the risk of extinction becomes a concern**" - Qualitatively similar to the benchmark between Red and Amber Zones in WSP. 
+  
+If each of the component CUs of a SMU is above the red/amber benchmark and thus not at risk of extinction, the entire SMU could judged to be above its LRP. 
+
+### Appropriate benchmarks for Inside South Coast Chum:
+
+Based on @government_of_canada_fishery_2009:
+"When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
+
+Range of factors which may affect the productivity of Inside South Coast Chum:
+
+- Ocean conditions:
+  - Competition / Biomass of North American pink, sockeye, and chum salmon @debertin_marine_2017, @litz_competition_2021
+  - Pacific Decadal Oscillation (PDO) (both positive and negative depending on what time period examined) @litz_competition_2021
+  - North Pacific Gyre Oscillation (NPGO) (positive relationship with growth), interaction between PDO and NPGO @debertin_marine_2017
+  - Early marine entry temperature (inlets)
+  - Timing of spring bloom
+  - Ocean ecology during time at sea (zooplankton, forage fish available) - dependent on ocean temperature @cheng_upper_2021
+- Interacting / carry-over / complex effects:
+  - winter incubation temperatures -> earlier emergence -> potential mismatch with spring bloom Wilson 2021 thesis (chum outmigration getting earlier)
+  - ocean conditions -> female adult size -> egg burial depth * scour flood frequency/intensity (climate change) * land cover (exacerbating factors of floods) -> lower egg to adult survival
+  - female adult size -> egg size -> lower condition at estuary entry -> lower early marine survival
+- Habitat loss
+  - estuary loss (human, climate change)
+  - change in quality of spawning habitat (change in sediment regime, possibly from forestry, landslides, potential climate change induced/exacerbated).
+- Fishing mortality (Alaska, BC)
+- Predation
+
+
+From @holt_evaluating_2018: "Status assessments under the WSP integrate numerous metrics, including those on abundances, trends in abundance, and spatial distribution (Holt et al. 2009). Benchmarks on abundances (percentile or stock-recruitment based) are only one component of an integrated assessment of status that includes numerous other metrics (Grant and Pestal 2013; DFO 2015; DFO 2016)."
 
 Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: Sgen (based on Ricker parameters) and 25th percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
 
@@ -110,17 +171,44 @@ Recommendations from @holt_evaluating_2018:
 
 For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did account for marine survival (compared to Interior Fraser Coho). 
 
-We used a basic Ricker model to estimate the the predicted recruits $\hat{R}$ from spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ for each stock $i$ \@ref(eq:ricker). We used the log-transformed Ricker equation so that the residuals/error would be normally distributed. *\textcolor{cyan}{LW: is this correct about the residuals/error?}* 
+We used a basic Ricker model to estimate the the predicted recruits $\hat{R}$ from spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ for each stock $i$ \@ref(eq:ricker). We used the log-transformed Ricker equation so that the residuals/error would be normally distributed \@ref(eq:log-ricker). *\textcolor{cyan}{LW: is this correct about the residuals/error?}* 
+
+\begin{equation}
+    log(R) = \alpha \centerdot S e^{-\beta * S} 
+    (\#eq:ricker)
+\end{equation}
 
 \begin{equation}
   log(\hat{R}) = log(\alpha_i) + log(S) - e^{log(\beta_i)} * S 
-  (\#eq:ricker)
+  (\#eq:log-ricker)
 \end{equation}
 
-\begin{equation}
-\end{equation}
+
+
+Warnings with Sgen / ricker based benchmarks:
+
+- Ignores variability in actual recruits/spawner (Sgen is based on mean \alpha value). This can be problematic if there are large residuals (especially negative) in the stock-recruit curve at low spawner abundance. For example, if 20% of the time (based on record of recruits/spawner), Sgen spawners actually had recruits/spawner less than 1. Then you set up a potential tail-spin to low abundance, depending on the frequency of these low recruitment cohorts at low abundance.
+- Because they are set at the CU level (high level in terms of stock-recruit relationship, not at the scale of stream-level density-dependence or ocean-level density dependence including overlapping species (e.g., Alaska, pacific ocean)), they may not explicitly model density dependence at scales where it is probably occurring. 
+- Assumes productivity and density-dependence are constant (not true, especially given the importance of biomass of pinks for chum salmon, ocean food availability)
+- \alpha and \beta are negatively correlated: sensitive to each other, especially when fit is not good, this is problematic, especially since $S_MSY$ and $S_gen$ depend on both \alpha and \beta
+- $MSY$ and its derivatives (e.g., $S_MSY$, $S_gen$) are not based on COSEWIC risk of extinction metrics such as percent decreases in spawner abundance 
 
 #### Benchmark based on historical abundance - Percentile
+
+@hilborn_british_2012 used a percentile approach for Interior South Coast chum salmon 
+
+Warnings with percentile approach: 
+
+- Shifting baselines
+- Assumes productivity (recruits/spawner) stationary
+- record only starts with data 
+- Accounting for fishing mortality? percentile of recruits vs. escapement
+
+#### Other considerations of benchmarks
+
+- % decreases in abundance
+- Time frame (10 years / 3 generations)
+- Consideration of causes and a higher level of caution: "where reduction or its causes may not have ceased or may not be understood of may not be reversible"
 
 ### Regression forms
 
