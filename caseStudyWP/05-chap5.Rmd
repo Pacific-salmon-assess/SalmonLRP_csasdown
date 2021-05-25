@@ -158,13 +158,12 @@ Range of factors which may affect the productivity of Inside South Coast Chum:
   - change in quality of spawning habitat (change in sediment regime, possibly from forestry, landslides, potential climate change induced/exacerbated).
 - Fishing mortality (Alaska, BC)
 - Predation
-
+- Depensation at low spawner abundance 
+- Negative impacts of hatchery fish
 
 From @holt_evaluating_2018: "Status assessments under the WSP integrate numerous metrics, including those on abundances, trends in abundance, and spatial distribution (Holt et al. 2009). Benchmarks on abundances (percentile or stock-recruitment based) are only one component of an integrated assessment of status that includes numerous other metrics (Grant and Pestal 2013; DFO 2015; DFO 2016)."
 
-Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: Sgen (based on Ricker parameters) and 25th percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
-
-Recommendations from @holt_evaluating_2018:
+Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: $S_{gen}$ (based on Ricker parameters) and 25^th^ percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
 
 ### Other sources of information to inform benchmarks
 
@@ -199,7 +198,7 @@ The basic Ricker equation uses spawners $S$, productivity $\alpha$, and the stre
   (\#eq:logricker)
 \end{equation}
   
-We estimated the predicted recruits $\hat{R}$ from spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ for each stock $i$ (Equation \@ref(eq:log_ricker)).  *\textcolor{cyan}{LW: is this correct about the residuals/error?}* The natural log of observed recruits per spawner $log(\frac{R}{S})$ were assumed to be drawn from a normal distribution (normal error) with mean $log(\frac{\hat{R}}{S})$ and standard deviation $\sigma_i$ (Equation \@ref(eq:likelihood-recruits)).
+We estimated the predicted recruits $\hat{R}$ from spawners $S$, productivity $\alpha$, and the strength of density dependence $\beta$ for each stock $i$ (Equation \@ref(eq:logricker)).  *\textcolor{cyan}{LW: is this correct about the residuals/error?}* The natural log of observed recruits per spawner $log(\frac{R}{S})$ were assumed to be drawn from a normal distribution (normal error) with mean $log(\frac{\hat{R}}{S})$ and standard deviation $\sigma_i$ (Equation \@ref(eq:likelihood-recruits)).
 
 \begin{equation}
     log(\frac{R}{S}) \sim Normal( log(\frac{\hat{R}}{S}) , \sigma_i)
@@ -228,28 +227,52 @@ $S_{gen}$ was estimated from $S_{MSY}$ by assuming that the difference between t
 
 We used R (ref) and the Template Model Builder *TMB* package to fit Ricker models and logistic regressions of aggregate abundance (@kristensen_tmb_2016). 
 
-Warnings with $S_{gen}$ / ricker based benchmarks:
+Caveats with benchmarks based on $S_{gen}$ or stock-recruit parameters:
 
 - Ignores variability in actual recruits/spawner ($S_{gen}$ is based on mean $\alpha$ value). This can be problematic if there are large residuals (especially negative) in the stock-recruit curve at low spawner abundance. For example, if 20% of the time (based on record of recruits/spawner), $S_{gen}$ spawners actually had recruits/spawner less than 1. Then you set up a potential tail-spin to low abundance, depending on the frequency of these low recruitment cohorts at low abundance.
 - Because they are set at the CU level (high level in terms of stock-recruit relationship, not at the scale of stream-level density-dependence or ocean-level density dependence including overlapping species (e.g., Alaska, pacific ocean)), they may not explicitly model density dependence at scales where it is probably occurring.
 - Assumes productivity and density-dependence are constant
 - $\alpha$ and $\beta$ are negatively correlated: sensitive to each other, especially when fit is not good, this is problematic, especially since $S_{MSY}$ and $S_{gen}$ depend on both $\alpha$ and $\beta$
 - $MSY$ and its derivatives, e.g., $S_{MSY}$, $S_{gen}$ are not based on COSEWIC risk of extinction metrics such as percent decreases in spawner abundance
+- Doesn't account for depensation
+- The only dependent variables used are recruits and spawners, no other variables that are possibly linked to productivity
 
 #### Benchmark based on historical abundance - Percentile
 
-Estimating benchmarks for salmon populations without a long time series and without data on prodcutivity (only escapement, no recruits/smolt production) is challenging. Previous evaluations of Inside South Coast chum population status used a 25% benchmark (@hilborn_british_2012). This was based on previous work by the Alaska Department of Fish and Game that defined four tiers of populations based on conrast in spawner abunances, harvest rate, and precision of escapement data (@bue_escapement_2001, @otis_escapement_2004). The goal of these tiers was to choose a Sustainable Escapement Goal (an upper and lower percentile) to use as a goal for escapement to "represents a proxy for maintaining escapements within a range that encompasses $S_{MSY}$" (@clark_evaluation_2014). Tier 1 of this method was for high escapement contrast (greater than 8) and at least moderate harvest rate, with a SEG of 25th to 75th percentiles. @bue_escapement_2001 assessed this method on "11 selected stocks. The specific stocks examined were 2 sockeye salmon (Oncorhynchus nerka) and 2 Chinook salmon (O. tshawytscha) stocks from Upper Cook Inlet, and 7 sockeye salmon stocks from Bristol Bay (in @clark_evaluation_2014). @clark_evaluating_2014 tested the suitability of this 4 tier percentile approach by applying a theoretical, simulation, and meta-analysis on "76 stock-recruitment data sets from throughout Alaska using a standard linear regression approach (Appendix B; Ricker 1975). These data included historical stock-recruitment observations for 7 pink salmon (O. gorbuscha), 7 coho salmon (O. kisutch), 43 sockeye salmon, 6 chum salmon (O. keta) stocks, and 13 Chinook salmon stocks". They recommended a revised 3 tier system, which changed the Tier 1 lower perecntile to 20%. @hilborn_british_2012 adopted this 25% lower limit of SEG as a benchmark for evaluating the status of Inside South Coast CHum in BC for the purpose of certification with the Marine Stewardship Council (@hilborn_british_2012), despite it lacking testing for chum or British Columbia salmon. The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested whether a 25% percentile benchmark compared to $S_{gen}$. They found that...
+*\textcolor{cyan}{LW: some of this is probably too much detail, but I am keeping track of my thoughts here for now}*
+
+Estimating benchmarks for salmon populations without a long time series and without data on prodcutivity (only escapement, no recruits/smolt production) is challenging. Previous evaluations of Inside South Coast chum population status used a 25% benchmark (@hilborn_british_2012). This was based on previous work by the Alaska Department of Fish and Game that defined four tiers of populations based on conrast in spawner abunances, harvest rate, and precision of escapement data (@bue_escapement_2001, @otis_escapement_2004). The goal of these tiers was to choose a Sustainable Escapement Goal (an upper and lower percentile) to use as a goal for escapement to "represents a proxy for maintaining escapements within a range that encompasses $S_{MSY}$" (@clark_evaluation_2014). These SEGs were calculated for each major river/system and are still done that way now in Alaska (@mckinley_review_2020). Tier 1 of this method was for high escapement contrast (greater than 8) and at least moderate harvest rate, with a SEG of 25th to 75th percentiles. @bue_escapement_2001 assessed this method on "11 selected stocks. The specific stocks examined were 2 sockeye salmon and 2 Chinook salmon stocks from Upper Cook Inlet, and 7 sockeye salmon stocks from Bristol Bay (in @clark_evaluation_2014). @clark_evaluation_2014 tested the suitability of this 4 tier percentile approach by applying a theoretical, simulation, and meta-analysis on "76 stock-recruitment data sets from throughout Alaska using a standard linear regression approach. These data included historical stock-recruitment observations for 7 pink salmon, 7 coho salmon, 43 sockeye salmon, 6 chum salmon stocks, and 13 Chinook salmon stocks". They recommended a revised 3 tier system, which changed the Tier 1 lower perecntile to 20%. @hilborn_british_2012 adopted the previous 25% lower limit of SEG as a benchmark for evaluating the status of Inside South Coast Chum in BC for the purpose of certification with the Marine Stewardship Council (@hilborn_british_2012), despite it lack of testing for populations of chum salmon in British Columbia. Further, SEGs were and still are applied to individual rivers in Alaska, compared to the application of this method to entire CUs, which, for ISC Chum, which has 296 streams among the seven CUs, with 126 in Strait of Georgia alone. By aggregating spawners and recruits across many rivers before estimating benchmarks of percentile or stock-recruit parameters, the following problems may arise:
+
+- Error in fitting stock-recruit curves because it is at aggregate level instead of by river
+- Sum of $S_{gen}$ calculated for individual rivers may not equal $S_{gen}$ calculated using aggregated spawner and recruit data
+- Non-stationarity of productivity in individual systems may be hidden by aggregating spawners and recruits
+- Spawner abundance at CU level may not be a good predictor of status of individual rivers compared to SEGs at the river scale (similar to the problem of SMU aggregate LRP logistic regression), depending on the contrast in size between rivers and the correlation (or lack) in escapement and/or productivity
+
+The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters for Inside South Coast Chum, using retrospective and simulation analyses. Among other things, they tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that:
+
+- Percentile benchmarks (even 50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values, which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks are needed in this case
+- Time series bias tends to under-estimate $S_{gen}$ 
+ 
+From @holt_evaluating_2018 Table 6, productivity values, recommendations:
+
+- Productivity (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%: 25^th^ lower benchmark (Georgia Strait, Howe Sound Burrard Inlet)
+- Productivity ($\alpha$) between 1.5-2.5 and: 
+  - harvest rate 0-20%: 50^th^ lower benchmark (Loughborough, Northeast Vancouver Island, Upper Knight)
+  - harvest rate 20-40%: further evaluation required, percentiles not recommended (Bute Inlet)
+- Productivity ($\alpha$) <1.5: no category in @holt_evaluating_2018, assume further evaluation required, percentiles not recommended (Southern Coastal Streams)
 
 
-We used 25% of spawner abundance as a benchmark for this case study.  
-Warnings with percentile approach: 
+Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait, Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and the multidimensional approach for Bute Inlet and Southern Coastal Streams.
 
-- Shifting baselines
+Caveats with benchmarks based on percentile of abundance: 
+
+- Shifting baselines within period of data (e.g., Souther Coastal Streams)
+- Shifting baselines (higher baseline before period of data)
 - Assumes productivity (recruits/spawner) stationary
 - record only starts with data 
 - Accounting for fishing mortality? percentile of recruits vs. escapement
 
-#### Other considerations of benchmarks
+#### Other considerations for benchmarks from COSEWIC framework
 
 - % decreases in abundance
 - Time frame (10 years / 3 generations)
