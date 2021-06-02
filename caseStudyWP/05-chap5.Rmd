@@ -97,6 +97,8 @@ Note that the two CUs requiring CU-level infilling correspond to only one Fisher
 
 ## METHODS
 
+Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
+
 ### Benchmarks for Conservation Units
 
 *\textcolor{cyan}{LW: some of this might be better in the lit review/ guidelines working paper}*
@@ -165,24 +167,19 @@ From @holt_evaluating_2018: "Status assessments under the WSP integrate numerous
 
 Based on the recommendations in *Guidelines Working Paper*, we used benchmarks at the scale of Conservation Units to evaluate Limit Reference Points for Inside South Coast Chum. We compared two different benchmarks at the CU level: $S_{gen}$ (based on Ricker parameters) and 25^th^ percentile (based on historical abundance).  these two benchmarks for Inside South Coast Chum. We used these benchmarks for this case study because of the previous work evaluating whether abundance-based benchmarks were appropriate for data-limited Chum populations (@holt_evaluating_2018). 
 
-### Other sources of information to inform benchmarks
+### Limit Reference Points based on Logistic Models using SMU Aggregate Abundance and Status of Component CUs
 
-Indigenous Knowledge
+We evaluated two methods for developing LRPs based on aggregate abundance for Inside South Coast Chum. The goal of these methods was to explore whether the status of component CUs could be predicted well by the aggregate abundance of the whole SMU. The motivation behind this approach is that many SMUs are not monitored at the CU level. If the aggregate abundance of the SMU could predict the status of component CUs, then an LRP that is measured in aggregate SMU abundance could be reliably used. 
 
-- Two-Eyed Seeing - Etuaptmumk(Mi’kmaw) @reid_two-eyed_2020
-- Historical baseline before records from western science @eckert_diving_2018, @lee_diverse_2019, @ban_incorporate_2018
+These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis). Both approaches attempted to estimate LRPs by fitting logistic regression models to historically observed data. The two methods differ in what method was used to assess CU-level benchmarks.
 
-Genetic tools and historical records
+The first approach uses $S_{gen}$ as a benchmark, which is derived from the parameters of the Ricker model of recruitment.
 
-- Skeena sockeye @price_genetics_2019, @price_portfolio_2021
-- Skeena chum @price_abundance_2013
-- Cannery records @meengs_estimating_2005
+The second approach uses a percentile of past spawner abundance as a benchmark. 
 
-Archaeological records
+Due to poor logistic model fits using the entire 19xx - 2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logsitic model fits are highlighted in the results section below.
 
-- BC herring @mckechnie_archaeological_2014
-
-#### Benchmark based on stock-recruit relationship - Sgen
+#### Benchmark based on stock-recruit relationships - $S_{gen}$
 
 For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did account for marine survival (compared to Interior Fraser Coho). 
 
@@ -261,12 +258,11 @@ From @holt_evaluating_2018 Table 6, productivity values, recommendations:
   - harvest rate 20-40%: further evaluation required, percentiles not recommended (Bute Inlet)
 - Productivity ($\alpha$) <1.5: no category in @holt_evaluating_2018, assume further evaluation required, percentiles not recommended (Southern Coastal Streams)
 
-
-Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait, Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and the multidimensional approach for Bute Inlet and Southern Coastal Streams.
+We used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and the multidimensional approach for Bute Inlet and Southern Coastal Streams.*\textcolor{cyan}{LW: may need to revise the last three based on multi-dimensional methods}*
 
 Caveats with benchmarks based on percentile of abundance: 
 
-- Shifting baselines within period of data (e.g., Souther Coastal Streams)
+- Shifting baselines within period of data (e.g., Southern Coastal Streams)
 - Shifting baselines (higher baseline before period of data)
 - Assumes productivity (recruits/spawner) stationary
 - record only starts with data 
@@ -280,32 +276,30 @@ Caveats with benchmarks based on percentile of abundance:
 
 ### Regression forms
 
-Bernoulli vs. Binomial
 Regression forms are described in [Chapter 2][LOGISTIC REGRESSION LRPS]
 
-
-### EMPIRICAL LRPS
-
-- We evaluate two empirical (data-based) approaches for developing aggregate abundance-based LRPs for Inside South Coast Chum using the 5 CUs with > 15 years of data [not sure this is the best way to descibe??; please fix]. Both approaches attempted to estimate LRPs by fitting logistic regression models to historically observed data; they differ in the metric used to represent CU-level lower benchmarks.
-
-- The first approach uses Sgen ...
-
-- The second approach used percentile-based benchmarks ...
-
-- Due to poor logistic model fits using the entire 19xx - 2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logsitic model fits are highlighted in the results section below.
-
+We tested Bernoulli and Binomial regression forms. Because LRPs based on Binomial regressions are highly sensitive to which proportion of CUs above their benhcmark is chosed (e.g., 0.8, 0.9, 0.95, 0.99), we chose to proceed with the Bernoulli regression, which does not have this issue.
 
 ### PROJECTED LRPS (TBD)
 
-### MULTIDIMENSIONAL APPROACH (TBD)
+### MULTIDIMENSIONAL APPROACH
 
-Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
+The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
+
+Figure of decision tree?
 
 ## RESULTS
 
-### EMPIRICAL LRPS
+### LRPs based on SMU aggregate abundance and logistic models
 
-- Show poor model fits for each benchmark (using Bernoulli)
+The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly ()
+
+```{r chum-logistic-Sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2010.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
+knitr::include_graphics(here::here('figure/chum-logistic-sgen.pdf'))
+#knitr::include_graphics(here::here("figure/chum-logistic-Sgen.pdf"))
+```
+
 - Summarize model fit diagnostics
 - Highlight low covariance and differences in scale, and describe how these make empirical LRPs unsuitable for this SMU
 - Also - include plots showing variation in Sgen and percentile benchmarks over time for the 5 CUs to highlight time-varying concerns.
@@ -313,3 +307,25 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
 ### PROJECTED LRPS (TBD)
 
 ### MULTIDIMENSIONAL APPROACH (TBD)
+
+
+## DISCUSSION
+
+
+
+### Other sources of information to inform benchmarks
+
+Indigenous Knowledge
+
+- Two-Eyed Seeing - Etuaptmumk(Mi’kmaw) @reid_two-eyed_2020
+- Historical baseline before records from western science @eckert_diving_2018, @lee_diverse_2019, @ban_incorporate_2018
+
+Genetic tools and historical records
+
+- Skeena sockeye @price_genetics_2019, @price_portfolio_2021
+- Skeena chum @price_abundance_2013
+- Cannery records @meengs_estimating_2005
+
+Archaeological records
+
+- BC herring @mckechnie_archaeological_2014
