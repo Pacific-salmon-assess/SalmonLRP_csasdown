@@ -294,10 +294,9 @@ Figure of decision tree?
 
 The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly ()
 
-```{r chum-logistic-Sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-logistic-Sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance, for Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2010.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
 knitr::include_graphics(here::here('figure/chum-logistic-sgen.pdf'))
-#knitr::include_graphics(here::here("figure/chum-logistic-Sgen.pdf"))
 ```
 
 - Summarize model fit diagnostics
