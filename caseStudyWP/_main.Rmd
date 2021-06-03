@@ -1,4 +1,359 @@
 ---
+title: "Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units"
+author: |
+  Carrie. A. Holt^1^
+  Kendra Holt^2^
+  Luke Warkentin^1^ and
+  others (TBD)^2^
+author_list: "Holt, C.A., Holt, K., Warkentin, L., and others(TBD)"
+address: |
+  ^1^Pacific Biological Station\
+     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
+     Nanaimo, British Columbia, V9T 6N7, Canada\
+  ^2^Institute of Ocean Sciences\
+     Fisheries and Oceans Canada, Sidney, Canada\
+month: Month # fill in
+year: 2021
+report_number: nnn
+region: Pacific Region
+citation_other_language: "Last, F.M. et Smith, A.B. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2019/nnn. iv + 13 p."
+abstract: |
+  Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  Start new paragraphs after a blank line and with 2 spaces indent. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+header: "Draft working paper --- Do not cite or circulate" # or "" to omit
+output:
+ csasdown::resdoc_pdf:
+   french: false
+   copy_sty: true
+   line_nums: true
+   line_nums_mod: 1
+# ------------
+# End of options to set
+knit: bookdown::render_book
+link-citations: true
+bibliography: bib/refs.bib
+# Any extra LaTeX code for the header:
+# header-includes:
+# - \usepackage{tikz}
+---
+
+```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
+library(knitr)
+if (is_latex_output()) {
+  knitr_figs_dir <- "knitr-figs-pdf/"
+  knitr_cache_dir <- "knitr-cache-pdf/"
+  fig_out_type <- "png"
+} else {
+  knitr_figs_dir <- "knitr-figs-docx/"
+  knitr_cache_dir <- "knitr-cache-docx/"
+  fig_out_type <- "png"
+}
+fig_asp <- 0.618
+fig_width <- 9
+fig_out_width <- "6in"
+fig_dpi <- 180
+fig_align <- "center"
+fig_pos <- "htb"
+opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.path = knitr_figs_dir,
+  cache.path = knitr_cache_dir,
+  fig.asp = fig_asp,
+  fig.width = fig_width,
+  out.width = fig_out_width,
+  echo = FALSE,
+  #  autodep = TRUE,
+  #  cache = TRUE,
+  cache.comments = FALSE,
+  dev = fig_out_type,
+  dpi = fig_dpi,
+  fig.align = fig_align,
+  fig.pos = fig_pos
+)
+options(xtable.comment = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+```
+
+```{r load-libraries, cache=FALSE}
+# `french` and `prepub` variables are extracted from the YAML headers above and
+#  are used throughout the document. To make the document all in french, change
+#  the line in the YAML header above to `french: true`
+meta <- rmarkdown::metadata$output
+if(length(grep("pdf", names(meta)))){
+  french <- meta$`csasdown::resdoc_pdf`$french
+  prepub <- meta$`csasdown::resdoc_pdf`$prepub
+}else if(length(grep("word", names(meta)))){
+  french <- meta$`csasdown::resdoc_word`$french
+  prepub <- meta$`csasdown::resdoc_word`$prepub
+}
+csl <- "csl/csas.csl"
+if(french){
+  csl <- "csl/csas-french.csl"
+  options(OutDec =  ",")
+}
+
+# add other packages here:
+library(dplyr)
+library(readr)
+library(tibble)
+library(csasdown)
+```
+
+---
+csl: `r csl`    
+---
+
+<!--chapter:end:index.Rmd-->
+
+# INTRODUCTION
+
+-	This document supports the development of guidelines for defining LRPs for Pacific Salmon, as required by the recently revised Fisheries Act.  Guidelines that have been informed by this work are available in the companion working paper “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”.     
+
+-	Under the New Fisheries Act, Limit Reference Points (LRPs) that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  For Pacific salmon, it is anticipated there could be > 65 major fish stocks (or stock management units, SMUs), where the proposed functional definition of a SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status.  
+
+-	While lower biological benchmarks under the Wild Salmon Policy delineate abundances below which CUs are considered at risk of extinction (DFO 2005), these benchmarks have not been identified for many data-limited CUs and have not been aggregated to the SMU level, representing significant gaps in our ability to develop LRPs under the Fisheries Act.
+
+-	The suite of LRP estimation methods considered in this paper are specific to the case where a LRP is defined as a single aggregate abundance that is associated with a high probability of all component CUs being above lower benchmarks that are consistent with the WSP.  Alternative approaches to identifying LRPs are discussed in t
+
+-	The overall goal of this working paper is demonstrate and evaluate LRPs for 3 case study stock management units. For each case study, the set of LRP estimation methods considered is a function of available data and previously developed assessment methods for the SMU.
+
+-	In retrospective analyses, our objective is to demonstrate the sensitivity of the LRP to the removal of years or CUs to inform guidance about minimum numbers of years or CUs
+
+-	In simulation  evaluation, our objectives are to:
+    i. Identify the bias in LRP estimates by comparing LRP estimated from observed data to “true” LRP estimated from “true” population dynamics (without observation error)
+    i. How robust are LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, observation errors, time varying productivity and capacity)?
+    i.  How does LRP (and 95% CIs) vary with the number of years and proportion of CUs (and trade-offs), relative to the “true” LRP that includes all years and data?
+
+-	Estimates presented in this paper are not meant to be definitive LRPs, which require more thorough review of data and their use here with local analysts and partners. These case studies demonstrate various approaches for developing LRPs.
+
+<!--chapter:end:01-chap1.Rmd-->
+
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# LRP ESTIMATION METHODS
+
+In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (South Coast Chum, excluding Fraser). 
+
+All LRP estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP using the methods described in sections 2.1 - 2.??.
+
+Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer
+between it and any level of abundance that could lead to a CU being
+considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
+
+An overview of CU benchmarks and LRP estimation methods examined for each case study is provided in Table \@ref(tab:csOverview).
+
+-------------------------------------------------------------------------------------
+Case Study              Benchmark Methods           LRP Estimation Methods
+----------------------- --------------------------- ---------------------------------
+Interior Fraser Coho    - Sgen from SRR             - Aggregate Abundance: Empirical
+                        - Distributional            - Aggregate Abundance: Projected        
+  
+WCVI Chinook            - Sgen from watershed       - Aggregate Abundance: Empirical
+                          area model, accounting    - Aggregate Abundance: Projected
+                          for distribution within   - Proportion
+                          CUs
+  
+South Coast Chum        - Sgen from SRR             - Aggregate Abundance: Empirical
+(excluding Fraser)      - Percentile                - Aggregate Abundance: Projected
+------------------------- ------------------------- ---------------------------------
+Table: (\#tab:csOverview) Overview of benchmarks and LRP estimation methods examined for each case study.
+
+
+
+
+
+## PROPORTION-BASED LRPS
+
+### Proportion of CUs above lower abundance benchmarks
+
+
+### Proportion of CUs with multi-dimensional status > red
+
+
+## AGGREGATE ABUDNANCE-BASED LRPS
+
+### Logistic regression LRPs
+
+*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??* *\textcolor{cyan}{LW: I like Logistic Regression LRPs, it's intuitive. Another option could be Aggregate LRPs?}*
+
+Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
+
+\begin{equation}
+  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
+   (\#eq:logistic)
+\end{equation}
+
+where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression parameters and $S_{i,t}$ is spawner abundance to CU $i$ in year $t$. Equation \@ref(eq:logistic) is then re-arranged calculate the LRP as the aggregate spawner abundance associated with the pre-specified probability threshold of $p^*$,
+
+\begin{equation}
+  LRP = \frac{log(\frac{p^*}{1-p^*}) - B_0}{B_1}
+  (\#eq:logisticLRP)
+\end{equation}
+
+
+An example logistic regression fit for the proportional approach is shown in Figure x. We show the estimation of LRPs based on this fit for two possible probability thresholds: $p^*$ = 50% and $p^*$ = 90%. LRP estimates therefore represent the aggregate abundance that is associated with a 50%, or 95%, probability of all CUs having $S_i > LBM_i$. Alternative $p^*$ values are presented in case-study applications below.
+
+
+#### LOGISTIC REGRESSION MODEL DIAGNOSTICS
+
+*To be added by Carrie*
+
+
+### PROJECTION-BASED LRPS
+
+
+Projected LRPs are estimated using stochastic projections of future stock size for individual CUs. Projected abundances are then used to characterize the implicit relationship between aggregate spawner abundance for the SMU and the probability that the required proportion of CUs will be above their individual lower abundance benchmarks (e.g. Sgen). 
+
+We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). The code for samSim is available on GitHub: https://github.com/Pacific-salmon-assess/samSim.  We created a modified version of samSim to support LRP estimation, which is also available on GitHub: https://github.com/Pacific-salmon-assess/samSim/tree/LRP  
+Updated functionality for the LRP version of samSim include:
+* The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution
+* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study; see Section x.x for more details)
+* The option to initialize population dynamics for individual CUs at unfished equilibrium when no historical recruitment data are available. Note that while this option would not be appropriate for projections aimed at estimating recovery from a current state, it can be used to estimate projection-based LRPs because we are only interested in the underlying relationship between aggregate abundance and the probability individual CUs will be above their lower benchmark.
+
+We incorporate uncertainty in key biological and management parameters that control CU dynamics into samSim through the specification of empirically-derived probability distributions.  Uncertainties represented this way include stock-recruitment parameters, age-at-maturity, and exploitation rates, as well uncertainty in the level of covariation in these processes among CUs.  Larger structural uncertainties in underlying data or model formulation were represented through the use of alternative operating models (OMs), with each OM intended to represent a plausible hypothesis about future stock dynamics. The selection of relevant OMs to be considered varied among case studies based on available data and knowledge.  
+
+Multiple sets of projections were undertaken for each OM; each with a different fixed exploitation rate strategy applied (including a no fishing strategy). This approach provided good contrast in projected dynamics over all scenarios ....   
+
+Observation error was not incorporated into forward projections because we ......
+
+
+
+
+stochastic projections  under a range of levels of exploitation to establish an underlyning relationship between aggregate SMU-level a   
+
+
+
+Original outline:
+ 
+-	Description of projected LRP approach. This approach is described in more detail in the Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”
+
+-	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
+
+-	Develop LRPs from projections at specific proportions instead of logistic regression
+
+-	Note that all abundance-based WSP benchmarks can all be used as a basis for defining prospective LRPs
+
+
+
+
+
+<!--chapter:end:02-chap2.Rmd-->
+
+# CASE STUDY 1: INTERIOR FRASER COHO SALMON
+
+## CONTEXT
+
+The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon.Declines in spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions (Decker et al. 2014). Interior Fraser Coho have also been assessed twice by the Committee on the Status of Endangered Wildlife in Canada (COSEWIC) since 2002.  The most recent COSEWIC assessment classified the Interior Fraser Coho Designatable Unit (DU) as having “Threatened” status (COSEWIC 2016). In response to this listing, DFO has undertaken a Recovery Potential Assessment (RPA) for Interior Fraser Coho that describes status, habitat, threats and limiting factors, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm (Arbeider et al. 2020). Our data and analysis methods borrow heavily from this recent RPA work.
+
+In addition to COSEWIC status assessments, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP) in 2014. Five WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson (DFO 2015).  The 2014 WSP Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; DFO 2015).  
+
+We consider two types of CU benchmark when developing aggregate abundance-based LRPs for Interior Fraser Coho. The first type is the WSP lower benchmark of Sgen, where Sgen is the number of spawners required to recover to SMSY (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing (Holt et al. 2009). 
+
+The second type is based on a short-term recovery target identified by the Interior Fraser Coho Recovery Team (2006), in which CU status is based on the distribution of spawning escapement among sub-populations nested within CUs (Table \@ref(tab:cohoCU2SP)). This benchmark is specific to the Interior Fraser Coho SMU. We have retained it as part of this case study to maintain consistency with previous work.
+
+
+-------------------------------------------------------
+Conservation Unit         Sub-population
+------------------------- ------------------------------ 
+Middle Fraser             Lower Middle Fraser
+                          Upper Middle Fraser
+                          
+Fraser Canyon             Nahatlatch
+  
+Lower Thompson            Lower Thompson
+                          Nicola
+  
+North Thompson            Lower North Thompson
+                          Middle Thompson
+                          Upper North Thompson
+  
+South Thompson            Adams Drainage
+                          Lower and Middle Shuswap Rivers
+                          Shuswap Lake Tributaries
+------------------------- ---------------------------------
+Table: (\#tab:cohoCU2SP) Interior Fraser Coho Conservation Units (CUs) and associated sub-populations. Note that the definition of these sub-populations, including mapped boundaries, are provided in ??? [citation needed].
+
+
+## DATA
+
+Data for this case study covered brood years 1998-2014 (return years 2001-2018). Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality.  
+
+Data for the 1998-2013 brood years were taken from the 2018 Interior Fraser Coho RPA report (Appendix 4 of Arbeider et al. 2020), while one additional year of data (2014 brood year) was provided by DFO’s Fraser River Stock Assessment Unit (M. Arbeider, pers. comm., 2020).Detailed descriptions of data treatments, assumptions, and data quality are provided in Arbeider et al. (2020). Data used for our analyses included (i) annual spawner abundance by CU, (ii) annual recruits-at-age by CU, (iii) a hatchery-based smolt-to-adult survival rate index, and (iv) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
+
+-	Still to add: 
+  - Caveats: e.g., recruitment estimated using common ER for all CUs; review Arbeider et al. for additional data caveats
+
+
+## METHODS
+
+### Empirical LRPs
+
+We evaluate two empirical (data-based) approaches for developing aggregate abundance-based LRPs for Interior Fraser Coho. Both approaches estimate LRPs by fitting logistic regression models to historically observed data; they differ in the metric used to represent CU-level status relative to CU-level lower benchmarks. 
+
+The first approach uses a distributional benchmark to characterize CU status, which is based on the short-term recovery target identified by the Interior Fraser Coho Recovery Team (2006). The recovery target is that “the 3-year geometric average, natural-origin escapement in at least half of the subpopulations within each of the five CUs exceeds 1,000 spawning Coho Salmon, excluding hatchery fish spawning in the wild”. Based on this target, CU status in a given year is quantified as the proportion of sub-populations with escapement above 1000 fish. The “half of sub-populations within each CU” threshold required 2 out of 3 sub-populations to be above 1000 fish for the North Thompson and South Thompson CUs, 1 out of 2 sub-populations to be above 1000-fish for the Lower Thompson and Middle Fraser CU, and the only sub-population in the Fraser Canyon to be above 1000 fish to satisfy this target. CU-level status based on these distributional benchmarks then gets rolled-up into an SMU-level LRP using a logistic regression analysis described in section x above. 
+
+- Still to add: 
+  - proportional vs. probability-based logistic regression?  threshold p*?
+  - logistic penalty used
+
+The second approach uses Sgen to characterize CU status.Four different formulations of stock recruitment model are used to estimate Sgen based on previous analyses. Key differences among the formulations centre around whether a hierarchical model structure is used when estimating Sgen and whether an informative prior distribution is applied to the spawner abundance level at which the stock replaced itself (SRep).    
+
+- Still to add:
+  - more details on 4 SRR models (incl. equations)
+  - proportional vs. probability-based logistic regression?  threshold p*?
+  - logistic penalty used
+
+
+
+### PROJECTED LRPS
+
+
+### RETROSPECTIVE EVALUATION
+
+
+## RESULTS
+
+<!--chapter:end:03-chap3.Rmd-->
+
+# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK
+
+## CONTEXT
+
+-	SMU Description
+-	Which used? 
+-	Unique attributes of the case study
+
+## DATA
+
+-	Type of benchmarks 
+-	Sources
+-	Caveats
+
+
+## METHODS
+
+
+### EMPIRICAL LRPS
+
+
+### PROJECTED LRPS
+
+
+### RETROSPECTIVE EVALUATION
+
+
+## RESULTS
+
+<!--chapter:end:04-chap4.Rmd-->
+
+---
 output:
   pdf_document: default
   html_document: default
@@ -366,3 +721,38 @@ Genetic tools and historical records
 Archaeological records
 
 - BC herring @mckechnie_archaeological_2014
+
+<!--chapter:end:05-chap5.Rmd-->
+
+# LESSONS LEARNED FROM CASE STUDY APPLICATIONS
+
+- SYnthesize main results and conclusions from case studies
+
+<!--chapter:end:06-chap6.Rmd-->
+
+<!-- In general, you shouldn't need to edit this file with the exception of
+the following French/English translation. For a French document, set the following header to: # RÉFÉRENCES CITÉES {-} -->
+
+\clearpage
+
+# REFERENCES {-}
+
+<!--chapter:end:07-references.Rmd-->
+
+<!-- The following code should appear at the beginning of the first appendix.
+After that, all subsequent sections will be turned into appendices. -->
+
+`r if(knitr:::is_latex_output()) '\\Appendices'`
+
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
+
+# THE FIRST APPENDIX {#app:first-appendix}
+
+Content here.
+
+# THE SECOND APPENDIX, FOR FUN {#app:second-appendix}
+
+More content.
+
+<!--chapter:end:08-appendix.Rmd-->
+
