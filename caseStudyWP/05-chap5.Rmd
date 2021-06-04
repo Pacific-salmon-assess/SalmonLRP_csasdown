@@ -274,6 +274,15 @@ Caveats with benchmarks based on percentile of abundance:
 - record only starts with data 
 - Accounting for fishing mortality? percentile of recruits vs. escapement
 
+#### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
+
+The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
+
+``` {r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
+source(here::here("make_tree_diagram.R"))
+knitr::include_graphics(here::here("figure/decision_tree.png"))
+```
+
 #### Other considerations for benchmarks from COSEWIC framework
 
 - % decreases in abundance
@@ -287,10 +296,6 @@ Regression forms are described in [Chapter 2][LOGISTIC REGRESSION LRPS]
 We tested Bernoulli and Binomial regression forms. Because LRPs based on Binomial regressions are highly sensitive to which proportion of CUs above their benhcmark is chosed (e.g., 0.8, 0.9, 0.95, 0.99), we chose to proceed with the Bernoulli regression, which does not have this issue.
 
 ### PROJECTED LRPS (TBD)
-
-### MULTIDIMENSIONAL APPROACH
-
-The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
 
 Figure of decision tree?
 
@@ -309,7 +314,7 @@ Why? The Inside South Coast Chum SMu is made up of seven CUs that vary in their 
 - Lots of different populations
 - Differences in productivity among CUs/populations
 
-Sumamrise diagnostics (poor)
+Summarize diagnostics (poor)
 
 
 ```{r chum-logistic-sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes the 5 CUs without CU-level infilling (no Bute Inlet or Upper Knight)", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -323,7 +328,7 @@ knitr::include_graphics(here::here('figure/chum-logistic-perc.pdf'))
 ```
 
 
-In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-retro), \@ref(fig:chum-sgen-retro)). 
+In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-retro), \@ref(fig:chum-sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the 
 
 
 ```{r chum-a-b-retro, fig.cap="Retrospective estimates of $\\alpha$ and $\\beta$ for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -331,7 +336,7 @@ download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/
 knitr::include_graphics(here::here('figure/chum-a-b-retro.png'))
 ```
 
-```{r chum-sgen-retro, fig.cap="Retrospective estimates of $S_{gen}$ for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-sgen-retro, fig.cap="Retrospective estimates of $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_Sgen_annual_retro.png', './figure/chum-sgen-retro.png', mode="wb")
 knitr::include_graphics(here::here('figure/chum-sgen-retro.png'))
 ```
@@ -343,11 +348,21 @@ knitr::include_graphics(here::here('figure/chum-perc-retro.png'))
 
 ### PROJECTED LRPS (TBD)
 
-### MULTIDIMENSIONAL APPROACH (TBD)
+### LRPs BASED ON PROPORTION OF CUs ABOVE THEIR BENCHMARKS
 
+Retrospective analysis 
+Can do this for 4 CUs with percentiles: 
+plot status over time (aggregate abundance, with green/red for different methods)
+
+#### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
+
+(don't get caught up with percentile / alpha constraint)
+
+Using this method, X out of Y CUs would be above their lower benchmark (amber or green zone) and X would be below . 
+
+(If we get the code, and do retrospective analysis, ... )
 
 ## DISCUSSION
-
 
 
 ### Other sources of information to inform benchmarks
