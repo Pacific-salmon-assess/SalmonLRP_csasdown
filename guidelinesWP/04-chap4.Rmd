@@ -21,6 +21,8 @@ While the acceptable proportion of CUs below lower benchmarks can be thought of 
 
 -if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
 
+- Recommended process for identifying CU-level status: annual assessments through the State of the Salmon Program. For SMUs that are batched, experts can cross-check and refine information on interpretations and statuses provided by the Scanning Tool, thereby using an expert-driven process to trigger rebuilding plans
+
 
 ### Multi-dimensional approach 
 - similar to proportion of CUs > lower benchmark, but using other dimensions of status (e.g., trends)
@@ -43,7 +45,7 @@ Questions to provide guidance on:
 -	How do projection-based and empirical LRPs (and their uncertainties) compare?
 -	What type of data and level of data-quality is required to support historic LRPs? 	How robust are empirical LRPs to different underlying scenarios (model formulations, observation errors, time-varying productivity and capacity)?
 - What type of data and level of data-quality is required to support projected LRPs?  How robust are prospective LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, implementation error, observation errors, time-varying productivity and capacity)
-- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted?
+- Are projected LRPs always preferred when possible?  Under what circumstances are empirical LRPs warranted? Projected LRPs are appropriate when stock-recruitment models have been developed and peer-reviewed for component CUs. LRPs are highly sensitive to the choice of the stock-recruitment model, so this needs careful consideration.
 -	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
 
 
