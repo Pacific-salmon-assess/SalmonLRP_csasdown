@@ -1,17 +1,17 @@
 ---
 title: "Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units"
 author: |
-  Carrie. A. Holt^1^
-  Kendra Holt^2^
+  Kendra Holt^1^
+  Carrie A. Holt^2^
   Luke Warkentin^1^ and
   others (TBD)^2^
-author_list: "Holt, C.A., Holt, K., Warkentin, L., and others(TBD)"
+author_list: "Holt, K., Holt, C.A., Warkentin, L., and others(TBD)"
 address: |
-  ^1^Pacific Biological Station\
+  ^1^Institute of Ocean Sciences\
+     Fisheries and Oceans Canada, Sidney, Canada\
+  ^2^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^2^Institute of Ocean Sciences\
-     Fisheries and Oceans Canada, Sidney, Canada\
 month: Month # fill in
 year: 2021
 report_number: nnn
