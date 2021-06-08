@@ -28,3 +28,14 @@ resdoc.tex
 *.sty
 *.upa
 *.utf8.md
+*.zip
+
+# Shapefile files
+*.cpg
+*.dbf
+*.prj
+*.sbn
+*.sbx
+*.shp
+*.xml
+*.shx

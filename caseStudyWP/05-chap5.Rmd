@@ -301,8 +301,30 @@ Figure of decision tree?
 
 ## RESULTS
 
-### LRPs based on SMU aggregate abundance and logistic models
+### Retrospective analysis of benchmarks based on $S_{gen}$ and percentiles
 
+In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-retro), \@ref(fig:chum-sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the ... 
+
+
+```{r chum-a-b-retro, fig.cap="Retrospective estimates of $\\alpha$ and $\\beta$ for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_annual_retro.png', './figure/chum-a-b-retro.png',  mode="wb")
+knitr::include_graphics(here::here('figure/chum-a-b-retro.png'))
+```
+
+```{r chum-sgen-retro, fig.cap="Retrospective estimates of $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_Sgen_annual_retro.png', './figure/chum-sgen-retro.png', mode="wb")
+knitr::include_graphics(here::here('figure/chum-sgen-retro.png'))
+```
+
+Retrospective analysis of percentile benchmarks ... 
+Southern Coastal Streams had the largest problem with shifting baseline, but was not included in the logistic regression with aggregate abundance. 
+
+```{r chum-perc-retro, fig.cap="Escapements of four CUs in the Inside South Coast Chum SMU, with 25th and 50th percentile benchmarks (calculated retrospectively). Green and red points indicate status above or below benchmark, respectively.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
+knitr::include_graphics(here::here('figure/chum-perc-retro.png'))
+```
+
+### LRPs based on SMU aggregate abundance and logistic models
 
 The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figures \@ref(fig:chum-logistic-sgen), \@ref(fig:chum-logistic-perc)). In both cases, the sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Note that these regressions used the aggregate abundance of only the CUs used in the regressions, and excluded the other CUs. 
 
@@ -327,24 +349,6 @@ download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/
 knitr::include_graphics(here::here('figure/chum-logistic-perc.pdf'))
 ```
 
-
-In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-retro), \@ref(fig:chum-sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the 
-
-
-```{r chum-a-b-retro, fig.cap="Retrospective estimates of $\\alpha$ and $\\beta$ for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_annual_retro.png', './figure/chum-a-b-retro.png',  mode="wb")
-knitr::include_graphics(here::here('figure/chum-a-b-retro.png'))
-```
-
-```{r chum-sgen-retro, fig.cap="Retrospective estimates of $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_Sgen_annual_retro.png', './figure/chum-sgen-retro.png', mode="wb")
-knitr::include_graphics(here::here('figure/chum-sgen-retro.png'))
-```
-
-```{r chum-perc-retro, fig.cap="Escapements of four CUs in the Inside South Coast Chum SMU, with 25th and 50th percentile benchmarks (calculated retrospectively). Green and red points indicate status above or below benchmark, respectively.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
-knitr::include_graphics(here::here('figure/chum-perc-retro.png'))
-```
 
 ### PROJECTED LRPS (TBD)
 
