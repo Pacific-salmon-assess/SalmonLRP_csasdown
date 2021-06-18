@@ -27,7 +27,6 @@ We chose Inside South Coast Chum as a case study because:
 
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management unit (not including Lower Fraser and Fraser Canyon Conservation Units). Numbers indicate the Fishery Management Areas associated with these populations.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_CU_map.png', './figure/chum-map.png', mode="wb")
 knitr::include_graphics(here::here("figure/chum-map.png"))
 ```
 
@@ -256,6 +255,7 @@ The suitability of the percentile method was evaluated for chum populations in B
 - Percentile benchmarks (even 50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values, which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks are needed in this case
 - Time series bias tends to under-estimate $S_{gen}$ 
  
+ 
 From @holt_evaluating_2018 Table 6, productivity values, recommendations:
 
 - Productivity (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%: 25^th^ lower benchmark (Georgia Strait, Howe Sound Burrard Inlet)
@@ -279,7 +279,7 @@ Caveats with benchmarks based on percentile of abundance:
 The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
 
 ``` {r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
-source(here::here("make_tree_diagram.R"))
+source(here::here("R/make_tree_diagram.R"))
 knitr::include_graphics(here::here("figure/decision_tree.png"))
 ```
 
@@ -303,26 +303,21 @@ Figure of decision tree?
 
 ### Retrospective analysis of benchmarks based on $S_{gen}$ and percentiles
 
-In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-retro), \@ref(fig:chum-sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the ... 
+In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the 
 
-
-```{r chum-a-b-retro, fig.cap="Retrospective estimates of $\\alpha$ and $\\beta$ for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_annual_retro.png', './figure/chum-a-b-retro.png',  mode="wb")
-knitr::include_graphics(here::here('figure/chum-a-b-retro.png'))
+```{r chum-a-b-SMSY-Sgen-retro, fig.cap="Retrospective estimates of $\\alpha$, $\\beta$, $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_SMSY_Sgen_retro.png', './figure/chum-a-b-SMSY-Sgen-retro.png',  mode="wb")
+knitr::include_graphics(here::here('figure/chum-a-b-SMSY-Sgen-retro.png'))
 ```
 
-```{r chum-sgen-retro, fig.cap="Retrospective estimates of $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_Sgen_annual_retro.png', './figure/chum-sgen-retro.png', mode="wb")
-knitr::include_graphics(here::here('figure/chum-sgen-retro.png'))
-```
-
-Retrospective analysis of percentile benchmarks ... 
-Southern Coastal Streams had the largest problem with shifting baseline, but was not included in the logistic regression with aggregate abundance. 
-
-```{r chum-perc-retro, fig.cap="Escapements of four CUs in the Inside South Coast Chum SMU, with 25th and 50th percentile benchmarks (calculated retrospectively). Green and red points indicate status above or below benchmark, respectively.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by gray and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark used based on @holt_evaluating_2018 Table 6, and NA indicates percentile benchmarks are not appropriate. Green and red points indicate status above or below benchmark, respectively. Transparent points are years where escapement was infilled at the CU level.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
 knitr::include_graphics(here::here('figure/chum-perc-retro.png'))
 ```
+
+Four CUs were used in the aggregate abundance based LRP. Looking retrospectivley, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
+
+Percentile approaches were not used for the other three CUs for the purpose of the logistic regression of aggregate abundace because they were not appropriate based on productivity and harvest rates (see @holt_evaluating_2018 Table 6), CU-level infilling, or both (although they are shown in Figure \@ref(fig:chum-perc-retro)). Among these three CUs, Southern Coastal Streams and Upper Knight show evidence of shifting baselines if percentile approaches are used. 
 
 ### LRPs based on SMU aggregate abundance and logistic models
 
@@ -385,3 +380,4 @@ Genetic tools and historical records
 Archaeological records
 
 - BC herring @mckechnie_archaeological_2014
+
