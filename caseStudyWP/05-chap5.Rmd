@@ -9,24 +9,24 @@ output:
 
 ## CONTEXT
 
-The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CU) of chum salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtby_conservation_2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. 
+The Inside South Coast Chum Stock Management Unit (SMU) includes seven Conservation Units (CUs) of chum salmon (*Oncorhynchus keta*) from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtby_conservation_2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams.
 
 @holt_evaluating_2018 used these CUs to compare benchmarks from stock-recruit relationships and benchmarks based on abundance, as a case study for chum populations with limited data. They showed that benchmarks based on a percentile of abundances can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low. In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines. 
 
 We chose Inside South Coast Chum as a case study because:
 
-- Previous work on comparing stock-recruit and percentile benchmarks to these CUs
+- Previous work on comparing stock-recruit and percentile benchmarks to these CUs @hotl_evaluating_2018
 - It is an example of a data-limited SMU, with:
-  - incomplete escapement time series (not all streams counted each year, some CUs have no counts in some years)
-  - recruits estimated using harvest, age, and escapement data, allowing stock-recruit modelling
-  - no data on marine survival (although there are some scale/growth data in @debertin_marine_2017)
+  - Incomplete escapement time series (not all streams counted each year, some CUs have no counts in some years)
+  - Recruits are estimated using harvest, age, and escapement data, allowing stock-recruit modelling
+  - No data on marine survival (although there are some scale/growth data in @debertin_marine_2017)
 - Relatively long time series (1953-2018)
-- Large area with many diverse watersheds, flow regimes, and ocean entry locations, contrasting with Interior Fraser Coho
+- Large area with many diverse watersheds, natal rivers and streams, flow regimes, and ocean entry locations, contrasting with Interior Fraser Coho
 - High contrast in abundances levels among CUs
 - Low correlation in abundance levels among CUs over time
 
 
-```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management unit (not including Lower Fraser and Fraser Canyon Conservation Units). Numbers indicate the Fishery Management Areas associated with these populations.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics(here::here("figure/chum-map.png"))
 ```
 
@@ -34,22 +34,21 @@ knitr::include_graphics(here::here("figure/chum-map.png"))
 
 We used essentially the same data used in @holt_evaluating_2018, updated with escapement data up to 2018. @van_will_inner_2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below. We did not include the Lower Fraser or Fraser Canyon chum CUs. 
 
-### Spawner counts / Escapement
+### Spawner counts / escapement
 
-We used spawning escapement data forom 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program) *\textcolor{cyan}{LW: probably unneccesary detail}*. The number of chum salmon spawners that return to spawn (escapement) is typcially counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
+We used spawning escapement data forom 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program). The number of chum salmon spawners that return to spawn (escapement) is typcially counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
 
 ### Fishery harvest, genetics, and age
 
-The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. Age distributions for each year were taken from the Johnstone Strait fishery aggregate, as age data for specific CUs or streams was not available. Harvest data was not available for 1954-2018 *\textcolor{cyan}{LW: confirm with Pieter Van Will why 1953 had no harvest data}*. Age composition data as available for 1958-2018.
+The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. Age distributions for each year were taken from the Johnstone Strait fishery aggregate, as age data for specific CUs or streams was not available. Harvest data was available for 1954-2018. Age composition data was available for 1958-2018.
 
 ### Data treatment
 
-We removed the summer run fish as all the data in regards the reconstruction work is 
-associated with populations that return in the fall.  
+We removed the summer run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall.  
 
 To get wild escapement, we kept only wild spawners, removing hatchery spawners, spawners harvested at a facility, and spawners collected for brood stock. 
 
-We also removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River, as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We have little data in the enhanced contribution found in these returns but for the purposes of removing hatchery origin fish, we make the assumption that these streams had 100% hatchery origin spawners. 
+We also removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River, as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. 
 
 After these removals, the steps for preparing the data for analysis were:
 
@@ -61,7 +60,7 @@ After these removals, the steps for preparing the data for analysis were:
 
 #### Infilling of spawner escapement data 
 
-The data we used had years where not all streams were counted. When a CU had some streams counted in a year, we infilled by stream (Figure \@ref(fig:chum-escapement-infill)). When there were no counts of spawners for a CU in a given year, we infilled by CU for that year and CU. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling in the retrospective analysis of LRPs, as it assumes that escapement is correlated between CUs in a given year. 
+The data we used had years where not all streams were counted. When a CU had some streams counted in a year, we infilled by stream (Figure \@ref(fig:chum-escapement-infill)). When there were no counts of spawners for a CU in a given year, we infilled by CU for that year and CU. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling in the retrospective analysis of LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
 
 There were two puproses of infilling:
 
@@ -303,14 +302,26 @@ Figure of decision tree?
 
 ### Retrospective analysis of benchmarks based on $S_{gen}$ and percentiles
 
-In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits.  Since $\alpha$ and $\beta$ are negatively correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. The Georgia Strait CU shows evidence of increasing $\alpha$, while Loughborough and Southern Coastal Streams show decreasing $\alpha$. Estimates of $S_{gen}$, which is determined by $\alpha$ and $\beta$, showed changes as more data was included. $S_{gen}$ for North East Vancouver Island chum increased as the 
+In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as more data was included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits. Since, when fitting models to data such as these, $\alpha$ and $\beta$ are correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind. Similarly, since $\alpha$ and  $\beta$ determine $SMSY$ and $S_{gen}$, changes in these derived parameters can be challenging to interpret and can be due to changes in $\alpha$,  $\beta$ and their relationship.
 
-```{r chum-a-b-SMSY-Sgen-retro, fig.cap="Retrospective estimates of $\\alpha$, $\\beta$, $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-a-b-SMSY-Sgen-retro, fig.cap="Retrospective estimates of $\\alpha$, $\\beta$, $S_{gen}$ (black line with gray confidence intervals) and $SMSY$ (blue line) for five CUs in the Inside South Coast Chum SMU. Note y axis is identical across CUs for alpha but varies for other parameters.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_SMSY_Sgen_retro.png', './figure/chum-a-b-SMSY-Sgen-retro.png',  mode="wb")
 knitr::include_graphics(here::here('figure/chum-a-b-SMSY-Sgen-retro.png'))
 ```
 
-```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by gray and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark used based on @holt_evaluating_2018 Table 6, and NA indicates percentile benchmarks are not appropriate. Green and red points indicate status above or below benchmark, respectively. Transparent points are years where escapement was infilled at the CU level.", warning=FALSE, echo=FALSE, fig.align="center"}
+
+Retrospective estimates of $\alpha$ and $\beta$ for Southern Coastal Streams show declines over time. $SMSY$ and $S_{gen}$ increase sharply in the first few years due to large decreases in $\alpha$ and $\beta$. $SMSY$ then decreases over time, while $S_{gen}$ stays relatively stable. This is because as $\alpha$ decreases below ~2.5, $S_{gen}$ decreases, but as $\beta$ decreases, $S_{gen}$ decreases, so that a simultaneous decrease in $\alpha$ and $\beta$ can cancel out. However, the lower alpha is below 2.5, the less influence $\beta$ has on $S_{gen}$. 
+
+Increasing $S_{gen}$ for North East Vancouver Island is mainly due to an increase in $\alpha$ from <1.5 to >2 and then a decrease in $\beta$. 
+
+$\alpha$ for Loughborough showed modest decreases over time, and $S_{gen}$ was fairly stable. 
+
+The Georgia Strait CU shows evidence of increasing $\alpha$, and its $S_{gen}$ estimate was fairly stable. 
+
+Howe Sound-Burrard Inlet $S_{gen}$ was fairly stable, and then increased due to  decreases in $\alpha$ and $\beta$. 
+
+
+```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by gray and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark. Green and red points indicate status above or below benchmark, respectively. Transparent points are years with CU-level infilling.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
 knitr::include_graphics(here::here('figure/chum-perc-retro.png'))
 ```
@@ -322,8 +333,6 @@ Percentile approaches were not used for the other three CUs for the purpose of t
 ### LRPs based on SMU aggregate abundance and logistic models
 
 The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figures \@ref(fig:chum-logistic-sgen), \@ref(fig:chum-logistic-perc)). In both cases, the sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Note that these regressions used the aggregate abundance of only the CUs used in the regressions, and excluded the other CUs. 
-
-Highlight low covariance and differences in scale, and describe how these make empirical LRPs unsuitable for this SMU
 
 Why? The Inside South Coast Chum SMu is made up of seven CUs that vary in their escapement abundance. George Strait and Howe Sound-Burrard Inlet have escapement in many years that are greater than the other CUs by two orders of magnitude. In addition, the correlation in escapement among these seven CUs is low. These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements being high, while one more smaller escapements is below its benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because:
 
@@ -362,6 +371,7 @@ Using this method, X out of Y CUs would be above their lower benchmark (amber or
 (If we get the code, and do retrospective analysis, ... )
 
 ## DISCUSSION
+
 
 
 ### Other sources of information to inform benchmarks
