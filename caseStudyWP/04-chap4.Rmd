@@ -1,10 +1,26 @@
-# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 
+# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK
 ## CONTEXT
 
--	SMU Description
--	Which used? 
--	Unique attributes of the case study
+[//]: # Add a comment in colour: *\textcolor{cyan}{CH: some text}*
+
+The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 Conservation Units, Southwest Vancouver Island (SWVI), Nootka and Kyuquot, and Northwest Vancouver Island ( @holtby_conservation_2007). The SMU contains 7 large inlets, each containing numerous rivers and coastal streams.
+
+Most Chinook in this system are 'ocean type', entering the ocean 1-3 months after emergence from spawning gravel (@dfo_wcviSAR_2010). There are very few 'stream type' fish in this system (those that stay in the river for one year after emergence). After enterin the ocean, WCVI Chinook migrate north into northern BC and southeast Alaska waters to rear for 2 to 7 years, returning predominantly at ages 4 and 5 (@dfo_wcviSAR_2010).
+
+Two of the 3 CUs in this SMU, .. and...,  were assessed in an integrated Wild Salmon Policy assessment as "red" status in 2014?.
+-Refer to both SAR and Brown et al meta data.
+- mention rebuilding plan, I think described in IFMP?
+- mention any other important details from IFMP
+
+- used which metrics in that assessment?
+- description of habitat-based benchmark
+-	Unique attributes of the case study (why selected)
 
 ## DATA
 

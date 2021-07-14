@@ -1,4 +1,4 @@
-#remotes::install_github("vlucet/rgovcan")
+remotes::install_github("vlucet/rgovcan")
 library(rgovcan)
 library(here)
 library(bcmaps)
@@ -24,7 +24,7 @@ dlf <- function(x, path) {
 }
 # for checking if data is present
 folders <- paste0(c("Chum", "Chinook", "Coho"), "_Salmon_CU_Boundary")
-# download the shapefiles
+# download the shapefiles if at least one is not present
 if(!all(folders %in%  list.files(here(path))))
   walk(ids, dlf, path=path)
 # unzip .zip files
@@ -45,7 +45,7 @@ fs <- unzip(zipfile=here('data/can_admin.zip'), list=TRUE) # get all files
 unzip(zipfile=here('data/can_admin.zip'),  files=fs$Name[grep("region", fs$Name)], exdir=here('data'))
 borders <- st_read(here('data/canvec_1M_CA_Admin/geo_political_region_2.shp'))
 
-# Rivers + lakes (not using rgovcan because they are more complicated file source urls)
+# Rivers + lakes
 # This one takes ~20 min to download, don't download if already present
 if(!file.exists(here('data/canvec_50K_BC_Hydro/waterbody_2.shp')))
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Hydro/canvec_50K_BC_Hydro_shp.zip', destfile=here('data/rivers_lakes.zip'), mode="wb")
@@ -59,7 +59,7 @@ water$area_m2 <- as.numeric(st_area(water))
 # remove small lakes, < 10,000 m2 area
 water1 <- water[!(water$definit_en=="Lake" & water$area_m2 < 100000), ]
 
-# Named places for labels
+# Point shapefile of place names for labels
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Toponymy/canvec_50K_BC_Toponymy_shp.zip', destfile=here('data/place_names.zip'), mode="wb")
 fs2 <- unzip(zipfile=here('data/place_names.zip'), list=TRUE)
 unzip(zipfile=here('data/place_names.zip'), files=fs2$Name[grep("bdg_named_feature_0", fs2$Name)], exdir=here('data'))
