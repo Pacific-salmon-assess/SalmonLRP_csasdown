@@ -2,9 +2,27 @@
 
 ## CONTEXT
 
-The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon.Declines in spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions (Decker et al. 2014). Interior Fraser Coho have also been assessed twice by the Committee on the Status of Endangered Wildlife in Canada (COSEWIC) since 2002.  The most recent COSEWIC assessment classified the Interior Fraser Coho Designatable Unit (DU) as having “Threatened” status (COSEWIC 2016). In response to this listing, DFO has undertaken a Recovery Potential Assessment (RPA) for Interior Fraser Coho that describes status, habitat, threats and limiting factors, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm (Arbeider et al. 2020). Our data and analysis methods borrow heavily from this recent RPA work.
+The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon. Declines in spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions (Decker et al. 2014). 
 
-In addition to COSEWIC status assessments, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP) in 2014. Five WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson (DFO 2015).  The 2014 WSP Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; DFO 2015).  
+Five WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson (DFO 2015; Figure x). Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP) in 2014, at which time the Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; DFO 2015).  
+
+Interior Fraser Coho have also been assessed twice by the Committee on the Status of Endangered Wildlife in Canada (COSEWIC; COSEWIC 2002, 2016). The entire IF Coho SMU as classified as a single Designatable Unit (DU) by COWESIC in both of these assessments; however, a recent revision to DU classification has lead to 5 DUs that are closely aligned with the 5 CUs (citation available yet?). The most recent COSEWIC assessment classified the Interior Fraser Coho Designatable Unit (DU) as having “Threatened” status (COSEWIC 2016). In response to this listing, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho in 2018 that describes status, habitat, threats and limiting factors, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm (Arbeider et al. 2020). Our data and analysis methods borrow heavily from this recent RPA work.
+
+## DATA
+
+Data for this case study covered brood years 1998-2014 (return years 2001-2018). Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality.  
+
+Data for the 1998-2013 brood years were taken from the 2018 Interior Fraser Coho RPA report (Appendix 4 of Arbeider et al. 2020), while one additional year of data (2014 brood year) was provided by DFO’s Fraser River Stock Assessment Unit (M. Arbeider, pers. comm., 2020).Detailed descriptions of data treatments, assumptions, and data quality are provided in Arbeider et al. (2020). Data used for our analyses included (i) annual spawner abundance by CU, (ii) annual recruits-at-age by CU, (iii) a hatchery-based smolt-to-adult survival rate index, and (iv) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
+
+-	Still to add: 
+  - Caveats: e.g., recruitment estimated using common ER for all CUs; review Arbeider et al. for additional data caveats
+
+
+## METHODS
+
+
+### CU Status Estimation
+
 
 We consider two types of CU benchmark when developing aggregate abundance-based LRPs for Interior Fraser Coho. The first type is the WSP lower benchmark of Sgen, where Sgen is the number of spawners required to recover to SMSY (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing (Holt et al. 2009). 
 
@@ -33,19 +51,11 @@ South Thompson            Adams Drainage
 Table: (\#tab:cohoCU2SP) Interior Fraser Coho Conservation Units (CUs) and associated sub-populations. Note that the definition of these sub-populations, including mapped boundaries, are provided in ??? [citation needed].
 
 
-## DATA
+### LRP Estimation
 
-Data for this case study covered brood years 1998-2014 (return years 2001-2018). Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality.  
+#### Proportion of CUs > Sgen
 
-Data for the 1998-2013 brood years were taken from the 2018 Interior Fraser Coho RPA report (Appendix 4 of Arbeider et al. 2020), while one additional year of data (2014 brood year) was provided by DFO’s Fraser River Stock Assessment Unit (M. Arbeider, pers. comm., 2020).Detailed descriptions of data treatments, assumptions, and data quality are provided in Arbeider et al. (2020). Data used for our analyses included (i) annual spawner abundance by CU, (ii) annual recruits-at-age by CU, (iii) a hatchery-based smolt-to-adult survival rate index, and (iv) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
-
--	Still to add: 
-  - Caveats: e.g., recruitment estimated using common ER for all CUs; review Arbeider et al. for additional data caveats
-
-
-## METHODS
-
-### Empirical LRPs
+#### Logistic Regression LRP
 
 We evaluate two empirical (data-based) approaches for developing aggregate abundance-based LRPs for Interior Fraser Coho. Both approaches estimate LRPs by fitting logistic regression models to historically observed data; they differ in the metric used to represent CU-level status relative to CU-level lower benchmarks. 
 
@@ -64,10 +74,10 @@ The second approach uses Sgen to characterize CU status.Four different formulati
 
 
 
-### PROJECTED LRPS
+### Projected LRP
 
 
-### RETROSPECTIVE EVALUATION
+### Evaluation of LRP Methods for IF Coho
 
 
 ## RESULTS
