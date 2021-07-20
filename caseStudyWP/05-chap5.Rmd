@@ -22,7 +22,7 @@ The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs 
 
 We chose Inside South Coast Chum as a case study because:
 
-- Previous work on comparing stock-recruit and percentile benchmarks to these CUs @hotl_evaluating_2018
+- Previous work on comparing stock-recruit and percentile benchmarks to these CUs @holt_evaluating_2018
 - It is an example of a data-limited SMU, with:
   - Incomplete escapement time series (not all streams counted each year, some CUs have no counts in some years)
   - Recruits are estimated using harvest, age, and escapement data, allowing stock-recruit modelling
@@ -146,14 +146,14 @@ Caveats with benchmarks based on percentile of abundance:
 
 
 
-** Multi-dimensional CU Status Assessment **
+**Multi-dimensional CU Status Assessment**
 
 
 
 
 
 <!--
-K.Holt: I have commented out this section (Benchmark based on stock-recruit relationships - $S_{gen}) for now as I do not think we are using Sgen to calculate LRPs.If we do not evaluate LRPs based on Sgen, but still need to describe SR modelling for Sgen as it us used to estimate productivity for the percentil methods, we may wish to describe the SR modelling and results in an appendix?  In this case, we would not however need to estimate Smsy or Sgen.  Just ricker pars.
+K.Holt: I have commented out this section (Benchmark based on stock-recruit relationships - $S_{gen}) for now as I do not think we are using Sgen to calculate LRPs.If we do not evaluate LRPs based on Sgen, but still need to describe SR modelling for Sgen as it is used to estimate productivity for the percentile methods, we may wish to describe the SR modelling and results in an appendix?  In this case, we would not however need to estimate Smsy or Sgen.  Just ricker pars.
 
 
 
@@ -320,7 +320,7 @@ Several factors lead to these poor model fits. The Inside South Coast Chum SMU i
 - CUs have different numbers of populations (big differences), and those populations have big differences in abundance
 - Differences in productivity among CUs/populations
 
-#### Summarize diagnostics (Bernoulli, p=0.9)
+**Summarize diagnostics (Bernoulli, p=0.9)**
 
 Diagnostics for the logistic regressions are summarized below. *\textcolor{cyan}{LW: need input on how much detail to include here}*
 
@@ -438,17 +438,12 @@ knitr::include_graphics(here::here('figure/chum-logistic-perc.pdf'))
 
 ### Comparison of LRPs based on Proportion of CUs above benchmark 
 
-<<<<<<< HEAD
-'Historical' look 
-=======
-### LRPs BASED ON PROPORTION OF CUs ABOVE THEIR BENCHMARKS
 
 Retrospective analysis 
 Can do this for 4 CUs with percentiles: 
 plot status over time (aggregate abundance, with green/red for different methods)
 
 #### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
->>>>>>> 8b33421f10fc59975ddf99a2c4607d93b026e87d
 
 - Can do this for 4 CUs with percentiles/ 5 with Sgen (***? maybe, low alpha cutoff***): 
 - plot status over time (aggregate abundance, with green/red for different methods)
