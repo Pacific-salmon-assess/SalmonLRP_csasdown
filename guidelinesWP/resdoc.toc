@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{8}{subsection.0.4.8}%
 \contentsline {subsection}{\numberline {4.9}Enhanced stocks}{8}{subsection.0.4.9}%
 \contentsline {subsection}{\numberline {4.10}Defining SMUs where LRPs cannot be developed}{8}{subsection.0.4.10}%
-\contentsline {section}{\numberline {5}Recommendations for Future Work}{9}{section.0.5}%
+\contentsline {section}{\numberline {5}Recommendations for Future Work}{8}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Extra text on R MARKDOWN BASICS: IGNORE}{9}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}LISTS}{9}{subsection.0.5.2}%
 \contentsline {subsection}{\numberline {5.3}LINE BREAKS}{10}{subsection.0.5.3}%
@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {5.8}FIGURES}{19}{subsection.0.5.8}%
 \contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{21}{subsection.0.5.9}%
 \contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{21}{subsection.0.5.10}%
-\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{22}{subsection.0.5.11}%
+\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{21}{subsection.0.5.11}%
 \contentsline {section}{\numberline {6}REFERENCES}{23}{section.0.6}%
 \setcounter {tocdepth}{0}
 \contentsline {chapter}{APPENDIX\nobreakspace {}A. THE FIRST APPENDIX}{24}{section*.3}%

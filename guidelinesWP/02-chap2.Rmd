@@ -16,6 +16,50 @@ This section will address the question: “What methods are available to develop
 
 -	We have not included metrics and benchmarks based on status of habitat or ecosystem status (strategies 2 and 3 of the WSP)
 
+
+<!-- KH comment: I have moved the following text here from the Chum chapter of the case study paper as I think it fits better here (July 19, 2021). This text was compiled by Luke.
+
+
+### Benchmarks for Conservation Units
+
+- The Wild Salmon Policy requires that salmon Conservation Units have set benchmarks dividing three levels of health: red, amber, green.
+- From @canada_canadas_2005: "The lower benchmark between Amber and Red will be established at a level of abundance high enough to ensure there is a **substantial** buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC. The buffer will account for uncertainty in data and control of harvest management."
+
+Level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC can be informed by several criteria:
+
+- @holt_indicators_2009: Table 2
+  - Spawner abundance
+  - Time trends in spawner abundance
+  - Distribution
+  - Likelihood of continued trends in abundance given fishing effort
+- @cosewic_cosewic_2019: Table 2
+  - Decline in total number of mature individuals over last 10 years or 3 generations (whichever is longer) where reduction or its causes may not have ceased or may not be understood of may not be reversible, based on (and specifying) any of: 
+      - direct observation
+      - an index of abundance appropriate to the taxon
+      - a decline in index of area of occupancy, extent of occurrence and/or quality of habitat
+      - actual or potential levels of exploitation
+      - the effects of introduced taxa, hybridization, pathogens, pollutants, competitors, or parasites
+  - Reduction of $\geq$ 70% = endangered
+  - reduction of $\geq$ 50% = threatened
+- @iucn_standards_and_petitions_committee_guidelines_2019: Table 2.1
+  - same as COSEWIC above, but uses "Vulnerable" instead of "Threatened"
+
+How do these line up with LRPs?
+
+- @government_of_canada_fishery_2009: A fishery decision-making framework incorporating the precautionary approach: 
+  - "LRP represents the stock status below which serious harm is occurring to the stock." 
+  - "At this stock level, there may also be resultant impacts to the ecosystem, associated species and a lont-term loss of fishing opportunities"
+  - "When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
+
+- @fisheries_and_oceans_canada_harvest_2006
+  - "The Limit reference point is the stock level below which productivity is sufficiently impaired to cause serious harm to the resource but **above the level where the risk of extinction becomes a concern**" - Qualitatively similar to the benchmark between Red and Amber Zones in WSP. 
+  
+If each of the component CUs of a SMU is above the red/amber benchmark and thus not at risk of extinction, the entire SMU could judged to be above its LRP.
+
+
+-->
+
+
 ## Estimation of LRPs: Aggregating CU Status to the SMU-level
 
 ### Report status relative to benchmarks for individual CUs 
@@ -41,6 +85,13 @@ This section will address the question: “What methods are available to develop
 
 
 ### Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)
+
+<!-- K.Holt: the following text has been moved here from the chum chapter of the case study paper.
+"The goal of these methods was to explore whether the status of component CUs could be predicted well by the aggregate abundance of the whole SMU. The motivation behind this approach is that many SMUs are not monitored at the CU level. If the aggregate abundance of the SMU could predict the status of component CUs, then an LRP that is measured in aggregate SMU abundance could be reliably used." 
+
+--- also of note: abundance-based benchmarks may be preferred for link to HCR
+
+--> 
 
 - Description of logistic model approach, with illustrative figures, equations, etc
 -	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 

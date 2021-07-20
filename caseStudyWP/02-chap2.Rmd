@@ -7,41 +7,18 @@ output:
 
 In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (South Coast Chum, excluding Fraser). 
 
-All LRP estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP using the methods described in sections 2.1 - 2.??.
+All LRP estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP.
 
 Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
-
-An overview of CU benchmarks and LRP estimation methods applied for each case study is provided in Table \@ref(tab:csOverview).
-
-----------------------------------------------------------------------------------------------
-Case Study              Benchmark Methods           LRP Estimation Methods
------------------------ --------------------------- ------------------------------------------
-Interior Fraser Coho    Sgen from SRR               Proportion CUs > lower abundance benchmark
-                        Distributional threshold    Aggregate abundance: logistic regression 
-                                                    Aggregate abundance: projected 
-    
-WCVI Chinook            Sgen from watershed area    Proportion CUs with status > red
-                        Multi-dimensional           Aggregate abundance: projected
-
-South Coast Chum        Sgen                        Proportion CUs with status > red
-(excluding Fraser)      Percentile
-                        Multi-dimensional
------------------------ --------------------------- ------------------------------------------
-Table: (\#tab:csOverview) Overview of benchmarks and LRP estimation methods examined for each case study.
-
-
-
 
 
 ## PROPORTION-BASED LRPS
 
-A proportion-based LRP is simply the proportion of CUs required to be above CU-level lower benchmarks. For example, the LRP could be set at "100% of CUs with abundance > lower benchmark". In this case, the LRP would be breached anytime a single CU dropped below its lower benchmark. Guidance on how to select the required proportion, including when it may be appropriate to consider proportions < 100%, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).   
-
-We consider two types of proportion-based LRPs in our case studies. The first is based on the proportion of CUs with abundance above abundance-based lower benchmarks, while the second is based on the proportion of CUs for which a multidimensional synoptic status assessment indicates that status is in either the amber or green Wild Salmon Policy status zones.         
+A proportion-based LRP is simply the proportion of CUs required to be above CU-level lower benchmarks. For example, the LRP could be set at "100% of CUs with abundance > lower benchmark". In this case, the LRP would be breached anytime a single CU dropped below its lower benchmark. Guidance on how to select the required proportion, including when it may be appropriate to consider proportions < 100%, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review). We consider two types of proportion-based LRPs in our case studies. The first is based on the proportion of CUs with abundance above abundance-based lower benchmarks, while the second is based on the proportion of CUs for which a multidimensional synoptic status assessment indicates that status is in either the amber or green Wild Salmon Policy status zones.         
 
 ### Proportion of CUs above abundance-based lower benchmarks
 
-For SMUs in which CU-level abundance relative to abundance-based lower benchmarks is assessed annually, LRPs can be set at the required proportion of CUs with abundance above their abundance-based lower benchmarks (e.g., Sgen). We use the Interior Fraser Coho case study to examine this approach, and compare it with aggregate abundance-based LRPs. 
+For SMUs in which CU-level abundance relative to abundance-based lower benchmarks is assessed annually, LRPs can be set at the required proportion of CUs with abundance above their abundance-based lower benchmarks. 
 
 
 ### Proportion of CUs with multidimensional status > lower benchmark 
@@ -51,14 +28,33 @@ For SMUs in which CU-level abundance relative to abundance-based lower benchmark
 
 * Will need to highlight that expert opinion will be used to confirm status assessments for this approach, which is not done in case study applications*
 
+<!-- K.Holt: have moved base description up from chum chapter to here.  Commented out for now bc not currently working
+
+The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
+
+
+``` {r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
+source(here::here("R/make_tree_diagram.R"))
+knitr::include_graphics(here::here("figure/decision_tree.png"))
+```
+-->
+
+
 
 ## AGGREGATE ABUDNANCE-BASED LRPS
+
+Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks.  
+
+- To add: we default to requirement of all CUs > benchamrks for case studies, but cases where the proportion may be < 1 are discussed in guidelines paper
+ - To add: probability thresholds considered in case studies: 0.50, 0.66, 0.90, 0.99 based on IPCC. We focus on 0.50 for sensitivity analyses, but show sensitivity to other values.
+ 
+We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.
 
 ### Logistic regression LRPs
 
 *Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??* *\textcolor{cyan}{LW: I like Logistic Regression LRPs, it's intuitive. Another option could be Aggregate LRPs?}*
 
-Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a given proportion of CUs being above their lower benchmarks. For illustrative purposes, we assume that all CUs are required to be above their lower benchmarks. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have $S_i > LBM_i$ and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
+Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a required proportion of CUs being above their lower benchmarks. In all three case studies, we assume that all CUs are required to be above their lower benchmarks (i.e., proportion = 100%). For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have spawner abundance greater than their lower benchmark, $S_i > LBM_i$, and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
 
 \begin{equation}
   \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
@@ -85,6 +81,8 @@ We initially considered an alternative approach to logistic regression in which 
 ### PROJECTION-BASED LRPS
 
 Projected LRPs are estimated using stochastic projections of future stock size for individual CUs. Projected abundances are then used to characterize the implicit relationship between aggregate spawner abundance for the SMU and the probability that the required proportion of CUs will be above their individual lower abundance benchmarks (e.g. Sgen). 
+
+* To add: dependent on ER
 
 We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). The code for samSim is available on GitHub: https://github.com/Pacific-salmon-assess/samSim.  We created a modified version of samSim to support LRP estimation, which is also available on GitHub: https://github.com/Pacific-salmon-assess/samSim/tree/LRP  
 
