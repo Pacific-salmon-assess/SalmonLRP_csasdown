@@ -9,18 +9,40 @@ output:
 
 [//]: # Add a comment in colour: *\textcolor{cyan}{CH: some text}*
 
-The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 Conservation Units, Southwest Vancouver Island (SWVI), Nootka and Kyuquot, and Northwest Vancouver Island ( @holtby_conservation_2007). The SMU contains 7 large inlets, each containing numerous rivers and coastal streams.
+The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtby_conservation_2007], 7 large inlets, and 19 indicators stocks (Table \@ref(tab:WCVICKOverview)). Because enhancement can impede our ability to assess status of wild Pacific salmon, only indicator stocks with Proportionate Natural Influence, PNI, values $\geqslant$ 0.5 were included in the development of LRPs and assessment against those LRPs (J. Bokvwist, pers. comm.). Stocks with PNI < 0.5 are considered to be Integrated-Hatchery populations where most fish are hatchery origin [@withler_2018].
 
-Most Chinook in this system are 'ocean type', entering the ocean 1-3 months after emergence from spawning gravel (@dfo_wcviSAR_2010). There are very few 'stream type' fish in this system (those that stay in the river for one year after emergence). After enterin the ocean, WCVI Chinook migrate north into northern BC and southeast Alaska waters to rear for 2 to 7 years, returning predominantly at ages 4 and 5 (@dfo_wcviSAR_2010).
 
-Two of the 3 CUs in this SMU, .. and...,  were assessed in an integrated Wild Salmon Policy assessment as "red" status in 2014?.
--Refer to both SAR and Brown et al meta data.
-- mention rebuilding plan, I think described in IFMP?
-- mention any other important details from IFMP
+----------------------------------------------------------------------------------------------
+CU                      Inlets                  Indicators
+----------------------- ----------------------- ----------------------------------------------
+WCVI-South              San Juan,               *San Juan*, 
+(CK-31)                 Nitinat,                *Nitinat*, 
+                        Barkley,                Nahmint , *Sarita*, *Somass*, 
+                        Clayoquot,              Bedwell/Ursus , Megin , Moyeha , *Tranquil*
+                                                          
+WCVI-Nootka & Kyuoquot  Nootka/Esperanza,       *Burman*, *Conuma*, *Gold*, *Leiner*, Tahsis,
+(CK-32)                 Kyuquot                 Artlish, Kaouk, Tahsish,
+                                         
+WCVI-North              Quatsino                Cayeghle, Marble
+(CK-33)                
+                        
+----------------------- --------------------------- ------------------------------------------
+Table: (\#tab:WCVICKOverview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.
 
-- used which metrics in that assessment?
-- description of habitat-based benchmark
--	Unique attributes of the case study (why selected)
+Most Chinook in this SMU are 'ocean type', entering the ocean 1-3 months after emergence from spawning gravel [@dfo_wcviSAR_2010]. 'Stream type' fish, those that stay in the river for one year after emergence, are rare. After entering the ocean, WCVI Chinook migrate into northern BC and southeast Alaska waters to rear for 2 to 7 years, returning to spawn predominantly at ages 4 and 5 [@dfo_wcviSAR_2010].
+
+Two of the 3 CUs in this SMU, WCVI-South and WCVI-Nootka & Kyuquot, were assessed as "red" status in an integrated Wild Salmon Policy assessment [@dfo_SBCCKSAR_2016]. For these CUs, assessments were based on component stocks without recent hatchery enhancement (within the most recent 12 years), omitting stocks with recent enhancement. For WCVI-South, status was based primarily on threats of genetic introgression from strays from nearby large-scale hatcheries. For WCVI-Nootka & Kyuoquot, status was based on a very low index of abundance for non-enhanced populations and threats of genetic introgression from strays from large-scale hatcheries. The third CU, WCVI-North, was not assessed by DFO in 2016 because all component stocks had some level of enhancement over the most recent 12 years (PNI was not considered). A list of non-indicator stocks within each CU is available in @brown_2020. 
+
+WCVI Chinook is identified as a stock of concern in the 2021 Integrated Fisheries Management Plan, IFMP, for South Coast Salmon, and a rebuilding plan is under development [@dfo_IFMP_SC_2021]. Poor marine survival rates for WCVI Chinook and low spawner levels over the past 2 decades are highlighted as reasons for conservation concern [@dfo_IFMP_SC_2021, p. 129]. A variety of management measures have been implemented to restrict harvest on WCVI Chinook and address these concerns, described in @dfo_IFMP_SC_2021.
+
+This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available but habitat-based benchmarks are available, as is common for Chinook salmon in BC. WCVI Chinook is also included in the first batch of major stocks to be regulated under the Fish Stock Provisions of the revised Fisheries Act.<!-- CH comment: add reference here?-->
+
+Biological benchmarks have been estimated for WCVI indicator stocks using an empirical relationship between watershed area and spawner abundances at replacement, S<sub>REP</sub>, and S<sub>MSY</sub> from a meta-analysis of 25 Chinook stocks across North America [@parken_2006]. Lack of recruitment data for WCVI Chinook stocks precludes the use of stock-recruitment based benchmarks. For the development of LRPs for WCVI Chinook, the empirical relationship between watershed area and S<sub>REP</sub> was re-estimated using a hierarchical Bayesian model (as in @liermann_2010), and applied to inlets of WCVI Chinook (Appendix X). 
+
+Under the Wild Salmon Policy, CUs are identified as the spatial scale required for long-term sustainability of the species. For WCVI Chinook, inlets were also identified as an important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying of wild fish among inlets. However, indicators stock without significant hatchery influence were only available for 5 of the 7 inlets. The lack of indicators without significant hatchery influence for Nitinat and San Juan is due to large-scale hatcheries in those inlets and infrequent monitoring of sites with natural spawning. We used a hybrid approach that preserved CU-scale diversity while also including inlet-scale diversity where data permitted. Because the remaining inlets are nested within 3 CUs, preserving that inlet-scale biodiversity will also preserve CU-scale biodiversity required under the Wild Salmon Policy. Future analyses could limit analyses to the scale of CUs or extend it to include all 7 inlets with additional indicators in Nitinat and San Juan if they are developed. 
+
+<!-- CH: move to Appendix: Because the stock-recruitment data for the meta-analysis used in @parken_2006 were not available, we relied on a similar data set used by @liermann_2010.  -->
+
 
 ## DATA
 
