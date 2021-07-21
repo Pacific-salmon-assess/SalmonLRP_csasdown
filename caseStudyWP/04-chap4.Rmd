@@ -61,10 +61,9 @@ knitr::include_graphics(here::here("figure/chinook-IndicatorTimeSeries.png"))
 ```
 
 
-Proportionate Natural Influence values for 14 indicator stocks were provided to DFO South Coast Stock Assessment by DFO's Salmon Enhancement Branch (J. Bokvist, pers. comm.). Stocks were considered significantly enhanced if average PNI values over available time-series were < 0.5. Thermal marking was used to identify the proportion of hatchery-origin spawners on the spawning grounds to derive PNI values when those data were available; CWTs were used otherwise. Although Gold River had PNI values > 0.5 (0.52),  most of the unmarked spawners are thought to be second generation (or descendants of) hatchery-origin fish from the Robertson Creek hatchery. There is no evidence of the original natural-spawners in this system. 5 of the remaining 6 indicator stocks wihthout PNI data were not thought to be significantly enhanced, Cayeghle, Kaouk, Megin, Moyeha and Tasish (D. McHugh, pers. comm.). One indicator stock without PNI data, Tranquil, is considered significantly enhanced and is included with the PNI <0.5 stocks (D. McHugh, pers. comm.)
+Proportionate Natural Influence values for 14 indicator stocks were provided to DFO South Coast Stock Assessment by DFO's Salmonid Enhancement Program (J. Bokvist, pers. comm.). Stocks were considered significantly enhanced if average PNI values over available time-series were < 0.5. Thermal marking was used to identify the proportion of hatchery-origin spawners on the spawning grounds to derive PNI values when those data were available; CWTs were used otherwise. Although Gold River had PNI values > 0.5 (0.52),  most of the unmarked spawners are thought to be second generation (or descendants of) hatchery-origin fish from the Robertson Creek hatchery. There is no evidence of the original natural-spawners in this system. Five of the remaining 6 indicator stocks without PNI data are not thought to be significantly enhanced, Cayeghle, Kaouk, Megin, Moyeha and Tasish (D. McHugh, pers. comm.). One indicator stock without PNI data, Tranquil, is considered significantly enhanced and is grouped with the PNI <0.5 stocks (D. McHugh, pers. comm.). Guidelines and methods for estimating PNI values are currently being documented by DFO's Salmonid Enhancement Program.
+<!-- CH comment: Do we need to (can we) include time-series of PNI values in an appendix?-->
 
-
-Future analyses, use SR at CU-level to derive empirical LRPs at CU level.
 
 
 
@@ -86,3 +85,6 @@ Sgen equation
 
 
 ## RESULTS
+
+## FUTURE ANALYSES
+- Consider using run-reconstruction at the CU-level to derive SR-based benchmarks (Sgen) and associated empirical LRPs at that level. However, given low productivity of these stocks and their low abundances it is unlikely that there will be any years of data with all CUs being above Sgen values. Therefore, it is unlikely that an SR-based empirical logistic regression can be estimated.
