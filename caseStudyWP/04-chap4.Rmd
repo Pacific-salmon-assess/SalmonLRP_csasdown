@@ -12,6 +12,7 @@ output:
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtby_conservation_2007], 7 large inlets, and 20 indicators stocks (Figure \@ref(fig:chinook-map); Table \@ref(tab:WCVICKOverview)). Because enhancement can impede our ability to assess status of wild Pacific salmon, only indicator stocks with Proportionate Natural Influence, PNI, values $\geqslant$ 0.5 were included in the development of LRPs and assessment against those LRPs (J. Bokvwist, pers. comm.). Stocks with PNI < 0.5 are considered to be Integrated-Hatchery populations where most fish are hatchery origin [@withler_2018].
 ```{r chinook-map, fig.caption="Map of WCVI Chinook SMU, component CUs and inlets.",  warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics(here::here("figure/chinook-map.png"))
+# Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat
 ```
 
 
@@ -31,7 +32,7 @@ WCVI-North              Quatsino                Cayeghle, Marble
 (CK-33)                
                         
 ----------------------- --------------------------- ------------------------------------------
-Table: (\#tab:WCVICKOverview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.
+Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.
 
 Most Chinook in this SMU are 'ocean type', entering the ocean 1-3 months after emergence from spawning gravel [@dfo_wcviSAR_2012]. 'Stream type' fish, those that stay in the river for one year after emergence, are rare. After entering the ocean, WCVI Chinook migrate into northern BC and southeast Alaska waters to rear for 2 to 7 years, returning to spawn predominantly at ages 4 and 5 [@dfo_wcviSAR_2012].
 
@@ -41,7 +42,7 @@ WCVI Chinook is identified as a stock of concern in the 2021 Integrated Fisherie
 
 This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available but habitat-based benchmarks are available, as is common for Chinook salmon in BC. WCVI Chinook is also included in the first batch of major stocks to be regulated under the Fish Stock Provisions of the revised Fisheries Act.<!-- CH comment: add reference here?-->
 
-Biological benchmarks have been estimated for WCVI indicator stocks using an empirical relationship between watershed area and spawner abundances at replacement, S<sub>REP</sub>, and S<sub>MSY</sub> from a meta-analysis of 25 Chinook stocks across North America [@parken_2006]. Lack of recruitment data for WCVI Chinook stocks and inlets precludes the use of stock-recruitment based benchmarks at those spatial scales. For the development of LRPs for WCVI Chinook, the empirical relationship between watershed area and S<sub>REP</sub> was re-estimated using a hierarchical Bayesian model (as in @liermann_2010), and applied to inlets of WCVI Chinook (Appendix X). 
+Biological benchmarks have been estimated for WCVI indicator stocks using an empirical relationship between watershed area and spawner abundances at replacement, $S_{REP}$, and $S_{MSY}$ from a meta-analysis of 25 Chinook stocks across North America [@parken_2006]. Lack of recruitment data for WCVI Chinook stocks and inlets precludes the use of stock-recruitment based benchmarks at those spatial scales. For the development of LRPs for WCVI Chinook, the empirical relationship between watershed area and $S_{REP}$ was re-estimated using a hierarchical Bayesian model (as in @liermann_2010), and applied to inlets of WCVI Chinook (Appendix X). 
 
 Under the Wild Salmon Policy, CUs are identified as the spatial scale required for long-term sustainability of the species. For WCVI Chinook, inlets were also identified as an important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying of wild fish among inlets. However, indicators stock without significant hatchery influence were only available for 5 of the 7 inlets. The lack of indicators without significant hatchery influence for Nitinat and San Juan is due to large-scale hatcheries in those inlets and infrequent monitoring of sites with natural spawning. We used a hybrid approach that preserved CU-scale diversity while also including inlet-scale diversity where data permitted. Because the remaining inlets are nested within 3 CUs, preserving that inlet-scale biodiversity will also preserve CU-scale biodiversity required under the Wild Salmon Policy. Future analyses could limit analyses to the scale of CUs or extend it to include all 7 inlets with additional indicators in Nitinat and San Juan if they are developed. 
 
@@ -51,29 +52,91 @@ Under the Wild Salmon Policy, CUs are identified as the spatial scale required f
 ## DATA
 
 To derive habitat-based benchmarks, watershed areas were updated by identifying 3rd order watershed areas that contain spawning habitat and omitting areas above obstacles to fish passage from the 
-[Provincial Obstacles to Fish Passage database](https://catalogue.data.gov.bc.ca/dataset/provincial-obstacles-to-fish-passage) (Appendix X). Only watershed areas of indicator stocks were included in the current analyses, which are those stocks with the relatively complete time-series and consistent observation methodology. In future analyses, watershed areas of all known spawning populations could be included (omitting areas above obstacles to fish passage) to derive habitat-based benchmarks on an absolute abundance scale. These benchmarks could be compared against total abundance to each inlet. This approach was not used as a base case because of large uncertainties in abundances of non-indicator stocks.
+[Provincial Obstacles to Fish Passage database](https://catalogue.data.gov.bc.ca/dataset/provincial-obstacles-to-fish-passage) (Appendix X). Only watershed areas of indicator stocks were included in the current analyses, which are those stocks with the relatively complete time-series and consistent observation methodology (Table \@ref(tab:chinook-WA)). In future analyses, watershed areas of all known spawning populations could be included (omitting areas above obstacles to fish passage) to derive habitat-based benchmarks on an absolute abundance scale. These benchmarks could be compared against total abundance to each inlet. This approach was not used as a base case because of large uncertainties in abundances of non-indicator stocks.
 
-Spawner abundances were provided for 20 WCVI indicators stocks, (D. Dosbon and D. McHugh pers .comm.; Table \@ref(tab:WCVICKOverview); Figure \@ref(fig:wcviCK-IndTimeSeries)). These time-series are compiled annually by DFO Area Staff for local and international assessment and management. Missing values were not infilled. In future work, infilled time-series of indicators within inlets (or CUs) could be developed to extend the available time-series. 
 
-```{r wcviCK-IndTimeSeries, fig.cap="Time-series of spawner abundances by indicator stock. Dark blue time-series are indicator stocks with Proportionate Natural Index (PNI) values $\geqslant$ 0.5; light blue time-series are indicator stocks with PNI < 0.5, i.e., are highly enhanced..",  warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chinook-WA, warning=FALSE, echo=FALSE}
+
+  
+dat <- as.data.frame(read.csv("data/WCVIStocks.csv"))
+dat <- dat %>% dplyr::filter(Stock != "Cypre") %>% 
+  dplyr::select(c(Stock, WA)) %>% dplyr::mutate(WA = round(WA,0)) %>%
+  dplyr::rename("Watershed Area" = WA)
+csasdown::csas_table(dat, booktabs = T, caption = "Watershed areas for indicator stocks, km\\textsuperscript{2}.")
+
+```
+
+Spawner abundances were provided for 20 WCVI indicators stocks, (D. Dosbon and D. McHugh pers .comm.; Table \@ref(tab:chinook-Overview); Figure \@ref(fig:chinook-IndTimeSeries)). These time-series are compiled annually by DFO Area Staff for local and international assessment and management. Missing values were not infilled. In future work, infilled time-series of indicators within inlets (or CUs) could be developed to extend the available time-series. 
+
+```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by indicator stock. Dark blue time-series are indicator stocks with Proportionate Natural Index (PNI) values <= 0.5; light blue time-series are indicator stocks with PNI < 0.5, i.e., are highly enhanced.",  warning=FALSE, echo=FALSE, fig.align="center"}
 
 knitr::include_graphics(here::here("figure/chinook-IndicatorTimeSeries.png"))
 ```
 
 
-Proportionate Natural Influence values for 14 indicator stocks were provided to DFO South Coast Stock Assessment by DFO's Salmonid Enhancement Program (J. Bokvist, pers. comm.). Stocks were considered significantly enhanced if average PNI values over available time-series were < 0.5. Thermal marking was used to identify the proportion of hatchery-origin spawners on the spawning grounds to derive PNI values when those data were available; CWTs were used otherwise. Although Gold River had PNI values > 0.5 (0.52),  most of the unmarked spawners are thought to be second generation (or descendants of) hatchery-origin fish from the Robertson Creek hatchery. There is no evidence of the original natural-spawners in this system. Five of the remaining 6 indicator stocks without PNI data are not thought to be significantly enhanced, Cayeghle, Kaouk, Megin, Moyeha and Tasish (D. McHugh, pers. comm.). One indicator stock without PNI data, Tranquil, is considered significantly enhanced and is grouped with the PNI <0.5 stocks (D. McHugh, pers. comm.). Guidelines and methods for estimating PNI values are currently being documented by DFO's Salmonid Enhancement Program.
+Proportionate Natural Influence values for 14 indicator stocks were provided to DFO South Coast Stock Assessment by DFO's Salmonid Enhancement Program (J. Bokvist, pers. comm.). Stocks were considered significantly enhanced if average PNI values over available time-series were < 0.5. Thermal marking was used to identify the proportion of hatchery-origin spawners on the spawning grounds to derive PNI values when those data were available; coded-wire tags (CWTs) were used otherwise. Although Gold River had PNI values > 0.5 (0.52),  most of the unmarked spawners are thought to be second generation (or descendants of) hatchery-origin fish from the Robertson Creek hatchery. There is no evidence of the original natural-spawners in this system. Five of the remaining 6 indicator stocks without PNI data are not thought to be significantly enhanced, Cayeghle, Kaouk, Megin, Moyeha and Tasish (D. McHugh, pers. comm.). One indicator stock without PNI data, Tranquil, is considered significantly enhanced and is grouped with the PNI <0.5 stocks (D. McHugh, pers. comm.). Guidelines and methods for estimating PNI values are currently being documented by DFO's Salmonid Enhancement Program.
 <!-- CH comment: Do we need to (can we) include time-series of PNI values in an appendix?-->
-
-
 
 
 ## METHODS
 
 ### PROPORTION CUs
-Table of habitat based benchmarks, SREP with SE, log(a) assumption, Sgen SE?
+$S_{REP}$ values were derived from the watershed area model (Appendix X). The lower benchmark, spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, $S_{gen}$, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$,
 
-Log (a) assumption =1 +/- 1 SE (2SDs)
-Sgen equation
+\begin{equation}
+  S_{MSY} = a * S_{gen}* e^{-b * S_{gen}}
+   (\#eq:Sgen)
+\end{equation}
+
+where, 
+
+\begin{equation}
+  b = \frac{\log(a)}{S_{REP}}
+   (\#eq:ricB)
+\end{equation},
+ 
+
+\begin{equation}
+  S_{MSY} = \frac{1 - W{e^{1-\log(a)}} } {b}
+   (\#eq:SMSY)
+\end{equation},
+
+and $a$ is recruits per spawner at low productivity. Ricker  $a$ was approximated for WCVI Chinook from a life-stage model that partitioned survival across freshwater and marine life-stages for ocean-type chinook to derive an overall survival from spawners to recruitment, combined with expert opinion (W. Luedke pers. comm.). Mean $\log(a)$ was estimated at 1 ($a$=2.72), with standard errors (1.96 SDs) +/- 1 ($a$ ranging from 0 to 7), representing large uncertainty in productivity. Bootstrapped confidence intervals in  $S_{gen}$ (Equation \@ref(eq:Sgen)) were estimated by repeated sampling from normal distributions of $\log(S_{REP})$ and $\log(a)$, with standard deviations in $\log(S_{REP})$ derived from the watershed-area model.
+
+Our approach to estimating benchmarks differs from that of @parken_2006, because we derived productivity independently where @parken_2006 estimated both $S_{MSY}$ and $S_{REP}$ from the watershed-area model thereby inferring mean estimates of productivity which were deemed unrealistically high for WCVI Chinook (>7 recruits/spawner). 
+
+Table of habitat based benchmarks, SREP with SE, log(a) assumption, Sgen SE?
+<!--CH comment: Revise table to include horizontal line after individual stocks, or to exclud them entirerly, and just show inlets.... (this is probably best, then explain how I summed WAs within inlets-->
+```{r chinook-benchmarks}
+ 
+bench <- as.data.frame(read.csv("data/wcviCK-BootstrappedRPs.csv"))
+bench <- bench %>% dplyr::mutate(Value = round (Value,0), lwr = round (lwr,0), 
+                                 upr = round (upr,0) )
+bench <- bench %>% tidyr::pivot_wider(id_cols = Stock, 
+                                      names_from = c(RP),#, lwr.name, upr.name), 
+                                      names_sep = ".",
+                                      values_from = c(Value,lwr,upr) ) 
+bench <- bench %>% dplyr::filter(Stock != "Cypre"&
+                                   Stock != "WCVI Nootka & Kyuquot"&
+                                   Stock != "WCVI North"&
+                                   Stock != "WCVI South") %>% 
+  dplyr::rename(Sgen = Value.SGEN) %>% 
+  dplyr::rename(SREP = Value.SREP) %>% 
+  dplyr::rename(Sgen.lwr = lwr.SGEN) %>% 
+  dplyr::rename(SREP.lwr = lwr.SREP) %>% 
+  dplyr::rename(Sgen.upr = upr.SGEN) %>% 
+  dplyr::rename(SREP.upr = upr.SREP) %>% 
+  dplyr::rename("Stock or inlet" = Stock)
+  
+
+bench <- bench %>% dplyr::select(c("Stock or inlet", Sgen, Sgen.lwr, Sgen.upr, SREP, SREP.lwr, SREP.upr))
+
+csasdown::csas_table(bench, booktabs = T, caption = "Benchmarks and boostrapped generated 95% confidence intervals for individual indicator stocks and aggregated to inlets.") %>% kableExtra::row_spec(20, hline_after=TRUE)
+
+
+```
+
+
 
 ### EMPIRICAL LRPS
 

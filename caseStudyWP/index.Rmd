@@ -101,6 +101,7 @@ library(dplyr)
 library(readr)
 library(tibble)
 library(csasdown)
+library(kableExtra)
 ```
 
 ---
