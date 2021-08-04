@@ -7,6 +7,8 @@
 -	Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
 -	“The choice of LRP needs to be feasible (separate from, but can be operationalized by, appropriate management measures), defensible (consistent with best practices), reliably estimated, and in line with the intent of the Precautionary Approach Policy regarding serious harm (DFO 2009).“ (DFO NHQ) 
 
+<!--CH comment: mention that LRPs identified under DFO's Fisheries Sustainability checklist are typically management operational control points, and not biological LRPs per se-->
+
 Scales of Pacific salmon assessment reporting
 
 1. Wild Salmon Policy

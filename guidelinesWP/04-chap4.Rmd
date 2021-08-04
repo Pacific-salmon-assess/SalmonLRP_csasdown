@@ -125,7 +125,8 @@ Questions to provide guidance on:
 
 -	Under which conditions is a SMU considered data-deficient?
 
-
+## Process for defining LRPs and assessing status against LRP
+- recommendation for the Science-based process (e.g., within CSAS) to develop and review LRPs for individual application, and then evaluate status against the LRP. That process would include local expertise to resolve issues of spatial resolution (CU level or other), type of LRP to be used, model structure (if model-based LRPs are considered), etc..
 
 
 
