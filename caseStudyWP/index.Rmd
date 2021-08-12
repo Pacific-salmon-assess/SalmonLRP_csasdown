@@ -28,6 +28,7 @@ output:
    copy_sty: true
    line_nums: true
    line_nums_mod: 1
+
 # ------------
 # End of options to set
 knit: bookdown::render_book
@@ -102,6 +103,9 @@ library(readr)
 library(tibble)
 library(csasdown)
 library(kableExtra)
+library(ggplot2)
+library(viridis)
+library(tidyr)
 ```
 
 ---

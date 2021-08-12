@@ -5,35 +5,20 @@ output:
 ---
 # CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER
 
-[//]: # Add a comment in colour: *\textcolor{cyan}{LW: some text}*
+<!-- # Add a comment in colour: *\textcolor{cyan}{LW: some text}* -->
 
 <!-- Initials: my comment -->
 
 ## CONTEXT
 
-The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs of chum salmon (*Oncorhynchus keta*) from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtby_conservation_2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. <!--K.H. suggest adding text along these lines to address points raised by Mike Staley: Chum salmon CUs spawning in the Fraser River Watershed are not included in this SMU; they have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean-based fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats.-->
+The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs of chum salmon (*Oncorhynchus keta*) from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtby_conservation_2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats.
 
-@holt_evaluating_2018 used these CUs to compare benchmarks from stock-recruit relationships and benchmarks based on abundance, as a case study for chum populations with limited data. They showed that benchmarks based on a percentile of abundances can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low. In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines. 
-
-<!-- K.H. suggested revision to above paragraph: The ISC-Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series a incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of spawner recruit-based benchmarks problematic. As a result, benchmarks are calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks) instead of spawner recruit relationships. Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holt_evaluating_2018). In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines (@holt_evaluating_2018). --->
-
+The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruit data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertin_marine_2017).
+As a result, benchmarks are calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks) instead of spawner recruit relationships. Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holt_evaluating_2018). In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines (@holt_evaluating_2018).
 
 <!-- K.H. comment: Is it possible to calculate a couple summary stats that demonstrate the magnitude of infilling?  If so, this could be worked into the above paragraph.  For example, how many stream-year combinations are missing, and in need of infilling? --->
 
-We chose Inside South Coast Chum as a case study because:
-
-- Previous work on comparing stock-recruit and percentile benchmarks to these CUs @holt_evaluating_2018
-- It is an example of a data-limited SMU, with:
-  - Incomplete escapement time series (not all streams counted each year, some CUs have no counts in some years)
-  - Recruits are estimated using harvest, age, and escapement data, allowing stock-recruit modelling
-  - No data on marine survival (although there are some scale/growth data in @debertin_marine_2017)
-- Relatively long time series (1953-2018)
-- Large area with many diverse watersheds, natal rivers and streams, flow regimes, and ocean entry locations, contrasting with Interior Fraser Coho
-- High contrast in abundances levels among CUs
-- Low correlation in abundance levels among CUs over time
-
-<!-- K.H. suggested paragraph (i.e., putting the above points not yet captured into paragraph form so that bullets can be removed): We chose ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. Additional unique characteristics of this SMU include high contrast in abundances levels among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations.  --->
-
+We chose ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. Additional unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations.
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics(here::here("figure/chum-map.png"))
