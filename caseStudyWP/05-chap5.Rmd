@@ -21,7 +21,7 @@ As a result, benchmarks are calculated as a percentile of the historical CU-leve
 We chose ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. Additional unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations.
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics(here::here("figure/chum-map.png"))
+knitr::include_graphics("figure/chum-map.png")
 ```
 
 ## DATA
@@ -109,9 +109,11 @@ The suitability of the percentile method was evaluated for chum populations in B
 - Time series bias tends to under-estimate $S_{gen}$ 
  
  
-From @holt_evaluating_2018 Table 6, productivity values, recommendations:
+@holt_evaluating_2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (table \@ref(tab:holt-tab6)).
 
-<!-- I suggest just including the original Holt et al. table here, with reference to it being taken directly from the paper in the table caption-->
+```{r holt-tab6, fig.cap="Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From @holt_evaluating_2018.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/holt_et_al_2018_table6.png")
+```
 
 - Productivity (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%: 25^th^ lower benchmark (Georgia Strait, Howe Sound Burrard Inlet)
 - Productivity ($\alpha$) between 1.5-2.5 and: 
@@ -202,6 +204,18 @@ Caveats with benchmarks based on $S_{gen}$ or stock-recruit parameters:
 
 ### LRP Estimation for ISC-NF Chum
 
+
+We evaluated six different combinations of data and LRP estimation (table \@ref(tab:LRP-scenarios)). 
+
+```{r LRP-scenarios, echo=FALSE}
+d <- read.csv("data/2021-07-23 scenarios compare CU status methods.csv")
+csasdown::csas_table(d[1:6,1:8], 
+   align = rep("c", 8),
+   caption = #ifelse(french,
+                   #"French goes here",
+                   "Scenarios using different LRP estimation methods and subsets of the data.")
+            #)
+```
 
 **Proportion of CUs > percentiles**
 
@@ -427,6 +441,12 @@ knitr::include_graphics(here::here('figure/chum-logistic-perc.pdf'))
 Retrospective analysis 
 Can do this for 4 CUs with percentiles: 
 plot status over time (aggregate abundance, with green/red for different methods)
+
+We compared results of LRP status for percentile and decision tree methods, using different data sets (Table \@ref(tab:LRP-scenarios)). 
+
+
+
+Comparing 
 
 #### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
 
