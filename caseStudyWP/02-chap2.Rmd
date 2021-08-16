@@ -23,13 +23,10 @@ For SMUs in which CU-level abundance relative to abundance-based lower benchmark
 
 ### Proportion of CUs with multidimensional status > lower benchmark 
 
-
 *To be added by Luke*
 
 * Will need to highlight that expert opinion will be used to confirm status assessments for this approach, which is not done in case study applications*
 
-<!-- K.Holt: have moved base description up from chum chapter to here.  Commented out for now bc not currently working
--->
 The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
 
 
@@ -37,8 +34,6 @@ The State of the Salmon program (Fisheries and Oceans Canada) is developing a me
 source(here::here("R/make_tree_diagram.R"))
 knitr::include_graphics(here::here("figure/decision_tree.png"))
 ```
-
-
 
 
 ## AGGREGATE ABUDNANCE-BASED LRPS
