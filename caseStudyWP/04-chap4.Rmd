@@ -370,6 +370,9 @@ g7
 In the forward projections, pairwise correlations in projected spawner abundances among inlets were similar to observed pairwise correlations in spawner abundances among inlets (Figure \@ref(fig:chinook-boxplotscvER)). Varying assumptions about variability in exploitation among inlets between cv= 0 and 0.17 did not impact the distribution of correlations in spawner abundances in the projections.  
 
 ```{r chinook-boxplotscvER, echo=FALSE, fig.cap="Distribution of correlations of spawner abundances among inlets for observed data over the most recent 20 years (n=10 pairwise correlations) and projected time-series, with a cv in exploitation rates among inlets = 0, 0.085 or 0.17 (0.17 is equal to the estimated interannual variablity in exploitation rates). ", out.width = '60%'}
+# knitr::include_graphics(here::here("figure/chinook-compareEscCor-cvER.png"))
+
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-cvER.png', './figure/chinook-compareEscCor-cvER.png',  mode="wb")
 knitr::include_graphics(here::here("figure/chinook-compareEscCor-cvER.png"))
 
 # Consider adding another run with annualcvER=FALSE (cvER =0.21) in Appendix
@@ -391,6 +394,9 @@ knitr::include_graphics(here::here("figure/chinook-SpawnerCorrelation.png"))
 When we assumed correlations in recruitment residuals equal to observed spawner correlations (i.e., scalar = 1) the resulting correlations in spawner abundances from the projections matched observed correlations (Figure \@ref(fig:chinook-boxplotsRecCorSca)). Reducing the correlations in recruitment residuals (i.e., scaling by 0.5 or 0) resulted spawner correlations in the projections that were lower than those observed. 
 
 ```{r chinook-boxplotsRecCorSca, echo=FALSE, fig.cap="Distribution of correlations of spawner abundances among inlets for observed data over the most recent 20 years (n=10 pairwise correlations) and projected time-series, assuming a scalar on covariance in recruitment residuals from 1 (equal to observed spawner correlations), 0.5 and 0 (no correlation in recruitment residuals). Projections assume a cv in exploitation rates among inlets = 0.085 (half that of estimated interannual variablity in exploitation rates).", out.width = '50%'}
+
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-recCorSca.png', './figure/chinook-compareEscCor-recCorSca.png',  mode="wb")
+
 knitr::include_graphics(here::here("figure/chinook-compareEscCor-recCorSca.png"))
 
 
@@ -423,7 +429,11 @@ cuAges %>% filter(CU_Names!="Westcoast_Vancouver_Island") %>%
 We ran a sensitivity analysis under an alternative assumption that age proportions varied over years but were constant among CUs. Under this alternative assumption, we found that pairwise correlations of spawner abundances in projections were much higher than those observed (Figure \@ref(fig:chinook-boxplotsAge)), generating time-series that were unrealistic. 
 
 ```{r chinook-boxplotsAge, echo=FALSE, fig.cap="Distribution of correlations of spawner abundances among inlets for observed data over the most recent 20 years (n=10 pairwise correlations) and projected time-series under the assumptions of variable age proportions among CUs and constant proportions among CUs. We assumed a cv in exploitation rates among inlets = 0.085 (half that of estimated interannual variablity in exploitation rates) in the projections.", out.width = '60%'}
- knitr::include_graphics(here::here("figure/chinook-compareEscCor-Ages.png"))
+
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-Ages.png', './figure/chinook-compareEscCor-Ages.png',  mode="wb")
+
+
+knitr::include_graphics(here::here("figure/chinook-compareEscCor-Ages.png"))
 
 ```
 
@@ -433,15 +443,29 @@ Projection-based LRPs were developed under the base-case assumptions of (1) inte
 
 ```{r chinook-baseCaseProjLRP, echo=FALSE, fig.cap="Probability of all inlets being above their lower benchmark along a gradient in aggregate abundances within bins of 200 fish, derived from projections over 30 years and 50,000 MC Trials.  Candidate LRPs at p=0.5 (yellow) and p=0.66 (pale green) are highlighted. Each dot is the proportion of MC trials where all inlets were > lower benchmarks.", out.width = '60%', fig.pos='!h'}
 
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/baseER-ProjLRPCurve-ALLp.png', './figure/chinook-baseER-ProjLRPCurve-ALLp.png',  mode="wb")
+
 knitr::include_graphics(here::here("figure/chinook-baseER-ProjLRPCurve-ALLp.png"))
 
 ```
 
-We considered sensitivity analyses on interannual variability in exploitation rates among inlets with cv = 0 and 0.17 (Figure  \@ref(fig:chinook-projLRPERs)).
+We considered sensitivity analyses on interannual variability in exploitation rates among inlets with cv = 0 and 0.17 (Figure  \@ref(fig:chinook-projLRPcvER)).
 
-```{r chinook-projLRPERs, echo=FALSE, fig.cap="Probability of all inlets being above their lower benchmark along a gradient in aggregate abundances within bins of 200 fish, derived from projections over 30 years and 50,000 MC Trials. The projections assumed variability in ERs among inlets with a cv=0, 0.085, and 0.17.", out.width = '60%'}
+```{r chinook-projLRPcvER, echo=FALSE, fig.cap="Probability of all inlets being above their lower benchmark along a gradient in aggregate abundances within bins of 200 fish, derived from projections over 30 years and 50,000 MC Trials. The projections assumed variability in ERs among inlets with a cv=0, 0.085, and 0.17.", out.width = '60%'}
+
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/cvER-ProjLRPCurve-ALLp.png', './figure/chinook-cvER-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics(here::here("figure/chinook-cvER-ProjLRPCurve-ALLp.png"))
+
+```
+
+These LRPs were derived under the assumption of current exploitation of 30% with interannual variability (Figure \@ref(fig:chinook-ERdist)). We considered sensitivity analyses on average exploitation rates from 5-45% (Figure \@ref(fig:chinook-projLRPER)). As exploitation increases the LRP associated with a specified probability of all inlets being above their lower benchmark also increases.   <!--CH comment: -->
+
+```{r chinook-projLRPER, echo=FALSE, warning=FALSE, fig.cap="Probability of all inlets being above their lower benchmark along a gradient in aggregate abundances within bins of 200 fish, derived from projections over 30 years and 50,000 MC Trials, under a range of average exploitation rates from 5-45\\%."}
+
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERs-ProjLRPCurve-ALLp.png', './figure/chinook-ERs-ProjLRPCurve-ALLp.png',  mode="wb")
+
+knitr::include_graphics(here::here("figure/chinook-ERs-ProjLRPCurve-ALLp.png"))
 
 ```
 
@@ -449,7 +473,6 @@ For the base case parameters, the candidate projection-based LRPs were compared 
 
 ```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green).", out.width = '60%'}
 
-#knitr::include_graphics(here::here("figure/chinook-cvER-ProjLRPCurve-ALLp.png"))
 knitr::include_graphics(here::here("figure/chinook-WCVI-SMUtimeseries.png"))
 
 ```
@@ -463,6 +486,7 @@ As expected, projection-based LRPs tend to increase under low productivity and a
    
 ```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection-based LRPs estimated under assumptions of reduced producitivty (0.75x of current levels) and increased productivity (1.5x current levels). More MC trials are required for stabilization of LRPs at low productivity.", out.width = '80%'}
 
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/Alphas-ProjLRPCurve-ALLp.png', './figure/chinook-Alphas-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics(here::here("figure/chinook-Alphas-ProjLRPCurve-ALLp.png"))
 
@@ -475,8 +499,10 @@ We evaluated status of WCVI Chinook using LRPs estimated using the proportion of
    
 ```{r chinook-retro, echo=FALSE, fig.cap="Historical evaluation of status using available methods for estimating LRPs", out.width = '80%'}
 
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/statusPlot-withBars2020.png', './figure/chinook-statusPlot-withBars2020.png',  mode="wb")
+
 knitr::include_graphics(here::here("figure/chinook-statusPlot-withBars2020.png"))
-# add x's for years where status is not available
+
 ```
 
 ## FUTURE ANALYSES
