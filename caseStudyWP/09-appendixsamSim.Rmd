@@ -13,11 +13,23 @@ Need to ask: where is the function that reads in the data. Maybe called by gener
 
 ### Initialization
 
+Describe Genericrecoverysim
+
+Priming loop - atrts at line 779
 
 Generic recovery simulator loops 1 and 2
 
 
+\begin{equation}
+  1 + 1 = 2
+  (\#eq:)
+\end{equation}
+
+
+
 ### Projections
+
+loop 3 starts at line 1232
 
 Generic recovery simulator loop 3
 

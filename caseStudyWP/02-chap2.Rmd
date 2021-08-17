@@ -33,7 +33,7 @@ For SMUs in which CU-level abundance relative to abundance-based lower benchmark
 The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
 
 
-``` {r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
 source(here::here("R/make_tree_diagram.R"))
 knitr::include_graphics(here::here("figure/decision_tree.png"))
 ```
