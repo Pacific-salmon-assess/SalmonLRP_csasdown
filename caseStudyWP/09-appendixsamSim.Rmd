@@ -4,6 +4,23 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # SamSim MODEL DOCUMENTATION {#app:second-appendix}
 
+SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in (link to the LRP pbranch). 
+
+
+
+------------------------------------------------
+index notation     definition
+------------------ ----------------------------- 
+y                  year
+                     
+j                  age
+                   
+k                  Conservation Unit (CU)
+------------------ -----------------------------
+
+
+
+SamSim is a CU based model
 
 ### Data entry
 
@@ -11,11 +28,29 @@ Define data used in IF cohoPars is any of the data columns not defined?
 Need to ask: where is the function that reads in the data. Maybe called by genericrecoverySim
 
 
-### Initialization
+### Initialization 
+
+The initialization phase includes only past data and is used to represent real and observed abundances to prime the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with set parameters if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners, Recruits and Catch.  
+ 
+Priming loop - starts at line 779
+
+#### Available recruitment data
+
+If spawner recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The recruitment data is then populated
+
+
+
+Spawners
+recruits
+catchAg
+
+#### No Recruitment data
+
+When Recruitment data is not available, the 'nPrime' is set to 10x the maximum age of recruits. 
 
 Describe Genericrecoverysim
 
-Priming loop - atrts at line 779
+
 
 Generic recovery simulator loops 1 and 2
 
