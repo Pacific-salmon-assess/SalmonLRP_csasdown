@@ -165,11 +165,12 @@ ifc_cus <- c("Fraser Canyon", "Interior Fraser", "Lower Thompson", "South Thomps
 head(coho_cu)
 unique(coho_cu$CU_name)
 ifc <- coho_cu[coho_cu$CU_name %in% ifc_cus, ] # get sf object of just interior fraser coho CUs
+ifc$CU_name <- sub("Interior Fraser", "Middle Fraser", ifc$CU_name) # change name of interior fraser to middle fraser as per WSP assessment
 # get bounds 
 bounds <- as.numeric(st_bbox(ifc))
 
 # Get palette
-pal <- pnw_palette("Sailboat", length(ifc$CU_name), type="continuous")
+pal <- pnw_palette("Starfish", length(ifc$CU_name), type="continuous")
 
 png(here("figure/coho-map.png"), width=8, height=7, units="in", res=600)
 ggplot(ifc) +
