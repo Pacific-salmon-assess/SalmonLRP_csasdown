@@ -76,7 +76,7 @@ Using by-stream infilled escapement summed for each CU, the CUs and years with m
 
 ```{r chum-escapement-infill, fig.cap="Chum salmon escapement for the seven Conservation Units. Black points indicate actual counts, blue points are infilled by stream, and red points are infilled by Conservation Unit.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_actual_infill_by_stream_and_CU.png', './figure/chum-escapement-infill.png', mode="wb")
-knitr::include_graphics(here::here("figure/chum-escapement-infill.png"))
+knitr::include_graphics(here::here("caseStudyWP/figure/chum-escapement-infill.png"))
 ```
 
 #### Run reconstruction to estimate recruitment
