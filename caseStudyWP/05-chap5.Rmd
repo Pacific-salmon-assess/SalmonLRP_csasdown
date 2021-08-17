@@ -261,7 +261,24 @@ We tested Bernoulli and Binomial regression forms. Because LRPs based on Binomia
 
 ## RESULTS
 
-### LRPs Based on Proportion of Component CUs
+### LRPs Based on Status of CUs
+
+LRP status varied for different estimation methods and subsets of the data (Figure \@ref(fig:chum-LRP-compare)). 
+
+Comparing the scenarios 1 and 2, based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. 
+
+Scenarios 1 and 3 (same data) show that the method used to determine CU status influences the resulting LRP. In a given year, ISC Chum were above the LRP based on percentile benchmarks but below it based on decision tree, and vice versa. 
+
+Scenarios 2 and 6 (same data, more data than 1 and 3) show a similar pattern, but with more years below the LRP with more data. 
+
+Comparing scenarios 4 and 5 (decision tree only), including more observations results in one year switching from above the LRP to below it. 
+
+Comparing scenarios 5 and 6 (6 drops two CUs completely), including the two CUs in scenario 5 results in three years switching from above the LRP to below.
+
+```{r chum-LRP-compare, fig.cap="Historical evaluation of status using available methods for estimating LRP", echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
+knitr::include_graphics(here::here('figure/chum-compare-LRP-methods.png'))
+```
 
 
 ### Retrospective analysis of CU benchmarks based on $S_{gen}$ and percentiles
