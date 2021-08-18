@@ -4,19 +4,30 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # SamSim MODEL DOCUMENTATION {#app:second-appendix}
 
-SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in (link to the LRP pbranch). 
+SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in [project github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). The following text decribes the model equations and loops. 
 
-
-
-------------------------------------------------
-index notation     definition
------------------- ----------------------------- 
-y                  year
-                     
-j                  age
-                   
-k                  Conservation Unit (CU)
------------------- -----------------------------
+<!----> 
+\begin{table}[ht]
+\begin{tabular}{ll}
+\hline
+Notation & definition \\ 
+\hline
+$y$ & year \\ 
+$j$ & age \\
+$k$ & Conservation Unit (CU)\\
+$S_{y,k}$ & Spawners \\
+$RY_{y,k}$ & Calendar Year Recruits \\
+$Ra_{y,k,j}$ & Age specific calendar year Recruits \\
+$RBY_{y,k}$ & Total Brood Year Recruits \\
+$C_{y,k}$ & Catch \\
+$ER_{y,k}$ & Exploitation rate \\
+$\alpha_{k}$ & Ricker productivity parameter\\
+$\beta_{k}$ & Ricker carrying capacity inverse\\ 
+$sig_{k}$ & Recruitment model standard deviation\\
+$w_{y,k}$ & Recruitment deviations\\
+\hline
+\end{tabular}
+\end{table}
 
 
 
@@ -30,27 +41,69 @@ Need to ask: where is the function that reads in the data. Maybe called by gener
 
 ### Initialization 
 
-The initialization phase includes only past data and is used to represent real and observed abundances to prime the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with set parameters if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners, Recruits and Catch.  
+The initialization phase includes only past data and is used to represent real and observed abundances to prime the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with set parameters if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners, Recruits, Catch and Exploitation Rate.  
  
 Priming loop - starts at line 779
 
 #### Available recruitment data
 
-If spawner recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The recruitment data is then populated
+If spawner recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
 
 
 
-Spawners
-recruits
-catchAg
 
 #### No Recruitment data
 
-When Recruitment data is not available, the 'nPrime' is set to 10x the maximum age of recruits. 
+When Recruitment data is not available, the 'nPrime' is set to 10x the maximum age of recruits. The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
 
-Describe Genericrecoverysim
+\begin{align}
+  S_{y<=6,k} &= \frac{\alpha_{k}}{\beta_{k}} \\
+  S_{y>6,k} &= RY_{y,k} \cdot (1- ER_{y,k})
+  (\#eq:Seqinit)
+\end{align}
 
 
+Random variability is added to the age structure of the population following a multivariate logistic error multivariate logistic error. The age structure error can vary or be held constant among CUs. 
+<!-- cite (Schnute and Richards 1995, eqns.S.9 and S.10) --> 
+
+Three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with a survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. The error structure follows a Multivariate t distibution, with mean 0, covariance matrix provided by the user and 1000 degrees of freedom, i.e., approaching a multivariate normal distribution (equation \@ref(eq:CUautocorr)). The parameters for the recruitment curve are unique for each CU and are specified by the user. Parameters can be fixed for all simulation trials or sampled from a posterior distribution. 
+
+\begin{align}
+  RBY_{y,k} &= S \cdot e^{\alpha{k} - \beta{k} \cdot S + w_{y,k} - \frac{sig_{k}^{2}}{2}}\\
+  w_{y=1,k} &= 0 * \rho + v_{y,k} \\
+  w_{y>1,k} &= w_{y-1,k} * \rho + v_{y,k} 
+  (\#eq:Rickersimple)
+\end{align}
+
+\begin{align}
+  Ra_{y,k,j} &= Propage_{j} \cdot S \cdot e^{\alpha{k} - \beta{k} \cdot S + \gamma \cdot Surv_{y,j} + w_{y,k} - \frac{sig_{k}^{2}}{2}}\\
+  RBY_{y,k} &= \sum^{j}Ra_{y,k,j}
+  (\#eq:Rickersurv)
+\end{align}
+
+\begin{equation}
+  v_{y,k} \sim Multivariate t(\mu=0,covMat,df=1000)
+  (\#eq:CUautocorr)
+\end{equation}
+
+
+For the Ricker model with the survival covariate, the covariates for each year are generated following a normal distribution with user defined mean and variance. having a hard time here-- need help to write out the generation of the survival variable -- lags are confusing, also , why is survival covariate set to 0 for recruitment older than age 4?  
+
+\begin{align}
+  Surv_{y<3,j} &\sim N(\mu_{Surv},\sigma_{Surv})\\ 
+  Surv_{y>=3,j} &\sim N(\mu_{Surv},\sigma_{Surv})
+  (\#eq:surv)
+\end{align}
+
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_eq$, but the scalar can be modified by the user via the `CapScalar` variable (equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshhold, then Recruitment is set to zero.  
+
+\begin{align}
+  S_{eq} &= \alpha_{k}/\beta_{k}\\
+  RBY_{y,k} &= min(RBY_{y,k} , CapScalar \cdot \frac{\alpha_{k}}{\beta_{k}})
+  (\#eq:reccapscalar)
+\end{align}
+
+In the priming loop, the management benchmarks are only calculated in the last two generations, 
 
 Generic recovery simulator loops 1 and 2
 

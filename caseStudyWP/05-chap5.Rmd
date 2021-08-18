@@ -277,7 +277,7 @@ Comparing scenarios 5 and 6 (6 drops two CUs completely), including the two CUs 
 
 ```{r chum-LRP-compare, fig.cap="Historical evaluation of status using available methods for estimating LRP", echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
-knitr::include_graphics(here::here('figure/chum-compare-LRP-methods.png'))
+knitr::include_graphics(here::here('caseStudyWP/figure/chum-compare-LRP-methods.png'))
 ```
 
 
