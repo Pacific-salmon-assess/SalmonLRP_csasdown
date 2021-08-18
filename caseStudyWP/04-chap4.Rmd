@@ -13,7 +13,7 @@ The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@ho
 
 
 ```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs, and inlets.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-map.png"))
+knitr::include_graphics("figure/chinook-map.png")
 ```
 <!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat-->
 
@@ -83,7 +83,7 @@ Spawner abundances were provided for 20 WCVI indicators stocks, (D. Dosbon and D
 
 ```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by indicator stock. Dark blue time-series are indicator stocks with Proportionate Natural Index (PNI) values <= 0.5; light blue time-series are indicator stocks with PNI < 0.5, i.e., are highly enhanced.",  warning=FALSE, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-IndicatorTimeSeries.png"))
+knitr::include_graphics("figure/chinook-IndicatorTimeSeries.png")
 ```
 
 
@@ -152,7 +152,7 @@ csasdown::csas_table(bench, booktabs = T, caption = "Benchmarks and boostrapped 
 
 ```{r chinook-InletTimeSeries, fig.cap="Time-series of spawner abundances by inlet, including only indicators stocks that are not highly enhanced. Horizontal blue and green lines are Sgen and SREP, respectively. Uncertainty intervals (5th and 95th precentiles) are shown in shaded areas.",  warning=FALSE, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-WCVI-inlet-timeseries-nEnh-bs.png"))
+knitr::include_graphics("figure/chinook-WCVI-inlet-timeseries-nEnh-bs.png")
 
 ```
 
@@ -253,7 +253,7 @@ Pairwise correlations between observed inlet-specific spawner time-series were r
 
 ```{r chinook-RunningCorrelations, echo=FALSE, fig.cap = "Running correlations in spawner abundances among inlets in 20-year time periods, with the start year of the 20-year period on the X-axis. Each boxplot shows the distribution of pairwise correlations among the 5 inlets (n=10 pairwise correlations).", out.width = '60%'}
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-RunningCorrelations.png"))
+knitr::include_graphics("figure/chinook-RunningCorrelations.png")
 ```
 
 
@@ -373,7 +373,7 @@ In the forward projections, pairwise correlations in projected spawner abundance
 # knitr::include_graphics(here::here("figure/chinook-compareEscCor-cvER.png"))
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-cvER.png', './figure/chinook-compareEscCor-cvER.png',  mode="wb")
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-compareEscCor-cvER.png"))
+knitr::include_graphics("figure/chinook-compareEscCor-cvER.png")
 
 # Consider adding another run with annualcvER=FALSE (cvER =0.21) in Appendix
 ```
@@ -386,7 +386,7 @@ We parameterized correlations in recruitment residuals among inlets from the cor
 ```{r chinook-bubbleCor, echo=FALSE, fig.cap=" Bubble plot of correlations in spawner abundances among inlets over time, 1994-2020.", out.width = '40%'}
 
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-SpawnerCorrelation.png"))
+knitr::include_graphics("figure/chinook-SpawnerCorrelation.png")
 
 
 ```
@@ -397,7 +397,7 @@ When we assumed correlations in recruitment residuals equal to observed spawner 
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-recCorSca.png', './figure/chinook-compareEscCor-recCorSca.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-compareEscCor-recCorSca.png"))
+knitr::include_graphics("figure/chinook-compareEscCor-recCorSca.png")
 
 
 ```
@@ -433,7 +433,7 @@ We ran a sensitivity analysis under an alternative assumption that age proportio
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor-Ages.png', './figure/chinook-compareEscCor-Ages.png',  mode="wb")
 
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-compareEscCor-Ages.png"))
+knitr::include_graphics("figure/chinook-compareEscCor-Ages.png")
 
 ```
 
@@ -445,7 +445,7 @@ Projection-based LRPs were developed under the base-case assumptions of (1) inte
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/baseER-ProjLRPCurve-ALLp.png', './figure/chinook-baseER-ProjLRPCurve-ALLp.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-baseER-ProjLRPCurve-ALLp.png"))
+knitr::include_graphics("figure/chinook-baseER-ProjLRPCurve-ALLp.png")
 
 ```
 
@@ -455,7 +455,7 @@ We considered sensitivity analyses on interannual variability in exploitation ra
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/cvER-ProjLRPCurve-ALLp.png', './figure/chinook-cvER-ProjLRPCurve-ALLp.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-cvER-ProjLRPCurve-ALLp.png"))
+knitr::include_graphics("figure/chinook-cvER-ProjLRPCurve-ALLp.png")
 
 ```
 
@@ -465,7 +465,7 @@ These LRPs were derived under the assumption of current exploitation of 30% with
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERs-ProjLRPCurve-ALLp.png', './figure/chinook-ERs-ProjLRPCurve-ALLp.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-ERs-ProjLRPCurve-ALLp.png"))
+knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 
 ```
 
@@ -473,7 +473,7 @@ For the base case parameters, the candidate projection-based LRPs were compared 
 
 ```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green).", out.width = '60%'}
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-WCVI-SMUtimeseries.png"))
+knitr::include_graphics("figure/chinook-WCVI-SMUtimeseries.png")
 
 ```
 
@@ -488,7 +488,7 @@ As expected, projection-based LRPs tend to increase under low productivity and a
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/Alphas-ProjLRPCurve-ALLp.png', './figure/chinook-Alphas-ProjLRPCurve-ALLp.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-Alphas-ProjLRPCurve-ALLp.png"))
+knitr::include_graphics("figure/chinook-Alphas-ProjLRPCurve-ALLp.png")
 
 ```
 
@@ -501,7 +501,7 @@ We evaluated status of WCVI Chinook using LRPs estimated using the proportion of
 
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/statusPlot-withBars2020.png', './figure/chinook-statusPlot-withBars2020.png',  mode="wb")
 
-knitr::include_graphics(here::here("caseStudyWP/figure/chinook-statusPlot-withBars2020.png"))
+knitr::include_graphics("figure/chinook-statusPlot-withBars2020.png")
 
 ```
 
