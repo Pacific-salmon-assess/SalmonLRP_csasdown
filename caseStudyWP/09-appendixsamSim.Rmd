@@ -2,12 +2,13 @@
 After that, all subsequent sections will be turned into appendices. -->
 
 
-# SamSim MODEL DOCUMENTATION {#app:second-appendix}
+# SamSim MODEL DOCUMENTATION {#app:third-appendix}
 
-SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in [project github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). The following text decribes the model equations and loops. 
+SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). The following text decribes the model equations and phases. The model indexes and quantities are defined in table XX and input parameters used for the Interior Fraser Coho study case are listed in table XX. Detailed definitions of the model parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme) 
 
 <!----> 
 \begin{table}[ht]
+\caption{List of samSim model indexes and variables.}
 \begin{tabular}{ll}
 \hline
 Notation & definition \\ 
@@ -17,21 +18,38 @@ $j$ & age \\
 $k$ & Conservation Unit (CU)\\
 $S_{y,k}$ & Spawners \\
 $RY_{y,k}$ & Calendar Year Recruits \\
-$Ra_{y,k,j}$ & Age specific calendar year Recruits \\
-$RBY_{y,k}$ & Total Brood Year Recruits \\
+$Ra_{y,k,j}$ & Age specific brood year Recruits \\
+$RBY_{y,k}$ & Total brood year Recruits \\
 $C_{y,k}$ & Catch \\
 $ER_{y,k}$ & Exploitation rate \\
 $\alpha_{k}$ & Ricker productivity parameter\\
 $\beta_{k}$ & Ricker carrying capacity inverse\\ 
-$sig_{k}$ & Recruitment model standard deviation\\
+$\sigma_{k}$ & Recruitment model standard deviation\\
 $w_{y,k}$ & Recruitment deviations\\
 \hline
 \end{tabular}
 \end{table}
 
 
+\begin{table}[ht]
+<!--
+\caption{List of samSim model parameters and values used for the Interior Fraser study case.}
+--> 
+\begin{tabular}{l p{4cm} p{3cm} l}
+\hline
+Notation & definition & data input name & value \\ 
+\hline
+$\alpha_{k}$ & Ricker productivity parameter & alpha & mcmc sample\\
+$\beta_{k}$ & Ricker carrying capacity inverse & beta & mcmc sample\\ 
+$\sigma_{k}$ & Recruitment model standard deviation & alpha & mcmc sample\\
+$\gamma_{k}$ & Recruitment model standard deviation & alpha & mcmc sample\\
+$RSc$ & Scalar used to cap High recruitment values & CapScalar &3\\
+$\rho$ & temporal autocorrealtion coefficient & rho & 0\\
+\hline
+\end{tabular}
+\end{table}
 
-SamSim is a CU based model
+
 
 ### Data entry
 
@@ -76,7 +94,7 @@ Three versions of the recruitment curve are available: A simple Ricker curve (eq
 \end{align}
 
 \begin{align}
-  Ra_{y,k,j} &= Propage_{j} \cdot S \cdot e^{\alpha{k} - \beta{k} \cdot S + \gamma \cdot Surv_{y,j} + w_{y,k} - \frac{sig_{k}^{2}}{2}}\\
+  Ra_{y,k,j} &= Propage_{j} \cdot S \cdot e^{\alpha{k} - \beta{k} \cdot S + \gamma_{k} \cdot Surv_{y,j} + w_{y,k} - \frac{\sigma_{k}^{2}}{2}}\\
   RBY_{y,k} &= \sum^{j}Ra_{y,k,j}
   (\#eq:Rickersurv)
 \end{align}
@@ -87,7 +105,7 @@ Three versions of the recruitment curve are available: A simple Ricker curve (eq
 \end{equation}
 
 
-For the Ricker model with the survival covariate, the covariates for each year are generated following a normal distribution with user defined mean and variance. having a hard time here-- need help to write out the generation of the survival variable -- lags are confusing, also , why is survival covariate set to 0 for recruitment older than age 4?  
+For the Ricker model with the survival covariate, the covariates for each year are generated following a normal distribution with user defined mean and variance. \textcolor{red}{having a hard time here-- need help to write out the generation of the survival variable -- lags are confusing, also , why is survival covariate set to 0 for recruitment older than age 4?}  
 
 \begin{align}
   Surv_{y<3,j} &\sim N(\mu_{Surv},\sigma_{Surv})\\ 
@@ -99,11 +117,31 @@ Recruitment estimates produced for either formulation of the Ricker model are ca
 
 \begin{align}
   S_{eq} &= \alpha_{k}/\beta_{k}\\
-  RBY_{y,k} &= min(RBY_{y,k} , CapScalar \cdot \frac{\alpha_{k}}{\beta_{k}})
+  RBY_{y,k} &= min(RBY_{y,k} , RSc \cdot \frac{\alpha_{k}}{\beta_{k}})
   (\#eq:reccapscalar)
 \end{align}
 
-In the priming loop, the management benchmarks are only calculated in the last two generations, 
+In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". The "stockRecruit" option is used for the Interior Fraser Coho study case. 
+If the "stockRecruit" option is used with the Ricker recruitment functions, then $S_msy$ and $S_{gen}$ are calculated. \textcolor{red}{ What is the reference for the $S_{MSY}$ calculation Ricker? I am not familiar with the  lambert_W0() function, I may need a bit of help explaining it). Also for the Rickersurv, why is $Survinit_{k} used, and not $Surv_{y,j}$. }. $S_{gen}$ is estimated by solving (equation \@ref(eq:Sgen)) numerically, as described by @holt_indicators_2009. 
+
+
+
+\begin{align}
+  S_{MSY} &= (1 - lambertW(e^{1-\alpha_{k}}))/\beta_{k}
+  (\#eq:smsy)
+\end{align}
+
+\begin{align}
+  S_{MSY} &= (1 - lambertW(e^{1-\alpha^\prime_{k}}))/\beta_{k}\\
+  \alpha^\prime_{k} &= \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k})
+  (\#eq:smsy)
+\end{align}
+
+
+\begin{align}
+  S_{MSY} &= S_{gen} \cdot e^{\alpha_{k}\cdot (1-S_{gen}/\beta_{k})} \\
+  (\#eq:Sgen)
+\end{align}
 
 Generic recovery simulator loops 1 and 2
 
