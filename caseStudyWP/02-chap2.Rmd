@@ -36,7 +36,7 @@ knitr::include_graphics("figure/decision_tree.png")
 ```
 
 
-## AGGREGATE ABUDNANCE-BASED LRPS
+## AGGREGATE ABUNDANCE-BASED LRPS
 
 Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks.  
 
