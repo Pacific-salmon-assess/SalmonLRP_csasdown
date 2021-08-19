@@ -84,7 +84,7 @@ When Recruitment data is not available, the 'nPrime' is set to 10x the maximum a
 Random variability is added to the age structure of the population following a multivariate logistic error multivariate logistic error. The age structure error can vary or be held constant among CUs. 
 <!-- cite (Schnute and Richards 1995, eqns.S.9 and S.10) --> 
 
-Three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with a survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. The error structure follows a Multivariate t distibution, with mean 0, covariance matrix provided by the user and 1000 degrees of freedom, i.e., approaching a multivariate normal distribution (equation \@ref(eq:CUautocorr)). The parameters for the recruitment curve are unique for each CU and are specified by the user. Parameters can be fixed for all simulation trials or sampled from a posterior distribution. 
+Three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. The error structure follows a Multivariate t distibution, with mean 0, covariance matrix provided by the user and 1000 degrees of freedom, i.e., approaching a multivariate normal distribution (equation \@ref(eq:CUautocorr)). The parameters for the recruitment curve are unique for each CU and are specified by the user. Parameters can be fixed for all simulation trials or sampled from a posterior distribution. 
 
 \begin{align}
   RBY_{y,k} &= S \cdot e^{\alpha{k} - \beta{k} \cdot S + w_{y,k} - \frac{sig_{k}^{2}}{2}}\\
@@ -105,15 +105,29 @@ Three versions of the recruitment curve are available: A simple Ricker curve (eq
 \end{equation}
 
 
-For the Ricker model with the survival covariate, the covariates for each year are generated following a normal distribution with user defined mean and variance. \textcolor{red}{having a hard time here-- need help to write out the generation of the survival variable -- lags are confusing, also , why is survival covariate set to 0 for recruitment older than age 4?}  
-
+For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (equation \@ref(eq:survCY)). The brood year survival covariate is currently populated following the dominant life history types from Interior Fraser Coho. Fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (ref diagram and equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied.
+ 
 \begin{align}
-  Surv_{y<3,j} &\sim N(\mu_{Surv},\sigma_{Surv})\\ 
-  Surv_{y>=3,j} &\sim N(\mu_{Surv},\sigma_{Surv})
-  (\#eq:surv)
+  SurvCY_{y} &\sim N(\mu_{Surv},\sigma_{Surv})
+  (\#eq:survCY)
 \end{align}
 
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_eq$, but the scalar can be modified by the user via the `CapScalar` variable (equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshhold, then Recruitment is set to zero.  
+\begin{align}
+Surv_{y,j} = 
+\begin{cases}
+ SurvCY_{y-1} & \text{if} j\leq 3 \\
+ SurvCY_{y} & \text{otherwise}
+\end{cases}
+ (\#eq:surv)
+\end{align}
+
+
+```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
+```
+
+
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_eq$, but the scalar can be modified by the user via the $RSc$ variable (equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshhold, then Recruitment is set to zero.  
 
 \begin{align}
   S_{eq} &= \alpha_{k}/\beta_{k}\\
@@ -132,14 +146,14 @@ If the "stockRecruit" option is used with the Ricker recruitment functions, then
 \end{align}
 
 \begin{align}
-  S_{MSY} &= (1 - lambertW(e^{1-\alpha^\prime_{k}}))/\beta_{k}\\
-  \alpha^\prime_{k} &= \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k})
+  S_{MSY} &= (1 - lambertW(e^{1-{\alpha_{k}}^\prime}))/\beta_{k}\\
+  {\alpha_{k}}^\prime &= \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k})
   (\#eq:smsy)
 \end{align}
 
 
 \begin{align}
-  S_{MSY} &= S_{gen} \cdot e^{\alpha_{k}\cdot (1-S_{gen}/\beta_{k})} \\
+  S_{MSY} &= S_{gen} \cdot e^{\alpha_{k}\cdot (1-S_{gen}/\beta_{k})} 
   (\#eq:Sgen)
 \end{align}
 
