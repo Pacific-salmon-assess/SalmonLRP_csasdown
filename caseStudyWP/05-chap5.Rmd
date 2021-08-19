@@ -15,7 +15,7 @@ The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs 
 
 The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). 60% of observations (spawners for an individual stream, in a given year) were missing and needed to be infilled. In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruit data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertin_marine_2017).
 
-As a result, benchmarks are calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks) instead of spawner recruit relationships. Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holt_evaluating_2018). In other cases, percentile benchmarks may be inappropriate because they do not account for shifting baselines (@holt_evaluating_2018).
+Benchmarks based on spawner recruit relationships are unreliable due to the uncertainty in spawner and recruit data. One alternative is benchmarks calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks. Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holt_evaluating_2018). In other cases, percentile benchmarks may be inappropriate due to low productivity, high harvest, and because they do not account for shifting baselines (@holt_evaluating_2018).
 
 We chose ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. Additional unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations.
 
@@ -25,7 +25,7 @@ knitr::include_graphics("figure/chum-map.png")
 
 ## DATA
 
-We used the same data used in @holt_evaluating_2018, but updated with escapement data to 2018. @van_will_inner_2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix A.
+We used the same data used in @holt_evaluating_2018, but updated to 2018. @van_will_inner_2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study and described below. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix A.
 
 ## METHODS
 
@@ -35,50 +35,13 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
 <!-- K.H. comment: Have we checked with Pieter on whether he is ok with Chum data being publically accessible on github?  We should make sure we have approval from him via email.
 -->
 
-
 ### Determining the Status of Conservation Units
-
-#### Abundance-Based Benchmarks
-
-Abundance-based benchmarks based on percentiles have been used for SC Chum before.The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters for Inside South Coast Chum, using retrospective and simulation analyses. @holt_evaluating_2018 also calculated benchmarks based on stock-recruit model parameters for some SC Chum stocks, but did not recommend them due to uncertainty in spawner recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$. 
-
-```{r holt-tab6, fig.cap="Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From @holt_evaluating_2018.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/holt_et_al_2018_table6.png")
-```
-
-@holt_evaluating_2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (table \@ref(tab:holt-tab6)). Based on these recommendations , Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ perecntile as a lower benchmark (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight Productivity ($\alpha$ between 1.5-2.5 and harvest rate 0-20%) get a 50^th^ percentile lower benchmark. Bute Inlet (($\alpha$ between 1.5-2.5, harvest rate 20-40%: further evaluation required, percentiles not recommended. Southern Coastal Streams ($\alpha$ <1.5) area also further evaluation required, percentiles not recommended. 
-
-We used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
-
-There are some assumptions and limitations when using benchmarks based on percentiles of abundance. These include:
-
-- Shifting baselines within period of data (e.g., Southern Coastal Streams)
-- Shifting baselines (higher baseline before period of data)
-- Assumes productivity (recruits/spawner) stationary
-- record only starts with data 
-- Accounting for fishing mortality? percentile of recruits vs. escapement
-
-*\textcolor{cyan}{LW: some of this is probably too much detail, but I am keeping track of my thoughts here for now}*
-
-<!-- K.H. comment: I agree that this section should be shortened.  I suggest describing the method and citing a couple papers that have previously used it, and then including a couple sentences that highlight major assumptions that may not be appropriate. A more detailed discussion of these caveats / assumption can then be added to the Chapter 5 discussion -->
-
-Estimating benchmarks for salmon populations without a long time series and without data on productivity (only escapement, no recruits/smolt production) is challenging. Previous evaluations of Inside South Coast chum population status used a 25% benchmark (@hilborn_british_2012). This was based on previous work by the Alaska Department of Fish and Game that defined four tiers of populations based on conrast in spawner abunances, harvest rate, and precision of escapement data (@bue_escapement_2001, @otis_escapement_2004). The goal of these tiers was to choose a Sustainable Escapement Goal (an upper and lower percentile) to use as a goal for escapement to "represents a proxy for maintaining escapements within a range that encompasses $S_{MSY}$" (@clark_evaluation_2014). These SEGs were calculated for each major river/system and are still done that way now in Alaska (@mckinley_review_2020). Tier 1 of this method was for high escapement contrast (greater than 8) and at least moderate harvest rate, with a SEG of 25th to 75th percentiles. @bue_escapement_2001 assessed this method on "11 selected stocks. The specific stocks examined were 2 sockeye salmon and 2 Chinook salmon stocks from Upper Cook Inlet, and 7 sockeye salmon stocks from Bristol Bay (in @clark_evaluation_2014). @clark_evaluation_2014 tested the suitability of this 4 tier percentile approach by applying a theoretical, simulation, and meta-analysis on "76 stock-recruitment data sets from throughout Alaska using a standard linear regression approach. These data included historical stock-recruitment observations for 7 pink salmon, 7 coho salmon, 43 sockeye salmon, 6 chum salmon stocks, and 13 Chinook salmon stocks". They recommended a revised 3 tier system, which changed the Tier 1 lower perecntile to 20%. @hilborn_british_2012 adopted the previous 25% lower limit of SEG as a benchmark for evaluating the status of Inside South Coast Chum in BC for the purpose of certification with the Marine Stewardship Council (@hilborn_british_2012), despite it lack of testing for populations of chum salmon in British Columbia. Further, SEGs were and still are applied to individual rivers in Alaska, compared to the application of this method to entire CUs, which, for ISC Chum, which has 296 streams among the seven CUs, with 126 in Strait of Georgia alone. By aggregating spawners and recruits across many rivers before estimating benchmarks of percentile or stock-recruit parameters, the following problems may arise:
-
-- Error in fitting stock-recruit curves because it is at aggregate level instead of by river
-- Sum of $S_{gen}$ calculated for individual rivers may not equal $S_{gen}$ calculated using aggregated spawner and recruit data
-- Non-stationarity of productivity in individual systems may be hidden by aggregating spawners and recruits
-- Spawner abundance at CU level may not be a good predictor of status of individual rivers compared to SEGs at the river scale (similar to the problem of SMU aggregate LRP logistic regression), depending on the contrast in size between rivers and the correlation (or lack) in escapement and/or productivity
-
-In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment (e.g., trends, distribution of abundance; @holt_indicators_2009)). At this time, an integrated status assessment has not been developed for ISC chum.
-
-
 
 For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (State of the Salmon program; still in development).  *\textcolor{cyan}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}*
 
+In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment (e.g., trends, distribution of abundance; @holt_indicators_2009)). At this time, an integrated status assessment has not been developed for ISC chum.
 
 Note assumptions of constant productivity for these methods, and include 1-2 sentences to highlight that this may be concern for SC chum (cite a few papers on competition, changes in marine environment, etc, as relevant).
-
-
 
 
 <!--
@@ -113,21 +76,35 @@ Based on the recommendations in *Guidelines Working Paper*, we used benchmarks a
 
 -->
 
+#### Abundance-Based Benchmarks
 
+Abundance-based benchmarks based on percentiles have been used for ISC Chum before. The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters for Inside South Coast Chum, using retrospective and simulation analyses. @holt_evaluating_2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$. 
 
+```{r holt-tab6, fig.cap="Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From @holt_evaluating_2018.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/holt_et_al_2018_table6.png")
+```
 
-**Multi-dimensional CU Status Assessment**
+@holt_evaluating_2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (table \@ref(tab:holt-tab6)). Based on these recommendations , Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ perecntile as a lower benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight Productivity ($\alpha$ 1.5-2.5 and harvest rate 0-20%) get a 50^th^ percentile lower benchmark. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
 
+There are some assumptions and limitations when using benchmarks based on percentiles of abundance. One of the largest is the influence of shifting baselines on percentile benchamrks. If abundance has decreased over time, the resulting percentile benchmark will also decrease over time as more data is included. This means that the benchmark shifts downward, reinforcing a shifting baseline. A population size that used to be below the benchmark can become above the benchmark, as the benchmark decreases. This can arise from a decrease in abundance in the period of data, and by an unrecorded high level of abundance before the period of data followed by a decrease before data are available. The idea of percentile benchmarks also assumes productivity is stationary. Otherwise, if productivity was decreasing, a larger abundance of spawners would be required to gie the same number of recruits. The percentile benchmark is also only informed by the data available, which may be for a short time period. Those using percentile benchmarks should also consider whether they are calculated using a percentile of recruits or escapement (recruits minus harvest).
 
+*\textcolor{cyan}{LW: some of this is probably too much detail, but I am keeping track of my thoughts here for now}*
 
+<!-- K.H. comment: I agree that this section should be shortened.  I suggest describing the method and citing a couple papers that have previously used it, and then including a couple sentences that highlight major assumptions that may not be appropriate. A more detailed discussion of these caveats / assumption can then be added to the Chapter 5 discussion -->
 
+Estimating benchmarks for salmon populations without a long time series and without data on productivity (only escapement, no recruits/smolt production) is challenging. Previous evaluations of Inside South Coast chum population status used a 25% benchmark (@hilborn_british_2012). This was based on previous work by the Alaska Department of Fish and Game that defined four tiers of populations based on conrast in spawner abunances, harvest rate, and precision of escapement data (@bue_escapement_2001, @otis_escapement_2004). The goal of these tiers was to choose a Sustainable Escapement Goal (an upper and lower percentile) to use as a goal for escapement to represent a proxy for keeping escapement within a range that includes $S_{MSY}$ (@clark_evaluation_2014). These SEGs were calculated for each major river/system and are still done that way now in Alaska (@mckinley_review_2020). Tier 1 of this method was for high escapement contrast (greater than 8) and at least moderate harvest rate, with a SEG of 25th to 75th percentiles. @bue_escapement_2001 assessed this method on 11 populations of sockeye salmon and Chinook salmon from Upper Cook Inlet and Bristol Bay (in @clark_evaluation_2014). @clark_evaluation_2014 tested the suitability of this 4 tier percentile approach with theoretical, simulation, and meta-analysis methods using 76 stock-recruitment data sets from Alaska (7 pink salmon, 7 coho salmon, 43 sockeye salmon, 6 chum salmon, and 13 Chinook salmon populations. They recommended a revised 3 tier system, which changed the Tier 1 lower perecntile to 20%. Moving to British COlumbia, @hilborn_british_2012 adopted the previous 25% lower limit of SEG as a benchmark for evaluating the status of Inside South Coast Chum in BC for the purpose of certification with the Marine Stewardship Council (@hilborn_british_2012), despite it lack of testing for populations of chum salmon in British Columbia. Further, SEGs were and still are applied to individual rivers in Alaska, compared to the application of this method to entire CUs, which, for ISC Chum, which has 296 streams among the seven CUs, with 126 in Strait of Georgia alone. By aggregating spawners and recruits across many rivers before estimating benchmarks of percentile or stock-recruit parameters, the following problems may arise:
+
+- Error in fitting stock-recruit curves because it is at aggregate level instead of by river
+- Sum of $S_{gen}$ calculated for individual rivers may not equal $S_{gen}$ calculated using aggregated spawner and recruit data
+- Non-stationarity of productivity in individual systems may be hidden by aggregating spawners and recruits
+- Spawner abundance at CU level may not be a good predictor of status of individual rivers compared to SEGs at the river scale, depending on the contrast in size between rivers and the correlation (or lack thereof) in escapement and/or productivity
 
 <!--
 K.Holt: I have commented out this section (Benchmark based on stock-recruit relationships - $S_{gen}) for now as I do not think we are using Sgen to calculate LRPs.If we do not evaluate LRPs based on Sgen, but still need to describe SR modelling for Sgen as it is used to estimate productivity for the percentile methods, we may wish to describe the SR modelling and results in an appendix?  In this case, we would not however need to estimate Smsy or Sgen.  Just ricker pars.
 
 
 
-**Benchmark based on stock-recruit relationships - $S_{gen}$**
+#### Benchmark based on stock-recruit relationships - $S_{gen}$
 
 For Inside South Coast chum, there are no reliable data on marine survival for wild fish, and no proxies based on coded wire tag or age at return of hatchery chum in this SMU. This meant that the Ricker model used to estimate the spawner-recruit relationship did not account for variation in marine survival (compared to Interior Fraser Coho). 
 
@@ -185,9 +162,16 @@ Caveats with benchmarks based on $S_{gen}$ or stock-recruit parameters:
 
 --> 
 
+
+####Multi-dimensional CU Status Assessment
+
+The methods for applying the multi-dimensional status assessment for CU status is described in Chapter 2. 
+
+In applying the synoptic status assessment to ISC Chum, we used the percentile benchmarks as recommended in @holt_evaluating_2018 for absolute abundance benchmarks, instead of the default of 1000 fish as a lower benchmark and 10000 for the upper benchmark. 
+
 ### LRP Estimation for ISC-NF Chum
 
-#### LRPs Based on Proportion of Component CUs
+#### LRPs Based on Proportion of Component CUs Above Lower Benchmarks
 
 A simple method to set a LRP for a group of CUs is to set the LRP trigger as being a certain proportion of component CUs as being in the red zone. For example, for ISC chum (7 CUs), the LRP could be defined as being breached when one CU is in the red zone. For this case study, we set this as the rule - if any CUs entered the red zone, the SMU was considered to be below the LRP. 
 
@@ -205,54 +189,19 @@ csasdown::csas_table(d[1:6,1:8],
 
 #### LRPs Based on Logistic Regression
 
-We evaluated two methods for developing LRPs based on aggregate abundance for Inside South Coast Chum.
-
-<!-- K.Holt comment: I have copy and pasted the following text to the guidance working paper. This paper will include a section about when aggregate-abundance based benchmarks may be considered: 
-The goal of these methods was to explore whether the status of component CUs could be predicted well by the aggregate abundance of the whole SMU. The motivation behind this approach is that many SMUs are not monitored at the CU level. If the aggregate abundance of the SMU could predict the status of component CUs, then an LRP that is measured in aggregate SMU abundance could be reliably used. 
-
---> 
+We evaluated two methods for developing LRPs based on aggregate abundance for Inside South Coast Chum. The first approach uses $S_{gen}$ as a benchmark, which is derived from the parameters of the Ricker model of recruitment. The second approach uses a percentile of past spawner abundance as a benchmark.
 
 These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis). Both approaches attempted to estimate LRPs by fitting logistic regression models to historically observed data. The two methods differ in what method was used to assess CU-level benchmarks.
 
-The first approach uses $S_{gen}$ as a benchmark, which is derived from the parameters of the Ricker model of recruitment.
-
-The second approach uses a percentile of past spawner abundance as a benchmark. 
-
 These methods were applied retrospectively. For a series of years up to the most recent, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected.
 
-Due to poor logistic model fits using the entire 19xx - 2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logsitic model fits are highlighted in the results section below.
-
-
-
-
-
-
-<!-- K.Holt: I have moved the more generic methods text that was here up to the multi-dimensional section of Chapter 2 of the case study paper.  This section in the chum chpater should focus specifically on the methods used to apply the multi-dimensional framework to chum. 
-
-#### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
-
--->
-
-<!-- K.Holt: I have commented out the following sections bc I don't thing they warrant their own headers. Also - I don't think we'll show Binomial regression results at all in this paper, so I don't think we need the "regression forms" header. 
-
-
-### Regression forms
-
-Regression forms are described in [Chapter 2][LOGISTIC REGRESSION LRPS]
-
-We tested Bernoulli and Binomial regression forms. Because LRPs based on Binomial regressions are highly sensitive to which proportion of CUs above their benhcmark is chosed (e.g., 0.8, 0.9, 0.95, 0.99), we chose to proceed with the Bernoulli regression, which does not have this issue.
-
-### PROJECTED LRPS (TBD)
-
-
-
---> 
+Due to poor logistic model fits using the entire 1953-2018 time series for both Sgen and percentile benchmarks, we did not conduct retrospective analyses for this SMU. The underlying data characteristics that lead to poor logistic model fits are highlighted in the results section below.
 
 ## RESULTS
 
-### LRPs Based on Status of CUs
+### LRPs Based on Proportion of CUs Above Lower Benchmarks
 
-LRP status varied for different estimation methods and subsets of the data (Figure \@ref(fig:chum-LRP-compare)). 
+We compared results of LRP status for percentile and decision tree methods, using different data sets (Table \@ref(tab:LRP-scenarios)). LRP status varied for different estimation methods and subsets of the data (Figure \@ref(fig:chum-LRP-compare)). 
 
 Comparing the scenarios 1 and 2, based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. 
 
@@ -269,6 +218,11 @@ download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/
 knitr::include_graphics('figure/chum-compare-LRP-methods.png')
 ```
 
+
+#### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
+
+- Can do this for 4 CUs with percentiles/ 5 with Sgen (***? maybe, low alpha cutoff***): 
+- plot status over time (aggregate abundance, with green/red for different methods)
 
 ### Retrospective analysis of CU benchmarks based on $S_{gen}$ and percentiles
 
@@ -306,6 +260,7 @@ Percentile approaches were not used for the other three CUs for the purpose of t
 Using this method, X out of Y CUs would be above their lower benchmark (amber or green zone) and X would be below . 
 
 (If we get the code, and do retrospective analysis, ... )
+
 
 ### LRPs based on SMU aggregate abundance and logistic models
 
@@ -422,8 +377,6 @@ Percentile:
 - Wald test: 0.97 ***Not sure how this is so high??***
 - hit rate? 0.76  ***Not sure how this is so high??***
 
-
-
 ```{r chum-logistic-sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes the 5 CUs without CU-level infilling (no Bute Inlet or Upper Knight)", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-sgen.pdf')
@@ -433,25 +386,6 @@ knitr::include_graphics('figure/chum-logistic-sgen.pdf')
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-perc.pdf')
 ```
-
-### Comparison of LRPs based on Proportion of CUs above benchmark 
-
-
-Retrospective analysis 
-Can do this for 4 CUs with percentiles: 
-plot status over time (aggregate abundance, with green/red for different methods)
-
-We compared results of LRP status for percentile and decision tree methods, using different data sets (Table \@ref(tab:LRP-scenarios)). 
-
-
-
-Comparing 
-
-#### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
-
-- Can do this for 4 CUs with percentiles/ 5 with Sgen (***? maybe, low alpha cutoff***): 
-- plot status over time (aggregate abundance, with green/red for different methods)
-
 
 ## Discussion
 
