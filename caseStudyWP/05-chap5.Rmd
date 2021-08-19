@@ -36,32 +36,21 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
 -->
 
 
-### Determining Status of Conservation Units
+### Determining the Status of Conservation Units
 
 #### Abundance-Based Benchmarks
 
-Abundance-based benchmarks based on percentiles have been used for SC Chum (@holt_evaluating_2018). @holt_evaluating_2018 calculated SR-based benchmarks for some SC Chum stocks, but did not recommend them due to uncertainty in spawner recruit data.
-
-The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters for Inside South Coast Chum, using retrospective and simulation analyses. Among other things, they tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that:
-
-- Percentile benchmarks (even 50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks are needed in this case
-- Time series bias tends to under-estimate $S_{gen}$ 
-
-@holt_evaluating_2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (table \@ref(tab:holt-tab6)).
+Abundance-based benchmarks based on percentiles have been used for SC Chum before.The suitability of the percentile method was evaluated for chum populations in BC by @holt_evaluating_2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters for Inside South Coast Chum, using retrospective and simulation analyses. @holt_evaluating_2018 also calculated benchmarks based on stock-recruit model parameters for some SC Chum stocks, but did not recommend them due to uncertainty in spawner recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate-high harvest rates and low-moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$. 
 
 ```{r holt-tab6, fig.cap="Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From @holt_evaluating_2018.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 ```
 
-- Productivity (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%: 25^th^ lower benchmark (Georgia Strait, Howe Sound Burrard Inlet)
-- Productivity ($\alpha$) between 1.5-2.5 and: 
-  - harvest rate 0-20%: 50^th^ lower benchmark (Loughborough, Northeast Vancouver Island, Upper Knight)
-  - harvest rate 20-40%: further evaluation required, percentiles not recommended (Bute Inlet)
-- Productivity ($\alpha$) <1.5: no category in @holt_evaluating_2018, assume further evaluation required, percentiles not recommended (Southern Coastal Streams)
+@holt_evaluating_2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (table \@ref(tab:holt-tab6)). Based on these recommendations , Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ perecntile as a lower benchmark (Ricker $\alpha$) between 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight Productivity ($\alpha$ between 1.5-2.5 and harvest rate 0-20%) get a 50^th^ percentile lower benchmark. Bute Inlet (($\alpha$ between 1.5-2.5, harvest rate 20-40%: further evaluation required, percentiles not recommended. Southern Coastal Streams ($\alpha$ <1.5) area also further evaluation required, percentiles not recommended. 
 
-We used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and the multidimensional approach for Bute Inlet and Southern Coastal Streams.*\textcolor{cyan}{LW: may need to revise the last three based on multi-dimensional methods}*
+We used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
 
-Caveats with benchmarks based on percentile of abundance: 
+There are some assumptions and limitations when using benchmarks based on percentiles of abundance. These include:
 
 - Shifting baselines within period of data (e.g., Southern Coastal Streams)
 - Shifting baselines (higher baseline before period of data)
