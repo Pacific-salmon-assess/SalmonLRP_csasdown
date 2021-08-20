@@ -180,6 +180,22 @@ In the priming phase, all observations are set equal to the true simulation valu
 
 ### Projections
 
+The projection phase is the phase where all scenarios and management procedures are implemented. The following description follows the order of the code implementation, therefore the subheadings in this section could be seen as pseudocode. 
+
+#### Population Dynamics submodel
+
+##### Specify alpha
+
+Samsim offers the option of presenting trends in the productivity parameter, if that is true, alpha for each CU is adjusted every year by applying a linear trend to the alpha value. The slope of this trend is defined by the input option `profRegime`. A detailed description of the productivity trends is out of the scope of this report as the study cases considered in this report do not consider any scenarios with productivity changes. As alpha is held constant throughout the projections we will continue to use the time-invariant notation for the parameter: $\alpha_{k}$. 
+
+##### Specify Management benchmarks
+
+
+#### First Observation submodel
+#### Management submodel
+#### Second Observation submodel
+#### Assessment submodel
+#### Population Dynamics submodel again
 loop 3 starts at line 1232
 
 Generic recovery simulator loop 3
