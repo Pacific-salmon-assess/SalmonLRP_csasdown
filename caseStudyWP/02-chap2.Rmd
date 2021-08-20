@@ -23,25 +23,16 @@ For SMUs in which CU-level abundance relative to abundance-based lower benchmark
 
 ### Proportion of CUs with multidimensional status > lower benchmark 
 
-
-*To be added by Luke*
-
-* Will need to highlight that expert opinion will be used to confirm status assessments for this approach, which is not done in case study applications*
-
-<!-- K.Holt: have moved base description up from chum chapter to here.  Commented out for now bc not currently working
--->
-The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs. This method uses a decision tree to evaluate status based on data type, quality, abundance, and trends \@ref(fig:decision-tree) *\textcolor{cyan}{probably more here when we get the background methods}*. This work is based on Wild Salmon Policy status assessments for Fraser River sockeye (**REF**), Interior Fraser coho (**REF**), and Southern BC Chinook (**REF**).
+Canada's Policy for Conservation of Wild Pacific Salmon (Wild Salmon Policy, WSP) sets out requirements for the assessment of status of salmon CUs (@canada_canadas_2005). Peer-reviewed, integrated status assessments require large amounts of time and work. The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs more rapidly (@pestal_algorithms_2021, in prep). Using the inputs and outcomes of status assessments for Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook (**REF**), this method uses Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments. Essentially, it uses a decision tree to evaluate status based on data type, quality, abundance, and trends to assign a status to CUs (e.g., Figure \@ref(fig:decision-tree)). An expert review of these statuses is an intentional part of the process. When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion. 
 
 
-``` {r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
-source(here::here("R/make_tree_diagram.R"))
-knitr::include_graphics(here::here("figure/decision_tree.png"))
+```{r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
+source("R/make_tree_diagram.R")
+knitr::include_graphics("figure/decision_tree.png")
 ```
 
 
-
-
-## AGGREGATE ABUDNANCE-BASED LRPS
+## AGGREGATE ABUNDANCE-BASED LRPS
 
 Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks.  
 
