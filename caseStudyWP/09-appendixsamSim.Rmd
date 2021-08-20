@@ -134,7 +134,11 @@ Recruitment estimates produced for either formulation of the Ricker model are ca
   (\#eq:reccapscalar)
 \end{align}
 
-In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". If the "stockRecruit" option is used with the Ricker recruitment functions, then the $S_{MSY}$ and $S_{gen}$ management benchmarks are computed. When the model with the survival covariate is used,  the $\alpha$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks contant through time, the user inputted term $Survinit_{k}$ is used, which represents the long term average survival for the stock. $S_{MSY}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 (Equation  \@ref(eq:smsy)). $S_{gen}$ is estimated by solving (equation \@ref(eq:Sgen)) numerically, as described by @holt_indicators_2009. 
+#### Management benchmarks
+
+In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". For all three options, lower and upper benchmarks are calculated.
+
+ If the "stockRecruit" option is used with the Ricker recruitment functions, then the lower benchmak is set to  $S_{gen}$ and the upper benchmark is set to 80\% of$S_{MSY}$. When the model with the survival covariate is used, the $\alpha$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks contant through time, the user inputted term $Survinit_{k}$ is used, which represents the long term average survival for the stock. $S_{MSY}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 (Equation  \@ref(eq:smsy)). $S_{gen}$ is estimated by solving (equation \@ref(eq:Sgen)) numerically, as described by @holt_indicators_2009. 
 
 
 \begin{align}
@@ -147,29 +151,30 @@ In the priming loop, the management benchmarks are only calculated in the last t
 \end{align}
 
 \begin{align}
-  S_{MSY} &= (1 - lambertW(e^{1-\alpha_{k}}))/\beta_{k}
+  Smsy_{k} &= (1 - lambertW(e^{1-\alpha_{k}}))/\beta_{k}
   (\#eq:smsy)
 \end{align}
 
 \begin{align}
-  S_{MSY} &= (1 - lambertW(e^{1-{\alpha_{k}}^\prime}))/\beta_{k}\\
+  Smsy_{k} &= (1 - lambertW(e^{1-{\alpha_{k}}^\prime}))/\beta_{k}\\
   {\alpha_{k}}^\prime &= \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k})
   (\#eq:smsy)
 \end{align}
 
 
 \begin{align}
-  S_{MSY} &= S_{gen} \cdot e^{\alpha_{k}\cdot (1-S_{gen}/\beta_{k})} 
+  Smsy_{k} &= Sgen_{k} \cdot e^{\alpha_{k}\cdot (1-Sgen_{gen}/\beta_{k})} 
   (\#eq:Sgen)
 \end{align}
 
-Generic recovery simulator loops 1 and 2
+If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50th percentile of the historical Spawners ($S_{1:y,k}$). The lower benchmark is set to the 25th percentile $S_{1:y,k}$. 
 
+If the "habitat" benchmark option is used, the lower benchmark is set to $S_{gen}$ and the upper benchmark is set to 80\% of$S_{MSY}$.
 
-\begin{equation}
-  1 + 1 = 2
-  (\#eq:)
-\end{equation}
+#### Infilling and Observation model
+
+The last step of  the model priming is infilling. In this stage, any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period.
+In the priming phase, all observations are set equal to the true simulation values, i.e., no observation error is added. 
 
 
 
