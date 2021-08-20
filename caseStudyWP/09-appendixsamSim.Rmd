@@ -4,7 +4,8 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # SamSim MODEL DOCUMENTATION {#app:third-appendix}
 
-SamSim is the closed loop simulation model used for the Interior Fraser Coho case study. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). The following text decribes the model equations and phases. The model indexes and quantities are defined in table XX and input parameters used for the Interior Fraser Coho study case are listed in table XX. Detailed definitions of the model parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme) 
+SamSim is the closed loop simulation model used for calculation of the projection based LRPs. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). This appendix decribes the model equations relevant to the Interior Fraser coho salmon and West coast Vancouver Island chinook salmon study cases. The model indexes and quantities are defined in Table \@ref(tab:modvar) and input parameters used for the Interior Fraser Coho study case are listed in Table \@ref(tab:parval). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
+
 
 <!----> 
 \begin{table}[ht]
@@ -27,6 +28,7 @@ $\beta_{k}$ & Ricker carrying capacity inverse\\
 $\sigma_{k}$ & Recruitment model standard deviation\\
 $w_{y,k}$ & Recruitment deviations\\
 \hline
+(\#tab:modvar)
 \end{tabular}
 \end{table}
 
@@ -47,6 +49,7 @@ $RSc$ & Scalar used to cap High recruitment values & CapScalar &3\\
 $\rho$ & temporal autocorrealtion coefficient & rho & 0\\
 \hline
 \end{tabular}
+(\#tab:parval)
 \end{table}
 
 
@@ -57,20 +60,16 @@ Define data used in IF cohoPars is any of the data columns not defined?
 Need to ask: where is the function that reads in the data. Maybe called by genericrecoverySim
 
 
-### Initialization 
+### Model Priming
 
-The initialization phase includes only past data and is used to represent real and observed abundances to prime the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with set parameters if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners, Recruits, Catch and Exploitation Rate.  
- 
-Priming loop - starts at line 779
+The proming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners ($S_{y,k}$), Recruits ($RBY_{y,k}$, Catch and Exploitation Rate.  
 
-#### Available recruitment data
+#### Available Recruitment Data
 
-If spawner recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
+If spawner  ($RBY_{y,k}$recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
 
 
-
-
-#### No Recruitment data
+#### No Recruitment Data
 
 When Recruitment data is not available, the 'nPrime' is set to 10x the maximum age of recruits. The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
 
@@ -105,7 +104,7 @@ Three versions of the recruitment curve are available: A simple Ricker curve (eq
 \end{equation}
 
 
-For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (equation \@ref(eq:survCY)). The brood year survival covariate is currently populated following the dominant life history types from Interior Fraser Coho. Fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (ref diagram and equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied.
+For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The brood year survival covariate is currently populated following the dominant life history types from Interior Fraser Coho. Fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (Figure \@ref(fig:cohosurvivaldiagram) and Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied.
  
 \begin{align}
   SurvCY_{y} &\sim N(\mu_{Surv},\sigma_{Surv})
@@ -115,7 +114,7 @@ For the Ricker model with the survival covariate, the covariates for each calend
 \begin{align}
 Surv_{y,j} = 
 \begin{cases}
- SurvCY_{y-1} & \text{if} j\leq 3 \\
+ SurvCY_{y-1} & \text{if } j\leq 3 \\
  SurvCY_{y} & \text{otherwise}
 \end{cases}
  (\#eq:surv)
@@ -127,7 +126,7 @@ knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 
 
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_eq$, but the scalar can be modified by the user via the $RSc$ variable (equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshhold, then Recruitment is set to zero.  
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_eq$, but the scalar can be modified by the user via the $RSc$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshhold, then Recruitment is set to zero.  
 
 \begin{align}
   S_{eq} &= \alpha_{k}/\beta_{k}\\
@@ -135,40 +134,68 @@ Recruitment estimates produced for either formulation of the Ricker model are ca
   (\#eq:reccapscalar)
 \end{align}
 
-In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". The "stockRecruit" option is used for the Interior Fraser Coho study case. 
-If the "stockRecruit" option is used with the Ricker recruitment functions, then $S_msy$ and $S_{gen}$ are calculated. \textcolor{red}{ What is the reference for the $S_{MSY}$ calculation Ricker? I am not familiar with the  lambert_W0() function, I may need a bit of help explaining it). Also for the Rickersurv, why is $Survinit_{k} used, and not $Surv_{y,j}$. }. $S_{gen}$ is estimated by solving (equation \@ref(eq:Sgen)) numerically, as described by @holt_indicators_2009. 
+#### Management benchmarks
 
+In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". For all three options, lower and upper benchmarks are calculated.
+
+ If the "stockRecruit" option is used with the Ricker recruitment functions, then the lower benchmak is set to  $S_{gen}$ and the upper benchmark is set to 80\% of$S_{MSY}$. When the model with the survival covariate is used, the $\alpha$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks contant through time, the user inputted term $Survinit_{k}$ is used, which represents the long term average survival for the stock. $S_{MSY}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 (Equation  \@ref(eq:smsy)). $S_{gen}$ is estimated by solving (equation \@ref(eq:Sgen)) numerically, as described by @holt_indicators_2009. 
 
 
 \begin{align}
-  S_{MSY} &= (1 - lambertW(e^{1-\alpha_{k}}))/\beta_{k}
+{\alpha_{k}}^\prime &=
+\begin{cases}
+ \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k}) & \text{ Ricker with survival} \\
+  \alpha_{k}  & \text{Simple Ricker}
+\end{cases}  
+  (\#eq:alphamb)
+\end{align}
+
+\begin{align}
+  Smsy_{k} &= (1 - lambertW(e^{1-\alpha_{k}}))/\beta_{k}
   (\#eq:smsy)
 \end{align}
 
 \begin{align}
-  S_{MSY} &= (1 - lambertW(e^{1-{\alpha_{k}}^\prime}))/\beta_{k}\\
+  Smsy_{k} &= (1 - lambertW(e^{1-{\alpha_{k}}^\prime}))/\beta_{k}\\
   {\alpha_{k}}^\prime &= \alpha_{k} + \gamma_{k}\cdot log(Survinit_{k})
   (\#eq:smsy)
 \end{align}
 
 
 \begin{align}
-  S_{MSY} &= S_{gen} \cdot e^{\alpha_{k}\cdot (1-S_{gen}/\beta_{k})} 
+  Smsy_{k} &= Sgen_{k} \cdot e^{\alpha_{k}\cdot (1-Sgen_{gen}/\beta_{k})} 
   (\#eq:Sgen)
 \end{align}
 
-Generic recovery simulator loops 1 and 2
+If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50th percentile of the historical Spawners ($S_{1:y,k}$). The lower benchmark is set to the 25th percentile $S_{1:y,k}$. 
 
+If the "habitat" benchmark option is used, the lower benchmark is set to $S_{gen}$ and the upper benchmark is set to 80\% of$S_{MSY}$.
 
-\begin{equation}
-  1 + 1 = 2
-  (\#eq:)
-\end{equation}
+#### Infilling and Observation model
+
+The last step of  the model priming is infilling. In this stage, any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period.
+In the priming phase, all observations are set equal to the true simulation values, i.e., no observation error is added. 
 
 
 
 ### Projections
 
+The projection phase is the phase where all scenarios and management procedures are implemented. The following description follows the order of the code implementation, therefore the subheadings in this section could be seen as pseudocode. 
+
+#### Population Dynamics submodel
+
+##### Specify alpha
+
+Samsim offers the option of presenting trends in the productivity parameter, if that is true, alpha for each CU is adjusted every year by applying a linear trend to the alpha value. The slope of this trend is defined by the input option `profRegime`. A detailed description of the productivity trends is out of the scope of this report as the study cases considered in this report do not consider any scenarios with productivity changes. As alpha is held constant throughout the projections we will continue to use the time-invariant notation for the parameter: $\alpha_{k}$. 
+
+##### Specify Management benchmarks
+
+
+#### First Observation submodel
+#### Management submodel
+#### Second Observation submodel
+#### Assessment submodel
+#### Population Dynamics submodel again
 loop 3 starts at line 1232
 
 Generic recovery simulator loop 3
