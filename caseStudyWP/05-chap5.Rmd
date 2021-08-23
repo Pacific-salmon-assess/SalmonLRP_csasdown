@@ -179,7 +179,7 @@ We evaluated six different combinations of data and LRP estimation (table \@ref(
 
 ```{r LRP-scenarios, echo=FALSE}
 d <- read.csv("data/2021-07-23 scenarios compare CU status methods.csv")
-csasdown::csas_table(d[1:6,1:8], 
+csasdown::csas_table(d[1:6,1:9], 
    align = rep("c", 8),
    caption = #ifelse(french,
                    #"French goes here",
@@ -203,6 +203,8 @@ Due to poor logistic model fits using the entire 1953-2018 time series for both 
 
 We compared results of LRP status for percentile and decision tree methods, using different data sets (Table \@ref(tab:LRP-scenarios)). LRP status varied for different estimation methods and subsets of the data (Figure \@ref(fig:chum-LRP-compare)). 
 
+Adding more Cus/data tend to increase number of years below LRP.Scenario 5 (most data) had the most years below LRP. 
+
 Comparing the scenarios 1 and 2, based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. 
 
 Scenarios 1 and 3 (same data) show that the method used to determine CU status influences the resulting LRP. In a given year, ISC Chum were above the LRP based on percentile benchmarks but below it based on decision tree, and vice versa. 
@@ -213,16 +215,21 @@ Comparing scenarios 4 and 5 (decision tree only), including more observations re
 
 Comparing scenarios 5 and 6 (6 drops two CUs completely), including the two CUs in scenario 5 results in three years switching from above the LRP to below.
 
+Even if aggregate abundance is going up, you can still be in the red / below LRP at SMU level.
+
+(Note: not using percentile benchmarks for relative abundance benchmark for decision tree gives the same results as scenario 5 at the SMU level)
+
 ```{r chum-LRP-compare, fig.cap="Historical evaluation of status using available methods for estimating LRP", echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
 knitr::include_graphics('figure/chum-compare-LRP-methods.png')
 ```
 
-
+<!--
 #### USING MULTIDIMENSIONAL APPROACH TO ASSESS CU STATUS
 
 - Can do this for 4 CUs with percentiles/ 5 with Sgen (***? maybe, low alpha cutoff***): 
 - plot status over time (aggregate abundance, with green/red for different methods)
+-->
 
 ### Retrospective analysis of CU benchmarks based on $S_{gen}$ and percentiles
 
@@ -391,11 +398,25 @@ knitr::include_graphics('figure/chum-logistic-perc.pdf')
 
 ### Suitabiliy of aggregate abundance LRPs
 
+Did not work for ISC Chum SMU. 
+
+
+
 ### Suitability of LRP based on status of component CUs (proportion)
+
+#### Multidimensional
+
+For recovery people, uncertainty in data, recovery plan could include more monitoring if limitation in data makes LRP estimation more uncertain
+
+Application- regional biologists/ decision makers could have different CU status assessments
+
+
 
 ### Assumptions and limitations
 
-### Other sources of information to inform benchmarks
+The CUs that required CU-level infilling (Upper Knight and Bute Inlet) were not used for the retrospective analysis because the assumption that escapement is correlated between CUs ignores diversity between CUs and the potential for uncorrelated escapements. The reality of uncorrelated escapements must be taken into account to evaluate whether aggregate escapement is a meaningful predictor for the status of individual CUs. It should also be noted that these two CUs do not represent a random subset of the seven CUs in the Inside South Coast Chum SMU. Both have fewer streams than the other CUs and a higher proportion of summer-run populations of chum. These CUs also include long fjord systems with glaciers and watersheds that go deep into the mainland with headwaters in the Cariboo region. Environmental conditions including patterns of hydrology, geomorphology, and marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, leading to differences in productivity and responses to the regional climate. For example, productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality.
+
+### Other sources of information to inform LRPs / benchmarks
 
 Indigenous Knowledge
 
