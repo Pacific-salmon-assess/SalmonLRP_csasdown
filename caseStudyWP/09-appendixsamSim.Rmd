@@ -233,7 +233,7 @@ The observed recruitment by brood year is then retrieved by multiplying the true
 
 #### Management submodel
 
-In this step, the population forecast and benchmarks are calculated. Forecast error is calculated via a scaler that is generated following a lognormal distribution with mean and variance specified by the user (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). 
+In this step, the population forecast and benchmarks are calculated. Forecast error is calculated via a scaler that is generated following a truncated lognormal distribution with mean and variance specified by the user (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). 
 
 \begin{align}
   FctRY_{y,k} &= RY_{y,k} \cdot Fct{y,k}
@@ -241,19 +241,71 @@ In this step, the population forecast and benchmarks are calculated. Forecast er
 \end{align}
 
 \begin{align}
-  Fct_{y,k} \sim logN(\mu_{Fct},\sigma_{Fct})
+  Fct_{y,k} \sim logN(\mu_{Fct},\sigma_{Fct},0.0001,0.9999)
   (\#eq:Fct)
 \end{align}
 
 The recruitment forecast and true recruitment are then aggregated at the management unit level (Equation \@ref(eq:MUagg)) and 
 
 \begin{align}
-  RYMU_{y,k} &= \sum^{k \in MU} $RY_{y,k}\\
+  RYMU_{y,MU} &= \sum^{k \in MU} RY_{y,k}\\
+  FctRYMU_{y,MU} &= \sum^{k \in MU} FctRY_{y,k}
+  (\#eq:MUagg)
+\end{align}
+
+The next step is to calculate the allowable catch following a harvest control rule. Both study cases in this report  use the `fixedER` option for the harvest control rule. In this option, the user defines fixed exploitation rates for Canada an the USA. Random variability following the beta distribution is applied to the Canadian exploitation rates in two ways: an annual deviation in overall ER and a CU-specific deviation from that annual overall exploitation rate can vary or be constant over time
+
+\begin{align}
+  CanTAC_{y,k} &= CanER_{y,k} \cdot RYMU_{y,MU}\\ 
+  USATAC_{y,k} &= USAER_{y,k} \cdot RYMU_{y,MU}
+  (\#eq:tac)
+\end{align}
+
+
+
+\begin{align}
+   CanER_{y,k} &\sim beta(shape_d,shape_e)\\ 
+   shape_d &= CanERSMU_{y,k}^2 \cdot (\frac{1-CanERSMU_{y,k}}{\sigma_{canER}^{2}}-\frac{1}{CanERSMU_{y,k}})\\
+   shape_e &= shape_d \cdot \frac{1}{CanERSMU_{y,k}-1}\\
+   \sigma_{canER}&=CVER \cdot CanERSMU_{y,k}
+  (\#eq:CanER)
+\end{align}
+
+
+
+\begin{align}
+   CanERSMU_{y,k} &\sim beta(shape_a,shape_b)\\ 
+   shape_a &= fixcanER^2 \cdot(\frac{1-fixcanER}{\sigma_{canERSMU}^{2}}-\frac{1}{fixcanER})\\
+   shape_b &= shape_a \cdot \frac{1}{fixcanER-1}\\
+   \sigma_{canERSMU} &= CVERSMU \cdot fixcanER
+  (\#eq:CanER)
+\end{align}
+
+Finally, the CU specific TACs are calculated by multiplying the SMU  
+
+
+\begin{align}
+  cuppn &= RY_{y,k}/ RYMU_{y,k}
+  CanTAC_{y,k} &= CanTAC_{y,k} \cdot cuppn_{y,k}\\  
+  (\#eq:tac)
+\end{align}
+
+
+CanTAC_{y,k}
+
+canEROU
+          
+cuERnormDevs
+
+The allowable catch is then calculated from  and this exploitation rate is applied to all projection years with the addition of random error following a beta distribution.
+
+\begin{align}
+  CANER_{y,k} &= \sum^{k \in MU} $RY_{y,k}\\
   FctRYMU_{y,k} &= \sum^{k \in MU} FctRY_{y,k}
   (\#eq:MUagg)
 \end{align}
 
-The next step is to calculate the allowable catch following the inputs harvest control rule choice. Both study cases in this report use fixed exploitation rates as the harvest control rule.
+
 
 #### Second Observation submodel
 #### Assessment submodel
