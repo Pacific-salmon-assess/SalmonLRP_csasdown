@@ -4,10 +4,10 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # SamSim MODEL DOCUMENTATION {#app:third-appendix}
 
-SamSim is the closed loop simulation model used for calculation of the projection based LRPs. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). This appendix decribes the model equations relevant to the Interior Fraser coho salmon and West coast Vancouver Island chinook salmon study cases. The model indexes and quantities are defined in Table \@ref(tab:modvar) and input parameters used for the Interior Fraser Coho study case are listed in Table \@ref(tab:parval). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
+SamSim is the closed loop simulation model used for calculation of the projection based LRPs. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). This appendix decribes the model equations relevant to the Interior Fraser coho salmon and West coast Vancouver Island chinook salmon study cases. The model indexes and quantities are defined in Table \@ref(tab:modvar) and input parameters used for the study cases are listed in Table \@ref(tab:parval). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
 
 
-
+<!-- These tables are being updated in the samSimparamtabs.tex local file. It is easier to flip between files than scrolling up and down in the document-->
 \begin{table}[ht]
 \caption{List of samSim model indexes and variables.}
 \begin{tabular}{ll}
@@ -60,16 +60,13 @@ $\sigma_{Fct}$ & Forecast scaler standard deviation & sdForecast & NA\\
 \end{table}
 
 
-
-### Data entry
-
-Define data used in IF cohoPars is any of the data columns not defined?
-Need to ask: where is the function that reads in the data. Maybe called by genericrecoverySim
+SamSim is
 
 
 ### Model Priming
 
-The proming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners ($S_{y,k}$), Recruits ($RBY_{y,k}$, Catch and Exploitation Rate.  
+
+The priming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners ($S_{y,k}$), Recruits ($RBY_{y,k}$, Catch and Exploitation Rate.  
 
 #### Available Recruitment Data
 
@@ -127,8 +124,9 @@ Surv_{y,j} =
  (\#eq:surv)
 \end{align}
 
+(ref:holtetal09) [@holt_indicators_2009]
 
-```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage. (ref:holtetal09)", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 
@@ -374,5 +372,5 @@ check for extinction if R < threshold
 
 estimate true benchmarks -- all rely on refalpha anf beta defined  by the user. 
 
-
+end of loop 3 
 
