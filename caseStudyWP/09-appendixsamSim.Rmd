@@ -40,9 +40,7 @@ $FctRYMU_{y,k}$ & Calendar year recruitment forecast aggregated by management un
 
 
 \begin{table}[ht]
-<!--
-\caption{List of samSim model parameters and values used for the Interior Fraser study case.}
---> 
+\caption{List of samSim model parameters and values used for the Interior Fraser study case. }
 \begin{tabular}{l p{4cm} p{3cm} l}
 \hline
 Notation & definition & data input name & value \\ 
@@ -290,7 +288,7 @@ Finally, the CU specific TACs are calculated by multiplying the SMU
 \end{align}
 
 <!--
-need to describe everything above into amTAC, Can mixTAC and cansingtac
+need to describe everything above into amTAC, Can mixTAC and cansingtac, need to figure out the dimensions of the catch
 -->
 
 Once the allowable catches are defined, the realized catches are computed. Catch  uncertainty is often easier to parameterize using observed deviations in target and realized exploitation rates rather than catches. Therefore, the target total allowable catches are back-converted to exploitation rates and realized catches are generated using  beta distributed error around the exploitation rates. 
@@ -311,18 +309,70 @@ The final step of this phase is to compute the Spawners and the exploitation rat
   (\#eq:spawners)
 \end{align}
 
-#### Second Observation submodel -ci=urrent year
-Generate MU-specific observation error
-calculae obs S
-calcObsCatch
- obsRecRY
- obsExpRate
+#### Second Observation submodel -current year
+
+In this step, observation error is added to the quantities calcualted in the current time step. Catch observation error is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles. If the catch is taken in a mixed stock fishery, an additional multivariate logistic error is incorporated to
+account for uncertainty in the stock assignment process. Spawners observation error is also given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles.
+
+
+\begin{align}
+  obsC_{y,k,i} &= C_{y,k,i} \cdot o_{y,k,i}\\
+  o_{y,k,i} \sim logN(0,\sigma_{C},0.0001,0.9999)
+  (\#eq:obsC)
+\end{align}
+
+\begin{align}
+  obsS_{y,k} &= S_{y,k} \cdot  \cdot u_{y,k,i}\\
+  u_{y,k,i} \sim logN(0,\sigma_{S},0.0001,0.9999)
+  (\#eq:obsS)
+\end{align}
+
+Observed recruitment is set to the sum of observed spawners and catches
+\begin{align}
+  obsRY_{y,k} &= \sum^{i}C_{y,k,i} + obsS_{y,k}\\
+  obsER_{y,k} &= \frac{\sum^{i}C_{y,k,i}}{obsRY_{y,k}}
+  (\#eq:obsR)
+\end{align}
+
 
 #### Assessment submodel
+
+This next phase of the projecton loop simulates salmon stock assessment analysis. The linearized simple Ricker stock recruit curve is fit to the observed data.
+
+\begin{align}
+  obslogRS_{1:y,k} &= esta_{y,k}-estb_{y,k} \cdot  obsS_{y,k}\\
+  (\#eq:obsR)
+\end{align}
+
+Management benchmarks are then estimated 
+
+describe percentiles true and observed
+
+Describe SR obs BM
+same as prime loop but with observed qquantities
+
+If the stock recruitment management benchmarks cannot be estimated, they are set to the previous estimated value. 
+
+Make a note that the habitat benchmarks are not defined here. 
+
+
+
 #### Population Dynamics submodel again
 
 
 Generic recovery simulator loop 3
+
+get marine survival estimates -- same across CUs
+
+add error to proportion at ages. vary among CUmor consatant across cu 
+
+Adjust productivity parameter for the skew option, i.e. draw recruitment error from a skewed multivariate normal or student t distribution. 
+
+Generate recruitment recBY
+
+check for extinction if R < threshold
+
+estimate true benchmarks -- all rely on refalpha anf beta defined  by the user. 
 
 
 
