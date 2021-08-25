@@ -77,12 +77,16 @@ The priming phase, or model initialization, represents the past data for CUs bei
 
 #### If Recruitment Data is available
 
-If spawner-recruitment data is available, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
+If spawner-recruitment data is available, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch and/or exploitation rate data are not available, those values are set to zero.
 
 
 #### If Recruitment Data is not available
 
-When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits. The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
+When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits.
+
+##### Recover stock recruitment parameters 
+
+ The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
 
 \begin{align}
   S_{y<=6,k} &= \frac{\alpha_{k}}{\beta_{k}} \\
