@@ -4,7 +4,7 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # SamSim MODEL DOCUMENTATION {#app:third-appendix}
 
-SamSim is the closed loop simulation model used for calculation of the projection based LRPs. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). This appendix decribes the model equations relevant to the Interior Fraser coho salmon and West coast Vancouver Island chinook salmon study cases. The model indexes and quantities are defined in Table \@ref(tab:modvar) and input parameters used for the study cases are listed in Table \@ref(tab:parval). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
+SamSim is the closed loop simulation model used for calculation of the projection based LRPs. A model overview and the code can be found in project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). This appendix describes the model equations relevant to the Interior Fraser coho salmon and West coast Vancouver Island Chinook salmon study cases. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating data based on input parameters. The projection phase generates data for future years based on the user defined scenarios and management procedures.  Four primary time-series are populated in this simulation model: Spawners $S_{y,k}$, Recruitment $R_{y,k}$, Catch $C_{y,k,i}$ and exploitation rate $ER_{y,k,i}$. The model indexes and quantities are defined in Table \@ref(tab:modvar) and input parameters used for the study cases are listed in Table \@ref(tab:parval). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
 
 
 <!-- These tables are being updated in the samSimparamtabs.tex local file. It is easier to flip between files than scrolling up and down in the document-->
@@ -17,7 +17,12 @@ Notation & definition \\
 $y$ & year \\ 
 $j$ & age \\
 $k$ & Conservation Unit (CU)\\
+$i$ & Fishery - U.S., Canadian mixed stock and Canadian Single stock\\
+$MU$ & Management Unit - aggregates of CUs\\
 $S_{y,k}$ & Spawners \\
+$R_{y,k}$ & Brood year Recruits \\
+$C_{y,k,i}$ & Catch \\
+$ER_{y,k,i}$ & Exploitation rate \\
 $RY_{y,k}$ & Calendar Year Recruits \\
 $Ra_{y,k,j}$ & Age specific brood year Recruits \\
 $R_{y,k}$ & Total brood year Recruits \\
@@ -60,22 +65,24 @@ $\sigma_{Fct}$ & Forecast scaler standard deviation & sdForecast & NA\\
 \end{table}
 
 
-SamSim is
+
+
+The following sections in this appendix are organized similarly to the samSim code, that way the subheadings can be read as pseudo code.  
 
 
 ### Model Priming
 
 
-The priming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available. During the initialization phase three types of CU specific data tables are populated: Spawners ($S_{y,k}$), Recruits ($RBY_{y,k}$, Catch and Exploitation Rate.  
+The priming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the simulation trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available.  
 
-#### Available Recruitment Data
+#### If Recruitment Data is available
 
-If spawner  ($RBY_{y,k}$recruitment data is avalable, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
+If spawner-recruitment data is available, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The Spawners, Recruits, Catch and Exploitation Rate objects are populated with the input data. If catch or expoitation rate data are not available, those values are set to zero.
 
 
-#### No Recruitment Data
+#### If Recruitment Data is not available
 
-When Recruitment data is not available, the 'nPrime' is set to 10x the maximum age of recruits. The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
+When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits. The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
 
 \begin{align}
   S_{y<=6,k} &= \frac{\alpha_{k}}{\beta_{k}} \\
@@ -124,9 +131,9 @@ Surv_{y,j} =
  (\#eq:surv)
 \end{align}
 
-(ref:holtetal09) [@holt_indicators_2009]
 
-```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage. (ref:holtetal09)", warning=FALSE, echo=FALSE, fig.align="center"}
+
+```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 
