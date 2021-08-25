@@ -53,7 +53,7 @@ Notation & definition & data input name & value \\
 $\alpha_{k}$ & Ricker productivity parameter & alpha & mcmc sample\\
 $\beta_{k}$ & Ricker carrying capacity inverse & beta & mcmc sample\\ 
 $\sigma_{k}$ & Recruitment model standard deviation & alpha & mcmc sample\\
-$\gamma_{k}$ & Recruitment model standard deviation & alpha & mcmc sample\\
+$\gamma_{k}$ & coefficient for recruitment survival covariate  & coef1 & mcmc sample\\
 $RSc$ & Scalar used to cap High recruitment values & CapScalar &3\\
 $\rho$ & temporal autocorrealtion coefficient & rho & 0\\
 $\tau$ & variance parameter for multivariate logistic error around proportions at age\\
@@ -82,11 +82,16 @@ If spawner-recruitment data is available, the number of initialization years 'nP
 
 #### If Recruitment Data is not available
 
-When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits.
 
-##### Recover stock recruitment parameters 
 
- The number of Spawners can be initialized by the user or otherwise is set at equilibrium for the first 6 years and then calculated based on recruitment in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold (`extinctThresh`), then the number of spawners is set o zero. 
+When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits. Because the stock recruitment data is not available, the first step on this routine is to retrieve the stock recruitment parameters. The user has the option of providing either fixed values or a set of mcmc samples. If mcmc samples are provided, one set of parameters is used for each simulation trial.
+
+The next step in the simulation is to adjust the spawner recruitment parameters according to the user defined scenarios. samSim includes options to adjust the recruitment standard deviations, $\sigma_{k}$,  and the productivity parameter, $\alpha_{k}$. The LRP case studies do not include adjustments or changes in productivity over time, therefore we will not describe the productivity adjustments in this report. 
+
+Recruitment is assumed to be correlated between the CU's, the correlation matrix is calculated based on the $\sigma_{k}$ parameters, and the correlation among CUs in recruitment deviations specified by the user.   
+ 
+
+Once parameters are defined the number of spawners, $S_{y,k}$, is initialized. When no recruitment data is provided, $S_{y,k}$ is set at equilibrium for the first 6 years and then calculated based on recruitment  and exploitation rates in the previous years (equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set o zero. Recruitment error is given by a multivariate normal disribution reflecting the recruitment covariance among CUs. 
 
 \begin{align}
   S_{y<=6,k} &= \frac{\alpha_{k}}{\beta_{k}} \\
@@ -95,10 +100,10 @@ When Recruitment data is not available, the 'nPrime' is set to 10 times the maxi
 \end{align}
 
 
-Random variability is added to the proportions at age of the population following a multivariate logistic error structure (@schnute_influence_1995). The age structure error can vary or be held constant among CUs. 
+The age structure of the population is then calculated based on the mean age structure for each CU given by the user and random variability following a multivariate logistic error structure (@schnute_influence_1995). The age structure error can vary or be held constant among CUs. 
 
 
-Three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve.  Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (equation \@ref(eq:CUautocorr)). The parameters for the recruitment curve are unique for each CU and are specified by the user. Parameters can be fixed for all simulation trials or sampled from a posterior distribution. 
+The following step is to compute recruitment following the recruitment curve specified by the user. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (equation \@ref(eq:CUautocorr)). 
 
 \begin{align}
   R_{y,k} &= S_{y,k} \cdot e^{\alpha{k} - \beta{k} \cdot S_{y,k} + w_{y,k} - \frac{\sigma_{k}^{2}}{2}}\\
@@ -109,7 +114,8 @@ Three versions of the recruitment curve are available: A simple Ricker curve (eq
 
 \begin{align}
   Ra_{y,k,j} &= ppn_{j} \cdot S \cdot e^{\alpha{k} - \beta{k} \cdot S + \gamma_{k} \cdot Surv_{y,j} + w_{y,k} - \frac{\sigma_{k}^{2}}{2}}\\
-  R_{y,k} &= \sum^{j}Ra_{y,k,j}
+  R_{y,k} &= \sum^{j}Ra_{y,k,j}\\
+  w_{y,k} &= v_{y,k} 
   (\#eq:Rickersurv)
 \end{align}
 
