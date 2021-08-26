@@ -29,7 +29,7 @@ After these removals, the steps for preparing the data for analysis were:
 
 - Infill total and wild escapement by CU and Area, (by stream for CUs with observations, by CU for years with no observations in a CU)
 - Run reconstruction: 
-  - Add fishery catch by CU and Area to total escapement to estimate total returns / recruitment / stock *\textcolor{cyan}{LW: not sure which term to use here. Recruitment might be confusing since it is recruits in a spawning year, not for a brood year}*
+  - Add fishery catch by CU and Area to total escapement to estimate total returns
   - Use proportion of wild:total escapement by CU and Area to estimate number of wild returns 
   - Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU. Result is wild spawners and corresponding recruits by brood year for each CU
 
