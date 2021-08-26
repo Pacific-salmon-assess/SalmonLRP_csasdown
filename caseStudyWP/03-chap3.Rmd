@@ -45,14 +45,9 @@ To Do:  need to work in @korman_evaluation_2019
 
 ## DATA
 
-Data for this case study cover return years 1998 -2020. Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality. All Interior Fraser Coho data were provided by DFO's Fraser River Stock Assessment Unit (M. Arbeider, pers. comm). These data included: (i) annual spawner abundance by CU (1998-2020; Figure \@ref(fig:coho-timeseries)), (ii) annual recruits-at-age by CU (brood years 1998 - 2016), (iii) a hatchery-based smolt-to-adult survival rate index, (iv) annual exploitation rates, and (v) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
+Data for this case study cover return years 1998 -2020. Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality. All Interior Fraser Coho data were provided by DFO's Fraser River Stock Assessment Unit (M. Arbeider, pers. comm). These data included: (i) annual spawner abundance by CU (1998-2020), (ii) annual recruits-at-age by CU (brood years 1998 - 2016), (iii) a hatchery-based smolt-to-adult survival rate index, (iv) annual exploitation rates, and (v) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
 
 Data were similar to those previously described in Arbeider et al. 2020.  Detailed descriptions of data treatments, assumptions, infilling, and data quality are provided in @arbeider_interior_2020. More recent updates that are not described in @arbeider_interior_2020 include the incorporation of three additional years of data (return years 2018-2020), updates to the smolt-to-adult marine survival rate index to use a weighted average by release size, and increased data quality screening of scale ages used to calculate recruitment-at-age (M. Arbeider, pers. comm).
-
-
-```{r coho-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/coho-escapeSeries.png")
-```
 
 
 -	Still to add: 
@@ -131,7 +126,12 @@ To maintain consistency with this previous work on Interior Fraser Coho, we also
   S_{REP,i} \sim Normal(\mu_{SREP},\sigma_{SREP})
 \end{equation}
 
-@arbeider_interior_2020 (and Korman???) set $mu_{SREP}$ at 1.5 times the $S_{REP}$ value estimated from the base model fit without a prior on $S_{REP}$. For our integrated Sgen-LRP model fits (described in section xxx), we found that we needed to constrain $mu_{SREP}$ at no more than 1.4 times the $S_{REP}$ value to achieve model convergence, so we used the 1.4 times expansion instead.  We set $\sigma_{SREP}$ at $\sqrt{2} * 1000 = 1414$ spawners, which is the same value used by @arbeider_interior_2020. Note that the "$* 1000$" term is used to correct for scaling spawner abundance by 1/1000 when fitting models. @arbeider_interior_2020 parameterized the distribution in terms of precision ($\tau$), where $\tau = \frac{1}{\sigma^2} = 0.5$.   
+@arbeider_interior_2020 (and Korman???) set $mu_{SREP}$ at 1.5 times the $S_{REP}$ value estimated from the base model fit without a prior on $S_{REP}$. For our integrated Sgen-LRP model fits (described in section xxx), we found that we needed to constrain $mu_{SREP}$ at no more than 1.4 times the $S_{REP}$ value to achieve model convergence, so we used the 1.4 times expansion instead.  We set $\sigma_{SREP}$ at $\sqrt{2} * 1000 = 1414$ spawners, which is the same value used by @arbeider_interior_2020. Note that the "$* 1000$" term is used to correct for scaling spawner abundance by 1/1000 when fitting models. @arbeider_interior_2020 parameterized the distribution in terms of precision ($\tau$), where $\tau = \frac{1}{\sigma^2} = 0.5$. The effect of adding the prior on $S_{REP}$ when fitting individual models to available data is shown in Figure \@ref(fig:coho-SR-fit).    
+
+
+```{r coho-SR-fit, fig.cap="Stock recruit curves fit to spawner and recruitment data using individual models for each CU. Solid black lines shows the MLE fit for the IM model while solid blue lines shows the MLE fit for the IM.HiCap model.  Associated black and blue shaded regions show the 95 percent confidence intervals on respective model fits. The red line show the replacement line.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/coho-compareSRFits-IM.png")
+```
 
 
 *Model 3: Hierarchical Ricker (HM)*
@@ -144,8 +144,6 @@ The hierarchical Ricker model (HM) follows recent stock-recruitment analyses for
 \end{equation}
 
 where, $\mu_{\alpha}$ is the mean of the normal distribution and $\sigma_{\alpha}$ is the standard deviation. In addition to the likelihood constraints on $\gamma$ and $\sigma_{v_i}$ desribed for the IM, we included the following constraints on $mu_{\alpha}$ and $\sigma_{\alpha}$ to replicate the Bayesian model fitting routine of @arbeider_interior_2020:
-
-
 
 \begin{equation}
   log(\mu_{\alpha}) \sim Normal(1,\sqrt{2})
@@ -189,7 +187,7 @@ where, $W$ represents the Lambert W function (Scheurell 2016). $S_{gen}$ was the
 
 **Distribution among subpopulations**
 
-The second type of CU benchmark is based on the distribution of spawning escapement among subpopulations nested within CUs (Table \@ref(tab:cohoCU2SP)). We have taken it from the short-term recovery objective identified by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006. @arbedier_interior-2021 summarized that short-term target as: "the 3-year geometric average, natural-origin escapement in at least half of the subpopulations within each of the five populations is to exceed 1000 spawning Coho Salmon, excluding hatchery fish spawning in the wild", where 'populations' was analogous to CUs. We selected the short-term recovery target to represent a lower CU benchmark in our study because, as noted by @arbeider-interior-2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. The “half of sub-populations within each CU” threshold required 2 out of 3 sub-populations to be above 1000 fish for the North Thompson and South Thompson CUs to be above their lower benchmarks, 1 out of 2 sub-populations to be above 1000 fish for the Lower Thompson and Middle Fraser CUs to be above their lower benchmarks, and the only sub-population in the Fraser Canyon to be above 1000 fish to be above the lower benchmark.  This distributional benchmark is specific to the Interior Fraser Coho SMU. We have retained it as part of this case study to maintain consistency with previous work.  
+The second type of CU benchmark is based on the distribution of spawning escapement among subpopulations nested within CUs (Table \@ref(tab:cohoCU2SP)). We have based this benchmark on the short-term recovery objective identified by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006, which @arbedier_interior-2021 summarized as: *"the 3-year geometric average, natural-origin escapement in at least half of the subpopulations within each of the five populations is to exceed 1000 spawning Coho Salmon, excluding hatchery fish spawning in the wild"*, where 'populations' is analogous to CUs. We selected the short-term recovery target to represent a lower CU benchmark in our study because, as noted by @arbeider-interior-2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. The “half of sub-populations within each CU” threshold required 2 out of 3 sub-populations to be above 1000 fish for the North Thompson and South Thompson CUs, 1 out of 2 sub-populations to be above 1000 fish for the Lower Thompson and Middle Fraser CUs, and the only sub-population in the Fraser Canyon to be above 1000 fish. This distributional benchmark is specific to the Interior Fraser Coho SMU. We have retained it as part of this case study to maintain consistency with previous work.  
 
 
 ### LRP Estimation: Proportion of CUs > Lower Benchmark
@@ -197,15 +195,28 @@ The second type of CU benchmark is based on the distribution of spawning escapem
 
 **Methods**
 
+We looked at the proportion of CUs that dropped below Sgen (Figure \@ref(fig:coho-CU-timeseries)) and the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-timeseries)) to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis. 
+
+
+```{r coho-CU-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs. Solid red lines show estimates of Sgen from the IM model, while dashed red lines show estimates of Sgen from the IM.HiCap model", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/coho-CU-EscpSeries.png")
+```
+
+
+```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho. CUs to which each subpopulation belong to are shown in Table ----", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/coho-Subpop-EscpSeries.png")
+```
+
 
 
 **Results**
 
-Figure 1: SR model fits - IM vs IM cap in 2020 (not in integrated model)
+For three of the five CUs, estimates of Sgen based on the IM.cap spawner recruit model were higher than those based on the IM model (Figure \@ref(fig:coho-CU-timeseries)). The North Thompson CU showed the opposite pattern, with the Sgen estimate from the IM model higher than that from the IM.cap model. The fifth CU, Fraser Canyon, has almost equal estimates for the two approaches.   
+To do:
+- describe how im vs. imcap model affected number of years in which each CU dropped below Sgen
 
-Figure 1: CU-specific time series with estimated Sgen from IM and IM.cap model added on
 
-Figure 2: Sub-population time series with 1000 fish threshold added on
+The Lower North Thompson sub-population was the only sub-population that remained above the 1000 spawner threshold in all years (Figure \@ref(fig:coho-Subpop-timeseries)). All other CUs dropped below 1000 spawners in one or more years, with 2006 apparent as an especially poor year in which almost all subpopulations were below 1000 spawners. All 11 subpopulations were above 1000 spawners in 2020, which means that the SMU would be well above the LRP based on the proportional LPR approach applied to the distributional benchmark .
 
 
 ### LRP Estimation: Aggregate Abundance Empirical LRPs 
