@@ -220,20 +220,20 @@ In this step, observation error is added to the proportion of returns at age for
 
 -->
 
-The observed recruitment by brood year is then retrieved by multiplying the true recruitment at age for each brood year by the vector of observed proportions at age  (Equation \@ref(eq:obsRa)). 
+The observed recruitment by brood year is then retrieved by multiplying the true recruitment at age for each calendar year by the vector of observed proportions at age in the returns (Equation \@ref(eq:obsR)). 
 
 
 
 \begin{align}
-  obsR_{y-J,k} &= RY_{y-j,k} \cdot obsppn_{y,k,j}
-  (\#eq:obsRa)
+  obsR_{y,k} &= \sum^j RY_{y+j,k} \cdot obsppn_{y+j,k,j}
+  (\#eq:obsR)
 \end{align}
 
 
 
 #### Management submodel
 
-In this step, the population forecast and benchmarks are calculated. Forecast error is calculated via a scaler that is generated following a truncated lognormal distribution with mean and variance specified by the user (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). 
+In this step, the population forecast and benchmarks are calculated. Forecast error is calculated via a scaler that is generated following a lognormal distribution with mean and variance specified by the user (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). The distribution is also truncated between the 0.0001 and 0.9999 quantiles to avoid extremes . 
 
 \begin{align}
   FctRY_{y,k} &= RY_{y,k} \cdot Fct{y,k}
@@ -241,7 +241,7 @@ In this step, the population forecast and benchmarks are calculated. Forecast er
 \end{align}
 
 \begin{align}
-  Fct_{y,k} \sim logN(\mu_{Fct},\sigma_{Fct},0.0001,0.9999)
+  Fct_{y,k} \sim logN(\mu_{Fct},\sigma_{Fct},)
   (\#eq:Fct)
 \end{align}
 
