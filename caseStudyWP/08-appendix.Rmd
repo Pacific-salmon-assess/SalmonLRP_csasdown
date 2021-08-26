@@ -5,9 +5,8 @@ After that, all subsequent sections will be turned into appendices. -->
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
-# DATA SOURCES & TREATMENT FOR INNER SOUTH COAST-NON-FRASER CHUM SALMON {#app:first-appendix}
-
-
+# Data Sources & Treatment for Innter South Coast Non-Fraser Chum Salmon {#app:first-appendix}
+ 
 ### Spawner counts / escapement
 
 We used spawning escapement data from 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program). The number of Chum salmon that return to spawn is typically counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
@@ -20,7 +19,7 @@ The number of chum caught in fisheries in the Inside South Coast area were taken
 
 We removed the summer run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall.  
 
-To get wild escapement, we kept only wild spawners, removing hatchery spawners, spawners harvested at a facility, and spawners collected for brood stock.  <!-- K.H. comment: What are 'hatchery spawners'?-->
+To get wild escapement, we kept only wild spawners and removed hatchery-origin spawners (with clipped adipose fins), spawners harvested at a facility, and spawners collected for brood stock. 
 
 
 
@@ -38,25 +37,12 @@ After these removals, the steps for preparing the data for analysis were:
 
 The data we used had years where not all streams were counted. 
 
-<!--KH suggestion to move reasons for infilling up here. Eg. text could go along these lines: 
-
 Missing escapement values require infilling for two purposes: 
 
 1. To ensure that all CUs have annual estimates of wild returns for input to the run reconstruction model, which allows recruits for each brood year to be estimated.
-
 2. To create CU-level time series of wild escapement that can be used to calculate status relative to CU-level benchmarks, as well as LRPs based on CU status.
 
--->
-
-
-When a CU had some streams counted in a year, we infilled by stream (Figure \@ref(fig:chum-escapement-infill)). When there were no counts of spawners for a CU in a given year, we infilled by CU for that year and CU. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling in the retrospective analysis of LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
-
-<!--KH suggested re-working of the above paragraph to emphasize 2 levels of infilling that have been previoulsy used by Holt et al. 2018: 
-
 Two levels of infilling have previously been used for ISC Chum CUs (@holt_evaluating_2018; Figure \@ref(fig:chum-escapement-infill)). The first level, infilling by stream, is used when a CU has some streams counted in a year.  In this case, stream-level infilling is done by borrowing information from other streams within the same CU. The second level, infilling by CU, is used when there are no counts of spawners for a CU in a given year. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling to calculate LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
-
--->
-
 
 ##### Infilling by stream
 
@@ -70,13 +56,11 @@ This method assumes that escapement among streams is correlated, which is not al
 
 If there were no counts of any streams in a CU in a given year, a second round of infilling was done with data set that had already been infilled by stream. This was the case for two CUs: Upper Knight (22 years: 1979-1980, 1982, 1984, 1989, 1991,1996,2004-18) and Bute Inlet (13 years: 2005-2006, 2008-2018). 
 
-Using by-stream infilled escapement summed for each CU, the CUs and years with missing data were infilled assuming the total CU escapement was correlated between CUs. The procedure was similar to that for infilling by stream, but a geometric average for each CU across all years was used to calculate the proportion of the average for each year, and then that was used to estimate escapement for the two CUs with no obervations.
-
-*\textcolor{cyan}{LW: This might be better in the discussion}* These CUs (Upper Knight and Bute Inlet) were not used for the retrospective analysis because the assumption that escapement is correlated between CUs ignores diversity between CUs and the potential for uncorrelated escapements. The reality of uncorrelated escapements must be taken into account to evaluate whether aggregate escapement is a meaningful predictor for the status of individual CUs. It should also be noted that these two CUs do not represent a random subset of the seven CUs in the Inside South Coast Chum SMU. Both have fewer streams than the other CUs and a higher proportion of summer-run populations of chum. These CUs also include long fjord systems with glaciers and watersheds that go deep into the mainland with headwaters in the Cariboo region. Environmental conditions including patterns of hydrology, geomorphology, and marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, leading to differences in productivity and responses to the regional climate. For example, productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality.
+Using by-stream infilled escapement summed for each CU, the CUs and years with missing data were infilled assuming the total CU escapement was correlated between CUs. The procedure was similar to that for infilling by stream, but a geometric average for each CU across all years was used to calculate the proportion of the average for each year, and then that was used to estimate escapement for the two CUs with no observations.
 
 ```{r chum-escapement-infill, fig.cap="Chum salmon escapement for the seven Conservation Units. Black points indicate actual counts, blue points are infilled by stream, and red points are infilled by Conservation Unit.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_actual_infill_by_stream_and_CU.png', './figure/chum-escapement-infill.png', mode="wb")
-knitr::include_graphics(here::here("figure/chum-escapement-infill.png"))
+knitr::include_graphics("figure/chum-escapement-infill.png")
 ```
 
 #### Run reconstruction to estimate recruitment
@@ -86,8 +70,6 @@ We reconstructed the returns for each brood year to give recruits for brood year
 To get these estimates, total (wild and hatchery origin) spawners based on the infilling methods above (both stream and CU level infilling) were calculated for each CU and Fishery Management Area (Figure \@ref(fig:chum-map)). The number of fish harvested in fisheries (wild and hatchery, by CU and Fishery Management Area) were added to the total escapement to get an estimate of totoal stock by CU and Fishery Management Area for each spawning year. This total stock number was multiplied by the proportion of wild spawners in each CU and Fishery Management Area based on the infilled wild and total spawner escapement. The product was an estimate of total wild stock (spawner escapement plus fishery harvest) by CU and Fishery Management Area for each brood year. Finally, the age composition of chum harvested in the Johnstone Strait aggregate fishery (ages 3, 4, 5 and 6) were used to assign fish from this total stock to brood years. As such, this analysis does not account for age diversity between CUs or streams.
 
 Note that the two CUs requiring CU-level infilling correspond to only one Fishery Management Area each, which allows the run reconstruction using fishery harvest data at this level.
-
-
 
 # THE SECOND APPENDIX, FOR FUN {#app:second-appendix}
 

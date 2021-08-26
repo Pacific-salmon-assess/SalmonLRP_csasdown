@@ -9,7 +9,7 @@ Five WSP Conservation Units (CUs) have been identified for of Interior Fraser Co
 
 
 ```{r coho-map, fig.cap="The five Conservation Units that make up the Interior Fraser Coho Stock Management Unit.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics(here::here("figure/coho-map.png"))
+knitr::include_graphics("figure/coho-map.png")
 ```
 
 
@@ -51,7 +51,7 @@ Data were similar to those previously described in Arbeider et al. 2020.  Detail
 
 
 ```{r coho-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics(here::here("figure/coho-escapeSeries.png"))
+knitr::include_graphics("figure/coho-escapeSeries.png")
 ```
 
 
