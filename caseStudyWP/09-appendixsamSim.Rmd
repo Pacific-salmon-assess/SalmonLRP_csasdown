@@ -89,16 +89,6 @@ $Surv_{y,j}$ & Survival covariate \\
 $SurvCY_{y,j}$ & Survival covariate associated with calendar year \\
 $v_{y,k}$ & Recruitment deviates \\
 $S_{eq}$ & Equilibrium Spawners \\
-$Smsy_{y,k}$ & Spawners that produce the maximum sustainable yield \\
-$Sgen_{y,k}$ & Number of spawners required to recover to Smsy in one generation in the absence of fishing \\
-$fRY_{y,k}$ & Forecast of calendar year recruitment \\
-$\omega$ & Forecast random error deviates \\
-$TAC_{y,k,i} & Total allowable catch for each year, CU and country\\
-$ER_{y,k,i}$ & CU-specific exploitation rate \\
-$o_{k}$ & shape parameter for CU-specific exploitation rate variability \\
-$u_{k}$ & shape parameter for CU-specific exploitation rate variability \\
-$\varphi_{k}$ & standard deviation for CU-specific exploitation rate variability \\
-$\phi_{k}$ & CV for CU-specific exploitation rate variability \\
 \hline
 (\#tab:modvar)
 \end{tabular}
