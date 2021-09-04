@@ -66,86 +66,86 @@ We initially considered an alternative approach to logistic regression in which 
 
 #### LOGISTIC REGRESSION MODEL DIAGNOSTICS
 
-Logistic regressions require several assumptions, as listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, the goondess-of-fit, and the classification accuracy of LRPs developed from the logsitic regression.
+There are several assumptions associated with logistic regression, of which four are relevant for our application to LRPs, listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, as well as statistical significance of model coefficients, goodness-of-fit, and classification accuracy of LRPs developed from the logistic regression. All analyses were implemented using R v.4.0.4 unless otherwise specified [@r_core_team_r_2021].
 
-1. The relationship between aggregate abundance and log-odds (the logarithm of the odds of all CUs being among their lower benchmark) is linear.
+1. The relationship between aggregate abundance and log-odds (the logarithm of the odds of all CUs being above their lower benchmark) is linear.
 
 2. The observations are independent of each other (i.e., residuals are not autocorrelated).
 
 3. There are no influential outliers. 
 
-4. The sample size is sufficiently large. Logistic regression assumes that the sample size of the dataset is large enough to draw valid conclusions from the fitted logistic regression model.
+4. The sample size is large. Logistic regression assumes that the sample size of the data set is large enough to draw valid conclusions from the fitted model.
 
 
 ##### Evaluating assumption of linearity (Assumption 1)
 
-A Box-Tidwell test evaluates the significance of an additional interaction term in the logistic regression, 
+A Box-Tidwell test was used to evaluate linearity by assessing the significance of an additional interaction term in the logistic regression, 
 
 \begin{equation}
   \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t} + B_2 \sum_{i}^{i=nCUs} S_{i,t} \times \log (\sum_{i}^{i=nCUs} S_{i,t})
    (\#eq:BoxTidwelllogistic)
 \end{equation}
 
-A significant interaction term indicates a relationship between aggregate abunance and log-odds that is non-linear, violating the assumption [@fox_applied_2016].
+A significant interaction term $B_2$, indicates a non-linear relationship between aggregate abundance and log-odds, violating this assumption [@fox_applied_2016].
 
 ##### Evaluating independence (Assumption 2)
 
 
-Deviance residuals, $d$, were then estimated for each year,
+Deviance residuals, $d$, were estimated for each year,
 
 \begin{equation}
-   d = \pm \sqrt ( -2 ( y \log(\frac{\mu}{y}) + (1-y)\log(\frac{1-\mu}{1-y}) ) )
+   d = \pm \sqrt { -2 ( y \log(\frac{\mu}{y}) + (1-y)\log(\frac{1-\mu}{1-y}) ) }
    (\#eq:DevianceResid)
 \end{equation}
 
-where $\mu$ is the predicted probability of all CUs being above their lower benchmark and $y$ is the observation (0 or 1), in a given year [@fox_applied_2016]. This equation reduces to
+where $\mu$ is the predicted probability of all CUs being above their lower benchmark and $y$ is the observation (1 or 0, indicating all CUs above or not, respectively), in a given year [@fox_applied_2016]. Equation \@ref(eq:DevianceResid) reduces to,
 
 \begin{equation}
-   d =  - \sqrt ( -2 \log(1-\mu) )
+   d =  - \sqrt { -2 \log(1-\mu) }
    (\#eq:DevianceResidy0)
 \end{equation}
 
 when $y=0$, and to,
 
 \begin{equation}
-   d =  \sqrt ( -2 \log(\mu)  )
+   d =  \sqrt { -2 \log(\mu)  }
    (\#eq:DevianceResidy1)
 \end{equation}
 
-when $y=1$ (Ahmad et al. 2011).
+when $y=1$ [@ahmad_diagnostic_2011].
 
 
-The magnitude of autocorrelation among residuals was then estimated using R (v.4.0.4)
+The magnitude of lag-1 autocorrelation was then estimated among deviance residuals and evaluated for statistical significance. 
 
 ##### Evaluating outliers (Assumption 3)
 
-
-Deviance residuals were compared to a maximum threshold of 3, beyond which they are considered to be outliers (Ahmad et al. 2011).
+As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
 
 ##### Evaluating sample size (Assumption 4)
 
+A minimum of 10 data points for the least frequent outcome is recommended to avoid biases in model coefficients [@peduzzi_simulation_1996]. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters increases.
 
-As a rule of thumb, Peduzzi et al.(1996) suggests a minimum of 10 cases with the least frequent outcome for each explanatory variable (1 in this case). For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then the minimum sample size of at least 10 / 0.5 = 20 to avoid biases in model coefficients, but would be higher if the data were skewed, e.g., 0.7 and 0.3; mimimum sample size = 10/0.3 = 33.
+##### Statistical significance of model coefficients
 
+Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensen_tmb_2016]. <!-- Not needed: P-values <0.05 indicate that the null hypothesis of the coefficient being equalt to 0 is rejected [@fox_applied_2016].-->
 
+##### Goodness-of-fit
 
+The goodness-of-fit was evaluated by comparing the ratio of residual deviance to null deviance (similar to a likelihood ratio). This ratio is assumed to follow a Chi-square distribution with 1 degree of freedom, the difference in the number of parameters between full and null models. P-values <0.05 indicate significant lack of fit [@fox_applied_2016].
 
-6. Evaluate statistical significance of model coefficients using Wald's Test.
+In addition, the quasi-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable, 
 
-7. Evaluate goodness-of-fit based on ratio of Deviance to the null model (~likelihood-ratio test).
+\begin{equation}
+   quasi-R^2 =  1- \frac{\sum_{t}^{t=nYears} d} {\sum_{t}^{t=nYears} d_0} 
+   (\#eq:quasiR2)
+\end{equation}
 
-8. Evaluate quasi-Rsquared.
-  What is the ratio of the fit to the null model?
+where $d_0$ are the deviance residuals for the null model. The quasi-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks, but unlike $R^2$ values for linear models, it does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
 
-9. Evaluate hit ratio.
-  What is the classification accuracy of the LRP based on the logistic
-  regression?
+##### Classification accuracy of LRPs
 
-10. Leave-one-out cross-validation of hit ratio.
-  What is the classification accuracy of the LRP when we use out-of-sample
-  predictions?
-  
-  
+Classification accuracy was evaluated based on the ratio of successful classifications to total number of data points in the logistic regression, also called the hit ratio. Successful classifications were the number of years when the model successfully predicted that all CUs were above their lower benchmark plus the number years when the model successfully predicted that at least one CU was below its lower benchmark.  The hit ratio tends to be biased towards unrealistically good classification rates when computed with the same sample used for fitting the logistic model. Therefore, we also considered an out-of-sample approach to classification accuracy, where the logistic regression was estimated iteratively removing a single data point and the occurrence of successes relative to observations were based on the model that did not contain that data point. 
+
 
 
 ### PROJECTION-BASED LRPS
