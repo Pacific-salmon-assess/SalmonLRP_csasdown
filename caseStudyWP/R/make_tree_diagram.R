@@ -10,7 +10,7 @@ graph [layout = dot]
 
 node [shape= rectangle, style=filled, fillcolor='cornsilk', fontname = Arial]        
 tab1 [label =  'Are abundances absolute & < 1500?']
-tab2 [label = 'Are abundances absolute & < 1000?']
+tab2 [label = 'Are abundances absolute & < 10,000?']
 tab3 [label = 'RED', fillcolor='red3' ]
 tab4 [label =  'Is there a relative abundance lower \\nbenchmark (e.g., Sgen, percentile)?']
 tab5 [label = 'Is there a relative abundance lower \\nbenchmark (e.g., Sgen, percentile)?']
