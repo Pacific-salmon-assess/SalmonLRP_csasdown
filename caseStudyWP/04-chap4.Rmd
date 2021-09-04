@@ -469,7 +469,7 @@ knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 
 ```
 
-For the base case parameters, the candidate projection-based LRPs were compared against time-series of aggregate abundances observed for WCVI Chinook salmon (sum of indicator stocks with PNI > 0.5), showing that abundances are currently below these LRPs and have been near or below them over the available time-series.
+For the base case parameters, the candidate projection-based LRPs were compared against time-series of aggregate abundances observed for WCVI Chinook salmon (sum of indicator stocks with PNI > 0.5), showing that abundances are currently below these LRPs and have been near or below them over the available time-series (Figure \@ref(fig:chinook-statusProjLRPo)).
 
 ```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green).", out.width = '60%'}
 
@@ -482,7 +482,7 @@ knitr::include_graphics("figure/chinook-WCVI-SMUtimeseries.png")
    
 Given uncertainty in current and anticipated productivity, projection-based LRPs were evaluated under a range of productivities from 75% - 150% of current estimates. Scenarios with lower productivity resulted in a large proportion of trajectories with productivity below replacement, for which LRPs could not be estimated. 
 
-As expected, projection-based LRPs tend to increase under low productivity and are lower under high productivity, highlighting the value of updating projection-based LRPs as productivity changes. Uncertainty in projections increases under low productivity, requiring more random MC trials for stabilization at p=0.5 (> 10,000). The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. LRPs at the p=0.5 level could not be estimated with n=10,000 trials, though may be possible with more MC trials.
+As expected, projection-based LRPs tend to increase under low productivity and are lower under high productivity, highlighting the value of updating projection-based LRPs as productivity changes (Figure \@ref(fig:chinook-projLRPsAlpha)). Uncertainty in projections increases under low productivity, requiring more random MC trials for stabilization at p=0.5 (> 10,000). The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. LRPs at the p=0.5 level could not be estimated with n=10,000 trials, though may be possible with more MC trials.
    
 ```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection-based LRPs estimated under assumptions of reduced producitivty (0.75x of current levels) and increased productivity (1.5x current levels). More MC trials are required for stabilization of LRPs at low productivity.", out.width = '80%'}
 
@@ -495,7 +495,7 @@ knitr::include_graphics("figure/chinook-Alphas-ProjLRPCurve-ALLp.png")
 
 ## HISTORICAL EVALUATION OF STATUS
 
-We evaluated status of WCVI Chinook using LRPs estimated using the proportion of inlets above $S_{gen}$, projection-based LRPs, and the WSP integrated assessment (2016 only). All methods indicate this SMU being below its LRP for years where data are available.
+We evaluated status of WCVI Chinook using LRPs estimated using the proportion of inlets above $S_{gen}$, projection-based LRPs, and the WSP integrated assessment (2014 only, DFO 2016) (Figure \@ref(fig:chinook-retro)). All methods indicate this SMU being below its LRP for years where data are available.
    
 ```{r chinook-retro, echo=FALSE, fig.cap="Historical evaluation of status using available methods for estimating LRPs", out.width = '80%'}
 
