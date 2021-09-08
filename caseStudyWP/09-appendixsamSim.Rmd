@@ -40,9 +40,15 @@ Notation & Definition \\
 $\alpha_{i}$ & Ricker productivity parameter \\
 $\beta_{i}$ & Ricker inverse capacity parameter \\
 $\sigma_{i}$ & Standard deviation for recruitment error\\ 
-$\overline{ER}_{n}$ & Aggregate average exploitation rate for each nation\\
-$\overline{mat}_{j,i}$& average proportions of mature fish at age \\ 
-$\tau_i$ & Multivariate logistic variability parameter for maturity error\\
+$\rho$ & temporal autocorrelation coefficient in recruitment residuals\\
+$\gamma$ & survival covariate scaler \\
+$covMat$ & covariance matrix used to generate recruitment deviations with correlation among CUs\\
+$\overline{ER_{n}}$ & Aggregate average exploitation rate for each nation\\
+$\overline{p_{i,j}}$& mean proportions of recruits at age\\
+$\tau_{i}$ & multivariate logistic variability parameter for proportions at age\\
+$\overline{Surv_{i}}$ & mean survival covariate \\
+$\sigma_{Surv}$ & standard deviation for survival covariate\\
+$\Upsilon$ & Scalar to cap recruitment values \\
 \hline
 \end{tabular}
 (\#tab:paramtab)
@@ -59,7 +65,15 @@ Notation & Definition \\
 $S_{y,i}$ & Spawners\\
 $RY_{y,i}$ & Calendar year recruitments\\
 $ER_{y,i}$ & Exploitation rates \\
-$Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. continue just to see where it goes. I need the text to wrap.\\
+$Seq_{i}$ & Equilibrium spawners\\
+$p_{y,i,j}$& proportions of recruits at age\\
+$R_{y,i}$ Brood year recruits \\
+$Ra_{y,i,j}$ Age spaecific brood year recruits\\
+$Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. \\
+$w_{y,i}$ & Recruitment deviations with temporal auto-correlation\\
+$v_{y,i}$ & Recruitment deviations\\
+$Surv_{y,j}$ & Brood year survival covariate\\
+$SurvCY_{y}$ & Calendar survival covariate\\
 \hline
 \end{tabular}
 (\#tab:modtab)
@@ -159,8 +173,6 @@ $\sigma_C$ & standard deviation for realized exploitation rate variability \\
 
 
 
-
-
 ### Model Priming
 
 
@@ -180,26 +192,35 @@ The spawner recruitment parameters can be adjusted according to the user defined
 Once parameters are defined the number of spawners, $S_{y,i}$, is initialized. The number of spawners is set at equilibrium for the first 6 years and then calculated based on recruitment  and exploitation rates in the previous years (Equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set o zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
 
 \begin{align}
-  S_{y<=6,i} &= \frac{\alpha_{i}}{\beta_{i}} \\
-  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{n = Canada})
+  S_{y<=6,i} &= Seq_{i}\\
+  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{Canada})
   (\#eq:Seqinit)
 \end{align}
 
+\begin{align}
+Seq_{i} = \alpha_{i}/\beta_{i}
+\end{align}
 
 The age structure of the population is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{mat}_{i}$ and the CU-specific variability parameter $\tau_i$ (@schnute_influence_1995) (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. 
 
 \begin{align}
-  mat_{y,i} \sim \text{Multivariate Logistic}(\overline{mat}_{j,i},\tau_{i}) \\
+  p_{y,i,j} \sim \text{Multivariate Logistic}(\overline{p_{i,j}},\tau_{i}) \\
   (\#eq:mat)
 \end{align}
 
-The following step is to compute recruitment following the recruitment curve specified by the user. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
+The following step is to compute recruitment following the recruitment curve of choice. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) when $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
 
 \begin{align}
-  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
-  w_{y=1,i} &= 0 * \rho + v_{y,i} \\
-  w_{y>1,i} &= w_{y-1,i} * \rho + v_{y,i} 
+  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
   (\#eq:Rickersimple)
+\end{align}
+
+\begin{align}
+ w_{y=1,i} = 
+\begin{cases}
+ v_{y,i} & \text{if } y = 1 \\
+ w_{y-1,i} * \rho + v_{y,i} & \text{if } y > 1
+\end{cases}
 \end{align}
 
 \begin{align}
@@ -209,20 +230,14 @@ The following step is to compute recruitment following the recruitment curve spe
 
 
 \begin{align}
-  Ra_{y,i,j} &= ppn_{j} \cdot S \cdot e^{\alpha{i} - \beta{i} \cdot S + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
+  Ra_{y,i,j} &= p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
   R_{y,i} &= \sum^{j}Ra_{y,i,j}
   (\#eq:Rickersurv)
 \end{align}
 
 
-For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The distribution of survival covariates is truncated between maximum and minimum values provided by the user.  The brood year survival covariates, $Surv_{y,j}$, are currently populated following the dominant life history types from Interior Fraser Coho. For that stock, fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles, i.e., 18 months vs 30 months; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend 18 months in the freshwater environment and only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (Figure \@ref(fig:cohosurvivaldiagram) and Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied to the covariates.
+For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The distribution of survival covariates is truncated between maximum and minimum values provided in the input files. The brood year survival covariates, $Surv_{y,j}$, are currently populated following the dominant life history types from Interior Fraser Coho. For that stock, fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles, i.e., 18 months vs 30 months; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend 18 months in the freshwater environment and only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (Figure \@ref(fig:cohosurvivaldiagram) and Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied to the covariates.
  
-\begin{align}
-  SurvCY_{y} &= wSurv_{y} - \frac{{\sigma_{Surv}}^2}{2}\\
-  wSurv_{y} &\sim N(\mu_{Surv},\sigma_{Surv})
-  (\#eq:survCY)
-\end{align}
-
 \begin{align}
 Surv_{y,j} = 
 \begin{cases}
@@ -232,6 +247,14 @@ Surv_{y,j} =
  (\#eq:surv)
 \end{align}
 
+\begin{align}
+  SurvCY_{y} &= wSurv_{y} - \frac{{\sigma_{Surv}}^2}{2}\\
+  wSurv_{y} &\sim N(\overline{Surv_{i}},\sigma_{Surv})
+  (\#eq:survCY)
+\end{align}
+
+
+
 
 
 ```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage. brood year is marked in the rows and delays in the survival covariate are marked in the columns", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -239,11 +262,10 @@ knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 
 
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $RSc$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then Recruitment is set to zero.  
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then Recruitment is set to zero.  
 
 \begin{align}
-  S_{eq} &= \alpha_{i}/\beta_{i}\\
-  R_{y,i} &= min(R_{y,i}, RSc \cdot S_{eq})
+  R_{y,i} = min(R_{y,i}, \Upsilon \cdot Seq_{i})
   (\#eq:reccapscalar)
 \end{align}
 
@@ -506,7 +528,7 @@ The following step is compute the age structure variability, which follows the s
 
 Once the age structure variability is calculated is time to calculate the recruitment deviations, given by a multivariate normal distribution reflecting the recruitment covariance among CUs. Recruitment is then calculated following the Equations \@ref(eq:Rickersimple) and \@ref(eq:Rickersurv). Following the computation of $R_{y,i}$, Samsim checks if checks whether a population has gone quasi-extinct, i.e. if Spawner abundances were below the extinction threshold for one generation.  
 
-The last step of the projection loop is to recort true and observed upper and lower management benchmarks. These are computed based on the true and observed spawner abundaces. The specific benchmarks calculations will depend on the user choice, as described in Section \@ref(compute-management-benchmarks). 
+The last step of the projection loop is to report true and observed upper and lower management benchmarks. These are computed based on the true and observed spawner abundaces. The specific benchmarks calculations will depend on the user choice, as described in Section \@ref(compute-management-benchmarks). 
 
  
 
