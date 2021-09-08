@@ -71,6 +71,4 @@ To get these estimates, total (wild and hatchery origin) spawners based on the i
 
 Note that the two CUs requiring CU-level infilling correspond to only one Fishery Management Area each, which allows the run reconstruction using fishery harvest data at this level.
 
-# THE SECOND APPENDIX, FOR FUN {#app:second-appendix}
 
-More content.

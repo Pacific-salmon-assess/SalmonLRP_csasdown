@@ -5,7 +5,7 @@ author: |
   Carrie A. Holt^2^
   Luke Warkentin^1^ and
   others (TBD)^2^
-author_list: "Holt, K., Holt, C.A., Warkentin, L., and others(TBD)"
+author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C. and others(TBD)"
 address: |
   ^1^Institute of Ocean Sciences\
      Fisheries and Oceans Canada, Sidney, Canada\
