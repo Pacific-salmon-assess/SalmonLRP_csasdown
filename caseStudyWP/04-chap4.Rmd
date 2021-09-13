@@ -150,9 +150,10 @@ csasdown::csas_table(bench, booktabs = T, caption = "Benchmarks and boostrapped 
 
 ```
 
-```{r chinook-InletTimeSeries, fig.cap="Time-series of spawner abundances by inlet, including only indicators stocks that are not highly enhanced. Horizontal blue and green lines are Sgen and SREP, respectively. Uncertainty intervals (5th and 95th precentiles) are shown in shaded areas.",  warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chinook-InletTimeSeries, fig.cap="Time-series of spawner abundances by inlet, including only indicators stocks that are not highly enhanced. Horizontal yellow line is Sgen and dots are generational geometric average spawner abundances coloured by red (below Sgen) and grey (above Sgen).",  warning=FALSE, echo=FALSE, fig.align="center"}
 
-knitr::include_graphics("figure/chinook-WCVI-inlet-timeseries-nEnh-bs.png")
+#knitr::include_graphics("figure/chinook-WCVI-inlet-timeseries-nEnh-bs.png")
+knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 
 ```
 
