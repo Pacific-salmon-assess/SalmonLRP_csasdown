@@ -40,9 +40,17 @@ Notation & Definition \\
 $\alpha_{i}$ & Ricker productivity parameter \\
 $\beta_{i}$ & Ricker inverse capacity parameter \\
 $\sigma_{i}$ & Standard deviation for recruitment error\\ 
-$\overline{ER}_{n}$ & Aggregate average exploitation rate for each nation\\
-$\overline{mat}_{j,i}$& average proportions of mature fish at age \\ 
-$\tau_i$ & Multivariate logistic variability parameter for maturity error\\
+$\rho$ & temporal autocorrelation coefficient in recruitment residuals\\
+$\gamma$ & survival covariate scaler \\
+$covMat$ & covariance matrix used to generate recruitment deviations with correlation among CUs\\
+$\overline{ER_{n}}$ & Aggregate average exploitation rate for each nation\\
+$\overline{p_{i,j}}$& mean proportions of recruits at age\\
+$\tau_{i}$ & multivariate logistic variability parameter for proportions of recruits at age\\
+$\overline{Surv}$ & mean survival covariate \\
+$\sigma_{Surv}$ & standard deviation for survival covariate\\
+$\Upsilon$ & Scalar to cap recruitment values \\
+$gen$ & generation length \\
+$\varphi$ & multivariate logistic variability parameter for observed proportions of recruits at age\\
 \hline
 \end{tabular}
 (\#tab:paramtab)
@@ -59,7 +67,20 @@ Notation & Definition \\
 $S_{y,i}$ & Spawners\\
 $RY_{y,i}$ & Calendar year recruitments\\
 $ER_{y,i}$ & Exploitation rates \\
-$Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. continue just to see where it goes. I need the text to wrap.\\
+$Seq_{i}$ & Equilibrium spawners\\
+$p_{y,i,j}$& proportions of recruits at age\\
+$R_{y,i}$ & Brood year recruits \\
+$Ra_{y,i,j}$ & Age spaecific brood year recruits\\
+$Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. \\
+$w_{y,i}$ & Recruitment deviations with temporal auto-correlation\\
+$v_{y,i}$ & Recruitment deviations\\
+$Surv_{y,j}$ & Brood year survival covariate\\
+$SurvCY_{y}$ & Calendar survival covariate\\
+$Smsy_{i}$ & Spawners that produce the maximum sustainable yield \\
+$Sgen_{i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing \\
+${\alpha^\prime}_{i}$ & adjutsted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
+$obsp_{y,i,j}$ & observed proportions of recruits at age\\
+$fRY_{y,i}$ &  Forecast of calendar year recruitment\\
 \hline
 \end{tabular}
 (\#tab:modtab)
@@ -159,8 +180,6 @@ $\sigma_C$ & standard deviation for realized exploitation rate variability \\
 
 
 
-
-
 ### Model Priming
 
 
@@ -180,26 +199,35 @@ The spawner recruitment parameters can be adjusted according to the user defined
 Once parameters are defined the number of spawners, $S_{y,i}$, is initialized. The number of spawners is set at equilibrium for the first 6 years and then calculated based on recruitment  and exploitation rates in the previous years (Equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set o zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
 
 \begin{align}
-  S_{y<=6,i} &= \frac{\alpha_{i}}{\beta_{i}} \\
-  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{n = Canada})
+  S_{y<=6,i} &= Seq_{i}\\
+  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{Canada})
   (\#eq:Seqinit)
 \end{align}
 
+\begin{align}
+Seq_{i} = \alpha_{i}/\beta_{i}
+\end{align}
 
 The age structure of the population is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{mat}_{i}$ and the CU-specific variability parameter $\tau_i$ (@schnute_influence_1995) (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. 
 
 \begin{align}
-  mat_{y,i} \sim \text{Multivariate Logistic}(\overline{mat}_{j,i},\tau_{i}) \\
+  p_{y,i,j} \sim \text{Multivariate Logistic}(\overline{p_{i,j}},\tau_{i}) \\
   (\#eq:mat)
 \end{align}
 
-The following step is to compute recruitment following the recruitment curve specified by the user. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) with $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
+The following step is to compute recruitment following the recruitment curve of choice. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) when $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
 
 \begin{align}
-  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
-  w_{y=1,i} &= 0 * \rho + v_{y,i} \\
-  w_{y>1,i} &= w_{y-1,i} * \rho + v_{y,i} 
+  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
   (\#eq:Rickersimple)
+\end{align}
+
+\begin{align}
+ w_{y=1,i} = 
+\begin{cases}
+ v_{y,i} & \text{if } y = 1 \\
+ w_{y-1,i} * \rho + v_{y,i} & \text{if } y > 1
+\end{cases}
 \end{align}
 
 \begin{align}
@@ -209,20 +237,14 @@ The following step is to compute recruitment following the recruitment curve spe
 
 
 \begin{align}
-  Ra_{y,i,j} &= ppn_{j} \cdot S \cdot e^{\alpha{i} - \beta{i} \cdot S + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
+  Ra_{y,i,j} &= p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
   R_{y,i} &= \sum^{j}Ra_{y,i,j}
   (\#eq:Rickersurv)
 \end{align}
 
 
-For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The distribution of survival covariates is truncated between maximum and minimum values provided by the user.  The brood year survival covariates, $Surv_{y,j}$, are currently populated following the dominant life history types from Interior Fraser Coho. For that stock, fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles, i.e., 18 months vs 30 months; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend 18 months in the freshwater environment and only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 (Figure \@ref(fig:cohosurvivaldiagram) and Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied to the covariates.
+For the Ricker model with the survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The distribution of survival covariates is truncated between maximum and minimum values provided in the input files. The brood year survival covariates, $Surv_{y,j}$, are currently populated following the dominant life history types from Interior Fraser Coho. For that stock, fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles, i.e., 18 months vs 30 months; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend 18 months in the freshwater environment and only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied to the covariates.
  
-\begin{align}
-  SurvCY_{y} &= wSurv_{y} - \frac{{\sigma_{Surv}}^2}{2}\\
-  wSurv_{y} &\sim N(\mu_{Surv},\sigma_{Surv})
-  (\#eq:survCY)
-\end{align}
-
 \begin{align}
 Surv_{y,j} = 
 \begin{cases}
@@ -232,108 +254,113 @@ Surv_{y,j} =
  (\#eq:surv)
 \end{align}
 
+\begin{align}
+  SurvCY_{y} &= wSurv_{y} - \dfrac{{\sigma_{Surv}}^2}{2}\\
+  wSurv_{y} &\sim N(\overline{Surv},\sigma_{Surv})
+  (\#eq:survCY)
+\end{align}
+
+
+
+<!--
 
 
 ```{r cohosurvivaldiagram, fig.cap="Diagram of Interior Fraser coho dominant life history, gray indicates freshwater stages and blue indicates marine stage. brood year is marked in the rows and delays in the survival covariate are marked in the columns", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
+-->
 
-
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $RSc$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then Recruitment is set to zero.  
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then Recruitment is set to zero.  
 
 \begin{align}
-  S_{eq} &= \alpha_{i}/\beta_{i}\\
-  R_{y,i} &= min(R_{y,i}, RSc \cdot S_{eq})
+  R_{y,i} = min(R_{y,i}, \Upsilon \cdot Seq_{i})
   (\#eq:reccapscalar)
 \end{align}
 
 #### Compute management benchmarks
 
-In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". For all three options, lower and upper benchmarks are calculated. All management benchmarks are denoted with the time index, $y$, because samSim has the capability of estimating management benchmarks on a yearly basis, relying on the data obtained from the beginning of the time series to the current simulation year. However for the purpose of the LRP study cases, time invariant management benchmarks were used. <-- based on the priming? phase need to check
+In the priming loop, the management benchmarks are only calculated in the last two generations, i.e. if $y<nPrime-2*gen$. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". All management benchmarks are denoted with the time index, $y$, because samSim has the capability of estimating management benchmarks on a yearly basis, relying on the data obtained from the beginning of the time series to the current simulation year. However for the purpose of the LRP study cases, time invariant management benchmarks were used. 
 
- If the "stockRecruit" option is used with the Ricker recruitment functions, then the lower benchmark is set to  $Sgen_{y,i}$ and the upper benchmark is set to 80\% of $Smsy_{y,i}$. When the model with the survival covariate is used, the $\alpha$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of  the survival covariate,  $\mu_{Surv}$, is used. $Smsy_{y,i}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{y,i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holt_indicators_2009. 
+ If the "stockRecruit" option is used with the Ricker recruitment functions, then the lower benchmark is set to $Sgen_{y,i}$ and the upper benchmark is set to 80\% of $Smsy_{y,i}$. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holt_indicators_2009. 
 
 
 \begin{align}
-{\alpha_{i}}^\prime &=
+{\alpha^\prime}_{i} =
 \begin{cases}
- \alpha_{i} + \gamma_{i}\cdot \mu_{Surv} & \text{for Ricker with survival} \\
+\alpha_{i} + \gamma_{i}\cdot \overline{Surv} & \text{for Ricker with survival} \\
 \alpha_{i}  & \text{for simple Ricker}
 \end{cases}  
   (\#eq:alphamb)
 \end{align}
 
 \begin{align}
-  Smsy_{y,i} &= (1 - W(e^{1-{\alpha_{y,i}}^\prime}))/\beta_{i}
+  Smsy_{i} &= \dfrac{1 - W(e^{1-{\alpha^\prime}_{i}})}{\beta_{i}}
   (\#eq:smsysamsim)
 \end{align}
 
 
 \begin{align}
-  Smsy_{y,i} &= Sgen_{y,i} \cdot e^{\alpha_{y, i}\cdot (1-Sgen_{y,i}/\beta_{i})} 
+  Smsy_{i} = Sgen_{i} \cdot e^{{\alpha^\prime}_{i}\cdot \left( 1-\dfrac{Sgen_{i}}{\beta_{i}}\right)}
   (\#eq:Sgensamsim)
 \end{align}
 
-If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50th percentile of the historical Spawners ($S_{1:y,i}$). The lower benchmark is set to the 25th percentile $S_{1:y,i}$. If the "habitat" benchmark option is used, the same benchmarks in the "stockRecruit" option is used. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
-Need to specify upper and lowe benchmarks here
+
+If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
+
 
 #### Infilling and Observation model
 
-The last step of  the model priming is infilling, which is only relevant if stock recruitment data is available and there are gaps in the last 12 years of the time series. Any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period.
-
-In the priming phase, all observations are set equal to the true simulation values, i.e., no observation error is added. 
+The last step of  the model priming is infilling, which is only relevant if stock recruitment data is available and there are gaps in the last 12 years of the time series. Any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period. In the priming phase, we assume that all variables are known without error, therefore all observations are set to the true simulation values, i.e., no observation error is added. 
 
 
 ### Model Projections
 
-The model projection phase is used to represent future potential outcomes. The steps in this phase will depend on the scenarios and management procedures are implemented selected by the user, and therefore will vary depending on the model application. In this report, we list all steps in the order they appear in the code and indicate in the text if the step was used for the LRP case studies. The following description follows the order of the code implementation, therefore the subheadings in this section could be seen as pseudo code. The projections run for each trial from year `nPrime + 1` to `nYears`, the latter being the number of projection years defined by the user. 
+The model projection phase is used to represent future potential outcomes. The steps in this phase will depend on the scenarios and management procedures selected by the user, and therefore will vary depending on the model application. In the following section, we list all steps in the order they appear in the code and indicate in the text if the step was used for the LRP case studies. Similarly to the priming phase, the subheadings in this section can be read as pseudocode. The projections run for each trial from year `nPrime + 1` to `nYears`, the latter being the number of projection years defined by the user. 
 
 
 
 #### Specify Stock recruitment parameters
 
-Similarly to the priming phase, the first step on the projection loop is to define the stock recruitment parameters. The $\beta$ and $\sigma$ parameters are considered fixed and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha{y,i}$ is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
+Similarly to the priming phase, the first step on the projection loop is to define the stock recruitment parameters. The $\beta_{i}$ and $\sigma_{i}$ parameters are fixed and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha{y,i}$ is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
 
 #### Specify Management benchmarks
 
 Once $\alpha_{i}$ is specified, the true management quantities $Smsy_{y,i}$ and $Sgen_{y,i}$ for the projection year are computed following Equations \@ref(eq:smsysamsim) and \@ref(eq:Sgensamsim). The management benchmarks can be re-estimated every year or set by the normative period, i.e., last year of the priming phase, `nPrime`. The study cases in this report use the normative period management benchmarks. 
  
-#### Observation submodel - returns at age
+#### Compute observed recruitment  
 
-In this step, observation error is added to the proportion of returns at age for each brood year. The observation error for the proportions at age is given by a multivariate logistic error structure as described by @schnute_influence_1995. Observation error for the proportions of returns at age is not included in the study cases described in this report. 
+In this step, we compute the observed proportions of returns at age and the observed recruitment for each brood year. The observation error for the proportions of returns at age is given by a multivariate logistic error structure as described by @schnute_influence_1995. Observation error for the proportions of returns at age is not included in the LRP study cases, i.e., the variability parameter, $\varphi$, is set to zero.
 
-<!--
- It seems that the age composition error is added again at each round of the loop, i.e. for each y, obsS[y-5:y-1,] is overwritten. If that is true, the observed returns for the past five years change every year? Am I am misunderstanding/missing something? -- need to run the code and verify if this is true.
+ 
 \begin{align}
-  obsppn_{y,i,j} \sim MVlogis(ppn_{y,i,j}, \tau) 
+  obsp_{y,i,j} \sim \text{Multivariate Logistic}(p_{y,i,j}, \varphi) 
   (\#eq:obsppn)
 \end{align}
 
 
--->
 
 The observed recruitment by brood year is retrieved by multiplying the true recruitment at age for each calendar year by the vector of observed proportions at age in the returns (Equation \@ref(eq:obsR)). 
 
 
 
 \begin{align}
-  obsR_{y,i} &= \sum^j (RY_{y+j,i} \cdot obsppn_{y+j,i,j})
+  obsR_{y,i} &= \sum^j (RY_{y+j,i} \cdot obsp_{y+j,i,j})
   (\#eq:obsR)
 \end{align}
 
 
 
-#### Management submodel
+#### Assess population 
 
-In this step, the population forecast, total allowable catch, realized catches are calculated. Forecast error is not considered in the study cases covered in this report. When forecast error is included in the projection scenarios, it is generated with lognormal error. True calendar year recruitment is multiplied by a random variable generated following a lognormal distribution with mean and variance specified by the user (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). The distribution is also truncated between the 0.0001 and 0.9999 quantiles to avoid extreme forecast values.
+In this step the population assessment is simulated. T/he population forecast, total allowable catch, and realized catches are calculated. When forecast error is included in the projection scenarios, it is generated by adding lognormal error around the calendar year recruitment (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). The error distribution is also truncated between the 0.0001 and 0.9999 quantiles to avoid extreme forecast values. Forecast error is not considered in the LRP study cases.
 
 \begin{align}
-  fRY_{y,i} &= RY_{y,i} \cdot \omega_{y,i}
+  fRY_{y,i} &= RY_{y,i} \cdot exp(\omega_{y,i})
   (\#eq:FctR)
 \end{align}
 
 \begin{align}
-  \omega_{y,i} \sim logN(\mu_{\omega},\sigma_{\omega},)
+  \omega_{y,i} \sim N(\overline{\omega},\sigma_{\omega},)
   (\#eq:Fct)
 \end{align}
 
@@ -345,7 +372,9 @@ The recruitment forecast and true recruitment are then aggregated at the managem
   (\#eq:MUagg)
 \end{align}
 
-The next step is to calculate the allowable catch following a harvest control rule. Both study cases in this report use the fixed exploitation rate harvest control rule. In this option, the allowable catch is the product of fixed exploitation rates and calendar year recruits (Equation  \@ref(eq:tac)). The baseline fixed exploitation rates for Canada and the USA are defined in the input files. Currently, only Canadian exploitation rates have added variability implemented through draws from beta distributions (Equation \@ref(eq:ER) and \@ref(eq:CanER)). Two layers of variability are considered:  error with common mean and CVs for all CUs and error with CU-specific CVs. In the first layer, an exploitation rate value is drawn from a beta distribution with mean and CV defined by the user. In the second layer, CU-specific exploitation rates are drawn from a beta distribution using the output exploitation rate from the first layer as mean and CU-specific CV defined in the input files. The mean and CVs are transformed into shape and location parameters for the beta distribution draws (Equations \@ref(eq:ouERCU1)-\@ref(eq:ouERCU) and \@ref(eq:deER1)-\@ref(eq:deER)).
+The next step is to calculate the Total Allowable Catch (TAC) following a harvest control rule. Both study cases in this report use the fixed exploitation rate harvest control rule. In this option, the allowable catch is the product of fixed exploitation rates and calendar year recruits (Equation  \@ref(eq:tac)). The simulated TACs are generated every year with two layers of variability representing variability that is common for all CUs within an MU and a layer of CU specific variability.  Currently, only Canadian TACs have added variability implemented through draws of ER values from beta distributions (Equation \@ref(eq:ER) and \@ref(eq:CanER)). 
+
+ In the first layer, an exploitation rate value is drawn from a beta distribution with mean and CV defined by the user. In the second layer, CU-specific exploitation rates are drawn from a beta distribution using the output exploitation rate from the first layer as mean and CU-specific CV defined in the input files. The mean and CVs are transformed into shape and location parameters for the beta distribution draws (Equations \@ref(eq:ouERCU1)-\@ref(eq:ouERCU) and \@ref(eq:deER1)-\@ref(eq:deER)).
 
  
 \begin{align}
@@ -506,7 +535,7 @@ The following step is compute the age structure variability, which follows the s
 
 Once the age structure variability is calculated is time to calculate the recruitment deviations, given by a multivariate normal distribution reflecting the recruitment covariance among CUs. Recruitment is then calculated following the Equations \@ref(eq:Rickersimple) and \@ref(eq:Rickersurv). Following the computation of $R_{y,i}$, Samsim checks if checks whether a population has gone quasi-extinct, i.e. if Spawner abundances were below the extinction threshold for one generation.  
 
-The last step of the projection loop is to recort true and observed upper and lower management benchmarks. These are computed based on the true and observed spawner abundaces. The specific benchmarks calculations will depend on the user choice, as described in Section \@ref(compute-management-benchmarks). 
+The last step of the projection loop is to report true and observed upper and lower management benchmarks. These are computed based on the true and observed spawner abundaces. The specific benchmarks calculations will depend on the user choice, as described in Section \@ref(compute-management-benchmarks). 
 
  
 
