@@ -4,7 +4,7 @@ author: |
   Kendra Holt^1^
   Carrie A. Holt^2^
   Luke Warkentin^1^
-  Wor, Catarina^2 and
+  Catarina Wor^2 and
   others (TBD)^2^
 author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C. and others(TBD)"
 address: |
