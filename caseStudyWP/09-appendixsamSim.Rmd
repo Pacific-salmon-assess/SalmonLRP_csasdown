@@ -39,17 +39,17 @@ Notation & Definition \\
 $\alpha_{i}$ & Ricker productivity parameter \\
 $\beta_{i}$ & Ricker inverse capacity parameter \\
 $\sigma_{i}$ & Standard deviation for recruitment error\\ 
-$\rho$ & temporal autocorrelation coefficient in recruitment residuals\\
-$\gamma$ & survival covariate scaler \\
-$covMat$ & covariance matrix used to generate recruitment deviations with correlation among CUs\\
+$\rho$ & Temporal autocorrelation coefficient in recruitment residuals\\
+$\gamma$ & Survival covariate scaler \\
+$covMat$ & Covariance matrix used to generate recruitment deviations with correlation among CUs\\
 $\overline{ER_{n}}$ & Aggregate average exploitation rate for each nation\\
-$\overline{p_{i,j}}$ & mean proportions of recruits at age\\
-$\tau_{i}$ & multivariate logistic variability parameter for proportions of recruits at age\\
-$\overline{Surv}$ & mean survival covariate \\
-$\sigma_{Surv}$ & standard deviation for survival covariate\\
+$\overline{p_{i,j}}$ & Mean proportions of recruits at age\\
+$\tau_{i}$ & Multivariate logistic variability parameter for proportions of recruits at age\\
+$\overline{Surv}$ & Mean survival covariate \\
+$\sigma_{Surv}$ & Standard deviation for survival covariate\\
 $\Upsilon$ & Scalar to cap recruitment values \\
-$gen$ & generation length \\
-$\varphi$ & multivariate logistic variability parameter for observed proportions of recruits at age\\
+$gen$ & Generation length \\
+$\varphi$ & Multivariate logistic variability parameter for observed proportions of recruits at age\\
 $\overline{ER}_{n}$ & Nation specific long term average exploitation rate \\
 $CV(\overline{ER}_{n})$ & CV for MU-specific exploitation rate variability \\
 $CV(ER^{MU}_{y,n})$ & CV for CU-specific exploitation rate variability\\
@@ -71,7 +71,7 @@ $S_{y,i}$ & Spawners\\
 $RY_{y,i}$ & Calendar year recruitments\\
 $ER_{y,i}$ & Exploitation rates \\
 $Seq_{i}$ & Equilibrium spawners\\
-$p_{y,i,j}$ & proportions of recruits at age\\
+$p_{y,i,j}$ & Proportions of recruits at age\\
 $R_{y,i}$ & Brood year recruits \\
 $Ra_{y,i,j}$ & Age spaecific brood year recruits\\
 $Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. \\
@@ -81,19 +81,18 @@ $Surv_{y,j}$ & Brood year survival covariate\\
 $SurvCY_{y}$ & Calendar survival covariate\\
 $Smsy_{i}$ & Spawners that produce the maximum sustainable yield \\
 $Sgen_{i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing \\
-${\alpha^\prime}_{i}$ & adjusted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
-$obsp_{y,i,j}$ & observed proportions of recruits at age\\
+${\alpha^\prime}_{i}$ & Adjusted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
+$obsp_{y,i,j}$ & Observed proportions of recruits at age\\
 $fRY_{y,i}$ &  Forecast of calendar year recruitment\\
-$ER^{MU}_{y,n}$ & exploitation rate including only MU-specific variability\\
+$ER^{MU}_{y,n}$ & Exploitation rate including only MU-specific variability\\
 $d1$ and $d2$ & Shape parameters for Beta distribution used to generate MU-specific variability\\
-$\vartheta$ & standard deviation for MU-specific exploitation rate variability\\
-$ER^{CU}_{y,i,n}$ & exploitation rate including MU- and CU-specific variability\\
+$\vartheta$ & Standard deviation for MU-specific exploitation rate variability\\
+$ER^{CU}_{y,i,n}$ & Exploitation rate including MU- and CU-specific variability\\
 $o1$ and $o2$ & Shape parameters for Beta distribution used to generate CU-specific variability\\
-$\phi_{y,i,n}$ & standard deviation for CU-specific exploitation rate variability\\
-${C}^{*}_{y,i,n}$ & Catch before fisheries dependent variability \\
+$\phi_{y,i,n}$ & Standard deviation for CU-specific exploitation rate variability\\
 ${C}_{y,i,n}$ & Catch \\
-${mixC}^{*}_{y,i}$ & Mixed stock Canadian catches before fisheries dependent variability\\
-${singleC}^{*}_{y,i}$ & Single stock Canadian catches before fisheries dependent variability\\
+${mixC}_{y,i}$ & Mixed stock Canadian catches \\
+${singleC}_{y,i}$ & Single stock Canadian catches\\
 $ERagg_{y,i}$ & Aggregate exploitation rates\\
 \hline
 \end{tabular}
@@ -389,11 +388,10 @@ The recruitment forecast and true recruitment are then aggregated at the managem
 
 #### Compute realized catches 
 
-The next step is to calculate the realized catches following a harvest control rule. Both study cases in this report use the fixed exploitation rate harvest control rule. In this option, the catch is the product of exploitation rates and calendar year recruits (Equation  \@ref(eq:Catagg)). However, even though the harvest control rule specifies a fixed harvest control rule, the realized exploitation rates vary from year to year due to variability in the population distribution and  fisheries dynamics. In this section we describe the layers of variability added to the simulated catches. Three layers of variability are considered in samSim, these represent MU-specific variability, CU-specific variability, and fisheries specific variability. All three layers are implemented through draws of ER values from beta distributions. Currently only the Canadian catches include the annual added variability. 
+The next step is to calculate the realized catches following a harvest control rule. Both study cases in this report use the fixed exploitation rate harvest control rule. In this option, the catch is the product of exploitation rates and calendar year recruits (Equation  \@ref(eq:Catagg)). However, even though the harvest control rule specifies a fixed harvest control rule, the realized exploitation rates vary from year to year due to variability in the population distribution and  fisheries dynamics. In this section we describe the layers of variability added to the simulated catches. Two layers of variability are considered in samSim, these represent MU-specific variability and CU-specific variability. Both uncertainty layers are implemented through draws of ER values from beta distributions. Currently only the Canadian catches include the annual added variability. 
 
 
- The first layer of catch variability implented at the MU level. In this stage the Canadian exploitation rate value is drawn from a Beta distribution with mean and CV defined by the user (Equations \@ref(eq:ERMU) and \@ref(eq:deER1)).
-
+ The first layer of catch variability is implented at the MU level. This error is considered the same for all CUs within an MU. The Canadian exploitation rate value is drawn from a Beta distribution with mean and CV defined in the input files, these values are then transformed into shape parameters for the Beta distribution.
 
 
 \begin{align}
@@ -414,7 +412,7 @@ ER^{MU}_{y,n}
   (\#eq:deER)
 \end{align}
 
-In the second layer, CU-specific exploitation rates are drawn from a beta distribution using the output exploitation rate from the first layer as mean and CU-specific CV defined in the input files. The mean and CVs are transformed into shape and location parameters for the beta distribution draws (Equations \@ref(eq:ERCU)-\@ref(eq:oERCU). The Catches are then computed by multiplying the CU specific $ER$ and the calendar year recruits Equation \@ref(eq:Catagg).
+In the second layer, CU-specific exploitation rates are drawn from a beta distribution using the output exploitation rate from the first layer as mean and CU-specific CV defined in the input files. The mean and CVs are transformed into shape parameters for the Beta distribution draws (Equations \@ref(eq:ERCU)-\@ref(eq:oERCU). The Catches are then computed by multiplying the CU specific $ER$ and the calendar year recruits Equation \@ref(eq:Catagg).
 
 
 \begin{align}
@@ -438,7 +436,7 @@ ER^{CU}_{y,i,n}
 
  
 \begin{align}
-  {C}^{*}_{y,i,n} &= ER^{CU}_{y,i,n} \cdot RY_{y,i}
+  {C}_{y,i,n} &= ER^{CU}_{y,i,n} \cdot RY_{y,i}
   (\#eq:Catagg)
 \end{align}
  
@@ -450,8 +448,8 @@ The catch for Canada is further divided in two components, mixed stock fishery a
 
 \begin{align}
 (\#eq:tacmix)
-  {mixC}^{*}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} \\
-  {singleC}^{*}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
+  {mixC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} \\
+  {singleC}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
   (\#eq:tacsingle)
 \end{align}
 
@@ -465,7 +463,6 @@ The catch for Canada is further divided in two components, mixed stock fishery a
   (\#eq:tacadj)
 \end{align}target total allowable
 
--->
 
 The final layer of catch variability represents the uncertainty associated with the fisheries implementation. Catch uncertainty is often easier to parameterize using observed deviations in target and realized exploitation rates rather than catches. Therefore, the catches are back-converted to exploitation rates Equation \@ref(eq:muER) and realized catches are generated using beta distributed error around those exploitation rates Equations \@ref(eq:realcatch1)-\@ref(eq:realcatch2). When computing the temporary exploitation rates, the catches are removed sequentially following the order U.S. fisheries, Canadian mixed stock, and Canadian single stock fishery \@ref(eq:muER). The LRP study cases only considered mixed stock fisheries, therefore the catches for the two other categories were set to zero. 
 
@@ -493,6 +490,7 @@ The final layer of catch variability represents the uncertainty associated with 
   (\#eq:realcatch2)
 \end{align}
 
+-->
 
 The next step is to compute the aggregate exploitation rate and the remaining number of Spawners (Equations \@ref(eq:eragg) and \@ref(eq:spawners)).
 
@@ -520,13 +518,13 @@ In this step, observation error is added to the quantities calculated in the cur
 
 \begin{align}
   obsC_{y,i,n} &= C_{y,i,n} \cdot u_{y,i,n}\\
-  u_{y,i,n} \sim logN(0,\sigma_{C})
+  u_{y,i,n} &\sim logN(0,\sigma_{C})
   (\#eq:obsC)
 \end{align}
 
 \begin{align}
   obsS_{y,i} &= S_{y,i} \cdot  \cdot z_{y,i,n}\\
-  z_{y,i,n} \sim logN(0,\sigma_{S})
+  z_{y,i,n} &\sim logN(0,\sigma_{S})
   (\#eq:obsS)
 \end{align}
 
