@@ -29,7 +29,6 @@ $n$ & Nation: U.S. or Canada \\
 \end{table}
 
 
-
 \begin{table}[ht]
 \centering
 \caption{List of samSim model parameters and user input variables.}
@@ -44,13 +43,17 @@ $\rho$ & temporal autocorrelation coefficient in recruitment residuals\\
 $\gamma$ & survival covariate scaler \\
 $covMat$ & covariance matrix used to generate recruitment deviations with correlation among CUs\\
 $\overline{ER_{n}}$ & Aggregate average exploitation rate for each nation\\
-$\overline{p_{i,j}}$& mean proportions of recruits at age\\
+$\overline{p_{i,j}}$ & mean proportions of recruits at age\\
 $\tau_{i}$ & multivariate logistic variability parameter for proportions of recruits at age\\
 $\overline{Surv}$ & mean survival covariate \\
 $\sigma_{Surv}$ & standard deviation for survival covariate\\
 $\Upsilon$ & Scalar to cap recruitment values \\
 $gen$ & generation length \\
 $\varphi$ & multivariate logistic variability parameter for observed proportions of recruits at age\\
+$\overline{ER}_{n}$ & Nation specific long term average exploitation rate \\
+$CV(\overline{ER}_{n})$ & CV for MU-specific exploitation rate variability \\
+$CV(ER^{MU}_{y,n})$ & CV for CU-specific exploitation rate variability\\
+$\psi$ & Proportion of the catch associated with mixed stock catch\\
 \hline
 \end{tabular}
 (\#tab:paramtab)
@@ -68,7 +71,7 @@ $S_{y,i}$ & Spawners\\
 $RY_{y,i}$ & Calendar year recruitments\\
 $ER_{y,i}$ & Exploitation rates \\
 $Seq_{i}$ & Equilibrium spawners\\
-$p_{y,i,j}$& proportions of recruits at age\\
+$p_{y,i,j}$ & proportions of recruits at age\\
 $R_{y,i}$ & Brood year recruits \\
 $Ra_{y,i,j}$ & Age spaecific brood year recruits\\
 $Sgen_{y,i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing. \\
@@ -78,17 +81,27 @@ $Surv_{y,j}$ & Brood year survival covariate\\
 $SurvCY_{y}$ & Calendar survival covariate\\
 $Smsy_{i}$ & Spawners that produce the maximum sustainable yield \\
 $Sgen_{i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing \\
-${\alpha^\prime}_{i}$ & adjutsted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
+${\alpha^\prime}_{i}$ & adjusted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
 $obsp_{y,i,j}$ & observed proportions of recruits at age\\
 $fRY_{y,i}$ &  Forecast of calendar year recruitment\\
+$ER^{MU}_{y,n}$ & exploitation rate including only MU-specific variability\\
+$d1$ and $d2$ & Shape parameters for Beta distribution used to generate MU-specific variability\\
+$\vartheta$ & standard deviation for MU-specific exploitation rate variability\\
+$ER^{CU}_{y,i,n}$ & exploitation rate including MU- and CU-specific variability\\
+$o1$ and $o2$ & Shape parameters for Beta distribution used to generate CU-specific variability\\
+$\phi_{y,i,n}$ & standard deviation for CU-specific exploitation rate variability\\
+${C}^{*}_{y,i,n}$ & Catch before fisheries dependent variability \\
+${C}_{y,i,n}$ & Catch \\
+${mixC}^{*}_{y,i}$ & Mixed stock Canadian catches before fisheries dependent variability\\
+${singleC}^{*}_{y,i}$ & Single stock Canadian catches before fisheries dependent variability\\
+$ERagg_{y,i}$ & Aggregate exploitation rates\\
 \hline
 \end{tabular}
 (\#tab:modtab)
 \end{table}
 
-
-
-<!-- These tables are being updated in the samSimparamtabs.tex local file. It is easier to flip between files than scrolling up and down in the document
+<!--
+ These tables are being updated in the samSimparamtabs.tex local file. It is easier to flip between files than scrolling up and down in the document
 
 Four primary time-series are populated in this simulation model: Spawners $S_{y,i}$, Recruitment $R_{y,i}$, Catch $C_{y,i,n}$ and exploitation rate $ER_{y,i,n}$
 
@@ -463,8 +476,8 @@ The final layer of catch variability represents the uncertainty associated with 
 \zeta_{y,i,n} &=
 \begin{cases}
  \dfrac{{C}^{*}_{y,i,n=U.S}}{RY_{y,i}} & \text{n=U.S.} \\
- \dfrac{\dot{mixC}^{*}_{y,i}}{RY_{y,i}-C_{y,i,n=U.S.}} & \text{n=U.S.} \\
- \dfrac{\dot{singleC}^{*}_{y,i}}{RY_{y,i}-C_{y,i,n=U.S.}-mixC_{y,i}} & \text{n=U.S.} \\
+ \dfrac{\dot{mixC}^{*}_{y,i}}{RY_{y,i}-C_{y,i,n=U.S.}} & \text{n=Canada mix catch} \\
+ \dfrac{\dot{singleC}^{*}_{y,i}}{RY_{y,i}-C_{y,i,n=U.S.}-mixC_{y,i}} & \text{n=Canada single catch} \\
 \end{cases} 
   (\#eq:muER)
 \end{align}
@@ -481,33 +494,39 @@ The final layer of catch variability represents the uncertainty associated with 
 \end{align}
 
 
-The next step is to compute the number of Spawners and exploitation rate (Equations \@ref(eq:spawners) and \@ref(eq:ER))
+The next step is to compute the aggregate exploitation rate and the remaining number of Spawners (Equations \@ref(eq:eragg) and \@ref(eq:spawners)).
+
+
+
+\begin{align}
+  (\#eq:eragg)
+  ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}
+\end{align}
+
 
 
 \begin{align}
   (\#eq:spawners)
-  S_{y,i} &= RY_{y,i} \cdot(1-\sum^{n}ER_{y,i,n}) \\
-  ER_{y,i} &= \frac{\sum^n TAC_{y,i,n}}{RY_{y,i}}
-  (\#eq:ER)
+  S_{y,i} &= RY_{y,i} \cdot(1-ERagg_{y,i}) 
 \end{align}
 
 
  
 
-#### Current year Observation submodel 
+#### Observation submodel 
 
 In this step, observation error is added to the quantities calculated in the current time step. Catch observation error is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles. If the catch is taken in a mixed stock fishery, an additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process. Observed Spawner is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles.
 
 
 \begin{align}
-  obsC_{y,i,n} &= C_{y,i,n} \cdot o_{y,i,n}\\
-  o_{y,i,n} \sim logN(0,\sigma_{C})
+  obsC_{y,i,n} &= C_{y,i,n} \cdot u_{y,i,n}\\
+  u_{y,i,n} \sim logN(0,\sigma_{C})
   (\#eq:obsC)
 \end{align}
 
 \begin{align}
-  obsS_{y,i} &= S_{y,i} \cdot  \cdot u_{y,i,n}\\
-  u_{y,i,n} \sim logN(0,\sigma_{S})
+  obsS_{y,i} &= S_{y,i} \cdot  \cdot z_{y,i,n}\\
+  z_{y,i,n} \sim logN(0,\sigma_{S})
   (\#eq:obsS)
 \end{align}
 
