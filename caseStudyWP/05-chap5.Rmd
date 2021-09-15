@@ -153,7 +153,7 @@ Due to poor logistic model fits using the entire 1953-2018 time series for both 
 ### LRP Based on Proportion of CU Status
 
 
-**CU Status Based on Percentiles Benchmarks**
+**CU Status Based on Percentile Benchmarks**
 
 Four CUs were used to estimate percentile benchmarks and to estimate LRPs based on aggregate abundance and logistic regression. As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
 
@@ -205,10 +205,6 @@ Several factors lead to these poor model fits. The Inside South Coast Chum SMU i
 
 Note that in some years (late 80s) you get some good fits, before more data points in bottom right of plot appear.
 
-
-*\textcolor{cyan}{LW: Should the percentile logistic use p=0.5 as this is what is used for the diagnostics?}*
-
-
 ```{r chum-logistic-perc, fig.cap="Logistic regression of whether escapement of all component CUs were above their percentile benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes CUs where percentile benchmarks were appropriate (no Bute Inlet, Upper Knight, or Southern Coastal Streams)", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-perc.pdf')
@@ -234,7 +230,7 @@ quasiR2 = 0.03126051 . Value is low, indicating that the fit is not good.
 
 confusion matrix: 
 
-hit ration = 0.7. Ratio of correct classification. Moderately high. 
+hit ratio = 0.7. Ratio of correct classification. Moderately high (but method tends to have overly optimistic values)
 
 Box-Tidwell p-value = 0.02. Significant at a=0.05. Indicates a lack of linearity in the relationship between aggregate adundance and log-odds. - assumption 1 (relationship between aggregate abundance and log-odds is linear) not met. 
 
