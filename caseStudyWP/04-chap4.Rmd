@@ -474,7 +474,8 @@ For the base case parameters, the candidate projection-based LRPs were compared 
 
 ```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green).", out.width = '60%'}
 
-knitr::include_graphics("figure/chinook-WCVI-SMUtimeseries.png")
+#knitr::include_graphics("figure/chinook-WCVI-SMUtimeseries.png")
+knitr::include_graphics("figure/chinook-SMU-timeseries.png")
 
 ```
 
