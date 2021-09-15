@@ -472,7 +472,7 @@ knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 
 For the base case parameters, the candidate projection-based LRPs were compared against time-series of aggregate abundances observed for WCVI Chinook salmon (sum of indicator stocks with PNI > 0.5), showing that abundances are currently below these LRPs and have been near or below them over the available time-series (Figure \@ref(fig:chinook-statusProjLRPo)).
 
-```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green).", out.width = '60%'}
+```{r chinook-statusProjLRP, echo=FALSE, fig.cap="Time-series of aggregate escapement for WCVI Chinook (indicator stocks with PNI > 0.5), with projection-based LRPs associated with component inlets being > lower benchmarks at p=0.5 (yellow) and p=0.66 (pale green). Red points are the generational average escapement (geometric mean), red indicating status below LRPs", out.width = '60%'}
 
 #knitr::include_graphics("figure/chinook-WCVI-SMUtimeseries.png")
 knitr::include_graphics("figure/chinook-SMU-timeseries.png")
