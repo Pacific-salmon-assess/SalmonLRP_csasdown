@@ -27,6 +27,7 @@ While the acceptable proportion of CUs below lower benchmarks can be thought of 
 ### Multi-dimensional approach 
 - similar to proportion of CUs > lower benchmark, but using other dimensions of status (e.g., trends)
 - conditions when this might be most appropriate and not appropriate
+- Maybe not appropriate as a sole mode of assessment, more as a scanning tool used to trigger more in depth assessment if MU is found to be below LRP?
 
 
 ### Aggregate-abundance LRP based on aggregate data
