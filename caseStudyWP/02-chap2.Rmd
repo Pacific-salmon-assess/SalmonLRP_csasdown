@@ -34,12 +34,13 @@ knitr::include_graphics("figure/decision_tree.png")
 
 ## AGGREGATE ABUNDANCE-BASED LRPS
 
-Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks.  
+Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks. This definition requires two decisions to be made.  
 
-- To add: we default to requirement of all CUs > benchamrks for case studies, but cases where the proportion may be < 1 are discussed in guidelines paper
- - To add: probability thresholds considered in case studies: 0.50, 0.66, 0.90, 0.99 based on IPCC. We focus on 0.50 for sensitivity analyses, but show sensitivity to other values.
+The first decision is about the 'required proportion of CUs that will be above their individual benchmarks'.  We use a default requirement that 100% of CUs should be above lower benchmarks for our case study applications of aggregate abundance-based LRPs. This requirement for 100% of CUs to be above their lower benchmarks is the same as that of the Proportion-based LRPs above. Circumstances in which it may be appropriate to use a required proportion less than 100% are discussed in Holt et al. (in review; citation needed). 
  
-We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.
+The second decision is what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frame_guidance_2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values.  
+ 
+We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.  Logistic regression LRPs are based on historical data, and thus represent conditions that have been previously experienced by a SMU. In comparison, projected LRPs use historical data as a basis for quantifying population dynamics, but are based on projections of future states, and thus, allow uncertainty in future processes to be accounted for through alternative scenarios.  
 
 ### Logistic regression LRPs{#logisticMethods}
 
@@ -57,11 +58,11 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 50%, 66%, 90%, and 99%. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
+An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
 
-These four $p^*$ values were selected for case study applications to represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change (citation needed). For example, the 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate $p^*$ threshold level when calculating LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review) 
 
-```{r example-logisticFit, fig.cap="Logistic regression fit to annual Benroulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Benroulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95% confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds (p* = 50% [yellow], 66% [blue], 90% [green], and 99% [orange] probability that all CUs > LBM) Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", warning=FALSE, echo=FALSE, fig.align="center"}
+
+```{r example-logisticFit, fig.cap="Logistic regression fit to annual Benroulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Benroulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-Logistic.png")
 ```
 
@@ -154,7 +155,11 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS
 
+Projected LRPs are 
+
 Projected LRPs are estimated using stochastic projections of future stock size for individual CUs. Projected abundances are then used to characterize the implicit relationship between aggregate spawner abundance for the SMU and the probability that the required proportion of CUs will be above their individual lower abundance benchmarks (e.g. Sgen). 
+
+Projected LRPs are calculated using stochastic projections of future stock size for individual CUs.
 
 * To add: dependent on ER
 

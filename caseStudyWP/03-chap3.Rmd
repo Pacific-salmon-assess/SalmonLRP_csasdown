@@ -8,7 +8,7 @@ The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon
 
 
 
-```{r coho-map, fig.cap="The five Conservation Units that make up the Interior Fraser Coho Stock Management Unit.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r coho-map, fig.cap="The five Conservation Units that make up the Interior Fraser Coho Stock Management Unit.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-map.png")
 ```
 
@@ -48,7 +48,7 @@ To Do:  need to work in @korman_evaluation_2019
 Data for this case study cover return years 1998 -2020. Data prior to 1998 were not used due to concerns about inconsistent assessment methods and data quality. All Interior Fraser Coho data were provided by DFO's Fraser River Stock Assessment Unit (M. Arbeider, pers. comm). These data included: (i) annual spawner abundance by CU (1998-2020; @ref(fig:coho-CU-timeseries-Combined)), (ii) annual recruits-at-age by CU (brood years 1998 - 2016), (iii) a hatchery-based smolt-to-adult survival rate index, (iv) annual exploitation rates, and (v) annual spawner abundances for 11 sub-populations nested within the 5 CUs.
 
 
-```{r coho-CU-timeseriesCombined, fig.cap="Escapement time series for five Interior Fraser Coho CUs", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r coho-CU-timeseriesCombined, fig.cap="Escapement time series for five Interior Fraser Coho CUs", out.width = '80%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-CU-EscpSeries-Combined.png")
 ```
 
