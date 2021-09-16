@@ -43,8 +43,6 @@ We consider two types of aggregate abundance-based LRPs in our case studies: Log
 
 ### Logistic regression LRPs{#logisticMethods}
 
-*Question: I am suggesting that we call these "Logistic Regression LRPs" instead of "Empirical LRPs". This is because if we end up using simple proportions of CUs > lower benchmarks as a LRP, these will also be empirical. What do others think?  Other ideas??* *\textcolor{cyan}{LW: I like Logistic Regression LRPs, it's intuitive. Another option could be Aggregate LRPs?}*
-
 Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a required proportion of CUs being above their lower benchmarks. In all three case studies, we assume that all CUs are required to be above their lower benchmarks (i.e., proportion = 100%). For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have spawner abundance greater than their lower benchmark, $S_i > LBM_i$, and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
 
 \begin{equation}
@@ -59,7 +57,13 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure x. We show the estimation of LRPs based on this fit for two possible probability thresholds: $p^*$ = 50% and $p^*$ = 90%. LRP estimates for these two thresholds represent the aggregate abundance that is associated with a 50%, or 95%, probability of all CUs having $S_i > LBM_i$. Alternative $p^*$ values are presented in case-study applications below.
+An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 50%, 66%, 90%, and 99%. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
+
+These four $p^*$ values were selected for case study applications to represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change (citation needed). For example, the 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate $p^*$ threshold level when calculating LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review) 
+
+```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Bernoulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95\\% confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds (p* = 50\\% [yellow], 66\\% [blue], 90\\% [green], and 99\\% [orange] probability that all CUs > LBM) Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/methods-Example-Logistic.png")
+```
 
 We initially considered an alternative approach to logistic regression in which the LRP represents the aggregate abundance that has historically been associated with a pre-specified *proportion* of CUs being above their lower benchmark ($S_i > LBM_i$, where i = a CU). Using this approach, CU-level status was quantified as the number or CUs with $S_i > LBM_i$ for each year of observed data.  A logistic regression was then fit to predict the proportion of CUs with $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined). We do not show present this method for our case studies however due to inherent limitations when the required proportion of CUs above their lower benchmarks is 100%. Equation \@ref(eq:logisticLRP) cannot be solved directly for a threshold proportion of $p^*$ = 100%, and LRP estimates were highly sensitive to the choice of $p^*$ value used as a proxy. Using $p^*$ = 99% vs. $p^*$ = 99.9% vs. $p^*$ = 99.99% gave very different LRP estimates. 
 
@@ -119,7 +123,7 @@ The magnitude of lag-1 autocorrelation was then estimated among deviance residua
 
 ##### Evaluating outliers (Assumption 3)
 
-As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
+As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95\\% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
 
 ##### Evaluating sample size (Assumption 4)
 
