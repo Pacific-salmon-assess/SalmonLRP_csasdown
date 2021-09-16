@@ -34,12 +34,13 @@ knitr::include_graphics("figure/decision_tree.png")
 
 ## AGGREGATE ABUNDANCE-BASED LRPS
 
-Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks.  
+Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks. This definition requires two decisions to be made.  
 
-- To add: we default to requirement of all CUs > benchamrks for case studies, but cases where the proportion may be < 1 are discussed in guidelines paper
- - To add: probability thresholds considered in case studies: 0.50, 0.66, 0.90, 0.99 based on IPCC. We focus on 0.50 for sensitivity analyses, but show sensitivity to other values.
+The first decision is about the 'required proportion of CUs that will be above their individual benchmarks'.  We use a default requirement that 100% of CUs should be above lower benchmarks for our case study applications of aggregate abundance-based LRPs. This requirement for 100% of CUs to be above their lower benchmarks is the same as that of the Proportion-based LRPs above. Circumstances in which it may be appropriate to use a required proportion less than 100% are discussed in Holt et al. (in review; citation needed). 
  
-We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.
+The second decision is what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frame_guidance_2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values.  
+ 
+We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.  Logistic regression LRPs are based on historical data, and thus represent conditions that have been previously experienced by a SMU. In comparison, projected LRPs use historical data as a basis for quantifying population dynamics, but are based on projections of future states, and thus, allow uncertainty in future processes to be accounted for through alternative scenarios.  
 
 ### Logistic regression LRPs{#logisticMethods}
 
@@ -57,15 +58,18 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 50%, 66%, 90%, and 99%. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
+An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
 
-These four $p^*$ values were selected for case study applications to represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change (citation needed). For example, the 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate $p^*$ threshold level when calculating LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review) 
 
-```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Bernoulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95\\% confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds (p* = 50\\% [yellow], 66\\% [blue], 90\\% [green], and 99\\% [orange] probability that all CUs > LBM) Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r example-logisticFit, fig.cap="Logistic regression fit to annual Benroulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Benroulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-Logistic.png")
 ```
 
 We initially considered an alternative approach to logistic regression in which the LRP represents the aggregate abundance that has historically been associated with a pre-specified *proportion* of CUs being above their lower benchmark ($S_i > LBM_i$, where i = a CU). Using this approach, CU-level status was quantified as the number or CUs with $S_i > LBM_i$ for each year of observed data.  A logistic regression was then fit to predict the proportion of CUs with $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined). We do not show present this method for our case studies however due to inherent limitations when the required proportion of CUs above their lower benchmarks is 100%. Equation \@ref(eq:logisticLRP) cannot be solved directly for a threshold proportion of $p^*$ = 100%, and LRP estimates were highly sensitive to the choice of $p^*$ value used as a proxy. Using $p^*$ = 99% vs. $p^*$ = 99.9% vs. $p^*$ = 99.99% gave very different LRP estimates. 
+
+
+
+To Do: mention uncertainty
 
 
 #### LOGISTIC REGRESSION MODEL DIAGNOSTICS
@@ -154,60 +158,53 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS
 
-Projected LRPs are estimated using stochastic projections of future stock size for individual CUs. Projected abundances are then used to characterize the implicit relationship between aggregate spawner abundance for the SMU and the probability that the required proportion of CUs will be above their individual lower abundance benchmarks (e.g. Sgen). 
+Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(second-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
-* To add: dependent on ER
-
-We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). The code for samSim is available on GitHub: https://github.com/Pacific-salmon-assess/samSim.  We created a modified version of samSim to support LRP estimation, which is also available on GitHub: https://github.com/Pacific-salmon-assess/samSim/tree/LRP  
 
 Updated functionality for the LRP version of samSim include:
+<!-- KH comment: Not sure if these updates are neccessary here ... this text could be moved to the appendix? - or, just put in the github readme for the LRP branch of samSim?? -->
 
 * The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution.
-* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study; see Section x.x for equations).
+
+* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study).
+
 * The option to initialize population dynamics for individual CUs at unfished equilibrium when no historical recruitment data are available. While this option would not be appropriate for projections aimed at estimating recovery from a current state, it can be used to estimate projection-based LRPs because we are only interested in the underlying relationship between aggregate abundance and the probability individual CUs will be above their lower benchmark.
+
 * The option to include a log-normal bias-correction factor of $-\sigma^2 / 2$ to recruitment projected using one of the two available Ricker stock recruit models. This option was added to accommodate cases in which samSim is parameterized using stock recruitment parameters that have been corrected for log-normal bias to represent expected (mean) parameters. The log-nomral bias correction is commonly applied in stock recruit modelling because the expected value of *e*^$\sigma$ is *e*^$\sigma^2 / 2$} rather than zero when recruitment deviations are normally distributed (Cox et al. 2011, 2019a, 2019b; Grandin and Forrest 2017; Ohlberger et al. 2019; Olmos et al. 2019; Forrest et al. 2020, Weir et al., in press). When input parameters have been corrected for this log-normal bias, the bias correction must also be added to projections.
-* Specification of variability in exploitation rates as a function of both variability among years and variability among CUs, such that:
 
+* Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
+
+Detailed descriptions of the parameterization of samSim for our two case study applications of abundance-based projected LRPs (Interior Fraser Coho and WCVI Chinook) are presented in Chapters 3 and 4, respectively. In both cases, we incorporated uncertainty into projected CU dynamics through the specification of empirically-derived probability distributions for key biological and management parameters, including stock-recruitment parameters, age-at-maturity, and exploitation rates (ER). Larger structural uncertainties in model formulation were represented through the use of sensitivity analyses and/or alternative operating models (OMs). Observation error was not included in projections because derivation of LRPs was based on projected 'true' abundance levels rather than observed abundance. Furthermore, we were only applying a simple fixed ER harvest strategy when projecting forward, so annual variability arising from observation error would be accounted for by our specification of between-year variability in ERs.  
+
+The following steps were taken to calculate projected LRPs using samSim:
+
+*1.* Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations.
+
+
+*2.* For each simulated year-trial combination, characterize abundances as follows:
+
+    i) Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on 200 fish intervals. E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
+
+    ii) Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
+
+
+*3.* For each aggregate abundance bin, $AggS_{bin}$:
+
+    i) Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 simulation-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
+
+    ii) Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 simulation-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes in which all CUs were above their lower benchmarks.
+
+    iii) Calculate the probability that all CUs will be above their lower benchmarks for that bin as:
 \begin{equation}
-  ER_{i,t} \sim \text{Beta}(c1_{i,t}, c2_{i,t})
-  (\#eq:ER1)
+   Pr(All CUs > LBM) = \frac{Number of success in SAgg_{bin}} {Number of realizations in SAgg_{bin}}
+   (\#eq:projBins)
 \end{equation}
+For example, if 50 of the 200 realizations that fell within the $SAgg_{bin}$ of 10,000 - 12,000 fish were 'successes', there would be a 25% probability (50 / 200 = 0.25) that all CUs would be above their lower benchmarks when aggregate abundances are between 10,000 and 12,000 fish.
 
-where, $ER_{i,t}$ is the exploitation rate applied to CU $i$ in year $t$ and $c1_{i,t}$ and $c2_{i,t}$ are shape parameters for the beta distribution that correspond with a mean CU-specific exploitation rate of $ER_{\bar{i}}$ and a standard deviation of $\sigma_{ER_{year}}$.  For each CU $i$, $ER_{\bar{i}}$ is drawn from a beta distribution with shape parameters $c3_{i}$ and $c4_{i}$ that correspond to a mean exploitation rate of $\mu_{ER_{i}}$ and a standard deviation of $\sigma_{ER_{amongCU}}$.  
-
-\begin{equation}
- /ER_{\bar{i}} \sim \text{Beta}(c3_{i}, c4_{i})
-(\#eq:ER2)
-\end{equation}
+*4.* Identify the LRP as the aggregate abundance bin, $AggS_{bin}$, that is closest to the required probability threshold that all CUs are above their LBMs.
 
 
-
-For our two case study applications of samSim (Interior Fraser Coho and WCVI Chinook), we incorporated uncertainty into projected CU dynamics through the specification of empirically-derived probability distributions for key biological and management parameters, including stock-recruitment parameters, age-at-maturity, and exploitation rates.
-
-Larger structural uncertainties in model formulation were represented through the use of sensitivity analyses and / or alternative operating models (OMs).    
-
-with each OM intended to represent a plausible hypothesis about future stock dynamics. The selection of relevant OMs to be considered varied among case studies based on available data and knowledge.  
-
-Multiple sets of projections were undertaken for each OM; each with a different fixed exploitation rate strategy applied (including a no fishing strategy). This approach provided good contrast in projected dynamics over all scenarios ....   
-
-Observation error was not incorporated into forward projections because we ......
-
-
-
-
-stochastic projections  under a range of levels of exploitation to establish an underlyning relationship between aggregate SMU-level a   
-
-
-
-Original outline:
- 
--	Description of projected LRP approach. This approach is described in more detail in the Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”
-
--	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
-
--	Develop LRPs from projections at specific proportions instead of logistic regression
-
--	Note that all abundance-based WSP benchmarks can all be used as a basis for defining prospective LRPs
+An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shows in figure xxx for the four probability levels used in our case studies (p = 0.5, 0.66, 0.90, and 0.99). Uncertainty estimates for LRPs are not available based on this method, but that LRP estimates should be presented as a range based on the $SAgg_{bin}$ bin size.
 
 
 
