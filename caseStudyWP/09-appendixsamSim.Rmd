@@ -282,7 +282,7 @@ knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 -->
 
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then Recruitment is set to zero.  
+Recruitment estimates produced for either formulation of the Ricker model are capped. The default cap is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then recruitment is set to zero.  
 
 \begin{align}
   R_{y,i} = min(R_{y,i}, \Upsilon \cdot Seq_{i})
@@ -498,26 +498,20 @@ The next step is to compute the aggregate exploitation rate and the remaining nu
 
 \begin{align}
   (\#eq:eragg)
-  ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}
-\end{align}
-
-
-
-\begin{align}
-  (\#eq:spawners)
+  ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}\\ 
   S_{y,i} &= RY_{y,i} \cdot(1-ERagg_{y,i}) 
+   (\#eq:spawners)
 \end{align}
-
 
  
 
 #### Observation submodel 
 
-In this step, observation error is added to the quantities calculated in the current time step. Catch observation error is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles. If the catch is taken in a mixed stock fishery, an additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process. Observed Spawner is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles.
+In this step, observation error is added to the quantities calculated in the current time step. Catch observation error is given by a log normal distribution (Equation \@ref(eq:obsC)), the distribution is truncated between the 0.0001, 0.9999 quantiles. If the catch is taken in a mixed stock fishery, additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process. Observed Spawner is given by a log normal distribution truncated between the 0.0001, 0.9999 quantiles.
 
 
 \begin{align}
-  obsC_{y,i,n} &= C_{y,i,n} \cdot u_{y,i,n}\\
+  obsC_{y,i,n} &= obspCU_{y,i} \cdot C_{y,i,n} \cdot u_{y,i,n}\\
   u_{y,i,n} &\sim logN(0,\sigma_{C})
   (\#eq:obsC)
 \end{align}
