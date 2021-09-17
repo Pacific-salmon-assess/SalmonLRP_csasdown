@@ -1,6 +1,8 @@
 # LESSONS LEARNED FROM CASE STUDY APPLICATIONS
 
-- SYnthesize main results and conclusions from case studies
+To be completed.
+
+* Synthesize main results and conclusions from case studies
 
 
 
