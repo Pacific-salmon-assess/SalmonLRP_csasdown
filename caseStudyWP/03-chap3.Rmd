@@ -204,8 +204,8 @@ The second type of CU benchmark is based on the distribution of spawning escapem
 We looked at the proportion of CUs that dropped below Sgen (Figure \@ref(fig:coho-CU-timeseries)) and the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-timeseries)) to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis. 
 
 
-```{r coho-CU-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (grey lines) and 3-year geometric mean escapements (thick black line). Solid red lines show estimates of Sgen from the IM model, while dashed red lines show estimates of Sgen from the IM.HiCap model", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/coho-CU-EscpSeries.png")
+```{r coho-CU-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Solid orange lines show estimates of Sgen from the IM model, while dashed orange lines show estimates of Sgen from the IM.HiCap model.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/coho-CU-EscpSeries-wStatus.png")
 ```
 
 
