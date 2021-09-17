@@ -1,7 +1,9 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# Retrospective analysis of CU benchmarks based on Sgen and percentiles *\textcolor{cyan}{LT: open to other name of this appendix*
+# Retrospective analysis of CU benchmarks based on Sgen and percentiles 
+
+*\textcolor{cyan}{LT: open to other name of this appendix*
 
 
 In the retrospective analysis, the estimates of $\alpha$, $\beta$, and $S_{gen}$ changed as pregressively more years of data were included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying paramters. Rather, the estimates of $\alpha$, $\beta$, and $S_{gen}$ in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and $S_{gen}$ may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits. Since $\alpha$ and $\beta$ are correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind, escpecially when model fits have large residuals. Similarly, since $\alpha$ and  $\beta$ determine $S_{MSY}$ and $S_{gen}$, changes in these derived parameters can be challenging to interpret and can be due to changes in $\alpha$,  $\beta$, and their relative values.
@@ -23,9 +25,13 @@ Howe Sound-Burrard Inlet $S_{gen}$ was fairly stable, and then increased due to 
 
 
 
-
 ```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by gray and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark. Green and red points indicate status above or below benchmark, respectively. Transparent points are years with CU-level infilling.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
 knitr::include_graphics('figure/chum-perc-retro.png')
+```
+
+```{r chum-logistic-sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes the 5 CUs without CU-level infilling (no Bute Inlet or Upper Knight)", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
+knitr::include_graphics('figure/chum-logistic-sgen.pdf')
 ```
 
