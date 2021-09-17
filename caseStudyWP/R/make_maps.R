@@ -71,7 +71,7 @@ fma <- st_read(here("data/dfo_fishery_mgmt_areas_shapefile/DFO_STAT_A_polygon.sh
 
 areas <- c(12:19,28,29) # make vector of areas used in chum analysis
 fma <- fma[!fma$MNGMNTR==0, ] # remove small areas (?)
-fma <- fma[fma$MNGMNTR %in% areas, ] # keep only areas used in chum analysis 
+fma <- fma[fma$MNGMNTR %in% areas, ] # keep only areas used in chum analysis
 
 
 # get bc_maps layers
@@ -84,20 +84,20 @@ land_col <- "antiquewhite"
 
 # Chum map -------------
 
-# get south coast chum CUs 
+# get south coast chum CUs
 sc_cus <- c("Southern Coastal Streams", "Northeast Vancouver Island", "Upper Knight", "Loughborough", "Bute Inlet", "Georgia Strait", "Howe Sound-Burrard Inlet")
 # Get just the 5 CUs without CU-level infilling
 sc_cus_no_CU_infilled <- c("Southern Coastal Streams", "Northeast Vancouver Island", "Loughborough","Georgia Strait", "Howe Sound-Burrard Inlet")
-#scc <- chum_cu[chum_cu$CU_name %in% sc_cus_no_CU_infilled, ] # get sf object of just south coast chum CUs 
-scc <- chum_cu[chum_cu$CU_name %in% sc_cus, ] # get sf object of just south coast chum CUs 
+#scc <- chum_cu[chum_cu$CU_name %in% sc_cus_no_CU_infilled, ] # get sf object of just south coast chum CUs
+scc <- chum_cu[chum_cu$CU_name %in% sc_cus, ] # get sf object of just south coast chum CUs
 
-# get bounds 
+# get bounds
 bounds <- as.numeric(st_bbox(scc))
 
 # Get palette
 pal <- pnw_palette("Cascades", length(scc$CU_name), type="continuous")
 
-# function to remove extra polygons from fishery management areas with multiple polygons 
+# function to remove extra polygons from fishery management areas with multiple polygons
 # for labelling (otherwise, makes duplicate labels)
 drop_multi_poly <- function(y) {
   a <- as.data.frame(y[ y$MNGMNTR %in% names(which(table(y$MNGMNTR) >1)), ]) # get multi-polygon area rows
@@ -110,7 +110,7 @@ png(here("figure/chum-map.png"), width=8, height=7, units="in", res=600)
 ggplot(scc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
-  geom_sf(data=scc, aes(fill=CU_name), size=0) + 
+  geom_sf(data=scc, aes(fill=CU_name), size=0) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
   geom_sf_label(data=scc, aes(label = CU_name, colour=CU_name),  size=4.5, fontface="bold") +
   #geom_sf_label(data=drop_multi_poly(fma), aes(label = MNGMNTR), size=3,label.size=0.1, colour="coral",alpha=0.7, fontface="bold") +
@@ -125,7 +125,7 @@ ggplot(scc) +
   xlab(NULL) +
   ylab(NULL) +
   annotation_scale(location = "bl", width_hint = 0.5) +
-  annotation_north_arrow(location = "bl", which_north = "true", 
+  annotation_north_arrow(location = "bl", which_north = "true",
                          pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
                          style = north_arrow_fancy_orienteering, width=unit(0.3, "in")) +
   theme_classic() +
@@ -137,7 +137,7 @@ dev.off()
 # ggplot(scc) +
 #   geom_sf(data=fma,colour="coral", size=1, fill=NA) +
 #   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill="antiquewhite", size=0) +
-#   geom_sf(data=scc, aes(fill=CU_name), size=0) + 
+#   geom_sf(data=scc, aes(fill=CU_name), size=0) +
 #   geom_sf(data=lakes, fill="cornflowerblue", colour="cornflowerblue", size=0.001) +
 #   geom_sf(data=riv, fill="cornflowerblue", colour="cornflowerblue", size=0.001) +
 #   geom_sf_label(data=scc, aes(label = CU_name, colour=CU_name),  size=4.5, fontface="bold") +
@@ -153,7 +153,7 @@ dev.off()
 #   xlab(NULL) +
 #   ylab(NULL) +
 #   annotation_scale(location = "bl", width_hint = 0.5) +
-#   annotation_north_arrow(location = "bl", which_north = "true", 
+#   annotation_north_arrow(location = "bl", which_north = "true",
 #                          pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
 #                          style = north_arrow_fancy_orienteering, width=unit(0.3, "in")) +
 #   theme_classic() +
@@ -166,7 +166,7 @@ head(coho_cu)
 unique(coho_cu$CU_name)
 ifc <- coho_cu[coho_cu$CU_name %in% ifc_cus, ] # get sf object of just interior fraser coho CUs
 ifc$CU_name <- sub("Interior Fraser", "Middle Fraser", ifc$CU_name) # change name of interior fraser to middle fraser as per WSP assessment
-# get bounds 
+# get bounds
 bounds <- as.numeric(st_bbox(ifc))
 
 # Get palette
@@ -176,7 +176,7 @@ png(here("figure/coho-map.png"), width=8, height=7, units="in", res=600)
 ggplot(ifc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
-  geom_sf(data=ifc, aes(fill=CU_name), size=0) + 
+  geom_sf(data=ifc, aes(fill=CU_name), size=0) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
   geom_sf(data=borders[borders$juri_en == "Alberta",], fill=land_col, size=0) +
   geom_sf_label(data=ifc, aes(label = CU_name, colour=CU_name),  size=4.5, fontface="bold") +
@@ -192,7 +192,7 @@ ggplot(ifc) +
   xlab(NULL) +
   ylab(NULL) +
   annotation_scale(location = "bl", width_hint = 0.5) +
-  annotation_north_arrow(location = "bl", which_north = "true", 
+  annotation_north_arrow(location = "bl", which_north = "true",
                          pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
                          style = north_arrow_fancy_orienteering, width=unit(0.3, "in")) +
   theme_classic() +
@@ -208,20 +208,20 @@ ck_bounds <- as.numeric(st_bbox(wvc))
 # Get palette
 pal <- pnw_palette("Sunset", length(wvc$CU_NAME), type="continuous")
 # get labels for inlets
-inlets <- c("Quatsino", "Kyuquot", "Nootka Sound", "Esperanza Inlet", "Clayoquot", "Barkley Sound", "Nitinat Lake", "San Juan Point")
+inlets <- c("Quatsino", "Kyuquot", "Nootka / Esperenza", " ", "Clayoquot", "Barkley Sound", "Nitinat ", "San Juan")
+#inlets <- c("Quatsino", "Kyuquot", "Nootka Sound", "Esperanza Inlet", "Clayoquot", "Barkley Sound", "Nitinat Lake", "San Juan Point")
 inlets1 <- paste0("^", inlets, "$")
 keep <- grep(paste(inlets1, collapse="|"), pnames$name_en)
 chk_lab <- pnames[keep, ]
 chk_lab <- chk_lab[!duplicated(chk_lab$name_en), ] # remove duplicated labels
 chk_lab$name_en[grep("Nitinat Lake", chk_lab$name_en)]  <- "Nitinat"
 chk_lab$name_en[grep("San Juan Point", chk_lab$name_en)] <- "San Juan"
-chk_lab$name_en
-  
-png(here("figure/chinook-map.png"), width=8, height=7, units="in", res=600)
-ggplot(wvc) +
+
+png(here("figure/chinook-map2.png"), width=8, height=7, units="in", res=600)
+ggplot(isc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
-  geom_sf(data=wvc, aes(fill=CU_NAME), size=0) + 
+  geom_sf(data=wvc, aes(fill=CU_NAME), size=0) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
   geom_sf_label(data=wvc, aes(label = CU_NAME, colour=CU_NAME),  size=4.5, fontface="bold") +
   #geom_sf_label(data=drop_multi_poly(fma), aes(label = MNGMNTR), size=3,label.size=0.1, colour="coral",alpha=0.7, fontface="bold") +
@@ -237,7 +237,7 @@ ggplot(wvc) +
   xlab(NULL) +
   ylab(NULL) +
   annotation_scale(location = "bl", width_hint = 0.5) +
-  annotation_north_arrow(location = "bl", which_north = "true", 
+  annotation_north_arrow(location = "bl", which_north = "true",
                          pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
                          style = north_arrow_fancy_orienteering, width=unit(0.3, "in")) +
   theme_classic() +
@@ -264,9 +264,9 @@ dev.off()
 #                                                      "font-size" = "14px"
 #                                                   #   "border-color" = "rgba(0,0,0,0.5)"
 #                                                   ) ))
-# m 
+# m
 # mapview::mapshot(m, file="Figures/fig_chum_CU_map.png")
-# 
+#
 
 
 
