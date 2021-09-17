@@ -61,8 +61,8 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
 An example logistic regression fit is shown in Figure @ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
 
 
-```{r example-logisticFit, fig.cap="Logistic regression fit to annual Benroulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Benroulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM Horizontal dotted lines intersects the y-axis at each probability threshold, while the solid vertical lines shows the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/methods-Example-Logistic.png")
+```{r example-logisticFit, fig.cap="Logistic regression fit to annual Benroulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Benroulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/methods-Example-LogisticLRP.png")
 ```
 
 We initially considered an alternative approach to logistic regression in which the LRP represents the aggregate abundance that has historically been associated with a pre-specified *proportion* of CUs being above their lower benchmark ($S_i > LBM_i$, where i = a CU). Using this approach, CU-level status was quantified as the number or CUs with $S_i > LBM_i$ for each year of observed data.  A logistic regression was then fit to predict the proportion of CUs with $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined). We do not show present this method for our case studies however due to inherent limitations when the required proportion of CUs above their lower benchmarks is 100%. Equation \@ref(eq:logisticLRP) cannot be solved directly for a threshold proportion of $p^*$ = 100%, and LRP estimates were highly sensitive to the choice of $p^*$ value used as a proxy. Using $p^*$ = 99% vs. $p^*$ = 99.9% vs. $p^*$ = 99.99% gave very different LRP estimates. 
@@ -72,7 +72,7 @@ We initially considered an alternative approach to logistic regression in which 
 To Do: mention uncertainty
 
 
-#### LOGISTIC REGRESSION MODEL DIAGNOSTICS
+##### Logistic Regression Model Diagnostics
 
 There are several assumptions associated with logistic regression, of which four are relevant for our application to LRPs, listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, as well as statistical significance of model coefficients, goodness-of-fit, and classification accuracy of LRPs developed from the logistic regression. All analyses were implemented using R v.4.0.4 unless otherwise specified [@r_core_team_r_2021].
 
@@ -85,7 +85,7 @@ There are several assumptions associated with logistic regression, of which four
 4. The sample size is large. Logistic regression assumes that the sample size of the data set is large enough to draw valid conclusions from the fitted model.
 
 
-##### Evaluating assumption of linearity (Assumption 1)
+**Evaluating assumption of linearity (Assumption 1)**
 
 A Box-Tidwell test was used to evaluate linearity by assessing the significance of an additional interaction term in the logistic regression, 
 
@@ -96,8 +96,8 @@ A Box-Tidwell test was used to evaluate linearity by assessing the significance 
 
 A significant interaction term $B_2$, indicates a non-linear relationship between aggregate abundance and log-odds, violating this assumption [@fox_applied_2016].
 
-##### Evaluating independence (Assumption 2)
 
+**Evaluating independence (Assumption 2)**
 
 Deviance residuals, $d$, were estimated for each year,
 
@@ -125,19 +125,23 @@ when $y=1$ [@ahmad_diagnostic_2011].
 
 The magnitude of lag-1 autocorrelation was then estimated among deviance residuals and evaluated for statistical significance. 
 
-##### Evaluating outliers (Assumption 3)
+
+**Evaluating outliers (Assumption 3)**
 
 As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95\\% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
 
-##### Evaluating sample size (Assumption 4)
+
+**Evaluating sample size (Assumption 4)**
 
 A minimum of 10 data points for the least frequent outcome is recommended to avoid biases in model coefficients [@peduzzi_simulation_1996]. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters increases.
 
-##### Statistical significance of model coefficients
+
+**Statistical significance of model coefficients**
 
 Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensen_tmb_2016]. <!-- Not needed: P-values <0.05 indicate that the null hypothesis of the coefficient being equalt to 0 is rejected [@fox_applied_2016].-->
 
-##### Goodness-of-fit
+
+**Goodness-of-fit**
 
 The goodness-of-fit was evaluated by comparing the ratio of residual deviance to null deviance (similar to a likelihood ratio). This ratio is assumed to follow a Chi-square distribution with 1 degree of freedom, the difference in the number of parameters between full and null models. P-values <0.05 indicate significant lack of fit [@fox_applied_2016].
 
@@ -150,7 +154,8 @@ In addition, the quasi-$R^2$ was calculated to indicate the ratio of the model f
 
 where $d_0$ are the deviance residuals for the null model. The quasi-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks, but unlike $R^2$ values for linear models, it does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
 
-##### Classification accuracy of LRPs
+
+**Classification accuracy of LRPs**
 
 Classification accuracy was evaluated based on the ratio of successful classifications to total number of data points in the logistic regression, also called the hit ratio. Successful classifications were the number of years when the model successfully predicted that all CUs were above their lower benchmark plus the number years when the model successfully predicted that at least one CU was below its lower benchmark.  The hit ratio tends to be biased towards unrealistically good classification rates when computed with the same sample used for fitting the logistic model. Therefore, we also considered an out-of-sample approach to classification accuracy, where the logistic regression was estimated iteratively removing a single data point and the occurrence of successes relative to observations were based on the model that did not contain that data point. 
 
@@ -178,34 +183,39 @@ Detailed descriptions of the parameterization of samSim for our two case study a
 
 The following steps were taken to calculate projected LRPs using samSim:
 
-*1.* Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations.
+   1. Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations.
 
 
-*2.* For each simulated year-trial combination, characterize abundances as follows:
+   2. For each simulated year-trial combination, characterize abundances as follows:
 
-    i) Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on 200 fish intervals. E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
+      * Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on 200 fish intervals. E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
 
-    ii) Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
+      * Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
 
 
-*3.* For each aggregate abundance bin, $AggS_{bin}$:
+   3. For each aggregate abundance bin, $AggS_{bin}$:
 
-    i) Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 simulation-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
+      * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 year-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
 
-    ii) Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 simulation-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes in which all CUs were above their lower benchmarks.
+      * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 year-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes in which all CUs were above their lower benchmarks.
 
-    iii) Calculate the probability that all CUs will be above their lower benchmarks for that bin as:
+      * Calculate the probability that all CUs will be above their lower benchmarks for that bin as:
 \begin{equation}
    Pr(All CUs > LBM) = \frac{Number of success in SAgg_{bin}} {Number of realizations in SAgg_{bin}}
    (\#eq:projBins)
 \end{equation}
 For example, if 50 of the 200 realizations that fell within the $SAgg_{bin}$ of 10,000 - 12,000 fish were 'successes', there would be a 25% probability (50 / 200 = 0.25) that all CUs would be above their lower benchmarks when aggregate abundances are between 10,000 and 12,000 fish.
 
-*4.* Identify the LRP as the aggregate abundance bin, $AggS_{bin}$, that is closest to the required probability threshold that all CUs are above their LBMs.
+   4. Identify the LRP as the aggregate abundance bin, $AggS_{bin}$, that is closest to the required probability threshold that all CUs are above their LBMs.
 
 
-An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shows in figure xxx for the four probability levels used in our case studies (p = 0.5, 0.66, 0.90, and 0.99). Uncertainty estimates for LRPs are not available based on this method, but that LRP estimates should be presented as a range based on the $SAgg_{bin}$ bin size.
+An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shows in Figure @ref(fig:example-projectedCurve) for the four probability levels used in our case studies (p = 0.5, 0.66, 0.90, and 0.99). Uncertainty estimates for LRPs are not available based on this method, but that LRP estimates should be presented as a range based on the $SAgg_{bin}$ bin size.
 
+
+
+```{r example-projectedCurve, fig.cap="Example of projected probability curve derived from projections over 30 years and 10,000 MC trials.  The curve shows the projected probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance, with each dot in teh curve representing a single combination of year and simulation replicate. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs are greater than their LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/methods-Example-ProjectedLRP.png")
+```
 
 
 

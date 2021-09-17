@@ -53,7 +53,7 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-Combined.png")
 ```
 
 
-Data were similar to those previously described in Arbeider et al. 2020.  Detailed descriptions of data treatments, assumptions, infilling, and data quality are provided in @arbeider_interior_2020. More recent updates that are not described in @arbeider_interior_2020 include the incorporation of three additional years of data (return years 2018-2020), updates to the smolt-to-adult marine survival rate index to use a weighted average by release size, and increased data quality screening of scale ages used to calculate recruitment-at-age (M. Arbeider, pers. comm).
+Data were similar to those previously described in @arbeider_interior_2020; data treatments, assumptions, infilling, and data quality are described in detail in that document. More recent updates that are not described in @arbeider_interior_2020 include the incorporation of three additional years of data (return years 2018-2020), updates to the smolt-to-adult marine survival rate index to use a weighted average by release size, and increased data quality screening of scale ages used to calculate recruitment-at-age (M. Arbeider, pers. comm).
 
 
 -	Still to add: 
@@ -106,7 +106,7 @@ $\beta_i$ = density dependent term describing the rate of decrease in log-surviv
 
 $\sigma_{v_i}$ = standard deviation of process error on recruitment deviations
 
-This model formulation is similar to the Ricker model used in @arbeider_interior_2020, but without a hierarchical structure imposed on $log(\alpha_i)$. We placed the following non-informative constraints on the likelihood function to replicate the Bayesian model fitting routine of @arbeider-interior-2020:
+This model formulation is similar to the Ricker model used in @arbeider_interior_2020, but without a hierarchical structure imposed on $log(\alpha_i)$. We placed the following non-informative constraints on the likelihood function to replicate the Bayesian model fitting routine of @arbeider_interior_2020:
 
 \begin{equation}
   \gamma \sim Normal(0,10)
@@ -193,7 +193,7 @@ where, $W$ represents the Lambert W function (Scheurell 2016). $S_{gen}$ was the
 
 **Distribution among subpopulations**
 
-The second type of CU benchmark is based on the distribution of spawning escapement among subpopulations nested within CUs (Table \@ref(tab:cohoCU2SP)). We have based this benchmark on the short-term recovery objective identified by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006, which @arbedier_interior-2021 summarized as: *"the 3-year geometric average, natural-origin escapement in at least half of the subpopulations within each of the five populations is to exceed 1000 spawning Coho Salmon, excluding hatchery fish spawning in the wild"*, where 'populations' is analogous to CUs. We selected the short-term recovery target to represent a lower CU benchmark in our study because, as noted by @arbeider-interior-2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. The “half of sub-populations within each CU” threshold required 2 out of 3 sub-populations to be above 1000 fish for the North Thompson and South Thompson CUs, 1 out of 2 sub-populations to be above 1000 fish for the Lower Thompson and Middle Fraser CUs, and the only sub-population in the Fraser Canyon to be above 1000 fish. This distributional benchmark is specific to the Interior Fraser Coho SMU. We have retained it as part of this case study to maintain consistency with previous work.  
+The second type of CU benchmark is based on the distribution of spawning escapement among subpopulations nested within CUs (Table \@ref(tab:cohoCU2SP)). We have based this benchmark on the short-term recovery objective identified by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006, which @arbeider_interior_2020 summarized as: *"the 3-year geometric average, natural-origin escapement in at least half of the subpopulations within each of the five populations is to exceed 1000 spawning Coho Salmon, excluding hatchery fish spawning in the wild"*, where 'populations' is analogous to CUs. We selected the short-term recovery target to represent a lower CU benchmark in our study because, as noted by @arbeider_interior_2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. The “half of sub-populations within each CU” threshold required 2 out of 3 sub-populations to be above 1000 fish for the North Thompson and South Thompson CUs, 1 out of 2 sub-populations to be above 1000 fish for the Lower Thompson and Middle Fraser CUs, and the only sub-population in the Fraser Canyon to be above 1000 fish. This distributional benchmark is specific to the Interior Fraser Coho SMU. We have retained it as part of this case study to maintain consistency with previous work.  
 
 
 ### LRP Estimation: Proportion of CUs > Lower Benchmark
