@@ -12,7 +12,7 @@ output:
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtby_conservation_2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series and consistent observation methodology (Figure \@ref(fig:chinook-map); Table \@ref(tab:chinook-Overview), @riddell_review_2002). Hatchery enhancement is an important component of many of these stocks. Hatcheries are a conservation tool for wild salmon populations and can increase the availability of fish for harvest, but they can also reduce wild genetic diversity and are considered a risk factor for the long-term sustainability of CUs [@withler_genetically_2018]. Therefore only indicator stocks without significant enhancement were included in our analyses. Proportionate Natural Influence, PNI, is a metric of the genetic risk of hatcheries on natural populations, with values < 0.5 indicating Integrated-Hatchery populations where most fish are hatchery origin [@withler_genetically_2018]. Only stocks with PNI values $\geqslant$ 0.5 were included in the development of LRPs and assessment against those LRPs (J. Bokvwist, pers. comm. DFO South Coast Stock Assessment). 
 
 
-```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs (coloured red, blue, and yellow), and inlets (labelled in black).", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs (coloured red, blue, and yellow), and inlets (labelled in black- NAMES TO BE REVISED).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chinook-map.png")
 ```
 <!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat-->
@@ -269,27 +269,17 @@ knitr::include_graphics("figure/chinook-RunningCorrelations.png")
 
 Within the forward projection model, correlations in spawner abundances among inlets are driven by three model components, each described in more detail below: (1) covariance in exploitation rates among inlets, which is determined from a common interannual exploitation (due to shared exploitation offshore, parameterized from pre-terminal exploitation on Robertson Creek hatchery fish), and additional inlet-specific variability in exploitation due to inlet-specific vulnerability to exploitation, (2) covariance in recruitment residuals among inlets, and (3) covariance in age proportions of recruits among inlets. 
 
-*Covariance in exploitation*
-
-We assumed an average exploitation rate as observed for WCVI Chinook in recent years (2010-2019, Robertson Creek indicator, 30%, Figure \@ref(fig:chinook-ER), with common interannual variability in exploitation rates due to shared exploitation history offshore. 
-
-In forward projections, interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), parameterized from estimated pre-terminal exploitation rates for Robertson Creek, with a coefficient of variation (cv) = 0.17 (Table \@ref(tab:chinook-BaseCasePars)). Without data to parameterize inlet-specific variability in exploitation rates, we assumed the inlet-specific variability was half the common (SMU-level) interannual variability (cv=0.085), and varied this in sensitivity analyses from 0 and 0.17 to cover plausible bounds (Figure \@ref(fig:chinook-ERdist)). 
-
-We assumed that inlets were either consistently under- or over-exploited relative to the average over the entire time-series (e.g., due to the spatial and temporal variability in inlet-specific migration patterns affecting vulnerability to fisheries), but that this bias changed over MC trials. Future analyses could include consistent biases in exploitation for specific inlets (e.g., positive biases for southern inlets and negative biases for northern inlets).
-
-
-In the forward projections, pairwise correlations in projected spawner abundances among inlets were similar to observed pairwise correlations in spawner abundances among inlets (Figure \@ref(fig:chinook-boxplotscvER)). Varying assumptions about variability in exploitation among inlets between cv= 0 and 0.17 did not impact the distribution of correlations in spawner abundances in the projections.  
-
-
-*Covariance in recruitment residuals*
-
-We parameterized correlations in recruitment residuals among inlets from the observed correlations in spawner abundances among inlets derived from the WCVI Chinook run reconstruction (D. Dobson and D. McHugh, pers. comm. DFO South Coast Stock Assessment Figure \@ref(fig:chinook-bubbleCor)). In sensitivity analyses, we scaled the pairwise correlations in recruitment residuals among inlets by 0.5 and 0 of the observed spawner correlations (0 representing recruitment residuals that were uncorrelated among inlets in the projections). We then compared the resulting correlations in projected spawner abundances to observed correlations, to ground-truth our assumption and evaluate the extent to which the model provided realistic projections. 
-
 ```{r chinook-ER, echo=FALSE, fig.cap = "Pre-terminal exploitation rates for Robertson Creek CWT indicator.", out.width = '60%'}
 ERs <- read.csv("data/WCVIER.csv")
 ggplot(ERs,aes(Year, ER)) + geom_point() + geom_line()
 ```
 
+
+*Covariance in exploitation*
+
+We assumed an average exploitation rate as observed for WCVI Chinook in recent years (2010-2019, Robertson Creek indicator, 30%, Figure \@ref(fig:chinook-ER), with common interannual variability in exploitation rates due to shared exploitation history offshore. 
+
+In forward projections, interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), parameterized from estimated pre-terminal exploitation rates for Robertson Creek, with a coefficient of variation (cv) = 0.17 (Table \@ref(tab:chinook-BaseCasePars)). Without data to parameterize inlet-specific variability in exploitation rates, we assumed the inlet-specific variability was half the common (SMU-level) interannual variability (cv=0.085), and varied this in sensitivity analyses from 0 and 0.17 to cover plausible bounds (Figure \@ref(fig:chinook-ERdist)). 
 
 ```{r chinook-ERdist, echo=FALSE, fig.cap = "Variability in projected exploitation rates over time (cv=0.17) and among inlets (cv=0.085), from an average explotation of 0.3.", out.width = '50%'}
 nTrials <- 100000
@@ -360,6 +350,10 @@ g2 <- out %>%  dplyr::filter(cvER=="0.085"|cvER=="0.17") %>%
 
 g2
 ```
+We assumed that inlets were either consistently under- or over-exploited relative to the average over the entire time-series (e.g., due to the spatial and temporal variability in inlet-specific migration patterns affecting vulnerability to fisheries), but that this bias changed over MC trials. Future analyses could include consistent biases in exploitation for specific inlets (e.g., positive biases for southern inlets and negative biases for northern inlets).
+
+
+In the forward projections, pairwise correlations in projected spawner abundances among inlets were similar to observed pairwise correlations in spawner abundances among inlets (Figure \@ref(fig:chinook-boxplotscvER)). Varying assumptions about variability in exploitation among inlets between cv= 0 and 0.17 did not impact the distribution of correlations in spawner abundances in the projections.  
 
 ```{r chinook-boxplotscvER, echo=FALSE, fig.cap="Distribution of correlations of spawner abundances among inlets for observed data over the most recent 20 years (n=10 pairwise correlations) and projected time-series, with a cv in exploitation rates among inlets = 0, 0.085 or 0.17 (0.17 is equal to the estimated interannual variablity in exploitation rates). ", out.width = '60%'}
 # knitr::include_graphics(here::here("figure/chinook-compareEscCor-cvER.png"))
@@ -370,6 +364,11 @@ knitr::include_graphics("figure/chinook-compareEscCor-cvER.png")
 # Consider adding another run with annualcvER=FALSE (cvER =0.21) in Appendix
 ```
 
+\linebreak
+
+*Covariance in recruitment residuals*
+
+We parameterized correlations in recruitment residuals among inlets from the observed correlations in spawner abundances among inlets derived from the WCVI Chinook run reconstruction (D. Dobson and D. McHugh, pers. comm. DFO South Coast Stock Assessment Figure \@ref(fig:chinook-bubbleCor)). In sensitivity analyses, we scaled the pairwise correlations in recruitment residuals among inlets by 0.5 and 0 of the observed spawner correlations (0 representing recruitment residuals that were uncorrelated among inlets in the projections). We then compared the resulting correlations in projected spawner abundances to observed correlations, to ground-truth our assumption and evaluate the extent to which the model provided realistic projections. 
 
 
 ```{r chinook-bubbleCor, echo=FALSE, fig.cap=" Bubble plot of correlations in spawner abundances among inlets over time, 1994-2020.", out.width = '40%'}
@@ -391,6 +390,7 @@ knitr::include_graphics("figure/chinook-compareEscCor-recCorSca.png")
 
 ```
 
+\newline
 
 *Variability in age proportions recruits among inlets*
 
@@ -459,8 +459,9 @@ knitr::include_graphics("figure/chinook-cvER-ProjLRPCurve-ALLp.png")
 
 ```
 
+\linebreak
 
-We further considered sensitivity analyses on average exploitation rates from 5-45% (Figure \@ref(fig:chinook-projLRPER)), where 30% exploitation was the base case. As exploitation increased, the LRP associated with a specified probability of all inlets being above their lower benchmark also increased. At high exploitation, the depletion of any given inlet was more frequent despite relatively high aggregate abundances on the remaining inlets.   
+We further considered sensitivity analyses on average exploitation rates from 5-45% (Figure \@ref(fig:chinook-projLRPER)), where 30% exploitation was the base case. As exploitation increased, the LRP associated with a specified probability of all inlets being above their lower benchmark also increased. At high exploitation, the depletion of any given inlet was more frequent despite often relatively high aggregate abundances on the remaining inlets.   
 
 ```{r chinook-projLRPER, echo=FALSE, warning=FALSE, fig.cap="Probability of all inlets being above their lower benchmark along a gradient in aggregate abundances within bins of 200 fish, derived from projections over 30 years and 50,000 MC Trials, under a range of average exploitation rates from 5-45\\%."}
 
@@ -471,7 +472,8 @@ knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 ```
 
 
-   
+\linebreak
+
 Given uncertainty in current and anticipated productivity, projection-based LRPs were evaluated under a range of productivities from 75% - 150% of current estimates. Scenarios with lower productivity (<0.75x current estimates) resulted in a large proportion of trajectories with productivity below replacement, for which LRPs could not be estimated. 
 
 Projection-based LRPs tended to increase under low productivity and vice versa, a trend that was expected due to the inverse relationship between productivity and inlet-specific $S_gen$ values [@holt_cautions_2015]. At low productivity, the spawner abundances required to achieve $S_MSY$ ($S_gen$), tends to increase, thereby becoming more precautionary.  The sensitivity of LRPs to productivity highlights the value of updating benchmarks and projection-based LRPs as productivity changes (Figure \@ref(fig:chinook-projLRPsAlpha)). Our results also show that uncertainty in projections increased under low productivity, likely requiring more random Monte Carlo trials for stabilization at p=0.5. The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. At high productivity, LRPs at the p=0.5 level could not be estimated (though estimation may be possible with more Monte Carlo trials). More detailed analyses of LRPs along the entire range of productivities and exploitation was beyond the scope of this case study.
@@ -499,7 +501,7 @@ knitr::include_graphics("figure/chinook-statusPlot-withBars2020.png")
 
 ## OVERALL CONCLUSIONS AND FUTURE ANALYSES
 
-A few key conclusions from this case study are highlighted for possible broader relevance:
+A few key conclusions from this case study are highlighted for broader relevance:
 
 * Status was consistent across the LRP methods that were available, and with a previously published assessment.
 
