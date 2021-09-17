@@ -204,7 +204,7 @@ unique(chinook_cu$CU_NAME)
 wvc <- chinook_cu[grep("West Vancouver Island", chinook_cu$CU_NAME), ]
 wvc$CU_NAME <- sub("_.*", "", wvc$CU_NAME)
 # get bounds 
-bounds <- as.numeric(st_bbox(wvc))
+ck_bounds <- as.numeric(st_bbox(wvc))
 # Get palette
 pal <- pnw_palette("Sunset", length(wvc$CU_NAME), type="continuous")
 # get labels for inlets
@@ -213,10 +213,12 @@ inlets1 <- paste0("^", inlets, "$")
 keep <- grep(paste(inlets1, collapse="|"), pnames$name_en)
 chk_lab <- pnames[keep, ]
 chk_lab <- chk_lab[!duplicated(chk_lab$name_en), ] # remove duplicated labels
-  
+chk_lab$name_en[grep("Nitinat Lake", chk_lab$name_en)]  <- "Nitinat"
+chk_lab$name_en[grep("San Juan Point", chk_lab$name_en)] <- "San Juan"
+chk_lab$name_en
   
 png(here("figure/chinook-map.png"), width=8, height=7, units="in", res=600)
-ggplot(ifc) +
+ggplot(wvc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
   geom_sf(data=wvc, aes(fill=CU_NAME), size=0) + 
@@ -230,7 +232,7 @@ ggplot(ifc) +
   #annotate( geom="text", label = "Salish Sea", x = -123.8, y = 49.3, fontface = "italic", color = "darkblue", size = 3, angle=327) +
   scale_fill_manual( values=pal, guide=NULL) +
   scale_colour_manual( values=pal, guide=NULL) +
-  coord_sf(xlim = bounds[c(1,3)] + c(0,1) , ylim = bounds[c(2,4)]) +
+  coord_sf(xlim = ck_bounds[c(1,3)] + c(0,1) , ylim = ck_bounds[c(2,4)]) +
   #scale_x_continuous(breaks=seq(-128,-122,1)) +
   xlab(NULL) +
   ylab(NULL) +
