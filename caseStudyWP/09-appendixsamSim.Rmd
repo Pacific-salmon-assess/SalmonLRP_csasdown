@@ -90,9 +90,11 @@ $ER_{y,i,n}$ & Exploitation rate including MU- and CU-specific variability\\
 $o1$, $o2$ & Shape parameters for Beta distribution used to generate CU-specific variability\\
 $\phi_{y,i,n}$ & Standard deviation for CU-specific exploitation rate variability\\
 ${C}_{y,i,n}$ & Catch \\
-${mixC}_{y,i}$ & Mixed stock Canadian catches \\
-${singleC}_{y,i}$ & Single stock Canadian catches\\
+${mC}_{y,i}$ & Mixed stock Canadian catches \\
+${sC}_{y,i}$ & Single stock Canadian catches\\
 $ERagg_{y,i}$ & Aggregate exploitation rates\\
+${obsmC}_{y,i}$ & Observed mixed stock Canadian catches \\
+${obssC}_{y,i}$ & Observed single stock Canadian catches\\
 \hline
 \end{tabular}
 (\#tab:modtab)
@@ -460,11 +462,11 @@ The catch for Canada is further divided in two components, mixed stock fishery a
 
 \begin{align}
 (\#eq:tacmix)
-  {mixC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} 
+  {mC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} 
 \end{align}
 
 \begin{align}
-  {singleC}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
+  {sC}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
   (\#eq:tacsingle)
 \end{align}
 
@@ -525,26 +527,24 @@ The next step is to compute the aggregate exploitation rate and the remaining nu
 
 #### Project observed data 
 
-In this step, observation error is added to the quantities calculated in the current time step. Catch observation error is given by a log normal distribution (Equations \@ref(eq:obsCa)-\@ref(eq:obsC)), the distribution is truncated between the 0.0001 and 0.9999 quantiles. If the catch is taken in a mixed stock fishery, additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process (Equation \@ref(eq:obspCU)). Observed number of spawners is given by a log normal distribution truncated between the 0.0001 and 0.9999 quantiles (Equation \@ref(eq:obsS)). The observed recruitment and observed exploitation rates are derived from the observed catches and observed spawnre numbers (Equations \@ref(eq:obsER) and \@ref(eq:obsRY)).
+In this step, observation error is added to the quantities calculated in the current time step. Catch observation error is given by a log normal distribution (Equations \@ref(eq:obsC)-\@ref(eq:obssingleC)), the distribution is truncated between the 0.0001 and 0.9999 quantiles. If the catch is taken in a mixed stock fishery, additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process (Equation \@ref(eq:obspCU)). Observed number of spawners is given by a log normal distribution truncated between the 0.0001 and 0.9999 quantiles (Equation \@ref(eq:obsS)). The observed recruitment and observed exploitation rates are derived from the observed catches and observed spawnre numbers (Equations \@ref(eq:obsER) and \@ref(eq:obsRY)).
 
 
 \begin{align}
-(\#eq:obsCa)
-  obsC_{y,i,n=U.S.} &= C_{y,i,n=U.S.} \cdot u_{y,i,n}\\
+  obsC_{y,i,n=U.S.} &= C_{y,i,n=U.S.} \cdot u_{y,i,n}
+  (\#eq:obsCa)
 \end{align}
 
 \begin{align}
-(\#eq:obsCa)
-  {obsmixC}_{y,i} &= obspCU_{y,i} \cdot {mixC}_{y,i} \cdot u_{y,i,n}
+  {obsmC}_{y,i} &= {mC}_{y,i} \cdot u_{y,i,n} \cdot obspCU_{y,i} 
   (\#eq:obsmixC)
 \end{align}
 
 
 
 \begin{align}
-(\#eq:obsCa)
-  {obssingleC}_{y,i} &= {singleC}_{y,i} \cdot u_{y,i,n}
-  (\#eq:obsC)
+  {obssC}_{y,i} &= {sC}_{y,i} \cdot u_{y,i,n}
+  (\#eq:obssingleC)
 \end{align}
 
 \begin{align}
@@ -560,7 +560,6 @@ u_{y,i,n} &\sim logN(0,\sigma_{C})
 \begin{align}
 (\#eq:obsS)
   obsS_{y,i} &= S_{y,i} \cdot  \cdot z_{y,i,n}
-  z_{y,i,n} &\sim logN(0,\sigma_{S})
 \end{align}
 
 \begin{align}
