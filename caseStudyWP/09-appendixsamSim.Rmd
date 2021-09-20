@@ -42,7 +42,7 @@ $\sigma_{i}$ & Standard deviation for recruitment error\\
 $\rho$ & Temporal autocorrelation coefficient in recruitment residuals\\
 $\gamma$ & Survival covariate scaler \\
 $covMat$ & Covariance matrix used to generate recruitment deviations with correlation among CUs\\
-$\overline{ER_{n}}$ & Aggregate average exploitation rate for each nation\\
+$\overline{ER_{n}}$ & Nation specific long term average exploitation rate\\
 $\overline{p_{i,j}}$ & Mean proportions of recruits at age\\
 $\tau_{i}$ & Multivariate logistic variability parameter for proportions of recruits at age\\
 $\overline{Surv}$ & Mean survival covariate \\
@@ -50,9 +50,8 @@ $\sigma_{Surv}$ & Standard deviation for survival covariate\\
 $\Upsilon$ & Scalar to cap recruitment values \\
 $gen$ & Generation length \\
 $\varphi$ & Multivariate logistic variability parameter for observed proportions of recruits at age\\
-$\overline{ER}_{n}$ & Nation specific long term average exploitation rate \\
 $CV(\overline{ER}_{n})$ & CV for MU-specific exploitation rate variability \\
-$CV(ER^{MU}_{y,n})$ & CV for CU-specific exploitation rate variability\\
+$CV(ER^{CU}_{y,n})$ & CV for CU-specific exploitation rate variability\\
 $\psi$ & Proportion of the catch associated with mixed stock catch\\
 $\kappa$ & multivariate logistic variability parameter associated with assigning catch in mixed stock fisheries to the correct CU\\
 \hline
@@ -70,7 +69,6 @@ Notation & Definition \\
 \hline
 $S_{y,i}$ & Spawners\\
 $RY_{y,i}$ & Calendar year recruitments\\
-$ER_{y,i}$ & Exploitation rates \\
 $Seq_{i}$ & Equilibrium spawners\\
 $p_{y,i,j}$ & Proportions of recruits at age\\
 $R_{y,i}$ & Brood year recruits \\
@@ -84,11 +82,11 @@ $Smsy_{i}$ & Spawners that produce the maximum sustainable yield \\
 $Sgen_{i}$ & Number of spawners required to recover to $Smsy_{i}$ in one generation in the absence of fishing \\
 ${\alpha^\prime}_{i}$ & Adjusted $\alpha_{i}$ parameters for calculation of time invariant management benchmarks\\
 $obsp_{y,i,j}$ & Observed proportions of recruits at age\\
-$fRY_{y,i}$ &  Forecast of calendar year recruitment\\
+$f(R_{y,i})$ &  Forecast of calendar year recruitment\\
 $ER^{MU}_{y,n}$ & Exploitation rate including only MU-specific variability\\
 $d1$, $d2$ & Shape parameters for Beta distribution used to generate MU-specific variability\\
 $\vartheta$ & Standard deviation for MU-specific exploitation rate variability\\
-$ER^{CU}_{y,i,n}$ & Exploitation rate including MU- and CU-specific variability\\
+$ER_{y,i,n}$ & Exploitation rate including MU- and CU-specific variability\\
 $o1$, $o2$ & Shape parameters for Beta distribution used to generate CU-specific variability\\
 $\phi_{y,i,n}$ & Standard deviation for CU-specific exploitation rate variability\\
 ${C}_{y,i,n}$ & Catch \\
@@ -213,7 +211,7 @@ Once parameters are defined the number of spawners, $S_{y,i}$, is initialized. T
 
 \begin{align}
   S_{y<=6,i} &= Seq_{i}\\
-  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{Canada})
+  S_{y>6,i} &= RY_{y,i} \cdot (1- \overline{ER}_{n=Canada})
   (\#eq:Seqinit)
 \end{align}
 
@@ -240,12 +238,12 @@ The age structure of the returns is computed following a multivariate logistic e
 The following step is to compute recruitment following the recruitment curve of choice. For the LRP version of samSim, three versions of the recruitment curve are available: A simple Ricker curve (equation \@ref(eq:Rickersimple) when $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with freshwater survival covariate (equation \@ref(eq:Rickersurv)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
 
 \begin{align}
-  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
+  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
   (\#eq:Rickersimple)
 \end{align}
 
 \begin{align}
- w_{y=1,i} = 
+ w_{y,i} = 
 \begin{cases}
  v_{y,i} & \text{if } y = 1 \\
  w_{y-1,i} * \rho + v_{y,i} & \text{if } y > 1
@@ -259,7 +257,11 @@ The following step is to compute recruitment following the recruitment curve of 
 
 
 \begin{align}
-  Ra_{y,i,j} &= p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \dfrac{\sigma_{i}^{2}}{2}}\\
+  Ra_{y,i,j} &= p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot Surv_{y,j} + v_{y,i} - \frac{\sigma_{i}^{2}}{2}}
+  (\#eq:Rickersurv)
+\end{align}
+
+\begin{align}
   R_{y,i} &= \sum^{j}Ra_{y,i,j}
   (\#eq:Rickersurv)
 \end{align}
@@ -377,7 +379,7 @@ The observed recruitment by brood year is retrieved by multiplying the true recr
  When forecast error is included in the projection scenarios, it is generated by adding lognormal error around the calendar year recruitment (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). The error distribution is also truncated between the 0.0001 and 0.9999 quantiles to avoid extreme forecast values. Forecast error is not considered in the LRP study cases.
 
 \begin{align}
-  fRY_{y,i} &= RY_{y,i} \cdot exp(\omega_{y,i})
+  f(RY_{y,i}) &= RY_{y,i} \cdot exp(\omega_{y,i})
   (\#eq:FctR)
 \end{align}
 
@@ -426,7 +428,7 @@ In the second layer, CU-specific exploitation rates are drawn from a beta distri
 
 
 \begin{align}
-ER^{CU}_{y,i,n} 
+ER_{y,i,n} 
 \begin{cases}
  \sim Beta(o1_{y,i},o2_{y,i}) & \text{n=Canada} \\
  =\overline{ER}_{n}  & \text{n=U.S.}
@@ -437,8 +439,8 @@ ER^{CU}_{y,i,n}
 
 \begin{align}
    o1_{y,i} &= ({ER^{MU}_{y,n}})^2 \cdot \left(\frac{1-ER^{MU}_{y,n}}{\phi_{y,i,n}^{2}}-\frac{1}{ER^{MU}_{y,n}}\right)\\
-   o2_{y,i} &= o1_{i} \cdot \dfrac{1}{ER^{MU}_{y,n}-1}\\
-   \phi_{y,i,n} &= CV(ER^{MU}_{y,n}) \cdot ER^{MU}_{y,n}
+   o2_{y,i} &= o1_{y,i} \cdot \dfrac{1}{ER^{MU}_{y,n}-1}\\
+   \phi_{y,i,n} &= CV(ER^{CU}_{y,n}) \cdot ER^{CU}_{y,n}
    (\#eq:oERCU)
 \end{align}
 
@@ -446,7 +448,7 @@ ER^{CU}_{y,i,n}
 
  
 \begin{align}
-  {C}_{y,i,n} &= ER^{CU}_{y,i,n} \cdot RY_{y,i}
+  {C}_{y,i,n} &= ER_{y,i,n} \cdot RY_{y,i}
   (\#eq:Catagg)
 \end{align}
  
@@ -458,7 +460,10 @@ The catch for Canada is further divided in two components, mixed stock fishery a
 
 \begin{align}
 (\#eq:tacmix)
-  {mixC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} \\
+  {mixC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} 
+\end{align}
+
+\begin{align}
   {singleC}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
   (\#eq:tacsingle)
 \end{align}
@@ -508,11 +513,14 @@ The next step is to compute the aggregate exploitation rate and the remaining nu
 
 \begin{align}
   (\#eq:eragg)
-  ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}\\ 
+  ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}
+\end{align}
+
+
+\begin{align}
   S_{y,i} = RY_{y,i} \cdot(1-ERagg_{y,i}) 
    (\#eq:spawners)
 \end{align}
-
  
 
 #### Project observed data 
@@ -523,11 +531,21 @@ In this step, observation error is added to the quantities calculated in the cur
 \begin{align}
 (\#eq:obsCa)
   obsC_{y,i,n=U.S.} &= C_{y,i,n=U.S.} \cdot u_{y,i,n}\\
-  {obsmixC}_{y,i} &= obspCU_{y,i} \cdot {mixC}_{y,i} \cdot u_{y,i,n}\\ 
+\end{align}
+
+\begin{align}
+(\#eq:obsCa)
+  {obsmixC}_{y,i} &= obspCU_{y,i} \cdot {mixC}_{y,i} \cdot u_{y,i,n}
+  (\#eq:obsmixC)
+\end{align}
+
+
+
+\begin{align}
+(\#eq:obsCa)
   {obssingleC}_{y,i} &= {singleC}_{y,i} \cdot u_{y,i,n}
   (\#eq:obsC)
 \end{align}
-
 
 \begin{align}
 u_{y,i,n} &\sim logN(0,\sigma_{C})
