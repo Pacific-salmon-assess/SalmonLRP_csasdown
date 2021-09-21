@@ -1,6 +1,6 @@
 # INTRODUCTION
 
--	This document supports the development of guidelines for defining LRPs for Pacific Salmon, as required by the recently revised Fisheries Act.  Guidelines that have been informed by this work are available in the companion working paper “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”.     
+-	This document supports the development of guidelines for defining LRPs for Pacific Salmon, as required by the recently revised Fisheries Act. Guidelines that have been informed by this work are available in the companion working paper “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”.     
 
 -	Under the New Fisheries Act, Limit Reference Points (LRPs) that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  For Pacific salmon, it is anticipated there could be > 65 major fish stocks (or stock management units, SMUs), where the proposed functional definition of a SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status.  
 
