@@ -220,14 +220,7 @@ For three of the five CUs,estimates of Sgen based on the IM.cap spawner recruit 
 
 For all five CUs, the generational (3-year) geometric average escapement between 2001 and 2020 remained above the estimated 2020 value of Sgen ($Sgen_{2020}$), regardless of which stock recruit model was used to estimate Sgen (Figure \@ref(fig:coho-CU-timeseries)).  Because the proportion of CUs above Sgen was always 100%, there were no years in the available time series that were below the proportion-based LRP. 
 
-Only 4 of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years (Figure \@ref(fig:coho-Subpop-timeseries)). All other CUs dropped below 1000 spawners in one or more years. 
-
-
-
-[--- more results summary to be added here ----]
-
-All 11 subpopulations were above 1000 spawners in 2020, which means that the SMU would be well above the LRP based on the proportional LPR approach applied to the distributional benchmark in 2020 (Figure \@ref(fig:coho-Subpop-timeseries)).
-
+Four of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years; the other 8 CUs dropped below 1000 spawners in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below 1000 spawners, which meant that the trigger of more than half of the subpopulations within a CU with a generational average escapement less than 1000 fish was only met in a subset of years for most CUs. The Lower Thompson CU, which consists of two subpopulations, was most often the CU that dropped below the distributional benchmark, with at least one of the two subpopulations (Lower Thompson or Nicola) below 1000 fish in 5 of the 20 years. In total, there were xx years in the 20-year time series in which one or more CUs failed to meet their distributional benchmarks, which means that the proportional LRP that 100% of CUs are above their distributional target was breached in each of these xx years.  All 11 subpopulations were above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on distributional targets in 2020 (Figure \@ref(fig:coho-Subpop-timeseries)).
 
 
 ### LRP Estimation: Aggregate Abundance Empirical LRPs 
