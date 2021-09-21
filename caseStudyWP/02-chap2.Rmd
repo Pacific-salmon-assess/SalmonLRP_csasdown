@@ -163,7 +163,7 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS
 
-Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
+Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
 
 Updated functionality for the LRP version of samSim include:
