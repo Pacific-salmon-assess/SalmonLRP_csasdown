@@ -1,7 +1,6 @@
 # CASE STUDY 1: INTERIOR FRASER COHO SALMON
 
 ## CONTEXT
-
 The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon. Like most coho salmon, IF Coho spend at least one full year in freshwater as fry before migrating to the ocean as smolts [@arbeider_interior_2020]. During their freshwater fry residence, IF coho are believed to migrate away from spawning sites and into small tributaries and off-channel habitat. Most (88%) IFC have a 3-year life cycle, in which they leave freshwater in their second year and spend 18 months at sea prior to returning to their natal system to spawn.The remaining 12% have a 4-year life cycle in which they spend an additional year in freshwater before migrating as smolts in their third year. Both 3-year and 4-year life cycles spend 18 months at sea. Less than 1% of IF Coho are believed to return as jacks (precocious mature males that spend only 6 months as sea) or at ages older than 4 years [@arbeider_interior_2020].
 
 ;; WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho based on genetics and geographic separation: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson [@dfo_wild_2015; Figure \@ref(fig:coho-map)]. Previous work by the Interior Fraser Coho Recovery Team also identified 11 subpopulations nested within the five CUs, and developed recovery objectives based on maintaining abundance in each of these smaller subpopulation units [@ifcrt_interior_fraser_coho_recovery_team_conservation_2006; Table \@ref(tab:cohoCU2SP)]. The delineation of subpopulations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic evidence. The 11 subpopulations are described in detail by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006. The Fraser Canyon CU is the only CU with a single subpopulation; this result is because most of the spawning for the CU occurs within a single river [@arbeider_interior_2020]. 
@@ -201,7 +200,7 @@ The second type of CU benchmark is based on the distribution of spawning escapem
 
 **Methods**
 
-We looked at the proportion of CUs that dropped below Sgen (Figure \@ref(fig:coho-CU-timeseries)) and the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-timeseries)) to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis. 
+We looked at the proportion of CUs that dropped below Sgen (Figure \@ref(fig:coho-CU-timeseries)) and the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-EscpSeries)) to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis. 
 
 
 ```{r coho-CU-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Solid orange lines show estimates of Sgen from the IM model, while dashed orange lines show estimates of Sgen from the IM.HiCap model.", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -209,8 +208,8 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-wStatus.png")
 ```
 
 
-```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho shown as annual escapements (grey lines) and 3-year geometric mean escapements (thick black line). CUs to which each subpopulation belong to are shown in Table ----", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/coho-Subpop-EscpSeries.png")
+```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Gray dots shows years in which the 3-year geometric mean escapement was above the 1000 fish threshold used to assess distributional status, while red dots show years in which the 1000 fish threshold was not met.  CUs to which each subpopulation belong to are shown in Table --", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
 
 
@@ -219,14 +218,9 @@ knitr::include_graphics("figure/coho-Subpop-EscpSeries.png")
 
 For three of the five CUs,estimates of Sgen based on the IM.cap spawner recruit model were higher than those based on the IM model (Middle Fraser, Lower Thompson, and South Thompson CUs; Figure \@ref(fig:coho-CU-timeseries)). The North Thompson CU showed the opposite pattern, with the Sgen estimate from the IM model higher than that from the IM.cap model. The fifth CU, Fraser Canyon, had almost equal estimates for the two approaches with Sgen estimates only differing by 32 fish. 
 
-For all five CUs, the generational (3-year) geometric average escapement between 2001 and 2020 remained above the estimated value of Sgen in 2020 ($Sgen_{2020}$), regardless of which stock recruit model was used to estimate Sgen (Figure \@ref(fig:coho-CU-timeseries)).Because the proportion of CUs above Sgen was always 100%, there were no years in the available time series that were below the proportion-based LRP. 
+For all five CUs, the generational (3-year) geometric average escapement between 2001 and 2020 remained above the estimated 2020 value of Sgen ($Sgen_{2020}$), regardless of which stock recruit model was used to estimate Sgen (Figure \@ref(fig:coho-CU-timeseries)).  Because the proportion of CUs above Sgen was always 100%, there were no years in the available time series that were below the proportion-based LRP. 
 
-Only 3 of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years (Figure \@ref(fig:coho-Subpop-timeseries)). All other CUs dropped below 1000 spawners in one or more years. 
-
-[--- more results summary to be added here ----]
-
-All 11 subpopulations were above 1000 spawners in 2020, which means that the SMU would be well above the LRP based on the proportional LPR approach applied to the distributional benchmark in 2020 (Figure \@ref(fig:coho-Subpop-timeseries)).
-
+Four of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years; the other 8 CUs dropped below 1000 spawners in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below 1000 spawners, which meant that the trigger of more than half of the subpopulations within a CU with a generational average escapement less than 1000 fish was only met in a subset of years for most CUs. The Lower Thompson CU, which consists of two subpopulations, was most often the CU that dropped below the distributional benchmark, with at least one of the two subpopulations (Lower Thompson or Nicola) below 1000 fish in 5 of the 20 years. In total, there were xx years in the 20-year time series in which one or more CUs failed to meet their distributional benchmarks, which means that the proportional LRP that 100% of CUs are above their distributional target was breached in each of these xx years.  All 11 subpopulations were above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on distributional targets in 2020 (Figure \@ref(fig:coho-Subpop-timeseries)).
 
 
 ### LRP Estimation: Aggregate Abundance Empirical LRPs 
