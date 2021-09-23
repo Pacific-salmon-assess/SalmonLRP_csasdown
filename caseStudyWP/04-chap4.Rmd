@@ -184,7 +184,8 @@ Projection-based LRPs were derived for WCVI Chinook by projecting inlet-specific
 
 
 
-\begin{longtable}[]{p{4cm} p{5cm} p{6cm}}
+
+\begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
 \caption{Parameters used for inlet-specific projections of WCVI Chinook population dynamics.}\\
 \hline
 Parameter & Value & Source \\ 
@@ -192,21 +193,33 @@ Parameter & Value & Source \\
 \endhead
 \hline
 Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+
 Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\\\
-$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637,Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\\\
+$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\\\
+
 $S_{REP}$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\\\
+
 Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+
 Covariance in Ricker residuals among inlets & Equal to covariance in spawner time-series among inlets & Covariance in spawners among inlets from wild indicator stocks (D. Dobson \& D. McHugh, pers. comm.) \\\\  
+
  Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuoquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Ave ppns from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\\\  
+
  Variability in age ppns (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuoquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of ppns of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\\\
+
  Average exploitation rate & 0.30 & Average pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator (D. Dobson \& D. McHugh pers. comm.). Varied in sensitivity analyses 0.05 - 0.45.\\\\
+
 Interannual variability in exploitation rates (CV) & 0.17 & Estimated from pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator. Assumed to be beta distributed, constrained between 0-1.\\\\
+
 Variability in exploitation rates among inlets (CV) & 0.085 &  Assumed to be half of interannual variability, varied in a sensitivty analysis (0-0.17). Assumed to be beta distributed, constrained between 0-1.\\\\ 
+
 Initial abundances  &  $S_{REP}$ (inlet-specific) & MLE from watershed-area model\\\\
+
 Extirpation threshold &  2 & Mating constraint \\
 \hline
-\end{longtable}
 (\#tab:chinook-BaseCasePars)
+\end{longtable}
+
 
 <!--
 
