@@ -200,7 +200,7 @@ The second type of CU benchmark is based on the distribution of spawning escapem
 
 **Methods**
 
-We looked at the proportion of CUs that dropped below Sgen (Figure \@ref(fig:coho-CU-timeseries)) and the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-EscpSeries)) to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis. 
+We looked at the proportion of CUs that dropped below two types of lower benchmark to determine in which years between 1998 and 2020 the LRP would have been breached: (i) Sgen (Figure \@ref(fig:coho-CU-timeseries)) and (ii) the proportion of CUs that failed to meet the distributional target of 1000 fish in half of subpopulations \@ref(fig:coho-Subpop-EscpSeries)) . Status was assessed as being below the LRP in years in which one or more CUs was below their CU-level benchmark. Estimates of Sgen were based on all data available up to 2020, so our evaluation is not a true retrospective analysis in which only the data available up to each year in a time series are used to estimate status. 
 
 
 ```{r coho-CU-timeseries, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Solid orange lines show estimates of Sgen from the IM model, while dashed orange lines show estimates of Sgen from the IM.HiCap model.", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -216,11 +216,9 @@ knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 
 **Results**
 
-For three of the five CUs,estimates of Sgen based on the IM.cap spawner recruit model were higher than those based on the IM model (Middle Fraser, Lower Thompson, and South Thompson CUs; Figure \@ref(fig:coho-CU-timeseries)). The North Thompson CU showed the opposite pattern, with the Sgen estimate from the IM model higher than that from the IM.cap model. The fifth CU, Fraser Canyon, had almost equal estimates for the two approaches with Sgen estimates only differing by 32 fish. 
+For all five CUs, the generational (3-year) geometric average escapement between 2001 and 2020 remained above the 2020 estimate of Sgen ($Sgen_{2020}$), regardless of which stock recruit model was used to estimate Sgen (Figure \@ref(fig:coho-CU-timeseries)). Because the proportion of CUs above Sgen was always 100%, there were no years in which a trigger-based LRP that required 100% of CUs to be above Sgen would have been breached. Estimates of Sgen based on the IM.cap spawner recruit model were higher than those based on the IM model for three of the five CUs (Middle Fraser, Lower Thompson, and South Thompson CUs; Figure \@ref(fig:coho-CU-timeseries)). The North Thompson CU showed the opposite pattern, with the Sgen estimate from the IM model higher than that from the IM.cap model. The fifth CU, Fraser Canyon, had almost equal estimates for the two approaches. Thus, while the use of the IM.cap model would be expected to trigger an LRP breach at lower CU level abundances for the majority of CUs, generational average abundances remained high enough between 2001 and 2020 to avoid this happening. 
 
-For all five CUs, the generational (3-year) geometric average escapement between 2001 and 2020 remained above the estimated 2020 value of Sgen ($Sgen_{2020}$), regardless of which stock recruit model was used to estimate Sgen (Figure \@ref(fig:coho-CU-timeseries)).  Because the proportion of CUs above Sgen was always 100%, there were no years in the available time series that were below the proportion-based LRP. 
-
-Four of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years; the other 8 CUs dropped below 1000 spawners in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below 1000 spawners, which meant that the trigger of more than half of the subpopulations within a CU with a generational average escapement less than 1000 fish was only met in a subset of years for most CUs. The Lower Thompson CU, which consists of two subpopulations, was most often the CU that dropped below the distributional benchmark, with at least one of the two subpopulations (Lower Thompson or Nicola) below 1000 fish in 5 of the 20 years. In total, there were xx years in the 20-year time series in which one or more CUs failed to meet their distributional benchmarks, which means that the proportional LRP that 100% of CUs are above their distributional target was breached in each of these xx years.  All 11 subpopulations were above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on distributional targets in 2020 (Figure \@ref(fig:coho-Subpop-timeseries)).
+Four of the 11 sub-populations had their generational average escapement remain above the 1000 spawner threshold in all years; the remaining 8 CUs dropped below 1000 spawners in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the trigger of more than half of the subpopulations within a CU with a generational average escapement less than 1000 fish was only met in a subset of years for most CUs. The Lower Thompson CU, which consists of two subpopulations, was the CU that most frequently dropped below the distributional benchmark, with at least one of the two subpopulations (Lower Thompson or Nicola) below 1000 spawners in 5 of the 20 years. In total, there were xx years in the 20-year time series in which one or more CUs failed to meet their distributional benchmark, triggering an LRP breach at the SMU level. All 11 subpopulations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on distributional targets (Figure \@ref(fig:coho-Subpop-timeseries)).
 
 
 ### LRP Estimation: Aggregate Abundance Empirical LRPs 
@@ -260,17 +258,92 @@ where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP ca
 
 
 
-Figure: Logistic model fit - IM in 2020
+***Logistic LRP Estimates in 2020***
 
-Figure: Logistic model fit - IM cap in 2020
 
-Figure: Logistic model fit - distribution
 
-Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
+
+
+```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen and Sgen is estimated using the IM spawner recruit model. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs (MLE estimates only; no confidence intervals) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption additional details. ", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+knitr::include_graphics("figure/coho-IM2020-LogisticLRP.png")
+```
+
+
+```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen and Sgen is estimated using the IM.HiCap spawner recruit model. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement that there is a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval. LRPs (based on MLE estimate only) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption additional details.", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+knitr::include_graphics("figure/coho-IMCap2020-LogisticLRP.png")
+```
+
+
+```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit to IF Coho data (1998 - 2020) to predict the probability that all CUs are above the distributional lower benchmark of half of all subpopulations within a CU with spawning abundances above 1000 fish. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement that there is a 50\\% probability of all CUs being above the benchmark, while the yellow shaded region shows the associated 95\\% confidence interval. LRPs (based on MLE estimate only) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
+```
+
+
+
+<!-- 
+------------------------------------------------------------------
+Probability 
+Threshold     Sgen: IM          Sgen:IM.HiCap       Distributional
+------------- ----------------- ----------------- ----------------
+50%           15,395            25,677            17,515
+              (11,187-19,603)   (20,683-30,672)   (9,695-25,336)
+                          
+66%           16,685            27,858            21,396
+              (12,454-20,916)   (21,674-34,042)   (13,418-29,375)
+  
+90%           19,668            32,901            30,372
+              (13,752-25,584)   (22,257-43,544)   (15,711-45,033)
+
+99%           24,331            40,784            44,403
+              (13,924-34,738)   (21,957-59,610)   (15,102-73,703)
+------------- ----------------- ----------------- -----------------
+Table: (\#tab:logisticLRPs2020) label me
+
+-->
+
++-------------+-----------------+-----------------+-----------------+
+| Probability | Sgen: IM        | Sgen:IM.HiCap   | Distributional
++=============+=================+=================+=================+
+
+| 50%         | 15,395          | 25,677          | 17,515
+|             | (11,187-19,603) | (20,683-30,672) | (9,695-25,336)
+
++-------------+-----------------+-----------------+-----------------+                         
+
+| 66%         | 16,685          | 27,858          | 21,396
+|             | (12,454-20,916) | (21,674-34,042) | (13,418-29,375)
+
++-------------+-----------------+-----------------+-----------------+  
+
+| 90%         | 19,668          | 32,901          | 30,372
+|             | (13,752-25,584) | (22,257-43,544) | (15,711-45,033)
+
++-------------+-----------------+-----------------+-----------------+
+
+| 99%         | 24,331          | 40,784          | 44,403
+|             | (13,924-34,738) | (21,957-59,610) | (15,102-73,703)
+
++-------------+-----------------+-----------------+-----------------+
+
+Table: (\#tab:logisticLRPs2020v2) label me
+
+
+
+
+Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Inte
+rior Fraser Coho data.
 
 Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
 
-Table: Comparison of all logistic LRP estimates in 2020
+
+***Retrospective Analysis***
+
+
+
+***Effect of Missing CUs***
+
+
+
 
 ### LRP Estimation: Aggregate Abundance Projection-Based LRPs
 
@@ -287,14 +360,12 @@ Model averaging
 
 **Results**
 
-### Historical Evaluation of Status
 
 
-### Retrospective Analysis
+
+### HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
 
 
-***Effect of LRP Estimation Method***
+Table: Comparison of all logistic LRP estimates in 2020
 
-***Effect of number of years***
-
-***Effect of number of CUs***
+Figure: Status plot with bars
