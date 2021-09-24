@@ -212,7 +212,7 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-wStatus.png")
 knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
 
-
+\linebreak
 
 **Results**
 
