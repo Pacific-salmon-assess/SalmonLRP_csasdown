@@ -212,7 +212,7 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-wStatus.png")
 knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
 
-
+\linebreak
 
 **Results**
 
@@ -368,4 +368,5 @@ Model averaging
 
 Table: Comparison of all logistic LRP estimates in 2020
 
-Figure: Status plot with bars
+
+

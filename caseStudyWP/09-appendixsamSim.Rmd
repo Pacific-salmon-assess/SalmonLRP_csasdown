@@ -1,5 +1,5 @@
-<!-- The following code should appear at the beginning of the first appendix.
-After that, all subsequent sections will be turned into appendices.
+<!-- 
+  render code
 bookdown::render_book("index.Rmd")
 
  -->

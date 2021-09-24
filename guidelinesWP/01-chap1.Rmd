@@ -5,6 +5,12 @@
 -	Changes to the Act include fish stocks provisions that introduce legal requirements to promote sustainability, avoid Limit Reference Points (LRPs) and implement rebuilding plans for depleted stocks.
 -	Under these fish stock provisions, LRPs that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  LRPs define the trigger below which rebuilding plans will be required. 
 -	Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
+
+"Sainsbury (2008) states that LRPs “… are set primarily on biological grounds to protect the stock from serious, slowly reversible or irreversible fishing impacts…”. "(see Kronlund et al 2018, p.4)
+
+Failing to protect stocks above LRP means that impacts of fishing may be long term and only slowly reversible if at all.
+
+
 -	“The choice of LRP needs to be feasible (separate from, but can be operationalized by, appropriate management measures), defensible (consistent with best practices), reliably estimated, and in line with the intent of the Precautionary Approach Policy regarding serious harm (DFO 2009).“ (DFO NHQ) 
 
 <!--CH comment: mention that LRPs identified under DFO's Fisheries Sustainability checklist are typically management operational control points, and not biological LRPs per se-->
@@ -21,12 +27,25 @@ Scales of Pacific salmon assessment reporting
 -	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
 
 ##	Review of Reference Points for Pacific Salmon
-- Brief review of reference points for salmon in other jursdictions
+- Brief review of reference points for salmon in other jurisdictions:
+
 -	Include a few recent key CSAS documents identifying LRPs to show context for Pacific salmon LRPS (Pacific Herring, Atlantic salmon, Snow Crab (multidimensional approach))
 
+## Role of LRPs
+
+- required under FA to trigger rebuilding
+- BUT ,also can form part of management procedure framework. Kronlund et al. 2018 p. 8: "Limit reference points in isolation are not useful until they are embedded into fully specified measurable objectives. For example, a conservation goal might be to avoid low biomass levels where stock productivity is compromised to the point of serious harm. This goal could be translated to a measurable objective stated as “avoid spawning biomass levels lower than a threshold biomass BLRP with 95% probability over the next 20 years.” This example illustrates a fully specified measurable objective that has three components:
+1. An outcome of interest such as a limit to be avoided or a target to be achieved, e.g., avoid spawning biomass levels less than BLRP;
+2. A desired probability of achieving the outcome in (1), e.g., 95% probability; and
+3. A time-frame over which to measure performance with respect to achieving (1) and (2), e.g., 20 years"
+- example of this in Groundfish MP framework. When used within MP framwork. LRP may not need to be explicitly defined, as it is implicit within the framework (quote them on this point). One advantage of this approach is that no need to define single best assessment model. Instead, a range of plausible OMs can be included.
+
+- other roles? (e.g., prioritizing SMUs and planning monitoring/management).
+- these roles have not been clearly defined yet, and require further discussion beyond this process
 
 ##	Objectives of this Document
-text
+ - Provide guidance on setting LRPs for SMU
+ - List alternative methods and highlight when they should be used and when they should be avoided 
 
 ##	Approach Taken to Develop Guidelines
 -	Describe Technical Working Group

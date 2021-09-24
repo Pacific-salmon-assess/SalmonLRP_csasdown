@@ -9,22 +9,3 @@ After that, all subsequent sections will be turned into appendices. -->
 
 Content here.
 
-# SamSim MODEL DOCUMENTATION {#app:second-appendix}
-
-
-### Data entry
-
-Define data used in IF cohoPars is any of the data columns not defined?
-Need to ask: where is the function that reads in the data. Maybe called by genericrecoverySim
-
-
-### Initialization
-
-
-Generic recovery simulator loops 1 and 2
-
-
-### Projections
-
-Generic recovery simulator loop 3
-
