@@ -97,7 +97,7 @@ PNI values for 14 WCVI indicator stocks were provided to DFO South Coast Stock A
 
 
 
-##  PROPORTION OF CUS
+## PROPORTION OF CUS
 
 ### METHODS
 $S_{REP}$ values were derived from the watershed-area model adapted from @parken_habitat-based_2006 (Appendix X, to be included). The Wild Salmon Policy lower benchmark on abundances, $S_{gen}$, the spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$,
@@ -166,11 +166,10 @@ The LRP on the proportion of CUs was identified as all 3 CUs containing inlets w
 
 
 ### RESULTS: PROPORTION OF CUs
-In the most recent year with data, 2020, 4 of 5 inlets are above their abundance-based lower benchmark, $S_{gen}$ (Figure \@ref(fig:chinook-InletTimeSeries)). Therefore, 2 of 3 CUs contain inlets with current statuses exclusively above their lower benchmarks. One CU, Southern Vancouver Island, contains an inlet, Clayoquot, with status that has been consistently below its lower benchmark throughout the available time-series.  Therefore this SMU falls below the LRP of 3/3 CUs.
+In the most recent year with data, 2020, 4 of 5 inlets are above their abundance-based lower benchmark, $S_{gen}$ (Figure \@ref(fig:chinook-InletTimeSeries)). Therefore, 2 of 3 CUs contain inlets with current statuses exclusively above their lower benchmarks. One CU, Southern Vancouver Island, contains an inlet, Clayoquot, with status that has been consistently below its lower benchmark throughout the available time-series. Therefore this SMU falls below the LRP of 3/3 CUs.
 
 
-Using the multidimensional approach, the status was the same as for the abundance-based lower benchmarks. 
-For this SMU, time-series of abundances for WCVI Chinook are not absolute (only indicator stocks are monitored consistently) and  relative-abundance benchmarks can be identified ($S_{gen}$ and $S_{MSY}$), and so according to the multidimensional decision tree (Figure \@ref(fig:decision-tree), status is derived from abundance-based benchmarks as above. Therefore, similar to above, 2 of 3 CUs met the criteria of containing inlets with status above the red zone under the multi-dimensional approach, falling below the LRP of 3/3 CUs.
+Using the multidimensional approach, the status was the same as for the abundance-based lower benchmarks. For this SMU, time-series of abundances for WCVI Chinook are not absolute (only indicator stocks are monitored consistently) and  relative-abundance benchmarks can be identified ($S_{gen}$ and $S_{MSY}$), and so according to the multidimensional decision tree (Figure \@ref(fig:decision-tree), status is derived from abundance-based benchmarks as above. Therefore, similar to above, 2 of 3 CUs met the criteria of containing inlets with status above the red zone under the multi-dimensional approach, falling below the LRP of 3/3 CUs.
 
 ## AGGREGATE-ABUNDANCE, EMPIRICAL LRPS
 
@@ -179,8 +178,54 @@ Empirical LRPs based on the probability of all component inlets (nested within C
 ## AGGREGATE-ABUNDANCE, PROJECTION-BASED LRPS
 ### METHODS
 
-Projection-based LRPs were derived for WCVI Chinook by projecting inlet-specific population dynamics using the `samSim` modelling tool (Appendix B). We chose to project inlet-specific rather than CU-specific population dynamics to reflect the importance of the inlet scale of diversity for long-term sustainability of the SMU. Population dynamics and exploitation parameters were derived from a previously developed CU-specific run-reconstruction for WCVI Chinook based on spawner abundances and age compositions from indicator stocks, and exploitation rates from the Robertson Creek hatchery indicator stock (D. Dobson & D. McHugh, pers. comm. DFO South Coast Stock Assessment). CU-specific parameters were applied across all component inlets. Inlet-specific capacities, or spawner abundances at replacement, were estimated from the watershed-area model (Parken et al. 2006) (Table \@ref(tab:chinook-WA)) and applied in projections of recruitment. The model was projected for 30 years from initial equilibrium abundances, and over 50,000 random Monte Carlo trials. A relatively large number of Monte Carlo trials was required for LRP estimation because the algorithm required a sufficient sample size within each 200-fish incremental bin of aggregate abundances along a range of realistic abundances (from near zero to capacity). <!-- CH comment: and 10,000 for sensitivity analyses, to be increased to 50,000. --> Base-case parameters are provided in Table \@ref(tab:chinook-BaseCasePars); sensitivity analyses from base case parameterizations are described in the text.  Projection-based LRPs were identified from the aggregate abundances with specified probabilities of all component inlets being above lower benchmarks. 
+Projection-based LRPs were derived for WCVI Chinook by projecting inlet-specific population dynamics using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). We chose to project inlet-specific rather than CU-specific population dynamics to reflect the importance of the inlet scale of diversity for long-term sustainability of the SMU. Population dynamics and exploitation parameters were derived from a previously developed CU-specific run-reconstruction for WCVI Chinook based on spawner abundances and age compositions from indicator stocks, and exploitation rates from the Robertson Creek hatchery indicator stock (D. Dobson & D. McHugh, pers. comm. DFO South Coast Stock Assessment). CU-specific parameters were applied across all component inlets. Inlet-specific capacities, or spawner abundances at replacement, were estimated from the watershed-area model (Parken et al. 2006) (Table \@ref(tab:chinook-WA)) and applied in projections of recruitment. The model was projected for 30 years from initial equilibrium abundances, and over 50,000 random Monte Carlo trials. A relatively large number of Monte Carlo trials was required for LRP estimation because the algorithm required a sufficient sample size within each 200-fish incremental bin of aggregate abundances along a range of realistic abundances (from near zero to capacity). <!-- CH comment: and 10,000 for sensitivity analyses, to be increased to 50,000. --> Base-case parameters are provided in Table \@ref(tab:chinook-BaseCasePars); sensitivity analyses from base case parameterizations are described in the text.  Projection-based LRPs were identified from the aggregate abundances with specified probabilities of all component inlets being above lower benchmarks. 
 <!-- CH comment: consider redoing table in kableExtra, if that will allow for spaces between rows of text, and separate rows for each value in the 2nd column-->
+
+
+
+
+
+\begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
+\caption{Parameters used for inlet-specific projections of WCVI Chinook population dynamics.}\\
+\hline
+Parameter & Value & Source \\ 
+\hline
+\endhead
+\hline
+Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+
+Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\\\
+$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\\\
+
+$S_{REP}$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\\\
+
+Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+
+Covariance in Ricker residuals among inlets & Equal to covariance in spawner time-series among inlets & Covariance in spawners among inlets from wild indicator stocks (D. Dobson \& D. McHugh, pers. comm.) \\\\  
+
+ Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuoquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Ave ppns from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\\\  
+
+ Variability in age ppns (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuoquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of ppns of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\\\
+
+ Average exploitation rate & 0.30 & Average pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator (D. Dobson \& D. McHugh pers. comm.). Varied in sensitivity analyses 0.05 - 0.45.\\\\
+
+Interannual variability in exploitation rates (CV) & 0.17 & Estimated from pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator. Assumed to be beta distributed, constrained between 0-1.\\\\
+
+Variability in exploitation rates among inlets (CV) & 0.085 &  Assumed to be half of interannual variability, varied in a sensitivty analysis (0-0.17). Assumed to be beta distributed, constrained between 0-1.\\\\ 
+
+Initial abundances  &  $S_{REP}$ (inlet-specific) & MLE from watershed-area model\\\\
+
+Extirpation threshold &  2 & Mating constraint \\
+\hline
+(\#tab:chinook-BaseCasePars)
+\end{longtable}
+
+
+<!--
+
+
+
+
 
 ----------------------------------------------------------------------------------------------
 Paremeter               Value                       Source
@@ -255,6 +300,8 @@ Extirpation threshold   2                           Mating constraint
 
 ----------------------- --------------------------- ------------------------------------------
 Table: (\#tab:chinook-BaseCasePars) Parameters used for inlet-specific projections of WCVI Chinook population dynamics.
+-->
+
 
 We chose covariance parameters so that the resulting projections of inlet-specific spawner abundances exhibited correlations among inlets that were similar to those observed (Figure \@ref(fig:chinook-RunningCorrelations)). Specifically, model parameters were adjusted so that resulting correlations among inlets in projected spawner abundances approximated observed correlations in spawner abundances, described in more detail below.
 

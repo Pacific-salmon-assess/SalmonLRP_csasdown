@@ -163,7 +163,7 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS
 
-Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(second-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
+Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
 
 Updated functionality for the LRP version of samSim include:
@@ -188,7 +188,7 @@ The following steps were taken to calculate projected LRPs using samSim:
 
    2. For each simulated year-trial combination, characterize abundances as follows:
 
-      * Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on 200 fish intervals. E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
+      * Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on intervals of 200 fish . E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
 
       * Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
 
@@ -196,6 +196,7 @@ The following steps were taken to calculate projected LRPs using samSim:
    3. For each aggregate abundance bin, $AggS_{bin}$:
 
       * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 year-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
+      <!-- Need to check these, It says that fish bins are 200 fish, but example uses 2000 fish bin -->
 
       * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 year-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes in which all CUs were above their lower benchmarks.
 

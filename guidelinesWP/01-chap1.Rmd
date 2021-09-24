@@ -27,7 +27,8 @@ Scales of Pacific salmon assessment reporting
 -	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
 
 ##	Review of Reference Points for Pacific Salmon
-- Brief review of reference points for salmon in other jursdictions
+- Brief review of reference points for salmon in other jurisdictions:
+
 -	Include a few recent key CSAS documents identifying LRPs to show context for Pacific salmon LRPS (Pacific Herring, Atlantic salmon, Snow Crab (multidimensional approach))
 
 ## Role of LRPs
@@ -43,7 +44,8 @@ Scales of Pacific salmon assessment reporting
 - these roles have not been clearly defined yet, and require further discussion beyond this process
 
 ##	Objectives of this Document
-text
+ - Provide guidance on setting LRPs for SMU
+ - List alternative methods and highlight when they should be used and when they should be avoided 
 
 ##	Approach Taken to Develop Guidelines
 -	Describe Technical Working Group
