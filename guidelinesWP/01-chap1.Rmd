@@ -29,14 +29,13 @@ Scales of Pacific salmon assessment reporting
 ## Review of Reference Points for Pacific Salmon
 
 
-PA 
--	Include a few recent key CSAS documents identifying LRPs to show context for Pacific salmon LRPS (Pacific Herring, Atlantic salmon, Snow Crab (multidimensional approach))
--  
-The identification and use of LRPs in the management of many of Canada's marine fisheries predates the royal assent of the revised fisheries act. Previous DFO policy documents such as the "Harvest Decision-Making Framework Incorporating the Precautionary Approach" (citation) and "Canada's Policy for conservation of Wild Pacific Salmon" already required the establishment of lower management benchmarks to prevent serious harm to managed populations. In compliance with these policies LRPs have been implemented in various marine fisheries across Canada, examples include Pacific Herring [@kronlundSelectionRoleLimit2018], snow crab [@mullowneyBasisPrecautionaryApproach2018], cite a salmon example ? sockeye?
-search other DFO LRP work. 
 
 
-LRPs can be based on multiple stock metrics, including abundance trends, abundance, fishing mortality, and habitat distribution [@chaputConsiderationsDefiningReference2012]. In some instances, multi dimensional approaches are also used. These approaches are particularly relevant when traditional benchmarks are not estimable or not applicable or when data availability is limited. Multi-dimensional approaches allow for consideration of multiple data sources and the explicit inclusion of expert knowledge in defining LRPs (cite snow crab, sue's tech report and the australian papers. )
+Even before the royal assent of the revised fisheries act in 2019, many fisheries in Canada already has LRPs defined as part of their management framework. DFO policy documents such as the "Harvest Decision-Making Framework Incorporating the Precautionary Approach" (citation) and "Canada's Policy for conservation of Wild Pacific Salmon" already recommended the establishment of LRPs to protect fish stocks serious harm to managed populations. In compliance with these policies LRPs have been implemented in various marine fisheries across Canada [@marentetteSpecificationPrecautionaryApproach], examples include Pacific Herring [@kronlundSelectionRoleLimit2018], snow crab [@mullowneyBasisPrecautionaryApproach2018], lobster [@cookFrameworkAssessmentOffshore], Atlantic salmon [@chaputConsiderationsDefiningReference2015],  cite a Pacific salmon example ? sockeye?
+
+
+
+LRPs can be based on multiple stock metrics, including abundance trends, abundance, fishing mortality, and habitat distribution [@chaputConsiderationsDefiningReference2012]. In some instances, multi dimensional approaches are also used. These approaches are particularly relevant when traditional benchmarks are not estimable or not applicable or when data availability is limited. Multi-dimensional approaches allow for consideration of multiple data sources and the explicit inclusion of expert knowledge in defining LRPs (cite snow crab, sue's tech report and the Australian papers. )
 
 @mullowneyBasisPrecautionaryApproach2018 defines reference points for snow crab based based on a multi dimensional approach, incorporating information from CPUE estimates, egg clutches and discards. Abundance based reference points are not appropriate for crabs as the fisheries regulations ensure that females, and males below a size limit are protected from exploitation, therefore variations in catches (legal sized males) and observed biomass are not an indication of the overall health of the population. 
 
