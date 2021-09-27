@@ -7,7 +7,7 @@ First, as described in Section \@ref(intro), LRPs  "represent the stock status b
 
 Second, LRPs for Pacific salmon were developed to align with the goal of Canada's Wild Salmon Policy, to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity (DFO 2005). The WSP is Pacific salmon's implementation of DFO's Precautionary Approach Framework. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting, Conservation Units, defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). Biological benchmarks delineating three zones of green, amber, and red have been identified to represent zones of increasing conservation concern requiring management intervention. The lower benchmark delineating the red and amber zones is identified at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", the Committee on the Status of Endangered Wildlife in Canada (DFO 2005; Holt et al. 2009). 
 
-One lower benchmark that is commonly used is the spawner abundances that results in recovery to SMSY within one generation under equilibrium conditions, Sgen (Holt et al. 2009). Status assessments under the Wild Salmon Policy generally integrate data across numerous dimensions of status, including spawner abundances, short and long-term trends, distribution of spawning, and fishing mortality relative to productivity (Holt et al. 2009). THe framework for defining biological units and their assessment under the WSP has been adopted widely in Canada (e.g., FR sock, IFR coho, SBC CK, Skeena report, PSE).
+One lower benchmark that is commonly used is the spawner abundances that results in recovery to SMSY within one generation under equilibrium conditions, Sgen (Holt et al. 2009). Status assessments under the Wild Salmon Policy generally integrate data across numerous dimensions of status, including spawner abundances, short and long-term trends, distribution of spawning, and fishing mortality relative to productivity (Holt et al. 2009). The framework for defining biological units and their assessment under the WSP has been adopted widely in Canada (e.g., FR sock, IFR coho, SBC CK, Skeena report, PSE).
 
 Maintaining CUs above the red zone (i.e., spawner abundances > Sgen, and/or above lower benchmarks on various dimensions of status) is consistent with avoiding serious harm to the CU. At this level, irreversible or slowly reversible impacts are avoided. Therefore, to be consistent with the Wild Salmon Policy, LRPs need to allow for component CUs to be above their lower benchmarks.
 
@@ -81,18 +81,18 @@ If each of the component CUs of a SMU is above the red/amber benchmark and thus 
 
 ## Estimation of LRPs: Aggregating CU Status to the SMU-level
 
-### Report status relative to benchmarks for individual CUs 
+### Report status relative to benchmarks for individual CUs
 
 - i.e., no roll-up
 - A benefit to no roll up is that it focuses attention directly on CUs with low status.  However, emerging policy (from NHQ) suggests that each stock should have a single established LPR (one stock = 1 LRP).
 
-###	Ppn of CUs with status greater than red 
+### Ppn of CUs with status greater than red
 
 - Based on WSP formal integrated assessments (for CUs where data are available)
 - Or approximated by abundance-based benchmarks
 - if status is approximated with abundance-based benchmarks, and the status on the metric is red, this could trigger an integrated status assesment to derived a formal WSP status prior to triggering LRP.
 
-### Multidimensional approach to aggregating metrics within CUs 
+### Multidimensional approach to aggregating metrics within CUs
 
 - Algorithm to approximate "integrated" status has been developed by the State of the Salmon program, and can be applied to LRP estimation
 - Valuable when abundance-based benchmark (e.g., Sgen) cannot be calculated and percentile-based benchmarks are not reliable (productivity low or HR high)
