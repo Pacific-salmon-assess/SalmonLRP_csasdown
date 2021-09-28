@@ -26,10 +26,20 @@ Scales of Pacific salmon assessment reporting
 -	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
 -	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
 
-##	Review of Reference Points for Pacific Salmon
-- Brief review of reference points for salmon in other jurisdictions:
+## Review of Reference Points for Pacific Salmon
 
--	Include a few recent key CSAS documents identifying LRPs to show context for Pacific salmon LRPS (Pacific Herring, Atlantic salmon, Snow Crab (multidimensional approach))
+
+Even before the royal assent of the revised fisheries act in 2019, many fisheries in Canada already has LRPs defined as part of their management framework. DFO policy documents such as the "Harvest Decision-Making Framework Incorporating the Precautionary Approach" (citation) and "Canada's Policy for conservation of Wild Pacific Salmon" already recommended the establishment of LRPs to protect fish stocks serious harm to managed populations. In compliance with these policies LRPs have been implemented in various marine fisheries across Canada [@marentetteSpecificationPrecautionaryApproach2021], examples include Pacific Herring [@kronlundSelectionRoleLimit2018], snow crab [@mullowneyBasisPrecautionaryApproach2018], lobster [@cookFrameworkAssessmentOffshore2017], Atlantic salmon [@chaputConsiderationsDefiningReference2015], and Fraser Sockeye  [@pestalMethodesMisesJour2012].
+
+
+LRPs can be based on multiple stock metrics, including abundance trends, abundance, fishing mortality, and habitat distribution [@chaputConsiderationsDefiningReference2012]. In some instances, multi dimensional approaches are also used. These approaches are particularly relevant when traditional benchmarks are not estimable or not applicable or when data availability is limited [@dowlingEmpiricalHarvestStrategies2015]. Multi-dimensional approaches allow for consideration of multiple data sources and the explicit inclusion of expert knowledge in defining LRPs. In Canada,  multi-dimensional managements benchmarks have been applied to snow crab [@mullowneyBasisPrecautionaryApproach2018]. The snow crab reference points incorporate information from CPUE estimates, egg clutches and discards. In this paper, we apply the multi dimensional LRP approach introduced by (cite Grant tech report) to evaluate status of salmon stocks.  
+
+
+The use of LRPs and other reference points and harvest strategies has been gaining considerable interest, leading to a few review papers in recent years. Recent reviews of the application of harvest control rules and reference points include @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010.  @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest strategies in data-poor fisheries.  @marentetteSpecificationPrecautionaryApproach2021 reviewed the use of LRPs in many fisheries across Canada. They summarize the use of harvest control rules as well as target and limit reference points to support the development of science guidelines for the implementation of precautionary approach in light of the revised fisheries act. @kronlundConsiderationsDesignRebuilding2021 provided an overview of LRP in the context of rebuilding strategies and in light of Canadian fisheries policy and the revised fisheries act.
+
+In terms of salmonids, @portleyLimitReferencePoints2014 reviews the use of limit reference points (or their absence) for Pacific salmon stocks in the U.S. (Alaska and Pacific Northwest), Canada, Russia, and Japan. They highlight the role of LRPs in allowing for cross-jurisdictional comparisons of sustainability. In Canada, @chaputConsiderationsDefiningReference2012 reviewed the use of reference points, including LRPs, in the management of salmonids and other semelparous species. This review is focused on the stock/Conservation Unit (CU) level applications of LRPs and provides a comprehensive overview of the different methods available to assess CU status and their historical applications. It also provides considerations on managing multiple stock fisheries or managing multiple stocks as unit, it highlights that mixed stock management requires more precautionary benchmarks to ensure that all stocks remain above their limit reference points. Previous work and guidance on setting LRPs for pacific salmon focused on management at the CU level. The present work expands on the previous work by providing guidance on setting LRPs for management at the SMU level, i.e. a group of CUs, taking into consideration the need to maintain all CUs within an SMU above their limit reference points. 
+
+
 
 ## Role of LRPs
 
@@ -43,11 +53,11 @@ Scales of Pacific salmon assessment reporting
 - other roles? (e.g., prioritizing SMUs and planning monitoring/management).
 - these roles have not been clearly defined yet, and require further discussion beyond this process
 
-##	Objectives of this Document
+## Objectives of this Document
  - Provide guidance on setting LRPs for SMU
  - List alternative methods and highlight when they should be used and when they should be avoided 
 
-##	Approach Taken to Develop Guidelines
+## Approach Taken to Develop Guidelines
 -	Describe Technical Working Group
 -	Explain how case studies were used by the TWG to develop guidance
 
