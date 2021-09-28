@@ -1,54 +1,54 @@
 \thispagestyle {fancy}
-\contentsline {section}{ABSTRACT}{v}{section*.1}%
-\contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.0.1}%
-\contentsline {subsection}{\numberline {1.1}Background \& Motivation for Project}{1}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {1.2}Review of Reference Points for Pacific Salmon}{2}{subsection.0.1.2}%
-\contentsline {subsection}{\numberline {1.3}Role of LRPs}{2}{subsection.0.1.3}%
-\contentsline {subsection}{\numberline {1.4}Objectives of this Document}{2}{subsection.0.1.4}%
-\contentsline {subsection}{\numberline {1.5}Approach Taken to Develop Guidelines}{2}{subsection.0.1.5}%
-\contentsline {section}{\numberline {2}LRP Estimation Methods for Pacific Salmon}{2}{section.0.2}%
-\contentsline {subsection}{\numberline {2.1}Estimation of CU Status}{4}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {2.2}Estimation of LRPs: Aggregating CU Status to the SMU-level}{4}{subsection.0.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Report status relative to benchmarks for individual CUs}{4}{subsubsection.0.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Ppn of CUs with status greater than red}{4}{subsubsection.0.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Multidimensional approach to aggregating metrics within CUs}{4}{subsubsection.0.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)}{5}{subsubsection.0.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)}{5}{subsubsection.0.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Aggregate abundance not directly tied to CU status}{5}{subsubsection.0.2.2.6}%
-\contentsline {subsection}{\numberline {2.3}Considerations When Selecting a LRP Estimation Method}{5}{subsection.0.2.3}%
-\contentsline {section}{\numberline {3}Case Studies Used to Support the Development of Guidance}{6}{section.0.3}%
-\contentsline {subsection}{\numberline {3.1}Interior Fraser Coho}{6}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {3.2}West Coast Vancouver Island Chinook}{6}{subsection.0.3.2}%
-\contentsline {subsection}{\numberline {3.3}South Coast Chum (excluding Fraser)}{6}{subsection.0.3.3}%
-\contentsline {section}{\numberline {4}Guidelines for Applying Aggregate Abundance LRP Estimation Methods}{6}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}Which LRP method should be used?}{6}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Proportion of CUs above lower benchmarks.}{6}{subsubsection.0.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Multi-dimensional approach}{7}{subsubsection.0.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Aggregate-abundance LRP based on aggregate data}{7}{subsubsection.0.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Aggregate-abundance LRP based on CU-specific data}{7}{subsubsection.0.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}Empirical vs.\nobreakspace {}projected approaches for aggregate-abundance LRPS}{7}{subsubsection.0.4.1.5}%
-\contentsline {subsection}{\numberline {4.2}Guidance on scale of diversity used to define aggregate-abundance LRPs}{8}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}Guidance on the application of aggregate abundance LRPs}{8}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {4.4}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{8}{subsection.0.4.4}%
-\contentsline {subsection}{\numberline {4.5}Incorporating uncertainty in aggregate abundance LRP estimation}{9}{subsection.0.4.5}%
-\contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{9}{subsection.0.4.6}%
-\contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{10}{subsection.0.4.7}%
-\contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{10}{subsection.0.4.8}%
-\contentsline {subsection}{\numberline {4.9}Enhanced stocks}{10}{subsection.0.4.9}%
-\contentsline {subsection}{\numberline {4.10}Defining SMUs where LRPs cannot be developed}{10}{subsection.0.4.10}%
-\contentsline {subsection}{\numberline {4.11}Process for defining LRPs and assessing status against LRP}{10}{subsection.0.4.11}%
-\contentsline {section}{\numberline {5}Recommendations for Future Work}{10}{section.0.5}%
-\contentsline {subsection}{\numberline {5.1}Extra text on R MARKDOWN BASICS: IGNORE}{11}{subsection.0.5.1}%
-\contentsline {subsection}{\numberline {5.2}LISTS}{11}{subsection.0.5.2}%
-\contentsline {subsection}{\numberline {5.3}LINE BREAKS}{12}{subsection.0.5.3}%
-\contentsline {subsection}{\numberline {5.4}R CHUNKS}{12}{subsection.0.5.4}%
-\contentsline {subsection}{\numberline {5.5}INLINE CODE}{12}{subsection.0.5.5}%
-\contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{12}{subsection.0.5.6}%
-\contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{13}{subsection.0.5.7}%
-\contentsline {subsection}{\numberline {5.8}FIGURES}{21}{subsection.0.5.8}%
-\contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{23}{subsection.0.5.9}%
-\contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{23}{subsection.0.5.10}%
-\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{23}{subsection.0.5.11}%
-\contentsline {section}{\numberline {6}REFERENCES}{25}{section.0.6}%
+\contentsline {section}{ABSTRACT}{v}{section*.1}
+\contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.0.1}
+\contentsline {subsection}{\numberline {1.1}Background \& Motivation for Project}{1}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {1.2}Review of Reference Points for Pacific Salmon}{2}{subsection.0.1.2}
+\contentsline {subsection}{\numberline {1.3}Role of LRPs}{3}{subsection.0.1.3}
+\contentsline {subsection}{\numberline {1.4}Objectives of this Document}{3}{subsection.0.1.4}
+\contentsline {subsection}{\numberline {1.5}Approach Taken to Develop Guidelines}{3}{subsection.0.1.5}
+\contentsline {section}{\numberline {2}LRP Estimation Methods for Pacific Salmon}{3}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}Estimation of CU Status}{5}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}Estimation of LRPs: Aggregating CU Status to the SMU-level}{5}{subsection.0.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Report status relative to benchmarks for individual CUs}{5}{subsubsection.0.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Ppn of CUs with status greater than red}{5}{subsubsection.0.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Multidimensional approach to aggregating metrics within CUs}{5}{subsubsection.0.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)}{6}{subsubsection.0.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)}{6}{subsubsection.0.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Aggregate abundance not directly tied to CU status}{6}{subsubsection.0.2.2.6}
+\contentsline {subsection}{\numberline {2.3}Considerations When Selecting a LRP Estimation Method}{6}{subsection.0.2.3}
+\contentsline {section}{\numberline {3}Case Studies Used to Support the Development of Guidance}{7}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Interior Fraser Coho}{7}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}West Coast Vancouver Island Chinook}{7}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {3.3}South Coast Chum (excluding Fraser)}{7}{subsection.0.3.3}
+\contentsline {section}{\numberline {4}Guidelines for Applying Aggregate Abundance LRP Estimation Methods}{7}{section.0.4}
+\contentsline {subsection}{\numberline {4.1}Which LRP method should be used?}{7}{subsection.0.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Proportion of CUs above lower benchmarks.}{7}{subsubsection.0.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Multi-dimensional approach}{8}{subsubsection.0.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.3}Aggregate-abundance LRP based on aggregate data}{8}{subsubsection.0.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.4}Aggregate-abundance LRP based on CU-specific data}{8}{subsubsection.0.4.1.4}
+\contentsline {subsubsection}{\numberline {4.1.5}Empirical vs.\nobreakspace {}projected approaches for aggregate-abundance LRPS}{8}{subsubsection.0.4.1.5}
+\contentsline {subsection}{\numberline {4.2}Guidance on scale of diversity used to define aggregate-abundance LRPs}{9}{subsection.0.4.2}
+\contentsline {subsection}{\numberline {4.3}Guidance on the application of aggregate abundance LRPs}{9}{subsection.0.4.3}
+\contentsline {subsection}{\numberline {4.4}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{10}{subsection.0.4.4}
+\contentsline {subsection}{\numberline {4.5}Incorporating uncertainty in aggregate abundance LRP estimation}{10}{subsection.0.4.5}
+\contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{11}{subsection.0.4.6}
+\contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{11}{subsection.0.4.7}
+\contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{11}{subsection.0.4.8}
+\contentsline {subsection}{\numberline {4.9}Enhanced stocks}{11}{subsection.0.4.9}
+\contentsline {subsection}{\numberline {4.10}Defining SMUs where LRPs cannot be developed}{11}{subsection.0.4.10}
+\contentsline {subsection}{\numberline {4.11}Process for defining LRPs and assessing status against LRP}{12}{subsection.0.4.11}
+\contentsline {section}{\numberline {5}Recommendations for Future Work}{12}{section.0.5}
+\contentsline {subsection}{\numberline {5.1}Extra text on R MARKDOWN BASICS: IGNORE}{12}{subsection.0.5.1}
+\contentsline {subsection}{\numberline {5.2}LISTS}{12}{subsection.0.5.2}
+\contentsline {subsection}{\numberline {5.3}LINE BREAKS}{13}{subsection.0.5.3}
+\contentsline {subsection}{\numberline {5.4}R CHUNKS}{13}{subsection.0.5.4}
+\contentsline {subsection}{\numberline {5.5}INLINE CODE}{14}{subsection.0.5.5}
+\contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{14}{subsection.0.5.6}
+\contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{15}{subsection.0.5.7}
+\contentsline {subsection}{\numberline {5.8}FIGURES}{22}{subsection.0.5.8}
+\contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{24}{subsection.0.5.9}
+\contentsline {subsection}{\numberline {5.10}BIBLIOGRAPHIES}{24}{subsection.0.5.10}
+\contentsline {subsection}{\numberline {5.11}ADDITIONAL RESOURCES}{25}{subsection.0.5.11}
+\contentsline {section}{\numberline {6}REFERENCES}{26}{section.0.6}
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{APPENDIX\nobreakspace {}A. THE FIRST APPENDIX}{26}{section*.3}%
+\contentsline {chapter}{APPENDIX\nobreakspace {}A. THE FIRST APPENDIX}{27}{section*.3}
