@@ -58,7 +58,7 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure \@ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
+An example logistic regression fit is shown in Figure\@ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having $S_i > LBM_i$. 
 
 
 ```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Black dots are annual Bernoulli indicators showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) in each year, the black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
@@ -128,7 +128,7 @@ The magnitude of lag-1 autocorrelation was then estimated among deviance residua
 
 **Evaluating outliers (Assumption 3)**
 
-As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95\\% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
+As a general rule of thumb, deviance residuals greater than 2 are considered to be to be outliers, since 95\% of the distribution is expected to be within 2 standard deviations of the mean. Further identifying influential outliers is recommended, but was not feasible for this application because TMB, the software used to estimate model parameters, does not provide the hat-matrix required to assess influence of individual points.
 
 
 **Evaluating sample size (Assumption 4)**
@@ -163,7 +163,12 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS
 
-Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix B \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
+Projected LRPs are estimated using stochastic projections of future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that the required proportion of CUs will be above their lower benchmarks (e.g. Sgen). We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (Holt et al. 2020; Freshwater et al. 2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
+
+<!-- CW comment: I think we should add a little bit  moere explanation about the rationale for the  the projection based models. something like.
+
+The projection-based LRP approach combines all the information known for the CUs within an SMU and then uses that information to project abundance trends into the future. The objective of this approach was to evaluate how the projection trajectories respond to exploitation when calculating LRPs. This approcah allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect ack of biological or fisheries information. 
+ -->
 
 
 Updated functionality for the LRP version of samSim include:
