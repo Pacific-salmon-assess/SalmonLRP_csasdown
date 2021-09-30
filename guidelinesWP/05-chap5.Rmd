@@ -11,6 +11,8 @@ Should highlight the identification of questions / outstanding guidance that wer
 - Standard versus hierarchical stock-recruitment models for estimating benchmarks
 
 
+- We found that the projecton based LRP values were dependant on the long term exploitation rate average. Higher values of exploitation rates resulted in higher abundance LRPs. Future research could use this feature of the projection tool to identify the harvest rates that would result in aggregate LRP values that are lower than the past observed aggregate abundances. 
+
 ## Extra text on R MARKDOWN BASICS: IGNORE {#rmd-basics}
 
 Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.
