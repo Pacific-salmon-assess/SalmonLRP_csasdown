@@ -24,7 +24,7 @@ While the acceptable proportion of CUs below lower benchmarks can be thought of 
 - Recommended process for identifying CU-level status: annual assessments through the State of the Salmon Program. For SMUs that are batched, experts can cross-check and refine information on interpretations and statuses provided by the Scanning Tool, thereby using an expert-driven process to trigger rebuilding plans
 
 
-### Multi-dimensional approach 
+### Multi-dimensional approach
 - similar to proportion of CUs > lower benchmark, but using other dimensions of status (e.g., trends)
 - conditions when this might be most appropriate and not appropriate
 - Maybe not appropriate as a sole mode of assessment, more as a scanning tool used to trigger more in depth assessment if MU is found to be below LRP?
@@ -50,7 +50,7 @@ Questions to provide guidance on:
 -	To consider: could a projection-based approach be used for periodic intensive assessments and an empirical (logistic regression) approach be sufficient for annual updates?
 
 
-##	Guidance on scale of diversity used to define aggregate-abundance LRPs
+## Guidance on scale of diversity used to define aggregate-abundance LRPs
 
 Questions to provide guidance on:
 -	When it is appropriate to group CUs together or split CUs into smaller sub-components?
@@ -58,7 +58,7 @@ Questions to provide guidance on:
 - What (SMU-level) process should be recommended to decide the scale of assessment necessary to represent serious harm? 
 
 
-##	Guidance on the application of aggregate abundance LRPs
+## Guidance on the application of aggregate abundance LRPs
 
 -	Modelling approaches: advantages and disadvantages of using integrated models to propagate uncertainty from stock-recruitment models through to LRP estimates (highlight integrated Sgen-LRP model and Watershed-Area model)
 -	Recommended software: e.g., TMB, TMBstan, R
@@ -72,7 +72,7 @@ Questions to provide guidance on:
 -	What is the appropriate measure of current abundances to compare against LRPs?
 - To minimize annual variability in assessments and be consistent with WSP assessments (and other jurisdictions), we recommend using aggregate generational average abundance when comparing current SMU abundance to LRPs
 
-## Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder) 
+## Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)
 
 Placeholder.  Thorough exploration of this topic may be out of scope for this Working Paper. We may decide that we do not need to go into this much detail given previous work that has been done to evaluate WSP benchmarks.
 
@@ -98,13 +98,23 @@ Questions to provide guidance on:
 Questions to provide guidance on:
 -	How should alternative model formulations be considered when identifying LRPs?  (e.g., integrated into a single LRP or presented as two different LRPs?)
 
-##	Time-varying parameters and impacts on LRPs
+## Time-varying parameters and impacts on LRPs
+
+
 -	Briefly document evidence for time-varying productivity for Pacific salmon
--	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications 
+-	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications:
+
+@adkisonReviewSalmonSpawnerRecruitment2021 reviews stock recruitment analysis for Pacific salmon, including the use of environmental covariates and time-varying parameters. They highlight that even though there might be strong evidence for non stationarity in salmon popuations, it is not clear if reference points should me adjusted accordingly. 
+
+@kronlundConsiderationsDesignRebuilding2021 recommends that any decision to introduce time-varying reference points be based on evidence supporting that rebuilding could reasonably be expected. They recommend the use of feedback simulations to illustrate the consequences of time-varying benchmarks and identify exceptional circumstances that should lead to re-examination of reference point choices and adopted management measures. 
+
+ @zhangAccountingNonstationaryStock2021 illustrates the effects of time-varying recruitment parameters on MSY-based reference points for iteroparous fish stocks (cod and plaice). They highlight that more precautionary benchmarks are necessary to account for the parameter uncertainty in highly dynamic ecosystems. However, they observed that effects on reference points depend on the magnitude and structure of the stochasticity in stock-recruitment relationships, therefore they recommend case specific simulation studies be performed to identify explicit impacts on MSY-based reference points.
+
+
 - Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
 
 
-##	Guidance on minimum number of years to estimate aggregate abundance LRPs
+## Guidance on minimum number of years to estimate aggregate abundance LRPs
 
 -	Synthesize retrospective analyses and simulation evaluations from 3 case studies described in Working Paper 2
 
@@ -116,7 +126,7 @@ Questions to provide guidance on:
 -	What if data are only available for a portion of CUs within an MU? Under what conditions are those CUs representative of the MU? When is the MU considered data deficient? Are sampled CUs representative of other CUs?  Are their different threats within the SMU acting on different CUs? Is there any evidence for different CUs/populations responding differently to common threats?
 -	What is the shape of the trade-off between number of years and number of CUs?
 
-##	Enhanced stocks
+## Enhanced stocks
 
 Questions to provide guidance on:
 
