@@ -20,7 +20,7 @@ Scales of Pacific salmon assessment reporting
 1. Wild Salmon Policy
 2. COSEWIC
 3. Pacific Salmon Treaty Management Units
-4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. Note to readers, we are not reviewing SMUs in this document. Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)
+4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. Note to readers, we are not reviewing SMUs in this document. Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)<!--CH comment: confirm with Diana Dobson/Ron that SMUs always contain one or more CUs, never partial CUS-->
 
 -	Establish that LRPs for salmon should be consistent with the WSP
 -	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
