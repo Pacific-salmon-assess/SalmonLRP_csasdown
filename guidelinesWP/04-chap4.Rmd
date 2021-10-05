@@ -100,9 +100,11 @@ Questions to provide guidance on:
 
 ## Time-varying parameters and impacts on LRPs
 
-
+There is increasing evidence of time varying productivity in Pacific salmon populations [@holtImpactTimevaryingProductivity2020] in productivity 
 -	Briefly document evidence for time-varying productivity for Pacific salmon
 -	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications:
+
+
 
 @adkisonReviewSalmonSpawnerRecruitment2021 reviews stock recruitment analysis for Pacific salmon, including the use of environmental covariates and time-varying parameters. They highlight that even though there might be strong evidence for non stationarity in salmon popuations, it is not clear if reference points should me adjusted accordingly. 
 
