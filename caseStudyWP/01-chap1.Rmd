@@ -2,19 +2,25 @@
 
 -	This document supports the development of guidelines for defining LRPs for Pacific Salmon, as required by the recently revised Fisheries Act. Guidelines that have been informed by this work are available in the companion working paper “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”.     
 
--	Under the New Fisheries Act, Limit Reference Points (LRPs) that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  For Pacific salmon, it is anticipated there could be > 65 major fish stocks (or stock management units, SMUs), where the proposed functional definition of a SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status.  
+-	Under the New Fisheries Act, Limit Reference Points (LRPs) that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation. LRPs define the trigger below which rebuilding plans will be required.  
 
--	While lower biological benchmarks under the Wild Salmon Policy delineate abundances below which CUs are considered at risk of extinction (DFO 2005), these benchmarks have not been identified for many data-limited CUs and have not been aggregated to the SMU level, representing significant gaps in our ability to develop LRPs under the Fisheries Act.
+- For Pacific salmon, it is anticipated there could be > 65 major fish stocks (or stock management units, SMUs), where the proposed functional definition of a SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. 
 
--	The suite of LRP estimation methods considered in this paper are specific to the case where a LRP is defined as a single aggregate abundance that is associated with a high probability of all component CUs being above lower benchmarks that are consistent with the WSP.  Alternative approaches to identifying LRPs are discussed in t
+- Since the CU is the fundamental unit of biodiversity that DFO aims to maintain and manage under the Wild Salmon Policy, it follows that methods for identifying LRPs should ensure that component CUs are maintained.  
+
+<!-- Suggested text from Sue: 
+
+An management unit (MU) is the group level LRPs are evaluated on. For Pacific Salmon, an MU is comprised of one or more CUs, where a CU is a fundamental unit of biodiversity for Pacific salmon. It is ‘a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe, such as human lifetime or a specified number of salmon generations.’ (DFO 2005).
+
+Pacific Salmon given their complex population structure, and freshwater and marine life stages, have unique considerations relative to marine species. For this reason, fisheries, which operate at the MU scale, is not the only management action that can be used to improve salmon production. In fact, catch has been considerably reduced in recent years (see SOPO Grant et al. 2021).  Habitat management and hatchery management are playing an increasing role in actions required to support salmon adaptation to climate change, and these require CU considerations within habitat aggregations, or down to the population level for hatchery ones. For marine species, the only lever is fisheries, so a single aggregate MU that relates to this scale makes most sense.
+
+K.Holt note: some of this may be best in guidance paper?
+
+-->
+
+-	Methods to assess status of CUs have been developed for a range of data types, and statuses across multiple metrics are grouped into a single status. These methods produce status results that largely align with COSEWIC. For example a Red status CU, generally aligns with an Endangered COSEWIC status. At present, a key gap in our ability to develop LRPs under the Fisheries Act is that benchmarks have not been aggregated to the SMU level.
+
 
 -	The overall goal of this working paper is demonstrate and evaluate LRPs for 3 case study stock management units. For each case study, the set of LRP estimation methods considered is a function of available data and previously developed assessment methods for the SMU.
-
--	In retrospective analyses, our objective is to demonstrate the sensitivity of the LRP to the removal of years or CUs to inform guidance about minimum numbers of years or CUs
-
--	In simulation  evaluation, our objectives are to:
-    i. Identify the bias in LRP estimates by comparing LRP estimated from observed data to “true” LRP estimated from “true” population dynamics (without observation error)
-    i. How robust are LRPs to different underlying scenarios (model formulations, covariance in CU dynamics, observation errors, time varying productivity and capacity)?
-    i.  How does LRP (and 95% CIs) vary with the number of years and proportion of CUs (and trade-offs), relative to the “true” LRP that includes all years and data?
 
 -	Estimates presented in this paper are not meant to be definitive LRPs, which require more thorough review of data and their use here with local analysts and partners. These case studies demonstrate various approaches for developing LRPs.
