@@ -15,12 +15,12 @@ Maintaining CUs above the red zone (i.e., spawner abundances > Sgen, and/or abov
 Our intention is to provide a variety of LRPs applicable for a range of data quality and data types. 
 Although for other marine fish species, LRPs are typically estimated as a minimum level of spawning biomass that should not be breached, or a fishing mortality rate that should not be exceeded (Kronlund et al. 2018), LRPs along alternative metrics that incorporate trends in abundances and distribution of spawning are considered here to be consistent with assessments under the WSP. 
 
-Furthermroe, DFO's PA Framework identifies additional metrics such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition.”
+Furthermore, DFO's PA Framework identifies additional metrics such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition.”
 
-Alternative LRPs aligned with the key principles above may be developed in the future to capture a broader range of data availablilty, quality, and types, and dimensions of biological status.<!-- CH comment: some suggestions to be included in "further analyses" sections in both WPs".-->
+Alternative LRPs aligned with the key principles above may be developed in the future to capture a broader range of data availability, quality, and types, and dimensions of biological status.<!-- CH comment: some suggestions to be included in "further analyses" sections in both WPs".-->
 
 
-Below, methods for estimating CU status are reviewing from previous status assessments under the WSP. Then candidate LRPs are briefly described (a more detailed description is included Working Paper 2), falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). <!--CH: choosing between ppn CUs and aggregate abundance will depend on decision context. If LRP is used within the context of a MP framework, then an aggregate abundance-based LRP may be more suitable, and does not need to be explicitly defined. -->
+Below methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Then candidate LRPs are briefly described falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances.  A more detailed description of LRPs with technical details is included Working Paper 2. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). <!--CH: choosing between ppn CUs and aggregate abundance will depend on decision context. If LRP is used within the context of a MP framework, then an aggregate abundance-based LRP may be more suitable, and does not need to be explicitly defined. -->
 
 ## Estimation of CU Status
 
@@ -126,20 +126,22 @@ If each of the component CUs of a SMU is above the red/amber benchmark and thus 
 -	Describe approaches for estimating uncertainty, e.g., Combining projections from multiple operating model scenarios
 
 
-### Aggregate abundance not directly tied to CU status
+### Simple Aggregate Abundance LRPs
 
-- There may be cases where work has been done to identify SMU-level limit reference points that are not directly linked to CU status. For example methods developed to support PST management.
+- There may be cases where SMU-level limit reference points may be based on analyses on the aggregate abundances, without defining finer spatial scales
+= For example, for SMUs containing only one CU, LRP can be defined as the lower biological benchmark for the CU. 
 
-- If we rely on aggregate abundances (or indicators within an SMU) determined via other approaches, can we justify it because of evidence that CUs co-vary, e.g.,	they have similar threats, e.g., 
-- fisheries are sampled for GSI and proportions have not changed over time suggesting that smaller CUs are not being over harvested
-- available escapement data suggests CUs are stable,
-- evidence of covariance in spawner time-series (or productivity time-series where available)
+- Although it may be possible to estimate LRPs based on aggregate data for SMUs that contains multiple CUs with very high covariance, in practice, natural variability in population dynamics among CUs within SMUs is generally high enough such that risks of CUS being depleted below lower benchmarks with this approach are not negligible (i.e., above acceptable levels). 
+- This approach should only be considered in exceptional circumstances when there is evidence for high covariance in dynamics among CUs within and SMU and risks of individual CUs being depleted below lower benchmarks has been evaluated, e.g., through simulation evaluation. 
+
+Evidence for covariation in CU-level dynamics can be derived from fisheries that are sampled for GSI, i.e., CU-proportions have not changed over time suggesting that smaller CUs are not being over harvested
+- Also, available escapement data suggests CUs are stable,
+- evidence of covariance in spawner time-series (or productivity time-series where available), >>0.5?
 
 ## Considerations When Selecting a LRP Estimation Method
 
-- Decision tree for which LRP to use
-- With discussion of the advantages and challenges of each approach.  
-- move this sub-section to Chapter 4
-
+- We propose a step-wise approach for identifying status relative to LRPs, which is based on the proportion of CUs status greater than red under the Wild Salmon Policy. 
+- This LRP is recommended as the default for evaluating status under the Fish Stock Provisions of the Fisheries Act for Pacific Salmon, with additional aggregate-abundance based LRPs developed as required for local or international management and are supplemental.
+- This stepwise approach is described in more detail in section \@ref(guidelines).
 
 
