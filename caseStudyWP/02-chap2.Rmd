@@ -7,10 +7,40 @@ output:
 
 In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (South Coast Chum, excluding Fraser). 
 
-All LRP estimation methods first require the status of individual CUs with with an SMU to be assessed as being above or below a lower benchmark. The distribution of CU-level status estimates within a CU is then used as a basis for defining an LRP.
+## OVERVIEW
 
-Under Canada's Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction.  A variety of methods are available for estimating lower benchmarks depending on species and data availability (citation needed).  A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
+- To ADD: LRPs under DFO's ..... can be based on abundance as well as other metrics (e.g., biological characteristics), and note option for trigger.  Note guidance from Ottawa that an LRP can be both a single value, or using the CU status approach. Will be brief here, but cite guidelines paper where this is better descried.  
 
+We consider two different types of LRPs for Pacific salmon in our case studies:
+1) Proportion-based LRPs, which are based on the proportion of CUs within an SMU that are assessed as being above 'poor' status, and
+2) Aggregate abundance-based LRPs, which are based on total SMU-level spawning abundance 
+
+While aggregate abundance-based LRPs are consistent with what is typically used for marine fish species (citation needed), proportion-based LRPs have been proposed for Pacific salmon to align with DFO's Wild Salmon Policy. As a default for our case studies, we assume that in order for an SMU to remain above its proportion-based LRP, 100% of CUs must have status estimates above poor. The LRP thus functions like a trigger that gets breached anytime one of more CUs within an SMU drops into the poor status zone.  In order ensure that aggregate abundance-based LRPs are also consistent with the WSP, we use two different approaches to identify aggregate abundance levels that have a high probability of all CUs being above poor status: (i) Logistic regression-based LRPs and (ii) Projection-based LRPs. More detailed descriptions of all of these methods are provided in the following sections, while guidance on when and how proportion-based and aggregate abundance-based LRPs should be applied is provided in Holt et al. (in review). We do not recommend that users apply any of the methods described in this case study paper without first consulting Holt et al. (in review).
+
+The above definitions hinge on what defines 'poor' status. In the case of WSP Integrated Status Assessments, in which multiple metrics are combined to assign CU status, poor status corresponds with the 'red' status zone (citation needed). Metrics used to assign multidimensional CU status include absolute abundance relative to thresholds, relative abundance, short- and long-term trends in abundance, and distribution of abundance. While WSP Integrated status assessments are typically intensive expert-driven processes (e.g., ....), we demonstrate the application of a rapid multidimensional scanning tool in that is being developed by DFO's State of the Salmon Program to assess CU status under the WSP. In cases where up-to-date estimates of WSP integrated status or mutli-dimensional rapid status are not available, CU status may be based on a single benchmark that has been selected as important for individual CUs by local experts. 
+
+Under Canada’s WSP, the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction; however in practice, some of the lower benchmarks applied line up exactly with COSEWIC's definition of 'endangered'. A variety of methods are available for estimating lower benchmarks depending on species and data availability (citations needed, but see Holt et al. 2009, Grant et al. 2011, Grant et al. 2020, Holt et al. 2018). A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
+   
+
+
+For example, if stock recruit data is available, as was the case for our IFCoho case study, Sgen may be used as a CU benchmark that defines 'poor' status, where Sgen is the number of spawners required to recover to $S_MSY$ (spawners maximum sustainable yield) within one generation under equilibrium conditions in the absence of fishing [@holt_indicators_2009]. In cases where there are no reliable stock-recruit data, estimates of Sgen may be based on habitat-area models (as per our WCVI Chinook Case Study). Or, alternatively, relative abundance indicators such as percentiles of historically observed escapement values may be used instead of Sgen (as per our ISC Chum case study; @clark_evaluation_2014, @holt_evaluating_2018). 
+
+
+<!-- To add back in:
+Under Canada’s Wild Salmon Policy (WSP), the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction, but in practice ....  We can provide a better description of the nuances here; it seems from talking to Carrie that for some benchmarks there is a buffer, but for others, there isn’t.
+-->
+
+A variety of methods are available for estimating lower benchmarks depending on species and data availability (citations needed, but see Holt et al. 2009, Grant et al. 2011, Grant et al. 2020, Holt et al. 2018). A more thorough discussion of available benchmarks, as well as how these relate to WSP Integrated Status Assessments, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).
+
+<!--   
+
+# The following text has been moved from below sections because it applied to all methods.  Work needed to better integrate it in.
+
+Both proportion-based and aggregate abundance-based LRPs need the proportion of CUs that are required to be above their lower benchmarks to be specified.  We use a default requirement that 100% of CUs should be above lower benchmarks for our case study applications. Circumstances in which it may be appropriate to use a required proportion less than 100% are discussed in Holt et al. (in review; citation needed).
+
+The first decision is about the 'required proportion of CUs that will be above their individual benchmarks'.  We use a default requirement that 100% of CUs should be above lower benchmarks for our case study applications of aggregate abundance-based LRPs. This requirement for 100% of CUs to be above their lower benchmarks is the same as that of the Proportion-based LRPs above. Circumstances in which it may be appropriate to use a required proportion less than 100% are discussed in Holt et al. (in review; citation needed). 
+
+-->
 
 ## PROPORTION-BASED LRPS
 
@@ -21,7 +51,14 @@ A proportion-based LRP is simply the proportion of CUs required to be above CU-l
 For SMUs in which CU-level abundance relative to abundance-based lower benchmarks is assessed annually, LRPs can be set at the required proportion of CUs with abundance above their abundance-based lower benchmarks. 
 
 
-### Proportion of CUs with multidimensional status > lower benchmark 
+### Proportion of CUs with multidimensional status above the red zone
+
+<!-- Note from Sue:
+
+For multi-dimensional status, we are using the term ‘lower benchmark’ to be Red status zone for the CU. Not entirely a correct usage of this term, but applies it to the language used for LRP triggers of rebuilding plans.
+
+-->
+
 
 Canada's Policy for Conservation of Wild Pacific Salmon (Wild Salmon Policy, WSP) sets out requirements for the assessment of status of salmon CUs (@canada_canadas_2005). Peer-reviewed, integrated status assessments require large amounts of time and work. The State of the Salmon program (Fisheries and Oceans Canada) is developing a method of assessing the status of CUs more rapidly (@pestal_algorithms_2021, in prep). Using the inputs and outcomes of status assessments for Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook (@dfo_wild_2015, @dfo_integrated_2016, @dfo_2017_2018,  @grant_2017_2020), this method uses Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments. Essentially, it uses a decision tree to evaluate status based on data type, quality, abundance, and trends to assign a status to CUs (e.g., Figure \@ref(fig:decision-tree)). An expert review of these statuses is an intentional part of the process. When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion. 
 
@@ -34,17 +71,13 @@ knitr::include_graphics("figure/decision_tree.png")
 
 ## AGGREGATE ABUNDANCE-BASED LRPS
 
-Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that a required proportion of CUs will be above their individual benchmarks. This definition requires two decisions to be made.  
-
-The first decision is about the 'required proportion of CUs that will be above their individual benchmarks'.  We use a default requirement that 100% of CUs should be above lower benchmarks for our case study applications of aggregate abundance-based LRPs. This requirement for 100% of CUs to be above their lower benchmarks is the same as that of the Proportion-based LRPs above. Circumstances in which it may be appropriate to use a required proportion less than 100% are discussed in Holt et al. (in review; citation needed). 
- 
-The second decision is what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frame_guidance_2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values.  
+Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that 100% of CUs will be above their individual benchmarks. This definition requires a decision to be made about what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frame_guidance_2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values.  
  
 We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression LRPs and Projected LRPs.  Logistic regression LRPs are based on historical data, and thus represent conditions that have been previously experienced by a SMU. In comparison, projected LRPs use historical data as a basis for quantifying population dynamics, but are based on projections of future states, and thus, allow uncertainty in future processes to be accounted for through alternative scenarios.  
 
-### Logistic regression LRPs{#logisticMethods}
+### Logistic regression-based LRPs{#logisticMethods}
 
-Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a required proportion of CUs being above their lower benchmarks. In all three case studies, we assume that all CUs are required to be above their lower benchmarks (i.e., proportion = 100%). For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have spawner abundance greater than their lower benchmark, $S_i > LBM_i$, and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
+Logistic regression-based LRPs (also called Logistic regression LRPs) are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance that has historically been associated with a pre-specified probability of a required proportion of CUs being above their lower benchmarks. In all three case studies, we assume that all CUs are required to be above their lower benchmarks (i.e., proportion = 100%). For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have spawner abundance greater than their lower benchmark, $S_i > LBM_i$, and 0 (failure) = all CUs did not have $S_i > LBM_i$. A logistic regression is then fit to predict the probability that all CUs will have $S_i > LBM_i$ as a function of aggregate spawner abundance to the SMU using the logistic regression equation:
 
 \begin{equation}
   \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}

@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # CASE STUDY 1: INTERIOR FRASER COHO SALMON
 
 ## CONTEXT
@@ -34,9 +39,11 @@ Table: (\#tab:cohoCU2SP) Interior Fraser Coho Conservation Units (CUs) and assoc
 
 Declines in IF Coho spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions starting in 1998 [@decker_assessment_2014]. Evidence of a new, lower productivity regime starting in return year 1994 has been documented [@decker_assessment_2014] that coincides with declines in spawner abundances.  In 2002, the IF Coho stock management unit was designated endangered by the  Committee on the Status of Endangered Wildlife in Canada (COSWEIC) based on the stock unit being assessed as a single 'Designatable Unit' (DU). Subsequent work by the Interior Fraser Coho Recovery Team lead to a conservation strategy outlining recovery objectives for the management unit (@ifcrt_interior_fraser_coho_recovery_team_conservation_2006). Those recovery objectives were largely based on the distribution of spawning escapement among the 11 subpopulations in Table \@ref(tab:cohoCU2SP). A short-term recovery objective of 20,000 spawners was identified as a level that would maintain a minimum of 1,000 naturally spawning wild Coho Salmon in at least half of the 11 subpopulations, while a long-term recovery target of 40,000 spawners was identified as a level that would maintain 1,000 or more wild Coho Salmon in all 11 subpopulations. In 2014, @decker_assessment_2014 assessed status relative to the 2006 IFCRT objectives, and concluded that IF coho had been above the short-term recovery target of 20,000 spawners in every year since 2008, and above the long-term recovery target of 40,000 spawners in the most recent two return years (2012 and 2013)  
 
+Also in 2014, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP), at which time the Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; [@dfo_wild_2015]).
+
 An updated COSEWIC assessment in 2016 upgraded the status designation for the IF Coho DU to 'threatened' [@cosewic_cosewic_2016].  In 2018, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho that described status, habitat, threats, limiting factors to recovery, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm [@arbeider_interior_2020]. As part of this RPA, the long-term DU recovery target for IF Coho was recommended was a 3-year geometric mean abundance of 35,935 natural-origin spawners. This target was based on the historically observed aggregate abundance that met a distributional goal of 1000 spawners in all subpopulations.
 
-Interior Fraser Coho were also been assessed under the framework of DFO’s Wild Salmon Policy (WSP) in 2014, at which time the Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; [@dfo_wild_2015]). 
+ 
 
 To Do:  need to work in @korman_evaluation_2019
 
@@ -258,47 +265,36 @@ where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP ca
 
 ***Logistic LRP Estimates in 2020***
 
-The logistic regression model fit to CU-level status predictions from the Sgen:IM Integrated LRP model in 2020 is shown in Figure \@ref(fig:coho-IM-logisticFit2020), while the resulting LRP estimates are shown in Table \@ref(tab:logisticLRPs2020). Aggregate abundance-based LRP estimates ranged from 15,395 spawners (95% CI = 11,187-19,603) when there was a required 50% probability that all CUs would be above Sgen to 24,331 spawners (95% CI = 13,924-34,738) when there was a required 99% probability that all CUs would be above Sgen (Table \@ref(tab:logisticLRPs2020)). While the Integrated Sgen:IM model was able to converge on a solution, there was considerable uncertainty around the predicted LRP curve as seen in the large area of gray shading in Figure \@ref(fig:coho-IM-logisticFit2020).
-
-Logistic regression diagnostics indicate that high uncertainty is a result of insufficient sample size.  
+Logistic regression model fits in 2020 to CU-level status predictions from  Sgen:IM and Sgen:IM.Cap models are shown in Figures \@ref(fig:coho-IM-logisticFit2020) and \@ref(fig:coho-IMCap-logisticFit2020), respectively, while the logistic regression model fit to status estimates based on the IFCRT short-term distributional target is shown in Figure \@ref(fig:coho-Distr-logisticFit2020). 
 
 
-+------------------------+--------------+-----------------+-----------------+
-| Diagnostic Test        | Sgen: IM     | Sgen:IM.HiCap   | Distributional
-+========================+==============+=================+=================+
-| Box-Tidwell p-value    | 0.81         | 1.0
-+------------------------+--------------+-----------------+-----------------+         
-| Max. deviance residual | 1.52         | 1.68
-+------------------------+--------------+-----------------+-----------------+  
-| AR-1                   | -0.20        | 0.16
-+------------------------+--------------+-----------------+-----------------+
-| Min. sample size       | 77^*         | 26
-+------------------------+--------------+-----------------+-----------------+
-| Wald Test p-value      | <0.01        | <0.01
-+------------------------+--------------+-----------------+-----------------+
-| Quasi-R^2              | 0.68         | 0.63
-+------------------------+--------------+-----------------+-----------------+
-| Hit Ratio (p*= 50%,    | 0.91, 0.91   | 0.87, 0.91,     |
-| 60%, 90%, 99%)         | 0.91, 0.74   | 0.87, 0.78      |
-+--------------------+------------------+-----------------+------------------+
+To Add:
+Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
+
+To Add:
+Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
 
 
+All three estimation methods for IFC logistic regression-based LRPs were able to converge on a solution. Resulting LRPs for different p^* thresholds are shown on the regression curves, as well as in Table \@ref(tab:logisticLRPs2020). There was however considerable uncertainty around predicted curves as seen in the large areas of gray shading in Figures \@ref(fig:coho-IM-logisticFit2020) - \@ref(fig:coho-Distr-logisticFit2020). 
 
 
-
-```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen and Sgen is estimated using the IM spawner recruit model. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs (MLE estimates only; no confidence intervals) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption additional details. ", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen when Sgen is estimated using the IM spawner recruit model. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs (MLE estimates only; no confidence intervals) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-IM2020-LogisticLRP.png")
 ```
 
+When the Sgen:IM integrated LRP model was used, aggregate abundance-based LRPs ranged from 15,395 to 24,331 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%) (Table \@ref(tab:logisticLRPs2020)). LRPs increased across all probability levels when the carrying capacity was assumed higher under the Sgen:IMCap model (Table \@ref(tab:logisticLRPs2020)). The higher Sgen values for most CUs under this alternative model formulation resulted in more historical years in which < 100% of CUs were above Sgen. Several years with aggregate abundances between 19,000 - 30,000 spawners that had met the threshold of all CUs > Sgen using the IM model no longer met this threshold, resulting in a shift of the fit curve to the right and higher LRP estimates. LRPs based on the IMCap model ranged from 25,677 to 40,784 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%).
 
-```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen and Sgen is estimated using the IM.HiCap spawner recruit model. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement that there is a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval. LRPs (based on MLE estimate only) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit to CU-level status predictions from the Integrated Sgen-LRP model (1998 - 2020), where the logistic model is used to predict the probability that all CUs are above Sgen when Sgen is estimated using the IM.HiCap spawner recruit model. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-IMCap2020-LogisticLRP.png")
 ```
 
+When CU status was based on the IFCRT short-term distributional target, the fit logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-Distr-logisticFit2020)). As a result, LRPs based on the IFCRT short-term distributional target were more uncertain than those based on Sgen. LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020). The LRP based on a 50% probability that all CUs would be above their distributional targets was 17,515 spawners (95% CI = 9,695 - 25,336) while the LRP based on a 99% probability was 44,403 spawners (95% CI = 15,102 - 73,703). 
 
-```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit to IF Coho data (1998 - 2020) to predict the probability that all CUs are above the distributional lower benchmark of half of all subpopulations within a CU with spawning abundances above 1000 fish. The yellow vertical line shows the aggregate abundance-based LRP estimate based on the requirement that there is a 50\\% probability of all CUs being above the benchmark, while the yellow shaded region shows the associated 95\\% confidence interval. LRPs (based on MLE estimate only) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+
+```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit to observed escapement data (1998 - 2020) to predict the probability that all CUs are above the IFCRT short-term distributional target. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 ```
+
 
 
 +-------------+-----------------+-----------------+-----------------+
@@ -306,7 +302,7 @@ knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 +=============+=================+=================+=================+
 | 50%         | 15,395          | 25,677          | 17,515
 |             | (11,187-19,603) | (20,683-30,672) | (9,695-25,336)
-+-------------+-----------------+-----------------+-----------------+                    
++-------------+-----------------+-----------------+-----------------+             
 | 66%         | 16,685          | 27,858          | 21,396
 |             | (12,454-20,916) | (21,674-34,042) | (13,418-29,375)
 +-------------+-----------------+-----------------+-----------------+  
@@ -317,19 +313,51 @@ knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 |             | (13,924-34,738) | (21,957-59,610) | (15,102-73,703)
 +-------------+-----------------+-----------------+-----------------+
 
-Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from logistic regressions applied to three alternative CU lower benchmarks (Sgen:IM, Sgen:IM.HiCap, and Distributional benchmark). For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.
-
-Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Inte
-rior Fraser Coho data.
-
-Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
-
+Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from logistic regressions applied to three alternative CU lower benchmarks (Sgen:IM, Sgen:IM.HiCap, and Distributional). For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.
 
 
 ***Logistic Regression Diagnostics***
 
+Logistic regression diagnostics for all three models indicated some problems with model fits (Table \@ref(tab:logisticDiagIFC2020)). Assumptions of linearity, a lack of influential outliers, and independence among observation were met for all models. The assumption of linearity was demonstrated based on non-significant interaction terms from the Box-Tidwell test. An examination of deviance residuals did not show any influential outliers, and the absolute magnitude of lag-1 AR correction in deviance residuals was always $\leq$ 0.20 indicating that annual observations were independent of each other. However, diagnostic tests on model fits to data yielded mixed results. The Wald Test showed that logistic model coefficients were either marginally significant (0.05 < p <0.10) or just above the marginally significant threshold for all three models. Quasi-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks. Quasi-$R^2$ values were 0.68 and 0.63 for the two Sgen models, and 0.41 for the model based on the IRCRT distributional target. However despite moderate quasi-$R^2$ values, goodness of fit statistics indicated a significant lack of fit based on p-values less than 0.001. 
+
+Minimum sample size requirements were not met for any models, meaning that available data sets were not large enough to support valid conclusions from fitted models. Based on a minimum requirement of 10 data points for the least frequent outcome, the minimum sample size for the Sgen:IM model  was 77 years. This requirement was substantially higher than the 23 years of available data. Minimum sample sizes for the Sgen:IMCap and Distributional model were smaller. The requirement for the Sgen:IMCap model was 26 years, which was just above the available 23 years. The requirement for the model based on the IFCRT Distributional target was 42 years.  
+
+Finally, 'hit ratios' representing classification accuracy as the ratio of successful classifications to total number of data points were relatively high at low probability thresholds, indicating good accuracy. This results was especially for the Sgen:IM model which had a hit ratio 0f 0.91 at probability thresholds of 50%, 66%, and 90%. Classification accuracy was lowest for all models at the 99% probability threshold.  
+
+
++-------------------------+--------------+-----------------+-----------------+
+| Diagnostic Test         | Sgen: IM     | Sgen:IM.HiCap   | Distributional
++=========================+==============+=================+=================+
+| Box-Tidwell p-value     | 0.81         | 1.0             | 0.79
++-------------------------+--------------+-----------------+-----------------+     
+| Max. deviance residual  | 1.52         | 1.68            | 1.66
++-------------------------+--------------+-----------------+-----------------+  
+| AR-1                    | -0.20        | 0.16            | 0.05
++-------------------------+--------------+-----------------+-----------------+
+| Min. sample size        | 77^*         | 26^*            | 42^*
++-------------------------+--------------+-----------------+-----------------+
+| Wald p-values           | $B_0$: 0.11  + $B_0$: 0.06     + $B_0$: 0.13
+| ($B_0$, $B_1$)          | $B_1$: 0.09  + $B_1$: 0.08     + $B_0$: 0.09
++-------------------------+--------------+-----------------+-----------------+
+| Goodness-of-fit p-value | <0.01        | <0.01           | <0.01
++-------------------------+--------------+-----------------+-----------------+
+| Quasi-$R^2$               | 0.68         | 0.63            | 0.41
++-------------------------+--------------+-----------------+-----------------+
+| Hit Ratio (p*= 50%,     | 0.91, 0.91   | 0.87, 0.91,     | 0.76, 0.81,
+| 60%, 90%, 99%)          | 0.91, 0.74   | 0.87, 0.78      | 0.76, 0.52
++-------------------------+--------------+-----------------+-----------------+
+
+Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from logistic regressions applied to three alternative CU lower benchmarks (Sgen:IM, Sgen:IM.HiCap, and Distributional). A description of diagnostic tests is provided in Section ...
+
+
+Despite some of the poor model fit diagnostics for logistic regressions fit to IFC data, we decided to proceed with retrospective analyses and an examination of the effect of missing CUs in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
+
+
+
 
 ***Retrospective Analysis***
+
+
 
 
 
