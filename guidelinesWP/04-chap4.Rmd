@@ -100,20 +100,39 @@ Questions to provide guidance on:
 
 ## Time-varying parameters and impacts on LRPs
 
-There is increasing evidence of time varying productivity in Pacific salmon populations [@holtImpactTimevaryingProductivity2020] in productivity 
+   
 -	Briefly document evidence for time-varying productivity for Pacific salmon
 -	Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications:
+- Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
+
+ There is increasing evidence of time varying parameters in Pacific salmon populations [e.g., @holtImpactTimevaryingProductivity2020, @malickRegionalScaleDeclinesProductivity2016, @huangRecoveryPotentialAssessment2021]. 
+ 
+ Time-varying parameters affect estimates for stock recruitment reference points (e.g. $Smsy$ and $Sgen$) and are also likely to affect population trends, resulting in changes to benchmarks based on historical observations. These effects will have an impact on the classification of CUs as below or above their reference points. 
+
+ Methods for identifying time-varying parameters include Kalman filters, recursive Bayes models or the inclusion of covariates such as environmental indices, survival indices. However determining support for time-varying parameters is not always straightforward. Common statistical diagnosis such as inspection of residuals and use of information criteria (e.g. AIC and BIC) often produce conflicting results.   
+
+ There are no clear guidelines on how to proceed in terms of translating time-varying stock recruitment parameters into reference points. Risks associated with time varying reference points: mistimed changes leading to inappropriate benchmarks, volatility of management benchmarks leading to management uncertainty. 
+ Most studies to date recommend the use of case specific simulation studies in order to determine the appropriate scale to adjust reference points when stock-recruitment parameters are non stationary.  
+
+ The PA policy recommends that changes to the reference points should only be adjusted when there is considerable evidence that productivity has changed and there are no expectations that these changes will be reverted naturally or achieved through management (cite PA policy and kronlund 2021).
+
+Klaer et al 2015 devised a framework for evaluation the degree of confidence in productivity shifts in Australian fisheries, similar approaches could be adapted for Canadian Salmon populations (?). 
 
 
+in terms of computing LRPs at the MU level -- what are the recommendations? - base LRP estimates proportional or aggregate on CU management benchmarks that have been thoroughly vetted and evaluated 
+ 
 
-@adkisonReviewSalmonSpawnerRecruitment2021 reviews stock recruitment analysis for Pacific salmon, including the use of environmental covariates and time-varying parameters. They highlight that even though there might be strong evidence for non stationarity in salmon popuations, it is not clear if reference points should me adjusted accordingly. 
+ 
 
-@kronlundConsiderationsDesignRebuilding2021 recommends that any decision to introduce time-varying reference points be based on evidence supporting that rebuilding could reasonably be expected. They recommend the use of feedback simulations to illustrate the consequences of time-varying benchmarks and identify exceptional circumstances that should lead to re-examination of reference point choices and adopted management measures. 
+
+@adkisonReviewSalmonSpawnerRecruitment2021 reviews stock recruitment analysis for Pacific salmon, including the use of environmental covariates and time-varying parameters. They highlight that even though there might be strong evidence for non stationarity in salmon populations, it is not clear if reference points should me adjusted accordingly. 
+
+@kronlundConsiderationsDesignRebuilding2021 recommends that any decision to introduce time-varying reference points be based on evidence supporting that rebuilding could reasonably be expected. They recommend the use of feedback simulations to illustrate the consequences of time-varying benchmarks and identify exceptional circumstances that should lead to re-examination of reference point and management measures. 
 
  @zhangAccountingNonstationaryStock2021 illustrates the effects of time-varying recruitment parameters on MSY-based reference points for iteroparous fish stocks (cod and plaice). They highlight that more precautionary benchmarks are necessary to account for the parameter uncertainty in highly dynamic ecosystems. However, they observed that effects on reference points depend on the magnitude and structure of the stochasticity in stock-recruitment relationships, therefore they recommend case specific simulation studies be performed to identify explicit impacts on MSY-based reference points.
 
 
-- Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
+
 
 
 ## Guidance on minimum number of years to estimate aggregate abundance LRPs
