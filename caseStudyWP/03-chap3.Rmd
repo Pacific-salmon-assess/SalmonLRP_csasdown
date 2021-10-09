@@ -6,9 +6,9 @@ output:
 # CASE STUDY 1: INTERIOR FRASER COHO SALMON
 
 ## CONTEXT
-The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon. Like most coho salmon, IF Coho spend at least one full year in freshwater as fry before migrating to the ocean as smolts [@arbeider_interior_2020]. During their freshwater fry residence, IF coho are believed to migrate away from spawning sites and into small tributaries and off-channel habitat. Most (88%) IFC have a 3-year life cycle, in which they leave freshwater in their second year and spend 18 months at sea prior to returning to their natal system to spawn.The remaining 12% have a 4-year life cycle in which they spend an additional year in freshwater before migrating as smolts in their third year. Both 3-year and 4-year life cycles spend 18 months at sea. Less than 1% of IF Coho are believed to return as jacks (precocious mature males that spend only 6 months as sea) or at ages older than 4 years [@arbeider_interior_2020].
+The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon. Like most coho salmon, IF Coho spend at least one full year in freshwater as fry before migrating to the ocean as smolts [@arbeider_interior_2020]. Most (88%) IFC have a 3-year life cycle, in which they leave freshwater in their second year and spend 18 months at sea prior to returning to their natal system to spawn. The remaining 12% have a 4-year life cycle in which they spend an additional year in freshwater before migrating as smolts in their third year. Both 3-year and 4-year life cycles spend 18 months at sea. Less than 1% of IF Coho are believed to return as jacks (precocious mature males that spend only 6 months as sea) or at ages older than 4 years [@arbeider_interior_2020].
 
-WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho based on genetics and geographic separation: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson [@dfo_wild_2015; Figure \@ref(fig:coho-map)]. Previous work by the Interior Fraser Coho Recovery Team also identified 11 subpopulations nested within the five CUs, and developed recovery objectives based on maintaining abundance in each of these smaller subpopulation units [@ifcrt_interior_fraser_coho_recovery_team_conservation_2006; Table \@ref(tab:cohoCU2SP)]. The delineation of subpopulations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic evidence. The 11 subpopulations are described in detail by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006. The Fraser Canyon CU is the only CU with a single subpopulation; this result is because most of the spawning for the CU occurs within a single river [@arbeider_interior_2020]. 
+WSP Conservation Units (CUs) have been identified for of Interior Fraser Coho based on genetics and geographic separation: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson [@dfo_wild_2015; Figure \@ref(fig:coho-map)]. Previous work by the Interior Fraser Coho Recovery Team identified 11 subpopulations nested within the five CUs, and developed recovery objectives based on maintaining abundance in each of these smaller subpopulation units [@ifcrt_interior_fraser_coho_recovery_team_conservation_2006; Table \@ref(tab:cohoCU2SP)]. The delineation of subpopulations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic evidence. The 11 subpopulations are described in detail by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006. The Fraser Canyon CU is the only CU with a single subpopulation; this result is because most of the spawning for the CU occurs within a single river [@arbeider_interior_2020]. 
 
 ```{r coho-map, fig.cap="The five Conservation Units that make up the Interior Fraser Coho Stock Management Unit.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-map.png")
@@ -37,13 +37,10 @@ knitr::include_graphics("figure/coho-map.png")
 
 Table: (\#tab:cohoCU2SP) Interior Fraser Coho Conservation Units (CUs) and associated sub-populations. Note that the definition of these sub-populations, including mapped boundaries, are provided in @ifcrt_interior_fraser_coho_recovery_team_conservation_2006.
 
-Declines in IF Coho spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions starting in 1998 [@decker_assessment_2014]. Evidence of a new, lower productivity regime starting in return year 1994 has been documented [@decker_assessment_2014] that coincides with declines in spawner abundances.  In 2002, the IF Coho stock management unit was designated endangered by the  Committee on the Status of Endangered Wildlife in Canada (COSWEIC) based on the stock unit being assessed as a single 'Designatable Unit' (DU). Subsequent work by the Interior Fraser Coho Recovery Team lead to a conservation strategy outlining recovery objectives for the management unit (@ifcrt_interior_fraser_coho_recovery_team_conservation_2006). Those recovery objectives were largely based on the distribution of spawning escapement among the 11 subpopulations in Table \@ref(tab:cohoCU2SP). A short-term recovery objective of 20,000 spawners was identified as a level that would maintain a minimum of 1,000 naturally spawning wild Coho Salmon in at least half of the 11 subpopulations, while a long-term recovery target of 40,000 spawners was identified as a level that would maintain 1,000 or more wild Coho Salmon in all 11 subpopulations. In 2014, @decker_assessment_2014 assessed status relative to the 2006 IFCRT objectives, and concluded that IF coho had been above the short-term recovery target of 20,000 spawners in every year since 2008, and above the long-term recovery target of 40,000 spawners in the most recent two return years (2012 and 2013)  
+Declines in IF Coho spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions starting in 1998 [@decker_assessment_2014]. Evidence of a new, lower productivity regime starting in return year 1994 has been documented [@decker_assessment_2014] that coincides with declines in spawner abundances.  In 2002, the IF Coho stock management unit was designated 'endangered; by the  Committee on the Status of Endangered Wildlife in Canada (COSWEIC) based on the stock unit being assessed as a single 'Designatable Unit' (DU). Subsequent work by the Interior Fraser Coho Recovery Team (IFCRT) lead to a conservation strategy outlining recovery objectives for the management unit (@ifcrt_interior_fraser_coho_recovery_team_conservation_2006). Those recovery objectives were largely based on the distribution of spawning escapement among 11 subpopulations(Table \@ref(tab:cohoCU2SP)). The delineation of subpopulations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic evidence. The 11 subpopulations are described in detail by the @ifcrt_interior_fraser_coho_recovery_team_conservation_2006. The IFCRT identified a short-term recovery objective of 20,000 spawners, which represented the level that was expected to maintain a minimum of 1,000 naturally spawning wild Coho Salmon in at least half of the 11 subpopulations.  In addition, the IFCRT identified a long-term recovery target of 40,000 spawners, which represented a level that was expected to maintain 1,000 or more wild Coho Salmon in all 11 subpopulations. In 2014, @decker_assessment_2014 assessed status relative to the 2006 IFCRT objectives, and concluded that IF coho had been above the short-term recovery target of 20,000 spawners in every year since 2008, and above the long-term recovery target of 40,000 spawners in the most recent two return years (2012 and 2013)  
 
-Also in 2014, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP), at which time the Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; [@dfo_wild_2015]).
+In 2014, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP), at which time the Integrated Status Assessment classified three of these CUs as being amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as amber/green status (Lower Thompson, North Thompson; [@dfo_wild_2015]). A subsequent COSEWIC assessment in 2016 upgraded the status designation for the IF Coho DU from 'endangered' to 'threatened' [@cosewic_cosewic_2016].  In 2018, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho that described status, habitat, threats, limiting factors to recovery, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm [@arbeider_interior_2020]. As part of this RPA, the long-term DU recovery target for IF Coho was recommended was a 3-year geometric mean abundance of 35,935 natural-origin spawners. This target was based on the historically observed aggregate abundance that met the long-term IFCRT objective of 1000 spawners in all subpopulations.
 
-An updated COSEWIC assessment in 2016 upgraded the status designation for the IF Coho DU to 'threatened' [@cosewic_cosewic_2016].  In 2018, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho that described status, habitat, threats, limiting factors to recovery, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm [@arbeider_interior_2020]. As part of this RPA, the long-term DU recovery target for IF Coho was recommended was a 3-year geometric mean abundance of 35,935 natural-origin spawners. This target was based on the historically observed aggregate abundance that met a distributional goal of 1000 spawners in all subpopulations.
-
- 
 
 To Do:  need to work in @korman_evaluation_2019
 
@@ -246,17 +243,14 @@ When estimating logistic regression LRPs using Sgen, we used an integrated model
 
 We used a retrospective analysis to examine the effect of time series length on aggregate abundance-based LRP estimates when using the logistic regression approach. Retrospective analyses were restricted to the most recent x years (2015-2020) because logistic model fits prior to xxxx were unable to converge on an LRP estimate.  For each year between xxxx and xxxx, we used data only available up to that year to calculate LRPs and associated confidence intervals.
 
-
-***Effect of Missing CUs***
-
-To examine the effect of missing CUs on LRP estimates, we calculated LRPs using data from only a subset of the five Interior Fraser Coho CUs.  We limited our analysis to missing data from either one or two CUs so that we had at least three CUs of available data when calculating the proportion of CUs above their benchmarks.  For each missing data case, we calculated SMU status as
+To examine the effect of missing CUs on retrospective LRP estimates, we calculated LRPs using data from only a subset of the five Interior Fraser Coho CUs.  We limited our analysis to missing data from either one or two CUs so that we had at least three CUs of available data when calculating the proportion of CUs above their benchmarks.For each missing data case, we calculated SMU status as
 
 \begin{equation}
   Status_t = \frac{\sum_{i}^{nCUs} S_{i,t}}{LRP'_t}
    (\#eq:status)
 \end{equation}
 
-where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of absolute LRP  estimates because  absolute LRP estimates vary with the number (and combination) of CUs used.
+where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of actual LRP estimates because the magnitude of the LRP will vary with the number (and combination) of CUs used.
 
 
 **Results**
@@ -268,11 +262,9 @@ where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP ca
 Logistic regression model fits in 2020 to CU-level status predictions from  Sgen:IM and Sgen:IM.Cap models are shown in Figures \@ref(fig:coho-IM-logisticFit2020) and \@ref(fig:coho-IMCap-logisticFit2020), respectively, while the logistic regression model fit to status estimates based on the IFCRT short-term distributional target is shown in Figure \@ref(fig:coho-Distr-logisticFit2020). 
 
 
-To Add:
-Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
+To Add: Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
 
-To Add:
-Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
+To Add: Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
 
 
 All three estimation methods for IFC logistic regression-based LRPs were able to converge on a solution. Resulting LRPs for different p^* thresholds are shown on the regression curves, as well as in Table \@ref(tab:logisticLRPs2020). There was however considerable uncertainty around predicted curves as seen in the large areas of gray shading in Figures \@ref(fig:coho-IM-logisticFit2020) - \@ref(fig:coho-Distr-logisticFit2020). 
@@ -294,8 +286,6 @@ When CU status was based on the IFCRT short-term distributional target, the fit 
 ```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit to observed escapement data (1998 - 2020) to predict the probability that all CUs are above the IFCRT short-term distributional target. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 ```
-
-
 
 +-------------+-----------------+-----------------+-----------------+
 | Probability | Sgen: IM        | Sgen:IM.HiCap   | Distributional
@@ -350,20 +340,41 @@ Finally, 'hit ratios' representing classification accuracy as the ratio of succe
 Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from logistic regressions applied to three alternative CU lower benchmarks (Sgen:IM, Sgen:IM.HiCap, and Distributional). A description of diagnostic tests is provided in Section ...
 
 
-Despite some of the poor model fit diagnostics for logistic regressions fit to IFC data, we decided to proceed with retrospective analyses and an examination of the effect of missing CUs in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
-
-
+Despite some of the poor model fit diagnostics for IFC, we decided to proceed with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
 
 
 ***Retrospective Analysis***
 
 
+2015 was the first year in which the available IFC time series was long enough to estimate logistic regression-based LRPs using the Sgen:HiSep integrated and IFCRT-distributional models. The Sgen:Basic integrated model required an additional 2 years of data before LRP estimates were first available in 2017. As a result, only 4-6 years of retrospective analyses were available, depending on the model being considered. All three models showed some fluctuations in LRP estimates over time (Figure \@ref(fig:coho-IM-retroLRPs)). The IFCRT-distributional model tended to be the most stable over time while the Sgen:HiSep integrated model showed a relatively consistent increase over the time. 
+
+
+```{r coho-retroLRPs, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) and associated time series of retrospective LRPs from logistic regression-based estimation methods. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. Annual LRP estimates are shown as maximum likelihood values (coloured lines) and associated 95\\% confidence intervals (shaded areas).", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+knitr::include_graphics("figure/coho_LRP_compareRetro.png")
+```
+
+
+When the IM:Sgen integrated model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). Four of the five possible combinations of four CUs had estimates in 2017, while only three had estimates in 2019 and 2020. For scenarios in which LRP estimates were possible, status estimates were often close to the estimate obtained when all 5 CUs were used, and always fell within the 95% confidence interval of the full data estimate. The IM:Sgen integrated model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2019 and 2020 when only 4 out of the 10 possible combinations had estimates. For scenarios that were able to converge, status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2018 had a status estimate that fell outside of the 95% confidence interval of the full data estimate.  
+ 
+```{r coho-IM-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:IM Integrated model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs.  Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios.", warning=FALSE, echo=FALSE, out.width = '60%', out.height = '30%', fig.align="center"}
+knitr::include_graphics("figure/coho_StatusByNCUs_Bern.IndivRickerSurv_50.png")
+```
+
+
+When the IM:SgenCap integrated model was applied to missing data scenarios in which four out of five CUs had data, status estimates were only available for two of the five CU combinations in all 6 retrospective years (Figure \@ref(fig:coho-IMCap-missingCUs)). For the two scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only 3 CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from 3-CU scenarios fell outside of the 95% confidence interval for the full data case.      
 
 
 
-***Effect of Missing CUs***
+```{r coho-IMCap-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:IMCap Integrated model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+knitr::include_graphics("figure/coho_StatusByNCUs_Bern.IndivRickerSurvCap_50.png")
+```
+
+LRPs based on the IFCRT short-term distributional target could be estimated for all 4-CU missing data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five 4-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for South Thompson CU being an influential observation that has a large impact on the shape of the fit model. For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the 4 CU or full data scenarios, and showed high variability among scenarios in estimated status.    
 
 
+```{r coho-distributional-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the logistic model fit to IFCRT short-term distributional targets under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+knitr::include_graphics("figure/coho_StatusByNCUs_Bern.SPopAbundThreshST_50.png")
+```
 
 
 ### LRP Estimation: Aggregate Abundance Projection-Based LRPs
