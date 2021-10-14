@@ -55,6 +55,12 @@ There are studies showing that a range of factors may affect the productivity of
 <!--
 Sue Grant comment: How is this different from any other salmon population, they are all affected by these conditions, and particularly right now so many are declining, so this is a fairly common issue, so should be mentioned more ina  broader context at the start and how to address this across all approaches
 Response: Agreed. Can move this to intro and / or discussion to put into broader context.
+
+CW: On the guidelines paper we have a section on the effects of time-varying productivity on  LRPs. We could move some of this discussion there. However, I think there might value in leaving some text here indicating that there are suspect changes in productivity for ISC chum. 
+
+Something like:
+
+
 -->
 
 
@@ -145,6 +151,9 @@ Caveats with benchmarks based on $S_{gen}$ or stock-recruit parameters:
 The methods for applying the multi-dimensional status assessment for CU status is described in Chapter 2. 
 
 In applying the multi-dimensional rapid status assessment to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for relative abundance benchmarks for the five CUs that have appropriate percentiles identified. For Bute Inlet and Southern Coastal Streams, we did not use relative abundance benchmarks. When relative abundance benchmarks are not available, the decision tree was used assesses trends instead. 
+
+<!-- How were the appropriate percentiles identified? or was it from the @holtEvaluatingBenchmarksBiological2018?. 
+    -->
 
 ### LRP Estimation for ISC-NF Chum
 
