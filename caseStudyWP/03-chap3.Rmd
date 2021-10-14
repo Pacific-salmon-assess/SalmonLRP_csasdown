@@ -226,7 +226,7 @@ knitr::include_graphics("figure/coho-IM2020-LogisticLRP.png")
 
 When the Sgen:LRP model was used, aggregate abundance-based LRPs ranged from 15,395 to 24,331 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%) (Table \@ref(tab:logisticLRPs2020)). LRPs increased across all probability levels when the carrying capacity was assumed higher under the Sgen_priorCap:LRP model (Table \@ref(tab:logisticLRPs2020)). The higher $S_{gen}$ values for most CUs under this alternative model formulation resulted in more historical years in which < 100% of CUs were above Sgen. Several years with aggregate abundances between 19,000 - 30,000 spawners that had met the threshold of all CUs > Sgen using the IM model no longer met this threshold, resulting in a shift of the fit curve to the right and higher LRP estimates. LRPs based on the Sgen_priorCap:LRP model ranged from 25,677 to 40,784 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%).
 
-```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit from the integrated Ricker_priorCap LRP model using data from 1998 - 2020. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit from the integrated Ricker\\_priorCap LRP model using data from 1998 - 2020. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-IMCap2020-LogisticLRP.png")
 ```
 
