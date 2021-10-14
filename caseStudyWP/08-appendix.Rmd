@@ -33,7 +33,7 @@ After these removals, the steps for preparing the data for analysis were:
   - Use proportion of wild:total escapement by CU and Area to estimate number of wild returns 
   - Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU. Result is wild spawners and corresponding recruits by brood year for each CU
 
-#### Infilling of spawner escapement data 
+#### Infilling of spawner escapement data
 
 The data we used had years where not all streams were counted. 
 

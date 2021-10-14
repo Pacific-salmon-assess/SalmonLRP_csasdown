@@ -5,6 +5,12 @@ To be completed.
 * Synthesize main results and conclusions from case studies
 
 
+Key points for ISC chum: 
+
+For data poor stocks, data quality issues may limit the choice of CU-specific benchmarks used as basis for the calculation of the SMU LRP
+. For example, for the ISC chum study case,$Sgen$ could not be reliably estimated for all CUs, and its use lead to poor fits of the logistic aggregate abundance LRP. For that study case, the analyses relied on the percentile-based benchmarks. 
+
+
 
 
 Some ideas include:
