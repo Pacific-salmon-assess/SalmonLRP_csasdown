@@ -23,7 +23,12 @@ Aggregate abundance LRPs were not appropriate. Factors include:
 
 WCVI Chinook main points: 
 
+Recommendation to exclude CUs and/or inlets with PNI <0.5
 
+Proportion of CU above benchmarks indicate that SMU is below LRP because one specific CU is consistently below its lower benchmark. Aggregate abundance logistic regression-based LRPs are not estimable as there are no years in which the SMU is above LRP. 
+
+
+Aggregate abundance LRP 
 
 
 Some ideas include:
