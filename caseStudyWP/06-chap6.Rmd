@@ -7,10 +7,18 @@ To be completed.
 
 Key points for ISC chum: 
 
-For data poor stocks, data quality issues may limit the choice of CU-specific benchmarks used as basis for the calculation of the SMU LRP
-. For example, for the ISC chum study case,$Sgen$ could not be reliably estimated for all CUs, and its use lead to poor fits of the logistic aggregate abundance LRP. For that study case, the analyses relied on the percentile-based benchmarks. 
+For data poor stocks, data quality issues may limit the choice of CU-specific benchmarks used as basis for the calculation of the SMU LRP. For example, for the ISC chum study case,$Sgen$ could not be reliably estimated for all CUs, and its use lead to poor fits of the logistic aggregate abundance LRP (although fits were poor regardless of the benchmark used). For that study case, the analyses relied on the percentile-based benchmarks. 
 
+The choice of benchmark to determine CU specific status will affect the classification and therefore will also affect the LRP. 
 
+Percentile benchmarks were more conservative that multidimensional status, i.e. LRP was triggered more often when percentile benchmarks were used.  -- But I am not clear if this is a trend to be expected for other SMUs of if it's specific to ISC chum. 
+
+Adding more CUs lead to LRP being triggered more often. -> this indicates that exclusion of CUs with incomplete time series may lead to more overly optimistic assessments. 
+
+Aggregate abundance LRPs were not appropriate. Factors include: 
+-different orders of magnitude in variation among CU
+-lack of auto correlation in escapements
+-wide range in productivity values between CUs 
 
 
 Some ideas include:
