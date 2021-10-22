@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.4}Selection of CU-level abundance-based benchmarks to use as a basis for LRP estimation (Placeholder)}{12}{subsection.0.4.4}
 \contentsline {subsection}{\numberline {4.5}Incorporating uncertainty in aggregate abundance LRP estimation}{12}{subsection.0.4.5}
 \contentsline {subsection}{\numberline {4.6}Time-varying parameters and impacts on LRPs}{13}{subsection.0.4.6}
-\contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{13}{subsection.0.4.7}
+\contentsline {subsection}{\numberline {4.7}Guidance on minimum number of years to estimate aggregate abundance LRPs}{14}{subsection.0.4.7}
 \contentsline {subsection}{\numberline {4.8}Guidance on developing aggregate abundance LRPs with missing CU-level data}{14}{subsection.0.4.8}
 \contentsline {subsection}{\numberline {4.9}Enhanced stocks}{14}{subsection.0.4.9}
 \contentsline {subsection}{\numberline {4.10}Defining SMUs where LRPs cannot be developed}{14}{subsection.0.4.10}
@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {5.3}LINE BREAKS}{16}{subsection.0.5.3}
 \contentsline {subsection}{\numberline {5.4}R CHUNKS}{16}{subsection.0.5.4}
 \contentsline {subsection}{\numberline {5.5}INLINE CODE}{16}{subsection.0.5.5}
-\contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{16}{subsection.0.5.6}
+\contentsline {subsection}{\numberline {5.6}INCLUDING PLOTS}{17}{subsection.0.5.6}
 \contentsline {subsection}{\numberline {5.7}LOADING AND EXPLORING DATA}{17}{subsection.0.5.7}
 \contentsline {subsection}{\numberline {5.8}FIGURES}{25}{subsection.0.5.8}
 \contentsline {subsection}{\numberline {5.9}FOOTNOTES AND ENDNOTES}{27}{subsection.0.5.9}
