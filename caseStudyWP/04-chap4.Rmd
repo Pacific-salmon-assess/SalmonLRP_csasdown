@@ -4,7 +4,7 @@ output:
   html_document: default
 ---
 
-# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK
+# CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK{WCVIchinookChapter}
 ## CONTEXT
 
 [//]: # Add a comment in colour: *\textcolor{cyan}{CH: some text}*
