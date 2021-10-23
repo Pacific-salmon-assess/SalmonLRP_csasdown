@@ -1,7 +1,7 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# Retrospective analysis of CU benchmarks based on Sgen and percentiles 
+# Retrospective analysis of CU benchmarks based on Sgen and percentiles
 
 *\textcolor{cyan}{LT: open to other name of this appendix*
 

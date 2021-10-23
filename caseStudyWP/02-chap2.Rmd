@@ -174,6 +174,7 @@ The projection-based LRP approach combines all the information known for individ
 
 We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations (@holtQuantitativeToolEvaluating2020b, @freshwaterBenefitsLimitationsIncreasing2020). We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
+
 Updated functionality for the LRP version of samSim include:
 <!-- KH comment: Not sure if these updates are neccessary here ... this text could be moved to the appendix? - or, just put in the github readme for the LRP branch of samSim?? -->
 
@@ -204,7 +205,7 @@ The following steps were taken to calculate projected LRPs using samSim:
    3. For each aggregate abundance bin, $AggS_{bin}$:
 
       * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 year-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
-      <!-- Need to check these, It says that fish bins are 200 fish, but example uses 2000 fish bin -->
+      <!-- CW: Need to check these, It says that fish bins are 200 fish, but example uses 2000 fish bin -->
 
       * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 year-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes with all CUs above their lower benchmarks.
 

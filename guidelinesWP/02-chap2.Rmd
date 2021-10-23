@@ -1,6 +1,6 @@
 # LRP Estimation Methods for Pacific Salmon {#est-methods}
 
-The development of LRPs for Pacific salmon was guided by two key principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU.
+The development of LRPs for Pacific salmon was guided by three key principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU.
 <!-- CH comment: some of the text in this subsection may be moved to the Intro-->
 
 First, as described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” (DFO PA). This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). 
@@ -10,6 +10,9 @@ Second, LRPs for Pacific salmon were developed to align with the goal of Canada'
 One lower benchmark that is commonly used is the spawner abundances that results in recovery to SMSY within one generation under equilibrium conditions, Sgen (Holt et al. 2009). Status assessments under the Wild Salmon Policy generally integrate data across numerous dimensions of status, including spawner abundances, short and long-term trends, distribution of spawning, and fishing mortality relative to productivity (Holt et al. 2009). The framework for defining biological units and their assessment under the WSP has been adopted widely in Canada (e.g., FR sock, IFR coho, SBC CK, Skeena report, PSE).
 
 Maintaining CUs above the red zone (i.e., spawner abundances > Sgen, and/or above lower benchmarks on various dimensions of status) is consistent with avoiding serious harm to the CU. At this level, irreversible or slowly reversible impacts are avoided. Therefore, to be consistent with the Wild Salmon Policy, LRPs need to allow for component CUs to be above their lower benchmarks.
+
+Third, estimate of LRPs should be estimated in a statistically integrated way when possible in order to propagate uncertainties throughout analyses and to be consistent with current best-practices in fisheries assessments. <!--CH comment: add details and reference here-->
+
 
 
 Our intention is to provide a variety of LRPs applicable for a range of data quality and data types. 
@@ -21,6 +24,7 @@ Alternative LRPs aligned with the key principles above may be developed in the f
 
 
 Below methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Then candidate LRPs are briefly described falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances.  A more detailed description of LRPs with technical details is included Working Paper 2. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). <!--CH: choosing between ppn CUs and aggregate abundance will depend on decision context. If LRP is used within the context of a MP framework, then an aggregate abundance-based LRP may be more suitable, and does not need to be explicitly defined. -->
+
 
 ## Estimation of CU Status
 
