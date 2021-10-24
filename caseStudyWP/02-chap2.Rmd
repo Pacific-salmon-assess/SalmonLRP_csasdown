@@ -30,7 +30,7 @@ A proportion-based LRP is simply the proportion of CUs required to be assessed a
 We compare three different methods of assessing CU status when using proportion-based LRPs: (i) the proportion of CUs with a recent Integrated Status assessment above the red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent rapid multidimensional status assessment above red (see below for more details), and (iii) the proportion of CUs with status estimated to be below a single type of CU lower benchmark (e.g., $S_{gen}$, percentile-babsed benchmarks, etc.) 
 
 
-### Rapid Multidimensional Status Assessment Tool
+### Rapid Multidimensional Status Assessment Tool{#rapidToolMethods}
 
 <!-- Note from Sue:
 
