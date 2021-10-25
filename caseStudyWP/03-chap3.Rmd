@@ -68,9 +68,9 @@ We consider three alternative ways to characterize CU status when developing LRP
 2) CU-level abundance relative to $S_{gen}$
 3) Distribution related to IFCRT-distributional target
 
-The first approach uses the multi-dimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)).  This method is used when developing proportion-based LRPs. 
+The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
 
-In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of $S_{gen}$, where CU status is considered poor when abundance drops below $S_{gen}$. The value of $S_{gen}$ represents the number of spawners required to recover to $S_{MSY}$ (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holt_indicators_2009]. $S_{gen}$ is one of several benchmarks available for assigning mutli-dimensional CU status in WSP Integrated Status Assessments; it represents a lower benchmark between red and amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015].    
+The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of $S_{gen}$, where CU status is considered poor when abundance drops below $S_{gen}$. The value of $S_{gen}$ represents the number of spawners required to recover to $S_{MSY}$ (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holt_indicators_2009]. $S_{gen}$ is one of several benchmarks available for assigning mutlidimensional CU status in WSP Integrated Status Assessments; it represents a lower benchmark between red and amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015].    
 
 The third approach is based on the distribution of spawning escapement among subpopulations nested within CUs (Table \@ref(tab:cohoCU2SP)). We apply this approach for Interior Fraser Coho to maintain consistency with previous recovery planning processes for this SMU (@ifcrtinteriorfrasercohorecoveryteamConservationStrategyCoho2006, @arbeiderInteriorFraserCoho2020). Since the distributional target we use was initially developed by the Interior Fraser Coho Recovery Team in 2006, we refer to it as "IFCRT distributional". Specifically, we use the IFCRT's short-term recovery objective that the 3-year average escapement in at least half of the sub-populations within each of the five CUs is to exceed 1,000 wild-origin spawning coho salmon, excluding hatchery fish spawning in the wild. We selected the short-term recovery target to represent poor CU status in our case study (e.g., below a lower benchmark) because, as noted by @arbeiderInteriorFraserCoho2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity.  Note that our decision to maintain this metric as part of our current evaluation does not necessarily mean we are recommending it as a an option for identifying LRPs for this SMU. See Holt et al. (in review) for a detailed guidelines on which benchmarks should be considered for different contexts.
 
@@ -140,7 +140,6 @@ To maintain consistency with this previous work on Interior Fraser Coho, we also
 \end{equation}
 
 
-
 @arbeiderInteriorFraserCoho2020 and @kormanEvaluationFrameworkAssessing2019 set $mu_{SREP}$ at 1.5 times the $S_{REP}$ value estimated from the base model fit without a prior on $S_{REP}$. For our integrated Sgen-LRP model fits (described in section xxx), we found that we needed to constrain $mu_{SREP}$ at no more than 1.4 times the $S_{REP}$ value to achieve model convergence, so we used the 1.4 times expansion instead.  We set $\sigma_{SREP}$ at $\sqrt{2} * 1000 = 1414$ spawners, which is the same value used by @arbeiderInteriorFraserCoho2020. Note that the "$* 1000$" term is used to correct for scaling spawner abundance by 1/1000 when fitting models. @arbeiderInteriorFraserCoho2020 parameterized the distribution in terms of precision ($\tau$), where $\tau = \frac{1}{\sigma^2} = 0.5$. The effect of adding the prior on $S_{REP}$ when fitting individual models to available data is shown in Figure \@ref(fig:coho-SR-fit).    
 
 
@@ -149,14 +148,15 @@ knitr::include_graphics("figure/coho-compareSRFits-IM.png")
 ```
 
 
-## LRP Estimation: Proportion of CUs
+## LRP Estimation: Proportion of CUs  
+
 ### Methods
 
 We looked at the proportion of CUs that had multi-dimensional rapid status assessments above the red zone to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs assessed as having red status. Both Ricker model formulations described above were used to estimate relative abundance-based benchmarks (lower benchmark \= $S_{gen}$ and upper benchmark \= 0.8$S_{MSY}$) when assessing multi-dimensional rapid stats: the base Ricker model and the Ricker_priorCap model. Estimates of $S_{gen}$ and $S_{MSY}$ were made using all data available up to 2020, so our evaluation is not a true retrospective analysis in which only the data available up to each year in a time series are used to estimate status.
 
 For comparison, we also looked at the proportion of CUs that were below $S_{gen}$ in each year and the proportion of CUs that failed to meet the IFCRT distributional target of at least half of all sub-populations within each CU having more than 1000 spawners.  
 
-### Results
+### Results  
 
 Estimates of $S_{gen}$ based on the Ricker_priorCap model were higher than those based on the base Ricker model for four of the five CUs (Middle Fraser, Lower Thompson, North Thompson, and South Thompson) and were approximately equal for the fifth CU (Fraser Canyon; Appendix ...). As a result, generational average spawning abundances  was more likely to drop below $S_{gen}$ when it was estimated using the Ricker_priorCap. Under the base Ricker model formulation, generational average spawning abundance remained above $S_{gen}$ for all years between 2000 and 2020 (Figure \@ref(fig:coho-CU-multiDim-Ricker)).  In comparison, under the Ricker_priorCap formulation, generational average abundance dropped below $S_{gen}$ in one or more years for Lower Thompson CU (2006), Middle Fraser CU (2006, 2008), and South Thompson CU (2000, 2006, 2007, 2015; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)). As a result, at least one CU had stock status assessed as below $S_{gen}$ for 5 of the 21 years between 2000 and 2020.
 
@@ -170,12 +170,11 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-wMultiStatus-Ricker.png")
 knitr::include_graphics("figure/coho-CU-EscpSeries-wMultiStatus-Ricker-Cap.png")
 ```
 
+As a point of comparison, if a proportion-based LRP was based on all CUs being above the IFCRT distributional target, the LRP would have been breached in 4 of the 21 years between 2000 and 2020. Eight of the 11 sub-populations had generational average escapement drop below the 1000 spawner threshold in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the distributional target at least half of the subpopulations within each CU with greater than 1000 fish was more often met than not. All 11 subpopulations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportion-based LRP based on the IFCRT-distributional target (Figure \@ref(fig:coho-Subpop-timeseries)).
 
 ```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Gray dots shows years in which the 3-year geometric mean escapement was above the 1000 fish threshold used to assess distributional status, while red dots show years in which the 1000 fish threshold was not met.  CUs to which each subpopulation belong to are shown in Table --", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
-
-As a point of comparison, if a proportion-based LRP was based on all CUs being above the IFCRT distributional target, the LRP would have been breached in 4 of the 21 years between 2000 and 2020. Eight of the 11 sub-populations had generational average escapement drop below the 1000 spawner threshold in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the distributional target at least half of the subpopulations within each CU with greater than 1000 fish was more often met than not. All 11 subpopulations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportion-based LRP based on the IFCRT-distributional target (Figure \@ref(fig:coho-Subpop-timeseries)).
 
 
 ## LRP Estimation: Aggregate Abundance Logistic Regression LRPs 
