@@ -22,7 +22,7 @@ When developing aggregate abundance-based LRP options for salmon SMUs, we aim to
 The above definitions hinge on what defines 'poor' CU status. In the case of WSP Integrated Status Assessments, in which multiple metrics are combined to assign CU status, poor status corresponds with the 'red' status zone [@canadaCanadaPolicyConservation2005; @grant2017FraserSockeye2020]. While WSP Integrated status assessments are typically intensive expert-driven processes, we demonstrate the application of a multidimensional scanning tool that is being developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP (cite Pestal et all tech report). When developing aggregate abundance-based LRPs, we also consider cases in which CU status is based on a single lower benchmark that has been identified as important for individual CUs by local experts. A variety of methods are available for estimating lower benchmarks depending on species and data availability [@holtIndicatorsStatusBenchmarks2009; @holtEvaluatingBenchmarksBiological2018; @grant2017FraserSockeye2020]. 
  
 <!--
-  CW: Reference, is the WSP author DFO or Canada? I have seen it cited in both ways in CSAS papers, an dI think I was using the DFO version as it is what Julie Marentette used in her 2021 papers.-- should I change it to the canada citation  (@canadaCanadaPolicyConservation2005) ?
+  CW: Reference, is the WSP author DFO or Canada? I have seen it cited in both ways in CSAS papers, and I think I was using the DFO version as it is what Julie Marentette used in her 2021 papers.-- should I change it to the canada citation  (@canadaCanadaPolicyConservation2005) ?
 -->
 
 
@@ -38,6 +38,8 @@ We compare three different methods of assessing CU status when using proportion-
 <!-- Note from Sue:
 
 For multi-dimensional status, we are using the term ‘lower benchmark’ to be Red status zone for the CU. Not entirely a correct usage of this term, but applies it to the language used for LRP triggers of rebuilding plans.
+
+CW: I have been using lower benchmark for CUs and LRPs for SMUs -- Not sue if that is appropriate either. But if we decide to adopr this language, it may be good to say it explicitly in the overview section above?
 
 -->
 
