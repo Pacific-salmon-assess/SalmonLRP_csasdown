@@ -325,11 +325,7 @@ knitr::include_graphics("figure/coho-StatusByNCUs-SPopAbundThreshST-50.png")
 
 ### Methods
 
-Forward projections of each of the five CUs with the Interior Fraser Coho SMU were done using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Parameters characterizing population dynamics, marine survival rates, and exploitation rate were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below. Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods).
-
-
-TO DO: Need to say number of year and number of NTrials
-
+Forward projections of each of the five CUs with the Interior Fraser Coho SMU were done using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Parameters characterizing population dynamics, marine survival rates, and exploitation rate were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below. Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods). Forward projections were run for 30 years over 20,000 simulation trials.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probaility thresholds.  
 
 *Stock recruitment dynamics*
 
@@ -354,30 +350,16 @@ knitr::include_graphics("figure/coho-RecuitResidCorrelation-Ricker.png")
 
 When fitting spawner recuit models to data, we followed the approach of @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 in assuming that all CUs experienced the same marine survival rate for given sea-entry year, and that the marine survival coefficient, $\gamma$, was constant both among CUs and among years.  When projecting CUs forward, we maintained this assumption in our base case by generating a single marine survival rate for each sea entry year and setting $\sigma_{\gamma}$ = 0, where $\sigma_{\gamma}$ is the standard deviation of among-CU variability in $\gamma$ such that $\gamma_i \sim Normal(\bar{\gamma}, \sigma_{\gamma})$. We used sensitivity analyses on $\sigma_{\gamma}$ to test the effect of changes in recruitment covariation among CUs on projected LRP estimates. Four alternative levels of $\sigma_{\gamma}$ were used in sensitivity analyses: $\sigma_{\gamma}$ = 0.0225, 0.045, 0.0675, and 0.09. We selected these levels to cover a range between 0 and 0.09, where 0.09 was the standard deviation of the estimated marginal posterior distribution for $\gamma$ from our Ricker stock recruitment model fit. 
 
-The resulting correlations in spawner abundances from the projections are shown in figure ....
+The resulting correlations in spawner abundances from the projections are shown in Figure \@ref(fig:coho-sigGammaCorrelation). In the forward projections, pairwise correlations in projected spawner abundances among CUs for the base case assumption of $\sigma_{\gamma}$ = 0 were similar to observed pairwise correlations in spawner abundances among CUs. Increasing $\sigma_{\gamma}$ resulted in decreased among-CU correlation in projected spawner abundances.
 
-
-
-
-*Covariance in exploitation*
-
-We assumed an average exploitation rate of 12.5% for all CUs in forward projections, with common interannual variability in exploitation rates due to shared fishery impacts among CUs each year. Interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), with the standard deviation of the beta distribution parameterized from estimated exploitation rates for 1998 - 2016 brood years. The corresponding coefficient of variation (CV) for interannual variability was 0.44.
-
-Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) and variation in which indicator stocks were operational in a given year. As a result, empirically-based estimates of among-CU variability in exploitation rates are not possible. However, there are reasons to expect that exploitation rates to vary among CUs in a given year, including variable mortality in mark-selective fisheries due to variation among CUS in the proportion of hatchery marked fish and differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (cv=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds.  
-
-<!--
-From Chinook:
-In the forward projections, pairwise correlations in projected spawner abundances among inlets were similar to observed pairwise correlations in spawner abundances among inlets (Figure \@ref(fig:chinook-boxplotscvER)). Varying assumptions about variability in exploitation among inlets between cv= 0 and 0.17 did not impact the distribution of correlations in spawner abundances in the projections.  
-
-For coho: can I include plots that show this as well??
-
--->
-
+```{r coho-sigGammaCorrelation, fig.cap="Distribution of correlations of spawner abundances among CUs for observed data between 1998 and 2021 and projected time-series under alternative assumptions about the standard deviation on the marine survival co-efficient among CUs for the base Ricker model formulation.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+knitr::include_graphics("figure/coho-corrEffect-sigGamma.png")
+```
 
 
 *Variability in age proportions of recruits among CUs*
 
-Annual variability in the age structure of returns was generated from a multivariate logistic distribution parameterized using CU-specific time series of proportions at age. The underlying average age structure for each CU was set at the average from the available time series (brood years 1998 - 2016), while annual deviations from underlying age-specific means were drawn from a multivariate logistic distribution. Annual deviations were held constant among all CUs; however, the scale of annual deviations was controlled by the variability parameter $\tau$, which was estimated individually for each CU. This meant that while all CUs simultaneously experienced increases or decreases in a given year, the magnitude of the increase or decrease was CU-specific. Annual deviations were held constant among CUs to represent the strong co-variation in proportions at age seen in available time series for Interior Fraser Coho, especially since 2010 (Figure \@ref(fig:coho-recruitResid-Ricker)).  When the constraint of constant annual deviations was removed, generated proportion at age data was much more variable than observed data.  
+Annual variability in the age structure of returns was generated from a multivariate logistic distribution parameterized using CU-specific time series of proportions at age. The underlying average age structure for each CU was set at the average from the available time series (brood years 1998 - 2016), while annual deviations from underlying age-specific means were drawn from a multivariate logistic distribution. Annual deviations were held constant among all CUs; however, the scale of annual deviations was controlled by the variability parameter $\tau$, which was estimated individually for each CU. This meant that while all CUs simultaneously experienced increases or decreases in a given year, the magnitude of the increase or decrease was CU-specific. Annual deviations were held constant among CUs to represent the strong co-variation in proportions at age seen in available time series for Interior Fraser Coho, especially since 2010 (Figure \@ref(fig:coho-recruitResid-Ricker)).When the constraint of constant annual deviations was removed, generated proportion at age data was much more variable than observed data.  
 
 Annual variability in the age structure of recruits has not been included in other recent projection analyses for this SMU. Both @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 assumed a constant age structure over time.
  
@@ -385,6 +367,12 @@ Annual variability in the age structure of recruits has not been included in oth
 knitr::include_graphics("figure/coho-ObsAgeProp-byCU.png")
 ```
 
+
+*Covariance in exploitation*
+
+We assumed an average exploitation rate of 12.5% for all CUs in forward projections, with common interannual variability in exploitation rates due to shared fishery impacts among CUs each year. Interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), with the standard deviation of the beta distribution parameterized from estimated exploitation rates for 1998 - 2016 brood years. The corresponding coefficient of variation (CV) for interannual variability was 0.44.
+
+Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) and variation in which indicator stocks were operational in a given year. As a result, empirically-based estimates of among-CU variability in exploitation rates are not possible. However, there are reasons to expect that exploitation rates to vary among CUs in a given year, including variable mortality in mark-selective fisheries due to variation among CUS in the proportion of hatchery marked fish and differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (cv=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds. Varying assumptions about variability in exploitation among CUs between cv= 0 and 0.44 in forward projections did not impact the distribution of correlations in spawner abundances in the projections (results not shown).  
 
 
 \begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
