@@ -51,6 +51,7 @@ source("R/make_tree_diagram.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
 <!--
+  CW:
   should we include a paragraph here explaining that the proportion methods (ii) multi dimensional and (iii) single metric are on a continuum and that the multi dimensional method defaults to abundance based benchmarks (i.e., Sgen) when it is available? 
 
 Following Carrie's suggestion from the call on Friday, we may want to say that we are applying the single metric approach to illustrate the dynamics of the multi-dimensional scanner tool: i.e. both approaches will converge when a CU is data rich, and number of spawners are above the 1500 threshold. However the approaches will diverge as the information available for a CU deteriorates or its absolute abundance approaches threshold levels.   
@@ -202,7 +203,7 @@ We used the samSim modelling tool to conduct stochastic projections for our case
 
 
 <!--
-Suggest changing paragraph above to:
+CW:Suggest changing paragraph above to:
 
 We used the samSim closed loop simulation modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations [@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]. We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
