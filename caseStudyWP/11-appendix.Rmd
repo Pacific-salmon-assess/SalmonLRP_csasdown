@@ -1,8 +1,10 @@
+<!--
 ---
 output:
   word_document: default
   html_document: default
 ---
+-->
 
 # Sensitivity of Projection-Based LRPs to Exploitation Rates
 

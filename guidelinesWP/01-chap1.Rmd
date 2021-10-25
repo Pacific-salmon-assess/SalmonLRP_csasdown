@@ -28,6 +28,19 @@ Scales of Pacific salmon assessment reporting
 
 -- Enhancement not included
 
+
+<!-- Suggested text from Sue when reviewing case study paper: 
+
+An management unit (MU) is the group level LRPs are evaluated on. For Pacific Salmon, an MU is comprised of one or more CUs, where a CU is a fundamental unit of biodiversity for Pacific salmon. It is ‘a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe, such as human lifetime or a specified number of salmon generations.’ (DFO 2005).
+
+Pacific Salmon given their complex population structure, and freshwater and marine life stages, have unique considerations relative to marine species. For this reason, fisheries, which operate at the MU scale, is not the only management action that can be used to improve salmon production. In fact, catch has been considerably reduced in recent years (see SOPO Grant et al. 2021).  Habitat management and hatchery management are playing an increasing role in actions required to support salmon adaptation to climate change, and these require CU considerations within habitat aggregations, or down to the population level for hatchery ones. For marine species, the only lever is fisheries, so a single aggregate MU that relates to this scale makes most sense.
+
+K.Holt note: some of this may be best in guidance paper?
+
+-->
+
+
+
 ## Review of Reference Points for Pacific Salmon
  <!--
 CW: Consider changing this title to Review of Reference Points in Canada with focus on Pacific Salmon
