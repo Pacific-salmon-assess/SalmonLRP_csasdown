@@ -6,13 +6,16 @@ Under DFO's New Fisheries Act, Limit Reference Points (LRPs) will be required fo
 CW: In the above paragraph:
 "integrated assessment methods have been developed in which multiple metrics are combined into a single estimate of CU status"
 
-Could we replace "integrated assessessment" with "multidimensional assessments" or "WSP assessments"? I know the term "integrated assessments" have been used for salmon assessments in the past, but I think it causes a bit of confusion as it can have two meanings:
+Could we replace "integrated assessment" with "multidimensional assessments" or "WSP (integrated) assessments"? I know the term "integrated assessments" have been used for salmon assessments in the past, but I think it causes a bit of confusion as it can have two meanings:
 
-integrated assessessment - multiple assessment criteria combined to generate a population status. 
+integrated assessment - multiple assessment criteria combined to generate a population status. 
 
-integrated assessessment - multiple data types considered jointly in an assessment model to allow for propagation of uncertainty in model estimates. 
+integrated assessment - multiple data types considered jointly in an assessment model to allow for propagation of uncertainty in model estimates. 
 
-I also know we want to propose an increased use of integrated assessments (second meaning) for salmon assessments, so I think it would be good to use the second definition throughout this text?
+I also know we want to propose an increased use of integrated assessments (second meaning) for salmon assessments. 
+
+Edit: I see that integrated WSP assessments is already an established term, new suggestion would be to use: integrated WSP assessment (expert driven approach), 
+and integrated assessment models (second meaning)?
 
 -->
 
