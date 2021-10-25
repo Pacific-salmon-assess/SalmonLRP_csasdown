@@ -43,18 +43,29 @@ CW: I have been using lower benchmark for CUs and LRPs for SMUs -- Not sue if th
 
 -->
 
-One of the methods we consider to estimate CU status for proportion-based LRP relies on a method of rapidly assessing CU status using multidimensional algorithms.  We implement this approach using a scanner tool that has recently been developed by DFO's State of the Salmon Program (@pestalAlgorithmsRapidStatus2021, in prep). The scanning tool is intended to support implementation of Canada's WSP by approximating the outcomes of full Integrated Status Assessments on an more regular basis than time-intensive Integrated Status Assessment methods allows. The rapid multidimensional scanning tool was developed using Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments.  Data inputs and outcomes from thee Integrated Assessment processes were used in CART analyses: Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook (@dfoWildSalmonPolicy2015, @dfoIntegratedBiologicalStatus2016, @dfo2017FraserSockeye2018,  @grant2017FraserSockeye2020). Essentially, the scanning tool uses a decision tree to estimate CU status based on data type, quality, abundance, and trends t(e.g., Figure \@ref(fig:decision-tree)). An expert review of rapid status results for each CU is intended to be incorporated into application of this tool (S. Grant, pers comm). When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion. 
+One of the methods we consider to estimate CU status for proportion-based LRP relies on a method of rapidly assessing CU status using multidimensional algorithms.  We implement this approach using a scanner tool that has recently been developed by DFO's State of the Salmon Program (@pestalAlgorithmsRapidStatus2021, in prep). The scanning tool is intended to support implementation of Canada's WSP by approximating the outcomes of full Integrated Status Assessments on an more regular basis than time-intensive Integrated Status Assessment methods allows. The rapid multidimensional scanning tool was developed using Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments.  Data inputs and outcomes from thee Integrated Assessment processes were used in CART analyses: Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @dfo2017FraserSockeye2018;  @grant2017FraserSockeye2020]. Essentially, the scanning tool uses a decision tree to estimate CU status based on data type, quality, abundance, and trends (e.g., Figure \@ref(fig:decision-tree)). An expert review of rapid status results for each CU is intended to be incorporated into application of this tool (S. Grant, pers comm). When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion. 
 
 
 ```{r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
 source("R/make_tree_diagram.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
+<!--
+  should we include a paragraph here explaining that the proportion methods (ii) multi dimensional and (iii) single metric are on a continuum and that the multi dimensional method defaults to abundance based benchmarks (i.e., Sgen) when it is available? 
+
+Following Carrie's suggestion from the call on Friday, we may want to say that we are applying the single metric approach to illustrate the dynamics of the multi-dimensional scanner tool: i.e. both approaches will converge when a CU is data rich, and number of spawners are above the 1500 threshold. However the approaches will diverge as the information available for a CU deteriorates or its absolute abundance approaches threshold levels.   
+
+-->
 
 
 ## AGGREGATE ABUNDANCE-BASED LRPS
 
 Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that 100% of CUs will be above a single selected benchmark. This definition requires a decision to be made about what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frameGuidanceNoteLead2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values.  
+
+<!--
+  CW- Replace first "sensitivity" with "base case" above: 
+  For our case studies, we focus on a 50% probability threshold for the base case analyses, but show sensitivity to other values.  
+  -->
  
 We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression-based LRPs and Projection-based LRPs.  Logistic regression LRPs are estimated using historical data, and thus represent conditions that have been previously experienced by a SMU. In comparison, projection-based LRPs use historical data as a basis for quantifying population dynamics, but are based on projections of future states, and thus, allow uncertainty in future processes to be accounted for through alternative scenarios.  
 
@@ -74,7 +85,7 @@ where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression par
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure\@ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having status greater than their LBM. Logistic regression models were fit using TMB (citation), with resulting LRP estimates from equation \@ref(eq:logisticLRP) calculated within the code. Uncertainty in LRP estimates were quantified based on a 95% confidence interval on the MLE estimate.  
+An example logistic regression fit is shown in Figure \@ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having status greater than their LBM. Logistic regression models were fit using TMB (citation), with resulting LRP estimates from equation \@ref(eq:logisticLRP) calculated within the code. Uncertainty in LRP estimates were quantified based on a 95% confidence interval on the MLE estimate.  
 
 ```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Each black dot represent a year in the observed time series as a Bernoulli indicator showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) as a function of aggregate spawning abundance to the SMU. The black solid line in the maximum likelihood model fit to indicator data, and the grey shaded region shows the the 95-percent confidence interval around the fit model. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-LogisticLRP.png")
@@ -165,7 +176,17 @@ In addition, the quasi-$R^2$ was calculated to indicate the ratio of the model f
 
 where $d_0$ are the deviance residuals for the null model. The quasi-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks, but unlike $R^2$ values for linear models, it does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
 
-<!-- K.Holt: Is there a reference for quasi-r2? The one is the code is https://bookdown.org/egarpor/SSS2-UC3M/logreg-deviance.html, but I don't think this is citable-->
+<!-- K.Holt: Is there a reference for quasi-r2? The one is the code is https://bookdown.org/egarpor/SSS2-UC3M/logreg-deviance.html, but I don't think this is citable
+
+CW: Is the quasi R2 the same as the pseudo R2?  If yes a common reference is:
+Dobson AJ and Barnett AG (2008) An Introduction to Generalized Linear Models. Third Edition. Chapman & Hall/CRC Press. 
+
+pseudoR2 is described on page 137 of the book http://www.ru.ac.bd/wp-content/uploads/sites/25/2019/03/202_06_Dobson_An-Introduction-to-Generalized-Linear-Models-2008.pdf
+It looks the same, when compared to https://bookdown.org/egarpor/SSS2-UC3M/logreg-deviance.html, but mabe I'm missing something?
+
+
+
+-->
 
 **Classification accuracy of LRPs**
 
