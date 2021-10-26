@@ -85,6 +85,9 @@ In terms of salmonids, @portleyLimitReferencePoints2014 reviewed the use of limi
 - other roles? (e.g., prioritizing SMUs and planning monitoring/management).
 - these roles have not been clearly defined yet, and require further discussion beyond this process
 
+- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
+- refer to Groundfish MP Framework
+
 ## Objectives of this Document
  - Provide guidance on setting LRPs for SMU
  - List alternative methods and highlight when they should be used and when they should be avoided 
