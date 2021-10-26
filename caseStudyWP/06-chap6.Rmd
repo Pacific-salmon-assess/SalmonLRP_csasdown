@@ -4,6 +4,37 @@ To be completed.
 
 * Synthesize main results and conclusions from case studies
 
+## Proportion-based LRPs
+
+Different results will be produced depending on the methods used to estimate the Cu specific lower benchmarks. 
+Even when abundance bases lower benchmarks are available i.e. Sgen, the choice of recryuitmen model being used will influence the resulting SMU status. (mention coho example)
+
+Multi dimensional approach may be preferred as it incorporates multiple data sources, but results should be reviewed with expert input. 
+
+
+
+## Aggregate abundance-based LRPs
+
+### Logistic regression-based LRPs
+
+Only estimable when there are years when all CUs or sub-populations are above their lower benchmark and years when at least one CU is below their lower benchmarks, i.e. there are both 0s and 1s in the SMU status time series. 
+
+results depend on the lower benchmark used for determining the underlying CU status, which in turn will depend on data availability. 
+
+Individual CU must have moderate to high level of covariation, -- compare Chum and coho estimates.
+
+Model diagnostics and statistical testing of model assumptions will shed light on reiability of model estimates.  
+
+### Projection based LRPs
+
+- allows for consideration of structural uncertainty via consideration of alternative future scenarios. 
+- Results depend on the level of exploitation rates assumed in future projections with higher exploitation rates resulting in higher aggregate abundance LRPs
+- Need to review result of IFc to take a few points from there
+
+
+<!--
+	Summary points by chapter below
+-->
 
 Key points for ISC chum: 
 
@@ -23,14 +54,21 @@ Aggregate abundance LRPs were not appropriate. Factors include:
 
 WCVI Chinook main points: 
 
-Recommendation to exclude CUs and/or inlets with PNI <0.5
+Carrie already wrote a great set of summary bullets by the end of that chapter. Maybe reinforce them here. 
+
+Recommendation to exclude CUs and/or inlets with PNI <0.5 (maybe better considered in the guidelines, under the section on when maight be appropriate to consider less than 100% of CUs above LRP)
 
 Proportion of CU above benchmarks indicate that SMU is below LRP because one specific CU is consistently below its lower benchmark. Aggregate abundance logistic regression-based LRPs are not estimable as there are no years in which the SMU is above LRP. 
 
-
-Aggregate abundance LRP 
 
 
 Some ideas include:
 
 - If data limitations arise in application of LRP to a stock, increased monitoring, data quality could be part of recovery plan/ trigger
+
+
+IFC main points:
+
+Retrospective analyses indicated that aggregate status estimates become unstable if two or more 
+CUs are missing data.  
+
