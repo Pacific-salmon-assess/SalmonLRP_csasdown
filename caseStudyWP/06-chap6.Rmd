@@ -6,6 +6,24 @@ To be completed.
 
 ## Proportion-based LRPs
 
+The proportion-based LRPs are the simplest assessment method presented. It consists in verifying is all CUs within the SMU of interest are assessed to be above their lower benchmarks or above the red zone. Complications related to applying proportion-based LRPs arrise when considering the range of data availability for salmon CUs. The data availability will determine what metrics are used for the CU status assessment and wether an assessment can be made at all. Recommendations on when it may be appropriate to use a subset of CUs as proxy for all CUs within an SMU are provided in the companion Guidelines paper (Holt et al In review).   
+
+The case studies in this paper considered a variety of metrics and assessment methods for determining status of individual CUs. 
+
+We found that using $S_{gen}$ as single metric lower benchmark resulted in similar outcomes to using the the multi-dimensional assessment tool. This similarities occur because in most years the muti-dimensional approach relies on $Sgen$ estimates to assess status, as was seen on both Interior Fraser coho and WCVI chinook study cases. Exceptions occur when the $Sgen$ estimates are below population thresholds (e.g. below 1500 spawners), as was seen in the Interior Fraser coho study case. When alternative single metric benchmarks are used, e.g. abundance percentiles, the status assessments between the multi-dimensional tool and single metric approach diverge more. This is likely associated with the fact that percentile and trend based benchmarks are usually less reliable in assessing status when compared to $S_{gen}$ <!--CW:Is there a better way of saying that? I mean they can be more variable/biased than Sgen-->. By combining multiple metrics, the multi-dimensional status assessment tool likely improves the reliability of the assessment results. However, the importance of valiating status assessments with expert review should not be undermined, particularly in data-pooor scenarios. 
+
+
+<!-- 
+Ask KH: is it true that:
+For the proportion-based LRP, using $Sgen$ as single metric lower benchmark resulted in similar outcomes to using the the multi-dimensional status assessment tool. This similarities occur because in most years the muti-dimensional approach relies on $Sgen$ estimates to assess status, as was seen on both Interior Fraser coho and WCVI chinook study cases. 
+ Exceptions occur when generational mean of spawners dip below 1500 fish.  
+For the proportion-based LRP, results tend to be more sensitive to the choice of recruitment function used to estimate the lower benchmarks, i.e., $Sgen$. as was demonstrated in the IFC study case.  
+
+Need to confirm with Luke:
+
+
+-->
+
 Different results will be produced depending on the methods used to estimate the Cu specific lower benchmarks. 
 Even when abundance bases lower benchmarks are available i.e. Sgen, the choice of recryuitmen model being used will influence the resulting SMU status. (mention coho example)
 
@@ -68,6 +86,10 @@ Some ideas include:
 
 
 IFC main points:
+
+proportion based LRP: Three methods for calculating lower bench marks were used, results vary among methods. The LRP was more likely to be triggered when relying on the distributional status was used to assess the stock. When the multi dimensional status assessment was used, the choice of ricker model used to estimate Sgen affected the frequency of assessing at least one CU as red status. The LRP  was triggered more often when using the Ricker_priorCap model than when using the Ricker model. 
+
+Aggregate abundance
 
 Retrospective analyses indicated that aggregate status estimates become unstable if two or more 
 CUs are missing data.  

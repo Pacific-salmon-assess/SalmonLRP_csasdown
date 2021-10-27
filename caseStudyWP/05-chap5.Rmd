@@ -178,9 +178,9 @@ We evaluated six different combinations of data and LRP methods (table \@ref(tab
 So what we are saying is that the benchmark was set to a percentile of the raw annual escapement values? or percentile of the geometric means? 
 Or are we saying that we compared the raw numbers and geometric means to the benchmarks to determine status? Or both? 
 
-So scenarios 3-6 used relative abundances instead of full abundances? If that the difference? 
+So scenarios 3-6 used relative abundances instead of full abundances? Is that the difference? 
 
-Also, we may need to define the acronyms in the table below. i would also like to know what is the rationale behing each scenario. i.e. why did we include SCS full data on scenario 4 but excluded it from scenario 6?
+Also, we may need to define the acronyms in the table below. I would also like to know what is the rationale behing each scenario. i.e. why did we include SCS full data on scenario 4 but excluded it from scenario 6?
 
 
 -->
