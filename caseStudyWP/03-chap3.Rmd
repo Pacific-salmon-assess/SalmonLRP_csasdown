@@ -439,6 +439,52 @@ Extirpation threshold &  2 & Mating constraint \\
 ### Results
 
 
+***LRP Estimates***
+
+Aggregate abundance-based LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used to derive the LRP (Figure \@ref:fig(coho-projLRPCurve-byOM), Table \@ref(tab:projectedLRPs2020)). This result is similar to the logistic regression-based LRPs, where LRPs derived using $S_{gen}$ estimates from the Ricker_priorCap model were higher due to higher $S_{gen}$ values.  The projected curve showing the probability of all CUs being above $S_gen$ was more gradual and further to the right for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref:fig(coho-projLRPCurve-byOM). When projection outputs from both stock recruit model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
+
+
+```{r coho-projLRPCurve-byOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted. Each dot is the proportion of MC trials where all CUs were > lower benchmarks.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
+```
+
+
+
++-------------+-----------------+-------------------+-----------------+
+| Probability | Ricker          | Ricker_priorCap   | Combined
++=============+=================+===================+=================+
+| 50%         | 20,100          | 32,700            | 26,500
++-------------+-----------------+-------------------+-----------------+             
+| 66%         | 24,900          | 40,100            | 33,500
++-------------+-----------------+-------------------+-----------------+  
+| 90%         | 41,100          | 68,900            | 65,300
++-------------+-----------------+-------------------+-----------------+
+| 99%         | 75,100          | 87,300            | 83,500
++-------------+-----------------+-------------------+-----------------+
+
+Table: (\#tab:projectedLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from -------. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.
+
+
+
+
+
+***Sensitivity Analyses***
+
+
+
+
+```{r coho-projLRPCurve-bySigGamma, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for----. Results are derived from projections over 30 years and 20,000 MC Trials. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted. Each dot is the proportion of MC trials where all CUs were > lower benchmarks.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+knitr::include_graphics("figure/coho-projLRPCurve-bySigGamma.png")
+```
+
+
+
+```{r coho-projLRPCurve-byER, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for----. Results are derived from projections over 30 years and 20,000 MC Trials. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted. Each dot is the proportion of MC trials where all CUs were > lower benchmarks.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+knitr::include_graphics("figure/coho-projLRPCurve-byER.png")
+```
+
+
+
 
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
