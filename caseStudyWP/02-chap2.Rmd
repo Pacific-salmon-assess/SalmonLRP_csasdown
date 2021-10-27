@@ -17,23 +17,30 @@ We consider two types of LRPs based on two different metrics:
 
 While aggregate abundance-based LRPs are consistent with what is typically used for marine fish species, proportion-based LRPs have been proposed for Pacific salmon to align with DFO's Wild Salmon Policy. 
 
-When developing aggregate abundance-based LRP options for salmon SMUs, we aim to maintain consistency with the WSP by defining LRPs as aggregate abundance levels that have a high probability of all CUs being above poor status. We use two different methods to identify these levels: (i) Logistic regression-based LRPs and (ii) Projection-based LRPs. More detailed descriptions of these methods are provided in the following sections, while guidance on when and how proportion-based and aggregate abundance-based LRPs should be applied is provided in Holt et al. (in review). We do not recommend that users apply any of the methods described in this case study paper without first consulting Holt et al. (in review). <!--CH: In the Guidelines paper, I would like to add text that aggregate-abundance based LRPs may not need to be identified explicitly for harvest management, if HCRs are identified and evaluated to have a low probability of CUs being red. We might want to pull this thread through the Introduction of the case study paper or better yet here in Ch2 here when abundance-based LRPs are mentioned. Something like  "While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red (as described in Holt et al. (in review))".  I will include similar, but expanded text in the Guidelines paper, referring to the Groundfish MP Framework) --> 
+When developing aggregate abundance-based LRP options for salmon SMUs, we aim to maintain consistency with the WSP by defining LRPs as aggregate abundance levels that have a high probability of all CUs being above poor status. We use two different methods to identify these levels: (i) Logistic regression-based LRPs and (ii) Projection-based LRPs. More detailed descriptions of these methods are provided in the following sections, while guidance on when and how proportion-based and aggregate abundance-based LRPs should be applied is provided in Holt et al. (in review). We do not recommend that users apply any of the methods described in this case study paper without first consulting Holt et al. (in review). While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red (as described in Holt et al. (in review))
 
-The above definitions hinge on what defines 'poor' CU status. In the case of WSP Integrated Status Assessments, in which multiple metrics are combined to assign CU status, poor status corresponds with the 'red' status zone [@canadaCanadaPolicyConservation2005; @grant2017FraserSockeye2020]. While WSP Integrated status assessments are typically intensive expert-driven processes, we demonstrate the application of a multidimensional scanning tool that is being developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP (cite Pestal et all tech report). When developing aggregate abundance-based LRPs, we also consider cases in which CU status is based on a single lower benchmark <!--CH: "on abundances--> that has been identified as important for individual CUs <!--CH: can we remove "for individual CUs"?--> by local experts. <!--CH: suggest adding to more precisely capture Sue's concerns... "While the multidimensional scanning tool better captures the multiple dimensions that are used to inform biological status under the WSP (e.g., abundances, short-term and long-term trends), we compare it to status derived from a single metric, abundances relative to a lower benchmark to demonstrate how in most cases the multidimensional scanning tool reduces to this metric. Exceptions are described in the application to case studies."--> A variety of methods are available for estimating lower benchmarks <!--CH "on abundances"--> depending on species and data availability [@holtIndicatorsStatusBenchmarks2009; @holtEvaluatingBenchmarksBiological2018; @grant2017FraserSockeye2020]<!--CH: as described in Holt et al. (in review)". 
+<!--CH: In the Guidelines paper, I would like to add text that aggregate-abundance based LRPs may not need to be identified explicitly for harvest management, if HCRs are identified and evaluated to have a low probability of CUs being red. We might want to pull this thread through the Introduction of the case study paper or better yet here in Ch2 here when abundance-based LRPs are mentioned. I will include similar, but expanded text in the Guidelines paper, referring to the Groundfish MP Framework) --> 
+
+The above definitions hinge on what defines 'poor' CU status. In the case of WSP Integrated Status Assessments, in which multiple metrics are combined to assign CU status, poor status corresponds with the 'red' status zone [@dfoCanadaPolicyConservation2005; @grant2017FraserSockeye2020]. While WSP Integrated status assessments are typically intensive expert-driven processes, we demonstrate the application of a multidimensional scanning tool that is being developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP (cite Pestal et all tech report). When developing aggregate abundance-based LRPs, we also consider cases in which CU status is based on spawning abundance relative to a single lower benchmark that has been identified as important by local experts. While the multidimensional scanning tool better captures the multiple dimensions that are used to inform biological status under the WSP (e.g., abundances, short-term and long-term trends), we compare it to status derived from a single metric relative to a lower benchmark to demonstrate how in most cases the multidimensional scanning tool reduces to this metric. Exceptions are described in the application to case studies. A variety of methods are available for estimating lower benchmarks on abundances depending on species and data availability [@holtIndicatorsStatusBenchmarks2009; @holtEvaluatingBenchmarksBiological2018; @grant2017FraserSockeye2020], as described in Holt et al. (in review). 
+
+<!-- Is it also fair to say that we use single benchmarks for simplicity in aggregate abundance-based methods?? - note that we also could have done logistic regressions on multi-dimesnional status - but we didn;t.  Perhaps something for a discussion / extension ??? -->
  
 <!--
   CW: Reference, is the WSP author DFO or Canada? I have seen it cited in both ways in CSAS papers, and I think I was using the DFO version as it is what Julie Marentette used in her 2021 papers.-- should I change it to the canada citation  (@canadaCanadaPolicyConservation2005) ?
+KH: I like DFO better too. Looks like both versions are it the bib file.  I have switched to using the DFO one for my citation.
 -->
 
 
 ## PROPORTION-BASED LRPS
 
-A proportion-based LRP is simply the proportion of CUs required to be assessed as being above poor status. In all three case studies, we default to 100% of CUs being required to be above poor status when setting the LRP. In this case, the LRP acts as a trigger that is breached when one of more CUs is assessed as having poor status. Guidance on how to select the required proportion, including when it may be appropriate to consider proportions < 100%, is provided in the companion working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review). <!--CH: maybe reword the last sentence to: "Rationale for the choice of 100% of CUs as aligned with LRP is described in Holt et al. (in review) "  Holt et al. (in review) is referenced multiple times in this section; we could include the title of the companion paper at first instance and leave it at Holt et al. (in review) elsewhere?-->
+A proportion-based LRP is simply the proportion of CUs required to be assessed as being above poor status. In all three case studies, we default to 100% of CUs being required to be above poor status when setting the LRP. In this case, the LRP acts as a trigger that is breached when one of more CUs is assessed as having poor status. Rationale for the choice of 100% of CUs required to be above poor status in order for an SMU to be considered above its LRP is described in (Holt et al. in review).
 
-We compare three different methods of assessing CU status when using proportion-based LRPs: (i) the proportion of CUs with a recent Integrated Status assessment above the red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent rapid multidimensional status assessment above red (see below for more details), and (iii) the proportion of CUs with status estimated to be below a single type of CU lower benchmark (e.g., $S_{gen}$, percentile-based benchmarks, etc.). <!-- CH: "While we recommend applying methods (i) or (ii), approach (iii) is shown for comparison purposes to demonstrate consistency between rapid multidimensional status assessments and statuses derived from abundances relative to lower benchmarks."-->
+We compare three different methods of assessing CU status when using proportion-based LRPs: (i) the proportion of CUs with a recent Integrated Status assessment above the red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent rapid multidimensional status assessment above red (see below for more details), and (iii) the proportion of CUs with status estimated to be below a single type of CU lower benchmark (e.g., $S_{gen}$, percentile-based benchmarks, etc.). While we recommend applying methods (i) or (ii), approach (iii) is shown for comparison purposes to demonstrate consistency between rapid multidimensional status assessments and statuses derived from abundances relative to lower benchmarks.
 
 
-### Rapid Multidimensional Status Assessment Tool{#rapidToolMethods}<!--CH: can we keep name consistent, perhaps "Rapid Multidimensional Scanning Tool" -->
+### Rapid Multidimensional Scanning Tool{#rapidToolMethods}
+
+<!--CH: can we keep name consistent, perhaps "Rapid Multidimensional Scanning Tool" -->
 
 <!-- Note from Sue:
 
@@ -44,31 +51,22 @@ CW: I have been using lower benchmark for CUs and LRPs for SMUs -- Not sue if th
 CH: I suggest we avoid "below lower benchmark" except for the specific analysis (iii) above, otherwise we use "red zone".
 -->
 
-One of the methods we consider to estimate CU status for proportion-based LRP relies on a method of rapidly assessing CU status using multidimensional algorithms.  We implement this approach using a scanner tool that has recently been developed by DFO's State of the Salmon Program (@pestalAlgorithmsRapidStatus2021, in prep). The scanning tool is intended to support implementation of Canada's WSP by approximating the outcomes of full Integrated Status Assessments on an more regular basis than time-intensive Integrated Status Assessment methods allows. The rapid multidimensional scanning tool was developed using Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments.  Data inputs and outcomes from thee Integrated Assessment processes were used in CART analyses: Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @dfo2017FraserSockeye2018;  @grant2017FraserSockeye2020]<!--CH: ", and was further ground-truthed with data for Fraser River Chum  and Pink Salmon (Pestal et al. in prep OR S. Grant pers. comm.)" I'm not sure how much the Pink and Chum work will be captured in the report?-->. Essentially, the scanning tool uses a decision tree to estimate CU status based on data type, quality, abundance, and trends (e.g., Figure \@ref(fig:decision-tree)). An expert review of rapid status results for each CU is intended to be incorporated into application of this tool (S. Grant, pers comm). When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion.<!--CH comment; "with the exception of Interior Fraser River Coho which has been vetted through the State of the Salmon program and local experts (Pestal et al. in prep)"--> 
+One of the methods we consider to estimate CU status for proportion-based LRP relies on a method of rapidly assessing CU status using multidimensional algorithms.  We implement this approach using a scanner tool that has recently been developed by DFO's State of the Salmon Program (@pestalAlgorithmsRapidStatus2021, in prep). The scanning tool is intended to support implementation of Canada's WSP by approximating the outcomes of full Integrated Status Assessments on an more regular basis than time-intensive Integrated Status Assessment methods allows. The rapid multidimensional scanning tool was developed using Classification and Regression Tree (CART) analyses to create algorithms that approximate the status of the integrated assessments.  Data inputs and outcomes from thee Integrated Assessment processes were used in CART analyses: Fraser River sockeye, Interior Fraser coho, and Southern BC Chinook [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @dfo2017FraserSockeye2018;  @grant2017FraserSockeye2020], and was further ground-truthed with data for Fraser River Chum and Pink Salmon (Pestal et al. in prep ).  <!--CH comment: may need to change the pestal citation to S. Grant, pers comm.  I'm not sure how much the Pink and Chum work will be captured in the report?-->. Essentially, the scanning tool uses a decision tree to estimate CU status based on data type, quality, abundance, and trends (e.g., Figure \@ref(fig:decision-tree)). An expert review of rapid status results for each CU is intended to be incorporated into application of this tool (S. Grant, pers comm). When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm using expert opinion.
 
+<!--
+CH comment on last sentence; "with the exception of Interior Fraser River Coho which has been vetted through the State of the Salmon program and local experts (Pestal et al. in prep)"
+KH comment: although, given that we are using different Sgens, this may not apply. Will wait to see SOS results using our updated Sgens to see if mentioning this is relevant.
+--> 
 
 ```{r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center"}
 source("R/make_tree_diagram.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
-<!--
-  CW:
-  should we include a paragraph here explaining that the proportion methods (ii) multi dimensional and (iii) single metric are on a continuum and that the multi dimensional method defaults to abundance based benchmarks (i.e., Sgen) when it is available? 
-
-Following Carrie's suggestion from the call on Friday, we may want to say that we are applying the single metric approach to illustrate the dynamics of the multi-dimensional scanner tool: i.e. both approaches will converge when a CU is data rich, and number of spawners are above the 1500 threshold. However the approaches will diverge as the information available for a CU deteriorates or its absolute abundance approaches threshold levels.   
- 
- CH: I've made a brief reference to this idea above in the text, but think we can leave the details to the actual case studies.
--->
 
 
 ## AGGREGATE ABUNDANCE-BASED LRPS
 
-Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that 100% of CUs <!-- CH: "(the same % as used for proportion-based LRPs)"-->will be above a single selected benchmark<!--CH: suggest change in to will have status above the red zone".-->. This definition requires a decision to be made about what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks<!--CH: "above the red zone" instead-->. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frameGuidanceNoteLead2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in the working paper *Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units* (Holt et al. in review).  For our case studies, we focus on a 50% probability threshold for sensitivity analyses, but show sensitivity to other values<!--CH: "when these can be estimated"? I couldn't estimate 90 and 99% for WCVI CK-->.  
-
-<!--
-  CW- Replace first "sensitivity" with "base case" above: 
-  For our case studies, we focus on a 50% probability threshold for the base case analyses, but show sensitivity to other values.  
-  -->
+Aggregate abundance-based LRPs represent the SMU-level abundance at which there is a sufficiently high probability that 100% of CUs (the same % as used for proportion-based LRPs) will be above a single selected benchmark<!--CH: suggest change in to will have status above the red zone".-->. <!--KH: I don;t think red zone applied when only using Sgen-->. This definition requires a decision to be made about what represents a 'sufficiently high probability' that 100% of CUs will be above their benchmarks<!--CH: "above the red zone" instead-->. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frameGuidanceNoteLead2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance-based LRPs is included in (Holt et al. in review).
  
 We consider two types of aggregate abundance-based LRPs in our case studies: Logistic regression-based LRPs and Projection-based LRPs.  Logistic regression LRPs are estimated using historical data, and thus represent conditions that have been previously experienced by a SMU. In comparison, projection-based LRPs use historical data as a basis for quantifying population dynamics, but are based on projections of future states, and thus, allow uncertainty in future processes to be accounted for through alternative scenarios.  
 
@@ -99,16 +97,13 @@ We initially considered an alternative approach to logistic regression in which 
 
 ##### Logistic Regression Model Diagnostics
 
-There are several assumptions associated with logistic regression, of which four that are relevant for our application to LRPs are listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, as well as statistical significance of model coefficients, goodness-of-fit, and classification accuracy of LRPs developed from the logistic regression. All analyses were implemented using R v.4.0.4 unless otherwise specified [@rcoreteamLanguageEnvironmentStatistical2021].  The four<!--CH; "three"--> assumptions are as follows:
+There are several assumptions associated with logistic regression, of which four that are relevant for our application to LRPs are listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, as well as statistical significance of model coefficients, goodness-of-fit, and classification accuracy of LRPs developed from the logistic regression. All analyses were implemented using R v.4.0.4 unless otherwise specified [@rcoreteamLanguageEnvironmentStatistical2021].  The three assumptions are as follows:
 
 1. The relationship between aggregate abundance and log-odds (the logarithm of the odds of all CUs being above their lower benchmark) is linear.
 
 2. The observations are independent of each other (i.e., residuals are not autocorrelated).
 
 3. There are no influential outliers. 
-
-<!--CH; suggest removing this one: 4. The sample size is large. Logistic regression assumes that the sample size of the data set is large enough to draw valid conclusions from the fitted model.-->
-
 
 **Evaluating assumption of linearity (Assumption 1)**
 
@@ -156,11 +151,6 @@ The magnitude of lag-1 autocorrelation was then estimated among deviance residua
 We recommend identifying influential outliers using leverage statistics where possible. For our case studies, we identified outliers independent of their influence because the software used to estimate model parameters (TMB) does not provide the hat-matrix required to assess influence of individual points.  Instead, we focused on identifying outliers based on the general rule of thumb that deviance residuals greater than 2 are considered to be to be outliers because 95\% of the distribution is expected to be within 2 standard deviations of the mean. Further work to identify influential outliers is recommended when other statistical model fitting tools are used. 
 
 
-<!--CH: suggest removing this one, and adding this text to discussion/caveats  **Evaluating sample size (Assumption 4)**
-
-A minimum of 10 data points for the least frequent outcome is recommended to avoid biases in model coefficients [@peduzziSimulationStudyNumber1996]. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters increases.
--->
-
 **Statistical significance of model coefficients**
 
 Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensen_tmb_2016]. <!-- Not needed: P-values <0.05 indicate that the null hypothesis of the coefficient being equalt to 0 is rejected [@fox_applied_2016].-->
@@ -190,63 +180,20 @@ It looks the same, when compared to https://bookdown.org/egarpor/SSS2-UC3M/logre
 CH: Yes!! Please replace quasi- with pseudo- everywhere. My apologies!
 -->
 
-<!--CH: I've tentatively moved this text here to de-empahsize it and give it a bit of context. Can be moved elsewhere-->
 In addition, the length of available time-series will impact power to detect significant model coefficients, and coefficient estimates may be biased when time-series are short.  @peduzziSimulationStudyNumber1996 recommend a minimum of 10 data points for the least frequent outcome to avoid biases in model coefficients, based on simulation study of epidemiological data. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. A similar evaluation of sample sizes to minimize biases logistic-regression based LRPs for fisheries applications is warranted. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters (and LRPs) increases.
 
 **Classification accuracy of LRPs**
 
-Classification accuracy was evaluated based on the ratio of successful classifications to total number of data points in the logistic regression, also called the hit ratio. Successful classifications were the number of years when the model successfully predicted that all CUs were above their lower benchmark plus the number years when the model successfully predicted that at least one CU was below its lower benchmark.  The hit ratio tends to be biased towards unrealistically good <!-- CH: "optimistic" instead?--> classification rates when computed with the same sample used for fitting the logistic model. Therefore, we also considered an out-of-sample approach to classification accuracy, where the logistic regression was estimated iteratively removing a single data point and the occurrence of successes relative to observations were based on the model that did not contain that data point. 
-
+Classification accuracy was evaluated based on the ratio of successful classifications to total number of data points in the logistic regression, also called the hit ratio. Successful classifications were the number of years when the model successfully predicted that all CUs were above their lower benchmark plus the number years when the model successfully predicted that at least one CU was below its lower benchmark.  The hit ratio tends to be biased towards optimistic classification rates when computed with the same sample used for fitting the logistic model. Therefore, we also considered an out-of-sample approach to classification accuracy, where the logistic regression was estimated iteratively removing a single data point and the occurrence of successes relative to observations were based on the model that did not contain that data point. 
 
 
 ### PROJECTION-BASED LRPS{#projectedMethods}
 
-The projection-based LRP approach combines all the information known for individual CUs within an SMU and then uses that information to project abundance trends into the future. Projection-based LRPs are then estimated using projected future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that all CUs will be above their lower benchmarks (e.g. $S_{gen}$) at a given level of exploitation. This approach allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect lack of biological or fisheries information.     
-
-We used the samSim modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations [@holtQuantitativeToolEvaluating2020b; @freshwaterBenefitsLimitationsIncreasing2020]. We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
-
-
-<!--
-CW:Suggest changing paragraph above to:
+The projection-based LRP approach combines all the information known for individual CUs within an SMU and then uses that information to project abundance trends into the future. Projection-based LRPs are then estimated using projected future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that all CUs will be above their lower benchmarks (e.g. $S_{gen}$) at a given level of exploitation. This projection-based LRP approach allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect lack of biological or fisheries information. As with logistic regression-based LRPs, we relied on status estimated from a single metric on abundances ($S_{gen}$) rather than the multidimensional scanner tool to develop LRPs using projections. Future extensions of this approach may want to consider applying the multidimensional scanner tool within forward projections to classify CU status. 
 
 We used the samSim closed loop simulation modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations [@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]. We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), while model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
-
--->
-
-Updated functionality for the LRP version of samSim include:
-<!-- KH comment: Not sure if these updates are neccessary here ... this text could be moved to the appendix? - or, just put in the github readme for the LRP branch of samSim?? 
-
-CW: I think this might be too much detail here. I suggest moving it to the appendix and the github readme. 
-
--->
-
-* The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution.
-
-* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study).
-
-* The option to initialize population dynamics for individual CUs at unfished equilibrium when no historical recruitment data are available. While this option would not be appropriate for projections aimed at estimating recovery from a current state, it can be used to estimate projection-based LRPs because we are only interested in the underlying relationship between aggregate abundance and the probability individual CUs will be above their lower benchmark.
-
-* The option to include a log-normal bias-correction factor of $-\sigma^2 / 2$ to recruitment projected using one of the two available Ricker stock recruit models. This option was added to accommodate cases in which samSim is parameterized using stock recruitment parameters that have been corrected for log-normal bias to represent expected (mean) parameters. The log-nomral bias correction is commonly applied in stock recruit modelling because the expected value of *e*^$\sigma$ is *e*^$\sigma^2 / 2$} rather than zero when recruitment deviations are normally distributed (@coxCandidateLimitReference2019, @ohlbergerBayesianLifecycleModel2019, @olmosEvidenceSpatialCoherence2019, @forrestAssessmentPacificCod2020, Weir et al., in press). When input parameters have been corrected for this log-normal bias, the bias correction must also be added to projections.  We use a log-normal bias correction factor for all of our case study analyses.
-
-* Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
-
-<!--
-CW: the paragraphs below this point should remain in this section
--->
-
-Detailed descriptions of the parameterization of samSim for our two case study applications of abundance-based projected LRPs (Interior Fraser Coho and WCVI Chinook) are presented in Chapters 3 and 4, respectively. In both cases, we incorporated uncertainty into projected CU dynamics through the specification of empirically-derived probability distributions for key biological and management parameters, including stock-recruitment parameters, proportion of recruits at age, and exploitation rates (ER). Larger structural uncertainties in model formulation were represented through the use of sensitivity analyses and/or alternative operating models (OMs). Observation error was not included in projections because derivation of LRPs was based on projected 'true' abundance levels rather than observed abundance. Furthermore, we were only applying a simple fixed ER harvest strategy when projecting forward, so annual variability arising from observation error would be accounted for by our specification of between-year variability in ERs.  
-
-<!-- CW: I am not sure if the last sentence of the above paragraph is true. Observation error only affects the perceived population, while error in between -year ER affect the "true" (simulated) population. I suggest removing the sentence. 
-
-  Furthermore, we were only applying a simple fixed ER harvest strategy when projecting forward, so annual variability arising from observation error would be accounted for by our specification of between-year variability in ERs.  
-
-
-CH: I'm okay with removing it. While it might be true? (though CW may convince me otherwise) it is confusing and I don't think necessary.
--->
-
-
-
+Detailed descriptions of the parameterization of samSim for our two case study applications of abundance-based projected LRPs (Interior Fraser Coho and WCVI Chinook) are presented in Chapters 3 and 4, respectively. In both cases, we incorporated uncertainty into projected CU dynamics through the specification of empirically-derived probability distributions for key biological and management parameters, including stock-recruitment parameters, proportion of recruits at age, and exploitation rates (ER). Larger structural uncertainties in model formulation were represented through the use of sensitivity analyses and/or alternative operating models (OMs). Observation error was not included in projections because derivation of LRPs was based on projected 'true' abundance levels rather than observed abundance. 
 
 The following steps were taken to calculate projected LRPs using samSim:
 
@@ -257,30 +204,25 @@ The following steps were taken to calculate projected LRPs using samSim:
 
       * Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on intervals of 200 fish . E.g., $AggS_{bin}$ = 0:200 fish, 200:400 fish, 400:600 fish, ... etc.
 
-      * Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
-      
-<!-- CH comment: in bullet above mentioned "lower benchmarks on abundances". We should also state why we didn't use multidimensional scanner tool, or state that like the logistic-regression based LRP, we relied on status on a single metric on abundances rather than the multidimensional scanner tool". Future work could consider that option, but honestly I don't think it would work so we shouldn't make promises.-->
+      * Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks on abundances. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
+
 
    3. For each aggregate abundance bin, $AggS_{bin}$:
 
-      * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 200 year-trial combinations that had a aggregate abundance in 10,000 - 12,000 fish bin.
-      
-      <!-- CW: Need to check these, It says that fish bins are 200 fish, but example uses 2000 fish bin -->
-      <!--CH: suggest using another number than 200 for possible year-trial combinations in that bin, since the bin-size is 200, so it's a bit confusing. And I agree with CW that it should be 200 bin not 2000 bin in the example, correct?  Also, suggest revising this in the steps below.-->.
+      * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 500 year-trial combinations that had a aggregate abundance in 10,000 - 10,200 fish bin.
 
-      * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 50 of 200 year-trial combinations in the aggregate abundance bin of 10,000 - 12,000 fish are successes with all CUs above their lower benchmarks.
+      * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 125 of 500 year-trial combinations in the aggregate abundance bin of 10,000 - 10,200 fish are successes with all CUs above their lower benchmarks.
 
       * Calculate the probability that all CUs will be above their lower benchmarks for that bin as:
 \begin{equation}
    Pr(All CUs > LBM) = \frac{Number of success in SAgg_{bin}} {Number of realizations in SAgg_{bin}}
    (\#eq:projBins)
 \end{equation}
-For example, if 50 of the 200 realizations that fell within the $SAgg_{bin}$ of 10,000 - 12,000 fish were 'successes', there would be a 25% probability (50 / 200 = 0.25) that all CUs would be above their lower benchmarks when aggregate abundances are between 10,000 and 12,000 fish.
+For example, if 125 of the 500 realizations that fell within the $SAgg_{bin}$ of 10,000 - 10,200 fish were 'successes', there would be a 25% probability (125 / 500 = 0.25) that all CUs would be above their lower benchmarks when aggregate abundances are between 10,000 and 1,200 fish.
 
    4. Identify the LRP as the mid-point of the aggregate abundance bin, $AggS_{bin}$, that is closest to the required probability threshold that all CUs are above their LBMs.
 
-An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shown in Figure \@ref(fig:example-projectedCurve) for the four probability levels used in our case studies (p* = 0.5, 0.66, 0.90, and 0.99). Uncertainty estimates for LRPs are not available based on this method, but LRP estimates could be presented as a range based on the $SAgg_{bin}$ bin size.
-<!--CH comment: suggest adding a sentence that no uncertainty intervals with this approach, but it integrates all uncertainties in underlying paramters to identfiy LRP with specifice prob of all CUs being above LBM.-->
+An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shown in Figure \@ref(fig:example-projectedCurve) for the four probability levels used in our case studies (p* = 0.5, 0.66, 0.90, and 0.99). Uncertainty estimates for LRPs are not available based on this method, but the approach does integrate all uncertainties in underlying parameters to identify LRPs with specified probabilities of all CUs being above LBM. In addition, LRP estimates could be presented as a range based on the $SAgg_{bin}$ bin size.
 
 ```{r example-projectedCurve, fig.cap="Example of projected probability curve derived from projections over 30 years and 10,000 MC trials.  The curve shows the projected probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance, where aggregate spawning abundance is really a bin of 200 fish (e.g., 0-200, 200-400, etc). Each dot in the curve represents a single combination of year and simulation trial. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs are greater than their LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-ProjectedLRP.png")
