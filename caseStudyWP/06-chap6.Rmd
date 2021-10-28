@@ -8,29 +8,12 @@ To be completed.
 
 The proportion-based LRPs are the simplest assessment method presented. It consists in verifying is all CUs within the SMU of interest are assessed to be above their lower benchmarks or above the red zone. Complications related to applying proportion-based LRPs arrise when considering the range of data availability for salmon CUs. The data availability will determine what metrics are used for the CU status assessment and wether an assessment can be made at all. Recommendations on when it may be appropriate to use a subset of CUs as proxy for all CUs within an SMU are provided in the companion Guidelines paper (Holt et al. In review).   
 
-The case studies in this paper considered a variety of metrics and assessment methods for determining status of individual CUs. We found that using $S_{gen}$ as single metric lower benchmark resulted in similar status assessments to using the  multi-dimensional assessment tool. This similarities occur because in most years the muti-dimensional approach relies on $S_{gen}$ estimates to assess status as was seen on both Interior Fraser coho and WCVI chinook study cases. Exceptions occur when the $S_{gen}$ estimates are below population thresholds (e.g. below 1500 spawners), as was seen in the interior Fraser coho study case. The status assessments, however, are sensitive to the method and recruitment model used to estimate $S_{gen}$. The decision on which method to consider depends on the iterpretation of the data and prior knowledge for each CU, highlighting the importance of considering expert knowledge input and peer-review for salmon assessments. 
-In data poor scenarios, it may not be possible to estimate $S_{gen}$, as was seen in the Inside South Coast Chum - Non-Fraser study case. When $S_{gen}$ estimates are not available and alternative single metric benchmarks are used, e.g. abundance percentiles, the status assessments between the multi-dimensional tool and single metric approach diverge more. This is likely associated with the fact that percentile and trend based benchmarks are usually less reliable in assessing status when compared to $S_{gen}$. By combining multiple metrics, the multi-dimensional status assessment tool likely improves the stability of the assessment results. 
+The case studies in this paper considered a variety of metrics and assessment methods for determining status of individual CUs. We found that using $S_{gen}$ as single metric lower benchmark resulted in similar status assessments to using the  multi-dimensional assessment tool. This similarities occur because in most years the multi-dimensional approach relies on $S_{gen}$ estimates to assess status as was seen on both Interior Fraser coho and WCVI chinook study cases. Exceptions occur when the $S_{gen}$ estimates are below population thresholds (e.g. below 1500 spawners), as was seen in the interior Fraser coho study case. The status assessments, however, are sensitive to the method and recruitment model used to estimate $S_{gen}$. The decision on which method to consider depends on the iterpretation of the data and prior knowledge for each CU, highlighting the importance of considering expert knowledge input and peer-review for salmon assessments. 
+In data poor scenarios, it may not be possible to estimate $S_{gen}$, as was seen in the Inside South Coast Chum - Non-Fraser study case. When $S_{gen}$ estimates are not available and alternative single metric benchmarks are used, e.g. abundance percentiles, the status assessments between the multi-dimensional tool and single metric approach diverge more.
+For example, in the Inside South Coast Chum - Non-Fraser study case, the LRP was triggered more often when percentile benchmarks were used. Whereas when the distributional target was used as a metric for the Interior Fraser coho study case, the LRP was triggered less often when compared to the multi-dimensional assessment tool. This is likely associated with the fact that single metric benchmarks are usually less reliable in assessing status when compared to $S_{gen}$. By combining multiple metrics, the multi-dimensional status assessment tool likely improves the stability of the assessment results. In addition, using the multi-dimensional approach allows for the consideration of CU's that would otherwise be considered data deficient. The exclusion of CUs with incomplete time series led to overoptimistic assessments in the Inside South Coast Chum - Non-Fraser study case. 
 
 
 
-
-<!-- 
- Need to reinforce the 
-
-Ask KH: is it true that:
-For the proportion-based LRP, using $Sgen$ as single metric lower benchmark resulted in similar outcomes to using the the multi-dimensional status assessment tool. This similarities occur because in most years the muti-dimensional approach relies on $Sgen$ estimates to assess status, as was seen on both Interior Fraser coho and WCVI chinook study cases. 
- Exceptions occur when generational mean of spawners dip below 1500 fish.  
-For the proportion-based LRP, results tend to be more sensitive to the choice of recruitment function used to estimate the lower benchmarks, i.e., $Sgen$. as was demonstrated in the IFC study case.  
-
-Need to confirm with Luke:
-
-
--->
-
-Different results will be produced depending on the methods used to estimate the Cu specific lower benchmarks. 
-Even when abundance bases lower benchmarks are available i.e. Sgen, the choice of recryuitmen model being used will influence the resulting SMU status. (mention coho example)
-
-Multi dimensional approach may be preferred as it incorporates multiple data sources, but results should be reviewed with expert input. 
 
 
 
@@ -38,11 +21,18 @@ Multi dimensional approach may be preferred as it incorporates multiple data sou
 
 ### Logistic regression-based LRPs
 
-Only estimable when there are years when all CUs or sub-populations are above their lower benchmark and years when at least one CU is below their lower benchmarks, i.e. there are both 0s and 1s in the SMU status time series. 
+The Logistic regression-based LRPs are empirically derived from the past observations of SMU abundance and CU statuses. In this method we apply a logistic regression to identify historical abundance levels associated with probabilities that all CUs within an SMU have statuses above the red zone or above their lower benchmarks. Similarly to the proportion-based LRP, this aggregate abundance method depends on the individual CU assessments.  
+
+
+The Logistic regression-based LRP is only estimable when there are years when all CUs or sub-populations are above their lower benchmark and years when at least one CU is below their lower benchmarks. This was not the case for the WCVI Chinook study case due to one inlet always been below its lower benchmark. 
+
+
 
 results depend on the lower benchmark used for determining the underlying CU status, which in turn will depend on data availability. 
 
-Individual CU must have moderate to high level of covariation, -- compare Chum and coho estimates.
+Individual CU must have moderate to high level of covariation, so that the aggregate abundance of the SMU is a good indicator of individual CU status. The case studies shown in this paper show that logistic regression-based LRPs were estimable for interior Fraser coho, correlation with CUS of XX) but not estimable for Inside South Coast Chum - Non-Fraser (correlation within CUs of XX).
+
+When data is missing for one or more CUs within and SMU, it may be appropriate to apply the logistic regression-based LRP to the remaining CUs with data as an indicator for the entire SMU. This is particularly true if there are high levels of covariation between the CUs. However the logistic regression model fit will degenerate is enough CUs are missing data, so that there is not enough statistical power to estimate the logistic regression relationship, as was observed in the sensitivity analysis for Interior Fraser Coho.   
 
 Model diagnostics and statistical testing of model assumptions will shed light on reiability of model estimates.  
 
