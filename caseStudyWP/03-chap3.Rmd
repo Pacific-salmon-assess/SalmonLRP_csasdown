@@ -4,7 +4,7 @@ output:
   html_document: default
   pdf_document: default
 ---
-# CASE STUDY 1: INTERIOR FRASER COHO SALMON
+# CASE STUDY 1: INTERIOR FRASER COHO SALMON{#IFCChapter}
 
 ## CONTEXT
 
