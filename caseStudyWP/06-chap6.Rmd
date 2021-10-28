@@ -33,24 +33,22 @@ Finally, it is important to inspect model diagnostics and statistically test the
 Question: Why did we not apply the projection-based LRP to the Chum study case? Was is because we had no means of estimating the SR parameters for the Chum CUs? If that is the case, would it be correct to say that the projection-based LRP is not appropriate for data poor scenarios? 
 -->
 
-The projection-based LRPs approach relies on closed-loop simulation model to project future CU abundances. These projections are then used to identify the relationship between aggregate SMU abundances and the probabilities that all CUs are above their lower benchmarks, given a pre-defined level of expoitation. The most important requirement for the application of projection-based LRPs is the availability of information on productivity and capacity for the CUs within an SMU. Parameter estimates for productivity and capacity can be provided based on single parameter estimates, e.g., parameters derived based on expert input or watershed model estimates (see WCVI Chinook study case, chapter \@ref(#WCVIchinookChapter)) or posterior distributions from stock recruitment analyses (see interior Fraser Coho study case, chapter \@ref(#IFCChapter)). We did not estimate projection-based LRPs for Inside South Coast Chum - Non-Fraser study case because estimates of capacity and productivity were not available for the CUs within that SMU. 
+The projection-based LRPs approach relies on closed-loop simulation model to project future CU abundances. These projections are then used to identify the relationship between aggregate SMU abundances and the probabilities that all CUs are above their lower benchmarks, given a pre-defined level of expoitation. The most important requirement for the application of projection-based LRPs is the availability of information on productivity and capacity for the CUs within an SMU. Parameter estimates for productivity and capacity can be provided based on single parameter estimates, e.g., parameters derived based on expert input, life-stage models or watershed model estimates (see WCVI Chinook study case, chapter \@ref(#WCVIchinookChapter)) or posterior distributions from stock recruitment analyses (see interior Fraser Coho study case, chapter \@ref(#IFCChapter)). We did not estimate projection-based LRPs for Inside South Coast Chum - Non-Fraser study case because estimates of capacity and productivity were not available for the CUs within that SMU. 
 
-The projection-based LRP approach is flexible and allows for consideration of structural uncertainty in the SMU population dynamics via consideration of alternative future scenarios. 
+The projection-based LRP approach is flexible and allows for consideration of structural uncertainty in the SMU population dynamics via consideration of alternative future scenarios. For example, for the WCVI chinook study case, sensitivity analyses were performed to assess the impacts of correlations in recruitment residuals and  variability in exploitation among inlets. For the interior Fraser coho study case, sensitivity analyses were performed regarding the variability in marine survival coefficient among CUs. Future implementations of the projection-based LRPs could also take into consideration shifts in stock recruitment parameters, and future changes in fishery exploitation rates. 
 
+We also demonstrated that the projection-based LRPs is sensitive to the assumed levels of exploitation rate in the projections. Higher exploitation rates resulted in higher required SMU aggregate abundance to ensure that all CUs remain above their lower benchmarks. The sensitivity to exploitation rate increases as variability among stock-recruitment parameters increase, and also as uncertainty in parameter estimates increase. This property of projection-based LRPs is explored in Appendix \@ref(#sensitivity-of-projection-based-lrps-to-exploitation-rates). This feature of the approach could be used in future exercises to identify the optimum levels of exploitation, to ensure that the aggregate abundance LRP is in line with current observed abundances. 
+ 
 
-
-- allows for consideration of structural uncertainty via consideration of alternative future scenarios. 
-- Results depend on the level of exploitation rates assumed in future projections with higher exploitation rates resulting in higher aggregate abundance LRPs
-- Need to review result of IFc to take a few points from there
 
 
 <!--
 	Summary points by chapter below
--->
+
 
 Key points for ISC chum: 
 
-For data poor stocks, data quality issues may limit the choice of CU-specific benchmarks used as basis for the calculation of the SMU LRP. For example, for the ISC chum study case,$Sgen$ could not be reliably estimated for all CUs, and its use lead to poor fits of the logistic aggregate abundance LRP (although fits were poor regardless of the benchmark used). For that study case, the analyses relied on the percentile-based benchmarks. 
+For data poor stocks, data quality issues may limit the choice of CU-specific benchmarks used as basis for the calculation of the SMU LRP. For example, for the ISC chum study case, $Sgen$ could not be reliably estimated for all CUs, and its use lead to poor fits of the logistic aggregate abundance LRP (although fits were poor regardless of the benchmark used). For that study case, the analyses relied on the percentile-based benchmarks. 
 
 The choice of benchmark to determine CU specific status will affect the classification and therefore will also affect the LRP. 
 
@@ -87,4 +85,4 @@ Aggregate abundance
 
 Retrospective analyses indicated that aggregate status estimates become unstable if two or more 
 CUs are missing data.  
-
+-->
