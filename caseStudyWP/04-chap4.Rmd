@@ -98,6 +98,11 @@ PNI values for 14 WCVI indicator stocks were provided to DFO South Coast Stock A
 <!-- CH comment: Do we need to (can we) include time-series of PNI values in an appendix?-->
 
 
+<!-- KH comment: Suggestion to add new section here to be consistent with Coho and Chum chapters: - 
+## CU Status Estimation
+(or, perhaps "Inlet Status Estimation???")
+-->
+
 
 ## PROPORTION OF CUS
 
