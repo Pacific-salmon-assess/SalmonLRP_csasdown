@@ -1,18 +1,17 @@
-<!-- 
+<!-- bookdown::render_book("index.Rmd")
   render code
-bookdown::render_book("index.Rmd")
+
 
  -->
 
 
 # samSim MODEL DOCUMENTATION {#app:samsim-appendix}
 
-`samSim` is the closed loop simulation modelling tool used for calculation of the projection-based LRPs. An overview of `samSim` and the code can be found in the LRP project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). <!-- KH comment: suggest adding text like "samSim has been previously used to evaluate harvest control rule performance relative to recovery potential ([@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]).We created a modified version of samSim to support LRP estimation for this paper." --> This appendix aims at describing the `samSim` model equations and the model's internal logic. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extentions already implemented within `samSim`. `samsim` includes two population levels, it could be applied to one Conservation Unit (CU) with component sites, or one Stock Management Unit (SMU) with component CUs, or even one region with component SMUs. For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. The model indexes are defined in Table \@ref(tab:indtab), the model parameters and model input are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
-
+`samSim` is the closed loop simulation modelling tool used for calculation of the projection-based LRPs. An overview of `samSim` and the code can be found in the LRP project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). samSim has been previously used to evaluate harvest control rule performance relative to recovery potential ([@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]). We created a modified version of samSim to support LRP estimation for this paper. 
 <!-- KH comment: I have moved this here for now (was previously in chapter 2).  May wish to move again?? Or, put in the readme for the LRP branch of samSim?? 
 -->
-
 Updated functionality for the LRP version of samSim include:
+
 
 * The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution.
 
@@ -24,6 +23,7 @@ Updated functionality for the LRP version of samSim include:
 
 * Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
 
+This appendix aims at describing the `samSim` model equations and the model's internal logic. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extentions already implemented within `samSim`. `samsim` includes two population levels, it could be applied to one Conservation Unit (CU) with component sites, or one Stock Management Unit (SMU) with component CUs, or even one region with component SMUs. For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. The model indexes are defined in Table \@ref(tab:indtab), the model parameters and model input are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
 
 
 \begin{table}[ht]
