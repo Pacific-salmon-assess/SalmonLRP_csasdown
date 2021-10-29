@@ -63,8 +63,8 @@ The exploitation rate time series is a large source of uncertainty for Interior 
 We consider three alternative ways to characterize CU status when developing LRPs for Interior Fraser Coho:
 
 1) Multi-dimensional rapid status assessment <!--CH: "Rapid Multidimenstional Scanner Tool (see Section \@ref(#rapidToolMethods)"- is the this official name?-->
-2) CU-level abundance relative to $S_{gen}$<!--CH: ", lower benchmark on abundances"-->
-3) Distribution related to IFCRT-distributional target<!--CH: "3) Distribution of spawning relative to distributional targets developed by Interior Fraser Conservation Recovery Team (20??)"- unless you've already defined IFCRT above--> 
+2) CU-level abundance relative to $S_{gen}$ as a lower benchmark on abundance
+3) Distribution of spawning abundance relative to distributional targets developed by the IFCRT
 
 <!--CH comment: I've suggested the text above to replace the first two sentences below. The third sentence could be revised to, "For aggregate-abundance based methods, both second and third approaches are applied". However, if we're applying the third approach outside of a fully integrated assessment (e.g., in logisitic-regression LRP), why can't we apply the first approach?. I think only the 2nd approach is used for projection-based LRPS, correct? -->
 The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(#rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
@@ -82,14 +82,9 @@ Note that our decision to maintain this metric as part of our current evaluation
 
 ### Estimation of Sgen{#cohoSgen}
 
-Estimates of Sgen are required when assessing CU status using both the multi-dimensional rapid scanning tool <!--CH: "Rapid Multidimenstional Scanning Tool"-->and the comparisson of current CU-level abundance to $S_{gen}$. Two different formulations of stock recruitment model were used to estimate $S_{gen}$: (i) a base Ricker model, which includes a marine survival covariate, and (ii) a Ricker_prioCap model in which an informative prior distribution is used to increase  $S_{REP}$ compared to the base model. $S_{REP}$ is the spawner abundance level at which the stock replaces itself; the relationship between $S_{REP}$ and Ricker stock recuit model parameters is shown below. Both of these models have been previously developed and applied to Interior Fraser Coho CUs. A third Ricker model, in which both an informative prior on $S_{REP}$  and depensatory mortality were included, was also used by @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020; however, we did not include it in our case study in order to simplify our analysis. <!--CH: is there any biological reason why we care less about that 3rd model? Any reason why Korman et al or Arbeider et al. thought it was perhaps less feasible?-->
+Estimates of Sgen are required when assessing CU status using both the 'Rapid Multidimenstional Scanning Tool' and the comparison of current CU-level abundance to $S_{gen}$. Two different formulations of stock recruitment model were used to estimate $S_{gen}$: (i) a base Ricker model, which includes a marine survival covariate, and (ii) a Ricker_prioCap model in which an informative prior distribution is used to increase  $S_{REP}$ compared to the base model. $S_{REP}$ is the spawner abundance level at which the stock replaces itself; the relationship between $S_{REP}$ and Ricker stock recuit model parameters is shown below. Both of these models have been previously developed and applied to Interior Fraser Coho CUs. The marine survival covariate used when fitting both models is a hatchery-based smolt-to-adult survival rate index.  The index is not CU-specific; the same index is applied to all CUs. A third Ricker model, in which both an informative prior on $S_{REP}$ and depensatory mortality were included, was also used by @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020; however, we did not include it in our case study for simplicity. As noted by @kormanEvaluationFrameworkAssessing2019, there is no indication in available data of depensatory dynamics, and the SR model fit with depensatory mortality required a highly uncertain assumption to be made about the escapement level at which recruitment is reduced to 50% of the value it would have been in the absence of depensatory mortality.  Furthermore, formal model selection criteria showed that adding depensatory moraltality into models lead to a reduction in model fit [@kormanEvaluationFrameworkAssessing2019].
 
-The marine survival covariate used when fitting both models is a hatchery-based smolt-to-adult survival rate index.  The index is not CU-specific; the same index is applied to all CUs.
-
-
-@kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 used a hierarchical model structure for both the base Ricker and Ricker_priorCap models that assumed CU-level productivity parameters were sampled from a common, normal distribution shared by all CUs. Using formal model selection criteria (i.e., DIC), @kormanEvaluationFrameworkAssessing2019 found higher support for the hierarchical structure than when productivity parameters were assumed independent among CUs. However, our initial examination of the hierarchical approach applied to the updated dataset lead us to select the independent CU approach for our evaluation. Firstly, we found that LRP estimates were sensitive to the assumed standard deviation on the hyper-distribution <!--prior-->  for the productivity parameter. Using the individual model approach avoided needing to make a decision <!--suggest: Using the individual model approach removed prior influence on model results -->. Secondly, our hierarchical model was unable to converge on an LRP solution in several years between 2015 and 2020, including the most recent year (2020). Thirdly, because all CUs had equal amounts of data, the commonly cited benefit of hierarchical models allowing data-poor systems to borrow information from data-rich systems did not apply. While future stock recruit analyses for Interior Fraser Coho may wish to re-visit the hierarchical model, we do not expect our decision to apply an individual modelling approach here will affect out general conclusions.
-
-
+@kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 used a hierarchical model structure for both the base Ricker and Ricker_priorCap models that assumed CU-level productivity parameters were sampled from a common, normal distribution shared by all CUs. Using formal model selection criteria (i.e., DIC), @kormanEvaluationFrameworkAssessing2019 found higher support for the hierarchical structure than when productivity parameters were assumed independent among CUs. However, our initial examination of the hierarchical approach applied to the updated dataset lead us to select the independent CU approach for our evaluation. Firstly, we found that LRP estimates were sensitive to the assumed standard deviation on the hyper-distribution prior for the productivity parameter. Using the individual model approach removed prior influence on model results. Secondly, our hierarchical model was unable to converge on an LRP solution in several years between 2015 and 2020, including the most recent year (2020). Thirdly, because all CUs had equal amounts of data, the commonly cited benefit of hierarchical models allowing data-poor systems to borrow information from data-rich systems did not apply. While future stock recruit analyses for Interior Fraser Coho may wish to re-visit the hierarchical model, we do not expect our decision to apply an individual modelling approach here will affect out general conclusions.
 
 The formulations for our two stock recruitment models using the assumption of independent productivity among CUs are described below. 
 
@@ -98,7 +93,7 @@ The formulations for our two stock recruitment models using the assumption of in
 The base Ricker stock recruit model formulation was:
 
 \begin{equation}
-  \hat{R}_{i,a,t} = P_{i,a,t-a}S_{i,t-a}e^{log(\alpha_i) + \gamma log(m_{t-1})-\beta_i S_{i,t-a}e^{v_i}}
+  R_{i,a,t} = P_{i,a,t-a}S_{i,t-a}e^{log(\alpha_i) + \gamma log(m_{t-1})-\beta_i S_{i,t-a}e^{v_i}}
    (\#eq:rickerSurv-IM)
 \end{equation}
 \begin{equation}
@@ -108,11 +103,9 @@ The base Ricker stock recruit model formulation was:
 
 TO DO: Need to add lognormal bias correction factor to equations!!!!!!!!!!!!!!!!!
 
-<!-- why did we choose to represent recuitment with a hat $\hat{R}$. I understand that recruitment is always estimated, but so is spawners. I usually do not see the hat symbol in either spawners or recruits -->
-
 where,
 
-$\hat{R}_{i,a,t}$ = the predicted number of natural origin recruits from CU $i$ of age $a$ returning in year $t$ (i.e., recruits that were produced by escapement in brood year $t-a$)
+$R_{i,a,t}$ = the predicted number of natural origin recruits from CU $i$ of age $a$ returning in year $t$ (i.e., recruits that were produced by escapement in brood year $t-a$)
 
 $P_{i,a,t-a}$ = the proportion of recruitment from CU $i$ returning at age $a$ from brood year $t-a$
 
@@ -475,7 +468,8 @@ Table: (\#tab:projectedLRPs2020) Projection-based LRPs from forward projections 
 
 Generational average spawning abundance (based on a 3-year geometric mean) remained above the projection-based LRP derived using the Ricker model with a probability threshold of p = 0.5 for most years between 2000 and 2020. There were two years in which aggregate spawning abundance dropping below the LRP: 2006 and 2007 (Figure \@ref:fig(coho-AggEscpSeries-wProjLRP). In comparison, when projection-based LRPs were derived using the Ricker_priorCap model with p = 0.5, aggregate spawning abundance remained below the LRP for 11 out of the 21 years. 
 
-```{r coho-AggEscpSeries-wProjLRP, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) relative to projection-based LRP estimates using two different stock recruitment model formulations,Ricker and Ricker\\_priorCap, with a probability threshold of p = 0.5. Forward projections used to estimate reference points were parameterized using available 1998-2020 time series under base model assumptions.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+
+```{r coho-AggEscpSeries-wProjLRP, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) relative to projection-based LRP estimates using two different stock recruitment model formulations, Ricker and Ricker\\_priorCap, with a probability threshold of p=0.5. Forward projections used to estimate reference points were parameterized using available 1998-2020 time series under base model assumptions.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 ```
 
