@@ -156,7 +156,7 @@ To maintain consistency with this previous work on Interior Fraser Coho, we also
 
 
 ```{r coho-SR-fit, fig.cap="Stock recruit curves fit to spawner and recruitment data using individual models for each CU. Solid black lines shows the MLE fit for the base Ricker model while solid blue lines shows the MLE fit for the Ricker\\_priorCap model.  Associated black and blue shaded regions show the 95 percent confidence intervals on respective model fits. The red line show the replacement line.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/coho-compareSRFits-IM.png")
+knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
 ```
 
 
@@ -492,7 +492,7 @@ Increasing the average exploitation rate used in forward projections also led to
 
 
 
-```{r coho-projLRPCurve-byER, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances (within bins of 200 fish) for alternative scenarios about average exploitation rates (ER) in forward projections. The baseline value used for forward projections was ER = 12.5%. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > Sgen.  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+```{r coho-projLRPCurve-byER, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances (within bins of 200 fish) for alternative scenarios about average exploitation rates (ER) in forward projections. The baseline value used for forward projections was ER = 12.5\\%. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > Sgen.  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-projLRPCurve-byER.png")
 ```
 

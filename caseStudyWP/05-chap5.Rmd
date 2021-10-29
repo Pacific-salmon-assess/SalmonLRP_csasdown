@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER
+# CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER{#ISCchumChapter}
 
 <!-- # Add a comment in colour: *\textcolor{cyan}{LW: some text}* -->
 
