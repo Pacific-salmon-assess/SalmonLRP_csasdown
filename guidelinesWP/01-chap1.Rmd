@@ -20,7 +20,8 @@ Scales of Pacific salmon assessment reporting
 1. Wild Salmon Policy
 2. COSEWIC
 3. Pacific Salmon Treaty Management Units
-4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. Note to readers, we are not reviewing SMUs in this document. Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)<!--CH comment: confirm with Diana Dobson/Ron that SMUs always contain one or more CUs, never partial CUS-->
+4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. It is likely that SMUs may be updated as managed approaches evolve; reviewing SMU definitions is outside the scope of this working paper. 
+-Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)<!--CH comment: confirm with Diana Dobson/Ron that SMUs always contain one or more CUs, never partial CUS-->
 
 -	Establish that LRPs for salmon should be consistent with the WSP
 -	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
@@ -70,7 +71,7 @@ In terms of salmonids, @portleyLimitReferencePoints2014 reviewed the use of limi
 
 
 
-## Role of LRPs
+## Role of LRPs {#roleLRPs}
 
 - required under FA to trigger rebuilding
 - BUT ,also can form part of management procedure framework. Kronlund et al. 2018 p. 8: "Limit reference points in isolation are not useful until they are embedded into fully specified measurable objectives. For example, a conservation goal might be to avoid low biomass levels where stock productivity is compromised to the point of serious harm. This goal could be translated to a measurable objective stated as “avoid spawning biomass levels lower than a threshold biomass BLRP with 95% probability over the next 20 years.” This example illustrates a fully specified measurable objective that has three components:
@@ -87,6 +88,18 @@ In terms of salmonids, @portleyLimitReferencePoints2014 reviewed the use of limi
 
 - While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
 - refer to Groundfish MP Framework
+
+
+<!-- DD's email from 26 Oct
+
+•	I would also add that it seems to me that you cannot consider the LRP outside the management strategy, except this is obviously complicated since the LRP is supposed to be strictly science determined.  But consider SMUs where variable CU status is accommodated in the harvest control rules through measures such as time-area closures.  In other words, the SMU has multiple removal rates.   It would be more useful for Science to evaluate whether or not the harvest control rules were likely to be effective for the lower status CUs rather than presume a single control rule ...  in fact, this is how we work with FM often…
+
+CH response
+-On your last point, I agree we do need to identify a HCR that meets objectives (conservation, harvest, and socioeconomic etc.), where one of those objectives is having a low probability of dropping below an LRP (or equivalently, CU-level benchmarks). Yes, I agree the SMU can have multiple removal rates in the HCR that are set to achieve objectives. 
+-And the choice of the HCR is species, stock, context-specific. Although our paper does not develop or evaluate those HCRs, that is certainly a next step that we will highlight.
+
+-->
+
 
 ## Objectives of this Document
  - Provide guidance on setting LRPs for SMU

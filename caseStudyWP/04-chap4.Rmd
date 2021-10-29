@@ -103,6 +103,11 @@ PNI values for 14 WCVI indicator stocks were provided to DFO South Coast Stock A
 CW: I think it would be better to include the values in a table in the main chapter, if that is possible. We already have 5 appendixes (counting the one on the watershed area model, to be included) -->
 
 
+<!-- KH comment: Suggestion to add new section here to be consistent with Coho and Chum chapters: - 
+## CU Status Estimation
+(or, perhaps "Inlet Status Estimation???")
+-->
+
 
 ## PROPORTION OF CUS
 
