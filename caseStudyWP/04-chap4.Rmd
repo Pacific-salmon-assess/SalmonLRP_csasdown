@@ -15,9 +15,35 @@ The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@ho
 ```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs (coloured red, blue, and yellow), and inlets (labelled in black- NAMES TO BE REVISED).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chinook-map.png")
 ```
-<!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat-->
+<!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat
+ 
 
-----------------------------------------------------------------------------------------------
+CW: the table in md written below seems to be causing the etxt to go beyond the end of the page. I tried to fix it but I wasn't able to.  I re wrote the table in latex and it seems it makes the problem go away, but formatting is not as pretty in the final pdf. 
+
+
+\renewcommand*{\arraystretch}{1.5}
+\begin{table}[ht]
+\centering
+\caption{Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.}
+\begin{tabular}{p{0.2\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
+\hline
+CU       &  Inlets   & Indicators\\ 
+\hline
+WCVI-South (CK-31) & San Juan, Nitinat, Barkley, Clayoquot & \emph{San Juan}, \emph{Nitinat}, Nahmint , \emph{Sarita}, \emph{Somass}, Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
+WCVI-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis, Zeballos, Artlish, Kaouk, Tahsish \\
+WCVI-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
+\hline
+\end{tabular}
+(\#tab:chinook-Overviewlatex)
+\end{table}
+
+ -->
+
+
+
+
+
+----------------------- ----------------------- ----------------------------------------------
 CU                      Inlets                  Indicators
 ----------------------- ----------------------- ----------------------------------------------
 WCVI-South              San Juan,               *San Juan*, 
@@ -31,9 +57,11 @@ WCVI-Nootka & Kyuoquot  Nootka/Esperanza,       *Burman*, *Conuma*, *Gold*, *Lei
                                          
 WCVI-North              Quatsino                Cayeghle, Marble
 (CK-33)                
-                        
------------------------ --------------------------- ------------------------------------------
+
+----------------------- ----------------------- ----------------------------------------------                        
+
 Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island. 
+
 
 
 This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available to develop stock-recruitment based benchmarks, but habitat-based benchmarks are, as is common for Chinook salmon in BC. WCVI Chinook is also included in the first batch of major stocks proposed for regulation under the Fish Stock Provisions of the revised Fisheries Act, necessitating the development of LRPs for this SMU.<!-- CH comment: add reference here?-->
@@ -200,36 +228,35 @@ CW: table translated to latex-->
 
 
 
-
+\renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
 \caption{Parameters used for inlet-specific projections of WCVI Chinook population dynamics.}\\
 \hline
 Parameter & Value & Source \\ 
 \hline
 \endhead
-\hline
-Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
-Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\\\
-$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\\\
+Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\
+$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\
 
-$S_{REP}$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\\\
+$S_{REP}$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\
 
-Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\\\
+Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
-Covariance in Ricker residuals among inlets & Equal to covariance in spawner time-series among inlets & Covariance in spawners among inlets from wild indicator stocks (D. Dobson \& D. McHugh, pers. comm.) \\\\  
+Covariance in Ricker residuals among inlets & Equal to covariance in spawner time-series among inlets & Covariance in spawners among inlets from wild indicator stocks (D. Dobson \& D. McHugh, pers. comm.) \\ 
 
- Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuoquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Ave ppns from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\\\  
+ Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuoquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Ave ppns from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\ 
 
- Variability in age ppns (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuoquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of ppns of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\\\
+ Variability in age ppns (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuoquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of ppns of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\
 
- Average exploitation rate & 0.30 & Average pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator (D. Dobson \& D. McHugh pers. comm.). Varied in sensitivity analyses 0.05 - 0.45.\\\\
+ Average exploitation rate & 0.30 & Average pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator (D. Dobson \& D. McHugh pers. comm.). Varied in sensitivity analyses 0.05 - 0.45.\\
 
-Interannual variability in exploitation rates (CV) & 0.17 & Estimated from pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator. Assumed to be beta distributed, constrained between 0-1.\\\\
+Interannual variability in exploitation rates (CV) & 0.17 & Estimated from pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator. Assumed to be beta distributed, constrained between 0-1.\\
 
-Variability in exploitation rates among inlets (CV) & 0.085 &  Assumed to be half of interannual variability, varied in a sensitivty analysis (0-0.17). Assumed to be beta distributed, constrained between 0-1.\\\\ 
+Variability in exploitation rates among inlets (CV) & 0.085 &  Assumed to be half of interannual variability, varied in a sensitivty analysis (0-0.17). Assumed to be beta distributed, constrained between 0-1.\\
 
-Initial abundances  &  $S_{REP}$ (inlet-specific) & MLE from watershed-area model\\\\
+Initial abundances  &  $S_{REP}$ (inlet-specific) & MLE from watershed-area model\\
 
 Extirpation threshold &  2 & Mating constraint \\
 \hline
@@ -537,7 +564,7 @@ knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 
 Given uncertainty in current and anticipated productivity, projection-based LRPs were evaluated under a range of productivities from 75% - 150% of current estimates. Scenarios with lower productivity (<0.75x current estimates) resulted in a large proportion of trajectories with productivity below replacement, for which LRPs could not be estimated. 
 
-Projection-based LRPs tended to increase under low productivity and vice versa, a trend that was expected due to the inverse relationship between productivity and inlet-specific $S_gen$ values [@holt_cautions_2015]. At low productivity, the spawner abundances required to achieve $S_MSY$ ($S_gen$), tends to increase, thereby becoming more precautionary.  The sensitivity of LRPs to productivity highlights the value of updating benchmarks and projection-based LRPs as productivity changes (Figure \@ref(fig:chinook-projLRPsAlpha)). Our results also show that uncertainty in projections increased under low productivity, likely requiring more random Monte Carlo trials for stabilization at p=0.5.<!--What is p=0.5? 50% probabilitythat all CUs will be above benchmark? Maybe good to redefine here?-->The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. At high productivity, LRPs at the p=0.5 level could not be estimated (though estimation may be possible with more Monte Carlo trials). More detailed analyses of LRPs along the entire range of productivities and exploitation was beyond the scope of this case study.
+Projection-based LRPs tended to increase under low productivity and vice versa, a trend that was expected due to the inverse relationship between productivity and inlet-specific $S_gen$ values [@holtCautionsUsingPercentilebased2015]. At low productivity, the spawner abundances required to achieve $S_MSY$ ($S_gen$), tends to increase, thereby becoming more precautionary.  The sensitivity of LRPs to productivity highlights the value of updating benchmarks and projection-based LRPs as productivity changes (Figure \@ref(fig:chinook-projLRPsAlpha)). Our results also show that uncertainty in projections increased under low productivity, likely requiring more random Monte Carlo trials for stabilization at p=0.5.<!--What is p=0.5? 50% probabilitythat all CUs will be above benchmark? Maybe good to redefine here?-->The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. At high productivity, LRPs at the p=0.5 level could not be estimated (though estimation may be possible with more Monte Carlo trials). More detailed analyses of LRPs along the entire range of productivities and exploitation was beyond the scope of this case study.
    
 ```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection-based LRPs estimated under assumptions of reduced producitivty (0.75x of current levels) and increased productivity (1.5x current levels). More MC trials are required for stabilization of LRPs at low productivity.", out.width = '80%'}
 
