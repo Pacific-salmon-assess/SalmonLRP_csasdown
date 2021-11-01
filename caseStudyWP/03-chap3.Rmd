@@ -57,7 +57,7 @@ The exploitation rate time series is a large source of uncertainty for Interior 
 
 
 
-## CU Status Estimation
+## CU STATUS ESTIMATION
 
 <!--CH suggestion: "We recommend assessing status using the multi-dimensional approach when identifying proportional-based LRPs, and demonstrate two alternative approaches for comparison. In total, these approaches are:"--> <!--CH: I thought of putting this upfront to relay Sue's concerns about showing all methods on equal footing being confusing given her work.-->
 We consider three alternative ways to characterize CU status when developing LRPs for Interior Fraser Coho:
@@ -177,7 +177,7 @@ where, $W$ represents the Lambert W function [@scheuerellExplicitSolutionCalcula
 
 
 
-## LRP Estimation: Proportion of CUs
+## LRP ESTIMATION: PROPORTION OF CUS
 
 ### Methods
 
@@ -209,18 +209,21 @@ knitr::include_graphics("figure/coho-CU-EscpSeries-wMultiStatus-Ricker-Cap.png")
 
 As a point of comparison, if a proportion-based LRP was based on all CUs being above the IFCRT distributional target, the LRP would have been breached in 4 of the 21 years between 2000 and 2020. Eight of the 11 sub-populations had generational average escapement drop below the 1000 spawner threshold in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the distributional target at least half of the subpopulations within each CU with greater than 1000 fish was more often met than not. All 11 subpopulations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportion-based LRP based on the IFCRT-distributional target (Figure \@ref(fig:coho-Subpop-timeseries)).
 
-```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Gray dots shows years in which the 3-year geometric mean escapement was above the 1000 fish threshold used to assess distributional status, while red dots show years in which the 1000 fish threshold was not met.  CUs to which each subpopulation belong to are shown in Table --", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 subpopulations of Interior Fraser Coho shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Gray dots shows years in which the 3-year geometric mean escapement was above the 1000 fish threshold used to assess distributional status, while red dots show years in which the 1000 fish threshold was not met.  CUs to which each subpopulation belong to are shown in Table 1.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
 
 
-## LRP Estimation: Aggregate Abundance Logistic Regression LRPs 
+## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
+
 ### Methods{#logistic}
 
-We evaluated aggregate abundance-based LRPs derived using logistic regressions with two of the Interior Fraser Coho benchmarkS considered<!--Is it too much to consider the multidimensional approach too? It's hard to justify why we excluded it-->: $S_{gen}$ and the IFCRT-distributional target. Because two different spawner recuit models were used to estimate $S_{gen}$, we distinguish these models as 'Sgen:LRP' and 'Sgen_priorCap:LRP' for the Ricker and Ricker_priorCap models, respectively. See Section \@ref(logisticMethods) for an overview of the approach used to calculate aggregate abundance-based LRPs using logistic regression.
+We evaluated aggregate abundance-based LRPs derived using logistic regressions with two of the Interior Fraser Coho benchmarks considered<!--Is it too much to consider the multidimensional approach too? It's hard to justify why we excluded it-->: $S_{gen}$ and the IFCRT-distributional target. Because two different spawner recuit models were used to estimate $S_{gen}$, we distinguish these models as 'Logistic:Sgen-Ricker' and 'Logistic:Sgen-priorCap' for the Ricker and Ricker_priorCap models, respectively. We use the label 'Logistic:IFCRT' to denote the case in which the IFCRT distributional target was used to develop an LRP.  See Section \@ref(logisticMethods) for an overview of the approach used to calculate aggregate abundance-based LRPs using logistic regression.
 
-When estimating logistic regression LRPs using $S_{gen}$, we used an integrated modelling approach in which CU-level $S_{gen}$ and the SMU-level LRP were simultaneously estimated. The integrated Sgen-LRP models had two components: 
-(i)	Stock-recruit models fit to each of the 5 CUs to estimate CU-level Sgen (Equation \@ref(eq:rickerSurv-IM) and Equations \@ref(eq:adjProd) - \@ref(eq:Sgen)) <!-- Eq adjProd not  found-->
+When estimating logistic regression LRPs using $S_{gen}$, we used an integrated modelling approach in which CU-level $S_{gen}$ and the SMU-level LRP were simultaneously estimated. The integrated Sgen-LRP models had two components:  
+
+(i)	Stock-recruit models fit to each of the 5 CUs to estimate CU-level Sgen (Equation \@ref(eq:rickerSurv-IM) and Equations \@ref(eq:adjProd) - \@ref(eq:Sgen))  
+
 (ii)	A logistic regression model fit to aggregated data to estimate the LRP as the aggregate abundance that has historically been associated with a specified probability of all CUs being above Sgen (Equations \@ref(eq:logistic) - \@ref(eq:logisticLRP))
 
 
@@ -235,7 +238,7 @@ To examine the effect of missing CUs on retrospective LRP estimates, we calculat
    (\#eq:status)
 \end{equation}
 
-where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of actual LRP estimates because the magnitude of the LRP will vary with the number (and combination) of CUs used.
+where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of actual LRP estimates because the magnitude of the LRP will vary with the number and combination of CUs used.
 
 
 ### Results
@@ -243,62 +246,52 @@ where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP ca
 
 ***LRP Estimates***
 
-Logistic regression model fits in 2020 from the integrated Sgen:LRP and Sgen_priorCap:LRP models are shown in Figures \@ref(fig:coho-IM-logisticFit2020) and \@ref(fig:coho-IMCap-logisticFit2020), respectively. The logistic regression model fit to status estimates based on the IFCRT-distributional benchmark is shown in Figure \@ref(fig:coho-Distr-logisticFit2020). 
+Logistic regression model fits in 2020 from the integrated Logistic:Sgen-Ricker and Logistic:Sgen-priorCap models are shown in Figures \@ref(fig:coho-IM-logisticFit2020) and \@ref(fig:coho-IMCap-logisticFit2020), respectively. The logistic regression model fit to status estimates based on the IFCRT-distributional benchmark is shown in Figure \@ref(fig:coho-Distr-logisticFit2020).  
 
+All three logistic regression-based LRP methods were able to converge on a solution in 2020. Resulting LRPs for different *p* thresholds are shown on the regression curves, as well as in Table \@ref(tab:logisticLRPs2020). There was considerable uncertainty around predicted curves as seen in the large areas of gray shading in Figures \@ref(fig:coho-IM-logisticFit2020) - \@ref(fig:coho-Distr-logisticFit2020).  
 
-To Add: Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker’ (IM) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
-
-To Add: Appendix: Maximum posterior density estimates (± standard error) obtained from fitting the ‘Individual Ricker with cap’ (IM.cap) version of the Integrated Sgen-LRP model to Interior Fraser Coho data.
-
-
-All three logistic regression-based LRP methods were able to converge on a solution in 2020. Resulting LRPs for different $p^*$ thresholds are shown on the regression curves, as well as in Table \@ref(tab:logisticLRPs2020). There was however considerable uncertainty around predicted curves as seen in the large areas of gray shading in Figures \@ref(fig:coho-IM-logisticFit2020) - \@ref(fig:coho-Distr-logisticFit2020). 
-
-
-```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit from the integrated Ricker LRP model using data from 1998 - 2020. The yellow vertical line shows the LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs (MLE estimates only; no confidence intervals) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit from the integrated Logistic:Sgen-Ricker LRP model using data from 1998 - 2020. The yellow vertical line shows the LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs (MLE estimates only; no confidence intervals) for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-IM2020-LogisticLRP.png")
 ```
+  
+  
+When the Logistic:Sgen-Ricker model was used, aggregate abundance-based LRPs ranged from 15,395 to 24,331 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%) (Table \@ref(tab:logisticLRPs2020)). LRPs increased across all probability levels when the carrying capacity was assumed higher under the Logistic:Sgen-priorCap model (Table \@ref(tab:logisticLRPs2020)). The higher $S_{gen}$ values for most CUs under this alternative model formulation resulted in more historical years in which < 100% of CUs were above $S_{gen}$. Several years with aggregate abundances between 19,000 - 30,000 spawners that had met the threshold of all CUs > $S_{gen}$ using the Ricker model no longer met this threshold, resulting in a shift of the fit curve to the right and higher LRP estimates. LRPs based on the Logistic:Sgen_priorCap model ranged from 25,677 to 40,637 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%).  
 
-When the Sgen:LRP model was used, aggregate abundance-based LRPs ranged from 15,395 to 24,331 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%) (Table \@ref(tab:logisticLRPs2020)). LRPs increased across all probability levels when the carrying capacity was assumed higher under the Sgen_priorCap:LRP model (Table \@ref(tab:logisticLRPs2020)). The higher $S_{gen}$ values for most CUs under this alternative model formulation resulted in more historical years in which < 100% of CUs were above Sgen. Several years with aggregate abundances between 19,000 - 30,000 spawners that had met the threshold of all CUs > Sgen using the IM model no longer met this threshold, resulting in a shift of the fit curve to the right and higher LRP estimates. LRPs based on the Sgen_priorCap:LRP model ranged from 25,677 to 40,784 spawners, depending on whether the required probability of all CUs being above Sgen was moderate (50%) or very likely (99%).
-
-```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit from the integrated Ricker\\_priorCap LRP model using data from 1998 - 2020. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
+```{r coho-IMCap-logisticFit2020, fig.cap="Logistic regression fit from the integrated Logistic:Sgen-priorCap LRP model using data from 1998 - 2020. See Figure 9 caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-IMCap2020-LogisticLRP.png")
 ```
 
-When CU status was based on the IFCRT short-term distributional target, the fit logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-Distr-logisticFit2020)). As a result, LRPs based on the IFCRT short-term distributional target were more uncertain than those based on Sgen. LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020). The LRP based on a 50% probability that all CUs would be above their distributional targets was 17,515 spawners (95% CI = 9,695 - 25,336) while the LRP based on a 99% probability was 44,403 spawners (95% CI = 15,102 - 73,703). 
+When CU status was based on the IFCRT distributional target, the fit logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-Distr-logisticFit2020)). As a result, LRPs based on the IFCRT distributional target were more uncertain than those based on $S_{gen}$. LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020). The LRP based on a 99% probability was 44,403 spawners, with a 95% confidence interval extending from 15,102 - 73,703 spawners.  
 
-
-```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit from the IFCRT-distributional LRP model using data from 1998 - 2020. See Figure x caption for additional details.", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit from the Logistic:IFCRT LRP model using data from 1998 - 2020. See Figure 9 caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 ```
 
-+-------------+-----------------+-------------------+-----------------+
-| Probability | Sgen:LRP        | Sgen_priorCap:LRP | Dist:LRP
-+=============+=================+===================+=================+
-| 50%         | 15,395          | 25,677            | 17,515
-|             | (11,187-19,603) | (20,683-30,672)   | (9,695-25,336)
-+-------------+-----------------+-------------------+-----------------+             
-| 66%         | 16,685          | 26,424            | 21,396
-|             | (12,454-20,916) | (20,478-32,369)   | (13,418-29,375)
-+-------------+-----------------+-------------------+-----------------+  
-| 90%         | 19,668          | 31,969            | 30,372
-|             | (13,752-25,584) | (21,414-42,523)   | (15,711-45,033)
-+-------------+-----------------+-------------------+-----------------+
-| 99%         | 24,331          | 40,637            | 44,403
-|             | (13,924-34,738) | (21,288-59,936)   | (15,102-73,703)
-+-------------+-----------------+-------------------+-----------------+
 
++---------------------+-----------------+-----------------+-----------------+
+| Probability         | Sgen-Ricker     | Sgen-priorCap   | IFCRT
++=====================+=================+=================+=================+
+| 50%                 | 15,395          | 25,677          | 17,515
+| (As likely as not)  | (11,187-19,603) | (20,683-30,672) | (9,695-25,336)
++---------------------+-----------------+-----------------+-----------------+             
+| 66%                 | 16,685          | 26,424          | 21,396
+| (Likely)            | (12,454-20,916) | (20,478-32,369) | (13,418-29,375)
++---------------------+-----------------+-----------------+-----------------+  
+| 90%                 | 19,668          | 31,969          | 30,372
+| (Very likely)       | (13,752-25,584) | (21,414-42,523) | (15,711-45,033)
++---------------------+-----------------+-----------------+-----------------+
+| 99%                 | 24,331          | 40,637          | 44,403
+| (Virtually certain) | (13,924-34,738) | (21,288-59,936) | (15,102-73,703)
++---------------------+-----------------+-----------------+-----------------+
 
-Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.
-
+Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.  
 
 ***Logistic Regression Diagnostics***
 
-Logistic regression diagnostics showed  that key regression assumptions were met, and that model fits were strong enough to support estimation of logistic regression-based LRPs from all three models(Table @ref(tab:logisticDiagIFC2020)). Assumptions of linearity and lack of influential outliers were met for all models. The assumption of linearity was demonstrated based on the Box-Tidwell test. This test evaluates the significance of adding a non-linear interaction term to the logit regression. We found that this additional interaction term was not significant, supporting the linearity assumption. An examination of deviance residuals did not show any large outliers, i.e. no residual values were greater than 2. Observations were independent at all year lags examined for the Sgen_priorCap:LRP and Dist:LRP models. For the Sgen:LRP model, observations were independent at 1 and 2-year lags and marginally significant at a  3-year lag suggesting generational-scale trends (Figure @ref(fig:coho-logisticACF-IM)). The Wald Test showed that logistic model coefficient for aggregate abundance was marginally significant (p < 0.10). Quasi-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks, and the goodness of fit statistics indicated a significant fit of the model with aggregate abundance relative to the null model based on p-values less than 0.01. Finally, 'out-of-sample' hit ratios representing classification accuracy as the proportion of successful predictions when one year of data was iteratively left out of the model fit, were relatively high at low probability thresholds, indicating good accuracy. This results was especially true for the Sgen:LRP model which had a hit ratio of 0.95 at probability thresholds of 50% and 66%. Classification accuracy was lowest for all models at the 99% probability threshold.
-
-Sample sizes were small due to the short time series available for Interior Fraser Coho; only 23 years of observations were available to fit logistic regression models. @peduzzi_simulation_1996 recommend a minimum requirement of 10 data points for the least frequent outcome based on their simulation studies in the field of clinical epidemiology. In our case, the least frequent outcome was the failure of all CUs to be above their benchmarks (i.e., 0). We were not able to make this minimum requirement for any of our model fits; we had only 3, 9, and 5 data points at the least frequent outcome for the Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP models, respectively.  Based on the current ratio of successes and fails in the data, the estimated minimum sample sizes that would be required to meet the criteria of @peduzzi_simulation_1996 ranged from 26 to 77 years. However, despite small sample sizes, hit ratios are high for all models at p = 50%.  As a result, we suggest that logistic regression-based LRPs may still be useful for this SMU.  We proceeded with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
+Logistic regression diagnostics showed  that key regression assumptions were met, and that model fits were strong enough to support estimation of logistic regression-based LRPs from all three models(Table @ref(tab:logisticDiagIFC2020)). Assumptions of linearity and lack of influential outliers were met for all models. The assumption of linearity was demonstrated based on the Box-Tidwell test. This test evaluates the significance of adding a non-linear interaction term to the logit regression. We found that this additional interaction term was not significant, supporting the linearity assumption. An examination of deviance residuals did not show any large outliers, i.e. no residual values were greater than 2. Observations were independent at all year lags examined for the Logistic:Sgen-priorCap and Logistic-IFCRT models. For the Logistic:Sgen-Ricker model, observations were independent at 1 and 2-year lags and marginally significant at a  3-year lag suggesting generational-scale trends (Figure @ref(fig:coho-logisticACF-IM)). The Wald Test showed that logistic model coefficient for aggregate abundance was marginally significant (p < 0.10). Psuedo-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks, and the goodness of fit statistics indicated a significant fit of the model with aggregate abundance relative to the null model based on p-values less than 0.01. Finally, 'out-of-sample' hit ratios representing classification accuracy as the proportion of successful predictions when one year of data was iteratively left out of the model fit, were relatively high at low probability thresholds, indicating good accuracy. This results was especially true for the Logistic:Sgen-Ricker model which had a hit ratio of 0.95 at probability thresholds of 50% and 66%. Classification accuracy was lowest for all models at the 99% probability threshold.
 
 +-------------------------+--------------+-------------------+-----------------+
-| Diagnostic Test         | Sgen:LRP     | Sgen_priorCap:LRP | Dist-LRP
+| Diagnostic Test         | Sgen-Ricker  | Sgen-priorCap     | IFCRT
 +=========================+==============+===================+=================+
 | Box-Tidwell p-value     | 0.81         | 1.0               | 0.79
 +-------------------------+--------------+-------------------+-----------------+     
@@ -310,51 +303,60 @@ Sample sizes were small due to the short time series available for Interior Fras
 +-------------------------+--------------+-------------------+-----------------+
 | Goodness-of-fit p-value | <0.01        | <0.01             | <0.01
 +-------------------------+--------------+-------------------+-----------------+
-| Quasi-$R^2$             | 0.68         | 0.63              | 0.41
+| Pseudo-$R^2$             | 0.68         | 0.63              | 0.41
 +-------------------------+--------------+-------------------+-----------------+
 | Hit Ratio (p= 50%,      | 0.91, 0.91   | 0.87, 0.91,       | 0.76, 0.81,
 | 60%, 90%, 99%)          | 0.91, 0.74   | 0.87, 0.78        | 0.76, 0.52
 +-------------------------+--------------+-------------------+-----------------+
 
-Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section …  Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.
-
+Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.  
 
 
 ```{r coho-logisticACF-IM, fig.cap="Autocorrelation in aggregate spawner abundance at 1- to 10-year lags for the Integreated Sgen:LRP model. Orange dashed lines inidcate whether autocorrelations are significantly different from zero based on a 95\\% confidence interval", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-logisticFitDiag-2020acf.png")
-```
+```  
 
 
+Sample sizes were small due to the short time series available for Interior Fraser Coho; only 23 years of observations were available to fit logistic regression models. @peduzziSimulationStudyNumber1996 recommend a minimum requirement of 10 data points for the least frequent outcome based on their simulation studies in the field of clinical epidemiology. In our case, the least frequent outcome was the failure of all CUs to be above their benchmarks (i.e., 0). We were not able to make this minimum requirement for any of our model fits; we had only 3, 9, and 5 data points at the least frequent outcome for the Logistic:Sgen-Ricker, Logistic:Sgen-priorCap, and Logistic-IFCRT models, respectively.  Based on the current ratio of successes and fails in the data, the estimated minimum sample sizes that would be required to meet the criteria of @peduzziSimulationStudyNumber1996 ranged from 26 to 77 years. However, despite small sample sizes, hit ratios are high for all models at p = 50%.  As a result, we suggest that logistic regression-based LRPs may still be useful for this SMU.  We proceeded with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
 
 ***Retrospective Analysis***
 
-
-2015 was the first year in which the available IFC time series was long enough to estimate logistic regression-based LRPs using the integrated Sgen_priorCap and Dist:LRP models. The Sgen:LRP model required an additional 2 years of data before LRP estimates were first available in 2017. As a result, only 4-6 years of retrospective analyses were available, depending on the model being considered. All three models showed some fluctuations in LRP estimates over time (Figure \@ref(fig:coho-IM-retroLRPs)). The IFCRT-distributional model tended to produce the most stable LRPs over time while the Sgen_priorCap model estimated a relatively consistent increase in LRPs over the time. 
-
+2015 was the first year in which the available IFC time series was long enough to estimate logistic regression-based LRPs using the Logistic:Sgen-priorCap and Logistic:IFCRT models. However, the Logistic:Sgen-priorCap model was unable to converge on an LRP estimate in 2018. The Logistic:Sgen-Ricker model required an additional two years of data before LRP estimates were first available in 2017. As a result, only four-six years of retrospective analyses were available, depending on the model being considered. All three models showed some fluctuations in LRP estimates over time (Figure \@ref(fig:coho-retroLRPs)). The Logistic:IFCRT model tended to produce the most stable LRPs over time.  
 
 ```{r coho-retroLRPs, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) and associated time series of retrospective LRPs from logistic regression-based estimation methods. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. Annual LRP estimates are shown as maximum likelihood values (coloured lines) and associated 95\\% confidence intervals (shaded areas).", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho_LRP_compareRetro.png")
 ```
 
+\linebreak
 
-When Sgen:LRP model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). Four of the five possible combinations of four CUs had estimates in 2017, while only three had estimates in 2019 and 2020. For scenarios in which LRP estimates were possible, estimates of aggregate status (Equation \@ref(eq:status)) were often close to the estimate obtained when all 5 CUs were used, and always fell within the 95% confidence interval of the full data estimate. The Sgen:LRP model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2019 and 2020 when only 4 out of the 10 possible combinations had estimates. For scenarios that were able to converge, aggregate status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2018 had a status estimate that fell outside of the 95% confidence interval of the full data estimate. 
+When the Logistic:Sgen-Ricker model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). Four of the five possible combinations of four CUs had estimates in 2017, while only three had estimates in 2019 and 2020. For scenarios in which LRP estimates were possible, estimates of aggregate status (Equation \@ref(eq:status)) were often close to the estimate obtained when all 5 CUs were used, and always fell within the 95% confidence interval of the full data estimate. The Logistic:Sgen-Ricker model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2019 and 2020 when only 4 out of the 10 possible combinations had estimates. For scenarios that were able to converge, aggregate status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2018 had a status estimate that fell outside of the 95% confidence interval of the full data estimate.  
 
-```{r coho-IM-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:LRP  model under different scenarios about missing CUs, where aggregate status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs.  Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios.", warning=FALSE, echo=FALSE, out.width = '80%', out.height = '60%', fig.align="center"}
+
+```{r coho-IM-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:LRP  model under different scenarios about missing CUs, where aggregate status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs.  Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios.", warning=FALSE, echo=FALSE, out.width = '80%', out.height = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurv-50.png")
-```
+```  
 
-When the Sgen_priorCap:LRP model was applied to missing data scenarios in which four out of five CUs had data, status estimates were only available for two of the five CU combinations in all 6 retrospective years (Figure \@ref(fig:coho-IMCap-missingCUs)). For the two scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only 3 CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from 3-CU scenarios fell outside of the 95% confidence interval for the full data case.      
+\linebreak
+  
+When the Logistic:Sgen-priorCap model was applied to missing data scenarios in which four out of five CUs had data, LRP estimates were only available for two to three of the five CU combinations, depending on the year (Figure \@ref(fig:coho-IMCap-missingCUs)). For scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only three CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from three-CU scenarios fell outside of the 95% confidence interval for the full data case. 
+
+The failure of both the Logistic:Sgen-Ricker and Logistic:Sgen-priorCap models to converge in some years is a function of low sample sizes in the available data set, such that the removal of one or two CUs results in a failure of the logistic regression model to converge on a solution. For example, for the Logistic:Sgen-Ricker model, the South Thompson CU is an influencial CU. Removing it from the characaterization of 'successful' and 'failure' years, as well as the aggregate abundance used to fit the logistic regression, means that the model cannot converge on a solution. For the Logistic:Sgen-priorCap model, several CUs are influencial due to higher $S_{gen}$ estimates compared to the  Logistic:Sgen-Ricker model. Because several different CUs contribute to 'failure' years, in which CU-level abundances drop below $S_{gen}$, there is higher sensitivity to the removal of any one of these CUs.  
+
+<!--
+CW: I am curious why the results were different between the two Ricker models, and it seems that the confidence intervals are tighter for the Sgen_priorCap:LRP model.
+Is this result generalizble? i.e., Does this result indicate that missing two or more CUs will increase uncertainty in LRP estimates? 
+KH: Does the explanation in the above paragraph help?
+--> 
+
 
 ```{r coho-IMCap-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen\\_priorCap:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '80%', fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurvCap-50.png")
 ```
- <!--
+ 
 
-I am curious why the results were different between the two Ricker models, and it seems that the confidence intervals are tighter for the Sgen_priorCap:LRP model.
-Is this result generalizble? i.e., Does this result indicate that missing two or more CUs will increase uncertainty in LRP estimates? 
---> 
+\linebreak
 
-LRPs based on the IFCRT-distributional benchmark could be estimated for all 4-CU missing data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five 4-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for South Thompson CU being an influential observation that has a large impact on the shape of the fit model. For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the 4 CU or full data scenarios, and showed high variability among scenarios in estimated status.    
+LRPs based on the Logistic:IFCRT model could be estimated for all four-CU data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five four-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for South Thompson CU being an influential observation that has a large impact on the shape of the fit model. For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the four-CU or full data scenarios, and showed high variability among scenarios in estimated status.  
 
 
 ```{r coho-distributional-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Dist:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
@@ -362,55 +364,55 @@ knitr::include_graphics("figure/coho-StatusByNCUs-SPopAbundThreshST-50.png")
 ```
 
 
-## LRP Estimation: Aggregate Abundance Projection-Based LRPs
-
+## LRP ESTIMATION: AGGREGATE ABUNDANCE PROJECTION-BASED LRPS
 
 ### Methods
 
-Forward projections of each of the five CUs with the Interior Fraser Coho SMU were done using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Parameters characterizing population dynamics, marine survival rates, and exploitation rate were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below. Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods). Forward projections were run for 30 years over 20,000 simulation trials.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probaility thresholds.  
+Forward projections of each of the five CUs with the Interior Fraser Coho SMU were done using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Parameters characterizing population dynamics, marine survival rates, and exploitation rate were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below.  
 
-*Stock recruitment dynamics*
+Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods). Forward projections were run for 30 years over 20,000 simulation trials.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probability thresholds.  
+
+
+***Stock recruitment dynamics***  
 
 Stock recruitment parameters for all five CUs were drawn from joint posterior distributions obtained by fitting the two stock recruit models described in Section \@ref(cohoSgen) (Ricker and Ricker_priorCap) to available spawner-recruit data using Bayesian Markov Chain Monte Carlo (MCMC) estimation. Bayesian estimation was done using tmbStan (Kristensen 2019), which is an R package that allows MCMC samples to be drawn from a TMB model object using rStan (Guo et al. 2020). Three MCMC chains were run for 14,000 iterations, with the first half of each chain excluded from the final posterior sample. Resulting joint posterior distributions included 21,000 samples. Posterior sampling was initiated at the MLE estimates for each model formulation. Neither model showed signs of convergence failure based on our examination of Rhat and effective sample size diagnostics, as well as visual inspections of marginal posterior distributions. Marginal posterior distributions for each of the four stock recruitment parameters ($\alpha$, $\beta$, $\gamma$, and $\sigma$) are provided in Appendix xx. 
 
-The two stock recruitment models, Ricker and Ricker_priorCap, were treated as two alternative hypotheses about stock recruitment dynamics, which we refer to as operating models. Additional sensitivity analyses described below were only done using the base Ricker model.
+The two stock recruitment models, Ricker and Ricker_priorCap, were treated as two alternative hypotheses about stock recruitment dynamics, which we refer to as operating models. Additional sensitivity analyses described below were only done using the base Ricker model.  
 
-
-*Covariance in recruitment residuals*
+***Covariance in recruitment residuals***
 
 We parameterized correlations in recruitment residuals among CUs from MLE predictions of pairwise correlations from spawner recruit model fits. The correlation matrix from the base Ricker model fit is shown in Figure \@ref(fig:coho-recruitResid-Ricker). Correlation values for the Ricker_priorCap model were similar (not shown).    
 
-We initially attempted to reduce covariation in spawner abundances among CUs by scaling correlations in recruitment residuals (i.e., scalar < 1). However, we found that scalars had little effect on projected correlations in spawner abundances among CUs due to the shared marine rate coefficient dominating among-CU variability in recruitment. We therefore used sensitivity analyses of the level of variability in marine survival coefficents among CUs to drive patterns of covariation in spawner abundance, as described below. This approach differs from that taken for WCVI Chinook (Section \@ref(#WCVIchinookChapter).
-
+We initially attempted to reduce covariation in spawner abundances among CUs by scaling correlations in recruitment residuals (i.e., scalar < 1). However, we found that scalars had little effect on projected correlations in spawner abundances among CUs due to the shared marine rate coefficient dominating among-CU variability in recruitment. We therefore used sensitivity analyses of the level of variability in marine survival coefficents among CUs to drive patterns of covariation in spawner abundance, as described below. This approach differs from that taken for WCVI Chinook (Section \@ref(#WCVIchinookChapter).  
 
 ```{r coho-recruitResid-Ricker, fig.cap="Bubble plot of correlations in recruitment residuals among CUs from base Ricker model fit.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-RecuitResidCorrelation-Ricker.png")
 ```
 
 
-*Variability in marine survival coefficient among CUs*
+***Variability in marine survival coefficient among CUs***
 
 When fitting spawner recuit models to data, we followed the approach of @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 in assuming that all CUs experienced the same marine survival rate for given sea-entry year, and that the marine survival coefficient, $\gamma$, was constant both among CUs and among years.  When projecting CUs forward, we maintained this assumption in our base case by generating a single marine survival rate for each sea entry year and setting $\sigma_{\gamma}$ = 0, where $\sigma_{\gamma}$ is the standard deviation of among-CU variability in $\gamma$ such that $\gamma_i \sim Normal(\bar{\gamma}, \sigma_{\gamma})$. We used sensitivity analyses on $\sigma_{\gamma}$ to test the effect of changes in spawner abundance covariation among CUs on projected LRP estimates. Three alternative levels of $\sigma_{\gamma}$ were used in sensitivity analyses: $\sigma_{\gamma}$ = 0.045, 0.0675, and 0.09. We selected these levels to cover a range between 0 and 0.09, where 0.09 was the standard deviation of the estimated marginal posterior distribution for $\gamma$ from our Ricker stock recruitment model fit. 
 
-The resulting correlations in spawner abundances from the projections are shown in Figure \@ref(fig:coho-sigGammaCorrelation). In the forward projections, pairwise correlations in projected spawner abundances among CUs for the base case assumption of $\sigma_{\gamma}$ = 0 were similar to observed pairwise correlations in spawner abundances among CUs. Increasing $\sigma_{\gamma}$ resulted in decreased among-CU correlation in projected spawner abundances.
+The resulting correlations in spawner abundances from the projections are shown in Figure \@ref(fig:coho-sigGammaCorrelation). In the forward projections, pairwise correlations in projected spawner abundances among CUs for the base case assumption of $\sigma_{\gamma}$ = 0 were similar to observed pairwise correlations in spawner abundances among CUs. Increasing $\sigma_{\gamma}$ resulted in decreased among-CU correlation in projected spawner abundances.  
 
 ```{r coho-sigGammaCorrelation, fig.cap="Distribution of correlations of spawner abundances among CUs for observed data between 1998 and 2021 and projected time-series under alternative assumptions about the standard deviation on the marine survival co-efficient among CUs for the base Ricker model formulation.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-corrEffect-sigGamma.png")
 ```
 
 
-*Variability in age proportions of recruits among CUs*
+***Variability in age proportions of recruits among CUs***
 
 Annual variability in the age structure of returns was generated from a multivariate logistic distribution parameterized using CU-specific time series of proportions at age. The underlying average age structure for each CU was set at the average from the available time series (brood years 1998 - 2016), while annual deviations from underlying age-specific means were drawn from a multivariate logistic distribution. Annual deviations were held constant among all CUs; however, the scale of annual deviations was controlled by the variability parameter $\tau$, which was estimated individually for each CU. This meant that while all CUs simultaneously experienced increases or decreases in a given year, the magnitude of the increase or decrease was CU-specific. Annual deviations were held constant among CUs to represent the strong co-variation in proportions at age seen in available time series for Interior Fraser Coho, especially since 2010 (Figure \@ref(fig:coho-recruitResid-Ricker)). When the constraint of constant annual deviations was removed, generated proportion at age data was much more variable than observed data. <!-- which was considered to be unrealistic --> 
 
-Annual variability in the age structure of recruits has not been included in other recent projection analyses for this SMU. Both @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 assumed a constant age structure over time.
- 
+Annual variability in the age structure of recruits has not been included in other recent projection analyses for this SMU. Both @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 assumed a constant age structure over time.  
+
 ```{r coho-ageProp, fig.cap="Proportion of recruits returning at age 3 for 1998 - 2016 brood years. Only two age classes (age 3 and age 4) are present in the age structure, so the proportion of recruits returning at age 4 will account for the remainder of returns in each year.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-ObsAgeProp-byCU.png")
 ```
 
 
-*Covariance in exploitation*
+***Covariance in exploitation***
 
 We assumed an average exploitation rate of 12.5% for all CUs in forward projections, with common interannual variability in exploitation rates due to shared fishery impacts among CUs each year. Interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), with the standard deviation of the beta distribution parameterized from estimated exploitation rates for 1998 - 2016 brood years. The corresponding coefficient of variation (CV) for interannual variability was 0.44.
 
@@ -460,8 +462,7 @@ Extirpation threshold &  2 & Mating constraint \\
 
 
 
-### Results
-
+### Results  
 
 ***LRP Estimates***
 
@@ -486,7 +487,7 @@ knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
 
 Table: (\#tab:projectedLRPs2020) Projection-based LRPs from forward projections under two different stock recruit model options (Ricker and Ricker\\_priorCap), as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark of $S_{gen}$.
 
-Generational average spawning abundance (based on a 3-year geometric mean) remained above the projection-based LRP derived using the Ricker model with a probability threshold of p = 0.5 for most years between 2000 and 2020. There were two years in which aggregate spawning abundance dropping below the LRP: 2006 and 2007 (Figure \@ref:fig(coho-AggEscpSeries-wProjLRP). In comparison, when projection-based LRPs were derived using the Ricker_priorCap model with p = 0.5, aggregate spawning abundance remained below the LRP for 11 out of the 21 years. 
+Generational average spawning abundance (based on a 3-year geometric mean) remained above the projection-based LRP derived using the Ricker model with a probability threshold of p = 0.5 for most years between 2000 and 2020. There were two years in which aggregate spawning abundance dropping below the LRP: 2006 and 2007 (Figure \@ref:fig(coho-AggEscpSeries-wProjLRP). In comparison, when projection-based LRPs were derived using the Ricker_priorCap model with p = 0.5, aggregate spawning abundance remained below the LRP for 11 out of the 21 years.  
 
 
 ```{r coho-AggEscpSeries-wProjLRP, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) relative to projection-based LRP estimates using two different stock recruitment model formulations, Ricker and Ricker\\_priorCap, with a probability threshold of p=0.5. Forward projections used to estimate reference points were parameterized using available 1998-2020 time series under base model assumptions.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
@@ -494,7 +495,7 @@ knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 ```
 
 
-***Sensitivity Analyses***
+***Sensitivity Analyses***  
 
 Increasing $\sigma_{\gamma}$, which corresponded with reduced between-CU correlation in spawner abundances over time (Figure \@ref(fig:coho-sigGammaCorrelation)), resulted in a flattening of the projected relationship between aggregate spawer abundances and the probability of all CUs being above their lower benchmarks. LRP estimates corresponding to a given probability threshold increased as $\sigma_{\gamma}$ increased as curves shifted to the right and became more gradual (i.e., less steep). For the two highest $\sigma_{\gamma}$ scenarios examined ($\sigma_{\gamma}$=0.0675 and 0.09), a 99% probability of all CUs being above their lower $S_{gen}$ benchmark was never achieved.            
 
@@ -502,16 +503,12 @@ Increasing $\sigma_{\gamma}$, which corresponded with reduced between-CU correla
 knitr::include_graphics("figure/coho-projLRPCurve-bySigGamma.png")
 ```
 
-Increasing the average exploitation rate used in forward projections also led to a shift in projected curves to the right; however, the shift was more gradual over the range fo exploitation rate scenarios we considered than the effect of increasing $\sigma_{\gamma}$ (Figure \@ref(fig:coho-projLRPCurve-byER)). The effect of increasing exploitation rates was smallest at low probability thresholds. At p = 0.5, the LRP differed by 400 fish between the ER = 2.5% and ER = 12.5% scenarios (range = 19,700 - 21,000), and by < 4000 fish among all four scenarios (range = 19,700 - 24,000). Differences were much larger among the four exploitation rate levels examined for the p = 0.90 threshold. When the average exploitation rate was set at 22.5% or 32.5%, aggregate abundances barely exceeded 60,000 fish, and it was not possible to achieve a 99% probability of all CUs being above their lower $S_{gen}$ benchmarks.               
-
+Increasing the average exploitation rate used in forward projections also led to a shift in projected curves to the right; however, the shift was more gradual over the range fo exploitation rate scenarios we considered than the effect of increasing $\sigma_{\gamma}$ (Figure \@ref(fig:coho-projLRPCurve-byER)). The effect of increasing exploitation rates was smallest at low probability thresholds. At p = 0.5, the LRP differed by 400 fish between the ER = 2.5% and ER = 12.5% scenarios (range = 19,700 - 21,000), and by < 4000 fish among all four scenarios (range = 19,700 - 24,000). Differences were much larger among the four exploitation rate levels examined for the p = 0.90 threshold. When the average exploitation rate was set at 22.5% or 32.5%, aggregate abundances barely exceeded 60,000 fish, and it was not possible to achieve a 99% probability of all CUs being above their lower $S_{gen}$ benchmarks.  
 
 
 ```{r coho-projLRPCurve-byER, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances (within bins of 200 fish) for alternative scenarios about average exploitation rates (ER) in forward projections. The baseline value used for forward projections was ER = 12.5\\%. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > Sgen.  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-projLRPCurve-byER.png")
 ```
-
-
-
 
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS

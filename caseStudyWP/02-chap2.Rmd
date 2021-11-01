@@ -160,24 +160,17 @@ Statistical significance of coefficients was evaluated using the Wald test stati
 
 The goodness-of-fit was evaluated by comparing the ratio of residual deviance to null deviance (similar to a likelihood ratio). This ratio is assumed to follow a Chi-square distribution with 1 degree of freedom, where 1 degree of freedom is based on the difference in the number of parameters between full and null models. P-values <0.05 indicate significant lack of fit [@foxAppliedRegressionAnalysis2016].
 
-In addition, the quasi-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable, 
+In addition, the psuedo-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable, 
 
 \begin{equation}
-   quasi-R^2 =  1- \frac{\sum_{t}^{t=nYears} d} {\sum_{t}^{t=nYears} d_0} 
-   (\#eq:quasiR2)
+   psuedo-R^2 =  1- \frac{\sum_{t}^{t=nYears} d} {\sum_{t}^{t=nYears} d_0} 
+   (\#eq:psuedoR2)
 \end{equation}
 
-where $d_0$ are the deviance residuals for the null model. The quasi-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks, but unlike $R^2$ values for linear models, it does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
+where $d_0$ are the deviance residuals for the null model. The psuedo-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks, but unlike $R^2$ values for linear models, it does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
 
-<!-- K.Holt: Is there a reference for quasi-r2? The one is the code is https://bookdown.org/egarpor/SSS2-UC3M/logreg-deviance.html, but I don't think this is citable
-
-CW: Is the quasi R2 the same as the pseudo R2?  If yes a common reference is:
+<!-- Citation to add to bib file for psuedo R^2:
 Dobson AJ and Barnett AG (2008) An Introduction to Generalized Linear Models. Third Edition. Chapman & Hall/CRC Press. 
-
-pseudoR2 is described on page 137 of the book http://www.ru.ac.bd/wp-content/uploads/sites/25/2019/03/202_06_Dobson_An-Introduction-to-Generalized-Linear-Models-2008.pdf
-It looks the same, when compared to https://bookdown.org/egarpor/SSS2-UC3M/logreg-deviance.html, but maybe I'm missing something?
-
-CH: Yes!! Please replace quasi- with pseudo- everywhere. My apologies!
 -->
 
 In addition, the length of available time-series will impact power to detect significant model coefficients, and coefficient estimates may be biased when time-series are short.  @peduzziSimulationStudyNumber1996 recommend a minimum of 10 data points for the least frequent outcome to avoid biases in model coefficients, based on simulation study of epidemiological data. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. A similar evaluation of sample sizes to minimize biases logistic-regression based LRPs for fisheries applications is warranted. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters (and LRPs) increases.
