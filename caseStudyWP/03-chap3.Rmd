@@ -375,9 +375,9 @@ Projection model outputs were used to estimate projection-based LRPs using the m
 
 ***Stock recruitment dynamics***  
 
-Stock recruitment parameters for all five CUs were drawn from joint posterior distributions obtained by fitting the two stock recruit models described in Section \@ref(cohoSgen) (Ricker and Ricker_priorCap) to available spawner-recruit data using Bayesian Markov Chain Monte Carlo (MCMC) estimation. Bayesian estimation was done using tmbStan (Kristensen 2019), which is an R package that allows MCMC samples to be drawn from a TMB model object using rStan (Guo et al. 2020). Three MCMC chains were run for 14,000 iterations, with the first half of each chain excluded from the final posterior sample. Resulting joint posterior distributions included 21,000 samples. Posterior sampling was initiated at the MLE estimates for each model formulation. Neither model showed signs of convergence failure based on our examination of Rhat and effective sample size diagnostics, as well as visual inspections of marginal posterior distributions. Marginal posterior distributions for each of the four stock recruitment parameters ($\alpha$, $\beta$, $\gamma$, and $\sigma$) are provided in Appendix xx. 
+Stock recruitment parameters for all five CUs were drawn from joint posterior distributions obtained by fitting the two stock recruit models described in Section \@ref(cohoSgen) (Ricker and Ricker_priorCap) to available spawner-recruit data using Bayesian Markov Chain Monte Carlo (MCMC) estimation. Bayesian estimation was done using tmbStan (Kristensen 2019), which is an R package that allows MCMC samples to be drawn from a TMB model object using rStan (Guo et al. 2020). Three MCMC chains were run for 14,000 iterations, with the first half of each chain excluded from the final posterior sample. Resulting joint posterior distributions included 21,000 samples. Posterior sampling was initiated at the MLE estimates for each model formulation. Neither model showed signs of convergence failure based on our examination of Rhat and effective sample size diagnostics, as well as visual inspections of marginal posterior distributions. A summary of marginal posterior distributions for each stock recruitment parameter ($\alpha$, $\beta$, $\gamma$, and $\sigma$) is provided in Appendix \@ref(app:coho-appendix). 
 
-The two stock recruitment models, Ricker and Ricker_priorCap, were treated as two alternative hypotheses about stock recruitment dynamics, which we refer to as operating models. Additional sensitivity analyses described below were only done using the base Ricker model.  
+The two stock recruitment models, Ricker and Ricker_priorCap, were treated as two alternative hypotheses about stock recruitment dynamics, which we compare against each other. We also considered a simple model-averaging approach, in which we equally weighted the two stock recruit models by combining projections prior to calculating a projection-based LRP. Additional sensitivity analyses described below were only done using the base Ricker model.  
 
 ***Covariance in recruitment residuals***
 
@@ -416,7 +416,7 @@ knitr::include_graphics("figure/coho-ObsAgeProp-byCU.png")
 
 We assumed an average exploitation rate of 12.5% for all CUs in forward projections, with common interannual variability in exploitation rates due to shared fishery impacts among CUs each year. Interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), with the standard deviation of the beta distribution parameterized from estimated exploitation rates for 1998 - 2016 brood years. The corresponding coefficient of variation (CV) for interannual variability was 0.44.
 
-Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) and variation in which indicator stocks were operational in a given year. As a result, empirically-based estimates of among-CU variability in exploitation rates are not possible. However, there are reasons to expect that exploitation rates to vary among CUs in a given year, including variable mortality in mark-selective fisheries due to variation among CUS in the proportion of hatchery marked fish <!--how is proportion of hatchery fish affect mortality in MSF? --> and differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (cv=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds. Varying assumptions about variability in exploitation among CUs between cv= 0 and 0.44 in forward projections did not impact the distribution of correlations in spawner abundances in the projections (results not shown).  
+Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) and variation in which indicator stocks were operational in a given year. As a result, empirically-based estimates of among-CU variability in exploitation rates are not possible. However, there are reasons to expect that exploitation rates to vary among CUs in a given year, including differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (cv=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds. Varying assumptions about variability in exploitation among CUs between cv= 0 and 0.44 in forward projections did not impact the distribution of correlations in spawner abundances in the projections (results not shown).  
 
 
 \begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
@@ -426,14 +426,14 @@ Parameter & Value & Source \\
 \hline
 \endhead
 \hline
- Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix \@ref(coho-Appendix)) & Drawn from joint posterior from MCMC model fit to 1998-2016 brood years
+ Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix E) & Drawn from joint posterior from MCMC model fit to 1998-2016 brood years
 \\\\
 
 Smolt-to-adult marine survival rate (all CUs) & Drawn from Lognormal(-4.83, 1.21), bound between [-9.21, -3.32]
  & Estimated from annual marine survival rate estimates from brood years 1998 - 2016, with bounds set at lowest and highest observations
 \\\\  
 
- Among-CU variability in marine survival coefficient $\gamma$  &  $\sigma_{\gamma}$ = 0 (all CUs the same) & Assumed value when fitting models. Varied between 0 and 0.09 in sensitivity analyses, where upper limit of 0.09 is the standard deviation of the estimated marginal posterior distribution for $\gamma$. 
+ Among-CU variability in marine survival coefficient $\gamma$  &  $\sigma_{\gamma}$ = 0 (all CUs the same) & Assumed value when fitting models. Varied between 0 and 0.09 in sensitivity analyses
 \\\\
 
  Ave age proportions at maturity (ages 3, 4) &  MiddleFR, LThomp, SThomp = (0.86,0.14) , FRCanyon = (0.87, 0.13), NThomp = (0.88, 0.12) & Estimated from time-series of ppns of recruits at age
@@ -466,9 +466,9 @@ Extirpation threshold &  2 & Mating constraint \\
 
 ***LRP Estimates***
 
-Aggregate abundance-based LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used to derive the LRP (Figure \@ref:fig(coho-projLRPCurve-byOM), Table \@ref(tab:projectedLRPs2020)). This result is similar to the logistic regression-based LRPs, where LRPs derived using $S_{gen}$ estimates from the Ricker_priorCap model were higher due to higher $S_{gen}$ values.  The projected curve showing the probability of all CUs being above $S_{gen}$ was more gradual and further to the right for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref:fig(coho-projLRPCurve-byOM). When projection outputs from both stock recruit model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
+Aggregate abundance-based LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used to derive the LRP (Figure \@ref(fig:coho-projLRPCurveByOM); Table \@ref(tab:projectedLRPs2020)). This result is similar to the logistic regression-based LRPs, where LRPs derived using $S_{gen}$ estimates from the Ricker_priorCap model were higher due to higher $S_{gen}$ values.  The projected curve showing the probability of all CUs being above $S_{gen}$ was more gradual and further to the right for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref(fig:coho-projLRPCurveByOM)). When projection outputs from both stock recruit model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
 
-```{r coho-projLRPCurve-byOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > lower benchmarks. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+```{r coho-projLRPCurveByOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > lower benchmarks. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
 ```
 
@@ -494,6 +494,7 @@ Generational average spawning abundance (based on a 3-year geometric mean) remai
 knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 ```
 
+\linebreak
 
 ***Sensitivity Analyses***  
 
