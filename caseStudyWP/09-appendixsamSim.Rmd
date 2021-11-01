@@ -150,7 +150,6 @@ When Recruitment data is not available, the 'nPrime' is set to 10 times the maxi
 
 The spawner recruitment parameters can be altered according to the user defined scenarios, e.g. to simulate regime shifts. `samSim` includes options to adjust the productivity parameter, $\alpha_{i}$, the capacity parameter $\beta_{i}$, and the recruitment standard deviations, $\sigma_{i}$. The LRP case studies do not include adjustments or changes in productivity over time, therefore we will not describe the parameter adjustment options in this appendix. Recruitment is assumed to be correlated between the CUs, the covariance matrix is calculated based on the variance-covariance matrix, which is calculated based on CU-specific recruitment variances, and the correlation matrix specified in an input files.   
  
-
 Once stock-recruitment parameters are defined, the number of spawners is initialized. The number of spawners is set at equilibrium for the first 6 years and then calculated based on recruitment and exploitation rates in the previous years (Equations \@ref(eq:Seqinit) and \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set to zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
 
 \begin{align}
@@ -169,7 +168,7 @@ Seq_{i} = \alpha_{i}/\beta_{i}
 
 
 
-The age structure of the returns is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{p}_{i,j}$ and the CU-specific variability parameter $\tau_i$ [@schnute_influence_1995]  (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. Calendar year recruitment is only calculated after the sixth year of the priming phase. It is the product of the brood year recruitment and the age structure of the returns (Equation \@ref(eq:RY).
+The age structure of the returns is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{p}_{i,j}$ and the CU-specific variability parameter $\tau_i$ [@schnuteInfluenceErrorPopulation1995]  (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. Calendar year recruitment is only calculated after the sixth year of the priming phase. It is the product of the brood year recruitment and the age structure of the returns (Equation \@ref(eq:RY).
 
 \begin{align}
   p_{y,i,j} \sim \text{Multivariate Logistic}(\overline{p}_{i,j},\tau_{i}) \\
@@ -254,7 +253,7 @@ Recruitment estimates produced for either formulation of the Ricker model are ca
 In the priming loop, the management quantities and benchmarks are only calculated in the last two generations. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". `samSim` has the capability of estimating management quantities and benchmarks on a yearly basis, relying on the data obtained from the beginning of the time series to the current simulation year. However for the purpose of the LRP study cases, time invariant management benchmarks were used. For this reason we omit the time index, $y$, from the notation used for the management quantities. 
 
  
-If the "stockRecruit" option is used, the management quantities are $Smsy_{y,i}$ and $Sgen_{y,i}$ calculated based on the stock-recruitment parameters. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerell_explicit_2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holt_indicators_2009. The Lower management benchmark is set to $Sgen_{y,i}$ and the upper benchmark is set to 80\% of $Smsy_{y,i}$.
+If the "stockRecruit" option is used, the management quantities are $Smsy_{y,i}$ and $Sgen_{y,i}$ calculated based on the stock-recruitment parameters. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerellExplicitSolutionCalculating2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holtIndicatorsStatusBenchmarks2009. The Lower management benchmark is set to $Sgen_{y,i}$ and the upper benchmark is set to 80\% of $Smsy_{y,i}$.
 
 
 \begin{align}
@@ -302,7 +301,7 @@ Once $\alpha_{i}$ is specified, the true management quantities $Smsy_{i}$ and $S
  
 ### Project observed recruitment
 
-In this step, we compute the observed proportions of returns at age and the observed recruitment for each brood year. The observation error for the proportions of returns at age is given by a multivariate logistic error structure as described by @schnute_influence_1995. Observation error for the proportions of returns at age is not included in the LRP study cases, i.e., the variability parameter, $\varphi$, is set to zero.
+In this step, we compute the observed proportions of returns at age and the observed recruitment for each brood year. The observation error for the proportions of returns at age is given by a multivariate logistic error structure as described by @schnuteInfluenceErrorPopulation1995. Observation error for the proportions of returns at age is not included in the LRP study cases, i.e., the variability parameter, $\varphi$, is set to zero.
 
  
 \begin{align}
