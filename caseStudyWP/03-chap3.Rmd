@@ -93,15 +93,12 @@ The formulations for our two stock recruitment models using the assumption of in
 The base Ricker stock recruit model formulation was:
 
 \begin{equation}
-  R_{i,a,t} = P_{i,a,t-a}S_{i,t-a}e^{log(\alpha_i) + \gamma log(m_{t-1})-\beta_i S_{i,t-a}e^{v_i}}
+  R_{i,a,t} = P_{i,a,t-a}S_{i,t-a}e^{log(\alpha_i) + \gamma log(m_{t-1})-\beta_i S_{i,t-a}e^{v_i}-\sigma^2/2}
    (\#eq:rickerSurv-IM)
 \end{equation}
 \begin{equation}
   v_i \sim Normal(0,\sigma_{v_i})
 \end{equation}
-
-
-TO DO: Need to add lognormal bias correction factor to equations!!!!!!!!!!!!!!!!!
 
 where,
 
@@ -153,16 +150,38 @@ knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
 ```
 
 
+*Calculation of Sgen*  
+
+The inclusion of a marine survival co-variate in all four spawner recuit models means that the realized productivity changes from year to year with changing marine survival. We incorporated this adjustment into our calculations of $S_{gen}$ by first calculating the effective productivity for each CU as:
+
+\begin{equation}
+  log(\alpha'_{i}) = log(\alpha_i) + \gamma log(\overline{m})
+   (\#eq:adjProd)
+\end{equation}
+
+where, $\overline{m}$ is the average marine survival rate over the available time series.  
+
+$S_{MSY}$ was calculated as a function of log($\alpha_i'$) and $\beta_i$ using:
+
+\begin{equation}
+  S_{MSY,i} = 1 - \frac{W(e^1-\alpha'_i)}{\beta_i} 
+   (\#eq:Smsy)
+\end{equation}
+
+where, $W$ represents the Lambert W function [@scheuerellExplicitSolutionCalculating2016]. $S_{gen}$ was then calculated numerically by solving the following equation: 
+
+\begin{equation}
+  S_{MSY} = S_{gen}e^log(\alpha)-\beta_iS_{gen}
+  (\#eq:Sgen)
+\end{equation}
+
+
+
 ## LRP Estimation: Proportion of CUs
 
 ### Methods
 
-We looked at the proportion of CUs that had multi-dimensional rapid status assessments above the red zone to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs assessed as having red status. Both Ricker model formulations described above were used to estimate relative abundance-based benchmarks (lower benchmark \= $S_{gen}$ and upper benchmark \= 0.8$S_{MSY}$) when assessing multi-dimensional rapid status: the base Ricker model and the Ricker_priorCap model. Estimates of $S_{gen}$ and $S_{MSY}$ were made using all data available up to 2020, so our evaluation is not a true retrospective analysis in which only the data available up to each year in a time series are used to estimate status.
-
-<!--CW: This last sentence above is confusing with the full retrospective analysis presented later
-Remove: Estimates of $S_{gen}$ and $S_{MSY}$ were made using all data available up to 2020, so our evaluation is not a true retrospective analysis in which only the data available up to each year in a time series are used to estimate status. 
-CH: I agree, but think we could include the first phrase. e.g., "For this analysis for proportional-based LRPs, estimates of $S_{gen}$ and $S_{MSY}$ were made using all data available up to 2020".
--->
+We looked at the proportion of CUs that had multi-dimensional rapid status assessments above the red zone to determine in which years between 1998 and 2020 the LRP would have been breached. Status was assessed as being below the LRP in years in which one or more CUs assessed as having red status. Both Ricker model formulations described above were used to estimate relative abundance-based benchmarks (lower benchmark \= $S_{gen}$ and upper benchmark \= 0.8$S_{MSY}$) when assessing multi-dimensional rapid status: the base Ricker model and the Ricker_priorCap model. Estimates of $S_{gen}$ and $S_{MSY}$ were made using all data available up to 2020.
 
 For comparison, we also looked at the proportion of CUs that were below $S_{gen}$ in each year and the proportion of CUs that failed to meet the IFCRT distributional target of at least half of all sub-populations within each CU having more than 1000 spawners.  
 
@@ -170,9 +189,14 @@ For comparison, we also looked at the proportion of CUs that were below $S_{gen}
 
 Estimates of $S_{gen}$ based on the Ricker_priorCap model were higher than those based on the base Ricker model for four of the five CUs (Middle Fraser, Lower Thompson, North Thompson, and South Thompson) and were approximately equal for the fifth CU (Fraser Canyon; Appendix ...). As a result, generational average spawning abundances  was more likely to drop below $S_{gen}$ when it was estimated using the Ricker_priorCap. Under the base Ricker model formulation, generational average spawning abundance remained above $S_{gen}$ for all years between 2000 and 2020 (Figure \@ref(fig:coho-CU-multiDim-Ricker)).  In comparison, under the Ricker_priorCap formulation, generational average abundance dropped below $S_{gen}$ in one or more years for Lower Thompson CU (2006), Middle Fraser CU (2006, 2008), and South Thompson CU (2000, 2006, 2007, 2015; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)). As a result, at least one CU had stock status assessed as below $S_{gen}$ for 5 of the 21 years between 2000 and 2020.
 
-When CU status was assessed using the multidimensional scanning tool with lower and upper abundance-based benchmarks based on $S_{gen}$ and 0.8$S_{MSY}$ as inputs, CU status was always assessed as red for years in which the generational average spawning abundance dropped below $S_{gen}$, regardless of which stock recruit model was used to estimate benchmarks (Figures \@ref(fig:coho-CU-multiDim-Ricker), \@ref(fig:coho-CU-multiDim-Ricker-Cap)). This result occurs because according to the  multidimensional decision tree (Figure \@ref(fig:decision-tree), status is derived from abundance-based benchmarks in most years, which means that being below $S_{gen}$ is most often the trigger for a red CU status assessment. An exception occurs in the Fraser Canyon CU in years 2015-2017.  In these years, the generational average of absolute spawning abundance is < 1500 spawners and CU is assigned red status under the first node of the decision tree even though spawning abundances are above $S_{gen}$ (Figure \@ref(fig:decision-tree)). As a result, when multidimensional status was assessed using abundance-based benchmarks estimated from the base Ricker model, a proportion-based LRP for the SMU would have been breached in 3 of 21 years (2015-2017) based on Fraser Canyon spawning abundances dropping below 1500 spawners in theses years <!--CH: I think it's helpful to refer to figure 3.3 here of CUspecific time-series-->.  When multidimensional status was assessed using abundance-based benchmarks from the Ricker-priorCap <!--CH: Ricker_priorCap or Ricker-priorCap?--> model, a proportion-based LRP would have been breached in 7 of 21 years (2000, 2006-2008, 2015-2017) based on a combination of spawning abundances < 1500 in the Fraser Canyon CU and spawning abundances < $S_{gen}$ in other CUs <!--CH; refer to figure 3.4 here-->. Multidimensional status based on the rapid screening tool was above red for all CUs in the most recent year, 2020, indicating that the SMU is currently above a proportion-based LRP.
+When CU status was assessed using the multidimensional scanning tool with lower and upper abundance-based benchmarks based on $S_{gen}$ and 0.8$S_{MSY}$ as inputs, CU status was always assessed as red for years in which the generational average spawning abundance dropped below $S_{gen}$, regardless of which stock recruit model was used to estimate benchmarks (Figures \@ref(fig:coho-CU-multiDim-Ricker), \@ref(fig:coho-CU-multiDim-Ricker-Cap)). This result occurs because according to the  multidimensional decision tree (Figure \@ref(fig:decision-tree), status is derived from abundance-based benchmarks in most years, which means that being below $S_{gen}$ is most often the trigger for a red CU status assessment. An exception occurs in the Fraser Canyon CU in years 2015-2017.  In these years, the generational average of absolute spawning abundance is < 1500 spawners and CU is assigned red status under the first node of the decision tree even though spawning abundances are above $S_{gen}$ (Figure \@ref(fig:decision-tree)). As a result, when multidimensional status was assessed using abundance-based benchmarks estimated from the base Ricker model, a proportion-based LRP for the SMU would have been breached in 3 of 21 years (2015-2017) based on Fraser Canyon spawning abundances dropping below 1500 spawners in theses years (Figure \@ref(fig:coho-CU-multiDim-Ricker)). When multidimensional status was assessed using abundance-based benchmarks from the Ricker_priorCap model, a proportion-based LRP would have been breached in 7 of 21 years (2000, 2006-2008, 2015-2017) based on a combination of spawning abundances < 1500 in the Fraser Canyon CU and spawning abundances < $S_{gen}$ in other CUs (Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)). Multidimensional status based on the rapid screening tool was above red for all CUs in the most recent year, 2020, indicating that the SMU is currently above a proportion-based LRP.
 
-<!--CH suggest adding: "Overall, the proportion of CUs with red status differed between the multidimensional approach and the single metric, spawner abundances relative to lower benchmarks in only 2 or 3 of 21 years, depending on the Ricker model formulation. The proportion of CUs with red status was more sensitive to Ricker model formulation than to if the multi-dimensional or single metric approach was applied." Is this all true? -->
+Overall, the proportion of CUs with red status differed between the multidimensional approach and the single metric approach of looking at status relative to lower benchmarks in only 2 or 3 of 21 years, depending on the Ricker model formulation. 
+
+<!--
+CH comment: The proportion of CUs with red status was more sensitive to Ricker model formulation than to if the multi-dimensional or single metric approach was applied." Is this all true? 
+KH response: I don't understand this last bit right now.
+-->
 
 
 ```{r coho-CU-multiDim-Ricker, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Grey dots indicate years in which all CUs had multidimensional rapid status assessments above red when Sgen was estimated using the Ricker model, while red dots indicate years in which one or more CUs had multi-dimensional status assessments in the red zone, which would trigger a breach of the LRP. Solid orange lines show estimates of Sgen from the Ricker model for comparison.", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -191,7 +215,7 @@ knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 
 
 ## LRP Estimation: Aggregate Abundance Logistic Regression LRPs 
-### Methods
+### Methods{#logistic}
 
 We evaluated aggregate abundance-based LRPs derived using logistic regressions with two of the Interior Fraser Coho benchmarkS considered<!--Is it too much to consider the multidimensional approach too? It's hard to justify why we excluded it-->: $S_{gen}$ and the IFCRT-distributional target. Because two different spawner recuit models were used to estimate $S_{gen}$, we distinguish these models as 'Sgen:LRP' and 'Sgen_priorCap:LRP' for the Ricker and Ricker_priorCap models, respectively. See Section \@ref(logisticMethods) for an overview of the approach used to calculate aggregate abundance-based LRPs using logistic regression.
 
@@ -204,10 +228,10 @@ When estimating logistic regression LRPs using $S_{gen}$, we used an integrated 
 
 We used retrospective analyses to examine the effect of time series length on logistic regression-based LRP estimates. Retrospective analyses were restricted to the most recent 6 years (2015-2020) because logistic model fits prior to 2015 were unable to converge on an LRP estimate.  For each year between 2015 and 2020, we used data only available up to that year to calculate LRPs and associated confidence intervals.
 
-To examine the effect of missing CUs on retrospective LRP estimates, we calculated LRPs using data from only a subset of the five Interior Fraser Coho CUs. We limited our analysis to missing data from either one or two CUs so that we had at least three CUs of available data when calculating the proportion of CUs above their benchmarks. For each missing data case, we calculated SMU status as
+To examine the effect of missing CUs on retrospective LRP estimates, we calculated LRPs using data from only a subset of the five Interior Fraser Coho CUs. We limited our analysis to missing data from either one or two CUs so that we had at least three CUs of available data when calculating the proportion of CUs above their benchmarks. For each missing data case, we calculated SMU aggregate status as
 
 \begin{equation}
-  Status_t = \frac{\sum_{i}^{nCUs} S_{i,t}}{LRP'_t}
+  AggStatus_t = \frac{\sum_{i}^{nCUs} S_{i,t}}{LRP'_t}
    (\#eq:status)
 \end{equation}
 
@@ -253,15 +277,16 @@ knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 | 50%         | 15,395          | 25,677            | 17,515
 |             | (11,187-19,603) | (20,683-30,672)   | (9,695-25,336)
 +-------------+-----------------+-------------------+-----------------+             
-| 66%         | 16,685          | 27,858            | 21,396
-|             | (12,454-20,916) | (21,674-34,042)   | (13,418-29,375)
+| 66%         | 16,685          | 26,424            | 21,396
+|             | (12,454-20,916) | (20,478-32,369)   | (13,418-29,375)
 +-------------+-----------------+-------------------+-----------------+  
-| 90%         | 19,668          | 32,901            | 30,372
-|             | (13,752-25,584) | (22,257-43,544)   | (15,711-45,033)
+| 90%         | 19,668          | 31,969            | 30,372
+|             | (13,752-25,584) | (21,414-42,523)   | (15,711-45,033)
 +-------------+-----------------+-------------------+-----------------+
-| 99%         | 24,331          | 40,784            | 44,403
-|             | (13,924-34,738) | (21,957-59,610)   | (15,102-73,703)
+| 99%         | 24,331          | 40,637            | 44,403
+|             | (13,924-34,738) | (21,288-59,936)   | (15,102-73,703)
 +-------------+-----------------+-------------------+-----------------+
+
 
 Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.
 
@@ -312,20 +337,15 @@ knitr::include_graphics("figure/coho_LRP_compareRetro.png")
 ```
 
 
-When Sgen:LRP model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). Four of the five possible combinations of four CUs had estimates in 2017, while only three had estimates in 2019 and 2020. For scenarios in which LRP estimates were possible, status estimates were often close to the estimate obtained when all 5 CUs were used, and always fell within the 95% confidence interval of the full data estimate. The Sgen:LRP model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2019 and 2020 when only 4 out of the 10 possible combinations had estimates. For scenarios that were able to converge, status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2018 had a status estimate that fell outside of the 95% confidence interval of the full data estimate. 
+When Sgen:LRP model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). Four of the five possible combinations of four CUs had estimates in 2017, while only three had estimates in 2019 and 2020. For scenarios in which LRP estimates were possible, estimates of aggregate status (Equation \@ref(eq:status)) were often close to the estimate obtained when all 5 CUs were used, and always fell within the 95% confidence interval of the full data estimate. The Sgen:LRP model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2019 and 2020 when only 4 out of the 10 possible combinations had estimates. For scenarios that were able to converge, aggregate status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2018 had a status estimate that fell outside of the 95% confidence interval of the full data estimate. 
 
-<!-- CW: the figure below is difficult to read, may help to make dots bigger and lines thicker. And make the figure bigger?
-
-Also, did you define the Aggregate status in the y axis? I am not sure what that is. 
---> 
- 
-```{r coho-IM-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:LRP  model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs.  Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios.", warning=FALSE, echo=FALSE, out.width = '60%', out.height = '30%', fig.align="center"}
+```{r coho-IM-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen:LRP  model under different scenarios about missing CUs, where aggregate status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs.  Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios.", warning=FALSE, echo=FALSE, out.width = '80%', out.height = '60%', fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurv-50.png")
 ```
 
-When the Sgen_prioCap:LRP model was applied to missing data scenarios in which four out of five CUs had data, status estimates were only available for two of the five CU combinations in all 6 retrospective years (Figure \@ref(fig:coho-IMCap-missingCUs)). For the two scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only 3 CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from 3-CU scenarios fell outside of the 95% confidence interval for the full data case.      
+When the Sgen_priorCap:LRP model was applied to missing data scenarios in which four out of five CUs had data, status estimates were only available for two of the five CU combinations in all 6 retrospective years (Figure \@ref(fig:coho-IMCap-missingCUs)). For the two scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only 3 CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from 3-CU scenarios fell outside of the 95% confidence interval for the full data case.      
 
-```{r coho-IMCap-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen\\_priorCap:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
+```{r coho-IMCap-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen\\_priorCap:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '80%', fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurvCap-50.png")
 ```
  <!--
@@ -337,7 +357,7 @@ Is this result generalizble? i.e., Does this result indicate that missing two or
 LRPs based on the IFCRT-distributional benchmark could be estimated for all 4-CU missing data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five 4-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for South Thompson CU being an influential observation that has a large impact on the shape of the fit model. For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the 4 CU or full data scenarios, and showed high variability among scenarios in estimated status.    
 
 
-```{r coho-distributional-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Dist:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+```{r coho-distributional-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Dist:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-SPopAbundThreshST-50.png")
 ```
 
