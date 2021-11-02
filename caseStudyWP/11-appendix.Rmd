@@ -6,7 +6,7 @@ output:
 ---
 -->
 
-# Sensitivity of Projection-Based LRPs to Exploitation Rates
+# Sensitivity of Projection-Based LRPs to Exploitation Rates{#app:ERsensitivity-appendix}
 
 
 To explain the initially counter-intuitive result of sensitivity of projection based LRPs to exploitation rates, we ran an additional analysis where the spawner-recruitment parameters, productivity (log($alpha$)) and spawners at replacement, $S_{REP}$ (log($alpha$)/$beta$) were either varied or kept constant over inlets and Monte Carlo trials. 
