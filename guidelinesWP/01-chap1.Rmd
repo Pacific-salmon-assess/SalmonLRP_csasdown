@@ -83,10 +83,10 @@ In terms of salmonids, @portleyLimitReferencePoints2014 reviewed the use of limi
 - required under FA to trigger rebuilding
 - BUT ,also can form part of management procedure framework. Kronlund et al. 2018 p. 8: "Limit reference points in isolation are not useful until they are embedded into fully specified measurable objectives. For example, a conservation goal might be to avoid low biomass levels where stock productivity is compromised to the point of serious harm. This goal could be translated to a measurable objective stated as “avoid spawning biomass levels lower than a threshold biomass BLRP with 95% probability over the next 20 years.” This example illustrates a fully specified measurable objective that has three components:
 1. An outcome of interest such as a limit to be avoided or a target to be achieved, e.g., avoid spawning biomass levels less than BLRP;
-2. A desired probability of achieving the outcome in (1), e.g., 95% probability; and
+2. A desired probability of achieving the outcome in (1), e.g., 95$\%$ probability; and
 3. A time-frame over which to measure performance with respect to achieving (1) and (2), e.g., 20 years"
 -add some text from Kronlund et al. 2021 paper
-- example of this in Groundfish MP framework. When used within MP framwork. LRP may not need to be explicitly defined, as it is implicit within the framework (quote them on this point). One advantage of this approach is that no need to define single best assessment model. Instead, a range of plausible OMs can be included.
+- example of this in Groundfish MP framework. When used within MP framework. LRP may not need to be explicitly defined, as it is implicit within the framework (quote them on this point). One advantage of this approach is that no need to define single best assessment model. Instead, a range of plausible OMs can be included.
 
 - to be consistent with DFO PA Framework 
 
@@ -121,7 +121,7 @@ CH response
 The {#rmd-basics} text after the chapter declaration will allow us to link throughout the document back to the beginning of Chapter 1.  These labels will automatically be generated (if not specified) by changing the spaces to hyphens and capital letters to lowercase.  Look for the reference to this label at the beginning of Chapter 2.
 -->
  
-\  
+ 
 
 ```{r load_pkgs, message=FALSE, echo=FALSE}
 # List of packages required for this analysis
