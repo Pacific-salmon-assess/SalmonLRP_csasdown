@@ -88,8 +88,7 @@ If aggregate-abundance based LRPs are not required, assessment of the SMU would 
 
 Aggregate-abundance based LRPs are defined to be consistent with the WSP objective of maintaining biodiversity at the scale of CUs. First, an acceptable probability of achieving the proportion-based LRP (i.e., all CUs above red status) is identified. We provide a range of probabilities and their definitions adapted from likelihood scale used by the International Panel on Climate Change (IPCC ref, to be added), instead of specifying a single probability. DFO's Guidelines for the Implementation of Fish Stock Provisions states “Unless otherwise defined in stock-specific precautionary approach frameworks, the LRP should be considered breached if the terminal year stock status indicator is estimated to be at or below the LRP with a greater than 50$\%$ probability or if the projected stock status indicator falls below the LRP with a greater than 50$\%$ probability under a zero catch scenario in a 1 year projection” [@dfoScienceGuidelinesSupport2021]. This definition of breaching an LRP suggests a risk neutral approach to identifying serious harm, whereby risks may be accounted for directly and explicitly in harvest control rules that trade-off multiple objectives. In our case studies, we have focused on aggregate-abundances with 50$\%$ probability of achieving proportion-based LRPs.
 
-<!-- CH: not sure why this latex table isn't working?. Catarina can you see what I've done wrong? I've commented it out for now-->
-<!--
+
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{3.7cm} p{6.3cm}}
 \caption{Likelihood definitions adapted from the International Panel on Climate Change.}\\
@@ -104,15 +103,64 @@ $>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
 \hline
 (\#tab:LikelihoodsIPCC)
 \end{longtable}
--->
-
-<!--CH: the next paragraph can be adjusted if Catarina is able to run logistic regression with multi-dimenstional asssessment for IFR coho. However, do we need to do the same thing for ISC chum & again show that the diagnostics don't work for the logistic regression based on the multi-dimenstional CU statuses?-->
-For the demonstration purposes, we have simplified the CU-status assessments required in this step to abundances greater than lower benchmarks for our case studies (with one exception for Interior Fraser Coho Salmon, see Holt et al in prep.). Future analyses could include status derived in the Rapid Multidimensional Scanner Tool, though we do not anticipate significant changes to our applications on case studies because status from the Rapid Multidimensional Scanner was either identical or very similar to status derived from the single metric, abundances relative to lower benchmarks.
 
 
-If yes, identity acceptable probability, 50$\%$ or higher of  all CUs1 >  lower benchmarks to avoid serious harm to the SMU. 
-1 100$\%$ or the proportion identified in step 4
 
+### Choose among aggregate-abundance based LRPs (Step 9)
+
+Guidelines for choosing among two types of aggregate-abundance based LRPs are described here: empirical logistic-regression based LRPs and projection-based LRPs that use historical data or projected data, respectively to identify the relationship between aggregate abundances and the probability that all CUs are above red status. These guidelines are derived from the validity of assumptions that each method is based on. If assumptions are not met for either aggregate-abundance LRP method, then developing aggregate-abundance based LRPs that are aligned with the WSP may not be possible for this SMU. See Section on Future Research <!--CH: insertlink--> for approaches for developing and evaluating management procedures for these SMUs that account for CU-level statuses.
+
+
+
+#### Empirical logistic-regression based LRPs
+
+Empirical logistic-regression based LRPs are derived from historical time-series of proportion of CUs above red status, indicated by either the multidimensional status or a single metric. 
+<!--CH: the next few sentences can be adjusted if Catarina is able to run logistic regression with multi-dimenstional asssessment for IFR coho. However, do we need to do the same thing for ISC chum & again show that the diagnostics don't work for the logistic regression based on the multi-dimenstional CU statuses?-->
+For the demonstration purposes, we have applied the single metric, abundances greater than lower benchmarks for our case studies (with one exception for Interior Fraser Coho Salmon where distribution of spawning is also considered, see Holt et al in prep.). Future analyses could include status derived in the Rapid Multidimensional Scanner Tool, though we do not anticipate significant changes to our applications on case studies because status from the Rapid Multidimensional Scanner was either identical or very similar to status derived from abundances relative to the lower benchmark.
+
+We suggest that LRPs based on logistic regressions may be appropriate when the following criteria are met:
+
+- As required for proportional-based benchmarks, data-deficient CUs meet criteria outlined in Step 3 such that their status can be represented by CUs with data. 
+
+- Time-series of the proportion of CUs above the lower benchmark (or above red status) contain contrast such that all CUs are above their lower benchmark (or red status) in at least one year and at least 1 CU is below its lower benchmark (or has red status) in at least one year.
+
+- There is a significant positive relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark (or red status) without influential outliers, which is supported by model diagnostics described in Holt et al. in prep. This relationship is more likely to be positive when pairwise correlations in spawner abundances are strong and positive among CUs. For example, for Interior Fraser Coho, goodness-of-fit diagnostics identified a significant relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmarks (p<0.01) and the average pairwise spawner correlations among CUs was relatively high, 0.43 (Holt et al. in prep). In contrast, for Inside South Coast Chum, the same Goodness-of-Fit diagnostic was not statistically significant (p>0.05) and average pairwise spawner correlations was relatively weak, <0.13."  <!--CH: Check exact cor values-->
+
+- Residuals for logistic regression model fit are independent, i.e., not temporally autocorrelated
+<!--CH comment: KH and CW, I'd especially like your thoughts on the next two-->
+- Environmental drivers and threats among CUs have remained stable over the available time-series, or have changed in the same way across CUs such that covariance in population dynamics among CUs is likely to have remained stable over time, and hence the relationship between aggregate abundances and log-odds of all CUs being above lower benchmarks is also likely to have remained stable. 
+
+- For logistic-regression models based on CU-level abundance-based metrics, CU-level population dyanmics have either not changed or they have changed in a reversible way such that benchmarks do not vary over time. Reversible changes in population productivity or capacity may warrant management actions to recover the CU to the benchmarks based on historical data. 
+
+LRPs based on logistic regressions may not be appropriate when:
+
+- Data-deficient CUs do not meet criteria outlined in Step 3 such that their status cannot be represented by CUs with data
+
+- Time-series of the proportion of CUs above the lower benchmark (or above red status) are equal to 100% for all years, or less than 100% for all years
+
+- The relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark (or red status) is not statistically significant or contains influential outliers. In other words, model diagnostics do not support the use of logistic regression. The relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark is more likely to be insignificant when pairwise correlations in spawner abundances are weak or negative among CUs.
+
+- Residuals for logistic regression model fit are temporally autocorrelated such that status in one year depends on the status in the previous year
+
+- Threats and/or environmental drivers have changed  such that CU-level benchmarks estimated from historical data no longer meaningful, and there is no expectation that these changes will be reverted naturally of achieved through management
+
+<!--CH comment: KH and CW, I'd also really like your thoughts on the next two, mirroring the last two in the subsection above-->
+- Environmental drivers and threats among CUs have changed over the available time-series such that covariance in population dynamics among CUs is likely to have changed. 
+
+- For logistic-regression models based on CU-level abundance-based metrics, environmental drivers and/or threats have changed CU-level population dynamics and there is no expectation that these changes will be reverted naturally or achieved through management, such that it may be appropriate to consider time-varying benchmarks. 
+
+#### Projection based LRPs
+
+Projection-based LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above red status indicated by a single metric, spawner abundances relative to a lower benchmark. We did not consider CU-status derived from the Rapid Multidimensional Scanner Tool for projection-based LRPs because the projection model identifies long-term equilibrium aggreagate abundances assocoatd with specified probaiblities of a lcomponent CUs being above red-dataus and is not structured to reflect time trends. Time trends can be assessed in simulation models that evalaute management procedures, as in MSEs, independent of this model for identifying projection-based LRPs.<!-- we should mention early in this paper, and in the other paper that projetion-based LRP is an equilibrium approach-->
+
+
+
+- CU-specific stock assessment models have been developed and peer reviewed, 
+- CU-specific parameters are available for representative CUs (see step 3)
+- Plausible bounds can be placed on uncertain parameters (e.g., productivity and capacity), including those that may have changed over the time-series to represent a best-estimate of current conditions. 
+- Similar to logistic-regression based LRP, pairwise correlations in spawner abundances among CUs are positive and strong (e.g., > 0.4 as a general rule of thumb)
+
+<!--
 
 ### OLD TEXT BELOW
 
@@ -218,32 +266,5 @@ old notes
  @zhangAccountingNonstationaryStock2021 illustrates the effects of time-varying recruitment parameters on MSY-based reference points for iteroparous fish stocks (cod and plaice). They highlight that more precautionary benchmarks are necessary to account for the parameter uncertainty in highly dynamic ecosystems. However, they observed that effects on reference points depend on the magnitude and structure of the stochasticity in stock-recruitment relationships, therefore they recommend case specific simulation studies be performed to identify explicit impacts on MSY-based reference points.
 
 -->
-
-
-
-## Guidance on minimum number of years to estimate aggregate abundance LRPs
-
--	Synthesize retrospective analyses and simulation evaluations from 3 case studies described in Working Paper 2
-
-## Guidance on developing aggregate abundance LRPs with missing CU-level data
-
-Questions to provide guidance on:
--	When is infilling of escapement data appropriate?  
--	Synthesize retrospective evaluations and prospective evaluation for Working Paper 2. How do LRPs (and 95$\%$ CIs) vary with number of CUs (proportion of total within the SMU)?
--	What if data are only available for a portion of CUs within an MU? Under what conditions are those CUs representative of the MU? When is the MU considered data deficient? Are sampled CUs representative of other CUs?  Are their different threats within the SMU acting on different CUs? Is there any evidence for different CUs/populations responding differently to common threats?
--	What is the shape of the trade-off between number of years and number of CUs?
-
-## Enhanced stocks
-
-Questions to provide guidance on:
-
--	Should highly enhanced systems always be excluded?  How is highly enhanced defined? (consider PNI groupings based on Withler et al. 2018, and WSP CK groupings, Brown et al. 2014 in revision).
-
-## Defining SMUs where LRPs cannot be developed
-
--	Under which conditions is a SMU considered data-deficient?
-
-## Process for defining LRPs and assessing status against LRP
-- recommendation for the Science-based process (e.g., within CSAS) to develop and review LRPs for individual application, and then evaluate status against the LRP. That process would include local expertise to resolve issues of spatial resolution (CU level or other), type of LRP to be used, model structure (if model-based LRPs are considered), etc..
 
 

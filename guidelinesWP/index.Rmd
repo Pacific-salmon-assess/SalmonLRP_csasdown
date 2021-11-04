@@ -36,7 +36,8 @@ knit: bookdown::render_book
 link-citations: true
 bibliography: bib/refs.bib
 # Any extra LaTeX code for the header:
-# header-includes:
+header-includes:
+  - \usepackage{amsmath}
 # - \usepackage{tikz}
 ---
 
