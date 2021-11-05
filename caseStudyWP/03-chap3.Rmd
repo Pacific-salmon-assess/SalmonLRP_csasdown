@@ -67,7 +67,7 @@ We consider three alternative ways to characterize CU status when developing LRP
 3) Distribution of spawning abundance relative to distributional targets developed by the IFCRT
 
 <!--CH comment: I've suggested the text above to replace the first two sentences below. The third sentence could be revised to, "For aggregate-abundance based methods, both second and third approaches are applied". However, if we're applying the third approach outside of a fully integrated assessment (e.g., in logisitic-regression LRP), why can't we apply the first approach?. I think only the 2nd approach is used for projection-based LRPS, correct? -->
-The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(#rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
+The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
 
 The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of $S_{gen}$, where CU status is considered poor when abundance drops below $S_{gen}$. The value of $S_{gen}$ represents the number of spawners required to recover to $S_{MSY}$ (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holt_indicators_2009]. $S_{gen}$ is one of several benchmarks available for assigning multidimensional CU status in WSP Integrated Status Assessments; it represents a lower benchmark between red and amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015].    
 
@@ -222,6 +222,18 @@ When estimating logistic regression LRPs using $S_{gen}$, we used an integrated 
 
 (ii)	A logistic regression model fit to aggregated data to estimate the LRP as the aggregate abundance that has historically been associated with a specified probability of all CUs being above Sgen (Equations \@ref(eq:logistic) - \@ref(eq:logisticLRP))
 
+<!--
+CW: Comments on logistic regression-based LRP based on multi-dimensinal status -- 
+Not sure if we want to introduce this here. Or even if  we want to exclude the multidimensional status result. I think it may be unnecessary to include the plots of the poor fitting results (but these could be included in an appendix, if you think it would be beneficial, perhaps with the chum fits as well?). 
+
+
+
+We also evaluated the logistic regression-based LRP based on the results from the multidimensional rapid status assessment tool, however a couple points led to the exclusion of this method. 
+
+First, the multidimensional rapid status assessment tool relies on generational mean to assess status of individual CU against benchmarks. We found that considering the generation mean as an indicator of aggregate abundance introduces considerable autocorrelation in the abundance time series which is a direct violation of the logistic regression assumptions. 
+Second, the multidimensional rapid status assessment tool includes absolute abundance thresholds (e.g. generational mean should be above 1500 fish) that are not proportional to the size of a CU. These absolute benchmarks introduce a disconnect between the SMU abundance and CU status, even when there is high correlation between CUs. For example, a small CU may be above its specific Sgen but below the 1500 fish absolute threshold, this can lead to a red LRP status despite higher aggregate abundances. This disconnect was observed in preliminary exploration of logistic regression-based LRPs based on the multidimensional rapid status assessments results for the IF coho study case.   
+
+-->
 
 ***Retrospective Analysis***
 
