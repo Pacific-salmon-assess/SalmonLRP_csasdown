@@ -16,7 +16,8 @@ Third, estimate of LRPs should be estimated in a statistically integrated way wh
 
 
 Our intention is to provide a variety of LRPs applicable for a range of data quality and data types. 
-Although for other marine fish species, LRPs are typically estimated as a minimum level of spawning biomass that should not be breached, or a fishing mortality rate that should not be exceeded (Kronlund et al. 2018), LRPs along alternative metrics that incorporate trends in abundances and distribution of spawning are considered here to be consistent with assessments under the WSP. 
+Although for other marine fish species, LRPs are typically estimated as a minimum level of spawning biomass that should not be breached, or a fishing mortality rate that should not be exceeded (Kronlund et al. 2018), LRPs along alternative metrics that incorporate trends in abundances and distribution of spawning are considered here to be consistent with assessments under the WSP. Our goals is to provide overall guidelines on LRP development while providing flexibility in application of these methods due to differences in local biological characteristics, data qualities and data quantities, among other factors.
+
 
 Furthermore, DFO's PA Framework identifies additional metrics such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition.”
 
@@ -122,7 +123,7 @@ If each of the component CUs of a SMU is above the red/amber benchmark and thus 
 -	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
 
 ### Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)
-
+- equilibrium approach that identifies emergent properties of the aggregate given assumptions about underlying population dynamics.
 -	Description of projected LRP approach, with illustrative figures, equations, etc
 -	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
 -	Develop LRPs from projections at specific proportions instead of logistic regression

@@ -13,11 +13,12 @@ Should highlight the identification of questions / outstanding guidance that wer
 
 - We found that the projecton based LRP values were dependant on the long term exploitation rate average. Higher values of exploitation rates resulted in higher abundance LRPs. Future research could use this feature of the projection tool to identify the harvest rates that would result in aggregate LRP values that are lower than the past observed aggregate abundances. 
 
+
+When applying methods to specific case studies, we recommend that aggregate-abundance based LRPs consider major structural uncertainties either through sensitivity analyses or model ensemble approaches. These analyses can answer the questions, how sensitive are aggregate-abundance based benchmarks to key model uncertainties, including those related to time-varying parameters, observation errors, and covariance in population dynamics and vulnerability to harvest. In addition, simulation evaluation be used to assess the robustness of LRPs to violating assumptions given underlying known statuses. Simulation evaluation could further be used to assess the frequency of updates to LRPs required to achieve objectives given underlying changes in model parameters and structure. <!--CH: observation errors in CU-status are relevant for logistic-regression LRPs as they might inflate noise in the LR, and they are relevant to the projection-based LRPs in the noise in the spawner and recruitment data-->
+
+
 ## Extra text on R MARKDOWN BASICS: IGNORE {#rmd-basics}
 
-Here is a brief introduction into using _R Markdown_. _Markdown_ is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. _R Markdown_ provides the flexibility of _Markdown_ with the implementation of **R** input and output.  For more details on using _R Markdown_ see <http://rmarkdown.rstudio.com>.
-
-Be careful with your spacing in _Markdown_ documents.  While whitespace largely is ignored, it does at times give _Markdown_ signals as to how to proceed.  As a habit, try to keep everything left aligned whenever possible, especially as you type a new paragraph.  In other words, there is no need to indent basic text in the Rmd document (in fact, it might cause your text to do funny things if you do).
 
 ## LISTS
 
@@ -48,26 +49,6 @@ To create sublists, just indent the values a bit (at least three spaces) and mak
          1. Item 3bv1
          1. Item 3bv2
 
-## LINE BREAKS
-
-Make sure to add white space between lines if you'd like to start a new paragraph.  Look at what happens below in the outputted document if you don't:
-
-Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
-This should be a new paragraph.
-
-*Now for the correct way:*
-
-Here is the first sentence.  Here is another sentence.  Here is the last sentence to end the paragraph.
-
-This should be a new paragraph.
-
-## R CHUNKS
-
-When you click the **Knit** button above a document will be generated that includes both content as well as the output of any embedded **R** code chunks within the document. You can embed an **R** code chunk like this (`cars` is a built-in **R** dataset):
-
-```{r cars2}
-summary(cars)
-```
 ## INLINE CODE
 
 If you'd like to put the results of your analysis directly into your discussion, add inline code like this:
@@ -86,13 +67,6 @@ Note the use of `>` here, which signifies a quotation environment that will be i
 
 As you see with `$2 \pi$` above, mathematics can be added by surrounding the mathematical text with dollar signs.  More examples of this are in [Mathematics and Science] if you uncomment the code in [Math].
 
-## INCLUDING PLOTS
-
-You can also embed plots.  For example, here is a way to use the base **R** graphics package to produce a plot using the built-in `pressure` dataset:
-```{r pressure2, echo=FALSE, cache=TRUE}
-plot(pressure)
-```
-Note that the `echo=FALSE` parameter was added to the code chunk to prevent printing of the **R** code that generated the plot.  There are plenty of other ways to add chunk options.  More information is available at <http://yihui.name/knitr/options/>.
 
 Another useful chunk option is the setting of `cache=TRUE` as you see here.  If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance.  Later in this file, you'll see a way to reference plots created in **R** or external figures.
 
