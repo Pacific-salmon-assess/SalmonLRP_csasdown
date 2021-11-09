@@ -67,7 +67,7 @@ We consider three alternative ways to characterize CU status when developing LRP
 3) Distribution of spawning abundance relative to distributional targets developed by the IFCRT
 
 <!--CH comment: I've suggested the text above to replace the first two sentences below. The third sentence could be revised to, "For aggregate-abundance based methods, both second and third approaches are applied". However, if we're applying the third approach outside of a fully integrated assessment (e.g., in logisitic-regression LRP), why can't we apply the first approach?. I think only the 2nd approach is used for projection-based LRPS, correct? -->
-The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(#rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
+The first approach uses the multidimensional rapid scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)). This method is used when developing proportion-based LRPs. In comparison, both the second and third approaches are primarily used when developing aggregate abundance-based LRPs. 
 
 The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of $S_{gen}$, where CU status is considered poor when abundance drops below $S_{gen}$. The value of $S_{gen}$ represents the number of spawners required to recover to $S_{MSY}$ (spawners maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holt_indicators_2009]. $S_{gen}$ is one of several benchmarks available for assigning multidimensional CU status in WSP Integrated Status Assessments; it represents a lower benchmark between red and amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015].    
 
@@ -216,12 +216,22 @@ knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 
 We evaluated aggregate abundance-based LRPs derived using logistic regressions with two of the Interior Fraser Coho benchmarks considered<!--Is it too much to consider the multidimensional approach too? It's hard to justify why we excluded it-->: $S_{gen}$ and the IFCRT-distributional target. Because two different spawner recuit models were used to estimate $S_{gen}$, we distinguish these models as 'Logistic:Sgen-Ricker' and 'Logistic:Sgen-priorCap' for the Ricker and Ricker_priorCap models, respectively. We use the label 'Logistic:IFCRT' to denote the case in which the IFCRT distributional target was used to develop an LRP.  See Section \@ref(logisticMethods) for an overview of the approach used to calculate aggregate abundance-based LRPs using logistic regression.
 
+
 When estimating logistic regression LRPs using $S_{gen}$, we used an integrated modelling approach in which CU-level $S_{gen}$ and the SMU-level LRP were simultaneously estimated. The integrated Sgen-LRP models had two components:  
 
 (i)	Stock-recruit models fit to each of the 5 CUs to estimate CU-level Sgen (Equation \@ref(eq:rickerSurv-IM) and Equations \@ref(eq:adjProd) - \@ref(eq:Sgen))  
 
 (ii)	A logistic regression model fit to aggregated data to estimate the LRP as the aggregate abundance that has historically been associated with a specified probability of all CUs being above Sgen (Equations \@ref(eq:logistic) - \@ref(eq:logisticLRP))
 
+<!--
+
+
+A third version of the logistic regression model, using the status assessments from the rapid multidimensional scanning tool was considered, but initial model evaluations led to the exclusion of that version. Two main reasons were the basis for this decision. First, the rapid multidimensional scanning tool relies on generational mean (smoothed abundances) to assess status of individual CUs against benchmarks. For this reason, there was a weak/non-existent relationship between SMU status and the raw (not smoothed) abundances. Using the generational mean for the logistical regression fit introduced considerable auto-correlation in the abundance time series, which is a direct violation of the logistic regression assumptions.  Future explorations of aggregate abundance logistic regression-based LRPs based on the rapid multidimensional scanning tool could account for the auto-correlation by including an AR(1) covariace structure. However, longer time-series and a wider spread of the data would be required to compensate for the additional parameter in the model.
+ Second, the rapid multidimensional scanning tool includes criteria that are not continuously tied to the CU abundance. For example, CU status can be determined based on trends, which is not congruent with logistic regression goal of identifying underlying relationship between aggregate abundance and CU statuses. In addition, the rapid multidimensional scanning tool includes absolute abundance thresholds (e.g. generational mean should be above 1500 fish) that are not proportional to the size of a CU. These absolute benchmarks introduce a disconnect between the SMU abundance and status, even when there is high correlation between CUs, because small CUs will be more likely to be below the absolute threshold despite high aggregate abundances.
+
+
+ 
+-->
 
 ***Retrospective Analysis***
 
