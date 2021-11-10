@@ -7,11 +7,11 @@
 
 - add density plot (or box plot or violin plot) of distribution of between-CU spawner correlations for the 3 case studies.
 
-##	Interior Fraser Coho
+## Interior Fraser Coho
 
-##	West Coast Vancouver Island Chinook
+## West Coast Vancouver Island Chinook
 
-##	South Coast Chum (excluding Fraser)
+## South Coast Chum (excluding Fraser)
 
 
 Table 1. Overview of benchmarks and LRP estimation methods examined for each case study.
