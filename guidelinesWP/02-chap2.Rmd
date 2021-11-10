@@ -133,6 +133,8 @@ If each of the component CUs of a SMU is above the red/amber benchmark and thus 
 
 ### Simple Aggregate Abundance LRPs
 
+<!-- CW: What exactly is this approach? Just summing the lower benchmarks of all CUs? Or adding all the SR time series and estimating a single Sgen? Or something else? -->
+
 - There may be cases where SMU-level limit reference points may be based on analyses on the aggregate abundances, without defining finer spatial scales
 = For example, for SMUs containing only one CU, LRP can be defined as the lower biological benchmark for the CU. 
 
