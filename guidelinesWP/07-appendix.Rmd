@@ -5,7 +5,14 @@ After that, all subsequent sections will be turned into appendices. -->
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
-# THE FIRST APPENDIX {#app:first-appendix}
+# APPENDIX 1{#app:first-appendix}
 
-Content here.
+##  Resources for the implementation of LRPs (links to be added)
+
+- For single metrics, link to WSP metrics repository
+- For watershed-area model, link to Carrie's repository (currently private due to data concerns)
+-	For multi-dimensional CU-status, link to Rapid Multidimensional Scanner Tool 
+- For aggregate-based benchmarks link to example application of these methods to case studies.
+- Note we used R for most data manipulation and projections.  We used TMB and TMBStan for estimation of stock-recuritment benchmarks and logistict-regression based LRPs.
+-	Justification of using TMB/TMBStan for logistic regression based in part on integrated models to propagate uncertainty from stock-recruitment models through to LRP estimates (highlight integrated Sgen-LRP model and Watershed-Area model)
 
