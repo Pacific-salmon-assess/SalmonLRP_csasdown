@@ -15,17 +15,12 @@ The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@ho
 ```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs (coloured red, blue, and yellow), and inlets (labelled in black- NAMES TO BE REVISED).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chinook-map.png")
 ```
-<!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat
- 
-
-CW: the table in md written below seems to be causing the etxt to go beyond the end of the page. I tried to fix it but I wasn't able to.  I re wrote the table in latex and it seems it makes the problem go away, but formatting is not as pretty in the final pdf. 
-
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
 \caption{Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.}
-\begin{tabular}{p{0.2\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
+\begin{tabular}{p{0.3\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
 \hline
 CU       &  Inlets   & Indicators\\ 
 \hline
@@ -34,12 +29,17 @@ WCVI-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \em
 WCVI-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
 \hline
 \end{tabular}
-(\#tab:chinook-Overviewlatex)
+(\#tab:chinook-Overview)
 \end{table}
 
- -->
 
 
+
+
+<!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat
+ 
+
+CW: the table in md written below seems to be causing the text to go beyond the end of the page. I tried to fix it but I wasn't able to.  I re wrote the table in latex and it seems it makes the problem go away, but formatting is not as pretty in the final pdf. 
 
 
 
@@ -61,6 +61,12 @@ WCVI-North              Quatsino                Cayeghle, Marble
 ----------------------- ----------------------- ----------------------------------------------                        
 
 Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island. 
+
+
+
+
+ -->
+
 
 
 

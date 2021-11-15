@@ -49,13 +49,13 @@ $n$ & Nation: U.S. or Canada \\
 
 
 
-\begin{table}[ht]
-\centering
-\caption{List of \texttt{samSim} model parameters and user input variables.}
-\begin{tabular}{l p{13.5cm}}
+
+\begin{longtable}[]{l p{13.5cm}}
+\caption{List of \texttt{samSim} model parameters and user input variables.}\\
 \hline
 Notation & Definition \\ 
 \hline
+\endhead
 $\alpha_{i}$ & Ricker productivity parameter \\
 $\beta_{i}$ & Ricker inverse capacity parameter \\
 $\sigma_{i}$ & Standard deviation for recruitment error\\ 
@@ -79,17 +79,22 @@ $\kappa$ & multivariate logistic variability parameter associated with assigning
 $\hat{\alpha}_{y,i}$ & Estimated Ricker productivity parameter \\
 $\hat{\beta}_{y,i}$ & Estimated Ricker inverse capacity parameter \\
 \hline
-\end{tabular}
 (\#tab:paramtab)
-\end{table}
+\end{longtable}
 
-
+<!--
 \begin{table}[ht]
 \centering
 \caption{List of \texttt{samSim} model variables.}
 \begin{tabular}{l p{13.5cm}}
+-->
+
+\begin{longtable}[]{l p{13.5cm}}
+\caption{List of \texttt{samSim} model variables.}\\
 \hline
 Notation & Definition \\ 
+\hline
+\endhead
 \hline
 $S_{y,i}$ & Spawners\\
 $Seq_{i}$ & Equilibrium spawners\\
@@ -128,9 +133,8 @@ $z_{y,i}$ & Lognormal error component of observed spawners\\
 ${obsRY}_{y,i,n}$ & Observed calendar year recruits \\
 ${obsER}_{y,i,n}$ & Observed exploitation rates \\
 \hline
-\end{tabular}
 (\#tab:modtab)
-\end{table}
+\end{longtable}
 
 
 
