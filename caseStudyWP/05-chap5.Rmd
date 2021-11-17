@@ -56,6 +56,9 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
 ### Determining the Status of Conservation Units
 <!--
     Is this section equivalent to the "## CU STATUS ESTIMATION" in IFcoho chapter? 
+    
+    K.H. - yes it is. The header should be changes to match that in the coho chapter. I think Carrie will add this section for chinook too, so all case studies will be consistent.
+    
 -->
 
 For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep).  *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}*
@@ -74,8 +77,8 @@ Response: Agreed – this is a general challenge for all methods, and is part of
 I suggest listing multidim method first to give it higher priority.  Maybe something like:
 
 "For this case study, we consider two approaches for characterizing CU status: 
-(i) Rapid multidimesional scanning tool 
-(ii) CU-level abundance relative to a lower percentile benchmark
+(1) Rapid multidimesional scanning tool 
+(2) CU-level abundance relative to a lower percentile benchmark
 
 The first approach, which uses the rapid  multidimensional scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented as for a point of comparison with the rapid multidimensional scanning tool."
 
@@ -105,7 +108,7 @@ CW: On the guidelines paper we have a section on the effects of time-varying pro
 **Abundance-Based Benchmarks**
 
 <!-- KH:
-I am now wondering of it makes sense to get rid of the ***Abundance-based Benchmark*** and ***MutliDim*** headers as they are kinda related.  The mutlidim uses abundance-based. 
+I am now wondering of it makes sense to get rid of the ***Abundance-Based Benchmark*** and ***Mutlidimensional Status Assessment*** headers as they are intertwined since the mutlidim uses abundance-based benchamrks.  Mabe the numbered list above is enough to differentiate??? 
 
 -->
 
@@ -220,6 +223,10 @@ With the following headings:
 
 
 A simple method to set a LRP for a group of CUs is to set the LRP trigger as being a certain proportion of component CUs as being in the red zone. For example, for ISC chum (7 CUs), the LRP could be defined as being breached when one CU is in the red zone. For this case study, we set this as the rule - if any CUs entered the red zone, the SMU was considered to be below the LRP. 
+
+<!-- KH: Some of the above points have already been  covered in chapter 2. I think this section could just start off with: 
+
+We looked at the proportion of CUs that had status estimates above the red zone (or, above the lower percentile benchmark) to determine in which years between xxxx and xxxx the LRP would have been breached. As with the Interior Fraser Coho and WCVI Chinook case studies, we required all CUs to be above the red zone for the ISC-NF Chum SMU to be classified as being above the LRP. -->
 
 We evaluated six different combinations of data and LRP methods (table \@ref(tab:LRP-scenarios)). For scenarios 1 and 2, we used CU status based on percentile benchmarks. For this comparison, we used static benchmarks (not retrospective) using the full data set, and percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. <!-- To do: Need to better explain what 'static' benchmark means; based on comment from Sue Grant -->This method used the raw annual escapement values to calculate the benchmarks and the generational mean (geometric mean of 4 years) of escapement in the given year and previous 3 years to assess status in a given year. For scenarios 3-6, we used multi-dimensional status of CUs. The multi-dimensional assessment used percentile benchmarks as relative abundance benchmarks, and also compares the generational geometric mean to assess status relative these benchmarks for each year.
 
