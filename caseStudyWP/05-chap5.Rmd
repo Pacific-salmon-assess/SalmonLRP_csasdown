@@ -17,7 +17,7 @@ The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs 
 
 -->
 
-The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations.
+The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. <!-- KH: Suggest moving this last sentence on 60% missing to data section to bulk up that section a bit -->In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. <!--KH addition: Wild Salmon Policy status assessments have not been done on any ISC Chum CUs.  -->
 
 Benchmarks based on spawner recruit relationships are unreliable if there is uncertainty in the spawner and recruit data. One alternative is benchmarks calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks). Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holtEvaluatingBenchmarksBiological2018). In other cases, percentile benchmarks may be inappropriate due to low productivity, high harvest, and because they do not account for non stationarity in recruitment dynamics (@holtEvaluatingBenchmarksBiological2018).
 
@@ -34,7 +34,13 @@ knitr::include_graphics("figure/chum-map.png")
 
 ## DATA
 
-We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updated to 2018. @vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix).
+We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updated to 2018<!--KH: maye change to [...but updated with five additional years of data]??-->.
+
+<!--KH suggested addition to give a bit more detail here in main body; also, to be clear how SR series gets used: 
+
+Available data included spawner abundance time series from 1959 - 2018 and corresponding CU-level recruitment estimated from run reconstruction. Spawner abundance series rely heavily on infilling; 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. Recruitment data are considered highly uncertain for all ISC Chum CUs due to uncertain assumptions required to assign mixed fishery catch to CUs within the run reconstruction model. As a result, we did not consider spawner recruit series to be reliable enough to estimate stock recruitment-based benchmarks such as Smsy and Sgen.  We did however use spawner recruit model fits to provide approximate estimates of CU-level productivity, which are used to inform the application of percentile-based benchmarks. -->
+
+@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix).
 
 ## METHODS
 
@@ -62,6 +68,27 @@ Sue Grant comment: This is not a limitation. It can be overcome with the multi-d
 Response: Agreed – this is a general challenge for all methods, and is part of a larger discussion about time-varying benchmarks / LRPs.  We can better describe it this way.
 -->
 
+
+<!--KH (Nov 17):
+
+I suggest listing multidim method first to give it higher priority.  Maybe something like:
+
+"For this case study, we consider two approaches for characterizing CU status: 
+(i) Rapid multidimesional scanning tool 
+(ii) CU-level abundance relative to a lower percentile benchmark
+
+The first approach, which uses the rapid  multidimensional scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented as for a point of comparison with the rapid multidimensional scanning tool."
+
+Could then lead into a discussion of percentile benchmarks as follows:
+
+"When applying the rapid multidimensional scanning tool to ISC-NF Chum, we use percentile benchmarks as both upper and lower benchmarks (cite decision tree figure).  As a result, both of our approaches to CU status estimation depend on percentile-based benchmarks."
+
+... then go on to below text on percentile benchmarks. 
+
+
+
+-->
+
 There are studies showing that a range of factors may affect the productivity of ISC Chum. These include competition with other salmon in the ocean and ocean conditions (@debertinMarineGrowthPatterns2017, @litzCompetitionOddyearPink2021). This application of percentile benchmarks does not account for changing productivity. 
 <!--
 Sue Grant comment: How is this different from any other salmon population, they are all affected by these conditions, and particularly right now so many are declining, so this is a fairly common issue, so should be mentioned more ina  broader context at the start and how to address this across all approaches
@@ -77,6 +104,10 @@ CW: On the guidelines paper we have a section on the effects of time-varying pro
 
 **Abundance-Based Benchmarks**
 
+<!-- KH:
+I am now wondering of it makes sense to get rid of the ***Abundance-based Benchmark*** and ***MutliDim*** headers as they are kinda related.  The mutlidim uses abundance-based. 
+
+-->
 
 Abundance-based benchmarks can be calculated in several ways. They can be informed by stock-recruit relationships when appropriate data are available. Where there are no reliable stock-recruit data available, an alternate method is using percentiles of recorded abundance (@clarkEvaluationPercentileApproach2014, @holtEvaluatingBenchmarksBiological2018). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$.
 
