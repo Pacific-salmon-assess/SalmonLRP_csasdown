@@ -46,6 +46,7 @@ Available data included spawner abundance time series from 1959 - 2018 and corre
 
 <!-- 
     I'm not sure we need a methods section here. But I am in favour of including the github link.
+    CH comment: I don't think we need a header, simply state that data are available here on the github, with code for infilling.
 -->
 
 Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
@@ -61,14 +62,17 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
     
 -->
 
-For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep).  *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}*
+For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep). <!--CH: let's be conistent with thoughtout both papers.  Ithink we're using Rapid Multidimenstional Scanner Tool as the name for this method--> *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}* <!--CH: I think we take out Sgen as a benchmark, but include productivity as supplemental information for evaluating when percentile benchmarks are appropriate. I wouldn't emphasize the SR modelling when introducing productivity, just briefly state in the text how productivity was derived.--> 
+<!--CH: Suggest adding, "Although the Rapid Multidimensional Scanner Tool is recommended for CU-level assessments (Holt et al. in prep), we provide status on a simple single metric, spawner abundances relative to percentile-based benchmarks for comparison.  Now I see Kendra's suggestions below which I like! (perhaps instead of this)-->
 
-In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment (e.g., trends, distribution of abundance; @holtIndicatorsStatusBenchmarks2009). At this time, an integrated status assessment has not been developed for ISC chum.
+In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment under the Wild Salmon Policy (e.g., trends, distribution of abundance; @holtIndicatorsStatusBenchmarks2009). At this time, an peer-reviewed integrated status assessment has not been developed for ISC chum.
 
 One limitation of percentile benchmarks and the multi-dimensional assessment method used here is the assumption of constant productivity. 
 <!--
 Sue Grant comment: This is not a limitation. It can be overcome with the multi-dimenstional approach when BM are considered can include this consideration.
 Response: Agreed – this is a general challenge for all methods, and is part of a larger discussion about time-varying benchmarks / LRPs.  We can better describe it this way.
+
+CH comment Nov 18: I suggest we remove this sentence, as we have a sub-section in the Guidelines paper pertaining to time-varying parameters and impacts on benchmarks and LRPs.
 -->
 
 
@@ -99,7 +103,7 @@ Response: Agreed. Can move this to intro and / or discussion to put into broader
 
 CW: On the guidelines paper we have a section on the effects of time-varying productivity on  LRPs. We could move some of this discussion there. However, I think there might value in leaving some text here indicating that there are suspected changes in productivity for ISC chum. 
 
-
+CH: I agree remove this sentence
 
 -->
 
@@ -110,13 +114,15 @@ CW: On the guidelines paper we have a section on the effects of time-varying pro
 <!-- KH:
 I am now wondering of it makes sense to get rid of the ***Abundance-Based Benchmark*** and ***Mutlidimensional Status Assessment*** headers as they are intertwined since the mutlidim uses abundance-based benchamrks.  Mabe the numbered list above is enough to differentiate??? 
 
+CH comment: suggest removeing or changing to percentile-based benchmark, to avoid confusion with abundance-based LRPs
 -->
 
-Abundance-based benchmarks can be calculated in several ways. They can be informed by stock-recruit relationships when appropriate data are available. Where there are no reliable stock-recruit data available, an alternate method is using percentiles of recorded abundance (@clarkEvaluationPercentileApproach2014, @holtEvaluatingBenchmarksBiological2018). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$.
+
+<!--CH suggestion: Since this section is about percentile-based benchmarks already mentioned above, I suggest changing the topic sentence to, "Percentile-based benchmarks can be applied to assess status of CUs when stock-recruitment data are not available (Holt et al. 2018, clark et al. ) Then the 1st two sentences can be omitted--> Abundance-based benchmarks can be calculated in several ways. They can be informed by stock-recruit relationships when appropriate data are available. Where there are no reliable stock-recruit data available, an alternate method is using percentiles of recorded abundance (@clarkEvaluationPercentileApproach2014, @holtEvaluatingBenchmarksBiological2018). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$.
 
 <!--
 CW: I am not sure that the time series bias comment is super relevant here (as we are not using Sgen for the Chum case.)
-
+CH: I agree, ans suggest removing the last sentence above.
 
 --> 
 
@@ -133,6 +139,7 @@ knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 
 <!--
 K.Holt: I have commented out this section (Benchmark based on stock-recruit relationships - $S_{gen}) for now as I do not think we are using Sgen to calculate LRPs.If we do not evaluate LRPs based on Sgen, but still need to describe SR modelling for Sgen as it is used to estimate productivity for the percentile methods, we may wish to describe the SR modelling and results in an appendix?  In this case, we would not however need to estimate Smsy or Sgen.  Just ricker pars.
+CH: I agree.
 
 #### Benchmark based on stock-recruit relationships - $S_{gen}$
 
@@ -198,7 +205,7 @@ Caveats with benchmarks based on $S_{gen}$ or stock-recruit parameters:
 
 The methods for applying the multi-dimensional status assessment for CU status is described in Chapter 2. 
 
-In applying the multi-dimensional rapid status assessment to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for relative abundance benchmarks for the five CUs that have appropriate percentiles identified. For Bute Inlet and Southern Coastal Streams, we did not use relative abundance benchmarks. When relative abundance benchmarks are not available, the decision tree was used assesses trends instead. 
+In applying the multi-dimensional rapid status assessment to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for relative abundance benchmarks for the five CUs that have appropriate percentiles identified. For Bute Inlet and Southern Coastal Streams, we did not use relative abundance benchmarks. When relative abundance benchmarks are not available, <!--CH: suggest changing last phrase to, "trends were used to assess status according to the decision tree (ref and Fig in Ch2)"-->the decision tree was used assesses trends instead. 
 
 <!-- How were the appropriate percentiles identified? or was it from the @holtEvaluatingBenchmarksBiological2018?. 
     -->
