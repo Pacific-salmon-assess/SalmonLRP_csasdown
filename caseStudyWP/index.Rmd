@@ -4,7 +4,8 @@ author: |
   Kendra Holt^1^
   Carrie A. Holt^2^
   Luke Warkentin^1^
-  Catarina Wor^2^ and
+  Catarina Wor^2^
+  Brooke Davis^3^
   others (TBD)^2^
 author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C. and others(TBD)"
 address: |
@@ -13,6 +14,9 @@ address: |
   ^2^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, British Columbia, V9T 6N7, Canada\
+  ^3^Delta Regional Office\
+     Fisheries and Oceans Canada, 100 Annacis Pkwy Unit 3\
+     Delta, British Columbia, V3M 6A2, Canada\
 month: Month # fill in
 year: 2021
 report_number: nnn
