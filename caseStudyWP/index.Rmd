@@ -4,7 +4,8 @@ author: |
   Kendra Holt^1^
   Carrie A. Holt^2^
   Luke Warkentin^1^
-  Catarina Wor^2^ and
+  Catarina Wor^2^
+  Brooke Davis^3^
   others (TBD)^2^
 author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C. and others(TBD)"
 address: |
@@ -13,6 +14,9 @@ address: |
   ^2^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, British Columbia, V9T 6N7, Canada\
+  ^3^Delta Regional Office\
+     Fisheries and Oceans Canada, 100 Annacis Pkwy Unit 3\
+     Delta, British Columbia, V3M 6A2, Canada\
 month: Month # fill in
 year: 2021
 report_number: nnn
@@ -24,7 +28,7 @@ abstract: |
   Start new paragraphs after a blank line and with 2 spaces indent. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 header: "Draft working paper --- Do not cite or circulate" # or "" to omit
 output:
- csasdown::resdoc_word:
+ csasdown::resdoc_pdf:
    french: false
    copy_sty: true
    line_nums: true

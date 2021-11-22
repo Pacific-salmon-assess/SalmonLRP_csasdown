@@ -117,6 +117,8 @@ CH response
 
 -->
 
+<!--CH: In the Guidelines paper, I would like to add text that aggregate-abundance based LRPs may not need to be identified explicitly for harvest management, if HCRs are identified and evaluated to have a low probability of CUs being red. We might want to pull this thread through the Introduction of the case study paper or better yet here in Ch2 here when abundance-based LRPs are mentioned. I will include similar, but expanded text in the Guidelines paper, referring to the Groundfish MP Framework) --> 
+
 ## Consistency with National Guidance on LRPs
 - Highlight consistencies/inconsistencies that emerge from December 2021 TESA workshop and subsequent discussions with NHQ primary authors, e.g., Danny Ings at NWAFC in St. John's.
 
