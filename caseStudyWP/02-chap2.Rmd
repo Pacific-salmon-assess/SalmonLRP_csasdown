@@ -168,7 +168,7 @@ We recommend identifying influential outliers using leverage statistics where po
 
 **Statistical significance of model coefficients**
 
-Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensen_tmb_2016]. 
+Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensenTMBAutomaticDifferentiation2016]. 
 
 **Goodness-of-fit**
 
