@@ -275,60 +275,12 @@ Is it realistic to suggest that comparisons will be done every year? Or would th
 <!-- CW: Could the sections below be moved to another chapter? I think it would be good to have the steps as their own chapter to reflect their importance
 Maybe "Time-varying parameters and impacts on LRPs"  could go under chapter 5 (after editing to be more recommendation based?)
 and " Consistency with National Guidance on LRPs" can go under Chapter 2?
+I moved the sections to the chapters listed above.
  -->
-## Time-varying parameters and impacts on LRPs
-
-There is increasing evidence of time varying parameters in Pacific salmon populations, particularly relating to declines in productivity [e.g., @holtImpactTimevaryingProductivity2020,  @dornerSpatialTemporalPatterns2018, @malickRegionalScaleDeclinesProductivity2016, @petermanWidespreadDecreaseProductivity2012]. In Canada, DFO assessments identified declines in productivity for various CUs, e.g., Fraser sockeye [@grantEvaluationUncertaintyFraser2011, @grantIntegratedBiologicalStatus2013, @huangRecoveryPotentialAssessment2021], Southern BC Chinook (cite SAR 2016/042), Fraser Chinook (Cite RPA)  and Interior Fraser Coho [@arbeiderInteriorFraserCoho2020]. These assessments relied on a variety of tools to identify trends in productivity including the evaluation of trends in log spawners per recruit [@arbeiderInteriorFraserCoho2020], evaluation of trends in residuals from recruitment curve fits [@grantEvaluationUncertaintyFraser2011], and explicit consideration of time-varying parameters when fitting recruitment curves using Kalman filter or recursive Bayes approach [huangRecoveryPotentialAssessment2021 and RPA]. 
-
-Time-varying parameters affect estimates for stock recruitment benchmarks (e.g. $S_MSY$ and $S_gen$) and are also likely to affect population trends, resulting in changes to benchmarks based on historical observations (e.g., percentile-based benchmarks).<!--CH; added in a few key references to papers on this topic on other fisheries in next sentence--> Analytical methods for time-varying reference points have been also proposed for other marine fish species [@amarEvaluationTwoManagement2009; @puntFisheriesManagementClimate2014], some of which have been evaluated empirically and in simulation with mixed results [@olearyComparisonMultipleApproaches2020; @bergerCharacterTemporalVariability2019]. For Pacific salmon, time-varying benchmarks effects will have an impact on the classification of CUs status. However determining support for time-varying parameters is not always straightforward. Common statistical diagnosis such as inspection of residuals and use of information criteria (e.g. AIC and BIC) often produce conflicting results [@holtImpactTimevaryingProductivity2020]. A review of stock-recruit analyses for Pacific salmon, including the use of environmental covariates and time-varying parameters, highlighted that even when there is strong evidence for non-stationarity in salmon populations, it is not clear if reference points should be adjusted accordingly [@adkisonReviewSalmonSpawnerRecruitment2021].<!--CH addition next sentence--> Where stock depletion is associated with time-varying parameters that are thought be reversible, it may be more appropriate to protect the population from harvest by maintaining high reference points using historical data [@szuwalskiClimateChangeNonstationary2016]
-
-Time-varying stock-recruitment dynamics usually occur at the CU level, and the implications for SMU-based LRPs are not straightforward. There are no clear guidelines on how to translate time-varying stock recruitment parameters into reference points. Effects of time-varying CU recruitment dynamics on aggregate-abundance and proportion-based LRPs will depend on the degree of synchrony among CUs, the direction of the change in recruitment parameters, past and current stock status, among other factors. For example, in our case study on Interior Fraser River Coho Salmon, when consistent reductions in productivity was introduced in one sensitivity analysis (analysis that included informative priors on capacity in CU-level spawner-recruitment models), benchmarks declined for most CUs as did aggregate-abundance based LRP for the SMU. However, in cases where productivity varies at different rates among CUs or capacity changes as well, impacts on CU-level benchmarks and SMU-level LRPs will not be easily predictable. <!--added the berger citation here --> When evaluating the impacts of productivity changes on reference points, @bergerCharacterTemporalVariability2019 suggests that dynamic reference points are most useful in situations when stock productivity shifts directionally and the productivity signal is correctly ascertained. In contrast, uncertainty from incorrectly identifying productivity trends can be a major source of innacuracy in stock status [@bergerCharacterTemporalVariability2019]. In addition, even if time-varying benchmarks and their associated effects on LRPs are considered, it is difficult to define how often LRPs should be changed [@zhangReportOceanFrontier2021]. Mistimed changes in benchmarks or LRPs may lead to bias in stock status [@holtImpactTimevaryingProductivity2020] and volatility of management responses may lead to management uncertainty, reducing trust in the management process [@adkisonReviewSalmonSpawnerRecruitment2021]. 
-
-<!--
-
-CH note; Another point on time-varying pars to consider adding (thought might not be necessary)
-Berger 2019 simulation and empirical study comparing static and dynamic RPs "Although caution is warranted when considering dynamic reference points, this paper shows these approaches are likely to be most useful when stock productivity shifts directionally, if that productivity signal can be correctly ascertained." 
-
-CW: added it in
--->
-
-The Precautionary approach policy recommends that changes to the reference points should only be adjusted when there is considerable evidence that productivity has changed and there are no expectations that these changes will be reverted naturally or achieved through management [@dfoHarvestStrategyCompliant2006]. Klaer et al 2015 devised a framework for evaluation the degree of confidence in productivity shifts in Australian fisheries, similar approaches could be adapted for Canadian Salmon populations. Recent studies recommend the use of case specific feedback simulation exercises in order to determine the appropriate scale to adjust reference points when stock-recruitment parameters are non-stationary [@holtImpactTimevaryingProductivity2020; @zhangAccountingNonstationaryStock2021; @olearyComparisonMultipleApproaches2020]. However, full feedback simulation studies might not be feasible for every conservation unit due to limited resources. Future research should focus on identifying general advice on the best practices for adjusting benchmarks when the stock dynamics is thought to be non-stationary.   
-
-
-
-
-## Consistency with National Guidance on LRPs
-- Highlight consistencies/inconsistencies that emerge from December 2021 TESA workshop and subsequent discussions with NHQ primary authors, e.g., Danny Ings at NWAFC in St. John's.
 
 
 
 <!--
-### OLD TEXT BELOW
-
-
-
--	Question: could serious harm may mean extinction rather that in the red zone?  
-
--	The question of whether a CU within a larger SMU can persist in the red zone is something that could be simulation tested; although, this would require harvest control rules to be specified for testing.  Such an approach would be case-specific and outside of the scope of our work.  However, we could consider recommending that if a decision is made for a CU to allow some proportion of CUs to be in the red zone, quantitative evaluation (e.g., simulation testing) should be used to demonstrate that red CUs will not be lost. [Although, we may still want to consider putting some bounds on what proportion would be allowed to be below their lower benchmark, i.e., a large proportion of CUs persisting in the red zone may not be acceptable ].
-
--if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
-
-
-
-Beyond scope: CU-level benchmark considerations
--	How do data availability and biological considerations interact to inform a decision about which CU-level benchmark to use? (e.g, Sgen from SSR vs. Sgen from Watershed-Area vs. percentile vs. distributional benchmarks, etc)?  
--	Under what conditions should Watershed-Area based LRPs be used?	
-- How do mean and distributions (uncertainties) of watershed-area based and stock-recruitment based benchmarks compare?
-- Under which levels of data uncertainties do stock-recruitment based LRPs outperform habitat-based LRPs? 
-- In cases where watershed-area based benchmarks and stock-recruitment based benchmarks are available, both should be presented and used to derive complementary LRPs to capture our underlying model uncertainties.
-- Alternatively, could be combined by using watershed area to inform prior on beta in the stock-recruitment model
-- What if stocks have different levels of data, e.g., Fraser Sockeye, where stock-recruitment as available for some CUs, while others have only escapement data.  When is it beneficial to use available data for data poor CUs vs when to exclude them?
-
-## Incorporating uncertainty in aggregate abundance LRP estimation
-
--	How should uncertainty in benchmarks be incorporated in the LRP if different methods are used to estimate CU-level status within an SMU (i.e., some CUs have stock-recruitment benchmarks, while others rely on percentile-based or habitat-based benchmarks). Bootstrapping from uncertainties in CU-level benchmarks could be considered in these cases. Although, simulation testing of these scenarios may be outside the scope of this paper, guidance based on best-practices from the literature could be provided.
-
-
 
 old notes on time-varying parameters
 -	Briefly document evidence for time-varying productivity for Pacific salmon
