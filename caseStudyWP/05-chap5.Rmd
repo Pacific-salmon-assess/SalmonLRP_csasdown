@@ -122,6 +122,9 @@ CH comment: suggest removeing or changing to percentile-based benchmark, to avoi
 
 <!--CH suggestion: Since this section is about percentile-based benchmarks already mentioned above, I suggest changing the topic sentence to, "Percentile-based benchmarks can be applied to assess status of CUs when stock-recruitment data are not available (Holt et al. 2018, clark et al. ) Then the 1st two sentences can be omitted--> Abundance-based benchmarks can be calculated in several ways. They can be informed by stock-recruit relationships when appropriate data are available. Where there are no reliable stock-recruit data available, an alternate method is using percentiles of recorded abundance (@clarkEvaluationPercentileApproach2014, @holtEvaluatingBenchmarksBiological2018). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$.
 
+
+<!--CH: add details on how percentiles calculated, were percentiles based on smoothed or raw time-series of historical data, and mention that the current generational geometric average was compared to the specified percentile-->
+=======
 <!-- 
 Sue Grant: It would be helpful to start the paper with this context on all the different ways to assess relative abundance BMs…Sgen SR models, Sgen habitat, percentiles…
 Maybe that is what the guidelines paper does is put this all together?
@@ -129,6 +132,7 @@ Maybe that is what the guidelines paper does is put this all together?
 KH Respsonse: This is what the guidelines paper does, but I think there is a benefit in developing a table or something that clearly lays out all the options, and which ones are being looked at in each case study.  
 
 -->
+
 
 <!--
 CW: I am not sure that the time series bias comment is super relevant here (as we are not using Sgen for the Chum case.)
@@ -229,12 +233,12 @@ In applying the multi-dimensional rapid status assessment to ISC Chum, we used t
 ### LRP Estimation for ISC-NF Chum
 
 <!--
-CW: I suggest we re structure this sectio so that it is consistent with the IFcoho chapter, 
-With the following headings:
+CW: I suggest we re structure this section so that it is consistent with the IFcoho chapter, 
+With the following headings:  (CH agree)
 
 ## LRP ESTIMATION: PROPORTION OF CUS
-### Methods
-### Results
+### Methods (including CU status based on a single metric and the Rapid Multidimensional Scanner Tool)
+### Results (for both methods for deriving CU status)
 ## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
  No methods and results, just mention that the method was not applicable. 
 ## Discussion
@@ -251,11 +255,11 @@ A simple method to set a LRP for a group of CUs is to set the LRP trigger as bei
 
 We looked at the proportion of CUs that had status estimates above the red zone (or, above the lower percentile benchmark) to determine in which years between xxxx and xxxx the LRP would have been breached. As with the Interior Fraser Coho and WCVI Chinook case studies, we required all CUs to be above the red zone for the ISC-NF Chum SMU to be classified as being above the LRP. -->
 
-We evaluated six different combinations of data and LRP methods (table \@ref(tab:LRP-scenarios)). For scenarios 1 and 2, we used CU status based on percentile benchmarks. For this comparison, we used static benchmarks (not retrospective) using the full data set, and percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. <!-- To do: Need to better explain what 'static' benchmark means; based on comment from Sue Grant -->This method used the raw annual escapement values to calculate the benchmarks and the generational mean (geometric mean of 4 years) of escapement in the given year and previous 3 years to assess status in a given year. For scenarios 3-6, we used multi-dimensional status of CUs. The multi-dimensional assessment used percentile benchmarks as relative abundance benchmarks, and also compares the generational geometric mean to assess status relative these benchmarks for each year.
+<!--CH: I suggest prefacing this with why we evaluated different data scenarios, e.g., "The single-metric approach to assessing CU status based on percentiles has specific data requirements (Holt et al. 2018) while the multidimensional approach can be applied to any CU with at least a consistent time-series of spawner abundances. To compare LRPs based on CU assessment from these two approaches we evaluated several data streams including those that used the same data for each method and all available data for each method."-->We evaluated six different combinations of data and LRP methods (table \@ref(tab:LRP-scenarios)). For scenarios 1 and 2, we used CU status based on percentile benchmarks. For this comparison, we used static benchmarks (not retrospective) using the full data set, and percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. <!-- To do: Need to better explain what 'static' benchmark means; based on comment from Sue Grant.  CH comment: I suggest removing the term "static benchmark" and simply describe that the benchmarks were estimated using the entire time-series, and applied to each year to derive a time-series of statuses (unlike retrospective analyses described below and for IFR coho where benchmarks were iteratively re-estimated each year) -->  <!--CH: I suggest explaining the difference between scenarios 1 and 2 a bit more, e.g., "For scenarios 1 and 2, we used CU status based on percentile benchmarks that are limited by constraints in productivity in historical exploitation outlined in Holt et al. (2018). Also, we initially constrained time-series so that each CU contained data for each year included in total proportions (i.e.., no missing CU-statuses, Scenario 1). We then relaxed this assumption and included all CUs that meet the constraints of Holt et al. (2018) even if CUs had missing data for some years (Scenario 2). This scenario resulted in total number of CUs in the proportion based LRP what differed among years. The power to detect red status varied among years in Scenrio 2, using more of the available data than Scenario 1. "--> This method used the raw annual escapement values to calculate the benchmarks and the generational mean (geometric mean of 4 years) of escapement in the given year and previous 3 years to assess status in a given year. For scenarios 3-6, we used multi-dimensional status of CUs. The multi-dimensional assessment used percentile benchmarks as relative abundance benchmarks, and also compares the generational geometric mean to assess status relative these benchmarks for each year. <!--CH: scenarios 3-6 might need a bit more justification, as above for scenarios 1 and 2?-->
 
 <!-- CW: I think I need a little bit more explanation on the methods used here.
 
-What is the percentile based on? percentile of the raw annual escapement values? or percentile of the geometric means? 
+What is the percentile based on? percentile of the raw annual escapement values? or percentile of the geometric means? CH: I've suggested moving this up to where percentiles are first introduced.
 Or are we saying that we compared the raw numbers and geometric means to the percentile benchmarks to determine status? Or both? 
 
 So scenarios 3-6 used relative abundances instead of full abundances? Is that the difference? 
@@ -282,7 +286,7 @@ csasdown::csas_table(d[1:6,c(3,6:12)],
  ## LRP ESTIMATION:  AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
 -->
 
-We evaluated whether the proportion of CUs above their lower benchmark could be predicted by aggregate abundance using logistic regression models. We tested this using percentile and $S_{gen}$ benchmarks. These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis).
+We evaluated whether the proportion of CUs above their lower benchmark could be predicted by aggregate abundance using logistic regression models. We tested this using percentile and $S_{gen}$ benchmarks. These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis). <!--CH: remove Sgen here, correct?-->
 
 <!-- KH: given that we discredit Sgen estimates for these CUs as being reliable, I think you could take out all mention of the logistic regression fits to Sgen and only mention percetiles. If the question of Sgen comes up during review, you could mention then that it was also tried, but didn't work.  -->
 
@@ -294,9 +298,13 @@ We evaluated whether the proportion of CUs above their lower benchmark could be 
     
     -->
 
+
+These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected.<!--CH: agree with CW. Can we remove mention of retrospective analysis since we don't show results?-->
+=======
 <!--
 KH: suggest deleting:
 These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected. -->
+
 
 Due to poor logistic model fits using the entire 1953-2018 time series for both $S_{gen}$ and percentile benchmarks, we did not conduct full retrospective analyses for this SMU. The characteristics of the data that led to poor logistic model fits are highlighted in the results section below.
 
