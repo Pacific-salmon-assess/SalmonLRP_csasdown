@@ -124,7 +124,7 @@ CH comment: suggest removeing or changing to percentile-based benchmark, to avoi
 
 
 <!--CH: add details on how percentiles calculated, were percentiles based on smoothed or raw time-series of historical data, and mention that the current generational geometric average was compared to the specified percentile-->
-=======
+
 <!-- 
 Sue Grant: It would be helpful to start the paper with this context on all the different ways to assess relative abundance BMs…Sgen SR models, Sgen habitat, percentiles…
 Maybe that is what the guidelines paper does is put this all together?
@@ -300,7 +300,7 @@ We evaluated whether the proportion of CUs above their lower benchmark could be 
 
 
 These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected.<!--CH: agree with CW. Can we remove mention of retrospective analysis since we don't show results?-->
-=======
+
 <!--
 KH: suggest deleting:
 These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected. -->
