@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# LRP ESTIMATION METHODS
+# LRP ESTIMATION METHODS{#MethodsChapter}
 
 In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections 3 (Interior Fraser Coho), 4 (WCVI Chinook), and 5 (Inner South Coast Chum, excluding Fraser). 
 
