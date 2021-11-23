@@ -50,17 +50,11 @@ K.Holt note: some of this may be best in guidance paper?
 
 ## Review of Reference Points for Pacific Salmon
  <!--
-CW: Review of reference points or Limit reference points?
-@marentetteSpecificationPrecautionaryApproach2021 is a comprehensive review of reference points for Canadian stocks up to 2018. 
 
-Consider changing this title to Review of Reference Points in Canada with focus on Pacific Salmon
-
-
+Consider changing this subtitle to "Reference Points and management benchmarks for Pacific Salmon populations"
 
  -->
 
- 
- <!--CH: comment. See Julie Marentette's list of references for TESA workshop on LRPs "Background Reading.pdf" and "Examples of Limit Reference Points.pdf"-->
  
  
 

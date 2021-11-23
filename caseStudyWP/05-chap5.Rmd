@@ -135,7 +135,7 @@ CH comment: suggest removeing or changing to percentile-based benchmark, to avoi
 
 
 <!--CH: add details on how percentiles calculated, were percentiles based on smoothed or raw time-series of historical data, and mention that the current generational geometric average was compared to the specified percentile-->
-=======
+
 <!-- 
 Sue Grant: It would be helpful to start the paper with this context on all the different ways to assess relative abundance BMs…Sgen SR models, Sgen habitat, percentiles…
 Maybe that is what the guidelines paper does is put this all together?
