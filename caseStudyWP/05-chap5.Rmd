@@ -355,6 +355,8 @@ These methods were applied retrospectively. For a series of years up to a given 
 
 Due to poor logistic model fits using the entire 1953-2018 time series for both $S_{gen}$ and percentile benchmarks, we did not conduct full retrospective analyses of logistic-regression based LRPs for this SMU as was completed for the Interior Fraser River Coho case study. The characteristics of the data that led to poor logistic model fits are highlighted in the results section below. <!--CH remove mention of Sgen-->
 
+<!--CH addition below-->
+Projection-based LRPs are an alternative aggregate-abundance LRP that we did not consider for this SMU due to lack of peer-reviewed stock-recruitment model fits for component CUs. However, this approach could be considered in future analyses given consensus on model structure and parameterization that provide realistic uncertainties in projections of population dynamics.
 
 ## RESULTS
 
@@ -618,8 +620,8 @@ KH suggestions for overall discussion topics for this chapter:
 
 
 4) How did the strategy of increasing the number of CUs included in LRP status assessment (5 CUs partial) compare to using a consistent number of CUs in all years (4 CUs full)? 
-- In this case, adding more CUs was more precautionary, but this result is expected to be specific to this case study. In other circumstances, it may be less precautionary.  However, a key result is that there was a difference. This is not suprising given the low correlation of CUs within this SMU; we do not expect CUs to be interchangable.  Therefore; it makes sense to use as much data as possible to represent variable dynamics within the CU/  
-CH: comment. I think adding CUs will always result in same or more pessimistic status assesssmnts (no data is same as green/amber status i.e., LRP not triggered), so the precautionary approach would lead to inclusion of all CUs.
+- In this case, adding more CUs was more precautionary, but this result is expected to be specific to this case study. In other circumstances, it may be less precautionary.  However, a key result is that there was a difference. This is not surprising given the low correlation of CUs within this SMU; we do not expect CUs to be interchangable.  Therefore; it makes sense to use as much data as possible to represent variable dynamics within the CU/  
+CH: comment. Yes, adding CUs can result in more optimistic or pessimistic assessments in terms of ppn of CUs > red. However, SMU can only be untriggered ('healthy') when 100% of CUs above red, so adding more CUs may increase status by increasing the % as it approaches 100, but it will never get to 100 with just the inclusion of new data.
 
 5) Why didn;t abundance-based LRPs not work for this case study
 
