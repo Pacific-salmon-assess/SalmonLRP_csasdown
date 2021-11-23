@@ -82,12 +82,7 @@ $\hat{\beta}_{y,i}$ & Estimated Ricker inverse capacity parameter \\
 (\#tab:paramtab)
 \end{longtable}
 
-<!--
-\begin{table}[ht]
-\centering
-\caption{List of \texttt{samSim} model variables.}
-\begin{tabular}{l p{13.5cm}}
--->
+
 
 \begin{longtable}[]{l p{13.5cm}}
 \caption{List of \texttt{samSim} model variables.}\\
