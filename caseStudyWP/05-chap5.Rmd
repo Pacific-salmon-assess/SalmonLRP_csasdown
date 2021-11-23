@@ -598,7 +598,7 @@ KH suggestions for overall discussion topics for this chapter:
 
 4) How did the strategy of increasing the number of CUs included in LRP status assessment (5 CUs partial) compare to using a consistent number of CUs in all years (4 CUs full)? 
 - In this case, adding more CUs was more precautionary, but this result is expected to be specific to this case study. In other circumstances, it may be less precautionary.  However, a key result is that there was a difference. This is not surprising given the low correlation of CUs within this SMU; we do not expect CUs to be interchangable.  Therefore; it makes sense to use as much data as possible to represent variable dynamics within the CU/  
-CH: comment. Yes, adding CUs can result in more optimistic or pessimistic assessments in terms of ppn of CUs > red. However, SMU can only be untriggered ('healthy') when 100% of CUs above red, so adding more CUs may increase status by increasing the % as it approaches 100, but it will never get to 100 with just the inclusion of new data.
+CH: comment. Yes, adding CUs can result in more optimistic or pessimistic assessments in terms of ppn of CUs > red. However, SMU can only be untriggered ('healthy') when 100% of CUs above red, so adding more CUs may increase status by increasing the % as it approaches 100, but it will never get to 100 with just the inclusion of new data.  
 
 5) Why didn;t abundance-based LRPs not work for this case study
 
