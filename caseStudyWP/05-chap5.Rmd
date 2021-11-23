@@ -93,7 +93,7 @@ CH comment Nov 18: I suggest we remove this sentence, as we have a sub-section i
 
 I suggest listing multidim method first to give it higher priority.  Maybe something like:
 
-"For this case study, we consider two approaches for characterizing CU status: 
+"For this case stuIdy, we consider two approaches for characterizing CU status: 
 (1) Rapid multidimesional scanning tool 
 (2) CU-level abundance relative to a lower percentile benchmark
 

@@ -3,13 +3,25 @@
 ## Background & Motivation for Project
 
 <!--
+CW: I attempted putting the bullet points into text format
+-->
 
+The revised Fisheries act received Royal assent in June 2019. Changes to the Act include fish stocks provisions that introduce legal requirements to promote sustainability, avoid Limit Reference Points (LRPs) and implement rebuilding plans for depleted stocks. Under these fish stock provisions, LRPs will be required for major fish stocks prescribed in regulation. LRPs represent the level below which serious harm is occurring,  defining the trigger below which rebuilding plans will be required. 
+
+
+
+<!--
+Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
+
+CW: I am not sure what  SSF is. 
 -->
 
 
 - Revised Fisheries Act received Royal Assent in June 2019.  
 -	Changes to the Act include fish stocks provisions that introduce legal requirements to promote sustainability, avoid Limit Reference Points (LRPs) and implement rebuilding plans for depleted stocks.
 -	Under these fish stock provisions, LRPs that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  LRPs define the trigger below which rebuilding plans will be required. 
+
+
 -	Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
 
 "Sainsbury (2008) states that LRPs “… are set primarily on biological grounds to protect the stock from serious, slowly reversible or irreversible fishing impacts…”. "(see Kronlund et al 2018, p.4)
@@ -63,7 +75,7 @@ The recent revision to the Fisheries Act introduced legal requirements to promot
 
 
 
- The use of LRPs, in isolation or as part of harvest control rules has been gaining considerable interest over the past decades. Reviews of the application of harvest control rules and reference points can be found in @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010. @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest control rules and management procedures in data-poor fisheries. In Canada, @sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and limit reference points before the publication of the PA policy in 2006. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 15 years after the publication of the PA policy, a review by @marentetteSpecificationPrecautionaryApproach2021 showed that the principles of the PA policy, including the adoption of LRPs, are now widespread in the management of Canadian stocks. This review was based on a survey of 177 Canadian stocks of cultural, economic and/or environmental importance, excluding salmonids and transboundary stocks. They identified that 102 stocks had adopted LRPs, although the method used to estimate the LRPs varied considerably among stocks. @kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international Policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. They also discuss the challenges associated with estimating LRPs, including difficulties in diagnosing serious harm and the potential impacts of non-stationarity.
+ The use of LRPs, in isolation or as part of harvest control rules has been gaining considerable interest over the past decades. Reviews of the application of harvest control rules and reference points can be found in @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010. @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest control rules and management procedures in data-poor fisheries. In Canada, @sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and LRPs before the publication of the PA policy in 2006. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 15 years after the publication of the PA policy, a review by @marentetteSpecificationPrecautionaryApproach2021 showed that the principles of the PA policy, including the adoption of LRPs, are now widespread in the management of Canadian stocks. This review was based on a survey of 177 Canadian stocks of cultural, economic and/or environmental importance, excluding salmonids and transboundary stocks. They identified that 102 stocks had adopted LRPs, although the method used to estimate the LRPs varied considerably among stocks. @kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international Policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. They also discuss the challenges associated with estimating LRPs, including difficulties in diagnosing serious harm and the potential impacts of non-stationarity.
 
 
  In terms of Salmonids, @portleyLimitReferencePoints2014 reviewed the use of LRPs and lower benchmarks (or their absence) for Pacific salmon stocks in the U.S. (Alaska and Pacific Northwest), Canada, Russia, and Japan. They highlight the role of lower benchmarks and LRPs in allowing for cross-jurisdictional comparisons of sustainability. In Canada, @chaputConsiderationsDefiningReference2012 reviewed the use of reference points, including lower benchmarks and LRPs, in the management of salmonids and other semelparous species. The review was focused on the applications of lower benchmarks at the Conservation Unit (CU) level, providing a comprehensive overview of the different methods available to assess CU status and their historical applications. @chaputConsiderationsDefiningReference2012 also provide considerations on managing multiple stocks as unit, e.g. multiple CUs as an SMU, highlighting that mixed stock management requires more precautionary benchmarks to ensure that all sub units remain above their lower benchmarks.
