@@ -19,7 +19,8 @@ report_number: nnn
 region: Pacific Region
 citation_other_language: "Holt, C.A., Holt, K., Warkentin, L., et autres. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2021/nnn. iv + 13 p."
 abstract: |
-  Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  Limit Reference Points are required by law under the new Fish Stocks provisions of the revised Fisheries Act for major fish stocks prescribed under regulations. ....
 
   Start new paragraphs after a blank line and with 2 spaces indent. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 header: "Draft working paper --- Do not cite or circulate" # or "" to omit

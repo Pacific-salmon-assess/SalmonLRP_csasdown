@@ -2,49 +2,17 @@
 
 ## Background & Motivation for Project
 
-<!--
 
--->
-
-
-- Revised Fisheries Act received Royal Assent in June 2019.  
--	Changes to the Act include fish stocks provisions that introduce legal requirements to promote sustainability, avoid Limit Reference Points (LRPs) and implement rebuilding plans for depleted stocks.
--	Under these fish stock provisions, LRPs that represent the level below which serious harm is occurring will be required for major fish stocks prescribed in regulation.  LRPs define the trigger below which rebuilding plans will be required. 
--	Definition of a LRP under SFF, mentioning impacts on ecosystem, such as dependent species (see Pacific herring CSAS for an example), Fisheries Act, etc
-
-"Sainsbury (2008) states that LRPs “… are set primarily on biological grounds to protect the stock from serious, slowly reversible or irreversible fishing impacts…”. "(see Kronlund et al 2018, p.4)
-
-Failing to protect stocks above LRP means that impacts of fishing may be long term and only slowly reversible if at all.
+Amendments to the Canadian Fisheries Act (2019) include new Fish Stocks provisions that introduce legal
+obligations to manage stocks to promote sustainability and avoid limit reference points, LRPs {@dfoScienceAdvicePrecautionary202}. The provisions also require plans to rebuild fish stocks that have declined to, or below, an LRP while taking into account the biology of the fish and environmental conditions facing the stock. These obligations apply to major fish stocks that are prescribed under regulations. 
+These revisions reinforce the previously established DFO policies to manage stocks in line with the precautionary approach, including [The Fishery Decision Making Framework Incorporating the Precautionary Approach](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm)[@dfoFisheryDecisionMakingFramework2009], also known as DFO's Precautionary Approach Framework within the [Sustainable Fisheries Framework](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/overview-cadre-eng.html) and Canada's [Wild Salmon Policy](https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html, DFO's implementation of the precautionary approach for Pacific salmon [@dfoCanadaPolicyConservation2005].
 
 
--	“The choice of LRP needs to be feasible (separate from, but can be operationalized by, appropriate management measures), defensible (consistent with best practices), reliably estimated, and in line with the intent of the Precautionary Approach Policy regarding serious harm (DFO 2009).“ (DFO NHQ) 
+Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities (DFO 2009). It is also generally described in terms of impaired productivity, where declines are irreversible or only slowly reversible, e.g., due to allee effects [@kronlundSelectionRoleLimit2018]. Sustainable fisheries management is based on the assumptions of that rate of population increase is reduced as density dependence weakens at low abundances. However, increased predation rates or inability to find mates at low abundances may actual reduce the the rate of population increase [@chenIncorporatingAlleeEffects2002a]. Failing to protect stocks above the LRP means that impacts of human disturbances such as fishing may be long term and only slowly reversible if at all.
 
-<!--CH comment: mention that LRPs identified under DFO's Fisheries Sustainability checklist are typically management operational control points, and not biological LRPs per se-->
+LRPs are biologically based values that are separate from management measures, but can be used to inform management decisions. For example, LRPs can be used to identify operational control points which are points where management actions are triggered within harvest control rules, but are not necessarily operational control points themselves. Operational control points are identified to achieve a suite of biological and socioeconomic objectives, beyond those associated with serious harm, usually by a diverse range of managers and stakeholders.
 
-Scales of Pacific salmon assessment reporting
-
-1. Wild Salmon Policy
-2. COSEWIC 
-3. Pacific Salmon Treaty Management Units
-4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. It is likely that SMUs may be updated as managed approaches evolve; reviewing SMU definitions is outside the scope of this working paper. 
--Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)<!--CH comment: confirm with Diana Dobson/Ron that SMUs always contain one or more CUs, never partial CUS-->
-
--	Establish that LRPs for salmon should be consistent with the WSP
--	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
--	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
-
--- Enhancement not included
-
-
-<!-- Suggested text from Sue when reviewing case study paper: 
-
-An management unit (MU) is the group level LRPs are evaluated on. For Pacific Salmon, an MU is comprised of one or more CUs, where a CU is a fundamental unit of biodiversity for Pacific salmon. It is ‘a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe, such as human lifetime or a specified number of salmon generations.’ (DFO 2005).
-
-Pacific Salmon given their complex population structure, and freshwater and marine life stages, have unique considerations relative to marine species. For this reason, fisheries, which operate at the MU scale, is not the only management action that can be used to improve salmon production. In fact, catch has been considerably reduced in recent years (see SOPO Grant et al. 2021).  Habitat management and hatchery management are playing an increasing role in actions required to support salmon adaptation to climate change, and these require CU considerations within habitat aggregations, or down to the population level for hatchery ones. For marine species, the only lever is fisheries, so a single aggregate MU that relates to this scale makes most sense.
-
-K.Holt note: some of this may be best in guidance paper?
-
--->
+<!--CH side note:  DFO's Fisheries Sustainability checklist are typically management operational control points, and not biological LRPs per se-->
 
 
 
@@ -55,18 +23,12 @@ Consider changing this subtitle to "Reference Points and management benchmarks f
 
  -->
 
- 
- 
+<!--CH I moved the reference to other policies up, and am trying to differentiate LRPs from OCPs, though LRPs can inform OCPs (and are used in them sometimes) I'd like to distinguish them at least theoretically, so added some text explicitly on this above and made some revisions here--> 
+
+LRPs are commonly used in the assessment and management for marine fisheries when they are used to inform harvest control rules. Reviews of the application of harvest control rules and reference points can be found in @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010. @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest control rules and management procedures in data-poor fisheries. In Canada, @sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and limit reference points before the publication of the PA policy in 2006. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 15 years after the publication of the PA policy, a review by @marentetteSpecificationPrecautionaryApproach2021 showed that the principles of the PA policy, including the adoption of LRPs, are now widespread in the management of Canadian stocks. This review was based on a survey of 177 Canadian stocks of cultural, economic and/or environmental importance, excluding salmonids and transboundary stocks. They identified that 102 stocks had adopted LRPs, although the method used to estimate the LRPs varied considerably among stocks. @kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international Policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. Diagnosing where serious harm is occurring is a pervasive challenge when identifying LRPs, as is addressing the impacts of non-stationarity in underlying biological processes such as natural mortality [@kronlundConsiderationsDesignRebuilding2021].
 
 
-The recent revision to the Fisheries Act introduced legal requirements to promote sustainability, maintain fish stocks above LRPs and implement rebuilding plans for depleted stocks in Canada [@dfoScienceAdvicePrecautionary2021]. These revisions reinforce the previously established DFO policies to manage stocks in line with the precautionary approach. The DFO policy documents "Harvest Decision-Making Framework Incorporating the Precautionary Approach" (PA Policy) [@dfoHarvestStrategyCompliant2006] and "Canada's Policy for conservation of Wild Pacific Salmon" (WSP) [@dfoCanadaPolicyConservation2005] already recommended the establishment of LRPs to protect fish stocks from serious harm. In the following paragraphs we provide a brief overview of examples and review papers on the implementation of LRPs in Canada and other jurisdictions.
-
-
-
- The use of LRPs, in isolation or as part of harvest control rules has been gaining considerable interest over the past decades. Reviews of the application of harvest control rules and reference points can be found in @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010. @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest control rules and management procedures in data-poor fisheries. In Canada, @sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and limit reference points before the publication of the PA policy in 2006. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 15 years after the publication of the PA policy, a review by @marentetteSpecificationPrecautionaryApproach2021 showed that the principles of the PA policy, including the adoption of LRPs, are now widespread in the management of Canadian stocks. This review was based on a survey of 177 Canadian stocks of cultural, economic and/or environmental importance, excluding salmonids and transboundary stocks. They identified that 102 stocks had adopted LRPs, although the method used to estimate the LRPs varied considerably among stocks. @kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international Policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. They also discuss the challenges associated with estimating LRPs, including difficulties in diagnosing serious harm and the potential impacts of non-stationarity.
-
-
- In terms of Salmonids, @portleyLimitReferencePoints2014 reviewed the use of LRPs and lower benchmarks (or their absence) for Pacific salmon stocks in the U.S. (Alaska and Pacific Northwest), Canada, Russia, and Japan. They highlight the role of lower benchmarks and LRPs in allowing for cross-jurisdictional comparisons of sustainability. In Canada, @chaputConsiderationsDefiningReference2012 reviewed the use of reference points, including lower benchmarks and LRPs, in the management of salmonids and other semelparous species. The review was focused on the applications of lower benchmarks at the Conservation Unit (CU) level, providing a comprehensive overview of the different methods available to assess CU status and their historical applications. @chaputConsiderationsDefiningReference2012 also provide considerations on managing multiple stocks as unit, e.g. multiple CUs as an SMU, highlighting that mixed stock management requires more precautionary benchmarks to ensure that all sub units remain above their lower benchmarks.
+In terms of Salmonids, @portleyLimitReferencePoints2014 reviewed the use of LRPs and lower benchmarks (or their absence) for Pacific salmon stocks in the U.S. (Alaska and Pacific Northwest), Canada, Russia, and Japan. They highlight the role of lower benchmarks and LRPs in allowing for cross-jurisdictional comparisons of sustainability. In Canada, @chaputConsiderationsDefiningReference2012 reviewed the use of reference points, including lower benchmarks and LRPs, in the management of salmonids and other semelparous species. The review was focused on the applications of lower benchmarks at the Conservation Unit (CU) level, providing a comprehensive overview of the different methods available to assess CU status and their historical applications. @chaputConsiderationsDefiningReference2012 also provide considerations on managing multiple stocks as unit, e.g. multiple CUs as an SMU, highlighting that mixed stock management requires more precautionary benchmarks to ensure that all sub units remain above their lower benchmarks.
 
 
 
@@ -85,6 +47,38 @@ CW: Do you know of any additional WSP assessment that could be added to the list
 
  Although the traditional application of the precautionary approach for the management of Pacific salmon has been focused on setting lower management benchmarks for individual salmon CUs [dfoCanadaPolicyConservation2005], the revised fisheries act includes language indicating that a single LRP may be needed for each "Major Fish Stock" [@dfoScienceAdvicePrecautionary2021]. In the context of Pacific salmon, "Major Fish Stocks" are defined as Salmon Stock Management Units (SMUs), which are groups of CUs that are managed as a unit to achieve joint status.  This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain all CUs within an SMU above their lower management benchmarks. The present work expands on the previous work by providing guidance on establishing LRPs for management of Pacific salmon SMUs. 
 
+
+Scales of Pacific salmon assessment reporting
+
+1. Wild Salmon Policy
+2. COSEWIC 
+3. Pacific Salmon Treaty Management Units
+4. SMUs intended to represent “major fish stocks”, which the fish stock provisions in the new Fisheries Act will be applied to.  The proposed functional definition of an SMU is a group of one or more Wild Salmon Policy Conservation Units (CUs) that are managed together with the objective of achieving a joint status. It is likely that SMUs may be updated as managed approaches evolve; reviewing SMU definitions is outside the scope of this working paper. 
+-Include consequences of using SMUs not aligned with CUs (i.e,  could lose component CUs if managing only to the aggregate SMU without considering of CU-level diversity)<!--CH comment: confirm with Diana Dobson/Ron that SMUs always contain one or more CUs, never partial CUS-->
+
+-	Establish that LRPs for salmon should be consistent with the WSP
+-	Unique characteristics of Pacific salmon data and assessment: e.g., diverse data available on various characteristics of population dynamics,	Multiple metrics and benchmarks are available that reflect this diversity
+-	Project Goal: Provide analysts and managers with methodological tools and guidance to identify LRPs for SMUs.   Having guidelines that have been reviewed and published through CSAS will provide a scientific basis for individual applications of the methodology throughout the Pacific Region in consultation with Indigenous groups and stakeholders, and ensure consistency in application.
+
+-- Enhancement not included
+
+<!--CH notes to add
+•	Intro- maintaining CUs, portfolio effects to add resilience to threats over the long term, maintaining underlying biodiversity is important so it can buffer production during periods of declining productivity, and also ensure we have the diversity to maintain a species through environmental change
+•	Intro: add section on scoping, as outlines in TWG Mtg #16 pptx. Also, do any of the principles from the ppt need to be brought into the paper?
+•	Intro when defining Lower Benchmark: “the lower benchmark is defined as a level of abundance high enough to ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction” : SG: In practice this hasn’t been applied really. In the end a Red status CU largely aligns with an EN COSEWIC DU, etc. etc. I have looked at these comparsisons and really both WSP and COSEWIC align, we are not really creating any buffers b/w COSEWIC listing…so I would delete this as it just has confused things all along. 
+o	“We can revise the background to say that methods have been developed that can calculate benchmarks for all CUs; however, DFO does not yet have a formal CU status for most CUs outside of select Fraser / Southern BC stocks.  We can also spend some time better describing WSP status assessments, as well as how they link to the aggregate LRP requirements of the fisheries act to help reduce the disconnect.    
+o	”
+-->
+
+<!-- Suggested text from Sue when reviewing case study paper: 
+
+An management unit (MU) is the group level LRPs are evaluated on. For Pacific Salmon, an MU is comprised of one or more CUs, where a CU is a fundamental unit of biodiversity for Pacific salmon. It is ‘a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe, such as human lifetime or a specified number of salmon generations.’ (DFO 2005).
+
+Pacific Salmon given their complex population structure, and freshwater and marine life stages, have unique considerations relative to marine species. For this reason, fisheries, which operate at the MU scale, is not the only management action that can be used to improve salmon production. In fact, catch has been considerably reduced in recent years (see SOPO Grant et al. 2021).  Habitat management and hatchery management are playing an increasing role in actions required to support salmon adaptation to climate change, and these require CU considerations within habitat aggregations, or down to the population level for hatchery ones. For marine species, the only lever is fisheries, so a single aggregate MU that relates to this scale makes most sense.
+
+K.Holt note: some of this may be best in guidance paper?
+
+-->
 
 
 
