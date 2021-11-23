@@ -1,4 +1,4 @@
-Scenario,CU status method,Scenario Name,Data used,Number of CUs,SCS,NEVI,UK,L,BI,GS,HSBI,Priority,Question to answer,Why?,Note
+Scenario,CU status method,Scenario Name,Data used,Number of CUs,SCS,NEVI,UK,LB,BI,GS,HSBI,Priority,Question to answer,Why?,Note
 1,Percentile,1. Percentile- 4 CUs full ,"no CU infilled CUs (no Upper Knight or Bute Inlet), no Bute Inlet or SCC (NA percentile benchmark)",4,-,Y,-,Y,-,Y,Y,1,How do percentile and decision tree compare?,Minimum best data,
 2,Percentile,2. Percentile- 5 CUs partial ,"no CU-level infilled years*CUs, no Bute Inlet or SCC (NA percentile benchmark)",4 or 5 depending on year,-,Y,YP,Y,-,Y,Y,1,Does LRP status change with more data?,Compare with scenario 2,
 3,Decision tree,3. Decision Tree- 4 CUs full ,"no CU infilled CUs  (no Upper Knight or Bute Inlet), no Bute Inlet or SCC (NA percentile benchmark)",4,-,Y,-,Y,-,Y,Y,1,How do percentile and decision tree compare?,"Minimum best data, compare with scenario 2 ",
