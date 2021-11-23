@@ -13,8 +13,19 @@ output:
 
 The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs of chum salmon (*Oncorhynchus keta*) from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats.
 
+```{r CU-summary, echo=FALSE}
+d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
+csasdown::csas_table(d,
+   align = c('l', 'l', 'c', 'c'),
+   caption = #ifelse(french,
+                   #"French goes here",
+                   "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods.")
+            #)
+```
+
 <!-- CW: There may be value in describing the ISC-NF Chum SMU with a little more detail, e.g. list all CU's and their acronyms, if we want to use those in future figures and tables. Also mention if there are known sub populations within the identified CUs (this seems to be an important discussion topic?), maybe provide a table similar to the one in the coho chapter \@ref(tab:cohoCU2SP)]
 
+LW: Added table. I included a column with summer run streams (not included in this analysis). If that is confusing I can remove that column.
 -->
 
 The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. <!-- KH: Suggest moving this last sentence on 60% missing to data section to bulk up that section a bit -->In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. <!--KH addition: Wild Salmon Policy status assessments have not been done on any ISC Chum CUs.  -->
@@ -145,7 +156,20 @@ CH: I agree, ans suggest removing the last sentence above.
 knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 ```
 
+
+```{r holt_tab6b, echo=FALSE}
+d <- readr::read_table("./data/holt_table6.xslx")
+csasdown::csas_table(d,
+   align = c('l', 'l', 'c', 'c'),
+   caption = #ifelse(french,
+                   #"French goes here",
+                   "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods.")
+            #)
+```
+
+
 <!-- 
+
 
 Sue Grant: this is a table, not a figure
 
@@ -270,7 +294,7 @@ Also, we may need to define the acronyms in the table below. I would also like t
 -->
 
 ```{r LRP-scenarios, echo=FALSE}
-d <- read.csv("data/scenarios compare CU status methods.csv")
+d <- read.csv("data/scenarios compare CU status methods.csv", check.names = FALSE)
 csasdown::csas_table(d[1:6,c(3,6:12)],
    align = 'l',
    caption = #ifelse(french,
