@@ -52,6 +52,10 @@ knitr::include_graphics("figure/decision_tree.png")
 ```
 
 
+<!--
+TO DO: Luke, can you please update this figure with updated SOTS decision tree.
+-->
+
 
 The rapid multi-dimensional scanning tool uses generational mean spawner abundances as a basis for comparison at each node of the decision tree, including when comparing against absolute abundance thresholds (e.g., 1500 spawners), abundance-based lower benchmarks (e.g., $S_{gen}$ or percentile), and abundance-based upper benchmarks (e.g., 0.8$S_{MSY}$ or percentile). Spawner abundances are also smoothed using generational averages prior to calculating trends in spawner abundance over time (Pestal et al., in prep).   
 
