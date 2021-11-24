@@ -156,41 +156,6 @@ CH: I agree, ans suggest removing the last sentence above.
 knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 ```
 
-<!--
-LW attempt to recreate Holt et al. 2018 Table 6 
-```{r holt_tab6b, echo=TRUE}
-read.csv("data/holt_table6.csv", check.names = FALSE) %>% 
-  mutate_all(function(x){gsub("\\\\n", "\n", x)}) %>% 
-  mutate_all(kableExtra::linebreak) %>%
-  mutate_all(function(x){gsub("%", "\\\\%", x)}) %>% 
-  mutate_all(function(x){gsub("emph\\{", "\\\\emph\\{", x)}) %>% 
-  mutate(`Overarching goal` = ifelse(is.na(V1),
-                                     "",
-                                     V1)) %>% 
- csas_table(format = "latex",
-             escape = FALSE,
-             font_size = 12,
-             caption = ifelse(french,
-                              "French goes here",
-                              "Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.")) %>%
-  
-  
-  kableExtra::row_spec(1, hline_after = TRUE) %>% 
-  kableExtra::row_spec(2, extra_latex_after = "\\cmidrule(l){2-2}") %>% 
-  kableExtra::row_spec(3, hline_after = TRUE) %>% 
-  kableExtra::row_spec(4, extra_latex_after = "\\cmidrule(l){2-2}") %>% 
-  kableExtra::row_spec(5, hline_after = TRUE) %>% 
-  kableExtra::row_spec(6, hline_after = TRUE) %>%
-  kableExtra::column_spec(column=1, width = "10em") %>%
-  kableExtra::column_spec(column=2, width = "10em") %>%
-  kableExtra::column_spec(column=3, width = "20em") %>%
-  kableExtra::column_spec(column=4, width = "20em") %>%
-  kableExtra::column_spec(column=5, width = "20em")
-
-            #)
-```
--->
-
 <!-- 
 
 
