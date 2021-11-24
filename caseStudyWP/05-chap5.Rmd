@@ -165,7 +165,7 @@ knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 \caption{Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.}
 \begin{tabular}{l l p{2.5cm} p{2.5cm} p{2.5cm}}
 \hline       &     & \multicolumn{3}{l}{Harvest rate}\\ 
-& & \rotatebox{90}{<20\%} & 20-40\% & 40-60 \% \\
+& & \rotatebox{90}{ \parbox{1.5cm}{<20\% and wrap it!}} & 20-40\% & 40-60 \% \\
 \hline
 Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) \\
 & 2.5-4 & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) & Further evaluation required \\
