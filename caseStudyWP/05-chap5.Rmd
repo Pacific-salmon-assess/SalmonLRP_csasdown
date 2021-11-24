@@ -16,7 +16,7 @@ The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs 
 ```{r CU-summary, echo=FALSE}
 d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
 csasdown::csas_table(d,
-   align = c('l', 'l', 'c', 'c'),
+   align = c('l', 'c', 'c'),
    caption = #ifelse(french,
                    #"French goes here",
                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods.")
@@ -152,18 +152,13 @@ CH: I agree, ans suggest removing the last sentence above.
 --> 
 
 
-```{r holt-tab6, fig.cap="Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/holt_et_al_2018_table6.png")
-```
-
-
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
 \caption{Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.}
 \begin{tabular}{l l p{2.5cm} p{2.5cm} p{2.5cm}}
 \hline       &     & \multicolumn{3}{l}{Harvest rate}\\ 
-& & \rotatebox{90}{ \parbox{1.5cm}{<20\% and wrap it!}} & 20-40\% & 40-60 \% \\
+& & <20\% & 20-40\% & 40-60 \% \\
 \hline
 Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) \\
 & 2.5-4 & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) & Further evaluation required \\
@@ -174,7 +169,7 @@ Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th
 \end{table}
 
 
-@holtEvaluatingBenchmarksBiological2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (figure \@ref(fig:holt-tab6)). Based on these recommendations, Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ percentile as a lower benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50^th^ percentile lower benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
+@holtEvaluatingBenchmarksBiological2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (figure \@ref(tab:holt-tab6)). Based on these recommendations, Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ percentile as a lower benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50^th^ percentile lower benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
  <!--
     CW: I think that there might be some value in including the benchmarks used for each CU in a table, in addition to this text. Just for quick reference. 
  -->
@@ -292,15 +287,26 @@ Also, we may need to define the acronyms in the table below. I would also like t
 
 -->
 
-```{r LRP-scenarios, echo=FALSE}
-d <- read.csv("data/scenarios compare CU status methods.csv", check.names = FALSE)
-csasdown::csas_table(d[1:6,c(3,6:12)],
-   align = 'l',
-   caption = #ifelse(french,
-                   #"French goes here",
-                   "Scenarios using different subsets of data (CU names abbreviated) and methods to assign LRP status. 'Y' indicates a full time series, 'YP' indicates a time series was included but is partial (missing years). Bute Inlet and Southern Coastal Streams do not have appropriate percentile benchmarks. 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.")
-            #)
-```
+
+\renewcommand*{\arraystretch}{1.5}
+\begin{table}[ht]
+\centering
+\caption{Scenarios using different subsets of data (CU names abbreviated) and methods to assign LRP status. 'Y' indicates a full time series, 'YP' indicates a time series was included but is partial (missing years). Bute Inlet and Southern Coastal Streams do not have appropriate percentile benchmarks. 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.}
+\begin{tabular}{l c c c c c c c }
+\hline    
+Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ North East Vancouver Island} &  \rotatebox{90}{ Upper Knight} &  \rotatebox{90}{ Loughborough} &  \rotatebox{90}{ Bute Inlet} & \rotatebox{90}{ Georgia Strait} & \rotatebox{90}{ Howe Sound-Burrard Inlet}\\ 
+\hline
+1. Percentile- 4 CUs full       & - & Y & -  & Y & -  & Y & Y \\
+2. Percentile- 5 CUs partial    & - & Y & YP & Y & -  & Y & Y \\
+3. Decision Tree- 4 CUs full    & - & Y & -  & Y & -  & Y & Y \\
+4. Decision Tree- 5 CUs cull    & Y & Y & -  & Y & -  & Y & Y \\
+5. Decision Tree- 7 CUs partial & Y & Y & YP & Y & YP & Y & Y \\
+6. Decision Tree- 5 CUs partial & - & Y & YP & Y & -  & Y & Y \\
+\hline
+\end{tabular}
+(\#tab:LRP-scenarios)
+\end{table}
+
 
 
 **LRPs Based on Aggregate Abundance and Logistic Regression**
