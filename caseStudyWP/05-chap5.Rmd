@@ -156,17 +156,72 @@ CH: I agree, ans suggest removing the last sentence above.
 knitr::include_graphics("figure/holt_et_al_2018_table6.png")
 ```
 
-<!--
-LW attempt to recreate Holt et al. 2018 Table 6 
-```{r holt_tab6b, echo=TRUE}
-read.csv("data/holt_table6.csv", check.names = FALSE) %>% 
-  mutate_all(function(x){gsub("\\\\n", "\n", x)}) %>% 
-  mutate_all(kableExtra::linebreak) %>%
-  mutate_all(function(x){gsub("%", "\\\\%", x)}) %>% 
-  mutate_all(function(x){gsub("emph\\{", "\\\\emph\\{", x)}) %>% 
-  mutate(`Overarching goal` = ifelse(is.na(V1),
-                                     "",
-                                     V1)) %>% 
+
+
+
+\renewcommand*{\arraystretch}{1.5}
+\begin{table}[ht]
+\centering
+\caption{Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.}
+\begin{tabular}{l l p{2.5cm} p{2.5cm} p{2.5cm}}
+\hline       &     & \multicolumn{3}{l}{Harvest rate}\\ 
+& & <20\% & 20-40\% & 40-60 \% \\
+\hline
+Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) \\
+& 2.5-4 & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) & Further evaluation required \\
+& 1.5-2.5 & *50th (lower and upper) & Further evaluation required & Further evaluation required \\               \hline
+\end{tabular}
+(\#tab:holt-tab6)
+\end{table}
+
+
+
+
+<!--LW attempt to recreate Holt et al. 2018 Table 6 
+
+
+
+
+
+\begin{table}[ht]
+\centering
+\caption{Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.}
+\begin{tabular}{l l l l l}
+\hline
+ & & \multicolumn{3}{l}{Harvest rate}  \\ 
+\hline
+&& <20\% & 20-40\% & 40-60% \\
+Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) \\
+& 2.5-4 & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) & Further evaluation required \\
+& 1.5-2.5 & *50th (lower and upper) & Further evaluation required & Further evaluation required \\                   
+\hline
+\end{tabular}
+(\#tab:chinook-Overview)
+\end{table}
+
+
+
+\caption{Selected percentile-based lower and upper benchmarks identified to be similar or higher in value than stock-recruitment based benchmarks under the WSP, along gradients in productivity (recruits/spawner) and average harvest rates. * denotes the low-productivity scenario where lower and upper Ricker-based benchmarks are very close to one another, resulting in lower and upper percentile-based benchmarks that are the same. From Holt et al. 2018.}
+
+
+& & \multicolumn{3}{l}{Harvest rate}  \\ 
+\hline
+\endhead
+&& <20\% & 20-40\% & 40-60% \\
+Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) \\
+& 2.5-4 & 25th (lower) 50th (upper) & 25th (lower) 50th (upper) & Further evaluation required \\
+& 1.5-2.5 & *50th (lower and upper) & Further evaluation required & Further evaluation required \\
+
+
+{r holt_tab6b, echo=TRUE}
+# read.csv("data/holt_table6.csv", check.names = FALSE) %>% 
+#  mutate_all(function(x){gsub("\\\\n", "\n", x)}) %>% 
+#  mutate_all(kableExtra::linebreak) %>%
+#  mutate_all(function(x){gsub("%", "\\\\%", x)}) %>% 
+#  mutate_all(function(x){gsub("emph\\{", "\\\\emph\\{", x)}) %>% 
+#  mutate(`Overarching goal` = ifelse(is.na(V1),
+#                                     "",
+#                                     V1)) %>% 
  csas_table(format = "latex",
              escape = FALSE,
              font_size = 12,
@@ -188,7 +243,6 @@ read.csv("data/holt_table6.csv", check.names = FALSE) %>%
   kableExtra::column_spec(column=5, width = "20em")
 
             #)
-```
 -->
 
 <!-- 
@@ -369,7 +423,7 @@ Projection-based LRPs are an alternative aggregate-abundance LRP that we did not
 
 Two out of four CUs were below their percentile lower benchmark in 2018 (Figure \@ref(fig:chum-perc-status-static). Howe Sound-Burrard Inlet and Georgia Strait had status above their lower benchmarks.
 
-<!--
+
 <!--CH: "In supplementary analyses, we evaluated percentile benchmarks retrospectively for each year in time series using only data prior to that year."--> As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
 
 <!--CH: this next pgh should be moved to the section on Logistic regression-->
