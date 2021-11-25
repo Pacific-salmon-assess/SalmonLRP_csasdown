@@ -41,6 +41,7 @@ bibliography: bib/refs.bib
 # Any extra LaTeX code for the header:
 header-includes:
   - \usepackage{amsmath}
+  - \usepackage{graphics}
 # - \usepackage{tikz}
 ---
 

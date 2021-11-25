@@ -48,12 +48,24 @@ it may not be possible to estimate $S_{gen}$, as was seen in the Inside South Co
 
 ### Logistic regression-based LRPs
 
+
 Logistic regression-based LRPs are empirically derived from the past observations of SMU abundance and CU statuses. In this method we apply a logistic regression to identify historical abundance levels associated with probabilities that all component CUs have statuses above their lower benchmarks. Similarly to the proportion-based LRP, this aggregate abundance method depends on the outcomes of individual CU assessments, which are sensitive to structural assumptions underlying the CU-level benchmarks and data availability. 
+
+
+
+<!-- 
+KH: could consider adding to the above paragraph with something along these lines to tie together case studies a bit more (Note: I have duplicated the first few sentences, with some minor changes):
+
+Logistic regression-based LRPs are empirically derived from the past observations of SMU abundance and CU statuses. By fitting a logistic regression to these historical data, we identify historical abundance levels associated with probabilities that all component CUs have statuses above their lower benchmarks. Similarly to the proportion-based LRP, this aggregate abundance method depends on the outcomes of individual CU assessments, which are sensitive to structural assumptions underlying the CU-level benchmarks and data availability. Logistic regression-based LRPs could only be estimated for one of our three case study SMUs, which suggests that they may only be an option for a small proportion of SMUs. Logistic regression models could not be reliably fit for WCVI Chinook and South Coast Chum SMUs. In the case of WCVI Chinook, lack of contrast in available data was the key limitation, while in the case of South Coast Chum, the limitation was an apparent lack of an underlying relationship between CU status and aggregate SMU abundances. Even for Interior Fraser Coho where a logistic regression fit was possible, estimates did not converge for all retrospective years, and status estimates were sensitive to missing data. Taken together, our exploration of logistic regression LRPs for our three case studies highlighted several key limitations and disadvantages with this approach.
+
+-->
+
 <!--CH: i restructed the text below a bit-->
 
 There are several disadvantages of the logistic regression-based LRPs. First, our implementation of logistic-regression LRPs relied on a single metric for CU assessments, such as $S_{gen}$ or the distributional target method applied to the Interior Fraser River coho study case study, which is not consistent with the recommendation to to apply the Rapid Multidimensional Scanner tool for CU assessments within proportion-based LRPs. We did not include CU assessments based on the multidimensional approach for logistic-regression based LRPs in part because those statuses include trend metrics which introduce autocorrelation into CU statuses, a violation of logistic regression model (see Section 2 for more  details). 
 
 Second, logistic regression-based LRPs are only estimable when there are years when all CUs or sub-populations are above their lower benchmark and years when at least one CU is below their lower benchmarks. This was not the case for the WCVI Chinook study case due to one inlet always been below its lower benchmark. 
+<!-- KH: I wonder if this second point could be made more general to say that a limitation is that they are limited to conditions that have been historically observed. This can be a problem when there is poor contrast in historical data, as was the case for WCVI Chinook.  In this case, there were not years when all CUs or inlets were above their lower lower becnhmarks; howeever, it could equally apply to the opposite case where no CUs were observed to drop below their lower benchmark.  The dependence on hisorically observed conditions would also be a problem in there were changes in the synchrony of spawning abundances over time such that among-CU correlation changed over time.  
 
 Third, model diagnostics do not support logistic regressions and their associated LRPs when CU-level abundances are not correlated or only weakly correlated. For these SMUs, the aggregate abundances are not a significant indicator of individual CU statuses. Here, we found that logistic regression-based LRPs were estimable for interior Fraser coho (average correlation within CUS of 0.43) <!--I remember seeing the values of correlation between CU escapements(?), but I cannot find it in the current text. Where could I find those numbers? --> but not estimable for Inside South Coast Chum - Non-Fraser (average correlation within CUs of XX). Also, the wide rand in productivities and capacities among CUs for the Inside South Coast Chum case study contributed to the weak relationship between aggregate abundances and CU-level statuses. In general, model diagnostics as described in \@ref(MethodsChapters) can be used to support or reject logistic-regression based LRPs.
 
@@ -67,14 +79,41 @@ Third, model diagnostics do not support logistic regressions and their associate
 
 <!--
 CW Question: Why did we not apply the projection-based LRP to the Chum study case? Was is because we had no means of estimating the SR parameters for the Chum CUs? If that is the case, would it be correct to say that the projection-based LRP is not appropriate for data poor scenarios? 
+
 -->
 
 The projection-based LRPs approach relies on closed-loop simulation model to project future CU abundances. These projections are then used to identify the relationship between aggregate SMU abundances and the probabilities that all CUs are above their lower benchmarks, given a predefined level of exploitation. The most important requirement for our implementation of projection-based LRPs is the availability of information on productivity and capacity for the CUs within an SMU, and covariance in dynamics among them. Parameter estimates for productivity and capacity can be based on posterior distributions from stock recruitment analyses (see interior Fraser Coho study case, chapter \@ref(IFCChapter)) or more qualitatively from expert input, life-stage models, or watershed-area model estimates (see WCVI Chinook study case, chapter \@ref(WCVIchinookChapter)). We did not estimate projection-based LRPs for Inside South Coast Chum - Non-Fraser study case because peer-reviewed estimates of capacity and productivity were not available for the CUs within that SMU. <!--CH: I suggest omitting this last sentence because, they weren't available for WCVI chinook, yet we still did it, and same could have been true for ISC but we ran out of time. I have included some text in CH 5, which I think is sufficient to address this point without bringing it up again.-->
 
 The projection-based LRP approach is flexible and allows for consideration of structural uncertainty in the SMU population dynamics via consideration of alternative future scenarios. For example, for the WCVI chinook case study, sensitivity analyses were performed to assess the impacts of correlations in recruitment residuals and  variability in exploitation among inlets. For the interior Fraser coho study case, sensitivity analyses were performed regarding the variability in marine survival coefficient among CUs. Future implementations of the projection-based LRPs could also take into consideration shifts in stock recruitment parameters, and future changes in fishery exploitation rates. 
 
-We also demonstrated that the projection-based LRPs is sensitive to the assumed levels of exploitation rate in the projections. Higher exploitation rates resulted in higher required SMU aggregate abundance to ensure that all CUs remain above their lower benchmarks. The sensitivity to exploitation rate increases as variability among stock-recruitment parameters increase, and also as uncertainty in parameter estimates increase. This property of projection-based LRPs is explored in Appendix \@ref(sensitivity-of-projection-based-lrps-to-exploitation-rates). This feature of the approach could be used in future exercises to identify the optimum levels of exploitation, to ensure that the aggregate abundance LRP is in line with current observed abundances. 
+We also demonstrated that the projection-based LRPs is sensitive to the assumed levels of exploitation rate in the projections. Higher exploitation rates resulted in higher required SMU aggregate abundance to ensure that all CUs remain above their lower benchmarks. The sensitivity to exploitation rate increases as variability among stock-recruitment parameters increase, and also as uncertainty in parameter estimates increase. This property of projection-based LRPs is explored in Appendix \@ref(app:ERsensitivity-appendix). This feature of the approach could be used in future exercises to identify the optimum levels of exploitation, to ensure that the aggregate abundance LRP is in line with current observed abundances. 
  
+
+
+
+
+
+<!-- KH:
+
+I wonder if another discussion topic could be the dependence of LRP estimates on reliable estimates of CU status.    
+
+E.g.,:
+
+All of the LRP estimation methods we considered were based on status estimates for component CUs; regardless of whether it was a proportion-based or abundance-based method. As a result, the reliability of LRP estimates is a function of the reliability of individual CU status estimates. The effect of uncertainty in CU-level benchmarks on resulting estimates of LRP status was apparent in the Interior Fraser Coho case study where two different structural assumptions in stock recruitment model fit were considered. These two model fits resulted in different estimates of productivity and carrying capacity for individual CUs, as well as different estimates of Sgen. These two different model formulations resulted in different estimates of SMU status relative to LRPs over time for all LRP estimation methods considered for Interior Fraser Coho.    
+
+- Could we also draw on Carrie's sensitivity analysis of productivity when estimating projected LRPs here?  Different productivity assumptions led to different Sgens, which lead to different LRPs.
+
+- Could end this section by noting that the guidelines paper recommends that a peer-review of CU status estimates is required prior to developing LRPs. (I think Carrie mentioned this ... but should check guidlelines paper to confirm what it says.  I think Carrie said she had included 'reliabale CU status estimates' as a key principle??) 
+
+- Could then go on to discuss ways in which uncertainty in CU status can get rolled up into LRP estimates.  For example, integrated model fits for logistic regression propogate uncertainty through to LRP estimates. Or, model-averaging for projection-based (coho example). At this point, I don't think there are ways to incorporate uncertainty into CU status estimates from the multidimensional scanning tool. (Although, is SOTS working on this???)  May be something to flag as a research priority???   
+
+
+
+ 
+
+
+-->
+
 
 
 
