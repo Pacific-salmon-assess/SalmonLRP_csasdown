@@ -193,6 +193,7 @@ and $a$ is recruits-per-spawner at low productivity. Ricker $a$ values were appr
 
 Our approach to estimating $S_{gen}$ differed from that of @parkenHabitatbasedMethodsEstimate2006, because we derived productivity independently from the life-stage specific models, whereas @parkenHabitatbasedMethodsEstimate2006 estimated both $S_{MSY}$ and $S_{REP}$ from the watershed-area model thereby inferring mean estimates of productivity which were deemed unrealistically high for WCVI Chinook. 
 
+<!--CH: update these benchmarks in table and plot with results with more boostrapped samples. Just move file over?-->
 
 ```{r chinook-benchmarks}
 inlets <- c("Barkley", "Clayoquot", "Kyuquot", "Nootka/Esperanza", "Quatsino")
