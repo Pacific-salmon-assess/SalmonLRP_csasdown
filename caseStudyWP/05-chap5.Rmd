@@ -440,9 +440,9 @@ knitr::include_graphics('figure/chum-logistic-perc.pdf')
 
 
 
-<!--
+
 ```{r logistic-fit-diag-perc, echo=FALSE}
-download.file("https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/logisticFit_2018Output.rda",'./data/chum-diagnostics.rda', mode="wb" )
+download.file("https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/logisticFit_2018Outputv2.rda",'./data/chum-diagnostics.rda', mode="wb" )
 load("data/chum-diagnostics.rda")
 LRdiagOut
 ```
@@ -452,9 +452,9 @@ Deviance residuals spanned from -1.418606  1.691950 and Pearson's residuals span
 
 minimum sample size =37. sample size =63. Assumption 4 (sufficient sample size) is met.  
 
-pDRT = 0.1296465 . p value is >0.05, indicating that there is not significant improvement in fit with the variable (aggregate abundance)
+pDRT = 0.13 . p value is >0.05, indicating that there is not significant improvement in fit with the variable (aggregate abundance)
 
-quasiR2 = 0.03126051 . Value is low, indicating that the fit is not good. 
+quasiR2 = 0.03 . Value is low, indicating that the fit is not good. 
 
 confusion matrix: 
 
@@ -466,11 +466,32 @@ p value for B_0 = 0.0064. Significant at a=0.05 level.
 p value for B_1 = 0.19. Not significant at a=0.05 level.
 
 There was no evidence for auto-correlation in Pearsons's residuals or deviance residuals. assumption 2 (observations are independent of each other) is met. 
--->
-  
 
 
-The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Figure \@ref(fig:chum-logistic-perc)). The Box-Tidwell test indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that an assumption of logistic regression was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model. There was no evidence of outliers, and there was a sufficient sample size. The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The p-value was significant for the estimation of $B_{0}$, but not for $B_{1}$, the coefficient for aggregate abundances. There was no evidence for autocorrelation in residuals. Regressions based on $S_{gen}$ had similarly poor model fits (Figure \@ref(fig:chum-logistic-sgen). <!--CH remove Sgen-->
+
++-------------------------+--------------+
+| Diagnostic Test         | Sgen-Ricker  | 
++=========================+==============+
+| Box-Tidwell p-value     | 0.02         |
++-------------------------+--------------+   
+| Max. deviance residual  | 1.69         |
++-------------------------+--------------+
+| AR-1                    |              |
++-------------------------+--------------+
+| Wald p-values           |              | 
++-------------------------+--------------+
+| Goodness-of-fit p-value |              |
++-------------------------+--------------+
+| Pseudo-$R^2$            | 0.03         |
++-------------------------+--------------+
+| Hit Ratio (p= 50%)      | 0.7          |
++-------------------------+--------------+
+
+Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.  
+
+
+
+The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). The Box-Tidwell test indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that an assumption of logistic regression was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model. There was no evidence of outliers, and there was a sufficient sample size. The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The p-value was significant for the estimation of $B_{0}$, but not for $B_{1}$, the coefficient for aggregate abundances. There was no evidence for autocorrelation in residuals. Regressions based on $S_{gen}$ had similarly poor model fits (Figure \@ref(fig:chum-logistic-sgen). <!--CH remove Sgen-->
 
 <!-- CW: maybe move this paragraph up in the section?
 
