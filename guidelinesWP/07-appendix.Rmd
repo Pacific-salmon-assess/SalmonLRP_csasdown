@@ -7,7 +7,7 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # APPENDIX 1{#app:first-appendix}
 
-##  Resources for the implementation of LRPs (links to be added)
+## Resources for the implementation of LRPs (links to be added)
 
 - For single metrics, link to WSP metrics repository
 - For watershed-area model, link to Carrie's repository (currently private due to data concerns)
