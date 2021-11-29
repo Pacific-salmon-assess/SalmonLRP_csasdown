@@ -26,6 +26,10 @@ KH (Nov 19): removing below test as we are no longer using 'poor'
 The above definitions hinge on what defines 'poor' CU status. In the case of WSP status assessments, in which multiple metrics are combined to assign CU status, poor status corresponds with the 'red' status zone [@dfoCanadaPolicyConservation2005; @grant2017FraserSockeye2020]. 
 
 --> 
+<!--CH: add mention of hatchery contribution
+MA Nov 29: "Yes, I think that most CUs in most years could be reported as PNI >0.72.
+The exception would be Lower Thompson, which had some pretty high CU level proportion of hatchery escapement prior 2006. Could be worth noting that Lower Thompson may have been at the PNI level of 0.5-0.72 between 1998-2005 but in recent years the PNI has been greater than 0.72 on average." 
+
 
 
 ## PROPORTION-BASED LRPS
