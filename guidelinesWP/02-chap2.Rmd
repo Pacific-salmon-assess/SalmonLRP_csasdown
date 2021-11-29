@@ -2,6 +2,7 @@
 
 The development of LRPs for Pacific salmon was guided by four principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU. See \@ref(app:first-appendix) for a list of resources for implementing these methods.
 
+<!--CH : consider 4 cnadidant best practices criteria from TESA LRPs; (1) consistent with serios harm, (2) best avialble infomration (see US list for this), (3) operational useful, (4) reliably estimable. Is this list of 4 criteria documented and citable?-->
 <!-- CH comment: some of the text in this subsection may be moved to the Intro-->
 
 First, as described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” (DFO PA)<!--CH; add refrence-->. This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). <!--CH; add refrence-->
