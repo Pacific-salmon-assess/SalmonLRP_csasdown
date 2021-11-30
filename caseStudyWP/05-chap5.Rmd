@@ -26,6 +26,8 @@ csasdown::csas_table(d,
 <!-- CW: There may be value in describing the ISC-NF Chum SMU with a little more detail, e.g. list all CU's and their acronyms, if we want to use those in future figures and tables. Also mention if there are known sub populations within the identified CUs (this seems to be an important discussion topic?), maybe provide a table similar to the one in the coho chapter \@ref(tab:cohoCU2SP)]
 
 LW: Added table. I included a column with summer run streams (not included in this analysis). If that is confusing I can remove that column.
+
+I haven't heard about sub-population groupings for ISC CHum, it could be a thing but I'm not sure. 
 -->
 
 The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. <!-- KH: Suggest moving this last sentence on 60% missing to data section to bulk up that section a bit -->In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. <!--KH addition: Wild Salmon Policy status assessments have not been done on any ISC Chum CUs.  -->
@@ -427,47 +429,25 @@ CH: I agree
 
 The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figures \@ref(fig:chum-logistic-sgen), \@ref(fig:chum-logistic-perc)). In both cases, the sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark. Note that these regressions used the aggregate abundance of only the CUs used in the regressions, and excluded the other CUs. 
 
+The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). Pseudo $R^2$ was low (0.03), indicating that the fit is not good. The Box-Tidwell test (p-value = 0.02) indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that the assumption that the relationship between aggregate abundance and log-odds is linear was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model based on a Goodness of fit p value of 0.13 (>0.05), indicating that there is not significant improvement in fit with the variable (aggregate abundance). There was no evidence of outliers, and there was a sufficient sample size. The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The Wald p-value was not significant for $B_{1}$ (0.019), the coefficient for aggregate abundances. There was no evidence for autocorrelation in residuals. Regressions based on $S_{gen}$ had similarly poor model fits (Figure \@ref(fig:chum-logistic-sgen). <!--CH remove Sgen-->
 
+<!--     Also might be good to state what is a "good" diagnostic and what is a "bad". For example: the fact that "There was no evidence of outliers, and there was a sufficient sample size" ia a good thing, however it was not enough to overcome the deficiencies exposed by the other diagnostic criteria.  
 
-Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude. In addition, the correlation in escapement among these seven CUs is low. These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors. These seven CUs also have different numbers of populations. There are also differences in actual productivity (recruits per spawner) among CUs. 
-<!--CH: I suggest applying the 4 criteria for 'representativness' in the Guidelines paper to assess if it is reasonable to assess status of the SMU based on only 4 or 5. I can help you with the biogeoclimatic zones. I suggest emailing Pieter about similarity in threats among CUS-->
-
+    Is the ratio of correct classification based on a confusion matrix, or based on loo? maybe present loo results to be consistent with IF coho
+    -->
 ```{r chum-logistic-perc, fig.cap="Logistic regression of whether escapement of all component CUs were above their percentile benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes CUs where percentile benchmarks were appropriate (no Bute Inlet, Upper Knight, or Southern Coastal Streams)", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-perc.pdf')
 ```
 
-
-
-
-
+<!--
+Download diagnostic info for checking
 ```{r logistic-fit-diag-perc, echo=FALSE}
 download.file("https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/logisticFit_2018Outputv2.rda",'./data/chum-diagnostics.rda', mode="wb" )
 load("data/chum-diagnostics.rda")
 LRdiagOut
 ```
-
-Diganostics summarized:
-Deviance residuals spanned from -1.418606  1.691950 and Pearson's residuals spanned from -1.418606  1.691950. Assumption 3 (no outliers) met. 
-
-minimum sample size =37. sample size =63. Assumption 4 (sufficient sample size) is met.  
-
-pDRT = 0.13 . p value is >0.05, indicating that there is not significant improvement in fit with the variable (aggregate abundance)
-
-quasiR2 = 0.03 . Value is low, indicating that the fit is not good. 
-
-confusion matrix: 
-
-hit ratio = 0.7. Ratio of correct classification. Moderately high (but method tends to have overly optimistic values)
-
-Box-Tidwell p-value = 0.02. Significant at a=0.05. Indicates a lack of linearity in the relationship between aggregate adundance and log-odds. - assumption 1 (relationship between aggregate abundance and log-odds is linear) not met. 
-
-p value for B_0 = 0.0064. Significant at a=0.05 level. 
-p value for B_1 = 0.19. Not significant at a=0.05 level.
-
-There was no evidence for auto-correlation in Pearsons's residuals or deviance residuals. assumption 2 (observations are independent of each other) is met. 
-
-
+--> 
 
 +-------------------------+--------------+
 | Diagnostic Test         | Sgen-Ricker  | 
@@ -476,11 +456,11 @@ There was no evidence for auto-correlation in Pearsons's residuals or deviance r
 +-------------------------+--------------+   
 | Max. deviance residual  | 1.69         |
 +-------------------------+--------------+
-| AR-1                    |              |
+| AR-1                    | 0.14         |
 +-------------------------+--------------+
-| Wald p-values           |              | 
+| Wald p-value            | 0.19         | 
 +-------------------------+--------------+
-| Goodness-of-fit p-value |              |
+| Goodness-of-fit p-value | 0.13         |
 +-------------------------+--------------+
 | Pseudo-$R^2$            | 0.03         |
 +-------------------------+--------------+
@@ -490,15 +470,10 @@ There was no evidence for auto-correlation in Pearsons's residuals or deviance r
 Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.  
 
 
+Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude. In addition, the correlation in escapement among these seven CUs is low. These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors. These seven CUs also have different numbers of populations. There are also differences in actual productivity (recruits per spawner) among CUs. 
+<!--CH: I suggest applying the 4 criteria for 'representativness' in the Guidelines paper to assess if it is reasonable to assess status of the SMU based on only 4 or 5. I can help you with the biogeoclimatic zones. I suggest emailing Pieter about similarity in threats among CUS-->
 
-The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). The Box-Tidwell test indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that an assumption of logistic regression was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model. There was no evidence of outliers, and there was a sufficient sample size. The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The p-value was significant for the estimation of $B_{0}$, but not for $B_{1}$, the coefficient for aggregate abundances. There was no evidence for autocorrelation in residuals. Regressions based on $S_{gen}$ had similarly poor model fits (Figure \@ref(fig:chum-logistic-sgen). <!--CH remove Sgen-->
 
-<!-- CW: maybe move this paragraph up in the section?
-
-    Also might be good to state what is a "good" diagnostic and what is a "bad". For example: the fact that "There was no evidence of outliers, and there was a sufficient sample size" ia a good thing, however it was not enough to overcome the deficiencies exposed by the other diagnostic criteria.  
-
-    Is the ratio of correct classification based on a confusion matrix, or based on loo? maybe present loo results to be consistent with IF coho
-    -->
 
 ## DISCUSSION
 
