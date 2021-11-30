@@ -132,7 +132,7 @@ The logistic regression model was implemented in TMB [@kristensen_tmb_2016]. The
 
 <!--
 KH: TO DO: add the sentences and reference Carrie suggests above.
-CW: Attempted to that above.
+CW: Attempted to do that above.
 -->
 
 ##### Logistic Regression Model Diagnostics
@@ -210,7 +210,7 @@ Statistical significance of coefficients was evaluated using the Wald test stati
 
 The goodness-of-fit was evaluated by comparing the ratio of residual deviance to null deviance (similar to a likelihood ratio). This ratio is assumed to follow a Chi-square distribution with 1 degree of freedom derived from the difference in the number of parameters between full and null models (1). P-values <0.05 indicate significant lack of fit [@foxAppliedRegressionAnalysis2016].
 
-In addition, the pseudo-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable, 
+In addition, the pseudo-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable [@dobsonIntroductionGeneralizedLinear2018], 
 
 \begin{equation}
    \text{pseudo-}R^2 =  1- \frac{\sum_{t}^{t=nYears} d}{\sum_{t}^{t=nYears} d_0} 
@@ -221,6 +221,7 @@ where $d_0$ are the deviance residuals for the null model. The psuedo-$R^2$ is a
 
 <!-- Citation to add to bib file for psuedo R^2:
 Dobson AJ and Barnett AG (2008) An Introduction to Generalized Linear Models. Third Edition. Chapman & Hall/CRC Press. 
+CW:done.
 -->
 
 In addition, the length of available time-series will impact power to detect significant model coefficients, and coefficient estimates may be biased when time-series are short.  @peduzziSimulationStudyNumber1996 recommend a minimum of 10 data points for the least frequent outcome to avoid biases in model coefficients, based on simulation study of epidemiological data. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient, and this minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. A similar evaluation of sample sizes to minimize biases logistic-regression based LRPs for fisheries applications is warranted. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters (and LRPs) increases.
@@ -244,6 +245,8 @@ The following steps were taken to calculate projection-based LRPs:
    
    <!--CH: I added "under a specified exploitation rate" to match the text in the 1st pgh of this subsection. I wonder if future projection-based LRPs could include other types of MPs that more accurately match current management approach, if it deviates from a constant ER? Does that make sense?  
    KH: I think it could make sense, although I wonder if it would raise more questions about whether to represent observation / assmt error, etc to replicate the MP.  If these were done though, it would start to feel more like an MSE, but with backwards purpose.  Instead of evaluating MPs based on their performance to stay above a LRP, we are trying to accurately represent an MP to learn what the LRP is.  I worry that this could get people confused and turned around pretty quickly.
+    
+
    -->
 
 
