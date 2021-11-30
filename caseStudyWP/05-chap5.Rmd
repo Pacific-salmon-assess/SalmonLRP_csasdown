@@ -408,9 +408,13 @@ LRdiagOut
 Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  
 
 
-Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude. In addition, the correlation in escapement among these seven CUs is low. These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors. These seven CUs also have different numbers of populations. There are also differences in actual productivity (recruits per spawner) among CUs. 
+Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude. In addition, the correlation in escapement among these seven CUs is low (Fig. \@ref(fig:chum-spawner-correlation)). These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors. These seven CUs also have different numbers of populations. There are also differences in actual productivity (recruits per spawner) among CUs. 
 <!--CH: I suggest applying the 4 criteria for 'representativness' in the Guidelines paper to assess if it is reasonable to assess status of the SMU based on only 4 or 5. I can help you with the biogeoclimatic zones. I suggest emailing Pieter about similarity in threats among CUS-->
 
+```{r chum-spawner-magnitude, fig.cap="Pairwise correlations of spawner abundance between Inside South Coast Chum Conservation Units.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
+knitr::include_graphics('figure/chum-spawners-corr.png')
+```
 
 
 ## DISCUSSION
