@@ -19,6 +19,10 @@ The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon
 
 WSP CUs have been identified for Interior Fraser Coho based on genetics and geographic separation: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson [@dfoWildSalmonPolicy2015; Figure \@ref(fig:coho-map)]. Previous work by the Interior Fraser Coho Recovery Team (IFCRT) identified 11 subpopulations nested within the five CUs, and developed recovery objectives based on maintaining abundance <!--BC:Is there a better way to say this? abundance above a threshold? Self-sustaining populations? --> in each of these smaller subpopulation units [@ifcrtinteriorfrasercohorecoveryteamConservationStrategyCoho2006; Table \@ref(tab:cohoCU2SP)]. The delineation of subpopulations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic differentiation evidence <!--“differentiation” instead?-->. The 11 subpopulations are described in detail by the @ifcrtinteriorfrasercohorecoveryteamConservationStrategyCoho2006. 
 
+<!--BC: from chinook chapter - "WCVI Chinook is also included in the first batch of major stocks proposed for regulation under the Fish Stock Provisions of the revised Fisheries Act, necessitating the development of LRPs for this SMU"
+  Consider stating this in coho case study section too, if it also applies. 
+-->
+
 ```{r coho-map, fig.cap="The five Conservation Units that make up the Interior Fraser Coho Stock Management Unit.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-map.png")
 ```
