@@ -24,7 +24,7 @@ Updated functionality for the LRP version of samSim include:
 
 * Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
 
-This appendix aims at describing the `samSim` model equations and the model's internal logic. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extentions already implemented within `samSim`. `samsim` includes two population levels, it could be applied to one Conservation Unit (CU) with component sites, or one Stock Management Unit (SMU) with component CUs, or even one region with component SMUs. For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. The model indexes are defined in Table \@ref(tab:indtab), the model parameters and model input are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
+This appendix describes the `samSim` model equations and the model's internal logic. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extensions already implemented within `samSim`. `samSim` includes two population scales, it could be applied to one Conservation Unit (CU) with component spawning populations, or one Stock Management Unit (SMU) with component CUs, or even one region with component SMUs. For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. The model indexes are defined in Table \@ref(tab:indtab), the model parameters and model input are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the project [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme). 
 
 
 \begin{table}[ht]
@@ -138,7 +138,7 @@ ${obsER}_{y,i,n}$ & Observed exploitation rates \\
 ## MODEL PRIMING
 
 
-The priming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent real and observed abundances before starting the projection trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available.  
+The priming phase, or model initialization, represents the past data for CUs being modeled. It is used to represent true and observed abundances before starting the projection trials. This phase loops over a number of past years ('nPrime') and reconstructs recruitment time series for past years. The simulations can be initialized in two ways: with existing recruitment data or with user defined parameters, if recruitment data is not available.  
 
 ### Recruitment data is available
 
@@ -146,17 +146,17 @@ If spawner-recruitment data is available, the number of initialization years 'nP
 
 ### Recruitment data is not available
 
-When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, tipically from mcmc samples. If mcmc samples are provided, a different set of parameters is used for each simulation trial.
+When Recruitment data is not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, tipically from MCMC samples. If MCMC samples are provided, a different set of parameters is used for each simulation trial.
 
 The spawner recruitment parameters can be altered according to the user defined scenarios, e.g. to simulate regime shifts. `samSim` includes options to adjust the productivity parameter, $\alpha_{i}$, the capacity parameter $\beta_{i}$, and the recruitment standard deviations, $\sigma_{i}$. The LRP case studies do not include adjustments or changes in productivity over time, therefore we will not describe the parameter adjustment options in this appendix. Recruitment is assumed to be correlated between the CUs, the covariance matrix is calculated based on the variance-covariance matrix, which is calculated based on CU-specific recruitment variances, and the correlation matrix specified in an input files.   
  
-Once stock-recruitment parameters are defined, the number of spawners is initialized. The number of spawners is set at equilibrium for the first 6 years and then calculated based on recruitment and exploitation rates in the previous years (Equations \@ref(eq:Seqinit) and \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set to zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
+Once stock-recruitment parameters are defined, the number of spawners is initialized. The number of spawners is set at equilibrium for the first 6 years (the maximum possible number of age classes) and then calculated based on recruitment and exploitation rates in the previous years (Equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set to zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
 
 \begin{align}
 S_{y,i} =
  \begin{cases}
    Seq_{i} &\text{ if } y = \leq 6\\
-   RY_{y,i} \cdot (1- \overline{ER}_{n=Canada}) &\text{ otherwise}
+   RY_{y,i} \cdot (1 - \overline{ER}_{n}) &\text{ otherwise}
   \end{cases}
   (\#eq:Seqinit)
 \end{align}
@@ -241,7 +241,7 @@ knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 ```
 -->
 
-Recruitment estimates produced for either formulation of the Ricker model are capped. The default maximum recruitment value is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then recruitment is set to zero.  
+Recruitment numbers produced with either formulation of the Ricker model are capped. The default maximum recruitment value is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then recruitment is set to zero.  
 
 \begin{align}
   R_{y,i} = min(R_{y,i}, \Upsilon \cdot Seq_{i})
@@ -529,7 +529,7 @@ In this section the brood year recruitment for the current projection year is co
 
 The following step is compute the age structure of the returns with random error, which follows the same procedure described in Section \@ref(recruitment-data-is-not-available). The age structure follows a distribution with mean age structure and standard deviation for each CU given in the input files.
 
-In the next step, the recruitment deviations are computed with multivariate normal distribution, reflecting the recruitment covariance among CUs. Recruitment is then calculated following the same procedure described in Section\@ref(recruitment-data-is-not-available) and using Equation \@ref(eq:Rickersimple) for the simple ricker model, or Equation \@ref(eq:Rickersurv) for the ricker model with survival covariates. 
+In the next step, the recruitment deviations are computed with multivariate normal distribution, reflecting the recruitment covariance among CUs. Recruitment is then calculated following the same procedure described in Section\@ref(recruitment-data-is-not-available) and using Equation \@ref(eq:Rickersimple) for the simple Ricker model, or Equation \@ref(eq:Rickersurv) for the Ricker model with survival covariates. 
 
 The last step of the projection loop is to compute the true and observed upper and lower benchmarks, which are based on the management quantities described in the previous section (Section \@ref(run-stock-assessment-and-calculate-management-quantities). These are either stock-recruit or percentile benchmarks, as described in section \@ref(compute-management-quantities-and-benchmarks) computed based on the true and observed spawner abundances. 
 
