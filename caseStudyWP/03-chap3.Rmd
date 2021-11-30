@@ -443,6 +443,13 @@ We assumed an average exploitation rate of 12.5% for all CUs in forward projecti
 Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) and variation in which indicator stocks were operational in a given year. As a result, empirically-based estimates of among-CU variability in exploitation rates are not available. However, there are reasons to expect exploitation rates to vary among CUs in a given year, including differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (CV=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds. Varying assumptions about variability in exploitation among CUs between CV = 0 and 0.44 in forward projections did not impact the distribution of correlations in spawner abundances in the projections (results not shown).  
 
 
+<!--BC Comment:
+
+•  Consider stating years used to initialize abundances
+•  A extirpation threshold of 2 seems really low, is this consistent with other IFC coho simulations? 
+•  Consider clarifying that you did not model dynamics as sub-populations nested within CUs, since you introduce the sub-populations earlier. And perhaps include justification.
+-->
+
 \begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
 \caption{Parameters used for CU-specific projections of Interior Fraser Coho population dynamics.}\\
 \hline
@@ -460,7 +467,7 @@ Smolt-to-adult marine survival rate (all CUs) & Drawn from Lognormal(-4.83, 1.21
  Among-CU variability in marine survival coefficient $\gamma$  &  $\sigma_{\gamma}$ = 0 (all CUs the same) & Assumed value when fitting models. Varied between 0 and 0.09 in sensitivity analyses
 \\\\
 
- Ave age proportions at maturity (ages 3, 4) &  MiddleFR, LThomp, SThomp = (0.86,0.14) , FRCanyon = (0.87, 0.13), NThomp = (0.88, 0.12) & Estimated from time-series of ppns of recruits at age
+ Ave age proportions at maturity (ages 3, 4) &  MiddleFR, LThomp, SThomp = (0.86,0.14) , FRCanyon = (0.87, 0.13), NThomp = (0.88, 0.12) & Estimated from time-series of proportions of recruits at age
  \\\\  
 
  Interannual variability in age proportions (tau from multivariate logistic distribution)  & MiddleFR, NThomp, SThomp = 1.0, LThomp = 0.9, FRCanyon = 0.8 & Estimated from time-series of ppns of recruits at age. \\\\
@@ -488,9 +495,15 @@ Extirpation threshold &  2 & Mating constraint \\
 
 ### Results
 
+<!--
+  BC comment: Out of curiosity, if you conditioned your projections on the spawner abundance at the beginning of your empirical time series would you get an aggregate projection based LRP relationship that looks similar to the empirical one? If not why not. Might be worth discussing somewhere as part of pros and cons of alt methods. 
+-->
+
 ***LRP Estimates***
 
 Aggregate abundance-based LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used to derive the LRP (Figure \@ref(fig:coho-projLRPCurveByOM); Table \@ref(tab:projectedLRPs2020)). This result is similar to the logistic regression-based LRPs, where LRPs derived using $S_{gen}$ estimates from the Ricker_priorCap model were higher due to higher $S_{gen}$ values.  The projected curve showing the probability of all CUs being above $S_{gen}$ was more gradual and further to the right for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref(fig:coho-projLRPCurveByOM)). When projection outputs from both stock recruit model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
+
+<!--BC: Consider making the empirical LRP plots multi-panel like this one too. -->
 
 ```{r coho-projLRPCurveByOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > lower benchmarks. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
@@ -540,7 +553,7 @@ knitr::include_graphics("figure/coho-projLRPCurve-byER.png")
 
 We compared annual estimates of SMU status relative to LRPs for the range of LRP estimation options considered in this case study (Figure \@ref(fig:coho-statusPlot-withBars)). For all aggregate abundance-based LRPs, we used LRPs estimated using a probability threshold of p = 0.5 (i.e., a 50% probability that all CUs would have status above their lower benchmark). We used the following labelling convention when comparing historical status estimates across LRP estimation methods: *"Metric" : "LRP Method" : "CU Status Method"*. 'Metric' refers to the choice of whether to base an LRP on the proportion of CUs above 'poor' CU status (Prop) or on aggregate SMU-level abundance (Abund). The 'LRP' method only applies to aggregate-abundance based LRPs, for which is can be logistic regression (Logistic) or projection-based (Proj). Finally, the 'CU Status Method' can be based on the rapid multidimensional scanning tool in in which CU abundance-based benchmarks are based on one of the two Ricker models (Multidim-Ricker or Multidim-priorCap). Or, when only a single benchmark is used to characterize CU status, it can be based on $S_{gen}$ estimated from one of the two Ricker models (Sgen-Ricker or Sgen-priorCap) or the IFCRT target (IFCRT). For example, when referring to an aggregate abundance-based LRP that is estimated via a logistic regression fit to historical CU status, with CU status estimated relative to $S_{gen}$ from the base Ricker model, we label it as "Abund: Logistic: Sgen_Ricker".  
 
-We show historical results for two types of proportional LRP methods: one that uses the proportion of CUs with rapid multidimensional status > red (e.g., Prop: Multidim-Ricker)  and one that uses the proportion of CUs with abundance > Sgen (e.g., Prop: Sgen-Ricker). Holt et al. (in review) recommend that <!--CH: removed 'only'. I think we get the same message without that inclusion?-->the multidimensional approach should be used to assess status; however, we show results for the single metric $S_{gen}$ approach here to demonstrate how the rtwo approaches differ. This comparison is of interest because our aggregate abundance-based LRPs use status estimates based on a single metric rather than the multidimensional status estimates.   
+We show historical results for two types of proportional LRP methods: one that uses the proportion of CUs with rapid multidimensional status > red (e.g., Prop: Multidim-Ricker)  and one that uses the proportion of CUs with abundance > Sgen (e.g., Prop: Sgen-Ricker). Holt et al. (in review) recommend that <!--CH: removed 'only'. I think we get the same message without that inclusion?-->the multidimensional approach should be used to assess status; however, we show results for the single metric $S_{gen}$ approach here to demonstrate how the two approaches differ. This comparison is of interest because our aggregate abundance-based LRPs use status estimates based on a single metric rather than the multidimensional status estimates.   
 
 In addition to the LRP estimation methods presented so far in this case study, we include the full WSP assessment that was conducted in 2014 as an option for estimating CU status for use in a proportion-based LRP. We label this case "Prop : WSP-2014". SMU status would have been assessed as being above the LRP at this time as all CUs were assessed as amber or green.  
 
@@ -560,6 +573,10 @@ knitr::include_graphics("figure/coho-statusPlot_withBars2020.png")
 
 
 ## DISCUSSION
+
+
+<!--BC: Consider starting discussion with a single paragraph that summarizes key take homes from this section. -->
+<!-- This is a solid set of discussion points. Not sure if this is the right place but might also recap insights gleaned from exploration of multidimensional approach and its utility in this context? -->
 
 (Still in rough note form)
 
