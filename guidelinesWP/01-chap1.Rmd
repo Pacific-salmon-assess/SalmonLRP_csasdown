@@ -82,6 +82,9 @@ o	“We can revise the background to say that methods have been developed that c
 o	”
 -->
 
+<!--Sabrina email: In short, the management of hatchery produced fish must be separated from wild production. This is a bit tricky for WCVI as we don’t have enough information or data to quantitatively separate ‘natural’ and ‘hatchery’. It would be ideal to remove 1st generation hatchery-origin fish but for WCVI we simply don’t have that information. Strays have been a real issue but hard to quantify the impacts to each non-targeted hatchery system without collecting the data needed annually as each year would differ. How much stray to a particular system and for how long are factors but we don’t assess this enough or adequately. For example, during a M/R project in the Moyeha the 2010 half the samples were hatchery but only 12 samples were collected and the next year all samples were natural origin. 
+We need to be clear to include this uncertainty for WCVI in the report stating results could change if more data was available to adequately and quantitatively (not just I see a clipped salmon or not but genetics and/or more directed projects to the cause) separate the hatchery/1st generation from natural spawners. This is after all a ‘tool-kit’ that has options to choose from but may not have the full picture until gaps are filled. Highlighting the much needed information to properly segregate hatchery to natural spawners would be required to adequately assess.-->
+
 <!-- Suggested text from Sue when reviewing case study paper: 
 
 An management unit (MU) is the group level LRPs are evaluated on. For Pacific Salmon, an MU is comprised of one or more CUs, where a CU is a fundamental unit of biodiversity for Pacific salmon. It is ‘a group of wild salmon sufficiently isolated from other groups that, if lost, is very unlikely to recolonize naturally within an acceptable timeframe, such as human lifetime or a specified number of salmon generations.’ (DFO 2005).
