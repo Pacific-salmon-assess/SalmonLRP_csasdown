@@ -1,5 +1,23 @@
 # LRP Estimation Methods for Pacific Salmon {#est-methods}
 
+
+<!-- Julie shared these 8 principles from Ntional LRP paper, which we can refer to Marentette et al. in prep.  We should re-work this section accordingly. Also, she sent a ref for criteria for best avilable infomration form the US-->
+
+<!--FYI - There’s actually a list of 8 draft criteria/principles (supported by a number of sub-principles) we are working with right now for WP1; we only carried the first 4 into this workshop and exercises for a few reasons (because 8 is a lot, and the latter 4 are rather more to do with best practices for actions as opposed to outright characteristics or descriptors of the LRPs and indicators).
+
+Principle 1: Stock status indicators and LRPs should be consistent with an objective to avoid serious harm to the stock.
+Principle 2: Stock status indicators and LRPs should be selected based on the best available information for the stock.
+Principle 3: Stock status, indicators and LRPs should be operational (feasible and relevant to the management of the stock).
+Principle 4: Stock status indicators and LRPs should be reliably estimable.
+Principle 5: When selecting from multiple alternatives, the choice of stock status indicators and LRPs should take into account risk.
+Principle 6: If all else fails, consider the use of alternative paradigms.
+Principle 7: Consider whether reference points or indicators should be changed.
+Principle 8: Clearly communicate advice on stock status and reference points.
+
+The US link for best available information was this one: see pt. 6 https://www.ecfr.gov/current/title-50/chapter-VI/part-600/subpart-D/section-600.315
+
+-->
+
 The development of LRPs for Pacific salmon was guided by four principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU. See \@ref(app:first-appendix) for a list of resources for implementing these methods.
 
 <!--CH : consider 4 cnadidant best practices criteria from TESA LRPs; (1) consistent with serios harm, (2) best avialble infomration (see US list for this), (3) operational useful, (4) reliably estimable. Is this list of 4 criteria documented and citable?-->
