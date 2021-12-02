@@ -71,4 +71,8 @@ To get these estimates, total (wild and hatchery origin) spawners based on the i
 
 Note that the two CUs requiring CU-level infilling correspond to only one Fishery Management Area each, which allows the run reconstruction using fishery harvest data at this level.
 
+```{r chum-spawner-distribution, fig.cap="Density (smoothed histogram) of chum escapement for the seven Conservation Units. Note that x axis is on logarithmic scale.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_spawner_dist.png', './figure/fig-spawner-dist.png', mode="wb")
+knitr::include_graphics("figure/fig-spawner-dist.png")
+```
 
