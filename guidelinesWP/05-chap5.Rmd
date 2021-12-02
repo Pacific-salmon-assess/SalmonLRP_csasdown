@@ -23,6 +23,11 @@ When applying methods to specific case studies, we recommend that aggregate-abun
 
 
 
+- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
+- refer to Groundfish MP Framework
+
+Simulation evaluation of management procedures [dfoManagementProcedureFramework2021] that include multiple management levers and spatial-temporal dynamics of populations and management decisions represents a gap in the current approach to informing decision for Pacific salmon, and is promising area for future research. 
+
 <!--
 
 CW: I moved this here from ch 4.
