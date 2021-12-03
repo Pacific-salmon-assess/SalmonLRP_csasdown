@@ -16,10 +16,22 @@ LRPs are biologically based values that are separate from management measures, b
 
 <!--CH: moved intro to WSP, CUs and benchamrks below and Ch2  here-->
 
-For Pacific salmon, Canada's Wild Salmon Policy, WSP, is DFO's implementation of the Precautionary Approach Framework for Pacific salmon and informs the development of LRPs. The goal of the WSP is to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity [@dfoCanadaPolicyConservation2005]. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting, Conservation Units, defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). Biological benchmarks delineating three zones of status, green, amber, and red have been identified to represent zones of increasing conservation concern requiring increasing management intervention. The lower benchmark, delineating the red and amber zones, is identified at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", the Committee on the Status of Endangered Wildlife in Canada (DFO 2005; Holt et al. 2009). <!--CH: I drafted text to address Sue's point. However it introduces complexities that are not highly relevant to our goals, and I'm considering omitting. Thoughts?   "Due to the differences in metrics of status used by WSP and COSEWIC, buffers have been challenging to identify and in practice red status from WSP assessments tends to align with threatened or endangered designations by COSEWIC."-->One recommended lower benchmark on spawning abundances is the abundance resulting in recovery to $S_{MSY}$ in one salmon generation under equilibrium conditions, $S_{gen}$ [@holtEvaluationBenchmarksConservation2009]. 
+For Pacific salmon, Canada's Wild Salmon Policy, WSP, is DFO's implementation of the Precautionary Approach Framework for Pacific salmon and informs the development of LRPs. The goal of the WSP is to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity [@dfoCanadaPolicyConservation2005]. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting, Conservation Units (CUs), defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). Biological benchmarks delineating three zones of status, green, amber, and red, have been identified to represent zones of increasing conservation concern requiring increasing management intervention. The lower benchmark, delineating the red and amber zones, is identified at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", the Committee on the Status of Endangered Wildlife in Canada (DFO 2005; Holt et al. 2009). <!--CH: I drafted text to address Sue's point. However it introduces complexities that are not highly relevant to our goals, and I'm considering omitting. Thoughts?   "Due to the differences in metrics of status used by WSP and COSEWIC, buffers have been challenging to identify and in practice red status from WSP assessments tends to align with threatened or endangered designations by COSEWIC."-->One recommended lower benchmark on spawning abundances is the abundance resulting in recovery to $S_{MSY}$ in one salmon generation under equilibrium conditions, $S_{gen}$ [@holtEvaluationBenchmarksConservation2009]. 
 
-Status assessments under the WSP generally integrate data across numerous dimensions of population characteristics, including current spawner abundances, short and long-term trends in abundances, distribution of spawning, and fishing mortality relative to productivity [@holtEvaluationBenchmarksConservation2009].  This multidimensional framework for assessing assessment status under the WSP has been adopted widely in Canada (e.g., Fraser River sockeye salmon [@grantEvaluationUncertaintyFraser2011, @grantIntegratedBiologicalStatus2013, @grant2017FraserSockeye2020], IFR coho [@dfoWildSalmonPolicy2015], Southern BC chinook salmon [@dfoIntegratedBiologicalStatus2016]), though single metrics, spawning abundances relative to abundance-based benchmarks have been used as proxies for status outside of DFO [@pacificsalmonfoundationMethodsAssessingStatus2020] and within (e.g., Barkley sockeye salmon [@chaputConsiderationsDefiningReference2012] and Skeena River sockeye salmon (C. Carr-Harris pers. com.). 
+<!--KH: I agree that getting into the challenges in identifying buffers may be too specific for this introductory section.  Maybe you could get around the above question on buffers by using the word intended; eg "The lower benchmark, delineating the red and amber zones, is intended to be set at a level that "ensures there is ..... "-->
 
+<!--KH: May be worth explicitly stating in the above paragraph that LRPs under the Precautionary Approach are analagous to the lower benchmark at the CU-scale. --> 
+
+Status assessments under the WSP generally integrate data across numerous dimensions of population characteristics, including current spawner abundances, short and long-term trends in abundances, distribution of spawning, and fishing mortality relative to productivity [@holtEvaluationBenchmarksConservation2009].  This multidimensional framework for assessing assessment status under the WSP has been adopted widely in Canada (e.g., Fraser River sockeye salmon [@grantEvaluationUncertaintyFraser2011, @grantIntegratedBiologicalStatus2013, @grant2017FraserSockeye2020], IFR coho [@dfoWildSalmonPolicy2015], Southern BC chinook salmon [@dfoIntegratedBiologicalStatus2016]), though single metrics<!-- KH: though single-metric approaches in which spawning biomass is compared a single abundance-based benchmark, have been used as proxies ....-->, spawning abundances relative to abundance-based benchmarks have been used as proxies for status outside of DFO [@pacificsalmonfoundationMethodsAssessingStatus2020] and within (e.g., Barkley sockeye salmon [@chaputConsiderationsDefiningReference2012] and Skeena River sockeye salmon (C. Carr-Harris pers. com.). 
+<!-- KH: could consider moving this above paragraph to the below section on "Review of Reference Points for Pacific Salmon" since it gets a bit further into reviewing literature?  -->
+
+<!--At present, this section provides a good background how LRPs and WSP benchmarks link to Canadian Fisheries Policy.  However, it doesn't explicitly describe the motivation for this work as is suggested by the title. Maybe you could move the following paragraph from below up here to address this?
+
+Although the traditional application of the precautionary approach for the management of Pacific salmon has been focused on setting lower management benchmarks for individual salmon CUs [dfoCanadaPolicyConservation2005], the revised fisheries act includes language indicating that a single LRP may be needed for each "Major Fish Stock" [@dfoScienceAdvicePrecautionary2021]. In the context of Pacific salmon, "Major Fish Stocks" are defined as Salmon Stock Management Units (SMUs), which are groups of CUs that are managed as a unit to achieve joint status.  This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain all CUs within an SMU above their lower management benchmarks. The present work expands on the previous work by providing guidance on establishing LRPs for management of Pacific salmon SMUs. 
+
+
+
+-->
 
 
 ## Review of Reference Points for Pacific Salmon
@@ -104,7 +116,16 @@ K.Holt note: some of this may be best in guidance paper?
 - other roles? (e.g., prioritizing SMUs and planning monitoring/management).
 - these roles have not been clearly defined yet, and require further discussion beyond this process
 
-- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
+- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this... <!-- KH: Is the idea here that time-area closures are better able to -->
+
+<!--KH: 
+- Are there examples where aggregate abundance-based LRPs are used for in-season HCRs?  E.g., once an escapement goal has been met, surplus production can be harvested? I'm not sure how often this applies to the SMU level though. Does Fraser Sockeye do anything like this?
+
+- Also, is it worth mentioning cases like Nass / Skeena Sockeye were abundance-based LRPs are required for other management processes (PST), and there is a desire to identify aggregate-abundance based LRPs for those processes that have a high probability of maintaining CU-level abundances above red.
+-->
+
+
+
 - refer to Groundfish MP Framework
 
 
@@ -118,7 +139,11 @@ CH response
 
 -->
 
-<!--CH: In the Guidelines paper, I would like to add text that aggregate-abundance based LRPs may not need to be identified explicitly for harvest management, if HCRs are identified and evaluated to have a low probability of CUs being red. We might want to pull this thread through the Introduction of the case study paper or better yet here in Ch2 here when abundance-based LRPs are mentioned. I will include similar, but expanded text in the Guidelines paper, referring to the Groundfish MP Framework) --> 
+<!--CH: In the Guidelines paper, I would like to add text that aggregate-abundance based LRPs may not need to be identified explicitly for harvest management, if HCRs are identified and evaluated to have a low probability of CUs being red. We might want to pull this thread through the Introduction of the case study paper or better yet here in Ch2 here when abundance-based LRPs are mentioned. I will include similar, but expanded text in the Guidelines paper, referring to the Groundfish MP Framework) 
+
+  
+
+--> 
 
 ## Consistency with National Guidance on LRPs
 - Highlight consistencies/inconsistencies that emerge from December 2021 TESA workshop and subsequent discussions with NHQ primary authors, e.g., Danny Ings at NWAFC in St. John's.
