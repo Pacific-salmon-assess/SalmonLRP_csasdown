@@ -2,8 +2,21 @@
 
 <!--CH: Add this from TOR3-->
 
-Document key uncertainties that affect LRP estimates for each method considered, including 
-uncertainties arising from missing limited CU-level data. 
+## Key uncertainties that affect LRP estimates
+
+### Proportion-based LRPs
+
+The impact of hatcheries on assessment against CUs and LRPs is a key uncertainty due to the low rates of marking among hatcheries and genetic impacts that can perpetuate over multiple generations. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic introgression from strays would help address these uncertainties.  
+
+- describe uncertainties arising from missing limited CU-level data. 
+
+### Logistic-regression based LRPs
+- 
+- describe uncertainties arising from missing limited CU-level data. 
+
+### Projection-based LRPs
+- these should be considered in development, and not used on their own without further simluation evluation.
+- describe uncertainties arising from missing limited CU-level data. 
 
 
 Should highlight the identification of questions / outstanding guidance that were beyond our scope
