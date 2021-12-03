@@ -1,9 +1,11 @@
 # LRP Estimation Methods for Pacific Salmon {#est-methods}
 
 
-Here we outline principles for developing LRPs for Pacific salmon, adapted from those used within  national-level guidance on LRPs (Marentette et al. in prep). That guidance allows for flexibility in the development of LRPs to respond to individual species context, data types and quantities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs will be aligned with national direction while accounting for unique characteristics of these species. 
-<!-- ask Julie and Danny Ings for advice on making these principles and LRPs as consistent as possible with NHQ guidance -->
+<!--CH:  ask Julie and Danny Ings for advice on making these principles and LRPs as consistent as possible with NHQ guidance -->
 
+Here we outline principles for developing LRPs for Pacific salmon, adapted from those used within  national-level guidance on LRPs (Marentette et al. in prep). That guidance allows for flexibility in the development of LRPs to respond to individual species contexts and data types, quantities, and qualities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs will be aligned with national direction while accounting for unique characteristics of salmon species and data. 
+
+**Principle 1**. LRPs should be consistent with the goal of avoiding serious harm to the stock, as described in @dfoFisheryDecisionMakingFramework2009. As described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” [@@dfoFisheryDecisionMakingFramework2009]. This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). <!--CH; add refrence-->
 
 <!-- Julie shared these 8 principles from Ntional LRP paper, which we can refer to Marentette et al. in prep.  We should re-work this section accordingly. Also, she sent a ref for criteria for best avilable infomration form the US-->
 
@@ -28,12 +30,10 @@ The US link for best available information was this one: see pt. 6 https://www.e
 
 -->
 
-The development of LRPs for Pacific salmon was guided by four principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU. See \@ref(app:first-appendix) for a list of resources for implementing these methods.
 
-<!--CH : consider 4 cnadidant best practices criteria from TESA LRPs; (1) consistent with serios harm, (2) best avialble infomration (see US list for this), (3) operational useful, (4) reliably estimable. Is this list of 4 criteria documented and citable?-->
-<!-- CH comment: some of the text in this subsection may be moved to the Intro-->
 
-First, as described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” (DFO PA)<!--CH; add refrence-->. This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). <!--CH; add refrence-->
+
+
 
 Second, LRPs should be consistent with the goals and objectives of the WSP. The WSP framework for defining biological units and assessing their status along biological metrics with lower benchmarks to avoid risks of extinction is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a misleading indication of status and an LRP that ignores serious harm to components. Therefore, to be consistent with the WSP, LRPs need to allow for component CUs to be considered.
 
