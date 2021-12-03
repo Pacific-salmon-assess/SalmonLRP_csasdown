@@ -1,4 +1,10 @@
-# Recommendations for Future Work {#recommendations}
+# Discussion and Recommendations for Future Work {#recommendations}
+
+<!--CH: Add this from TOR3-->
+
+Document key uncertainties that affect LRP estimates for each method considered, including 
+uncertainties arising from missing limited CU-level data. 
+
 
 Should highlight the identification of questions / outstanding guidance that were beyond our scope
 
