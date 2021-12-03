@@ -24,7 +24,7 @@ Status assessments under the WSP generally integrate data across numerous dimens
  <!--
 
 CW: Consider changing this subtitle to "Reference Points and management benchmarks for Pacific Salmon populations
-CH: I think we should keep benchmarks as biological values as defined in the WSP, i.e. not management benchmarks"
+CH: I think we should keep benchmarks as biological values as defined in the WSP, i.e. not management benchmarks. We've spent along time trying to differentiate biologically based benchmarks developed under the WSP for OCPs used in management"
 
  -->
 
@@ -58,12 +58,20 @@ uncertainties arising from missing or limited CU-level data. (See \ref(recommend
 Pacific salmon are unique among marine fish species because of their anadromous and semelparous life-history and significant meta-population structure, which results in differences in data availability and modelling approaches for assessments. These differences necessitate advice on LRP development that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. in prep). <!--CH: add marentette et al. in prep  to zotero,--> 
 
 
-
--risks of ignoring CUs Julie Marentette pptx for TESA LRP workshop "The more divergent MU versus BU (biological unit)……
-increased bias in reference points, misleading trends from indicators, risk of serial depletion,  reduced ability to apply "traditional" view of LRPs as thresholds to serious harm even if overall harvest strategy aimed to achieve PA intent
-
-"
 -- Enhancement not included
+
+## Enhancement
+
+For many stocks, hatcheries contribute to spawning abundances and are used as a conservation tool and to increase the availability of fish for harvest. Hatchery enhancement can also reduce wild genetic diversity and are considered a risk factor for the long-term sustainability of CUs [@withlerGeneticallyBasedTargets2018]. Salmon that are enhanced by hatcheries are not considered "wild" under the Wild Salmon Policy and not usually included in assessments of biological status. However separating out the influence of hatchery enhancement in time-series of spawner abundances and recruitment is challenging in part because hatchery-origin fish are not visibly marked and so are indisginguisable from natural-origin spawners. 
+
+
+Following Withler et al. (2018), we recommend including only populations without significant enhancement in analyses of CU and SMU status. Proportionate Natural Influence, PNI, is a metric of the genetic risk of hatcheries on natural populations, with values < 0.5 indicating Integrated-Hatchery populations where most fish are hatchery origin [@withlerGeneticallyBasedTargets2018]. Only populations with PNI values $\geqslant$ 0.5 were included in the development of CU status, LRPs and assessment against those LRPs. Stricter definitions of hatchery enhancement were considered (e.g., including only populations with PNI values $\geqslant$ 0.72, Integrated-Wild populations @withlerGeneticallyBasedTargets2018). In practice, applying this stricter threshold resulted in excluding almost all available data for our case study, West Coast Vancouver Island Chinook Salmon, a species <!-- an SMU? --> that is widely enhanced. Adopting a slightly lower threshold of $\geqslant$ 0.5, a level associated with most fish being natural origin, was the result of a trade-off between assessing remaining CU-level biodiversity and excluding hatchery impacts. 
+
+
+
+(1) When hatchery contributions are high (e.g., PNI<0.5 or when designated as a hatchery for harvest supplementation), then those systems can be entirely removed from assessments of biological status (as in Withler et al. 2018, several Fraser Sockeye Salmon stocks, Grant et al. 2011).
+(2) When hatchery contributions are lower (PNI>0.5 or when designated assessment, conservation or community hatchery), then where possible, hatchery-origin proportions should be identified and removed from time-series of recruitment in stock-recruitment modelling (for estimating benchmarks or in projections). Hatchery-origin fish that spawn in the wild are generally included in escapement time-series assuming these fish reproduce successfully in wild and contribute to production. This way the spawner-recruitment relationship represents the production derived from spawners in the natural environment.  One caveat is that these assessments differ in the time-series of spawners they use to compare against benchmarks or recovery targets; some use natural-origin spawners only (WSP assessment and RPA) and others total spawners in the natural environment (harvest impact model for PST).  It may be prudent to use natural-origin spawners instead of total spawners in current and historical assessments of trends and status against benchmarks.
+(3) When hatchery contributions are low, but data on proportions of hatchery-origin spawners are not available, generally assessment rely on total spawner abundances regardless of hatchery contribution (as in WSP assessments for SBC Chinook), and stock-recruitment analyses are rarely done on these stocks. There was one example of spawner-recruitment analyses where spawner abundances were determined from brood take plus total spawners in the natural environment, and recruitment was total recruits from both hatchery and natural environment (Pitt River, Grant et al. 2011).
 
 
 <!--CH notes to add  
