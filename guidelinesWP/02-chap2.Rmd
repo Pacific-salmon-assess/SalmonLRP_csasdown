@@ -1,6 +1,10 @@
 # LRP Estimation Methods for Pacific Salmon {#est-methods}
 
 
+Here we outline principles for developing LRPs for Pacific salmon, adapted from those used within  national-level guidance on LRPs (Marentette et al. in prep). That guidance allows for flexibility in the development of LRPs to respond to individual species context, data types and quantities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs will be aligned with national direction while accounting for unique characteristics of these species. 
+<!-- ask Julie and Danny Ings for advice on making these principles and LRPs as consistent as possible with NHQ guidance -->
+
+
 <!-- Julie shared these 8 principles from Ntional LRP paper, which we can refer to Marentette et al. in prep.  We should re-work this section accordingly. Also, she sent a ref for criteria for best avilable infomration form the US-->
 
 <!--FYI - There’s actually a list of 8 draft criteria/principles (supported by a number of sub-principles) we are working with right now for WP1; we only carried the first 4 into this workshop and exercises for a few reasons (because 8 is a lot, and the latter 4 are rather more to do with best practices for actions as opposed to outright characteristics or descriptors of the LRPs and indicators).
@@ -8,7 +12,13 @@
 Principle 1: Stock status indicators and LRPs should be consistent with an objective to avoid serious harm to the stock.
 Principle 2: Stock status indicators and LRPs should be selected based on the best available information for the stock.
 Principle 3: Stock status, indicators and LRPs should be operational (feasible and relevant to the management of the stock).
+tractable to calculate, easy to communicate
 Principle 4: Stock status indicators and LRPs should be reliably estimable.
+-data quality and frequency of collection
+-is SR sound basis for LRP
+-weight of evidence among different options, coherence in methods
+-looking for ways to account for uncertainty
+
 Principle 5: When selecting from multiple alternatives, the choice of stock status indicators and LRPs should take into account risk.
 Principle 6: If all else fails, consider the use of alternative paradigms.
 Principle 7: Consider whether reference points or indicators should be changed.
@@ -25,7 +35,7 @@ The development of LRPs for Pacific salmon was guided by four principles. Follow
 
 First, as described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” (DFO PA)<!--CH; add refrence-->. This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). <!--CH; add refrence-->
 
-Second, LRPs should be consistent with the goals and objectives of the WSP. The WSP framework for defining biological units and assessing their status along biological metrics with lower benchmarks to avoid risks of extinction is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above red status), irreversible or slowly reversible impacts are avoided. Therefore, to be consistent with the WSP, LRPs need to allow for component CUs to be above their lower benchmarks.
+Second, LRPs should be consistent with the goals and objectives of the WSP. The WSP framework for defining biological units and assessing their status along biological metrics with lower benchmarks to avoid risks of extinction is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a misleading indication of status and an LRP that ignores serious harm to components. Therefore, to be consistent with the WSP, LRPs need to allow for component CUs to be considered.
 
 Third, LRPs should be reliably estimated in a peer-reviewed framework and be consistent with scientific best practices. <!--CH add more here?-->
 

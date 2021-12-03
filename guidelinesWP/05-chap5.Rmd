@@ -1,4 +1,23 @@
-# Recommendations for Future Work {#recommendations}
+# Discussion and Recommendations for Future Work {#recommendations}
+
+<!--CH: Add this from TOR3-->
+
+## Key uncertainties that affect LRP estimates
+
+### Proportion-based LRPs
+
+The impact of hatcheries on assessment against CUs and LRPs is a key uncertainty due to the low rates of marking among hatcheries and genetic impacts that can perpetuate over multiple generations. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic introgression from strays would help address these uncertainties.  
+
+- describe uncertainties arising from missing limited CU-level data. 
+
+### Logistic-regression based LRPs
+- 
+- describe uncertainties arising from missing limited CU-level data. 
+
+### Projection-based LRPs
+- these should be considered in development, and not used on their own without further simluation evluation.
+- describe uncertainties arising from missing limited CU-level data. 
+
 
 Should highlight the identification of questions / outstanding guidance that were beyond our scope
 
@@ -22,6 +41,11 @@ We found that removing component CUs from assessments of an SMU tended to increa
 When applying methods to specific case studies, we recommend that aggregate-abundance based LRPs consider major structural uncertainties either through sensitivity analyses or model ensemble approaches. These analyses can answer the questions, how sensitive are aggregate-abundance based benchmarks to key model uncertainties, including those related to time-varying parameters, observation errors, and covariance in population dynamics and vulnerability to harvest. In addition, we recommend simulation evaluation be used to assess the robustness of LRPs to violating assumptions given underlying known statuses. Simulation evaluation could further be used to assess the frequency of updates to LRPs required to achieve objectives given underlying changes in model parameters and structure. <!--CH: observation errors in CU-status are relevant for logistic-regression LRPs as they might inflate noise in the LR, and they are relevant to the projection-based LRPs in the noise in the spawner and recruitment data-->
 
 
+
+- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
+- refer to Groundfish MP Framework
+
+Simulation evaluation of management procedures [dfoManagementProcedureFramework2021] that include multiple management levers and spatial-temporal dynamics of populations and management decisions represents a gap in the current approach to informing decision for Pacific salmon, and is promising area for future research. 
 
 <!--
 
