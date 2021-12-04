@@ -39,7 +39,7 @@ Second, LRPs should be consistent with the goals and objectives of the WSP. The 
 Third, LRPs should be reliably estimated in a peer-reviewed framework and be consistent with scientific best practices. <!--CH add more here?-->
 
 Fourth, estimate of LRPs should be estimated in a statistically integrated <!-- 
-  CW: or sequential Bayes? i.e. sampling from posterior--> way when possible in order to propagate uncertainties throughout analyses and to be consistent with current best-practices in fisheries assessments [@puntEssentialFeaturesNextgeneration2020]. @statonSequentialIntegratedBayesian2017 and @defilippoImprovingShorttermRecruitment2021 provide recent examples of integrated models used for salmon assessments. Both studies show that uncertainty propagation increase realism of model estimates and surrounding uncertainty. However, @statonSequentialIntegratedBayesian2017 demonstrated that similar results can be achieved by using sequential Bayesian estmation models. 
+  CW: or sequential Bayes? i.e. sampling from posterior--> way when possible in order to propagate uncertainties throughout analyses and to be consistent with current best-practices in fisheries assessments [@puntEssentialFeaturesNextgeneration2020a]. @statonSequentialIntegratedBayesian2017 and @defilippoImprovingShorttermRecruitment2021 provide recent examples of integrated models used for salmon assessments. Both studies show that uncertainty propagation increase realism of model estimates and surrounding uncertainty. However, statonSequentialIntegratedBayesian2017a demonstrated that similar results can be achieved by using sequential Bayesian estimation models. 
 
 
 

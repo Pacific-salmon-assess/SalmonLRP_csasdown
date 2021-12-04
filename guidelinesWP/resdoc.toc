@@ -1,45 +1,51 @@
 \thispagestyle {fancy}
 \contentsline {section}{ABSTRACT}{iv}{section*.1}%
 \contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.0.1}%
-\contentsline {subsection}{\numberline {1.1}Background \& Motivation for Project}{1}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {1.1}Background}{1}{subsection.0.1.1}%
 \contentsline {subsection}{\numberline {1.2}Review of Reference Points for Pacific Salmon}{2}{subsection.0.1.2}%
-\contentsline {subsection}{\numberline {1.3}Role of LRPs}{4}{subsection.0.1.3}%
-\contentsline {subsection}{\numberline {1.4}Consistency with National Guidance on LRPs}{4}{subsection.0.1.4}%
-\contentsline {subsection}{\numberline {1.5}Objectives of this Document}{4}{subsection.0.1.5}%
-\contentsline {subsection}{\numberline {1.6}Approach Taken to Develop Guidelines}{5}{subsection.0.1.6}%
-\contentsline {section}{\numberline {2}LRP Estimation Methods for Pacific Salmon}{5}{section.0.2}%
-\contentsline {subsection}{\numberline {2.1}Estimation of CU Status}{6}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {2.2}Estimation of LRPs: Aggregating CU Status to the SMU-level}{6}{subsection.0.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Report status relative to benchmarks for individual CUs}{6}{subsubsection.0.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Ppn of CUs with status greater than red}{6}{subsubsection.0.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Multidimensional approach to aggregating metrics within CUs}{6}{subsubsection.0.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)}{7}{subsubsection.0.2.2.4}%
-\contentsline {subsubsection}{\numberline {2.2.5}Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)}{7}{subsubsection.0.2.2.5}%
-\contentsline {subsubsection}{\numberline {2.2.6}Simple Aggregate Abundance LRPs}{7}{subsubsection.0.2.2.6}%
-\contentsline {subsection}{\numberline {2.3}Considerations When Selecting a LRP Estimation Method}{8}{subsection.0.2.3}%
-\contentsline {section}{\numberline {3}Case Studies Used to Support the Development of Guidance}{8}{section.0.3}%
-\contentsline {subsection}{\numberline {3.1}Interior Fraser Coho}{8}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {3.2}West Coast Vancouver Island Chinook}{8}{subsection.0.3.2}%
-\contentsline {subsection}{\numberline {3.3}South Coast Chum (excluding Fraser)}{8}{subsection.0.3.3}%
-\contentsline {section}{\numberline {4}Guidelines for Applying LRPs}{8}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}Stepwise approach for selecting LRPs}{8}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Data Availability (Step 1)}{9}{subsubsection.0.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Assessing Data Deficiency (Step 2)}{9}{subsubsection.0.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Can Data Deficient CUs be Represented by CUs With Data? (Step 3)}{10}{subsubsection.0.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Proportion of CUs Above Red Status Required to Avoid Serious Harm (Step 4)}{12}{subsubsection.0.4.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.5}Assess Status Relative to Proportion-based LRP (Step 5)}{13}{subsubsection.0.4.1.5}%
-\contentsline {subsubsection}{\numberline {4.1.6}Peer-review Assessments of Status Relative to Proportion-based LRP (Step 6)}{13}{subsubsection.0.4.1.6}%
-\contentsline {subsubsection}{\numberline {4.1.7}Are Aggregate Abundance-Based LRPs Required For Fisheries Management? (Step 7)}{14}{subsubsection.0.4.1.7}%
-\contentsline {subsubsection}{\numberline {4.1.8}What is Acceptable Probability of Achieving Proportion-Based LRP? (Step 8)}{14}{subsubsection.0.4.1.8}%
-\contentsline {subsubsection}{\numberline {4.1.9}Choose among aggregate-abundance based LRPs (Step 9)}{15}{subsubsection.0.4.1.9}%
-\contentsline {subsubsection}{\numberline {4.1.10}Empirical logistic-regression based LRPs}{15}{subsubsection.0.4.1.10}%
-\contentsline {subsubsection}{\numberline {4.1.11}Projection based LRPs}{17}{subsubsection.0.4.1.11}%
-\contentsline {subsubsection}{\numberline {4.1.12}Apply aggregate-abundance based LRPs (Step 10)}{19}{subsubsection.0.4.1.12}%
-\contentsline {subsubsection}{\numberline {4.1.13}Compare aggregate-abundance based LRPs (Step 11)}{19}{subsubsection.0.4.1.13}%
-\contentsline {subsubsection}{\numberline {4.1.14}Compare status from aggregate-abundance based LRPs to that from Prorportion-based LRPs (Step 12)}{19}{subsubsection.0.4.1.14}%
-\contentsline {section}{\numberline {5}Recommendations for Future Work}{19}{section.0.5}%
-\contentsline {subsection}{\numberline {5.1}Time-varying parameters and impacts on LRPs}{20}{subsection.0.5.1}%
-\contentsline {section}{\numberline {6}REFERENCES}{23}{section.0.6}%
+\contentsline {subsection}{\numberline {1.3}Alternative spatial scales}{3}{subsection.0.1.3}%
+\contentsline {subsection}{\numberline {1.4}Goals of Working Paper}{4}{subsection.0.1.4}%
+\contentsline {subsection}{\numberline {1.5}Scope of Working Paper}{4}{subsection.0.1.5}%
+\contentsline {subsection}{\numberline {1.6}Enhancement}{5}{subsection.0.1.6}%
+\contentsline {subsection}{\numberline {1.7}Role of LRPs}{6}{subsection.0.1.7}%
+\contentsline {subsection}{\numberline {1.8}Process to identify candidate LRPs and guidelines}{7}{subsection.0.1.8}%
+\contentsline {section}{\numberline {2}LRP Estimation Methods for Pacific Salmon}{7}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}Estimation of CU Status}{8}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}Estimation of LRPs: Aggregating CU Status to the SMU-level}{8}{subsection.0.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Report status relative to benchmarks for individual CUs}{8}{subsubsection.0.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Ppn of CUs with status greater than red}{9}{subsubsection.0.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Multidimensional approach to aggregating metrics within CUs}{9}{subsubsection.0.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)}{9}{subsubsection.0.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)}{9}{subsubsection.0.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Simple Aggregate Abundance LRPs}{10}{subsubsection.0.2.2.6}%
+\contentsline {subsection}{\numberline {2.3}Considerations When Selecting a LRP Estimation Method}{10}{subsection.0.2.3}%
+\contentsline {section}{\numberline {3}Case Studies Used to Support the Development of Guidance}{10}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Interior Fraser Coho}{11}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}West Coast Vancouver Island Chinook}{11}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}South Coast Chum (excluding Fraser)}{11}{subsection.0.3.3}%
+\contentsline {section}{\numberline {4}Guidelines for Applying LRPs}{11}{section.0.4}%
+\contentsline {subsection}{\numberline {4.1}Stepwise approach for selecting LRPs}{11}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Data Availability (Step 1)}{11}{subsubsection.0.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Assessing Data Deficiency (Step 2)}{12}{subsubsection.0.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Can Data Deficient CUs be Represented by CUs With Data? (Step 3)}{12}{subsubsection.0.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Proportion of CUs Above Red Status Required to Avoid Serious Harm (Step 4)}{15}{subsubsection.0.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Assess Status Relative to Proportion-based LRP (Step 5)}{15}{subsubsection.0.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}Peer-review Assessments of Status Relative to Proportion-based LRP (Step 6)}{16}{subsubsection.0.4.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.7}Are Aggregate Abundance-Based LRPs Required For Fisheries Management? (Step 7)}{16}{subsubsection.0.4.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.8}What is Acceptable Probability of Achieving Proportion-Based LRP? (Step 8)}{17}{subsubsection.0.4.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.9}Choose among aggregate-abundance based LRPs (Step 9)}{18}{subsubsection.0.4.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.10}Empirical logistic-regression based LRPs}{18}{subsubsection.0.4.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.11}Projection based LRPs}{20}{subsubsection.0.4.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.12}Apply aggregate-abundance based LRPs (Step 10)}{21}{subsubsection.0.4.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.13}Compare aggregate-abundance based LRPs (Step 11)}{22}{subsubsection.0.4.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.14}Compare status from aggregate-abundance based LRPs to that from Prorportion-based LRPs (Step 12)}{22}{subsubsection.0.4.1.14}%
+\contentsline {section}{\numberline {5}Discussion and Recommendations for Future Work}{22}{section.0.5}%
+\contentsline {subsection}{\numberline {5.1}Key uncertainties that affect LRP estimates}{22}{subsection.0.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Proportion-based LRPs}{22}{subsubsection.0.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}\#\#\# Logistic-regression based LRPs}{22}{subsection.0.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Projection-based LRPs}{22}{subsubsection.0.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}Time-varying parameters and impacts on LRPs}{23}{subsection.0.5.3}%
+\contentsline {section}{\numberline {6}REFERENCES}{26}{section.0.6}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{APPENDIX\nobreakspace {}A. APPENDIX 1}{27}{section*.3}%
-\contentsline {section}{\numberline {A.1}Resources for the implementation of LRPs (links to be added)}{27}{section.A.1}%
+\contentsline {chapter}{APPENDIX\nobreakspace {}A. APPENDIX 1}{31}{section*.3}%
+\contentsline {section}{\numberline {A.1}Resources for the implementation of LRPs (links to be added)}{31}{section.A.1}%
