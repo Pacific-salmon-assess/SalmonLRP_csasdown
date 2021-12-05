@@ -233,7 +233,7 @@ Classification accuracy was evaluated based on the ratio of successful classific
 
 ### PROJECTION-BASED LRPS{#projectedMethods}
 
-The projection-based LRP approach combines information on population dynamics of individual CUs within an SMU and then uses that information to project abundances into the future. Projection-based LRPs are then estimated using projected future CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that all CUs will be above their lower benchmarks (e.g. $S_{gen}$) at equilibrium given a specified level of exploitation. Specifically, projections are run until the distribution of abundances stabilize for each CU. <!--CH should we expand on this, or does this make sense? --> <!-- KH: maybe change to "... run until the relationship between aggregate abundance and the probability of all CUS being above their lower benchmark stabilized" ??? --> This projection-based LRP approach allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect a lack of biological and/or fisheries information. As with logistic regression-based LRPs, we relied on status estimated from a single metric rather than the multidimensional scanner tool to develop LRPs using projections.
+The projection-based LRP approach uses population parameters of individual CUs within an SMU to project abundances forward with natural variability in recruitment and ages-at-maturity under current exploitation rates characterized with annual implementation uncertainty. Projections are run for 30 years after an initialization period to remove the impacts of initial conditions and identify aggregate abundances characterized by an equilibrium state represented by stable distribution of projected abundances. <!--CH 4 Dec: I revised the first few sentences of this pgh to align with Guidelines paper; feel free to revise, Can we describe various ERS as a sensitivity analyses subsequently?--> Projection-based LRPs are then estimated using these projected CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that all CUs will be above their lower benchmarks (e.g. $S_{gen}$).  This projection-based LRP approach allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect a lack of biological and/or fisheries information. As with logistic regression-based LRPs, we relied on status estimated from a single metric rather than the multidimensional scanner tool to develop LRPs using projections.
 
 We used the samSim closed loop simulation modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to quantify recovery potential for Pacific salmon populations [@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]. We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix  \@ref(app:samsim-appendix), and model code is available on GitHub at: https://github.com/Pacific-salmon-assess/samSim/tree/LRP.  
 
@@ -241,11 +241,12 @@ Detailed descriptions of the parameterization of samSim for our two case study a
 
 The following steps were taken to calculate projection-based LRPs:
 
-   1. Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations, under a specified exploitation rate.
+   1. Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations, under current exploitation.
    
    <!--CH: I added "under a specified exploitation rate" to match the text in the 1st pgh of this subsection. I wonder if future projection-based LRPs could include other types of MPs that more accurately match current management approach, if it deviates from a constant ER? Does that make sense?  
    KH: I think it could make sense, although I wonder if it would raise more questions about whether to represent observation / assmt error, etc to replicate the MP.  If these were done though, it would start to feel more like an MSE, but with backwards purpose.  Instead of evaluating MPs based on their performance to stay above a LRP, we are trying to accurately represent an MP to learn what the LRP is.  I worry that this could get people confused and turned around pretty quickly.
-    
+
+CH (4 Dec): revised to "current exploitation" to match newly revised text above. Isn't the current MP just a fixed ER? so perhaps no need to include obs errors, though annual variability in ER is included. I think deferring to case study applications for details is reasonable.
 
    -->
 
