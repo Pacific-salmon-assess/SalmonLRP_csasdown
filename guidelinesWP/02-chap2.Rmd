@@ -50,61 +50,71 @@ Principle 8: Clearly communicate advice on stock status and reference points.
 Our intention is to describe approaches for deriving CU status applicable over a range of data qualities and types, and provide LRPs that integrate the CU-level information to the scale of SMUs.  Below methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Then candidate LRPs that integrate CU statuses are briefly described falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances.  A more detailed description of LRPs with technical details is included Working Paper 2. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). 
 
 
-## Estimation of CU Status
+## Estimation of CU Status {#cu-est-methods}
 
 
--	There are a variety of CU-level abundance based benchmarks, depending on species and data availability, etc. 
--	When providing guidance in this paper, we focus on: 
-
--	Stock-recruitment based benchmarks, 
--	Percentile based benchmarks, 
--	Watershed-area based benchmarks (as one example of a habitat-based benchmarks), 
--	Distributional benchmarks
+To be consistent with the multidimensional approach to WSP status assessments described in @holtIndicatorsStatusBenchmarks2009a, we recommend that CU-level status consider multiple metrics, either integrated through expert-driven processes or the through the Rapid Multidimensional Scanning Tool (Pestal et al. in prep.), where possible.  This approach allows for the assessment of status across a wide range of data availability; when data for a single metric is not available other metrics can be used to inform status. Although the Rapid Multidimensional Scanning Tool can provide provisional assessments under data limitations, uncertainties resulting from data limitations are not currently integrated into the provision of recommended status. Ongoing improvements to the tool will consider those uncertainties.  
 
 
--	We have not included metrics and benchmarks based on status of habitat or ecosystem status (strategies 2 and 3 of the WSP)
-- future work could further considere allee effects realtive to lower benchmarks
+One metric within the multidimensional approach is spawner abundances relative to <!--CH: "estimated" to distinguish for SoS's absolute or non-estimated benchmarks--> abundance-based benchmarks. Various types of benchmarks have been identified along this metric to account for differences in data types, quantities and qualities among CUs. For data-rich CUs where spawner-recruitment relationships can be reliably estimated, the abundance resulting in recovery to $S_{MSY}$ in one salmon generation under equilibrium conditions, $S_{gen}$ is recommended by @holtEvaluationBenchmarksConservation2009. Where recruitment time-series are not available and productivity is assumed to be moderate or high and harvest rates moderate or low, specified percentiles of observed spawner time-series, (e.g., 25th) can be used as a proxy for spawner-recruitment benchmarks [@holtEvaluatingBenchmarksBiological2018]. For Chinook and Coho Salmon where production is often limited by the quantity of freshwater habitat, equilibrium spawner abundances can be predicted from habitat characteristics to inform abundance-based benchmarks [@nobleHabitatbasedEscapementBenchmarks2015; @parkenHabitatbasedMethodsEstimate2006]. For example, @parkenHabitatbasedMethodsEstimate2006 use the relationship between watershed area and spawner-recruitment based reference points in a meta-analysis of Chinook Salmon stocks across the Pacific region to predict reference points for Chinook stocks without recruitment data.
 
+In addition, metrics on the distribution of spawning within a CU can be considered in WSP assessments [@peacockReviewMetricsDistribution2010a; peacockMetricsSamplingDesigns2012]. Although benchmarks along metrics of distribution have not been identified for WSP assessment, for Interior Fraser River Coho Salmon, short and long-term recovery targets along a metric of spawning distribution among sub-populations was identified [@ifcrtinteriorfrasercohorecoveryteamConservationStrategyCoho2006], and forms a basis for management of this SMU.
 
-## Estimation of LRPs: Aggregating CU Status to the SMU-level
+The metrics and benchmarks described above are a subset of those considered within Rapid Multidimensional Scanning Tool (which also include short and long-term trends over time, and abundances relative to absolute conservation threshold). For the purposes of LRP development, individual metrics on spawner abundances are applied both within the Rapid Multidimensional Scanning Tool and independently of the Tool to demonstrate the consistency (and occasional inconsistency) with status on multidimensional vs single-metric approaches. When only a single metric is applied to derive status, there is a risk of providing a misleading assessment if overall status is informed from additional metrics which diverge from abundance-based metrics but are not considered.
 
+When assessing CU status relative to abundance-based lower benchmarks, we use generational mean spawner abundances as a basis for determining whether each CU is above or below its lower benchmark. Generational smoothing integrates status over cohorts within a generation, which are tend to exhibit relatively independent dynamics. This approach reduces noise in annual CU status determination due to annual fluctuations in CU abundances from any single cohort. It also makes our determination of CU status consistent with the approach taken for abundance-based benchmarks in WSP assessments and the Rapid Multidimensional Scanning Tool.
+
+## Estimation of LRPs: Aggregating CU benchmarks and status to the SMU-level
+
+<!--CH suggest removing:
 ### Report status relative to benchmarks for individual CUs
-
 - i.e., no roll-up
 - A benefit to no roll up is that it focuses attention directly on CUs with low status.  However, emerging policy (from NHQ) suggests that each stock should have a single established LPR (one stock = 1 LRP).
+-->
+### Proportion-based LRPs
 
-### Ppn of CUs with status greater than red
-
-- Based on WSP formal integrated assessments (for CUs where data are available)
-- Or approximated by abundance-based benchmarks
-- if status is approximated with abundance-based benchmarks, and the status on the metric is red, this could trigger an integrated status assesment to derived a formal WSP status prior to triggering LRP.
-
-### Multidimensional approach to aggregating metrics within CUs
-
-- Algorithm to approximate "integrated" status has been developed by the State of the Salmon program, and can be applied to LRP estimation
-- Valuable when abundance-based benchmark (e.g., Sgen) cannot be calculated and percentile-based benchmarks are not reliable (productivity low or HR high)
-- NB the algorithm defaults to abundance-based benchmarks when they are available
-- As above,  if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP.
-- It may be possible to extend this approach in the future to account for ecosystem components of serious harm and divergent levels of data quantity and quality among CUs. 
-- This approach could also be extended to management triggers that occur prior to LRP, e.g.., that require precautionary management and/or more monitoring 
+Proportion-based LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above the red WSP status zone. To be consistent with the intent of the WSP of preserving biodiversity at the CU-level, we identify an LRP at 100% of CUs having status estimates above red (i.e., either amber or green). When any individual CU falls into the red zone, then the LRP is considered breached. See section \@ref(guidelines) for a step-wise approach for identifying LRPs that further considers data limitations when identifying the proportion of CUs above the red zone. CU statuses are derived using the approaches described in Section \@ref(cu-est-methods).
 
 
+### Logistic regression-based LRPs{#logisticMethods}
 
-### Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)
+We considered two LRPs based on aggregate-abundances of the SMU that rely on the relationship between observed aggregate abundances and statuses of component CUs, logistic-regression based LRPs and projection-based LRPs (\@ref(projectedMethods)). The reliability of aggregate-abundance based LRPs and their ability to avoid serious harm at the CU level depends on the strength of that underlying relationship as exhibited in observed data. These two LRPs are probabilistic in nature, identifying the aggregate abundances associated with a desired probability of all CUs achieving status above the red zone. To some extent uncertainty in the underlying relationship between observed aggregate abundances and CU-level statuses is captured in the probabilistic nature of these LRPs; larger uncertainties results in higher LRP values and vice versa, with all else remaining equal. <!--CH comment. This last sentence might be too much information at the beginning of the section? though the 2nd sentence of this pgh could misleading without this caveat. Could consider moving...--> 
 
-<!-- K.Holt: the following text has been moved here from the chum chapter of the case study paper.
-"The goal of these methods was to explore whether the status of component CUs could be predicted well by the aggregate abundance of the whole SMU. The motivation behind this approach is that many SMUs are not monitored at the CU level. If the aggregate abundance of the SMU could predict the status of component CUs, then an LRP that is measured in aggregate SMU abundance could be reliably used." 
 
---- also of note: abundance-based benchmarks may be preferred for link to HCR
+Logistic regression-based LRPs are derived from an empirically estimated relationship between CU-level statuses and aggregate SMU abundance. This method for deriving LRPs extends proportion-based LRPs by identifying the aggregate abundance level that has historically been associated with a given probability of 100% of CUs having status above the red zone, as approximated from status on a single metric of spawner abundances relative to a lower benchmark. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have estimated status greater than the lower benchmark and 0 (failure) = all CUs did not have status greater than the lower benchmark, or a least one CU was assessed below the lower benchmark. A logistic regression is then fit to these outcomes to estimate the probability that all CUs will have statuses greater than red as a function of aggregate SMU spawner abundances. The following logistic regression equation is used to estimate LRPs,
 
---> 
+\begin{equation}
+  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
+   (\#eq:logistic)
+\end{equation}
 
-- Description of logistic model approach, with illustrative figures, equations, etc
--	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 
--	Describe suggested model validation/checks for logistic regression and illustrate on an example SMU.
+where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression parameters and $S_{i,t}$ is spawner abundance to CU $i$ in year $t$. Equation \@ref(eq:logistic) is then re-arranged to calculate the LRP as the aggregate spawner abundance associated with the pre-specified probability threshold of $p^*$,
+
+\begin{equation}
+  LRP = \frac{log(\frac{p^*}{1-p^*}) - B_0}{B_1}
+  (\#eq:logisticLRP)
+\end{equation}
+
+An example logistic regression fit is shown in Figure \@ref(fig:example-logisticFit), with LRPs associated with four probability thresholds, 0.5, 0.66, 0.90, 0.99. Uncertainty in LRP estimates were quantified based on a 95% confidence interval on the maximum likelihood estimate, MLE.  
+
+
+```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Each black dot represent a year in the observed time series as a Bernoulli indicator showing whether the requirement of all CUs above their lower benchmark, LBM was met (success = 1) or not (failure = 0) as a function of aggregate spawning abundance to the SMU. The black solid line is the maximum likelihood model fit to indicator data, and the grey shaded region shows the 95\\% confidence interval around the fit model. Coloured lines illustrate aggregate abundance LRPs for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics("figure/methods-Example-LogisticLRP.png")
+```
+
+We recommend evaluating the fit of the logistic regression prior to the development of LRPs to identify its reliability in determining serious harm to component CUs. Diagnostics commonly used for logistic regression of Bernoulli distributed data are provided in Holt et al. (in prep.), for example, evaluating the assumptions that the aggregate abundances is linearly related to log-odds of all CUs being above their lower benchmarks, observations are independent, and there are no influential outliers. In addition, the statistical significance of the predictor variable, aggregate abundances and the goodness-of-fit of the logistic model can inform its reliability for determining LRPs. Furthermore, the classification accuracy of LRPs developed from a logistic regression can be evaluated on the observed data using the performance metric, hit ratio. This ratio represents the proportion of successful classifications above or below the logistic-regression derived LRP, relative to the total number classifications or years.  Out-of-sample cross-validation methods can be applied so that model-based LRPs do not include the observed data used for evaluation in this performance metric.
+
+We applied a single metric on spawner abundances to approximate CU-status because multidimensional approaches for WSP assessments include  generational smoothing of spawner abundance and metrics of temporal trends, which introduces autocorrelation in observed CU statuses, violating an assumption of the logistic regression model. Future research could consider logistic-regression models that include autocorrelated residuals to develop LRPs based on CU-statuses provided from the Rapid Multidimensional Scanning Tool.
+
+Using a single-metric proxy for CU status also allowed us to use a statistically integrated estimation approach, where CU-level stock-recruitment models and associated CU-level benchmarks were estimated in the same model as the logistic regression and LRP estimation. In this way, the uncertainty from CU-level assessments can be propogated to the development of the LRP and the assessment against that LRP. The model provides the probability of being below the LRP in the current year that explicitly accounts for uncertainty in CU-level assessments against their lower benchmarks.  
+
+Furthermore, structural uncertainty in underlying assumptions about the basis of CU-level benchmarks, such as spawner-recruitment relationship can be addressed in at least three ways, which are not mutually exclusive. First, the weight of evidence for various assumptions can be identified to identify the assumptions with most support for CUs status, which is then used for LRP development. Second, various assumptions can be provided as sensitivity analyses demonstrating the impact of assumptions on LRPs estimates and current status, possibly with narrative describing which is considered a base case. Third, LRPs can be averaged by, for example, combining posterior estimates. When averaging, LRPs can be weighted according to strength of evidence for each hypothesis based on statistical criteria (e.g., AIC), retrospective fits, or expert opinion. [and refs here from TESA]
+
+
 -	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
 
-### Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)
+
+### Projection-based LRPs {#projectedMethods}
 - equilibrium approach that identifies emergent properties of the aggregate given assumptions about underlying population dynamics.
 -	Description of projected LRP approach, with illustrative figures, equations, etc
 -	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
