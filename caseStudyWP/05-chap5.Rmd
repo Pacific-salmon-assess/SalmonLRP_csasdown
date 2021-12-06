@@ -11,7 +11,7 @@ output:
 
 ## CONTEXT
 
-The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs of chum salmon (*Oncorhynchus keta*) from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats.
+The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs of Chum Salmon <!-- omitted here and included at first instance in the WP: (*Oncorhynchus keta*)--> from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats.
 
 ```{r CU-summary, echo=FALSE}
 d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
@@ -31,12 +31,16 @@ The ISC Chum SMU is considered data-limited. While escapement series are availab
 Add a bit about the 7 CUs and their 'representativeness'
 -->
 
-Benchmarks based on spawner recruit relationships are unreliable if there is uncertainty in the spawner and recruit data. One alternative is benchmarks calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks). Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holtEvaluatingBenchmarksBiological2018). In other cases, percentile benchmarks may be inappropriate due to low productivity, high harvest, and because they do not account for non stationarity in recruitment dynamics (@holtEvaluatingBenchmarksBiological2018).
+<!--CH suggestion to add info on previous status assessments for this SMU, e.g., "@godboutStockStatusWild2004 identified variable but stable status in the central and southern portion of the SMU, with declines in the north, especially in the region defined by Southern Coastal Streams CU. @holtEvaluatingBenchmarksBiological2018 found similar results in a provisional assessment of status. "  I don't know of any other published assessments at this scale-->
+
+Benchmarks based on spawner-recruit relationships are unreliable if there is uncertainty in the spawner and recruit data. One alternative is benchmarks calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks). Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holtEvaluatingBenchmarksBiological2018). In other cases, percentile benchmarks may be inappropriate due to low productivity, high harvest, and because they do not account for non-stationarity in recruitment dynamics (@holtEvaluatingBenchmarksBiological2018).
 
 We chose the ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. We applied LRPs based on two methods: proportions of CUs above their lower benchmark, and logistic regression based on aggregate abundance. For proportions, we used percentile benchmarks and multi-dimensional status assessment to determine the status of component CUs. For the logistic regressions, we used percentile *\textcolor{cyan}{and $S_{gen}$ - should I leave out Sgen here, or leave in and then say that we dropped it due to unreliable stock-recruit data and/or poor logistic fits}*.
 
 <!--
     CW: I think there is value in saying that we attempted to use Sgen but that it was not possible due to data limitations. -- this will likely be true for other SMus. 
+    
+    CH: The challenge is that we dismissed SR based on inappropriate assumption used to develop the recruitment time-series, not the performance itself. We could have shown it, but I think it would have been misleading (and didn't meet "reliability" criteria for LRPs. I think you've already mentioned this above , so I don't think you need to anything else here. (though you could mention that using recruitment data would not satisfy reliability principles in Holt et al. (in review)))
     -->
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
@@ -50,13 +54,17 @@ We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updat
 
 Available data included spawner abundance time series from 1959 - 2018 and corresponding CU-level recruitment estimated from run reconstruction. Spawner abundance series rely heavily on infilling; 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. Recruitment data are considered highly uncertain for all ISC Chum CUs due to uncertain assumptions required to assign mixed fishery catch to CUs within the run reconstruction model. As a result, we did not consider spawner recruit series to be reliable enough to estimate stock recruitment-based benchmarks such as $S_{MSY}$ and $S_{gen}$.  We did however use spawner recruit model fits to provide approximate estimates of CU-level productivity, which are used to inform the application of percentile-based benchmarks.
 
-@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. 
+@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. <!--CH to revise this pgh to align with Whither et al. 2018-->
+
+<!--CH: suggest adding a bubble plot of spewer correlations, as in IFR and WCVI case studies-->
 
 ## METHODS
 
 <!-- 
     I'm not sure we need a methods section here. But I am in favour of including the github link.
     CH comment: I don't think we need a header, simply state that data are available here on the github, with code for infilling.
+    
+    CH (5 Dec): Let's include an Appendix with the repo links as in Appendix 1 of the Guidelines Paper, then refer to Appendix for code instead of links directly.
 -->
 
 Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
@@ -72,7 +80,7 @@ Data and methods are available at: https://github.com/Pacific-salmon-assess/Salm
     
 -->
 
-For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep). <!--CH: let's be conistent with thoughtout both papers.  Ithink we're using Rapid Multidimenstional Scanner Tool as the name for this method--> *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}* <!--CH: I think we take out Sgen as a benchmark, but include productivity as supplemental information for evaluating when percentile benchmarks are appropriate. I wouldn't emphasize the SR modelling when introducing productivity, just briefly state in the text how productivity was derived.--> 
+For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep). <!--CH: let's be conistent with thoughout both papers.  Ithink we're using Rapid Multidimenstional Scanner Tool as the name for this method, also we need to refer to Pestal et al. (in prep) as a footnote instead of full citation.--> *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}* <!--CH: I think we take out Sgen as a benchmark, but include productivity as supplemental information for evaluating when percentile benchmarks are appropriate. I wouldn't emphasize the SR modelling when introducing productivity, just briefly state in the text how productivity was derived.--> 
 <!--CH: Suggest adding, "Although the Rapid Multidimensional Scanner Tool is recommended for CU-level assessments (Holt et al. in prep), we provide status on a simple single metric, spawner abundances relative to percentile-based benchmarks for comparison.  Now I see Kendra's suggestions below which I like! (perhaps instead of this)-->
 
 In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment under the Wild Salmon Policy (e.g., trends, distribution of abundance; @holtIndicatorsStatusBenchmarks2009). At this time, an peer-reviewed integrated status assessment has not been developed for ISC chum.
@@ -303,7 +311,7 @@ knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
 
 **CU Status Based on Multi-Dimensional Status**
 
-<!--CH: We have agreed to use "Rapid Multidimensional Scanner Tool" to refer to this approach everywhere, unless it's too awkward(i.e., repeating in the same sentence) in which case it can perhaps be shortened by "multidimensional approach"-->
+<!--CH: We have decided to use "Rapid Multidimensional Scanner Tool" to refer to this approach everywhere, unless it's too awkward(i.e., repeating in the same sentence) in which case it can perhaps be shortened by "multidimensional approach"-->
 
 Using this method, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (amber or green zone) and 3 would be below (red zone. Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from green to red several times. 
 

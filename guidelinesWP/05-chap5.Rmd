@@ -1,4 +1,4 @@
-# Discussion and Recommendations for Future Work {#recommendations}
+# DISCUSSION AND RECOMMENDATIONS FOR FUTURE WORK {#recommendations}
 
 <!--CH: Add this from TOR3-->
 
@@ -9,12 +9,14 @@
 The impact of hatcheries on assessment against CUs and LRPs is a key uncertainty due to the low rates of marking among hatcheries and genetic impacts that can perpetuate over multiple generations. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic introgression from strays would help address these uncertainties.  
 
 - describe uncertainties arising from missing limited CU-level data. 
+- expert drive process accounts for uncertainty in underlying data an reliability of SR based benchmarks (see narratives in dfoWildSalmonPolicy2015 for IFR coho). Would also be includes in peer-reveiw of Rapid Multidimensional Scanning Tool statuses
+
 
 ### Logistic-regression based LRPs
 
 - describe uncertainties arising from missing limited CU-level data. (
-- describe challenges from ppt
-- Also, it is not possible to assess sensitivity of LRPs to  structural assumptions about covariance in population dyanmics among CU and the relationship between aggregate abundances and CU statuses, as the LRP depends only on the logistic fit to observed data
+- describe challenges from ppt. How do we set prob? This is an important next step to rsolve- is it only science or not?
+- Also, it is not possible to assess sensitivity of LRPs to  structural assumptions about covariance in population dynamics among CU and the relationship between aggregate abundances and CU statuses, as the LRP depends only on the logistic fit to observed data
 
 One caveat with logistic regression-based LRPs is that a single-metric dropping below the benchmark may not trigger red status over all in a multidimensional framework given high variability in spawner abundances for some CUs. In general, persistence at low levels below abundance-based benchmarks and significant declining trends are required for red status in formal, peer-reviewed WSP assessments [add refs]. 
 
@@ -24,7 +26,13 @@ One caveat with logistic regression-based LRPs is that a single-metric dropping 
 - describe uncertainties arising from missing limited CU-level data. 
 - describe challenges from ppt?
 
-Should highlight the identification of questions / outstanding guidance that were beyond our scope
+
+<!--CH: could add Julie's last 3/4 principles here, which are more related applying LRPs, 
+e.g., 
+Principle 6: If all else fails, consider the use of alternative paradigms.
+Principle 7: Consider whether reference points or indicators should be changed.
+Principle 8: Clearly communicate advice on stock status and reference points.- 
+-Also, if LRP estimates align when derived using different approaches, this increases support for that value.
 
 
 <!--from CS paper-->
