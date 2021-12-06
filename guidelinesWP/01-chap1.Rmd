@@ -63,14 +63,14 @@ A mismatch in scales among biological stocks, the unit of management, and the sp
 
 The goals of this working paper were to:
 
-1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See \@ref(cu-est-methods))
+1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See Section \@ref(cu-est-methods))
 
-2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).
+2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See Section \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).
 
 3. Document key uncertainties that affect LRP estimates for each method considered, including 
-uncertainties arising from missing or limited CU-level data. (See \ref(recommendations))
+uncertainties arising from missing or limited CU-level data. (See Section \ref(recommendations))
 
-4. Provide guidance and recommendations on the application of candidate methods over a range of data types and availability. (see \@ref(guidelines))
+4. Provide guidance and recommendations on the application of candidate methods over a range of data types and availability. (See Section \@ref(guidelines))
 
 Pacific salmon are unique among marine fish species because of their anadromous and semelparous life-history and significant meta-population structure, which results in differences in data availability and modelling approaches for assessments. These differences necessitate advice on LRP development that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. in prep). <!--CH: add Marentette et al. in prep  as footnote, like Holt et al in review, and likely Pestal et al. in prep/review?--> 
 
@@ -129,13 +129,13 @@ In particular, the technical working group informed five components of the work:
 
 1. Principles for the development of Pacific salmon LRPs (make a new chapter)
 
-2. A tool kit of candidate LRP methods (see \@ref(est-methods)
+2. A tool kit of candidate LRP methods (See Section \@ref(est-methods)
 
-3. A demonstration of the application of candidate LRPs to case studies (see \@ref(case-studies))
+3. A demonstration of the application of candidate LRPs to case studies (See Section \@ref(case-studies))
 
-4. Recommendations on when, and when not to use each candidate LRP method (see \@ref(guidelines))
+4. Recommendations on when, and when not to use each candidate LRP method (See Section \@ref(guidelines))
 
-5, Recommendations on future research (see \@ref(recommendations))
+5, Recommendations on future research (See Section \@ref(recommendations))
 
 
 <!--CH: Not sure is the R chunk below is necessary? If we remove, do we need to add gpplot2, knitr, bookdown, devtools to index file? Leave for now-->
