@@ -63,9 +63,9 @@ A mismatch in scales among biological stocks, the unit of management, and the sp
 
 The goals of this working paper were to:
 
-1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See \@ref(est-methods))
+1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See \@ref(cu-est-methods))
 
-2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See \@ref(est-methods) and \@ref(app:first-appendix)) 
+2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).
 
 3. Document key uncertainties that affect LRP estimates for each method considered, including 
 uncertainties arising from missing or limited CU-level data. (See \ref(recommendations))

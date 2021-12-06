@@ -1,129 +1,296 @@
-# DISCUSSION AND RECOMMENDATIONS FOR FUTURE WORK {#recommendations}
-
-<!--CH: Add this from TOR3-->
-
-## Key uncertainties that affect LRP estimates
-
-### Proportion-based LRPs
-
-The impact of hatcheries on assessment against CUs and LRPs is a key uncertainty due to the low rates of marking among hatcheries and genetic impacts that can perpetuate over multiple generations. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic introgression from strays would help address these uncertainties.  
-
-- describe uncertainties arising from missing limited CU-level data. 
-- expert drive process accounts for uncertainty in underlying data an reliability of SR based benchmarks (see narratives in dfoWildSalmonPolicy2015 for IFR coho). Would also be includes in peer-reveiw of Rapid Multidimensional Scanning Tool statuses
+# GUIDELINES FOR APPLYING LRPS {#guidelines}
+<!--CH question: what verb tense should I use in this section. I've tried present, but might not be entirely consistent-->
 
 
-### Logistic-regression based LRPs
+## Stepwise approach for selecting LRPs
 
-- describe uncertainties arising from missing limited CU-level data. (
-- describe challenges from ppt. How do we set prob? This is an important next step to rsolve- is it only science or not?
-- Also, it is not possible to assess sensitivity of LRPs to  structural assumptions about covariance in population dynamics among CU and the relationship between aggregate abundances and CU statuses, as the LRP depends only on the logistic fit to observed data
+We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above red as the default method. Aggregate-abundance based LRPs are considered when required for fisheries management (e.g., local or international), and are considered supplemental to the proportion of CUs with status above red. The step-wise approach considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated.
 
-One caveat with logistic regression-based LRPs is that a single-metric dropping below the benchmark may not trigger red status over all in a multidimensional framework given high variability in spawner abundances for some CUs. In general, persistence at low levels below abundance-based benchmarks and significant declining trends are required for red status in formal, peer-reviewed WSP assessments [add refs]. 
+### Data Availability and Spatial Scale(Step 1)
 
+The first step is to compile CU-level data to support biological status assessments as described under the Wild Salmon Policy [@holtIndicatorsStatusBenchmarks2009a; @holtEvaluatingBenchmarksBiological2018], where those data exist. These data include (but are not limited to) time-series of spawner abundances and biological benchmarks on spawner abundances.  This step generally includes aggregating fine-spatial scale data on stocks or spawning sites to the CU level. 
 
-### Projection-based LRPs
-- these should be considered in development, and not used on their own without further simluation evluation.
-- describe uncertainties arising from missing limited CU-level data. 
-- describe challenges from ppt?
+In some cases, finer spatial scales (e.g., watersheds within CUs) may be considered to delineate serious harm to the SMU. Although CUs are the population unit of assessment and conservation required under the WSP, distribution of spawning within CUs, for example among watersheds, can be an important component of status [@holtIndicatorsStatusBenchmarks2009a] and these finer scales can be considered. 
 
+Distribution is a commonly cited component of salmon viablity and recovery [@mcelhanyViableSalmonidPopulations2010]. When applied to the identification of recovery targets for Pacific salmon, @bradfordReviewBiologicalPrinciples2004 defined the relevant scale of distribution as spatial units that are demographically independent such that the  population dynamics of one unit are unlikely to affect the dynamics of another, but that genetic exchange is expected to occur at greater rates than observed among populations (CUs), and would likely exceed 10 effective migrants/generation. When applying these criteria to Interior Fraser Coho, they defined subpopulations on the basis of large watersheds or lakes, or partial barriers to migration. 
 
-<!--CH: could add Julie's last 3/4 principles here, which are more related applying LRPs, 
-e.g., 
-Principle 6: If all else fails, consider the use of alternative paradigms.
-Principle 7: Consider whether reference points or indicators should be changed.
-Principle 8: Clearly communicate advice on stock status and reference points.- 
--Also, if LRP estimates align when derived using different approaches, this increases support for that value.
+We recommend that the decision on spatial scale of conservation for biological assessments be part of the peer-review process for SMU assessments, and be based on biological principles of conservation and viability (e.g., as reviewed in @bradfordReviewBiologicalPrinciples2004). 
 
+<!--CH: this next pgh needs to be reworked and shortened given the section in the Intro. Same for the section in the WCVK CK case study-->
+For many stocks, hatcheries contribute to spawning abundances and are used as a conservation tool and to increase the availability of fish for harvest. Hatchery enhancement can also reduce wild genetic diversity and are considered a risk factor for the long-term sustainability of CUs [@withlerGeneticallyBasedTargets2018]. Salmon that are enhanced by hatcheries are not considered "wild" under the Wild Salmon Policy and not included in assessments of biological status. Therefore only indicator stocks without significant enhancement were included in our analyses. Proportionate Natural Influence, PNI, is a metric of the genetic risk of hatcheries on natural populations, with values < 0.5 indicating Integrated-Hatchery populations where most fish are hatchery origin [@withlerGeneticallyBasedTargets2018]. Only stocks with PNI values $\geqslant$ 0.5 were included in the development of LRPs and assessment against those LRPs. Stricter definitions of hatchery enhancement were considered (e.g., including only populations with PNI values $\geqslant$ 0.72, Integrated-Wild populations @withlerGeneticallyBasedTargets2018). In practice, applying this stricter threshold resulted in excluding almost all available data for our case study, West Coast Vancouver Island Chinook Salmon, a species <!-- an SMU? --> that is widely enhanced. Adopting a slightly lower threshold of $\geqslant$ 0.5, a level associated with most fish being natural origin, was the result of a trade-off between assessing remaining CU-level biodiversity and excluding hatchery impacts. <!--CH: comment. some of this text is repeated in the Case Study paper for WCVI CK. Remove the middle two sentences here on PNI, or keep them here, but adjust/shorten them in the Case study paper?
+you could remove it from here or leave in both. 
+--> 
+  
 
-<!--from CS paper-->
-We found that removing component CUs from assessments of an SMU tended to increase variability in SMU-level status, which may be more pessimistic or optimistic than when all CUs are considered depending in part on the level of covariation among CUs. <!--CH: I suggest we broaden this pgh to refer to both ppn-based and aggregate-abudnance based LRPs. Kendra shows this point best for logistic-regression based LRPs, but not ppn-based LRPs. While Luke shows variability in whether LRP is breached among data sets, that section does not show variability in status (% of CUs above red) per se, like Kendra does. And I don't show it at all for WCVI CK--> If the LRP of 100% of CUs above red status has been breached for an SMU, the inclusion of additional CUs may further deplete or improve status (% of CUs above red), but will not increase status to above the LRP (100%). In contrast, if the LRP is not breached for an SMU, then the inclusion of additional CUs may deplete status to below the LRP or keep status at 100% of CUs above red zone. This asymmetrical impact of increased monitoring of CUs on SMU status may reduce incentives to extend monitoring to data-deficient CUs.<!--CH: Note to add this to Guidelines paper. This asymmetric property of both ppn-based and to a lesser extent these aggregate-abundance based LRPs is a characteristic we should highlight and cautious about; is a result of LRPs considering dynamics of component stocks that vary independently. -->
+  
+### Assessing Data Deficiency (Step 2)
+  
 
-
-- Specific questions about how well index sites within a CU represent the CU as a whole (i.e., representativeness question, but for sites within a CU instead of CUs within an SMU)
-
-- Consideration of additional habitat-based benchmarks
-
-- Suggestion to consider all three management levers in LRP development: harvest, hatcheries and habitat. Should LRPs be identified along those three dimensions and/or integrate information for those 3 levers?
-
-- Standard versus hierarchical stock-recruitment models for estimating benchmarks
+Second, CUs with data to support biological assessments are identified. CUs are assessed based on a variety of metrics including abundances and trends, and are considered data deficient when data or benchmarks are insufficient on all metrics for assessments under the WSP [@holtIndicatorsStatusBenchmarks2009a]. For example, CUs are only considered data deficient when data to assess temporal trends in spawner abundances (over at least 3 generations) and data on current spawner abundances and associated CU-level abundance benchmarks are missing or insufficient. As a general guideline, we define current spawner abundances as the geometric average spawner abundances over the  most recent generation, where data are insufficient on abundances if there are no data in the most recent generation. For short-term trend analyses, data are considered insufficient if they include less than half of available years or are of low quality representing only presence/absence, similar to criteria described in @brown2020SummaryAbundance2020 applied to spawning sites of Chinook salmon in Southern BC. 
 
 
-- We found that the projecton-based LRP values were dependant on the long term exploitation rate average. Higher values of exploitation rates resulted in higher abundance LRPs. Future research could use this feature of the projection tool to identify the harvest rates that would result in aggregate LRP values that are lower than the past observed aggregate abundances. 
+CU-specific benchmarks on spawner abundances can be derived from spawner-recruitment models, percentiles of spawner time-series, or habitat characteristics. Data requirements for benchmark estimation on spawner abundances differ according to the methods applied and are not explicitly defined here. For example, spawner-recruitment benchmarks developed from hierarchical multi-stock models require fewer years of data than those based on individual stock-recruitment models. In addition, changes in environmental conditions over time may result in historical data that are no longer representative of current conditions, resulting in data deficiencies related to trend metrics and benchmarks on spawner abundances. Local biological expertise is required to review available data and benchmarks prior to assessments to identify data deficiencies.
 
+In addition, a CU may be data deficient if data to resolve the existence of the CU is insufficient. For example, @holtbyConservationUnitsPacific2007 describe provisional CUs pending acquisition of genetic samples to differentiate them from neighbouring CUs. 
 
-When applying methods to specific case studies, we recommend that aggregate-abundance based LRPs consider major structural uncertainties either through sensitivity analyses or model ensemble approaches. These analyses can answer the questions, how sensitive are aggregate-abundance based benchmarks to key model uncertainties, including those related to time-varying parameters, observation errors, and covariance in population dynamics and vulnerability to harvest. In addition, we recommend simulation evaluation be used to assess the robustness of LRPs to violating assumptions given underlying known statuses. Simulation evaluation could further be used to assess the frequency of updates to LRPs required to achieve objectives given underlying changes in model parameters and structure. <!--CH: observation errors in CU-status are relevant for logistic-regression LRPs as they might inflate noise in the LR, and they are relevant to the projection-based LRPs in the noise in the spawner and recruitment data-->
-
-
-
-- While aggregate-abundance based LRPs can be used as part of, or to inform harvest control rules for fisheries management, more complex harvest control rules that include for example, time-area closures to limit CU-specific harvests may better achieve the underlying objective of maintaining CU statuses above red. Expand on this...
-- refer to Groundfish MP Framework
-
-Simulation evaluation of management procedures [dfoManagementProcedureFramework2021] that include multiple management levers and spatial-temporal dynamics of populations and management decisions represents a gap in the current approach to informing decision for Pacific salmon, and is promising area for future research. 
-
-<!--
-
-CW: I moved this here from ch 4.
-
-- Question: could serious harm may mean extinction rather that in the red zone?  
-
-- The question of whether a CU within a larger SMU can persist in the red zone is something that could be simulation tested; although, this would require harvest control rules to be specified for testing.  Such an approach would be case-specific and outside of the scope of our work.  However, we could consider recommending that if a decision is made for a CU to allow some proportion of CUs to be in the red zone, quantitative evaluation (e.g., simulation testing) should be used to demonstrate that red CUs will not be lost. [Although, we may still want to consider putting some bounds on what proportion would be allowed to be below their lower benchmark, i.e., a large proportion of CUs persisting in the red zone may not be acceptable ].
-
--if using $<$100 $\%$ of CUs $>$ red, could recommend simulation testing
-
-
-
-Beyond scope: CU-level benchmark considerations
-- How do data availability and biological considerations interact to inform a decision about which CU-level benchmark to use? (e.g, Sgen from SSR vs. Sgen from Watershed-Area vs. percentile vs. distributional benchmarks, etc)?  
-- Under what conditions should Watershed-Area based LRPs be used? 
-- How do mean and distributions (uncertainties) of watershed-area based and stock-recruitment based benchmarks compare?
-- Under which levels of data uncertainties do stock-recruitment based LRPs outperform habitat-based LRPs? 
-- In cases where watershed-area based benchmarks and stock-recruitment based benchmarks are available, both should be presented and used to derive complementary LRPs to capture our underlying model uncertainties.
-- Alternatively, could be combined by using watershed area to inform prior on beta in the stock-recruitment model
-- What if stocks have different levels of data, e.g., Fraser Sockeye, where stock-recruitment as available for some CUs, while others have only escapement data.  When is it beneficial to use available data for data poor CUs vs when to exclude them?
-
-## Incorporating uncertainty in aggregate abundance LRP estimation
-
-- How should uncertainty in benchmarks be incorporated in the LRP if different methods are used to estimate CU-level status within an SMU (i.e., some CUs have stock-recruitment benchmarks, while others rely on percentile-based or habitat-based benchmarks). Bootstrapping from uncertainties in CU-level benchmarks could be considered in these cases. Although, simulation testing of these scenarios may be outside the scope of this paper, guidance based on best-practices from the literature could be provided.
-
+Further work ground-truthing, expanding, and updating these guidelines for data deficiencies in the context of different salmon species, life-histories, and assessment metrics is warranted. 
+<!--CH comment: Examples of reports that could inform DD: PSE documentation, Brown et al. 2020, Skeena/Nass draft data report, SoS reports,  WSPmetrics github readmewiki (none on wiki, but I imagine DD rules are built in there somewhere.)  I've asked Gottfried and Bronwyn for advice from SoS, but no response
+CW: I think it may be beneficial to cite these. Especially Brown et al. as it has been published. -- I am not sure bout what the others are?
 -->
 
+### Can Data Deficient CUs be Represented by CUs With Data? (Step 3)
+<!-- CH comment: send this section to Ron Kadowaki, Diana Dobson, and Brendan for review-->
 
-## Time-varying parameters and impacts on LRPs
-
-There is increasing evidence of time varying parameters in Pacific salmon populations, particularly relating to trends in productivity [e.g., @holtImpactTimevaryingProductivity2020;  @dornerSpatialTemporalPatterns2018; @malickRegionalScaleDeclinesProductivity2016; @petermanWidespreadDecreaseProductivity2012; @connorsClimateCompetitionInfluence2020; @debertinMarineGrowthPatterns2017 ]. <!--CW note: it is probably better to group/ describe these papers a bit more, or exclude some of them --> In Canada, DFO assessments identified declines in productivity for various CUs, e.g., Fraser sockeye [@grantEvaluationUncertaintyFraser2011;  @huangRecoveryPotentialAssessment2021], Southern BC Chinook (cite SAR 2016/042), Fraser Chinook (Cite RPA)  and Interior Fraser Coho [@arbeiderInteriorFraserCoho2020]. These assessments relied on a variety of tools to identify trends in productivity including the evaluation of trends in log spawners per recruit [@arbeiderInteriorFraserCoho2020], evaluation of trends in residuals from recruitment curve fits [@grantEvaluationUncertaintyFraser2011], and explicit consideration of time-varying parameters when fitting recruitment curves using Kalman filter or recursive Bayes approach [@huangRecoveryPotentialAssessment2021 and RPA]. 
-
-Time-varying recruitment parameters affect estimates for salmon benchmarks (e.g., $S_{MSY}$ and $S_{gen}$) [@holtImpactTimevaryingProductivity2020] and are also likely to affect population trends, resulting in changes to benchmarks based on historical observations (e.g., percentile-based benchmarks) [@holtEvaluatingBenchmarksBiological2018]. Analytical methods for time-varying reference points have been also proposed for other marine fish species [@amarEvaluationTwoManagement2009; @puntFisheriesManagementClimate2014], some of which have been evaluated empirically and in simulation with mixed results [@olearyComparisonMultipleApproaches2020; @bergerCharacterTemporalVariability2019]. For Pacific salmon, time-varying benchmarks effects will have an impact on the classification of CUs status. However determining support for time-varying parameters is not always straightforward. Common statistical diagnosis such as inspection of residuals and use of information criteria (e.g. AIC and BIC) often produce conflicting results [@holtImpactTimevaryingProductivity2020]. A review of stock-recruit analyses for Pacific salmon, including the use of environmental covariates and time-varying parameters, highlighted that even when there is strong evidence for non-stationarity in salmon populations, it is not clear if reference points should be adjusted accordingly [@adkisonReviewSalmonSpawnerRecruitment2021].<!--CH addition next sentence--> Where stock depletion is associated with time-varying parameters that are thought be reversible, it may be more appropriate to protect the population from harvest by maintaining high reference points using historical data [@dfoProceedingsNationalWorkshop2013; @szuwalskiClimateChangeNonstationary2016]
-
-Time-varying stock-recruitment dynamics usually occur at the CU level, and the implications for SMU-based LRPs are not straightforward. There are no clear guidelines on how to translate time-varying stock recruitment parameters into reference points. Effects of time-varying CU recruitment dynamics on aggregate-abundance and proportion-based LRPs will depend on the degree of synchrony among CUs, the direction of the change in recruitment parameters, past and current stock status, among other factors. For example, in our case study on Interior Fraser River Coho Salmon, when consistent reductions in productivity was introduced in one sensitivity analysis (analysis that included informative priors on capacity in CU-level spawner-recruitment models), benchmarks declined for most CUs as did aggregate-abundance based LRP for the SMU. However, in cases where productivity varies at different rates among CUs or capacity changes as well, impacts on CU-level benchmarks and SMU-level LRPs will not be easily predictable. When evaluating the impacts of productivity changes on reference points, @bergerCharacterTemporalVariability2019 suggests that dynamic reference points are most useful in situations when stock productivity shifts directionally and the productivity signal is correctly ascertained. In contrast, uncertainty from incorrectly identifying productivity trends can be a major source of innacuracy in stock status [@bergerCharacterTemporalVariability2019]. In addition, even if time-varying benchmarks and their associated effects on LRPs are considered, it is difficult to define how often LRPs should be changed [@zhangReportOceanFrontier2021]. Mistimed changes in benchmarks or LRPs may lead to bias in stock status [@holtImpactTimevaryingProductivity2020] and volatility of management responses may lead to management uncertainty, reducing trust in the management process [@adkisonReviewSalmonSpawnerRecruitment2021]. 
+Third, the extent to which status of data deficient CUs can be inferred from CUs with data is evaluated. By definition, data deficient CUs do not have data on population dynamics to rigorously evaluate this inference through SMU-specific correlation analyses, though information on threats and biological characteristics may be available. To infer status for data deficient CUs, at a minimum we recommend providing evidence that: (i) the threats impacting data deficient CUs are likely to be the same as for CUs with data,  (ii) environmental drivers are also similar among CUs, e.g., as reflected by the distribution of CUs across biogeoclimatic and Marine Adaptive zones, and (iii) biological characteristics, such as life-history type and dominant age-at-maturity of data-deficient CUs are represented in the CUs with data, and (iv) habitat capacity of data deficient CU is likely in the range of those represented by CUs with data. Evidence supporting these criteria should be clearly documented and reviewed by local experts. The burden of proof would be to identify that data deficient CUs have similar properties to neighbouring CUs, with the default assumption that each CU represents unique biodiversity where status and trends cannot be represented by other CUs. 
 
 
-@dfoHarvestStrategyCompliant2006 recommend that changes to the reference points should only be adjusted when there is considerable evidence that productivity has changed and there are no expectations that these changes will be reverted naturally or achieved through management. In addition, DFO's Precautionary Approach Framework states that "when developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available" [@dfoFisheryDecisionMakingFramework2009]. This information can help identify  if reductions in productivity are likely to be irreversible or only reversible. @klaerHowMuchEvidence2015 devised a framework for evaluation the degree of confidence in productivity shifts in Australian fisheries Similar approaches could be adapted for Canadian salmon populations. Recent studies recommend the use of case specific feedback simulation exercises in order to determine the appropriate scale to adjust reference points when stock-recruitment parameters are non-stationary [@holtImpactTimevaryingProductivity2020; @zhangAccountingNonstationaryStock2021; @olearyComparisonMultipleApproaches2020]. However, full feedback simulation studies might not be feasible for every conservation unit due to limited resources. Future research should focus on identifying general advice on the best practices for adjusting benchmarks when the stock dynamics is thought to be non-stationary.   
+Overall, our goal in this step is to identify if status and trends of CUs are likely to be consistent within an SMU. We refer to LRPs where data deficient CUs are represented by CUs with data as 'interim LRPs', to be applied provisionally until all component CUs can be assessed. In some cases natural variability alone may result in differences in status and trends even if the 4 criteria listed below are met, which underscores the benefits of monitoring and assessing all component CUs. <!--CH questions: Do we want to call these interim LRPs if collecting data for those remote CUs isn't practical/feasible and we think they probably covary with other CUs based on our criteria?  Or instead should we prioritize collection of data for CUs that fail to meet the criteria above, over those that meet them (see last paragraph of this sub-section)?. However, the results from the IFR analysis removing CUs, demonstrated that SMU status is usually biased positive (overoptimistic) when only a subset of CUs are used, so maybe it is appropriate for us to call these interim LRPs?  If they are 'interim', can they still be used to trigger a rebuilding plan under FSPs of the Fisheries Act?-->
+
+
+<!--CW: From the PA Policy:
+I'm sorry, I think I'd like to change my mind here. even if not all CUs are directly assessed, an LRP is still consistent with the PA policy and based on "best available science". Thinking about it again, I agree with Carrie that "interim" weakens the LRP. 
+
+"In resource management, the PA is, in general, about being cautious when scientific information is uncertain, unreliable or inadequate and not using the absence of adequate scientific information as a reason to postpone or fail to take action to avoid serious harm to the resource."
+But also:
+"In data deficient cases, priority should go to monitoring the stock and establishing data time series to support the identification of an LRP. When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
+
+The PA policy also suggests that when a stock is DD, a meta analysis approach should be used to set LRPs (see annex 1b). 
+
+
+This may be a bit out there but: maybe we could suggest the establishment of a data collection plan that would be analogous to the recovery plan but to address data deficiency. -This plan would include a list of data that could be collected (e.g. monitoring of spawning grounds, establishment of genetic markers, catch sampling, ageing, etc.) and potential costs associated with everything? -- Also this plan could clearly indicate if spawning grounds are too remote, inaccessible, or too costly to monitor. -- I think that having that kind of information documented would go a long way in establishing priorities.    
+-->
+
+**Threats** are defined here is any human activity or process that causes harm, death, or behavioural changes to a species, or the destruction, degradation, and/or impairment of its habitat, to the extent that population-level effects occur [@dfoGuidanceAssessingThreats2014]. Information on threats may be derived from published threats and habitat assessments, and may incorporate harvest, effects of land-use in freshwater and estuarine habitats, climate change, and genetic impacts from hatcheries. Because SMUs are defined as groups of CUs that are managed together with the objective of achieving a joint status, it is likely that CUs within an SMU will have similar vulnerabilities to fisheries. Data on genetic stock identification from fisheries can be used to further assess similarities in vulnerabilities in harvest. Beyond fisheries, CUs that are vulnerable to different threats in freshwater and marine environment within an SMU may have divergent statuses and trends. 
+
+
+Similarity in **environmental conditions and drivers** in estuarine and freshwater habitat as reflected in, for example, hydrological regimes and macroclimate in spawning and rearing areas. Differences in hydrological regimes, such as whether systems are fed by rainfall or snowmelt can impact biological characteristics of Chinook salmon, such as spawning time and age and therefore status and trends [@beechieHydrologicRegimeConservation2006]. Broad similarities in macroclimate can be represented Biogeoclimatic Zones, defined as "geographic areas having similar patterns of energy flow, vegetation and soils as a result of a broadly homogenous macroclimate." [@medingerEcosystemsBritishColumbia1991]<!--remove; (BC Ministry of Forestry 2021, https://www.for.gov.bc.ca/hfd/library/documents/glossary/Glossary.pdf). In other words, these terrestrial zones have relatively uniform climate and vegetation. There are approximately 18 biogeoclimatic zones in BC and the Yukon, ranging from Coastal Douglas-Fir on southeastern Vancouver Island to Boreal White and Black Spruce in northern BC. --> CUs with spawning and rearing grounds within different biogeoclimatic zones may experience different macroclimates and hence environmental drivers in estuaries and freshwater. Instead of biogeoclimatic zones, @holtbyConservationUnitsPacific2007 delineate freshwater ecological drainage units to differentiate freshwater ecosystems for Pacific salmon ("Freshwater Adaptive Zones"). These units are defined primarily based on "Ecological Drainage Units" [@ministryoftheenvironmentEcologicalAquaticUnits2021] and consist of salmon populations with shared zoogeographic histories at relatively fine spatial scales such that each CU tends to be associated with a unique unit. Therefore those units are less useful for identifying similarity in environmental conditions among CUs, though other levels of aggregation of Ecological Drainage Units could be developed in the future to inform similarities in freshwater conditions among CUs.
+
+To identify similarities in environmental conditions and drivers in the nearshore marine environment, @holtbyConservationUnitsPacific2007 describe Marine Adaptive zones for Pacific salmon which reflect "watershed-coastal ecosystems of distinct physical characteristics, including the full sequence of riverine, estuarine, and near-short marine habitats used by juvenile anadromous salmonids" (p.14). There are 12 Marine Adaptive zones for Pacific salmon in BC and the Yukon, ranging from the Strait of Georgia in the south to the Bering Sea in the north (COSEWIC 2021 in press). Although SMUs are usually defined to be spatially cohesive groups of CUs and therefore component CUs may experience similar environmental conditions, SMUs and their component CUs often span multiple biogeoclimatic zones and Marine Adaptive zones.  
+
+CUs containing unique biogeoclimatic or Marine Adaptive zones within an SMU may have divergent statuses and trends from neighbouring CUs, either directly due to the different environments or their interaction with other natural drivers and anthropogenic threats.
+
+
+CUs with similar **life-history characteristics** are more likely to respond to common threats and environmental drivers in the same way compared with those with divergent characteristics. For example, Chinook Salmon exhibit at least two distinct life-histories, named stream and ocean types. Stream-type fish rear for more than a year in freshwater and tend to migrate far offshore during their marine stage, whereas ocean-type fish migrate to the ocean as subyearlings (< 1 year) and tend to remain near shore during marine life. These different emigration patterns are believed to have evolved as a consequence of differences in food resources and survival rates in the freshwater and marine environments, and result in different vulnerabilities to physical and biological conditions in those environments.  CUs with different life-history characteristics cannot be used to represent each other under data deficiencies. In some cases, SMUs have been defined to account for differences in life-history in order to better achieve joint status under common management regime (e.g., Fraser Chinook where SMUs are defined in part based on dominant ages at maturity). In other SMUs, CUs with various life-history types are combined (e.g., the Mainland Inlet Chinook SMU which contains CUs with ocean and stream-type fish) <!--CH: to confirm with Diana and Ron. CU34-HOMATH (ocean-type) and CU35-KLINA (stream-type) both in Mainland Inlets CK SMU-->.
+
+CUs with very different **habitat capacities** may respond differently to similar threats. For example very small CUs may be more vulnerable to moderate fishing pressure if abundances drop below critical conservation thresholds, e.g., 1500 fish an abundance threshold within the Rapid Multidimensional Scanner Tool, where as very large CUs may more resilient to common threats.    <!--CH: I think about COSEWIC criteria which identify DUs < 1000 as Threatened, and also DUs < 10,000 with declining trend as Threatened. For Pacific salmon, the habitat capacity of CUs can span this range (<1000 to >10,000) making some CUs inherently more vulnerable than others, presumably.-->
+<!--CW: I believe Luke also saw this effect in the Chum study case - i.e. smaller CUs were more likely to be below their benchmarks.-->
+
+
+
+In a meta-analysis of spawner time-series across Pacific salmon species throughout BC using data extracted from the Pacific Salmon Explorer Tool (PSE 2021)<!--CH: have to add ref to this URL. Add number of time-series included-->,  pairwise correlations in spawner abundances among CUs within SMUs tended to be positive for Pink, Chum, Coho, and Sockeye Salmon (Appendix Figure <!-- add Connors unpublished, or add Brendan as co-author. later preferable-->), providing some support for the use of data-rich CUs to inform CUs without data for those species. One caveat of this analysis is that CUs with available time-series tend to be more heavily managed and may not be representative of those without data which tend to be remote and without direct management interventions. In addition, the four criteria described above were not accounted for in selecting SMUs for inclusion, and so correlations may be biased low. For Chinook Salmon, correlations were more variable among CUs and sometimes negative, possibly due to the inclusion of CUs dominated by both stream-type and ocean-type fish within some SMUs. <!--CH: to check with with Brendan. Which SMUs were negative? Can we improve this guidance piece?-->
+
+Overall, we suggest caution when representing SMU status with only a subset of CUs, and recommend evaluating and documenting the risks of incorrectly assigning status of data deficient CUs based on neighboring CUs. We also recommend further quantitative evaluation of these criteria using empirical data disaggregated by environmental zones, life-history types and management intensity, among other variables, and supported by simulation evaluation.  These criteria are not meant to be prescriptive, but to provide general guidelines for assessing possible inference for data deficient CUs. 
+
+
+If data-deficient CUs do not meet the criteria for inference from the remaining CUs within an SMU, we recommend collection of CU-level data to inform biological assessments. Data collection would therefore be prioritized for CUs that diverge in threats, environmental drivers, life-history capacities and/or habitat capacities from neighbouring CUs. <!--CH: Brendan suggested interim LRPs, but I"m not sure if/when they would apply. If DD CUs don't meet the criteria above, then we should not recommend developing LRPS from remaining CUs period. If 'interim' LRPs are those from SMUs with DD CUs that do meet the above criteria, this would capture amost all of our SMUs I think.   Do we want to call these interim LRPs if collecting data for those remote CUs isn't practical/feasible and we think they probably covary with other CUs based on our criteria?  We should prioritize collection of data for CUs that fail to meet the criteria above, over those that meet them. Perhaps we can bring this up at the next TWG mtg.-->
+<!--CH: on second thought, given the results from the IFR analysis removing CUs, showing that the CU status is usually biased positive (overoptimistic) when only a subset of CUs are used, maybe it is appropriate for us to call these interim LRPs?-->
+
+
+
+
+
+
+
+### Proportion of CUs Above Red Status Required to Avoid Serious Harm (Step 4)
+
+
+The identification of serious harm is a science-based activity, independent of management processes. Given the goal of the Wild Salmon Policy to protect the biodiversity of Pacific salmon in part through the maintaining CUs above lower biological benchmarks, we have identified 100$\%$ of CUs as an LRP that will avoid serious harm. Exceptions to this may occur where there is uncertainty or mis-identification in the delineation of CUs (e.g., as for some transboundary CUs @holtbyConservationUnitsPacific2007) or CUs are deemed extinct. Those CUs would be omitted from the total number of (extant) CUs within the SMU. This step does not include cost-benefit trade-offs associated with choosing which CUs to prioritize if only a portion can be conserved under growing threats, including climate change. Those analyses would require collaboration with various sectors involved in the management of the SMU, beyond those involved in the science-based process of identifying LRPs. Some CUs may be naturally more vulnerable to threats because of their biological or population characteristics (e.g., due to small habitat capacities), however, that natural vulnerability does not diminish the serious harm associated with the biodiversity loss if that CU is lost in the face of ongoing threats. <!--CH: this last sentence is meant to get at the possible exemption of CUs that are naturally at low abundance and "red". The counter argument I heard at the TWG meeting was that those CUs still have ongoing threats and so separating 'natural' vulnerability from threats that deplete a CU is tricky, and probably too hard for us to attempt. And the loss of any CU is serious harm.".-->  In addition, for some CUs the potential for rebuilding to above the red zone may be extremely low. These considerations should be identified in a rebuilding potential analysis to prioritize where resources should be allocated in a rebuilding plan (e.g., @carwardinePriorityThreatManagement2019).  Considerations on rebuilding potential  <!--should be part of the management objectives [@kronlundConsiderationsDesignRebuilding2021] but --> are outside scope of identifying LRPs.
+
+Furthermore, unlike other marine fisheries, threats and management levers for Pacific salmon extend beyond those associated with fisheries that underlie the definition of SMUs and LRPs. The scale of SMUs is often incongruent with the scale of dominant threats and management levers so that LRPs based on 100$\%$ of CUs being above red status may trigger the development of rebuilding plans under Fish Stock provisions when only a component (e.g., a single CU) requires intervention possibly using non-fisheries related levers (e.g., hatcheries or habitat amelioration).  Nevertheless, we have identified 100$\%$ of CUs within the SMU as serious harm under the Fish Stock provisions; triggers and interventions at finer and coarser spatial scales will also be essential to sustain Pacific salmon.<!--CH: This is meant to capture the concern that we might trigger RP when CU is already being managed in other ways, and at a different scales
+CW:Should we recommend (hint) that RP will likely need to be designed to include action at various -->
+
+
+Once LRPs are identified, SMU-level objectives and management procedures can then be evaluated to identify those approaches that best meet objectives, including the prioritization of CU-specific interventions. Furthermore, objectives and management actions can be adapted to a range of spatial scales from CU to regional or multi-SMU scales and then evaluated in a hierarchical context. The proposed LRP presented here of 100$\%$ of component CUs above the red status within an SMU is a first step in that process.
+
+
+### Assess Status Relative to Proportion-based LRP (Step 5)
+
+The status of individual CUs is assessed and the proportion of CUs with status above red is then compared to the LRP of 100% identified from step 4.  Where available, we recommend applying CU assessments from recent WSP Integrated Status Assessments, in which multiple metrics, such as abundances and short- and long-term trends, are integrated to assign CU status within an expert-driven process [holtIndicatorsStatusBenchmarks2009a; @grant2017FraserSockeye2020]. Here we define recent as within the most recent generation as a general guideline, though major perturbations such as landslide events may make even recent assessments unrepresentative of current conditions if the impact of those events are not accounted for. <!--CH remove: Over time-periods longer than an generation, the extent to which the assessment is still representative depends on the dynamics of the specific system.-->
+
+Because WSP Integrated status assessments are time-intensive processes and are not available for most CUs, we demonstrate the application of a Rapid Multidimensional Scanning Tool developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP multidimensional assessment framework (Pestal et al. in prep). More details on this approach are provided in \@ref(cu-est-methods) and our companion working paper (Holt et al. in review).
+
+
+### Peer-review Assessments of Status Relative to Proportion-based LRP (Step 6)
+<!--CH comment: this section needs input from Sue-->
+
+We recommend peer-review of the CU data and assessments used in steps 1 and 5 if CU assessment are developed outside of an existing published, peer-reviewed process. Also, we recommend peer-review of decisions on SMU-scale aggregation from steps 2, 3 and 4. This peer review can occur, at least in part, through DFO's State of the Salmon Program's annual implementation of the Rapid Multidimenstional Scanner Tool. The Scanner Tool will be applied annually as part of of a process integrating Tool outputs with local expertise to provide provisional statuses for CUs. Expert review is required to vet statuses derived from the implementation of the Scanner Tool to ensure they are consistent with underlying biological definitions (e.g., WSP red zone is associated with elevated risk of extinction) given the multiple and sometimes conflicting dimensions of status. <!--CH: Ann-Marie suggested an example from Fraser Sockeye Shuswap here, but I wonder if it might make the flow of this section awkward? Happy to consider an inclusion from Ann-Marie--> The outputs from that process can be used as a basis for developing CU-level statuses to inform SMU-level LRPs. For CUs or SMUs not included or not fully reviewed in that annual process and where SMU-scale LRPs are required <!--CH addition: under the Fisheries Act?, but mentioned below, so maybe not needed here, CW doesn't hurt the flow of the sentence to include-->, we recommend a separate SMU-scale peer-review process that includes assessment of component CUs and decisions about data deficiencies and CU representatives, covering steps 1-5. When used to support decisions under Canada's Fisheries Act, the steps involved in LRP development should be documented in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Document.<!--CH question: Is this requirement for CSAS documentation okay? We should ask Julie/Jason to what extent this is consistent with out marine species, and then mention the consistency here. Some TWG participants suggested LRP identification could occur in the rebuilding plan, but this seems awkward as rebuilding objectives may be related to LRPs, or at least they will in other species, so best to keep the 2 processes separate I think.
+CW: Agree with keeping rebuilding plan and LRP separate. -->
+
+<!--SG comment: if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP. -->
+
+The frequency of SMU-scale peer reviews outside of the annual implementation of the Rapid Multidimensional Scanner Tool will depend on variability in CU-level population dynamics over time and how LRPs and SMU-level assessments are used to inform decision making (e.g., if an SMU is batched under the Fisheries Act), among other factors. In the future, management procedures with various frequencies of assessments could be evaluated in a simulation framework to identify risks of delaying assessments relative to costs of implementing them. 
+
+### Are Aggregate Abundance-Based LRPs Required For Fisheries Management? (Step 7)
+
+<!--CH: Mention how principle 5 supports use of ppn-based LRPs over aggregate-abundance based LRPs (b/c of uncertain assumptions in LR), with some justification for considering aggregate-abundance based LRPs that are statistically integrated so account of uncertainty in CU benchmarks.  -->
+
+Although proportion-based LRPs are sufficient under the Fish Stock provisions for Pacific salmon, alternative, abundance-based LRPs may be required for fisheries management decision making (see Section \@ref(roleLRPs).  For SMUs where harvest at the aggregate scale is a dominant driver of population dynamics and restricting fisheries harvest is a principle lever, an LRP along the metric of aggregate abundances of the SMU may support precautionary management. For example, when LRPs are used to inform a harvest control rule, fishing pressure can be gradually curtailed as aggregate abundances drop towards the LRP to avoid depletion below it. Aggregate-based benchmarks may in some cases be required for local or international management. For example, for Nass and Skeena Sockeye aggregate escapement goals are required under the Pacific Salmon Treaty [@TreatyGovernmentCanada2019], though to comply with the WSP, the status of component CUs should also be considered. 
+
+However, if an LRP is defined within the context of a Management Procedure framework (see Section \@ref(intro)), then an aggregate abundance-based LRP may not be required if the framework can demonstrate the probability of individual CUs falling below lower benchmarks for various management options. For Pacific salmon, management procedures extend beyond harvest control rules to include time-area closures, habitat enhancement or hatchery supplementation to protect individual CUs. Therefore, the choice to develop an aggregate-abundance based LRP depends on the decision context, and should be made in collaboration with various sectors responsible for management decisions within the SMU. If aggregate-abundance based LRPs are not required, assessment of the SMU would be provided from steps 1-6. The following steps (8-12) are relevant if aggregate-abundance based LRPs are required, and build on proportion-based LRPs derived in the previous steps. <!--CH added next 2 sentences-->Risk associated with uncertainties introduced by the inclusion of models to relate aggregate abundances to CU-level statuses should be considered when choosing LRP methods (Principle 5 in Section \@ref(principles)). In addition, the ability of aggregate-abundance based LRPs to integrate uncertainties from CU-level benchmarks to the SMU level, unlike proportion-based LRPs, should also be considered.
+
+Like proportion-based LRPs, aggregate-abundance based LRPs are scientifically derived quantities that delineate serious harm to an SMU following the principles outlined in the \@ref(principles). Although these LRPs can inform harvest control rules, harvest management decisions require consideration of multiple objectives beyond those associated with conservation and serious harm (e.g., socioeconomic objectives). 
+
+
+<!-- CW May be appropriate to Subdivide these steps within two sub sections: proportional based LRPS and aggregate abundance based LRPs -->
+### What is Acceptable Probability of Achieving Proportion-Based LRP? (Step 8)
+
+Aggregate-abundance based LRPs are defined to be consistent with the WSP objective of maintaining biodiversity at the scale of CUs. First, an acceptable probability of achieving the proportion-based LRP (i.e., all CUs above red status) is identified. We provide a range of probabilities and their definitions adapted from likelihood scale used by the International Panel on Climate Change [@mastrandreaGuidanceNoteLead2010], instead of specifying a single probability. <!--CH consider removing the next 2 sentences, and instead borrow text from methods chapter in this WP about LRP being science-derived but with no way to scientific justify a specific p value-->DFO's Guidelines for the Implementation of Fish Stock Provisions states “Unless otherwise defined in stock-specific precautionary approach frameworks, the LRP should be considered breached if the terminal year stock status indicator is estimated to be at or below the LRP with a greater than 50$\%$ probability or if the projected stock status indicator falls below the LRP with a greater than 50$\%$ probability under a zero catch scenario in a 1 year projection” [@dfoScienceGuidelinesSupport2021]. This definition of breaching an LRP suggests a risk neutral approach to identifying serious harm, whereby risks may be accounted for directly and explicitly in harvest control rules that trade-off multiple objectives. In our case studies, we have focused on aggregate-abundances with 50$\%$ probability of achieving proportion-based LRPs as a lower bound on LRP estimates, though other probabilities could be considered on a case-by-case basis.
+
+
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}[]{p{3.7cm} p{6.3cm}}
+\caption{Likelihood definitions adapted from the International Panel on Climate Change.}\\
+\hline
+Probability & Definition \\ 
+\hline
+\endhead
+$>$ 50\%  &  more likely than not that all CUs are above their lower benchmark\\
+$>$ 66\%  &  likely that all CUs are above their lower benchmark\\
+$>$ 90\%  &  very likely that all CUs are above their lower benchmark\\
+$>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
+\hline
+(\#tab:LikelihoodsIPCC)
+\end{longtable}
+
+
+
+### Choose among aggregate-abundance based LRPs (Step 9)
+
+Guidelines for choosing among two types of aggregate-abundance based LRPs are described here: empirical logistic regression-based LRPs and projection-based LRPs that use historical data or projected data, respectively to identify the relationship between aggregate abundances and the probability that all CUs are above red status. These guidelines are derived from the validity of assumptions that each method is based on. If assumptions are not met for either aggregate-abundance LRP method, then developing aggregate-abundance based LRPs that are aligned with the WSP may not be possible for this SMU. See Section on Future Research <!--CH: insertlink--> for approaches for developing and evaluating management procedures for these SMUs that account for CU-level statuses.
+
+Both methods exploit covariation in population dynamics among component CUs, such that when one CU has depleted status and contributes relatively few spawners, it is likely that others CUs also have depleted status contributing few spawners to the aggregate abundance. In contrast, when one CU is considered health and contributes many spawners, it is more likely that other CUs are the same when they covary. 
+
+
+#### Empirical logistic regression-based LRPs
+
+
+
+Empirical logistic regression-based LRPs are derived from historical time-series of proportion of CUs above red status, indicated by a single metric metric on spawner abundances or distribution.  <!--CH: the next few sentences can be adjusted depending on text included in Ch 3 of the CS paper. Do we need to do the same thing for ISC chum?--> <!--CW: I think it may be better to move this text down this section. I think it would be better to start with the situations when the logistic regression-based LRP is recommended --> In preliminary analyses, we considered CU status based on the Rapid Multidimensional Scanner Tool, but have chosen to focus on the single metric approach for several reasons. First, the Rapid Multidimensional Scanner Tool includes status on smoothed abundance data (running generational geometric mean) relative to the benchmark, and therefore the status in one year depends on the status in the previous year. Autocorrelation violates the assumption of independence of observations required in the logistic regression. Although logistic regressions can be revised to account for autocorrelated residuals, the available degrees of freedom are often insufficient to increase model complexity given the relatively short time-series of CUs assessments and changes in environmental conditions which sometimes precludes including older data. <!--CH: also sometimes skew in data points towards most years with all CUs above lower benchmarks which limits power of LR-->. In addition, the Rapid Multidimensional Scanner Tool includes metrics on short- and long-term trends in spawner abundances which are less directly related to, and may be completely unrelated to aggregate abundances. For CUs that rely on time trends for status assessments, aggregate-abundance based metrics are likely not appropriate (see below). However, future analyses could explore the possibility of including CU statuses derived from the Rapid Multidimensional Scanner Tool that rely primarily on absolute and relative abundance benchmarks (e.g., 1500 fish or Sgen) with alternative logistic regression-model forms that include autocorrelation. <!--CH: could exclude or move the last sentence?-->
+
+<!--CH Q: should we mention that different methods, e.g., percentile vs SR benchmark can be used within the same SMU? However, we shouldn't mix trend-based metrics with abundance-based metrics of CU status for agg-Abund LRPs
+CW: yes, we could mention it as part of bullet 1, suggestion below.-->
+
+LRPs based on logistic regressions may be appropriate when the following assumptions are met:
+
+- CU assessments are derived primarily from abundances relative to benchmarks or distribution of spawners instead of time trends. <!-- CW: It is possible to combine two or more types of abundance-based benchmarks to assess CUs within an SMU, e.g. use both percentile and $S_{gen} benchmarks to assess different CUs. However, trend-based benchmarks should not be used to determine aggregate abundance LRPs.-->
+
+- As required for proportional-based benchmarks, data-deficient CUs meet criteria outlined in Step 3 such that their status can be represented by CUs with data. 
+
+- Time-series of the proportion of CUs above the lower benchmark (or above red status) contain contrast such that all CUs are above their lower benchmark (or above red status) in at least one year and at least 1 CU is below its lower benchmark (or has red status) in at least one year.
+
+- There is a significant positive relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark (or above red status) without influential outliers, as supported by model diagnostics described in Holt et al. in review. This relationship tends to be positive when pairwise correlations in spawner abundances are strong and positive among CUs. For example, for Interior Fraser Coho, goodness-of-fit diagnostics identified a significant relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmarks (p<0.01) and the average pairwise spawner correlations among CUs was relatively high, 0.43 (Holt et al. in review). In contrast, for Inside South Coast Chum, the same goodness-of-git diagnostic was not statistically significant (p>0.05) and average pairwise spawner correlations was relatively weak, <0.13."  <!--CH: Check exact cor and p-values-->
+
+- Residuals for logistic regression model fit are independent, i.e., not temporally autocorrelated. <!--CH: "Or if autocorrelation is present in residuals, it is accounted for in the model with an AR(1) term."  Don't think we need it though-->
+
+<!--CH comment: KH and CW, I'd especially like your thoughts on the next two-->
+- Environmental drivers and threats among CUs have remained stable over the available time-series, or have changed in the same way across CUs such that covariance in population dynamics among CUs is likely to have remained stable over time, and hence the relationship between aggregate abundances and log-odds of all CUs being above lower benchmarks is also likely to have remained stable. 
+
+- For logistic regression-models based on CU-level abundance-based metrics <!-- isn't is always based on abundnce based metrics?-->, CU-level population dynamics have either not changed or they have changed in a reversible way such that benchmarks do not vary over time. Reversible changes in population productivity or capacity may warrant management actions to recover the CU to the benchmarks based on historical data, but the benchmarks themselves do not change. 
+<!-- CW: I think assuming that the populations dynamics did not change  is too strong. Population dynamics change all the time, sometimes this change is directional, sometimes not. Somitimes change is reversible, sometimes not. Sometimes the change is detectable, sometimes not. 
+
+Suggestion: 
+The logistic regression-based models require that CU-level population dynamics are not undergoing directional changes, i.e., no detectable and irreversible declines or increases in population dynamic parameters and benchmarks. (not sure if needed -> )Reversible changes in population productivity or capacity may warrant management actions to recover the CU to the benchmarks based on historical data. 
 
  
+ -->
 
-<!--
+LRPs based on logistic regressions may not be appropriate when:
 
-old notes on time-varying parameters
-- Briefly document evidence for time-varying productivity for Pacific salmon
-- Summarizing recent DFO CSAS documents that include discussion of time-varying reference points for Pacific salmon, and recent primary publications:
-- Summarize approach for considering time-varying productivity in WSP CU assessments (e.g., Kalman filter on productivity parameters))
+- CU assessments are derived from trends in spawner abundances over time, and not abundance-based benchmarks.
 
-@adkisonReviewSalmonSpawnerRecruitment2021 reviews stock recruitment analysis for Pacific salmon, including the use of environmental covariates and time-varying parameters. They highlight that even though there might be strong evidence for non stationarity in salmon populations, it is not clear if reference points should me adjusted accordingly. 
+- Data-deficient CUs do not meet criteria outlined in Step 3 such that their status cannot be represented by CUs with data
 
-@kronlundConsiderationsDesignRebuilding2021 recommends that any decision to introduce time-varying reference points be based on evidence supporting that rebuilding could reasonably be expected. They recommend the use of feedback simulations to illustrate the consequences of time-varying benchmarks and identify exceptional circumstances that should lead to re-examination of reference point and management measures. 
+- Time-series of the proportion of CUs above the lower benchmark (or above red status) are equal to 100% for all years, or less than 100% for all years
 
- @zhangAccountingNonstationaryStock2021 illustrates the effects of time-varying recruitment parameters on MSY-based reference points for iteroparous fish stocks (cod and plaice). They highlight that more precautionary benchmarks are necessary to account for the parameter uncertainty in highly dynamic ecosystems. However, they observed that effects on reference points depend on the magnitude and structure of the stochasticity in stock-recruitment relationships, therefore they recommend case specific simulation studies be performed to identify explicit impacts on MSY-based reference points.
+- The relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark (or above red status) is not statistically significant or contains influential outliers. In other words, model diagnostics do not support the use of logistic regression. The relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark tends to be insignificant when pairwise correlations in spawner abundances are weak or negative among CUs.
 
+- Residuals for logistic regression model fit are temporally autocorrelated such that status in one year depends on the status in the previous year
+
+- Threats and/or environmental drivers have changed such that CU-level benchmarks estimated from historical data are no longer meaningful, and there is no expectation that these changes will be reverted naturally of achieved through management
+
+- There is only 1 CU in the SMU. In this case, the CU-level status equates to the SMU-level status.
+
+- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended supplement proportion-based LRPs and not replace them. In this case, there may be risk of loss of CU-level biodiversity due to infrequent extreme events not captured in the model. <!--CH comment: Do we need this one, as it's implied in our step-wise order, and it brings up lots of questions about how current do CU-level assessments have to be, and what is a 'significant risk'. 
+- CW: I think it would be fine to exclude -->
+
+<!--CH comment: KH and CW, I'd also really like your thoughts on the next two, mirroring the last two in the subsection above
+CW: aren't these two a repeat of point 6 above? I think they can be removed.
 -->
+- Environmental drivers and threats among CUs have changed over the available time-series such that covariance in population dynamics among CUs is likely to have changed. 
 
-## Future research
+- For logistic regression-based models based on CU-level abundance-based metrics, environmental drivers and/or threats have changed CU-level population dynamics and there is no expectation that these changes will be reverted naturally or achieved through management, such that it may be appropriate to consider time-varying benchmarks (see sub-section below). 
 
-The definition of serious harm which includes impacts to the ecosystem, associated species and a long-term loss of fishing opportunities [@dfoFisheryDecisionMakingFramework2009], depends to some extent on the time-frame being considered. Assessments that include only very recent data may miss large declines in status and ecosystem impacts that occurred historically before the advent of modern survey records. In some cases, considering a longer view from genetic, archeological, paleoecological, or traditional knowledge demonstrates that recent declines are part of much larger historical declines associated with large-scale ecosystem impacts [@eckertDivingBackTime2018; @leeDiverseKnowledgeSystems2019; @priceGeneticsCenturyOld2019; @@mckechnieArchaeologicalDataProvide2014]. <!--OMIT, unless this pgh moved to intro: The inclusion of traditional ecological knowledge is more commmon in the development of target reference points for fisheries management that identify long-term targets based on biological, social, and economic considerations [@caddyReferencePointsFisheries1995], than in LRPs. -->
+#### Projection based LRPs
 
-While the inclusion of traditional ecological knowledge is more commmon in the development of target reference points for fisheries management [@caddyReferencePointsFisheries1995], than in LRPs, there may be value in further considering its role in identifying serious harm. @reidTwoEyedSeeingIndigenous2020 introduce the concept of Two-Eyed Seeing (Etuaptmumk in Mi’kmaw), where both indigenous and western science perspectives are valued though the process of, “learning to see from one eye with the strengths of Indigenous knowledges and ways of knowing, and from the other eye with the strengths of mainstream knowledges and ways of knowing, and to use both these eyes together, for the benefit of all”.  By understanding serious harm from both indigenous and mainstream scientific perspectives, LRPs may better reflect underlying biological processes understood through both knowledge systems.
-
-Methods for LRPs development could further consideration of serious harm to habitat or ecosystems. In particular, it may be possible to extend the Rapid Multidimensional Scanner Tool to account for ecosystem components of serious harm, as well as divergent levels of data quantity and quality among CUs. Furthermore, the Rapid Multidimensional Scanner Tool could be extended to provide management triggers that occur prior to reaching the LRP, for example that require precautionary management and/or increased monitoring, as in @dowlingGuidelinesDevelopingFormal2015.
+Projection-based LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above red status indicated by a single metric, spawner abundances relative to a lower benchmark. We did not consider CU-status derived from the Rapid Multidimensional Scanner Tool for projection-based LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above red status and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.<!-- CH: we should mention in the other paper that projection-based LRP is an equilibrium approach-->
 
 
-<!--CH add more in sentence below-->
-Alternative LRPs aligned with the key principles in Section \@ref() may be developed in the future to capture a broader range of data availability, quality, and types, and dimensions of biological status.
+Projection-based LRPs may be appropriate when:
+
+- CU-specific stock assessment models have been developed including parameterization of spawner-recruitment models, covariance in recruitment residuals among CUs, and ages-at-maturity, these models are peer reviewed, and they represent current population dynamics.
+
+- Where peer-reviewed model parameters are not available or are no longer current, plausible bounds can be placed on uncertain parameters (e.g., productivity and capacity), including those that may have changed over the time-series to represent a best-estimate of current conditions. 
+
+- These CU-specific parameters are available for representative CUs within the SMU (as identified in step 3)
+
+- Projection-based LRPs may be more appropriate when pairwise correlations in spawner abundances among CUs are positive and strong, but this is not a requirement. It is possible to estimate projection-based LRPs for an SMU with component CUs that vary independently, such that the aggregate abundance at which there is a desired probability of all CUs being above the lower benchmark will be relatively high to support weak CUs. In these cases, proportion-based LRPs, and harvest control rules that manage CUs independently may be more appropriate. <!--CH: am I saying too much with this last sentence? I'm thinking about omitting...-->
+
+<!--CW Suggest rephrasing this bullet to:
+- Projection-based LRPs may be more appropriate when pairwise correlations in spawner abundances among CUs are positive and strong, but this is not a requirement. It is possible to estimate projection-based LRPs for an SMU with component CUs that vary independently. However, when correlation between CUs is low, the LRP will be high to support weak CUs. In some instances the required aggregate abundance LRP may be unrealistically high. In these cases, proportion-based LRPs, and harvest control rules that manage CUs independently may be more appropriate.
+ -->
+
+
+<!--CH: extra text I don't think is needed (but this point can be highlighted in Case Study paper): 
+For example, if there is a high probability that any one CU will be below the lower benchmark in a given year due to asynchronous dynamics, there is also a high probability that aggregate abundances are below the aggregate-abundance based LRP.  In contrast, when correlations in population dynamics and status assessments are relatively high among CUs, aggregate-abundance based LRPs tend to be lower. -->
+ <!--CH comment: Also, I removed wording about agg-abund LRPs being more precautionary (~higher) than proportion-based LRPs when correlations among CUs are low, because I think the level of precaution is the same (both LRPs give more red status when correlations are low). Does that make sense?
+ --> 
+
+
+
+
+Projection-based LRPs may be inappropriate when:
+
+- Population dynamics parameters cannot be estimated, and/or plausible ranges are not known,
+
+- As described above, when pairwise correlations in spawner abundances among CUs are weakly positive or negative projection-based LRPs will be relatively high to support weak CUs, 
+
+- Pairwise correlations in recruitment residuals among CUs are low or negative, such that individual CU statuses tend to be independent of aggregate-abundances (see above). 
+
+- There is only 1 CU in the SMU. In this case, the CU-level status equates to the SMU-level status.
+
+- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended to supplement proportion-based LRPs and not replace them. There may be risk of loss of CU-level biodiversity when relying on projection-based LRPs alone due to unforeseen processes (e.g., infrequent extreme events) not captured in the projection model that are reflected in current CU statuses. 
+
+- Resources to develop/implement the projection model are limiting. <!--CH: this one does feel out of place. Can we omit?--> <!--CW: omotting would be fine, I think this is true for any form of assessment-->
+
+<!--CH comment: this might be best placed in Chap 2 on methods, unless having a quantitative uncertainty estimate matters for application? -->
+An additional difference between these methods is how they account for uncertainties. Projection-based LRPs integrate over uncertainties in population parameters to identify the single aggregate-abundance associated with a desired probability of all CUs being above their lower benchmark. When CU-status is derived from the single metric, abundances relative to the lower benchmark, we apply a statistically integrated model where uncertainties from the underlying CU-specific spawner-recruitment relationships and benchmarks are propagated through to LRP estimates.  Uncertainty in the structural form of stock-recruitment models can also be included through model-ensemble approaches or sensitivity analyses (see Interior Fraser Coho Salmon case study). While logistic regression-based LRPs also identify aggregate abundance associated with a desired probability of all CUs being above their lower benchmark, only statistical uncertainty related to variability in the CU-statuses relative to aggregate abundances are considered and those uncertainties are reflected in confidence intervals of the LRP estimate (or credible intervals in Bayes estimation).  Structural uncertainty in model form can also be considered in logistic regression-based LRPs again through model ensemble approaches or sensitivity analyses.
+
+For logistic regression-based LRPs derived from CU assessments that are independent of spawner-recruitment models (e.g, that use habitat-based benchmarks), it is still be possible to integrate uncertainties from the CU assessments to SMU-level LRPs though bootstrapping methods. For example, where CU benchmark estimates are provided with uncertainties, benchmarks can be sampled from those distributions randomly and used to estimate a distribution of LRPs. In preliminary analyses, this approach was applied to the case study for West Coast Vancouver Island Chinook Salmon to derive uncertainty in logistic regression-based LRPs that accounted for uncertainty in status of component inlets from a watershed-area model. However, because the data did not support the use of logistic regression for that case study, results are not presented, but code to apply this method is available in our repository.
+
+### Apply aggregate-abundance based LRPs (Step 10)
+
+Any aggregate-abundance methods that meet the above criteria are applied. See the companion working paper, Holt et al. in review, for example applications of these methods.
+
+
+### Compare aggregate-abundance based LRPs (Step 11)
+
+Principle 6 for the development of LRPs states that alternative paradigms for developing LRPs should be evaluated (Section \@ref(principles). If multiple aggregate-abundance based methods are applied and statuses differ depending on the method chosen, we suggest (re)considering if all assumptions are met. Statuses that converge among methods provide more strength that LRPs represent a level above serious harm.  Although LRPs that converge may be based on assumptions that are coincidentally incorrect, the principle of Occam's razor supports explanations with fewer exceptions. When LRPs diverge, the underlying assumptions causing those divergences should be explored and further reviewed. We suggest comparing aggregate-abundance based LRPs to current generational (geometric) average spawner abundances to derive SMU status in a way that integrates <!--to integrate (?) --> across independent cohorts (and is consistent with WSP assessments). 
+
+### Compare status from aggregate-abundance based LRPs to that from Prorportion-based LRPs (Step 12)
+
+In this step, we recommend comparing status from aggregate-abundance based LRPs to that from proportion-based LRPs identified in Step 5. While aggregate-abundance based LRPs exploit observed covariation in dynamics among CUs,  observation errors, temporal variation in covariation, and/or infrequent extreme events may result in a break-down in that covariation, and hence statuses from abundance-based LRPs that differ from those based on proportion-base LRPs. We recommend Proportion-based LRPs as the default LRP to implement Fish Stock provisions, with aggregate-abundance based LRPs supplemental where required for harvest management. 
+
+<!-- CW: Can we say how often these comparisons should happen? 
+Is it realistic to suggest that comparisons will be done every year? Or would these comparisons be done every X years?
+ -->
+
+
+<!-- CW: Could the sections below be moved to another chapter? I think it would be good to have the steps as their own chapter to reflect their importance
+Maybe "Time-varying parameters and impacts on LRPs"  could go under chapter 5 (after editing to be more recommendation based?)
+and " Consistency with National Guidance on LRPs" can go under Chapter 2?
+I moved the sections to the chapters listed above.
+ -->
+
+
+
+
