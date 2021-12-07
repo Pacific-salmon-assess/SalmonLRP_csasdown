@@ -5,7 +5,7 @@ After that, all subsequent sections will be turned into appendices. -->
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
-# Data Sources & Treatment for Innter South Coast Non-Fraser Chum Salmon {#app:first-appendix}
+# Data Sources & Treatment for Innter South Coast Non-Fraser Chum Salmon {#app:08-appendix-chum-data}
  
 ## Spawner counts / escapement
 
