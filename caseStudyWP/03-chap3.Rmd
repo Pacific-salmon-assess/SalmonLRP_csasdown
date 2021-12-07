@@ -282,7 +282,7 @@ When the Logistic:Sgen-Ricker model was used, aggregate abundance-based LRPs ran
 knitr::include_graphics("figure/coho-IMCap2020-LogisticLRP.png")
 ```
 -->
-When CU status was based on the IFCRT distributional target, the fit of the logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-IM-logisticFit2020)). LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020). The LRP based on a 99% probability was 44,403 spawners, with a 95% confidence interval extending from 15,102 - 73,703 spawners.  
+When CU status was based on the IFCRT distributional target, the fit of the logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-IM-logisticFit2020)). LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020)). The LRP based on a 99% probability was 44,403 spawners, with a 95% confidence interval extending from 15,102 - 73,703 spawners.  
 <!--
 ```{r coho-Distr-logisticFit2020, fig.cap="Logistic regression fit from the Logistic:IFCRT LRP model using data from 1998 - 2020. See Figure 9 caption for additional details.", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
 knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
@@ -331,20 +331,27 @@ Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confide
 Logistic regression diagnostics showed  that key regression assumptions were met, and that model fits were strong enough to support estimation of logistic regression-based LRPs from all three models (Table \@ref(tab:logisticDiagIFC2020)). The assumptions of linearity and lack of large outliers were met for all models. The assumption of linearity was demonstrated based on the Box-Tidwell test. This test evaluates the significance of adding a non-linear interaction term to the logit regression. We found that this additional interaction term was not significant, supporting the linearity assumption (Table \@ref(tab:logisticDiagIFC2020)). An examination of deviance residuals did not show any large outliers, i.e. no residual values were greater than 2 for all three models. Observations were also found to be independent at all year lags examined for all three models. 
 
 The Wald Test showed that logistic model coefficient for aggregate abundance was marginally significant (p < 0.10). Pseudo-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks, and the goodness of fit statistics indicated a significant fit of the model with aggregate abundance relative to the null model based on p-values less than 0.01. Finally, 'out-of-sample' hit ratios representing classification accuracy as the proportion of successful predictions when one year of data was iteratively left out of the model fit, were relatively high at low probability thresholds, indicating good accuracy. This results was especially true for the Logistic:Sgen-Ricker and Logistic:Sgen-priorCap model which had hit ratios ranging between 0.83 and 0.87 at probability thresholds of 50% and 66%. Classification accuracy was lowest for all models at the 99% probability threshold.
-<!--CH: this table and above text does not appear correctly on the knitted  pdf version. I'm not sure why. Also, I broke up the 1 pgh above into a few smaller ones; feel free to revise-->
 
-
-
+<!--CH: this table and above text does not appear correctly on the knitted  pdf version. I'm not sure why. Also, I broke up the 1 pgh above into a few smaller ones; feel free to revise
 \begin{table}
-\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
-\begin{tabular}{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
+
+\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
+
+\end{table}
+-->
+
+
+\renewcommand*{\arraystretch}{1.5}
+\begin{table}
+\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
+\begin{tabular}{p{3.5cm} p{2.8cm} p{3.5cm} p{3cm}}
 \hline  
  Diagnostic Test  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\
 \hline  
  Box-Tidwell p-value     & 0.44  & 0.94  & 0.79   \\
  Max. deviance residual  & 1.98  & 1.81  & 1.66   \\
  AR-1                    & -0.07 & 0.09  & 0.05   \\
- Wald p-values           & $0.07^*$& $0.06^*$& $0.09^*$ \\
+ Wald p-values           & $0.07^*$ & $0.06^*$& $0.09^*$ \\
  Goodness-of-fit p-value & <0.01 & <0.01 & <0.01  \\
  Pseudo-$R^2$            & 0.60  & 0.61  & 0.40   \\
  Hit Ratio (p= 50\%, 66\%, 90\%, 99\%) & 0.87, 0.83, 0.74, 0.70  & 0.83, 0.83, 0.83, 0.74 &  0.76, 0.71, 0.76, 0.52 \\
@@ -352,7 +359,6 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 \end{tabular}
 (\#tab:logisticDiagIFC2020)
 \end{table}
-
 
 
 <!--
