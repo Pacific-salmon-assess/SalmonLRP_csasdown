@@ -23,6 +23,9 @@ csasdown::csas_table(d,
             #)
 ```
 
+<!-- LW: should alpha and exploitation rate be added to this table as justification for which percentile benchmarks were chosed? Also available in Holt et al. 2018.
+-->
+
 The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. Wild Salmon Policy status assessments have not been done on any ISC Chum CUs. @godboutStockStatusWild2004 identified variable but stable status in the central and southern portion of the SMU, with declines in the north, especially in the region defined by Southern Coastal Streams CU. @holtEvaluatingBenchmarksBiological2018 found similar results in a provisional assessment of status. At this time, a peer-reviewed integrated status assessment has not been developed for ISC chum. *\textcolor{cyan}{LW: Does @godboutStockStatusWild2004 not count as a full status assessment?}*.
 
 Step 3 of the Guidelines for Applying LRPs gives guidance on what evidence would be required to use known status of some CUs for other CUs that are data-limited. This is relevant for the ISC Chum case study because two CUs have no observations in some years (Upper Knight and Bute Inlet). For data deficient CUs to be represented by CUs with data, there needs to be evidence that the data deficient CUs have similar threats, environmental drivers, biological characteristics, and habitat capacity (Guidelines paper, Section 4.1.3). 
@@ -50,22 +53,23 @@ Links to data and analysis code repository are in Appendix \@ref(app:github-appe
 ## CU STATUS ESTIMATION
 
 For this case study, we consider two approaches for characterizing CU status: 
-(1) Pacific Salmon Scanner Tool (Salmon Scanner) 
-(2) CU-level abundance relative to a lower percentile benchmark
+(1) Pacific Salmon Scanner Tool (or Salmon Scanner) 
+(2) CU-level abundance relative to a percentile lower benchmark
 
-The first approach, which uses the Salmon Scanner developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented or a point of comparison with the Salmon Scanner."
+The first approach, which uses the Salmon Scanner developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review)^[Holt, C. A., K. Holt, L. Warkentin, C. Wor, ... . Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Res Doc. In review] as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented or a point of comparison with the Salmon Scanner."
 
 When applying the Salmon Scanner to ISC-NF Chum, we use percentile benchmarks as both upper and lower benchmarks (\@ref(fig:decision-tree)).  As a result, both of our approaches to CU status estimation depend on percentile-based benchmarks.
 
-Percentile-based benchmarks can be applied to assess status of CUs when stock-recruitment data are not available (@holtEvaluatingBenchmarksBiological2018, @clarkEvaluationPercentileApproach2014). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case.
+Percentile-based benchmarks can be applied to assess status of CUs when other data - like benchmarks based on productivity or habitat - are not available or reliable (@holtEvaluatingBenchmarksBiological2018, @clarkEvaluationPercentileApproach2014). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case.
 
-For this case study, percentile benchmarks were calculated using the infilled escapement time series (not smoothed) and status for year $i$ was determined by comparing the geometric average (3 year window, ending with year $i$) with the benchmark. 
+For this case study, percentile benchmarks were calculated using the infilled escapement time series (not smoothed) and status for year $i$ was determined by comparing the geometric mean (4 year window, ending with year $i$) with the benchmark. 
 <!-- 
 Sue Grant: It would be helpful to start the paper with this context on all the different ways to assess relative abundance BMs…Sgen SR models, Sgen habitat, percentiles…
 Maybe that is what the guidelines paper does is put this all together?
 
 KH Respsonse: This is what the guidelines paper does, but I think there is a benefit in developing a table or something that clearly lays out all the options, and which ones are being looked at in each case study.  
 
+LW: would this go in chapter 1 of case studies paper?
 -->
 
 
@@ -86,59 +90,28 @@ Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th
 \end{table}
 
 
-@holtEvaluatingBenchmarksBiological2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (figure \@ref(tab:holt-tab6)). Based on these recommendations, Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ percentile as a lower benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50^th^ percentile lower benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
+@holtEvaluatingBenchmarksBiological2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (figure \@ref(tab:holt-tab6)). Based on these recommendations, Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ percentile as a lower benchmark and 50% as an upper benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50^th^ percentile lower and upper benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a lower benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams (Table \@ref(tab:CU-summary)). 
 
-The methods for applying the multi-dimensional status assessment for CU status is described in Chapter 2. 
-
-In applying the Salmon Scanner to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for abundance-based benchmarks for the five CUs that have appropriate percentiles identified. For Bute Inlet and Southern Coastal Streams, we did not use relative abundance benchmarks. When relative abundance benchmarks are not available, <!--CH: suggest changing last phrase to, "trends were used to assess status according to the decision tree (ref and Fig in Ch2)"-->the decision tree was used assesses trends instead. 
-
-<!-- How were the appropriate percentiles identified? or was it from the @holtEvaluatingBenchmarksBiological2018?. 
-    -->
-
-### LRP Estimation for ISC-NF Chum
-
-<!--
-CW: I suggest we re structure this section so that it is consistent with the IFcoho chapter, 
-With the following headings:  (CH agree)
-
-## LRP ESTIMATION: PROPORTION OF CUS
-### Methods (including CU status based on a single metric and the Salmon Scanner)
-### Results (for both methods for deriving CU status)
-## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
- No methods and results, just mention that the method was not applicable. 
-## Discussion
-
--->
+The methods for applying the Salmon Scanner to get CU status is described in Chapter @ref(#MethodsChapter). In applying the Salmon Scanner to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for lower and upper benchmarks for the five CUs that have appropriate percentiles benchmarks identified (as described above). For Bute Inlet and Southern Coastal Streams, we did not use benchmarks. When benchmarks are not available, trends were used to assess status according to the decision tree (Fig. \@ref(fig:decision-tree)).
 
 
-**LRPs Based on Proportion of CU Status**
+## LRP ESTIMATION: PROPORTION OF CUs
+
+### Methods
+
+We looked at the proportion of CUs that had status estimates above the red zone (or, above the lower percentile benchmark) to determine in which years between 1960 and 2018 the LRP would have been breached. As with the Interior Fraser Coho and WCVI Chinook case studies, we required all CUs to be above the red zone for the ISC-NF Chum SMU to be classified as being above the LRP. 
 
 
-A simple method to set a LRP for a group of CUs is to set the LRP trigger as being a certain proportion of component CUs as being in the red zone. For example, for ISC chum (7 CUs), the LRP could be defined as being breached when one CU is in the red zone. For this case study, we set this as the rule - if any CUs entered the red zone, the SMU was considered to be below the LRP. 
+The single-metric approach to assessing CU status based on percentiles has specific data requirements (@holtEvaluatingBenchmarksBiological2018) while the Salmon Scanner approach can be applied to any CU with at least a consistent time-series of spawner abundances. To compare LRPs based on CU assessment from these two approaches we compared data subsets including those that used the same data for each method, and all appropriate data for each method. We evaluated six different combinations of data and LRP methods (Table \@ref(tab:LRP-scenarios)). For this comparison, we used percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. The benchmarks were estimated using the entire time series. 'Full' scenarios only included CUs with complete time series (no CUs with years with CU-level infilling). 'Partial' scenarios included CUs with incomplete time series, where the years that did not have observations in those CUs were omitted. 
 
-<!-- KH: Some of the above points have already been  covered in chapter 2. I think this section could just start off with: 
+For scenarios 1 and 2, we used CU status based on percentile benchmarks that are determined by productivity and historical exploitation outlined in @holtEvaluatingBenchmarksBiological2018 (Table \@ref(tab:LRP-scenarios)). This method used the annual escapement values to calculate the benchmarks and the generational mean (geometric mean of 4 years) of escapement for year $i$ and previous three years to assess status in year $i$. Scenario 1 includes the four CUs which had complete time series (observations in each year, no CU-level infilling required) and that also had appropriate percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. For example, Upper Knight was excluded because it did not have a complete time series, Southern Coastal Streams was excluded because it does not have an appropriate percentile benchmark, and Bute Inlet was excluded for both of these reasons. We then relaxed this assumption and included all CUs that meet the constraints of @holtEvaluatingBenchmarksBiological2018 even if they had missing data for some years (Scenario 2). This scenario included Upper Knight in some years, which meant that it had five CUs in some years and four in others. Thus, the power to detect red status varied among years in Scenario 2, using more of the available data than Scenario 1. For scenarios 3-6, we used status based on the Salmon Scanner. To compare results between status from percentiles and the Salmon Scanner, we used the Salmon Scanner on the same two data sets we used for percentiles. Scenarios 3 and 1 have the same data, and Scenarios 2 and 6 have the same data. Because the Salmon Scanner does not need benchmarks (percentile or otherwise) to assign status, it could also be used for CUs that did not have appropriate percentile benchmarks (Southern Coastal Streams and Bute Inlet). Scenario 4 only included CUs with a full time series, and Scenario 5 included Upper Knight and Bute Inlet, which had some missing years. 
 
-We looked at the proportion of CUs that had status estimates above the red zone (or, above the lower percentile benchmark) to determine in which years between xxxx and xxxx the LRP would have been breached. As with the Interior Fraser Coho and WCVI Chinook case studies, we required all CUs to be above the red zone for the ISC-NF Chum SMU to be classified as being above the LRP. -->
-
-<!--CH: I suggest prefacing this with why we evaluated different data scenarios, e.g., "The single-metric approach to assessing CU status based on percentiles has specific data requirements (Holt et al. 2018) while the Salmon Scannerapproach can be applied to any CU with at least a consistent time-series of spawner abundances. To compare LRPs based on CU assessment from these two approaches we evaluated several data streams including those that used the same data for each method and all available data for each method."-->We evaluated six different combinations of data and LRP methods (table \@ref(tab:LRP-scenarios)). For scenarios 1 and 2, we used CU status based on percentile benchmarks. For this comparison, we used static benchmarks (not retrospective) using the full data set, and percentile benchmarks based on @holtEvaluatingBenchmarksBiological2018. <!-- To do: Need to better explain what 'static' benchmark means; based on comment from Sue Grant.  CH comment: I suggest removing the term "static benchmark" and simply describe that the benchmarks were estimated using the entire time-series, and applied to each year to derive a time-series of statuses (unlike retrospective analyses described below and for IFR coho where benchmarks were iteratively re-estimated each year) -->  <!--CH: I suggest explaining the difference between scenarios 1 and 2 a bit more, e.g., "For scenarios 1 and 2, we used CU status based on percentile benchmarks that are limited by constraints in productivity in historical exploitation outlined in Holt et al. (2018). Also, we initially constrained time-series so that each CU contained data for each year included in total proportions (i.e.., no missing CU-statuses, Scenario 1). We then relaxed this assumption and included all CUs that meet the constraints of Holt et al. (2018) even if CUs had missing data for some years (Scenario 2). This scenario resulted in total number of CUs in the proportion based LRP what differed among years. The power to detect red status varied among years in Scenrio 2, using more of the available data than Scenario 1. "--> This method used the raw annual escapement values to calculate the benchmarks and the generational mean (geometric mean of 4 years) of escapement in the given year and previous 3 years to assess status in a given year. For scenarios 3-6, we used multi-dimensional status of CUs. The multi-dimensional assessment used percentile benchmarks as relative abundance benchmarks, and also compares the generational geometric mean to assess status relative these benchmarks for each year. <!--CH: scenarios 3-6 might need a bit more justification, as above for scenarios 1 and 2?-->
-
-<!-- CW: I think I need a little bit more explanation on the methods used here.
-
-What is the percentile based on? percentile of the raw annual escapement values? or percentile of the geometric means? CH: I've suggested moving this up to where percentiles are first introduced.
-Or are we saying that we compared the raw numbers and geometric means to the percentile benchmarks to determine status? Or both? 
-
-So scenarios 3-6 used relative abundances instead of full abundances? Is that the difference? 
-
-Also, we may need to define the acronyms in the table below. I would also like to know what is the rationale behind each scenario. i.e. why did we include SCS full data on scenario 4 but excluded it from scenario 6?
-
-
--->
 
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
-\caption{Scenarios using different subsets of data (CU names abbreviated) and methods to assign LRP status. 'Y' indicates a full time series, 'YP' indicates a time series was included but is partial (missing years). Bute Inlet and Southern Coastal Streams do not have appropriate percentile benchmarks. 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.}
+\caption{Scenarios using different subsets of data (CU names abbreviated) and methods to assign LRP status. 'Y' indicates a full time series, 'YP' indicates a time series was included but is partial (missing years that required CU-level infilling which wer omitted). Bute Inlet and Southern Coastal Streams do not have appropriate percentile benchmarks. 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.}
 \begin{tabular}{l c c c c c c c }
 \hline    
 Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ North East Vancouver Island} &  \rotatebox{90}{ Upper Knight} &  \rotatebox{90}{ Loughborough} &  \rotatebox{90}{ Bute Inlet} & \rotatebox{90}{ Georgia Strait} & \rotatebox{90}{ Howe Sound-Burrard Inlet}\\ 
@@ -146,7 +119,7 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 1. Percentile- 4 CUs full       & - & Y & -  & Y & -  & Y & Y \\
 2. Percentile- 5 CUs partial    & - & Y & YP & Y & -  & Y & Y \\
 3. Decision Tree- 4 CUs full    & - & Y & -  & Y & -  & Y & Y \\
-4. Decision Tree- 5 CUs cull    & Y & Y & -  & Y & -  & Y & Y \\
+4. Decision Tree- 5 CUs full    & Y & Y & -  & Y & -  & Y & Y \\
 5. Decision Tree- 7 CUs partial & Y & Y & YP & Y & YP & Y & Y \\
 6. Decision Tree- 5 CUs partial & - & Y & YP & Y & -  & Y & Y \\
 \hline
@@ -156,11 +129,46 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 
 
 
-**LRPs Based on Aggregate Abundance and Logistic Regression**
-<!-- CW: I think we need to review the level of section titles here
-    for IF coho the title for this section is 
- ## LRP ESTIMATION:  AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
--->
+
+### Results
+
+
+**CU Status Based on Salmon Scanner**
+
+Using this method, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (amber or green zone) and 3 would be below (red zone). Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from green to red several times. 
+
+```{r chum-CU-status-tree, fig.cap="Status of CUs based on multi-dimensional status assessment (decision tree). Years with CU-level infilling were not included.", warning=FALSE, echo=FALSE, fig.align="center"}
+knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
+```
+
+<!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
+ 
+
+**CU Status Based on Percentile Benchmarks**
+
+Two out of four CUs were below their percentile lower benchmark in 2018 (Figure \@ref(fig:chum-perc-status-static). Howe Sound-Burrard Inlet and Georgia Strait had status above their lower benchmarks.
+
+
+<!--CH: "In supplementary analyses, we evaluated percentile benchmarks retrospectively for each year in time series using only data prior to that year."--> As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
+
+<!--CH: this next pgh should be moved to the section on Logistic regression-->
+Percentile approaches were not used for the other three CUs for the purpose of the logistic regression of aggregate abundance because they were not appropriate based on productivity and harvest rates (see @holtEvaluatingBenchmarksBiological2018 Table 6),  CU-level infilling, or both (although they are shown in Figure \@ref(fig:chum-perc-retro)). 
+
+Among these three CUs, Southern Coastal Streams and Upper Knight show evidence of shifting baselines if percentile approaches are used. <!--CH; I'm confused now. UK was excluded because it has partial data, not because of this shifting baseline, correct? Evidence for shifting baseline is much weaker for UK than for SCS when we take out CU infilling. Perhaps reword to, "Among these three CUs, Southern Coastal Stream shows evidence of shifting baselines whereby the percentiles trend downwards over time following general decline in abundances (Appendix Fig.), as does Upper Knight but to a lesser extent. -->
+
+
+
+```{r chum-perc-status-static, fig.cap="Spawner escapement (solid black line) with generational mean (4 year rolling geometric mean) of escapement in points.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
+knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
+```
+
+<!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
+ 
+
+
+##LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
+
+### Methods
 
 We evaluated whether the proportion of CUs above their lower benchmark could be predicted by aggregate abundance using logistic regression models. We tested this using percentile and $S_{gen}$ benchmarks. These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis). <!--CH: remove Sgen here, correct?-->
 
@@ -187,91 +195,8 @@ Due to poor logistic model fits using the entire 1953-2018 time series for both 
 <!--CH addition below-->
 Projection-based LRPs are an alternative aggregate-abundance LRP that we did not consider for this SMU due to lack of peer-reviewed stock-recruitment model fits for component CUs. However, this approach could be considered in future analyses given consensus on model structure and parameterization that provide realistic uncertainties in projections of population dynamics.
 
-## RESULTS
 
-
-### LRP Based on Proportion of CU Status
-
-
-**CU Status Based on Percentile Benchmarks**
-
-
-Two out of four CUs were below their percentile lower benchmark in 2018 (Figure \@ref(fig:chum-perc-status-static). Howe Sound-Burrard Inlet and Georgia Strait had status above their lower benchmarks.
-
-
-<!--CH: "In supplementary analyses, we evaluated percentile benchmarks retrospectively for each year in time series using only data prior to that year."--> As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
-
-<!--CH: this next pgh should be moved to the section on Logistic regression-->
-Percentile approaches were not used for the other three CUs for the purpose of the logistic regression of aggregate abundance because they were not appropriate based on productivity and harvest rates (see @holtEvaluatingBenchmarksBiological2018 Table 6),  CU-level infilling, or both (although they are shown in Figure \@ref(fig:chum-perc-retro)). 
-
-Among these three CUs, Southern Coastal Streams and Upper Knight show evidence of shifting baselines if percentile approaches are used. <!--CH; I'm confused now. UK was excluded because it has partial data, not because of this shifting baseline, correct? Evidence for shifting baseline is much weaker for UK than for SCS when we take out CU infilling. Perhaps reword to, "Among these three CUs, Southern Coastal Stream shows evidence of shifting baselines whereby the percentiles trend downwards over time following general decline in abundances (Appendix Fig.), as does Upper Knight but to a lesser extent. -->
-
-```{r chum-perc-status-static, fig.cap="Spawner escapement (solid black line) with generational mean (4 year rolling geometric mean) of escapement in points.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
-knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
-```
-
-
-**CU Status Based on Multi-Dimensional Status**
-
-<!--CH: We have decided to use "Salmon Scanner" to refer to this approach everywhere, unless it's too awkward(i.e., repeating in the same sentence) in which case it can perhaps be shortened by "Salmon Scannerapproach"-->
-
-Using this method, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (amber or green zone) and 3 would be below (red zone. Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from green to red several times. 
-
-```{r chum-CU-status-tree, fig.cap="Status of CUs based on multi-dimensional status assessment (decision tree). Years with CU-level infilling were not included.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
-```
-
-  
-
-
-
-
-**Comparison of Percentile and Multi-Dimensional Methods**
-<!-- KH: This should be made it's own section at the end under the heading
-
-## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
-
--->
-
-
-
-<!--KH: you could start off this section with a blanket statement along the lines of:
-The ISC-NF Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of which LRP estimation method. While the aggregate SMU abundance time series increased over time, SMU status remained below the LRP in every year of the past two decades except 20xx for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as Southern Coastal Streams, remained low.-->
-
-LRP status based on percentile benchmarks had more years below the LRP <!-- than LRP status based on the Salmon Scanner--> Salmon Scanner status (Figure \@ref(fig:chum-LRP-compare), Table \@ref(tab:LRP-scenarios)). Comparing scenarios 1 and 3 (same data) in a given year, ISC Chum were below the LRP based on percentile benchmarks but above it based on decision tree. Scenarios 2 and 6 (same data, more data than 1 and 3) show a similar pattern. <!-- KH: Can you describe why this is? When the Salmon Scannergets applied to 4CUs full, do all CUs in all years use the percentile criteria?  If so, I would expect them to be the same.  Or, are there some years where the mutidim uses trends for the 4 CUs full? -->  <!--CH: the same for scenario 2 and 6 (5 CUs partial). If they use the same percentile data for those 5 CUs, they should get the same result unless an absolute threshold is breached and a different branch of the tree is used in the Rapid Multidimentaional Scanner Tool? If so, it would be useful describing this explicitly--> <!--CH: is there a difference in raw vs smoothed values used in our percentile assessment vs. the SOS Scanner Tool (we should use gen averages), or in the estimation of percentile-based benchmarks (I see we have used raw values, which I think makes sense and is consistent with Holt et al. 2018, p.9)-->
-
-In this case study, adding more data changed the number of years that the SMU was below the LRP. Scenario 5 (most data) had the most years below the LRP. Comparing scenarios 1 and 2, which are both based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. Comparing scenarios 4 and 5 (decision tree only), including more observations results in one year switching from above the LRP to below it.<!--CH: Actually, I think it switched from having no data for that year to below thte LRP when more data were included--> Comparing scenarios 5 and 6 (where scenario 6 had two fewer CUs than scenario 5), including the two CUs in scenario 5 results in three years switching from above the LRP to below <!--CH: again this is switching from no data to below LRP, correct?-->. Other applications may result in different outcomes of including more data based on the status of additional CUs or years. <!--CH. It's not clear what "other applications" means here. I suggest omitting the last sentence, and then in the discussion mentioning the role of adding data--> 
-
-We found that SMU status can be below the LRP even if the aggregate abundance increases. For ISC Chum, this is mainly due to years with high abundances of Georgia Strait and Burrard Inlet-Howe Sound and low abundances and red status in other, smaller CUs, such as Southern Coastal Streams. This highlights the importance of including a metrics of status at the CU level, which influence the overall SMU status.  
-
-```{r chum-LRP-compare, fig.cap="Comparison of LRP status (red = below LRP, gray = above LRP) for six scenarios. The black line shows aggregate abundance. Scenarios 1-3 and 6 do not include Bute Inlet or Southern Coastal Streams (no appropriate percentile benchmarks). 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.", echo=FALSE, fig.align="center"}
-#if(!file.exists('figure/chum-compare-LRP-methods.png'))
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
-knitr::include_graphics('figure/chum-compare-LRP-methods.png')
-```
-
-<!-- 
-KH: To use labels on the historical status bar figure that matched coho, you could use:
-
-Prop: Multidim: 4CUs full
-Prop: Percentile: 4CUs full
-
-Prop: Multidim: 5CUs partial
-Prop: Percentile: 5CUs partial
-
-Prop: Multidim: 5 CUs full
-
-Prop: Multidim: 7CUs full
-
-
-(You don't need to adapt this exact order, although I do like that it goes from less to more data as you move down, and that it groups together the comparisons between methods)
-CH: I agree
--->
-
-
-
-### LRPs Based on Logistic Regression and SMU Aggregate Abundance
-
+### Results
 
 The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figures \@ref(fig:chum-logistic-sgen), \@ref(fig:chum-logistic-perc)). In both cases, the sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark. Note that these regressions used the aggregate abundance of only the CUs used in the regressions, and excluded the other CUs. 
 
@@ -324,6 +249,63 @@ Several factors led to these poor model fits. The Inside South Coast Chum SMU is
 #if(!file.exists('figure/chum-spawners-corr.png')) download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
 knitr::include_graphics('figure/chum-spawners-corr.png')
 ```
+
+
+
+## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
+
+
+<!--KH: you could start off this section with a blanket statement along the lines of:
+The ISC-NF Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of which LRP estimation method. While the aggregate SMU abundance time series increased over time, SMU status remained below the LRP in every year of the past two decades except 20xx for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as Southern Coastal Streams, remained low.-->
+
+LRP status based on percentile benchmarks had more years below the LRP <!-- than LRP status based on the Salmon Scanner--> Salmon Scanner status (Figure \@ref(fig:chum-LRP-compare), Table \@ref(tab:LRP-scenarios)). Comparing scenarios 1 and 3 (same data) in a given year, ISC Chum were below the LRP based on percentile benchmarks but above it based on decision tree. Scenarios 2 and 6 (same data, more data than 1 and 3) show a similar pattern. <!-- KH: Can you describe why this is? When the Salmon Scannergets applied to 4CUs full, do all CUs in all years use the percentile criteria?  If so, I would expect them to be the same.  Or, are there some years where the mutidim uses trends for the 4 CUs full? -->  <!--CH: the same for scenario 2 and 6 (5 CUs partial). If they use the same percentile data for those 5 CUs, they should get the same result unless an absolute threshold is breached and a different branch of the tree is used in the Rapid Multidimentaional Scanner Tool? If so, it would be useful describing this explicitly--> <!--CH: is there a difference in raw vs smoothed values used in our percentile assessment vs. the SOS Scanner Tool (we should use gen averages), or in the estimation of percentile-based benchmarks (I see we have used raw values, which I think makes sense and is consistent with Holt et al. 2018, p.9)-->
+
+In this case study, adding more data changed the number of years that the SMU was below the LRP. Scenario 5 (most data) had the most years below the LRP. Comparing scenarios 1 and 2, which are both based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. Comparing scenarios 4 and 5 (decision tree only), including more observations results in one year switching from above the LRP to below it.<!--CH: Actually, I think it switched from having no data for that year to below thte LRP when more data were included--> Comparing scenarios 5 and 6 (where scenario 6 had two fewer CUs than scenario 5), including the two CUs in scenario 5 results in three years switching from above the LRP to below <!--CH: again this is switching from no data to below LRP, correct?-->. Other applications may result in different outcomes of including more data based on the status of additional CUs or years. <!--CH. It's not clear what "other applications" means here. I suggest omitting the last sentence, and then in the discussion mentioning the role of adding data--> 
+
+We found that SMU status can be below the LRP even if the aggregate abundance increases. For ISC Chum, this is mainly due to years with high abundances of Georgia Strait and Burrard Inlet-Howe Sound and low abundances and red status in other, smaller CUs, such as Southern Coastal Streams. This highlights the importance of including a metrics of status at the CU level, which influence the overall SMU status.  
+
+```{r chum-LRP-compare, fig.cap="Comparison of LRP status (red = below LRP, gray = above LRP) for six scenarios. The black line shows aggregate abundance. Scenarios 1-3 and 6 do not include Bute Inlet or Southern Coastal Streams (no appropriate percentile benchmarks). 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.", echo=FALSE, fig.align="center"}
+#if(!file.exists('figure/chum-compare-LRP-methods.png'))
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
+knitr::include_graphics('figure/chum-compare-LRP-methods.png')
+```
+
+<!-- 
+KH: To use labels on the historical status bar figure that matched coho, you could use:
+
+Prop: Multidim: 4CUs full
+Prop: Percentile: 4CUs full
+
+Prop: Multidim: 5CUs partial
+Prop: Percentile: 5CUs partial
+
+Prop: Multidim: 5 CUs full
+
+Prop: Multidim: 7CUs full
+
+
+(You don't need to adapt this exact order, although I do like that it goes from less to more data as you move down, and that it groups together the comparisons between methods)
+CH: I agree
+-->
+
+
+
+ 
+## Discussion
+
+
+
+
+
+
+
+
+-----------------------edit below here
+
+
+
+
+### LRPs Based on Logistic Regression and SMU Aggregate Abundance
 
 
 ## DISCUSSION
