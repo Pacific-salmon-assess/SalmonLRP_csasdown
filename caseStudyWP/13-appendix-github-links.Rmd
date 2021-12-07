@@ -1,0 +1,9 @@
+<!-- The following code should appear at the beginning of the first appendix.
+After that, all subsequent sections will be turned into appendices. -->
+
+
+# DATA AND ANALYSIS LINKS {#app:github-appendix}
+
+
+
+Data and analysis code for the ISC Chum case study are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval
