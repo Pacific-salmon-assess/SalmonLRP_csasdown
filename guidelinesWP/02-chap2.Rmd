@@ -1,186 +1,60 @@
-# LRP Estimation Methods for Pacific Salmon {#est-methods}
+# PRINCIPLES FOR LRP DEVELOPMENT {#principles}
 
 
-Here we outline principles for developing LRPs for Pacific salmon, adapted from those used within  national-level guidance on LRPs (Marentette et al. in prep). That guidance allows for flexibility in the development of LRPs to respond to individual species context, data types and quantities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs will be aligned with national direction while accounting for unique characteristics of these species. 
-<!-- ask Julie and Danny Ings for advice on making these principles and LRPs as consistent as possible with NHQ guidance -->
+<!--CH:  ask Julie and Danny Ings for advice on making these principles and LRPs as consistent as possible with NHQ guidance. If helpful, we could mention in the text that the 6 principles we adapted from an NHQ are a subset of 6 principles designed for the implementation of LRPs. The additional 2 principles focuse on changing LRP methods and communication, which are addressed within principle 2 (science is not static) and 4 (clarity in communication is required to be operational).  -->
+
+Here we outline principles for developing LRPs for Pacific salmon, adapted from those developed for national-level guidance on LRPs (Marentette et al. in prep). That guidance allows for flexibility in the development of LRPs to respect differences in species contexts and data types, quantities, and qualities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs will be aligned with national direction while accounting for unique characteristics of salmon species and data. 
+
+**Principle 1**. LRPs should be consistent with the goal of avoiding serious harm to the stock, as described in @dfoFisheryDecisionMakingFramework2009, and Section \@ref(intro). The LRP should be set above where serious harm is occurring, and should avoid long-term losses, such as those associated with fishing and ecosystem components. 
+
+**Principle 2**. LRPs should be selected based on the best available information for the stock. Criteria for evaluating best scientific information developed for US National Standards may be applicable here for identifying best available information for LRPs [@USCodeFederal2021]. These criteria are: relevance, inclusiveness, objectivity, transparency and openness, timeliness, verification and validation, and peer review [@USCodeFederal2021].  In addition, scientific information should include an evaluation of uncertainties and identify gaps in our understanding or information. When uncertainty arises from multiple LRPs or from various assumptions within a single LRP, these should be acknowledged and considered when providing LRP recommendations. Where the weight-of-evidence supports a set of assumptions or hypotheses associated with one LRP, then this LRP can be recommended. Where evidence is inconclusive, this uncertainty should be integrated into stock assessment and clearly communicated.
+
+Within this principle, it is recognized that science is not static and new findings continually advance our understanding of best available information. In particular, peer-review is necessary to ensure that the quality and credibility of data and methods for LRP development meet the standards of the scientific community. When determining whether to conduct a peer review, the level of novelty and complexity, and any previous reviews should be considered. Although routine updates may not need formal peer review, new LRPS or the application of benchmarks and LRPs to new CUs and SMUs assessments may require peer review.  
+
+Similarly, best practices, or practices that have been demonstrated to work well can be used to inform reference points, as defined by @sainsburyBestPracticeReference2008. "The ‘best practice’ concept is based on the best practice that has been demonstrated through use, and recognizes that views of what is ‘best’ will continuously improve with experience. Best practice is not an absolute or fixed entity, or a guarantee of adequacy. It is based on experience to date and it is expected to evolve over time." [@sainsburyBestPracticeReference2008]
 
 
-<!-- Julie shared these 8 principles from Ntional LRP paper, which we can refer to Marentette et al. in prep.  We should re-work this section accordingly. Also, she sent a ref for criteria for best avilable infomration form the US-->
+**Principle 3**. LRPs should be operational. They should be feasible to calculate based on data that are available and relevant to the policy context and management of the stock. Data availability varies widely among CUs and SMUs, requiring a variety of approaches for CU and SMU-level assessments. No one method will be operational across all cases. To be operational, LRPs should also be easy to communicate to managers and stakeholders in a way that can be understood and used to inform decisions.
 
-<!--FYI - There’s actually a list of 8 draft criteria/principles (supported by a number of sub-principles) we are working with right now for WP1; we only carried the first 4 into this workshop and exercises for a few reasons (because 8 is a lot, and the latter 4 are rather more to do with best practices for actions as opposed to outright characteristics or descriptors of the LRPs and indicators).
+**Principle 4**. LRPs should be reliably estimated. In other words, to the extend possible LRPs should capture underlying true levels of serious harm instead of noise or observation errors. Reliable estimation will depend on the quality and frequency of data collection and the evidence to support underlying relationships and population dynamics used to derive LRPs. Where there is coherence in LRP estimates among analytical methods, this brings additional reliability to the LRP recommendation.
+
+<!--RE: pgh below
+CW: 'statistically integrated' or sequential Bayes? i.e. sampling from posterior. 
+CH: I think the point of Staton et al. 2017 is that for salmon, statistical integration wasn't always essential and the standard sequential approach may be sufficient in many cases (though underestimating uncertainty). I don't think they necessarily recommended Bayes over frequentest. For the watershed-area model, I used TMB, but draw random draws from 95%CI of SREP to get uncertainties in benchmarks. We used TMB to minimize estimation time as we thought we would be running simulation evaluations.  So, I'd prefer not to include recommendation on Bayes vs Freq analyses. However, instead of recommending integrated analyses always,  we could recommend that it be considered--> 
+
+Where possible, a statistically integrated approach for estimating LRPs should be considered in order to propagate uncertainties throughout analyses and to be consistent with current best practices in fisheries stock assessments [@puntEssentialFeaturesNextgeneration2020a]. @statonSequentialIntegratedBayesian2017a and @defilippoImprovingShorttermRecruitment2021 provide recent examples of integrated models used for salmon assessments. Both studies show that uncertainty propagation increases realism of model estimates and associated uncertainty. However, @statonSequentialIntegratedBayesian2017a demonstrated that similar point estimates of current status can be achieved by using sequential estimation approaches and the benefits of statistically integrated approaches may not be large enough to warrant an integrated analysis in all cases. 
+
+
+<!--CH suggestion: I've added another 2 principles from NHQ's list. Let me know what you think.-->
+
+**Principle 5**. When selecting among multiple methods for determining LRPs, the choice should take into account risk. Candidate methods for LRPs vary in how and the extent to which they account for uncertainty in underlying data, population dynamics (parameters and model structure), and derivation of CU-level statuses. These uncertainties create risks of LRPs providing a misleading threshold of serious harm. All else being equal, methods that do not rely on highly uncertain data or assumptions or that explicitly account for those uncertainties should be preferred. <!--CH: This principle supports use of ppn-based LRPs over aggregate-abundance based LRPs (b/c of uncertain assumptions in LR), with some justification for considering aggregate-abundance based LRPs that are statistically integrated so account of uncertainty in CU benchmarks. I have added to chapter on guidelines  -->
+
+
+**Principle 6**. Consider the use of alternative paradigms for developing LRPs. LRP estimates that converge when derived using different approaches, increases support that the methods capture underlying population dynamics despite differing assumptions and use of available data.
+
+
+**Principle 7**.  In addition to principles derived for marine fish species in general (Principles 1-6), for Pacific salmon, LRPs should be consistent with the goals and objectives of the WSP. The WSP framework for defining biological units and assessing their status along biological metrics with lower benchmarks to avoid risks of extinction is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a possibly misleading indication of serious harm and status. Therefore, to be consistent with the WSP, LRPs should consider status of component CUs.
+
+For marine fish species LRPs are typically estimated as a minimum level of spawning biomass that should not be breached (Kronlund et al. 2018), LRPs that consider the distribution of abundances among component CUs and alternative metrics of status within CUs such as trends in abundances and distribution of spawning are considered here to be consistent with previous status assessments under the WSP. Furthermore, DFO's Precautionary Approach Framework identifies additional metrics such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition” [@dfoFisheryDecisionMakingFramework2009]. Our goal is to provide overall guidelines on LRP development while providing flexibility in application of these methods due to differences in local biological characteristics, data qualities and data quantities, among other factors. We demonstrate the extent to which the candidate LRP methods are aligned with Principles 1-4 from Marentette et al. (in prep.), and Principle 7 for Pacific salmon. We further develop guidelines for implementing these methods (Section \@ref(guidelines)) aligned with Principles 5-6 from Marentette et al. (in prep.).  Alternative LRP methods aligned with the key principles above may be developed in the future to capture a broader range of data availability, quality, and types, and/or dimensions of biological status.
+
+
+
+
+<!-- Julie Marentette: There’s actually a list of 8 draft criteria/principles (supported by a number of sub-principles) we are working with right now for WP1; we only carried the first 4 into this workshop and exercises for a few reasons (because 8 is a lot, and the latter 4 are rather more to do with best practices for actions as opposed to outright characteristics or descriptors of the LRPs and indicators).
 
 Principle 1: Stock status indicators and LRPs should be consistent with an objective to avoid serious harm to the stock.
-Principle 2: Stock status indicators and LRPs should be selected based on the best available information for the stock.
+Principle 2: Stock status indicators and LRPs should be selected based on the best available information for the stock. The US link for best available information was this one: see pt. 6 https://www.ecfr.gov/current/title-50/chapter-VI/part-600/subpart-D/section-600.315
 Principle 3: Stock status, indicators and LRPs should be operational (feasible and relevant to the management of the stock).
-tractable to calculate, easy to communicate
+-CH  note: tractable to calculate, easy to communicate
 Principle 4: Stock status indicators and LRPs should be reliably estimable.
--data quality and frequency of collection
--is SR sound basis for LRP
--weight of evidence among different options, coherence in methods
--looking for ways to account for uncertainty
-
+-CH notes: data quality and frequency of collection; is SR sound basis for LRP; weight of evidence among different options, coherence in methods; looking for ways to account for uncertainty
 Principle 5: When selecting from multiple alternatives, the choice of stock status indicators and LRPs should take into account risk.
 Principle 6: If all else fails, consider the use of alternative paradigms.
 Principle 7: Consider whether reference points or indicators should be changed.
 Principle 8: Clearly communicate advice on stock status and reference points.
-
-The US link for best available information was this one: see pt. 6 https://www.ecfr.gov/current/title-50/chapter-VI/part-600/subpart-D/section-600.315
-
--->
-
-The development of LRPs for Pacific salmon was guided by four principles. Following these principles allowed for some consistency and comparability among LRPs, with an aim to avoid differences in status resulting from different LRPs being applied to the same SMU. See \@ref(app:first-appendix) for a list of resources for implementing these methods.
-
-<!--CH : consider 4 cnadidant best practices criteria from TESA LRPs; (1) consistent with serios harm, (2) best avialble infomration (see US list for this), (3) operational useful, (4) reliably estimable. Is this list of 4 criteria documented and citable?-->
-<!-- CH comment: some of the text in this subsection may be moved to the Intro-->
-
-First, as described in Section \@ref(intro), LRPs  "represent the stock status below which serious harm is occurring to the stock. At this stock status level, there may also be resultant impacts to the ecosystem, associated species and a long-term loss of fishing opportunities.” (DFO PA)<!--CH; add refrence-->. This definition highlights that LRPs should be above the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided. Also, this definition mentions possible impacts on other ecosystem components. Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring (Hilborn and Walters 1992). <!--CH; add refrence-->
-
-Second, LRPs should be consistent with the goals and objectives of the WSP. The WSP framework for defining biological units and assessing their status along biological metrics with lower benchmarks to avoid risks of extinction is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a misleading indication of status and an LRP that ignores serious harm to components. Therefore, to be consistent with the WSP, LRPs need to allow for component CUs to be considered.
-
-Third, LRPs should be reliably estimated in a peer-reviewed framework and be consistent with scientific best practices. <!--CH add more here?-->
-
-Fourth, estimate of LRPs should be estimated in a statistically integrated <!-- 
-  CW: or sequential Bayes? i.e. sampling from posterior--> way when possible in order to propagate uncertainties throughout analyses and to be consistent with current best-practices in fisheries assessments [@puntEssentialFeaturesNextgeneration2020]. @statonSequentialIntegratedBayesian2017 and @defilippoImprovingShorttermRecruitment2021 provide recent examples of integrated models used for salmon assessments. Both studies show that uncertainty propagation increase realism of model estimates and surrounding uncertainty. However, @statonSequentialIntegratedBayesian2017 demonstrated that similar results can be achieved by using sequential Bayesian estmation models. 
-
-
-
-
-Our intention is to provide a variety of LRPs applicable for a range of data quality and data types. 
-Although for other marine fish species, LRPs are typically estimated as a minimum level of spawning biomass that should not be breached, or a fishing mortality rate that should not be exceeded (Kronlund et al. 2018), LRPs along alternative metrics that incorporate trends in abundances and distribution of spawning are considered here to be consistent with assessments under the WSP. Our goals is to provide overall guidelines on LRP development while providing flexibility in application of these methods due to differences in local biological characteristics, data qualities and data quantities, among other factors.
-
-
-Furthermore, DFO's PA Framework identifies additional metrics such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition.” <!--CH; add refrence-->
-
-Alternative LRPs aligned with the key principles above may be developed in the future to capture a broader range of data availability, quality, and types, and dimensions of biological status.<!-- CH comment: some suggestions to be included in "further analyses" sections in both WPs".-->
-
-
-Below methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Then candidate LRPs are briefly described falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances.  A more detailed description of LRPs with technical details is included Working Paper 2. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). <!--CH: choosing between ppn CUs and aggregate abundance will depend on decision context. If LRP is used within the context of a MP framework, then an aggregate abundance-based LRP may be more suitable, and does not need to be explicitly defined. -->
-
-
-## Estimation of CU Status
-
--	There are a variety of CU-level abundance based benchmarks, depending on species and data availability, etc. 
--	When providing guidance in this paper, we focus on: 
-
--	Stock-recruitment based benchmarks, 
--	Percentile based benchmarks, 
--	Watershed-area based benchmarks (as one example of a habitat-based benchmarks), 
--	Distributional benchmarks
-
-
--	We have not included metrics and benchmarks based on status of habitat or ecosystem status (strategies 2 and 3 of the WSP)
-- future work could further considere allee effects realtive to lower benchmarks
-
-<!-- KH comment: I have moved the following text here from the Chum chapter of the case study paper as I think it fits better here (July 19, 2021). This text was compiled by Luke.
-
-
-### Benchmarks for Conservation Units
-
-- The Wild Salmon Policy requires that salmon Conservation Units have set benchmarks dividing three levels of health: red, amber, green.
-- From @canada_canadas_2005: "The lower benchmark between Amber and Red will be established at a level of abundance high enough to ensure there is a **substantial** buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC. The buffer will account for uncertainty in data and control of harvest management."
-
-Level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC can be informed by several criteria:
-
-- @holt_indicators_2009: Table 2
-  - Spawner abundance
-  - Time trends in spawner abundance
-  - Distribution
-  - Likelihood of continued trends in abundance given fishing effort
-- @cosewic_cosewic_2019: Table 2
-  - Decline in total number of mature individuals over last 10 years or 3 generations (whichever is longer) where reduction or its causes may not have ceased or may not be understood of may not be reversible, based on (and specifying) any of: 
-      - direct observation
-      - an index of abundance appropriate to the taxon
-      - a decline in index of area of occupancy, extent of occurrence and/or quality of habitat
-      - actual or potential levels of exploitation
-      - the effects of introduced taxa, hybridization, pathogens, pollutants, competitors, or parasites
-  - Reduction of $\geq$ 70% = endangered
-  - reduction of $\geq$ 50% = threatened
-- @iucn_standards_and_petitions_committee_guidelines_2019: Table 2.1
-  - same as COSEWIC above, but uses "Vulnerable" instead of "Threatened"
-
-How do these line up with LRPs?
-
-- @government_of_canada_fishery_2009: A fishery decision-making framework incorporating the precautionary approach: 
-  - "LRP represents the stock status below which serious harm is occurring to the stock." 
-  - "At this stock level, there may also be resultant impacts to the ecosystem, associated species and a lont-term loss of fishing opportunities"
-  - "When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
-
-- @fisheries_and_oceans_canada_harvest_2006
-  - "The Limit reference point is the stock level below which productivity is sufficiently impaired to cause serious harm to the resource but **above the level where the risk of extinction becomes a concern**" - Qualitatively similar to the benchmark between Red and Amber Zones in WSP. 
-  
-If each of the component CUs of a SMU is above the red/amber benchmark and thus not at risk of extinction, the entire SMU could judged to be above its LRP.
-
-
 -->
 
 
-## Estimation of LRPs: Aggregating CU Status to the SMU-level
 
-### Report status relative to benchmarks for individual CUs
-
-- i.e., no roll-up
-- A benefit to no roll up is that it focuses attention directly on CUs with low status.  However, emerging policy (from NHQ) suggests that each stock should have a single established LPR (one stock = 1 LRP).
-
-### Ppn of CUs with status greater than red
-
-- Based on WSP formal integrated assessments (for CUs where data are available)
-- Or approximated by abundance-based benchmarks
-- if status is approximated with abundance-based benchmarks, and the status on the metric is red, this could trigger an integrated status assesment to derived a formal WSP status prior to triggering LRP.
-
-### Multidimensional approach to aggregating metrics within CUs
-
-- Algorithm to approximate "integrated" status has been developed by the State of the Salmon program, and can be applied to LRP estimation
-- Valuable when abundance-based benchmark (e.g., Sgen) cannot be calculated and percentile-based benchmarks are not reliable (productivity low or HR high)
-- NB the algorithm defaults to abundance-based benchmarks when they are available
-- As above,  if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP.
-- It may be possible to extend this approach in the future to account for ecosystem components of serious harm and divergent levels of data quantity and quality among CUs. 
-- This approach could also be extended to management triggers that occur prior to LRP, e.g.., that require precautionary management and/or more monitoring 
-
-
-
-### Aggregate Abundance LRPs Derived from Empirical Data (Empircally-based LRPs)
-
-<!-- K.Holt: the following text has been moved here from the chum chapter of the case study paper.
-"The goal of these methods was to explore whether the status of component CUs could be predicted well by the aggregate abundance of the whole SMU. The motivation behind this approach is that many SMUs are not monitored at the CU level. If the aggregate abundance of the SMU could predict the status of component CUs, then an LRP that is measured in aggregate SMU abundance could be reliably used." 
-
---- also of note: abundance-based benchmarks may be preferred for link to HCR
-
---> 
-
-- Description of logistic model approach, with illustrative figures, equations, etc
--	Data-based LRPs require a single, measurable benchmark that can be used to quantify CU-status as being healthy (above the benchmark) or not healthy (below the benchmark). This benchmark should be consistent with the definition of a CU in the red zone under the WSP. 
--	Describe suggested model validation/checks for logistic regression and illustrate on an example SMU.
--	Describe approaches for estimating uncertainty: e.g., Integrated modelling approaches and Combining projections from multiple models used to estimate Sgen
-
-### Aggregate Abundance LRPs Derived from Projections (Projection-based LRPs)
-- equilibrium approach that identifies emergent properties of the aggregate given assumptions about underlying population dynamics.
--	Description of projected LRP approach, with illustrative figures, equations, etc
--	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
--	Develop LRPs from projections at specific proportions instead of logistic regression
--	Note that all of the benchmarks provided in Table 1 can all be used as a basis for defining prospective LRPs 
--	Describe approaches for estimating uncertainty, e.g., Combining projections from multiple operating model scenarios
-
-
-### Simple Aggregate Abundance LRPs
-
-<!-- CW: What exactly is this approach? Just summing the lower benchmarks of all CUs? Or adding all the SR time series and estimating a single Sgen? Or something else? -->
-
-- There may be cases where SMU-level limit reference points may be based on analyses on the aggregate abundances, without defining finer spatial scales
-= For example, for SMUs containing only one CU, LRP can be defined as the lower biological benchmark for the CU. 
-
-- Although it may be possible to estimate LRPs based on aggregate data for SMUs that contains multiple CUs with very high covariance, in practice, natural variability in population dynamics among CUs within SMUs is generally high enough such that risks of CUS being depleted below lower benchmarks with this approach are not negligible (i.e., above acceptable levels). 
-- This approach should only be considered in exceptional circumstances when there is evidence for high covariance in dynamics among CUs within and SMU and risks of individual CUs being depleted below lower benchmarks has been evaluated, e.g., through simulation evaluation. 
-
-Evidence for covariation in CU-level dynamics can be derived from fisheries that are sampled for GSI, i.e., CU-proportions have not changed over time suggesting that smaller CUs are not being over harvested
-- Also, available escapement data suggests CUs are stable,
-- evidence of covariance in spawner time-series (or productivity time-series where available), >>0.5?
-
-## Considerations When Selecting a LRP Estimation Method
-
-- We propose a step-wise approach for identifying status relative to LRPs, which is based on the proportion of CUs status greater than red under the Wild Salmon Policy. 
-- This LRP is recommended as the default for evaluating status under the Fish Stock Provisions of the Fisheries Act for Pacific Salmon, with additional aggregate-abundance based LRPs developed as required for local or international management and are supplemental.
-- This stepwise approach is described in more detail in section \@ref(guidelines).
-
-
-
+Our intention is to describe approaches for deriving CU status applicable over a range of data qualities and types, and provide LRPs that integrate the CU-level information to the scale of SMUs.  Below methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Then candidate LRPs that integrate CU statuses are briefly described falling into two categories: those based on the proportion of component CUs above the red zone and those based on aggregate abundances.  A more detailed description of LRPs with technical details is included Working Paper 2. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). 
 

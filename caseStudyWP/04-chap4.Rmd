@@ -72,7 +72,7 @@ Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. 
 
 
 
-This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available to develop stock-recruitment based benchmarks, but habitat-based benchmarks are, as is common for Chinook salmon in BC. WCVI Chinook is also included in the first batch of major stocks proposed for regulation under the Fish Stock Provisions of the revised Fisheries Act, necessitating the development of LRPs for this SMU.<!-- CH comment: add reference here?-->
+This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available to develop stock-recruitment based benchmarks, but habitat-based benchmarks are, as is common for Chinook salmon in BC. WCVI Chinook is also included in the proposed first batch of major stocks for regulation under the Fish Stock provisions, necessitating the development of LRPs for this SMU.<!-- CH comment: add reference here?-->
 
 <!-- KH: Two more unique aspects of this case study that you may wish to mention here are:
 
@@ -94,7 +94,7 @@ Two of the 3 CUs in this SMU, WCVI-South and WCVI-Nootka & Kyuquot, were assesse
 WCVI Chinook was identified as a stock of concern in the 2021 Integrated Fisheries Management Plan, IFMP, for South Coast Salmon, and a rebuilding plan is under development [@dfoIntegratedFisheriesManagement2021]. Poor marine survival rates for WCVI Chinook and low spawner levels over the past 2 decades are highlighted as reasons for conservation concern in the IFMP [@dfoIntegratedFisheriesManagement2021, p. 129]. A variety of management measures have been implemented to restrict harvest on WCVI Chinook and address these concerns, described in the IFMP [@dfoIntegratedFisheriesManagement2021].
 
 
-Biological benchmarks have been estimated for WCVI indicator stocks using an empirical relationship between watershed area and common stock-recruitment biological benchmatks, spawner abundances at replacement, $S_{REP}$, and $S_{MSY}$, from a meta-analysis of 25 Chinook stocks across North America [@parkenHabitatbasedMethodsEstimate2006]. Lack of rigorous recruitment data for WCVI Chinook stocks has precluded the use of stock-recruitment based benchmarks. For the development of LRPs for WCVI Chinook, the empirical relationship between watershed area and $S_{REP}$ was re-estimated using a hierarchical Bayesian model (as in @liermannUsingAccessibleWatershed2010), and applied to inlets of WCVI Chinook (Appendix X, to be included). 
+Biological benchmarks have been estimated for WCVI indicator stocks using an empirical relationship between watershed area and common stock-recruitment biological benchmarks, spawner abundances at replacement, $S_{REP}$, and $S_{MSY}$, from a meta-analysis of 25 Chinook stocks across North America [@parkenHabitatbasedMethodsEstimate2006]. Lack of rigorous recruitment data for WCVI Chinook stocks has precluded the use of stock-recruitment based benchmarks. For the development of LRPs for WCVI Chinook, the empirical relationship between watershed area and $S_{REP}$ was re-estimated using a hierarchical Bayesian model (as in @liermannUsingAccessibleWatershed2010), and applied to inlets of WCVI Chinook (Appendix X, to be included). 
 
 <!-- K.H. I don't think the following paragraph fits into this section on "Previous Assessments" since it's something new that has been proposed for this LRP work.  I suggest moving it to the first part of the ## CONTEXT section, and framing it as a unique feature of this case study.  Alternatively, you could move it below to the "Estimation of CU Status' section??-->
 
@@ -156,6 +156,7 @@ PNI values for 14 WCVI indicator stocks were provided to DFO South Coast Stock A
 <!-- CH comment: Do we need to (can we) include time-series of PNI values in an appendix?
 CW: I think it would be better to include the values in a table in the main chapter, if that is possible. We already have 5 appendixes (counting the one on the watershed area model, to be included) -->
 
+<!-- CH add from Guidelines paper 'Because times-series of the proportion of hatchery-origin spawners are not available for these stocks, total spawner abundances were used in the assessment of CU and aggregate SMU level statuses, which may results in overly optimistic assessments of status relative to if hatchery-origin fish were excluded (as in Interior Fraser River Coho case study).'-->
 
 <!-- KH comment: Suggestion to add new section here to be consistent with Coho and Chum chapters: - 
 ## CU Status Estimation
@@ -665,7 +666,8 @@ A few key conclusions from this case study are highlighted for broader relevance
 
 * Aggregate-abundance based LRPs derived from projections were also highly sensitivity to underlying population productivities. As productivity declined, LRPs became more precautionary and vice versa. 
 
+* Projection-based LRPs at probabilities levels of 90% and 99% could not be estimated. Because of the relatively low covariation in dynamics among CUs, the probability of all CUs being above their lower benchmarks were never high, even at high aggregate abundances. 
 
 In the development of projection-based LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  Furthermore, future iterations of the multidimensional status assessment approach could include information on the distribution of spawners across sites within CUs or inlets to incorporate additional scales of diversity.  <!--CH: add consideration of alternative forms of stock-recruitment relationship and peer review as to if a SR is even relevant for these inlets/CUs of CK-->
 
-In addition, if projection-based LRPs are considered for this SMU, further work exploring their sensitivity to productivity and exploitation is warranted with increased number of Monte Carlo trials.
+In addition, if projection-based LRPs are considered for this SMU, further work exploring their sensitivity to directional biases in productivity and capacity is warranted.
