@@ -250,7 +250,7 @@ To examine the effect of missing CUs on retrospective LRP estimates, we calculat
    (\#eq:status)
 \end{equation}
 
-where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of actual LRP estimates because the magnitude of the LRP will vary with the number and combination of CUs used.
+where $nCUs$ is the number of CUs being used (3 or 4) and $LRP'_t$ is the LRP calculated in year $t$ using only data from $nCUs$.  SMU-level status in a given year was calculated for all possible combinations of CUs available (5 combinations when nCUs = 4 and 10 combinations when nCUs = 3) to allow examination of the stability of status estimates among available combinations. Estimates of SMU status relative to LRPs were used to compare among missing CU scenarios instead of actual LRP estimates because the magnitude of the LRP will vary with the number and combination of CUs used. We evaluated the missing CU scenarios retrospectively for years 2017-2020.
 
 
 ### Results
@@ -379,7 +379,7 @@ knitr::include_graphics("figure/coho_LRP_compareRetro.png")
 \linebreak
 
 
-
+ 
 When the Logistic:Sgen-Ricker model was applied retrospectively to missing data scenarios with four out of the five CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). All the five possible combinations of four CUs had estimates in 2017-2019, while only four had estimates in 2020. For scenarios in which LRP estimates were possible, estimates of aggregate status (Equation \@ref(eq:status)) were often close to the estimate obtained when all 5 CUs were used, and always overlapped with the 95% confidence interval of the full data estimate. The Logistic:Sgen-Ricker model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2020 when only 6 out of the 10 possible combinations had estimates. For scenarios that were able to converge, aggregate status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2019 had a status estimate that fell outside of the 95% confidence interval of the full data estimate.  
 
 
@@ -389,9 +389,7 @@ knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurv-50.png")
 
 \linebreak
   
-When the Logistic:Sgen-priorCap model was applied to missing data scenarios none of the scenarios converged.
-
-<!--in which four out of five CUs had data, LRP estimates were only available for two of the five CU combinations (Figure \@ref(fig:coho-IMCap-missingCUs)). For scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only three CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from three-CU scenarios fell outside of the 95% confidence interval for the full data case.--> <!--CH: Can we add that when LRPs were assessed based on only a subset of CUs, status was also more optimistic. I think this is a key message as to why we should have all CUs included if possible-. addendum: Just realized I am wrong, and there are more nuances here. Status as a ppn of CUs above red can be more pessimistic or optimistic as CUs are removed (as you stated), but SMU can never be untriggered with inclusion of new data; the ppn may approach 100 with new data but will never reach 100 (i.e., the curve is asymptotic).
+When the Logistic:Sgen-priorCap model was applied to missing data scenarios in which four out of five CUs had data, LRP estimates were only available for two of the five CU combinations (Figure \@ref(fig:coho-IMCap-missingCUs)). For scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only three CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from three-CU scenarios fell outside of the 95% confidence interval for the full data case. In the year 2018 the model did not converge when all CUs were included, but estimates for missing CU scenarios were available.  <!--CH: Can we add that when LRPs were assessed based on only a subset of CUs, status was also more optimistic. I think this is a key message as to why we should have all CUs included if possible-. addendum: Just realized I am wrong, and there are more nuances here. Status as a ppn of CUs above red can be more pessimistic or optimistic as CUs are removed (as you stated), but SMU can never be untriggered with inclusion of new data; the ppn may approach 100 with new data but will never reach 100 (i.e., the curve is asymptotic).
 CW: I am not sure this is true on this figure, status seems to be both above and below the 1 line. I'm assuming that 1 means that the stock is at LRP?-->
 
 The failure of both the Logistic:Sgen-Ricker and Logistic:Sgen-priorCap models to converge in some years is a function of low sample sizes in the available data set, such that the removal of one or two CUs results in a failure of the logistic regression model to converge on a solution. For example, for the Logistic:Sgen-Ricker model, the South Thompson CU is an influential CU. Removing it from the characterization of 'successful' and 'failure' years, as well as the aggregate abundance used to fit the logistic regression, means that the model cannot converge on a solution because there was no overlap in aggregate abundance levels associated with 'successes' and 'failures', which is a requirement for logistic regression model fits. For the Logistic:Sgen-priorCap model, several CUs are influential due to higher $S_{gen}$ estimates compared to the  Logistic:Sgen-Ricker model. Because several different CUs contribute to 'failure' years, in which CU-level abundances drop below $S_{gen}$, there is higher sensitivity to the removal of any one of these CUs.  
@@ -404,14 +402,14 @@ CH comment: In some ways it is genearlizable IF having more CUs means that you h
 Perhaps this is generalizable-- when time trends in statuses are not consistent across CUs, and status bridge red-amber, then LRP will be sens to which CUs are included. Although there is high correlation among CUs for this SMU, its not perfect. I think this comes back to our criteria for representing missing CUs. Is it possible to add text to tthis section checking if missing CUs can be represented by other CUs based on those criteria?   Or does this matter...  
 --> 
 
-<!--
 
-None of these converge - not sure ther is any interest in showing.
+
+
 ```{r coho-IMCap-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Sgen\\_priorCap:LRP model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. See Figure xx caption for more details.", warning=FALSE, echo=FALSE, out.width = '80%', fig.align="center"}
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurvCap-50.png")
 ```
  
---> 
+ 
 \linebreak
 
 <!--parei aqui-->
