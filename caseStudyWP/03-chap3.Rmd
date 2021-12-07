@@ -289,6 +289,25 @@ knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 ```
 -->
 
+
+
+\renewcommand*{\arraystretch}{1.5}
+\begin{table}
+\caption{Aggregate abundance based LRPs (with 95\% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.}
+\begin{tabular}{p{3.5cm} p{3.5cm} p{3.5cm} p{3cm}}
+\hline  
+ Probability  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\
+\hline  
+50\% (As likely as not) & 21,190 (16,383-25,996) &23,245 (17,456-29,034) & 17,515 (9,695-25,336) \\
+66\% (Likely) & 23,289 (17,364-29,215)&  25,547 (18,158-32,937) & 21,396 (13,418-29,375) \\
+90\% (Very likely) & 28,145 (17,566-38,725) & 30,874 (18,129-43,620) & 30,372 (15,711-45,033)\\
+99\% (Virtually certain) &  35,737 (16,525-54,949) & 39,200 (16,922-61,479) & 44,403 (15,102-73,703) \\
+\hline
+\end{tabular}
+(\#tab:logisticLRPs2020)
+\end{table}
+
+<!--
 +---------------------+-----------------+-----------------+-----------------+
 | Probability         | Sgen-Ricker     | Sgen-priorCap   | IFCRT
 +=====================+=================+=================+=================+
@@ -306,7 +325,7 @@ knitr::include_graphics("figure/coho-ThreshAb2020-LogisticLRP.png")
 +---------------------+-----------------+-----------------+-----------------+
 
 Table: (\#tab:logisticLRPs2020) Aggregate abundance based LRPs (with 95% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.  
-
+-->
 ***Logistic Regression Diagnostics***
 
 Logistic regression diagnostics showed  that key regression assumptions were met, and that model fits were strong enough to support estimation of logistic regression-based LRPs from all three models (Table \@ref(tab:logisticDiagIFC2020)). The assumptions of linearity and lack of large outliers were met for all models. The assumption of linearity was demonstrated based on the Box-Tidwell test. This test evaluates the significance of adding a non-linear interaction term to the logit regression. We found that this additional interaction term was not significant, supporting the linearity assumption (Table \@ref(tab:logisticDiagIFC2020)). An examination of deviance residuals did not show any large outliers, i.e. no residual values were greater than 2 for all three models. Observations were also found to be independent at all year lags examined for all three models. 
@@ -314,13 +333,14 @@ Logistic regression diagnostics showed  that key regression assumptions were met
 The Wald Test showed that logistic model coefficient for aggregate abundance was marginally significant (p < 0.10). Pseudo-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks, and the goodness of fit statistics indicated a significant fit of the model with aggregate abundance relative to the null model based on p-values less than 0.01. Finally, 'out-of-sample' hit ratios representing classification accuracy as the proportion of successful predictions when one year of data was iteratively left out of the model fit, were relatively high at low probability thresholds, indicating good accuracy. This results was especially true for the Logistic:Sgen-Ricker and Logistic:Sgen-priorCap model which had hit ratios ranging between 0.83 and 0.87 at probability thresholds of 50% and 66%. Classification accuracy was lowest for all models at the 99% probability threshold.
 <!--CH: this table and above text does not appear correctly on the knitted  pdf version. I'm not sure why. Also, I broke up the 1 pgh above into a few smaller ones; feel free to revise-->
 
-\renewcommand*{\arraystretch}{1.5}
-\begin{table}[ht]
-\centering
+
+
+\begin{table}
 \caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
-\begin{tabular}{p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm}}
+\begin{tabular}{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
 \hline  
  Diagnostic Test  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\
+\hline  
  Box-Tidwell p-value     & 0.44  & 0.94  & 0.79   \\
  Max. deviance residual  & 1.98  & 1.81  & 1.66   \\
  AR-1                    & -0.07 & 0.09  & 0.05   \\
@@ -330,8 +350,10 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
  Hit Ratio (p= 50\%, 66\%, 90\%, 99\%) & 0.87, 0.83, 0.74, 0.70  & 0.83, 0.83, 0.83, 0.74 &  0.76, 0.71, 0.76, 0.52 \\
 \hline
 \end{tabular}
-(\#tab:holt-tab6)
+(\#tab:logisticDiagIFC2020)
 \end{table}
+
+
 
 <!--
   CW: translated this table to latex as it was messing up the pdf page
