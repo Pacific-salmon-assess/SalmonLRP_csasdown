@@ -1,12 +1,12 @@
 # DISCUSSION AND RECOMMENDATIONS FOR FUTURE WORK {#recommendations}
 
-<!--CH: Add this from TOR3-->
-
 ## Key uncertainties that affect LRP estimates
 
-### Proportion-based LRPs
+### CU assessments
 
-The impact of hatcheries on assessment against CUs and LRPs is a key uncertainty due to the low rates of marking among hatcheries and genetic impacts that can perpetuate over multiple generations. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic introgression from strays would help address these uncertainties.  
+Uncertainties in CU assessments affect both proportion-based and aggregate abundance-based LRPs, and they arise because of uncertainties in underlying data, estimation uncertainty in the statistical models underlying benchmarks, and structural uncertainties in model forms, including which biological metrics and spatial scales to consider in assessments.   
+
+The impact of hatchery enhancement on spawner and recruitment time-series is a key uncertainty due to the low rates of marking among hatcheries. Even when data on the proportion of hatchery-origin fish are available and abundance time-series are adjusted to account for these (as in the Interior Fraser River Coho case study), the genetic impacts of hatchery enhancement can perpetuate over multiple generations [@arakiCarryoverEffectCaptive2009; @christieReproductiveSuccessEarlygeneration2014], but are difficult to quantify because second generation hatchery-origin fish are not marked or monitored. This is a source of uncertainty for populations impacted by within-basin hatchery facilities and those impacted by straying out-of-basin. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic retrogression from strays would help address these uncertainties.  
 
 - describe uncertainties arising from missing limited CU-level data. 
 - expert drive process accounts for uncertainty in underlying data an reliability of SR based benchmarks (see narratives in dfoWildSalmonPolicy2015 for IFR coho). Would also be includes in peer-reveiw of Rapid Multidimensional Scanning Tool statuses
