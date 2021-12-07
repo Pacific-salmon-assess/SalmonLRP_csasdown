@@ -24,41 +24,21 @@ csasdown::csas_table(d,
 ```
 
 
-
-The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. Wild Salmon Policy status assessments have not been done on any ISC Chum CUs.
-
+The ISC Chum SMU is considered data-limited. While escapement series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions  (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival (although there are some scale/growth data in @debertinMarineGrowthPatterns2017). Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. Wild Salmon Policy status assessments have not been done on any ISC Chum CUs. @godboutStockStatusWild2004 identified variable but stable status in the central and southern portion of the SMU, with declines in the north, especially in the region defined by Southern Coastal Streams CU. @holtEvaluatingBenchmarksBiological2018 found similar results in a provisional assessment of status. At this time, a peer-reviewed integrated status assessment has not been developed for ISC chum. *\textcolor{cyan}{LW: Does @godboutStockStatusWild2004 not count as a full status assessment?}*. 
 
 Step 3 of the Guidelines for Applying LRPs gives guidance on what evidence would be required to use known status of some CUs for other CUs that are data-limited. This is relevant for the ISC Chum case study because two CUs have no observations in some years (Upper Knight and Bute Inlet). For data deficient CUs to be represented by CUs with data, there needs to be evidence that the data deficient CUs have similar threats, environmental drivers, biological characteristics, and habitat capacity (Guidelines paper, Section 4.1.3). 
 
 Upper Knight and Bute Inlet CUs are both associated with long fjords that run from the Broughton Archipelago through the Coast Mountains. They include rivers with headwaters in the Cariboo region farther inland than other CUs in the SMU (Fig. \@ref(fig:chum-map)). Southern Coastal Streams, Georgia Strait, and Howe Sound-Burrard Inlet also include portions of the Coast Mountains and some glaciers, but to a lesser extent and their inlets are shorter and their watersheds do not go as far inland. Upper Knight and Bute Inlet are unique in that they are the only CUs in the SMU that only include watersheds that drain into the upper end of long inlets. They are both more remote than the other CUs, which is part of why there are fewer observations *\textcolor{cyan}{LW: check with PVW if this is true}*. 
 
-Chum from these CUs are  exposed to different threats to habitat, survival and productivity than the other five CUs. While these CUs have on average lower impacts from forest harvest, impervious area, and roads, they have larger impacts from forest defoliation and pests (pacificsalmonfoundationPacificSalmonExplorer2021). They may also have different levels of risk from disturbances such as glacier melt, avalanches, debris flows, and floods because they have large, melting glaciers associated with lakes, steep slopes, and unstable terrain. The glacial lake outburst flood that caused a debris flow in the Southgate River in November 2020 is one example of such a an event. These events are capable of killing an entire brood year of eggs/alevins and reshaping habitat with impacts on spawning habitat and stream ecosystems in general for years to come. They can also change water quality in marine habitats. These catastrophic events may be less likely in watersheds with gentler topography and that lack glaciers and glacial lakes. 
-
-- Environmental Drivers (hydrology, Marine adaptive zones, BEC zones): The hydrology, geomorphology, and marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, leading to differences in productivity and responses to the regional climate. 
-
-- Biological characteristics (life history, age at maturity): Both have higher proportion of summer-run populations of chum (\@ref(tab:CU-summary)). Productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance.
-
-- Habitat capacity: Fewer streams with shum spawners *\textcolor{cyan}{LW: check with PVW if this is just fewer monitored streams}* than the other CUs. 
-
-Based on these difference, the burden of proof is not met, and we cannot infer the status for Bute Inlet and Upper Knight from the other CUs. Note that these critera used to evaluate whether status can be borrowed for these CUs extends to whether reliable spawner escapement data can be infilled using escapement in the other CUs. Thus, these CUs are dropped for years with no spawner data in this case study. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality. 
-
-
-<!--CH suggestion to add info on previous status assessments for this SMU, e.g., "@godboutStockStatusWild2004 identified variable but stable status in the central and southern portion of the SMU, with declines in the north, especially in the region defined by Southern Coastal Streams CU. @holtEvaluatingBenchmarksBiological2018 found similar results in a provisional assessment of status. "  I don't know of any other published assessments at this scale-->
+Chum from these CUs are  exposed to different threats to habitat, survival and productivity than the other five CUs. While these CUs have on average lower impacts from forest harvest, impervious area, and roads, they have larger impacts from forest defoliation and pests (pacificsalmonfoundationPacificSalmonExplorer2021). They may also have different levels of risk from disturbances such as glacier melt, avalanches, debris flows, and floods because they have large, melting glaciers associated with lakes, steep slopes, and unstable terrain. The glacial lake outburst flood that caused a debris flow in the Southgate River in November 2020 is one example of such a an event. These events are capable of killing an entire brood year of eggs/alevins and reshaping habitat with impacts on spawning habitat and stream ecosystems in general for years to come. They can also change water quality in marine habitats. These catastrophic events may be less likely in watersheds with gentler topography and that lack glaciers and glacial lakes. The hydrologyof these two CUs likely differs from that of other CUs with more low-lying topography. These watersheds have large glaciers and high amounts of snowmelt, compared to more low-elevation coastal watersheds that are likely rain-dominant hydrographs. Marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, as they are entering the upper ends of large fjords. Regarding biological characteristics, Bute Inlet and Upper Knight have higher proportion of summer-run populations of chum (\@ref(tab:CU-summary)). Productivity (recruits per spawner) of the Upper Knight and Bute Inlet CUs (using CU-level infilling, which introduces error) have the largest magnitude of variability in the SMU, with very productive years (>100 recruits per spawner) and low productivity years, and boom and bust cycles of abundance. These CUs alos have lower habitat capacit, with fewer streams with chum spawners than the other CUs (\@ref(tab:CU-summary))*\textcolor{cyan}{LW: check with PVW if this is just fewer monitored streams}* . Based on these difference, the burden of proof is not met, and we cannot infer the status for Bute Inlet and Upper Knight from the other CUs. Note that these critera used to evaluate whether status can be borrowed for these CUs extends to whether reliable spawner escapement data can be infilled using escapement in the other CUs. Thus, these CUs are dropped for years with no spawner data in this case study. In other SMUs where the quality of data differs for a subset of CUs, careful consideration should be given to whether abundance, productivity, and their trends can be reliably estimated using data from CUs with data of higher quality. 
 
 Benchmarks based on spawner-recruit relationships are unreliable if there is uncertainty in the spawner and recruit data. One alternative is benchmarks calculated as a percentile of the historical CU-level spawner abundance time series (percentile benchmarks). Previous work on developing WSP benchmarks for Inner South Coast Chum has shown that percentile benchmarks can be comparable to those based on stock-recruit relationships when productivity is relatively high and harvest is relatively low (@holtEvaluatingBenchmarksBiological2018). In other cases, percentile benchmarks may be inappropriate due to low productivity, high harvest, and because they do not account for non-stationarity in recruitment dynamics (@holtEvaluatingBenchmarksBiological2018).
 
-We chose the ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. We applied LRPs based on two methods: proportions of CUs above their lower benchmark, and logistic regression based on aggregate abundance. For proportions, we used percentile benchmarks and multi-dimensional status assessment to determine the status of component CUs. For the logistic regressions, we used percentile *\textcolor{cyan}{and $S_{gen}$ - should I leave out Sgen here, or leave in and then say that we dropped it due to unreliable stock-recruit data and/or poor logistic fits}*.
-
-<!--
-    CW: I think there is value in saying that we attempted to use Sgen but that it was not possible due to data limitations. -- this will likely be true for other SMus. 
-    
-    CH: The challenge is that we dismissed SR based on inappropriate assumption used to develop the recruitment time-series, not the performance itself. We could have shown it, but I think it would have been misleading (and didn't meet "reliability" criteria for LRPs. I think you've already mentioned this above , so I don't think you need to anything else here. (though you could mention that using recruitment data would not satisfy reliability principles in Holt et al. (in review)))
-    -->
+We chose the ISC-NF Chum SMU as a case study because we were interested in exploring LRP options for a data-limited SMU. We applied LRPs based on two methods: proportions of CUs above their lower benchmark, and logistic regression based on aggregate abundance. For proportions, we used percentile benchmarks and multi-dimensional status assessment to determine the status of component CUs. For the logistic regressions, we used percentile and $S_{gen}$ benchmarks. However, after attempting $S_{gen}$ benchmarks we decided not to use them because of unreliable stock-recruit data. Using recruitment data would not satisfy reliability principles in Holt et al. (in review). 
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chum-map.png")
 ```
-
 
 ## DATA
 
@@ -66,91 +46,32 @@ We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updat
 
 Available data included spawner abundance time series from 1959 - 2018 and corresponding CU-level recruitment estimated from run reconstruction. Spawner abundance series rely heavily on infilling; 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. Recruitment data are considered highly uncertain for all ISC Chum CUs due to uncertain assumptions required to assign mixed fishery catch to CUs within the run reconstruction model. As a result, we did not consider spawner recruit series to be reliable enough to estimate stock recruitment-based benchmarks such as $S_{MSY}$ and $S_{gen}$.  We did however use spawner recruit model fits to provide approximate estimates of CU-level productivity, which are used to inform the application of percentile-based benchmarks.
 
-@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. <!--CH to revise this pgh to align with Whither et al. 2018-->
-
-<!--CH: suggest adding a bubble plot of spewer correlations, as in IFR and WCVI case studies-->
-
-## METHODS
+@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. <!--CH to revise this paragraph to align with Whither et al. 2018-->
 
 <!-- 
     I'm not sure we need a methods section here. But I am in favour of including the github link.
     CH comment: I don't think we need a header, simply state that data are available here on the github, with code for infilling.
     
     CH (5 Dec): Let's include an Appendix with the repo links as in Appendix 1 of the Guidelines Paper, then refer to Appendix for code instead of links directly.
+    
+    
 -->
 
 Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
 
-<!-- K.H. comment: Have we checked with Pieter on whether he is ok with Chum data being publically accessible on github?  We should make sure we have approval from him via email.
--->
+## CU STATUS ESTIMATION
 
-### Determining the Status of Conservation Units
-<!--
-    Is this section equivalent to the "## CU STATUS ESTIMATION" in IFcoho chapter? 
-    
-    K.H. - yes it is. The header should be changes to match that in the coho chapter. I think Carrie will add this section for chinook too, so all case studies will be consistent.
-    
--->
-
-For this case study, we consider two approaches for characterizing CU status: (i) percentile benchmarks and (ii) multi-dimensional status assessment (@pestalAlgorithmsRapidStatus2021, in prep). <!--CH: let's be conistent with thoughout both papers.  Ithink we're using Rapid Multidimenstional Scanner Tool as the name for this method, also we need to refer to Pestal et al. (in prep) as a footnote instead of full citation.--> *\textcolor{orange}{KH: as discussed, I think it makes sense to take out Sgen as a benchmark to evaluate; however, in light of your note about the SR data still being used for assessing patterns in productivity, we should flag this as something to discuss more with Carrie}* <!--CH: I think we take out Sgen as a benchmark, but include productivity as supplemental information for evaluating when percentile benchmarks are appropriate. I wouldn't emphasize the SR modelling when introducing productivity, just briefly state in the text how productivity was derived.--> 
-<!--CH: Suggest adding, "Although the Rapid Multidimensional Scanner Tool is recommended for CU-level assessments (Holt et al. in prep), we provide status on a simple single metric, spawner abundances relative to percentile-based benchmarks for comparison.  Now I see Kendra's suggestions below which I like! (perhaps instead of this)-->
-
-In addition to abundance-based benchmarks, other benchmarks would also be considered as part of an integrated status assessment under the Wild Salmon Policy (e.g., trends, distribution of abundance; @holtIndicatorsStatusBenchmarks2009). At this time, an peer-reviewed integrated status assessment has not been developed for ISC chum.
-
-One limitation of percentile benchmarks and the multi-dimensional assessment method used here is the assumption of constant productivity. 
-<!--
-Sue Grant comment: This is not a limitation. It can be overcome with the multi-dimenstional approach when BM are considered can include this consideration.
-Response: Agreed – this is a general challenge for all methods, and is part of a larger discussion about time-varying benchmarks / LRPs.  We can better describe it this way.
-
-CH comment Nov 18: I suggest we remove this sentence, as we have a sub-section in the Guidelines paper pertaining to time-varying parameters and impacts on benchmarks and LRPs.
--->
-
-
-<!--KH (Nov 17):
-
-I suggest listing multidim method first to give it higher priority.  Maybe something like:
-
-"For this case stuIdy, we consider two approaches for characterizing CU status: 
-(1) Rapid multidimesional scanning tool 
+For this case study, we consider two approaches for characterizing CU status: 
+(1) Rapid Multidimensional Scanner Tool 
 (2) CU-level abundance relative to a lower percentile benchmark
 
-The first approach, which uses the rapid  multidimensional scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented as for a point of comparison with the rapid multidimensional scanning tool."
+The first approach, which uses the rapid  multidimensional scanning tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status when using the proportional LRP approach. The second approach is presented or a point of comparison with the Rapid Multidimensional Scanner Tool."
 
-Could then lead into a discussion of percentile benchmarks as follows:
+When applying the Rapid Multidimensional Scanner Tool to ISC-NF Chum, we use percentile benchmarks as both upper and lower benchmarks (\@ref(fig:decision-tree)).  As a result, both of our approaches to CU status estimation depend on percentile-based benchmarks.
 
-"When applying the rapid multidimensional scanning tool to ISC-NF Chum, we use percentile benchmarks as both upper and lower benchmarks (cite decision tree figure).  As a result, both of our approaches to CU status estimation depend on percentile-based benchmarks."
+Percentile-based benchmarks can be applied to assess status of CUs when stock-recruitment data are not available (@holtEvaluatingBenchmarksBiological2018, @clarkEvaluationPercentileApproach2014). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case.
 
-... then go on to below text on percentile benchmarks. 
-
-
-
--->
-
-There are studies showing that a range of factors may affect the productivity of ISC Chum. These include competition with other salmon in the ocean and ocean conditions (@debertinMarineGrowthPatterns2017, @litzCompetitionOddyearPink2021). This application of percentile benchmarks does not account for changing productivity. 
-<!--
-Sue Grant comment: How is this different from any other salmon population, they are all affected by these conditions, and particularly right now so many are declining, so this is a fairly common issue, so should be mentioned more ina  broader context at the start and how to address this across all approaches
-Response: Agreed. Can move this to intro and / or discussion to put into broader context.
-
-CW: On the guidelines paper we have a section on the effects of time-varying productivity on  LRPs. We could move some of this discussion there. However, I think there might value in leaving some text here indicating that there are suspected changes in productivity for ISC chum. 
-
-CH: I agree remove this sentence
-
--->
-
-
-
-**Abundance-Based Benchmarks**
-
-<!-- KH:
-I am now wondering of it makes sense to get rid of the ***Abundance-Based Benchmark*** and ***Mutlidimensional Status Assessment*** headers as they are intertwined since the mutlidim uses abundance-based benchamrks.  Mabe the numbered list above is enough to differentiate??? 
-
-CH comment: suggest removeing or changing to percentile-based benchmark, to avoid confusion with abundance-based LRPs
--->
-
-
-<!--CH suggestion: Since this section is about percentile-based benchmarks already mentioned above, I suggest changing the topic sentence to, "Percentile-based benchmarks can be applied to assess status of CUs when stock-recruitment data are not available (Holt et al. 2018, clark et al. ) Then the 1st two sentences can be omitted--> Abundance-based benchmarks can be calculated in several ways. They can be informed by stock-recruit relationships when appropriate data are available. Where there are no reliable stock-recruit data available, an alternate method is using percentiles of recorded abundance (@clarkEvaluationPercentileApproach2014, @holtEvaluatingBenchmarksBiological2018). The suitability of percentile benchmarks was evaluated for ISC Chum by @holtEvaluatingBenchmarksBiological2018, who tested how well percentile benchmarks matched benchmarks from stock-recruit parameters, using retrospective and simulation analyses. @holtEvaluatingBenchmarksBiological2018 also calculated benchmarks based on stock-recruit model parameters for ISC Chum stocks, but did not recommend them due to uncertainty in spawner and recruit data. They tested how well a 25% percentile benchmark (and higher values up to 50%) compared to estimates of $S_{gen}$ for these CUs. They found that percentile benchmarks (from 25-50%) under moderate to high harvest rates and low to moderate productivity tended to underestimate 'true' $S_{gen}$ values (estimated from the same data), which would lead to optimistic and incorrect status assessments. More work on alternatives to percentile benchmarks were needed in this case. They also found that time series bias tends to under-estimate $S_{gen}$.
-
-
+For this case study, percentile benchmarks were calculated using 
 <!--CH: add details on how percentiles calculated, were percentiles based on smoothed or raw time-series of historical data, and mention that the current generational geometric average was compared to the specified percentile-->
 
 <!-- 
@@ -189,14 +110,10 @@ Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th
 @holtEvaluatingBenchmarksBiological2018 recommended different percentiles to be used based on Ricker $\alpha$ and average harvest rate (figure \@ref(tab:holt-tab6)). Based on these recommendations, Georgia Strait and Howe Sound Burrard Inlet fall in the category of using 25^th^ percentile as a lower benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50^th^ percentile lower benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5). Thus, we used 25% of spawner abundance as a benchmark for Georgia Strait and Howe Sound Burrard Inlet, 50% for Loughborough, Northeast Vancouver Island, Upper Knight, and did not use percentile benchmarks for Bute Inlet and Southern Coastal Streams. 
  <!--
     CW: I think that there might be some value in including the benchmarks used for each CU in a table, in addition to this text. Just for quick reference. 
+    
+  LW: add to CU summary table? 
  -->
-
-
-
-
-
-**Multi-dimensional CU Status Assessment**
-
+ 
 
 The methods for applying the multi-dimensional status assessment for CU status is described in Chapter 2. 
 
@@ -513,6 +430,8 @@ Why (further) ?
 ### Assumptions and limitations
 
 The CUs that required CU-level infilling (Upper Knight and Bute Inlet) were not used for the retrospective analysis because the assumption that escapement is correlated between CUs ignores diversity between CUs and the potential for uncorrelated escapements. The reality of uncorrelated escapements must be taken into account to evaluate whether aggregate escapement is a meaningful predictor for the status of individual CUs. It should also be noted that these two CUs do not represent a random subset of the seven CUs in the Inside South Coast Chum SMU. 
+
+There are studies showing that a range of factors may affect the productivity of ISC Chum. These include competition with other salmon in the ocean and ocean conditions (@debertinMarineGrowthPatterns2017, @litzCompetitionOddyearPink2021). This application of percentile benchmarks does not account for changing productivity. 
 
 <!--
 LW : might need to rework this as some of this info is now in the intro section regarding guideline 3 - representativeness of CUs.
