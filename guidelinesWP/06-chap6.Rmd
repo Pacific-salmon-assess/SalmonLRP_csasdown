@@ -6,10 +6,28 @@
 
 Uncertainties in CU assessments affect both proportion-based and aggregate abundance-based LRPs, and they arise because of uncertainties in underlying data, estimation uncertainty in the statistical models underlying benchmarks, and structural uncertainties in model forms, including which biological metrics and spatial scales to consider in assessments.   
 
+Observations errors in spawner abundances, catches, stock assignment of catches, and ages-at-maturity can result in data uncertainties, which may impact estimates recruitment in 'run reconstructions' and assessment of status. In addition, short time-series or those with missing values can increase uncertainties in assessments. However, @peacockEvaluatingConsequencesCommon2020 found that status assessments were robust to most common assumptions in run reconstructions, even in the face of declining monitoring coverage, but that overestimating catch tended to increase rates of status misclassification. THe magnitude and distribution of these uncertainties will be CU and species dependent.
+
 The impact of hatchery enhancement on spawner and recruitment time-series is a key uncertainty due to the low rates of marking among hatcheries. Even when data on the proportion of hatchery-origin fish are available and abundance time-series are adjusted to account for these (as in the Interior Fraser River Coho case study), the genetic impacts of hatchery enhancement can perpetuate over multiple generations [@arakiCarryoverEffectCaptive2009; @christieReproductiveSuccessEarlygeneration2014], but are difficult to quantify because second generation hatchery-origin fish are not marked or monitored. This is a source of uncertainty for populations impacted by within-basin hatchery facilities and those impacted by straying out-of-basin. Targeted marking and monitoring of spawning grounds for mark proportions and genetic analyses to identify genetic retrogression from strays would help address these uncertainties.  
 
-- describe uncertainties arising from missing limited CU-level data. 
+For benchmarks estimated from spawner-recruitment relationships, observation errors in the independent variable, spawner abundances can bias parameter estimates (errors-in-variables), as can correlations that occur when spawner abundances in a given year depend on recruitment in the previous generation (time-series biases) [@waltersFisheriesEcologyManagement2004].
+
+Structural uncertainty in SR Model- others can be considered single vs hier, BH, hockey stock, with depensation. We've demonstrated how you can account for that type of uncertainty.
+
+Uncertainty in percentile method because of unertainties in estimates of prod and hr to correctly classify them in framework described in Holt et al. 2018.
+
+Uncertainty in habitat-based benchmarks, due to assumptions about productivity, meta-ansysls for stocks based on SR data that is outdated and uses a wide range of stocks that might not represent the conditions locally. <!--CH: also uncertainties about priors in the hierarchical analsysis, but this is perhaps too much deatil for now, and will leave to appendix that describes that model-->
+
+
+Uncertainty in spatial scale- sens on different scales? 
+
+Uncertainty in identification of CUs
+
 - expert drive process accounts for uncertainty in underlying data an reliability of SR based benchmarks (see narratives in dfoWildSalmonPolicy2015 for IFR coho). Would also be includes in peer-reveiw of Rapid Multidimensional Scanning Tool statuses
+
+### Proportion-based RLPs
+- describe uncertainties arising from missing limited CU-level data. (maybe not representative) 
+- if CU assessments are not reliable
 
 
 ### Logistic-regression based LRPs
@@ -29,10 +47,11 @@ One caveat with logistic regression-based LRPs is that a single-metric dropping 
 
 <!--CH: could add Julie's last 3/4 principles here, which are more related applying LRPs, 
 e.g., 
-Principle 6: If all else fails, consider the use of alternative paradigms.
+
 Principle 7: Consider whether reference points or indicators should be changed.
 Principle 8: Clearly communicate advice on stock status and reference points.- 
--Also, if LRP estimates align when derived using different approaches, this increases support for that value.
+
+As a way to adddress uncertainty in approaches (paradigms for developing LRPs), if LRP estimates align when derived using different approaches, this increases support for that value.
 
 
 <!--from CS paper-->
