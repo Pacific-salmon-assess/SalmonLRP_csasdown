@@ -317,7 +317,7 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
-\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
+\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
 \begin{tabular}{p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm}}
 \hline  
  Diagnostic Test  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\
