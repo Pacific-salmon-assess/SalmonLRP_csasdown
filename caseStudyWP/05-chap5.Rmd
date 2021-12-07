@@ -16,10 +16,10 @@ The 'Inside South Coast Chum - Non-Fraser' (ISC-NF Chum) SMU includes seven CUs 
 ```{r CU-summary, echo=FALSE}
 d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
 csasdown::csas_table(d,
-   align = c('l', 'c', 'c'),
+   align = c('l', 'c', 'c','c','c'),
    caption = #ifelse(french,
                    #"French goes here",
-                   "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods.")
+                   "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark used for percentile benchmarks.")
             #)
 ```
 
@@ -48,16 +48,7 @@ Available data included spawner abundance time series from 1959 - 2018 and corre
 
 @vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:first-appendix). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. <!--CH to revise this paragraph to align with Whither et al. 2018-->
 
-<!-- 
-    I'm not sure we need a methods section here. But I am in favour of including the github link.
-    CH comment: I don't think we need a header, simply state that data are available here on the github, with code for infilling.
-    
-    CH (5 Dec): Let's include an Appendix with the repo links as in Appendix 1 of the Guidelines Paper, then refer to Appendix for code instead of links directly.
-    
-    
--->
-
-Data and methods are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval.
+Links to data and analysis code repository are in Appendix \@ref(app:github-appendix). 
 
 ## CU STATUS ESTIMATION
 
