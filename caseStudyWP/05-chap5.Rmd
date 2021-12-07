@@ -288,24 +288,6 @@ CH: I agree
 
 
 
- 
-## Discussion
-
-
-
-
-
-
-
-
------------------------edit below here
-
-
-
-
-### LRPs Based on Logistic Regression and SMU Aggregate Abundance
-
-
 ## DISCUSSION
 
 
