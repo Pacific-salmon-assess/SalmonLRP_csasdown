@@ -340,7 +340,7 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 \end{table}
 -->
 
-
+<!--
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}
 \caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
@@ -360,37 +360,6 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 (\#tab:logisticDiagIFC2020)
 \end{table}
 
-
-<!--
-  CW: translated this table to latex as it was messing up the pdf page
-+-------------------------+--------------+-------------------+-----------------+
-| Diagnostic Test         | Sgen-Ricker  | Sgen-priorCap     | IFCRT
-+=========================+==============+===================+=================+
-| Box-Tidwell p-value     | 0.44         |    0.94           | 0.79
-+-------------------------+--------------+-------------------+-----------------+     
-| Max. deviance residual  | 1.98         | 1.81              | 1.66
-+-------------------------+--------------+-------------------+-----------------+  
-| AR-1                    | -0.07        | 0.09              | 0.05
-+-------------------------+--------------+-------------------+-----------------+
-| Wald p-values           | 0.07^*       + 0.06^*            + 0.09^*
-+-------------------------+--------------+-------------------+-----------------+
-| Goodness-of-fit p-value | <0.01        | <0.01             | <0.01
-+-------------------------+--------------+-------------------+-----------------+
-| Pseudo-$R^2$            | 0.60         | 0.61              | 0.40
-+-------------------------+--------------+-------------------+-----------------+
-| Hit Ratio (p= 50%,      | 0.87, 0.83   | 0.83, 0.83,       | 0.76, 0.71,
-| 66%, 90%, 99%)          | 0.74, 0.70   | 0.83, 0.74        | 0.76, 0.52
-+-------------------------+--------------+-------------------+-----------------+
-
-Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.  
-
--->
-
-<!--
-  None of the autocorrelation graphs show significance
-```{r coho-logisticACF-IM, fig.cap="Autocorrelation in aggregate spawner abundance at 1- to 10-year lags for the Integreated Sgen:LRP model. Orange dashed lines inidcate whether autocorrelations are significantly different from zero based on a 95\\% confidence interval", warning=FALSE, echo=FALSE, out.width = '50%', fig.align="center"}
-knitr::include_graphics("figure/coho-logisticFitDiag-2020acf.png")
-```  
 -->
 
 Sample sizes were small due to the short time series available for Interior Fraser Coho; only 23 years of observations were available to fit logistic regression models. @peduzziSimulationStudyNumber1996 recommend a minimum requirement of 10 data points for the least frequent outcome based on their simulation studies in the field of clinical epidemiology. In our case, the least frequent outcome was the failure of all CUs to be above their benchmarks (i.e., 0). We were not able to make this minimum requirement for any of our model fits; we had only 7, 8, and 5 data points at the least frequent outcome for the Logistic:Sgen-Ricker, Logistic:Sgen-priorCap, and Logistic-IFCRT models, respectively. Based on the current ratio of successes and fails in the data, the estimated minimum sample sizes that would be required to meet the criteria of @peduzziSimulationStudyNumber1996 ranged from 26 to 42 years. However, despite small sample sizes, hit ratios are high for all models at p = 50%.  As a result, we suggest that logistic regression-based LRPs may still be useful for this SMU.  We proceeded with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
