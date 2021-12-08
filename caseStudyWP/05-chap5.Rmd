@@ -95,7 +95,7 @@ Productivity& >4 & 25th (lower)  50th (upper) & 25th (lower) 50th (upper) & 25th
 The methods for applying the Salmon Scanner to get CU status is described in Chapter @ref(#MethodsChapter). In applying the Salmon Scanner to ISC Chum, we used the percentile benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018 for lower and upper benchmarks for the five CUs that have appropriate percentiles benchmarks identified (as described above). For Bute Inlet and Southern Coastal Streams, we did not use benchmarks. When benchmarks are not available, trends were used to assess status according to the decision tree (Fig. \@ref(fig:decision-tree)).
 
 
-## LRP ESTIMATION: PROPORTION OF CUs
+## LRP ESTIMATION: PROPORTION OF CUS
 
 ### Methods
 
@@ -135,7 +135,7 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 
 **CU Status Based on Salmon Scanner**
 
-Using this method, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (amber or green zone) and 3 would be below (red zone). Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from green to red several times. 
+Using this method, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (amber or green zone) and 3 would be below (red zone; Fig. \@ref(fig:chum-CU-status-tree)). Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from green to red several times. 
 
 ```{r chum-CU-status-tree, fig.cap="Status of CUs based on multi-dimensional status assessment (decision tree). Years with CU-level infilling were not included.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
@@ -144,14 +144,13 @@ knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 <!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
  
 
+\linebreak
+
 **CU Status Based on Percentile Benchmarks**
 
-Two out of four CUs were below their percentile lower benchmark in 2018 (Figure \@ref(fig:chum-perc-status-static). Howe Sound-Burrard Inlet and Georgia Strait had status above their lower benchmarks.
+Two out of four CUs were below their percentile lower benchmark in 2018 (Fig. \@ref(fig:chum-perc-status-static). Howe Sound-Burrard Inlet and Georgia Strait had status above their lower benchmarks, and Upper Knight did not have observations in 2018. 
 
-In supplementary analyses, we evaluated percentile benchmarks retrospectively for each year in time series using only data prior to that year. As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. 
-
-Among these three CUs, Southern Coastal Streams and Upper Knight show evidence of shifting baselines if percentile approaches are used. <!--CH; I'm confused now. UK was excluded because it has partial data, not because of this shifting baseline, correct? Evidence for shifting baseline is much weaker for UK than for SCS when we take out CU infilling. Perhaps reword to, "Among these three CUs, Southern Coastal Stream shows evidence of shifting baselines whereby the percentiles trend downwards over time following general decline in abundances (Appendix Fig.), as does Upper Knight but to a lesser extent. -->
-
+In supplementary analyses, we evaluated percentile benchmarks retrospectively for each year in the time series using only data prior to that year. As more years of data were included, percentile benchmarks increased over time for Georgia Strait (especially the 50^th^ percentile) and had modest increases for Howe Sound-Burrard Inlet (Figure \@ref(fig:chum-perc-retro)). Percentile benchmarks decreased by a small amount for Loughborough and North East Vancouver Island. Southern Coastal Stream shows evidence of shifting baselines, as the percentiles decrease over time following a general decline in abundances (Fig. \@ref(fig:chum-perc-retro)). Upper Knight also shows this pattern but to a lesser extent.
 
 
 ```{r chum-perc-status-static, fig.cap="Spawner escapement (solid black line) with generational mean (4 year rolling geometric mean) of escapement in points.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
@@ -159,50 +158,27 @@ knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
 ```
 
 <!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
- 
 
 
-##LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
+## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
 
 ### Methods
 
-We evaluated whether the proportion of CUs above their lower benchmark could be predicted by aggregate abundance using logistic regression models. We tested this using percentile and $S_{gen}$ benchmarks. These methods used 5 CUs with over 50 years of data (Bute Inlet and Upper Knight both had CU-level infilling in recent years and thus were left out of this analysis). <!--CH: remove Sgen here, correct?-->
+We evaluated whether the proportion of CUs above their lower benchmark could be predicted by aggregate abundance using logistic regression models. We tested this using percentile benchmarks. These methods used four CUs with over 50 years of data and appropriate perecntile benchmarks (North East Vancouver Island, Loughborough, Georgia Strait, and Howe Sound-Burrard Inlet). Aggregate abundnace (predictor variable) was calculated using only these four CUs. We omitted Bute Inlet and Upper Knight (both had CU-level infilling in recent years) and Southern Coastal Streams (no appropriate percentile benchmark). Refer to Chapter \@ref(MethodsChapter) for more details. 
 
-<!-- KH: given that we discredit Sgen estimates for these CUs as being reliable, I think you could take out all mention of the logistic regression fits to Sgen and only mention percetiles. If the question of Sgen comes up during review, you could mention then that it was also tried, but didn't work.  -->
+Due to poor logistic model fits using the entire 1953-2018 time series, we did not conduct full retrospective analyses of logistic-regression based LRPs for this SMU as was completed for the Interior Fraser River Coho case study. The characteristics of the data that led to poor logistic model fits are highlighted in the results section below. 
 
-<!-- 
-   CW:refer to chapter 2 for a description of the methods.
-    CW: If the method did not perform well for the full time series, why did we do the retrospective analysis? I am a bit confused here.  
-    
-    KH: I agree; I suggest removing the next two sentances (note: I have commented them out here)
-    
-    -->
-
-
-These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected.<!--CH: agree with CW. Can we remove mention of retrospective analysis since we don't need the results for alphab, beta, Sgen, Smsy, and then mention the shifiing basedline percentile plot as supplementary analysis below?-->
-
-<!--
-KH: suggest deleting:
-These methods were applied retrospectively. For a series of years up to a given year, the benchmarks and logistic regressions were calculated with all years up to that year. This was done for all successive years to see how the LRP (and benchmarks, and underlying stock-recruit parameters) would have changed over time as more data was collected. -->
-
-
-Due to poor logistic model fits using the entire 1953-2018 time series for both $S_{gen}$ and percentile benchmarks, we did not conduct full retrospective analyses of logistic-regression based LRPs for this SMU as was completed for the Interior Fraser River Coho case study. The characteristics of the data that led to poor logistic model fits are highlighted in the results section below. <!--CH remove mention of Sgen-->
-
-<!--CH addition below-->
-Projection-based LRPs are an alternative aggregate-abundance LRP that we did not consider for this SMU due to lack of peer-reviewed stock-recruitment model fits for component CUs. However, this approach could be considered in future analyses given consensus on model structure and parameterization that provide realistic uncertainties in projections of population dynamics.
+Projection-based LRPs are an alternative aggregate abundance LRP that we did not consider for this SMU due to lack of peer-reviewed stock-recruitment model fits for component CUs. However, this approach could be considered in future analyses given consensus on model structure and parameterization that provide realistic uncertainties in projections of population dynamics.
 
 
 ### Results
 
-The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figures \@ref(fig:chum-logistic-sgen), \@ref(fig:chum-logistic-perc)). In both cases, the sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark. Note that these regressions used the aggregate abundance of only the CUs used in the regressions, and excluded the other CUs. 
+The logistic models predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Fig. \@ref(fig:chum-logistic-perc)).The sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark. 
 
-Percentile approaches were not used for the other three CUs for the purpose of the logistic regression of aggregate abundance because they were not appropriate based on productivity and harvest rates (see @holtEvaluatingBenchmarksBiological2018 Table 6),  CU-level infilling, or both (although they are shown in Figure \@ref(fig:chum-perc-retro)). 
-
-The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). Pseudo $R^2$ was low (0.03), indicating that the fit is not good. The Box-Tidwell test (p-value = 0.02) indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that the assumption that the relationship between aggregate abundance and log-odds is linear was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model based on a Goodness of fit p value of 0.13 (>0.05), indicating that there is not significant improvement in fit with the variable (aggregate abundance). There was no evidence of outliers, and there was a sufficient sample size. The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The Wald p-value was not significant for $B_{1}$ (0.019), the coefficient for aggregate abundances. There was no evidence for autocorrelation in residuals. Regressions based on $S_{gen}$ had similarly poor model fits (Figure \@ref(fig:chum-logistic-sgen). <!--CH remove Sgen-->
-
-<!--     Also might be good to state what is a "good" diagnostic and what is a "bad". For example: the fact that "There was no evidence of outliers, and there was a sufficient sample size" ia a good thing, however it was not enough to overcome the deficiencies exposed by the other diagnostic criteria.  
-
+The diagnostics for the logistic regression indicated that the model fit was poor for percentile benchmarks (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). Pseudo $R^2$ was low (0.03), indicating that the fit is not good. The Box-Tidwell test (p-value = 0.02) indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds, which means that the assumption that the relationship between aggregate abundance and log-odds is linear was not met. There was not a significant improvement in the model fit when aggregate abundance was included, compared to the null model based on a Goodness of fit p value of 0.13 (>0.05), indicating that there is not significant improvement in fit with the variable (aggregate abundance). The ratio of correct classification based on a confusion matrix was 0.7. Note that this method tends to have overly optimistic values. The Wald p-value was not significant for $B_{1}$ (0.019), the coefficient for aggregate abundances. There was no evidence of outlier observations or autocorrelation in residuals, and there was a sufficient sample size. Despite these last three criteria, they were not enough to overcome the deficiencies identified by the other diagnostic criteria.  
+<!--    
     Is the ratio of correct classification based on a confusion matrix, or based on loo? maybe present loo results to be consistent with IF coho
+    LW: It is from confusion matrix. Is LOO results another update? I don't remember that one. 
     -->
 ```{r chum-logistic-perc, fig.cap="Logistic regression of whether escapement of all component CUs were above their percentile benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes CUs where percentile benchmarks were appropriate (no Bute Inlet, Upper Knight, or Southern Coastal Streams)", warning=FALSE, echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-logistic-perc.pdf'))
@@ -239,9 +215,7 @@ Download diagnostic info for checking
 
 Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  
 
-
-Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude (Fig. \@ref(fig:chum-spawner-distribution)). In addition, the correlation in escapement among these seven CUs is low (Fig. \@ref(fig:chum-spawner-corr)). These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors. These seven CUs also have different numbers of populations. There are also differences in actual productivity (recruits per spawner) among CUs. 
-<!--CH: I suggest applying the 4 criteria for 'representativness' in the Guidelines paper to assess if it is reasonable to assess status of the SMU based on only 4 or 5. I can help you with the biogeoclimatic zones. I suggest emailing Pieter about similarity in threats among CUS-->
+Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude (Fig. \@ref(fig:chum-spawner-distribution)). In addition, the correlation in escapement among these seven CUs is low (Fig. \@ref(fig:chum-spawner-corr)). These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. This makes sense because this SMU covers a large area with many different populations affected by both local and regional factors, as described at the beginning of this case study. These seven CUs also have different numbers of populations. 
 
 ```{r chum-spawner-corr, fig.cap="Pairwise correlations of spawner abundance between Inside South Coast Chum Conservation Units.", warning=FALSE, echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-spawners-corr.png')) download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
@@ -252,13 +226,11 @@ knitr::include_graphics('figure/chum-spawners-corr.png')
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
 
+The ISC-NF Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of which LRP estimation method  (Figure \@ref(fig:chum-LRP-compare). While the aggregate abundance of the SMU increased over time, SMU status remained below the LRP in every year of the past two decades except 2004 for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as Southern Coastal Streams, remained low.
 
-<!--KH: you could start off this section with a blanket statement along the lines of:
-The ISC-NF Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of which LRP estimation method. While the aggregate SMU abundance time series increased over time, SMU status remained below the LRP in every year of the past two decades except 20xx for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as Southern Coastal Streams, remained low.-->
+When using the same data, LRP status based on percentile benchmarks and the Salmon Scanner were identical (Figure \@ref(fig:chum-LRP-compare)). This can be seeen by comparing Scenarios 1 and 3, and comparing Scenarios 2 and 6 (same data, more data than 1 and 3). This is because, when no abundance benchmark is used, the Salmon Scanner tool relies on trends and absolute abundance threshold of 1500 fish (Fig. \@ref(fig:decision-tree). 
 
-LRP status based on percentile benchmarks had more years below the LRP <!-- than LRP status based on the Salmon Scanner--> Salmon Scanner status (Figure \@ref(fig:chum-LRP-compare), Table \@ref(tab:LRP-scenarios)). Comparing scenarios 1 and 3 (same data) in a given year, ISC Chum were below the LRP based on percentile benchmarks but above it based on decision tree. Scenarios 2 and 6 (same data, more data than 1 and 3) show a similar pattern. <!-- KH: Can you describe why this is? When the Salmon Scannergets applied to 4CUs full, do all CUs in all years use the percentile criteria?  If so, I would expect them to be the same.  Or, are there some years where the mutidim uses trends for the 4 CUs full? -->  <!--CH: the same for scenario 2 and 6 (5 CUs partial). If they use the same percentile data for those 5 CUs, they should get the same result unless an absolute threshold is breached and a different branch of the tree is used in the Rapid Multidimentaional Scanner Tool? If so, it would be useful describing this explicitly--> <!--CH: is there a difference in raw vs smoothed values used in our percentile assessment vs. the SOS Scanner Tool (we should use gen averages), or in the estimation of percentile-based benchmarks (I see we have used raw values, which I think makes sense and is consistent with Holt et al. 2018, p.9)-->
-
-In this case study, adding more data changed the number of years that the SMU was below the LRP. Scenario 5 (most data) had the most years below the LRP. Comparing scenarios 1 and 2, which are both based on percentile benchmarks, including more data (scenario 2) results in more years below the LRP. Comparing scenarios 4 and 5 (decision tree only), including more observations results in one year switching from above the LRP to below it.<!--CH: Actually, I think it switched from having no data for that year to below thte LRP when more data were included--> Comparing scenarios 5 and 6 (where scenario 6 had two fewer CUs than scenario 5), including the two CUs in scenario 5 results in three years switching from above the LRP to below <!--CH: again this is switching from no data to below LRP, correct?-->. Other applications may result in different outcomes of including more data based on the status of additional CUs or years. <!--CH. It's not clear what "other applications" means here. I suggest omitting the last sentence, and then in the discussion mentioning the role of adding data--> 
+In this case study, adding more data changed the number of years that the SMU was below the LRP. Scenario 5 (most data) had the most years below the LRP, with every year after the first being below the LRP. Comparing Scenarios 1 and 2, which are both based on percentile benchmarks, including more data (Scenario 2) results in more years below the LRP. Comparing scenarios 4 and 5 (Salmon Scanner), including more observations results in one year switching from above the LRP to below it, with the addition of data from CUs with partial time series. Comparing scenarios 5 and 6 (where Scenario 6 had two fewer CUs than Scenario 5), including the two CUs in scenario 5 results in three years switching from above the LRP to below, as the two CUs without percentile benchmarks are added.
 
 We found that SMU status can be below the LRP even if the aggregate abundance increases. For ISC Chum, this is mainly due to years with high abundances of Georgia Strait and Burrard Inlet-Howe Sound and low abundances and red status in other, smaller CUs, such as Southern Coastal Streams. This highlights the importance of including a metrics of status at the CU level, which influence the overall SMU status.  
 
@@ -305,6 +277,7 @@ KH: We can add some discussion around this point about trade-offs to the guideli
 
 <!-- KH: I think this topic will be covered in the guidelines paper, so may not be needed as a discussion point. For our case studies, we are mostly just referencing the guidelines paper and saying that the proportional approach is recommended by that paper-->
 
+\linebreak
 
 **Limitations of Percentile Benchmarks** 
 
@@ -326,6 +299,7 @@ Estimating relative-abundance <!-- replace 'relative-abundance' with 'abundance-
 - Spawner abundance at CU level may not be a good predictor of status of individual rivers compared to SEGs at the river scale, depending on the contrast in size between rivers and the correlation (or lack thereof) in escapement and/or productivity
 
 
+\linebreak
 
 **Salmon Scanner**
 
