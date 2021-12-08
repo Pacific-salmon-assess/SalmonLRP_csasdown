@@ -333,18 +333,55 @@ Logistic regression diagnostics showed  that key regression assumptions were met
 The Wald Test showed that logistic model coefficient for aggregate abundance was marginally significant (p < 0.10). Pseudo-$R^2$ statistics indicated a moderately strong relationship between aggregate abundance and the probability of all CUs being above their lower benchmarks, and the goodness of fit statistics indicated a significant fit of the model with aggregate abundance relative to the null model based on p-values less than 0.01. Finally, 'out-of-sample' hit ratios representing classification accuracy as the proportion of successful predictions when one year of data was iteratively left out of the model fit, were relatively high at low probability thresholds, indicating good accuracy. This results was especially true for the Logistic:Sgen-Ricker and Logistic:Sgen-priorCap model which had hit ratios ranging between 0.83 and 0.87 at probability thresholds of 50% and 66%. Classification accuracy was lowest for all models at the 99% probability threshold.
 
 <!--CH: this table and above text does not appear correctly on the knitted  pdf version. I'm not sure why. Also, I broke up the 1 pgh above into a few smaller ones; feel free to revise
-\begin{table}
 
-\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
-
-\end{table}
 -->
+
++-------------------------+--------------+-------------------+-----------------+
+| Diagnostic Test         | Sgen-Ricker  | Sgen-priorCap     | IFCRT
++=========================+==============+===================+=================+
+| Box-Tidwell p-value     | 0.44         |    0.94           | 0.79
++-------------------------+--------------+-------------------+-----------------+     
+| Max. deviance residual  | 1.98         | 1.81              | 1.66
++-------------------------+--------------+-------------------+-----------------+  
+| AR-1                    | -0.07        | 0.09              | 0.05
++-------------------------+--------------+-------------------+-----------------+
+| Wald p-values           | 0.07^*       + 0.06^*            + 0.09^*
++-------------------------+--------------+-------------------+-----------------+
+| Goodness-of-fit p-value | <0.01        | <0.01             | <0.01
++-------------------------+--------------+-------------------+-----------------+
+| Pseudo-$R^2$            | 0.60         | 0.61              | 0.40
++-------------------------+--------------+-------------------+-----------------+
+| Hit Ratio (p= 50%,      | 0.87, 0.83   | 0.83, 0.83,       | 0.76, 0.71,
+| 66%, 90%, 99%)          | 0.74, 0.70   | 0.83, 0.74        | 0.76, 0.52
++-------------------------+--------------+-------------------+-----------------+
+Table: (\#tab:logisticDiagIFC2020) Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '*' indicates a result that only marginally met the recommended criteria for demonstrating good model fit.  
+
 
 <!--
 \renewcommand*{\arraystretch}{1.5}
+\begin{longtable}[]{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
+\caption{Model}
+\hline
+ Diagnostic Test  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\ 
+\hline
+\endhead
+Box-Tidwell p-value     & 0.44  & 0.94  & 0.79   \\
+ Max. deviance residual  & 1.98  & 1.81  & 1.66   \\
+ AR-1                    & -0.07 & 0.09  & 0.05   \\
+ Wald p-values           & $0.07^*$ & $0.06^*$& $0.09^*$ \\
+ Goodness-of-fit p-value & <0.01 & <0.01 & <0.01  \\
+ Pseudo-$R^2$            & 0.60  & 0.61  & 0.40   \\
+ Hit Ratio (p= 50\%, 66\%, 90\%, 99\%) & 0.87, 0.83, 0.74, 0.70  & 0.83, 0.83, 0.83, 0.74 &  0.76, 0.71, 0.76, 0.52 \\
+\hline
+(\#tab:logisticDiagIFC2020)
+\end{longtable}
+-->
+
+
+<!--
 \begin{table}
-\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol '$*$' indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
-\begin{tabular}{p{3.5cm} p{2.8cm} p{3.5cm} p{3cm}}
+\caption{Model diagnostic statistics from Sgen:LRP, Sgen_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol \* indicates a result that only marginally met the recommended criteria for demonstrating good model fit}\\
+\begin{tabular}{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
 \hline  
  Diagnostic Test  & Sgen-Ricker  & Sgen-priorCap & IFCRT \\
 \hline  
@@ -359,8 +396,8 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 \end{tabular}
 (\#tab:logisticDiagIFC2020)
 \end{table}
-
 -->
+
 
 Sample sizes were small due to the short time series available for Interior Fraser Coho; only 23 years of observations were available to fit logistic regression models. @peduzziSimulationStudyNumber1996 recommend a minimum requirement of 10 data points for the least frequent outcome based on their simulation studies in the field of clinical epidemiology. In our case, the least frequent outcome was the failure of all CUs to be above their benchmarks (i.e., 0). We were not able to make this minimum requirement for any of our model fits; we had only 7, 8, and 5 data points at the least frequent outcome for the Logistic:Sgen-Ricker, Logistic:Sgen-priorCap, and Logistic-IFCRT models, respectively. Based on the current ratio of successes and fails in the data, the estimated minimum sample sizes that would be required to meet the criteria of @peduzziSimulationStudyNumber1996 ranged from 26 to 42 years. However, despite small sample sizes, hit ratios are high for all models at p = 50%.  As a result, we suggest that logistic regression-based LRPs may still be useful for this SMU.  We proceeded with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
 
