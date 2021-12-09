@@ -1,7 +1,4 @@
-
-# APPENDIX 2{#app:second-appendix}
-
-## Meta analysis of correlations in spawner abundances among CUs within SMUs
+# Meta analysis of correlations in spawner abundances among CUs within SMUs {#app:meta-analysis-appendix}
 
 
 
@@ -9,4 +6,4 @@
 knitr::include_graphics("figure/lrp-smu-corr.png")
 
 ```
-Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). Links to Githup Repository containing code were developed by B. Connors <!--CH: if Brendan is a co-author this mention may be out of place, but thought I'd include anyways unless there are objections--> and are provided in Appendix \@ref(first-appendix).
+Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). Links to Githup Repository containing code are provided in Appendix \@ref(first-appendix).
