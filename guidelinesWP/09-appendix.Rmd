@@ -6,4 +6,4 @@
 knitr::include_graphics("figure/lrp-smu-corr.png")
 
 ```
-Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). Links to Githup Repository containing code are provided in Appendix \@ref(first-appendix).
+Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). A link to the Github repository containing code to perform these analyses are provided in Appendix \@ref(app:first-appendix).
