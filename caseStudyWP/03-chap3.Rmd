@@ -7,13 +7,13 @@ output:
 # CASE STUDY 1: INTERIOR FRASER COHO SALMON{#IFCChapter}
 
 ## CONTEXT
-<!--CH comment: I'm getting some formatting errors with cross-references to section headers, appendices and citations, as well as headers without line spaces before them when I knit. We'll have to fix these at some point. I've added more linebreaks in, but might not have caught them all-->
 <!--CH comment: I'm wondering about formatting of labels, i.e., using mathform of S_{gen} vs Sgen as part of Sgen-Ricker (when comparing LBM to Sgen-PriorCap) and Sgen_Ricker vs Sgen_priorCap when used as part of a label in historical plot. Sometimes underscore is used, sometime dash.
 Maybe we should ditch mathematical label for S_{gen} and always use plain text, Sgen so that the differences are not so jarring in the last section of this chapter? And maybe always use dashes instead of underscores in labels? Then should we do the same for SMSY? Or maybe keep as S_{MSY}, as it's not used much and in plain text there is no hint that MSY should be subscript. Or use Smsy to show the subscript in plain text?
 -->
 <!--
   CW: We could also use: S\textsubscript{gen} and S\textsubscript{MSY}
 -->
+
 
 The Interior Fraser Coho Salmon Stock Management Unit (SMU) includes Coho Salmon that return <!--BC:“spawn” instead--> to the Fraser River and tributaries upstream of Hell’s Gate in the Fraser Canyon. Like most Coho Salmon, Interior Fraser Coho spend at least one full year in freshwater as fry before migrating to the ocean as smolts [@arbeiderInteriorFraserCoho2020]. Most (88%) IFC have a 3-year life history, in which they leave freshwater in their second year and spend 18 months at sea prior to returning to their natal system to spawn. The remaining 12% have a 4-year life history in which they spend an additional year in freshwater before migrating as smolts in their third year. Both the 3-year and 4-year life histories spend 18 months at sea. Less than 1% of Interior Fraser Coho are believed to return as jacks (precocious mature males that spend only 6 months as sea) or at ages older than 4 years [@arbeiderInteriorFraserCoho2020].
 
