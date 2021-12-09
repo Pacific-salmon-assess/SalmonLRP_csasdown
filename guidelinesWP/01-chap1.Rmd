@@ -3,7 +3,7 @@
 ## Background
 
 <!--CH comment: change all reference of multidimensional tool to the Pacific Salmon Status Scanner and for short the Salmon Scanner-->
-
+<!--CH: change all instances of $S_gen$ and other benchmarks to  S\textsubscript{gen} and S\textsubscript{MSY}, after confirming with group-->
 
 Amendments to the Canadian Fisheries Act (2019) include new Fish Stocks provisions that introduce legal obligations to manage stocks to promote sustainability and avoid limit reference points, LRPs [@dfoScienceAdvicePrecautionary2021]. The provisions also require plans to rebuild fish stocks that have declined to, or below, an LRP while taking into account the biology of the fish and environmental conditions facing the stock. These obligations apply to major fish stocks that are prescribed under regulations. These revisions reinforce the previously established DFO policies to manage stocks in line with the precautionary approach, including [The Fishery Decision Making Framework Incorporating the Precautionary Approach](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm)[@dfoFisheryDecisionMakingFramework2009], also known as DFO's Precautionary Approach Framework within the [Sustainable Fisheries Framework](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/overview-cadre-eng.html) and Canada's [Wild Salmon Policy](https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html) [@dfoCanadaPolicyConservation2005a].
 
