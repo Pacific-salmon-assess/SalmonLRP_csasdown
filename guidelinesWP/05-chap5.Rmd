@@ -105,10 +105,9 @@ Once LRPs are identified, SMU-level objectives and management procedures can the
 
 ### Assess Status Relative to Proportion-based LRP (Step 5)
 
-The status of individual CUs is assessed and the proportion of CUs with status above red is then compared to the LRP of 100% identified from step 4.  Where available, we recommend applying CU assessments from recent WSP Integrated Status Assessments, in which multiple metrics, such as abundances and short- and long-term trends, are integrated to assign CU status within an expert-driven process [holtIndicatorsStatusBenchmarks2009a; @grant2017FraserSockeye2020]. Here we define recent as within the most recent generation as a general guideline, though major perturbations such as landslide events may make even recent assessments unrepresentative of current conditions if the impact of those events are not accounted for. <!--CH remove: Over time-periods longer than an generation, the extent to which the assessment is still representative depends on the dynamics of the specific system.-->
+The status of individual CUs is assessed and the proportion of CUs with status above red is then compared to the LRP of 100% identified from step 4.  Where available, we recommend applying CU assessments from recent WSP Integrated Status Assessments, in which multiple metrics, such as abundances and short- and long-term trends, are integrated to assign CU status within an expert-driven process [holtIndicatorsStatusBenchmarks2009a; @grant2017FraserSockeye2020]. Here we define recent as within the most recent generation as a general guideline, though major perturbations such as landslide events may make even recent assessments unrepresentative of current conditions if the impact of those events are not accounted for. <!--CH remove: Over time-periods longer than a generation, the extent to which the assessment is still representative depends on the dynamics of the specific system.-->
 
-Because WSP Integrated status assessments are time-intensive processes and are not available for most CUs, we demonstrate the application of a Rapid Multidimensional Scanning Tool developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP multidimensional assessment framework (Pestal et al. in prep). More details on this approach are provided in Section \@ref(cu-est-methods) and our companion working paper (Holt et al. in review).
-
+Because WSP Integrated status assessments are time-intensive processes and are not available for most CUs, we demonstrate the application of the Pacific Salmon Status Scanner, which is a tool developed by DFO's State of the Salmon Program to rapidly assess CU status under the WSP multidimensional assessment framework (Pestal et al. in prep). More details on this approach are provided in Section \@ref(cu-est-methods) and our companion working paper (Holt et al. in review). Within this framework, CU status depends on variety of population metrics, where the choice of metrics depends on data availability and may differ among CUs within an SMU. The Salmon Scanner integrates status on available metrics to derive an overall status that is comparable among CUs. <!--CH Q; does this last sentence make sense? I'm trying to say that although status of one CU might be based on SR benchmark and another may be based on trends, the resulting statuses from the Salmon Scanner are still comparable-->
 
 ### Peer-review Assessments of Status Relative to Proportion-based LRP (Step 6)
 <!--CH comment: this section needs input from Sue-->
@@ -156,10 +155,11 @@ $>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
 
 ### Choose among aggregate-abundance based LRPs (Step 9)
 
-Guidelines for choosing among two types of aggregate-abundance based LRPs are described here: empirical logistic regression-based LRPs and projection-based LRPs that use historical data or projected data, respectively to identify the relationship between aggregate abundances and the probability that all CUs are above red status. These guidelines are derived from the validity of assumptions that each method is based on. If assumptions are not met for either aggregate-abundance LRP method, then developing aggregate-abundance based LRPs that are aligned with the WSP may not be possible for this SMU. See Section on Future Research <!--CH: insertlink--> for approaches for developing and evaluating management procedures for these SMUs that account for CU-level statuses.
+Guidelines for choosing among two types of aggregate-abundance based LRPs are described here: empirical logistic regression-based LRPs and projection-based LRPs that use historical data or projected data, respectively to identify the relationship between aggregate abundances and the probability that all CUs are above red status. These guidelines are based on assumptions required for each method. If assumptions are not met for either method presented below, then developing aggregate abundance-based LRPs that are aligned with the WSP may not be possible for this SMU. However, developing and evaluating management procedures that account for CU-level status is still prudent even in the absence of aggregate abundance-based LRPs (Section \@ref(recommendations)).
 
-Both methods exploit covariation in population dynamics among component CUs, such that when one CU has depleted status and contributes relatively few spawners, it is likely that others CUs also have depleted status contributing few spawners to the aggregate abundance. In contrast, when one CU is considered health and contributes many spawners, it is more likely that other CUs are the same when they covary. 
+Both methods exploit covariation in population dynamics among component CUs, such that when one CU has depleted status and contributes relatively few spawners, it is likely that others CUs also have depleted status contributing few spawners to the aggregate abundance. In contrast, when one CU is considered healthy and contributes many spawners, it is more likely that other CUs are the same when they covary. 
 
+Given, uncertainties and limitations associated with each method, application and comparison of both methods may be prudent instead of choosing a single approach (as in Step 11)
 
 #### Empirical logistic regression-based LRPs
 
@@ -247,7 +247,6 @@ For example, if there is a high probability that any one CU will be below the lo
 
 
 
-
 Projection-based LRPs may be inappropriate when:
 
 - Population dynamics parameters cannot be estimated, and/or plausible ranges are not known,
@@ -255,6 +254,8 @@ Projection-based LRPs may be inappropriate when:
 - As described above, when pairwise correlations in spawner abundances among CUs are weakly positive or negative projection-based LRPs will be relatively high to support weak CUs, 
 
 - Pairwise correlations in recruitment residuals among CUs are low or negative, such that individual CU statuses tend to be independent of aggregate-abundances (see above). 
+
+- Projection-based LRPs are used to evaluate status under a new management procedure that is not considered in the projection model. Projection-based LRPs depend on the specific management procedure applied in the projections, implemented as a constant exploitation strategy for our case studies. However, sensitivity analyses of projection-based LRPs to various exploitation rates or management procedures can demonstrate aggregate abundances required to maintain CUs above their lower benchmarks under a variety of possible management scenarios, and the sensitivity of management choice to the aggregate-abundance based LRP.
 
 - There is only 1 CU in the SMU. In this case, the CU-level status equates to the SMU-level status.
 
