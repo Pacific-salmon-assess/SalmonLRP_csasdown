@@ -332,6 +332,8 @@ Why (further) ?
 - Differences in productivity among CUs/populations
 
 
+Exacerbated by the two most abundant CUs have the highest correlation. More likely for large aggregate abundances for these two at the same time, swamping any signal of low abundance in CUs with typically lower abundance. 
+
 <!--CH: remove-->In the retrospective analysis, the logistic model fits were more appropriate to the data in some years (e.g., 1980s). Although logistic regression could be used to estimated LRPs based on aggregate abundance in some SMUs where abundance is more even among CUs and escapements are more correlated, these relationships may not remain static and could become unreasonable over time. Care should be taken to regularly reassess the validity of aggregate abundance-based LRPs where they are implemented in the future. 
 
 
