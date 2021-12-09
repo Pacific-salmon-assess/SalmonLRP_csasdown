@@ -144,7 +144,7 @@ knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 <!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
  
 
-\linebreak
+
 
 **CU Status Based on Percentile Benchmarks**
 
@@ -277,7 +277,7 @@ KH: We can add some discussion around this point about trade-offs to the guideli
 
 <!-- KH: I think this topic will be covered in the guidelines paper, so may not be needed as a discussion point. For our case studies, we are mostly just referencing the guidelines paper and saying that the proportional approach is recommended by that paper-->
 
-\linebreak
+
 
 **Limitations of Percentile Benchmarks** 
 
@@ -299,7 +299,7 @@ Estimating relative-abundance <!-- replace 'relative-abundance' with 'abundance-
 - Spawner abundance at CU level may not be a good predictor of status of individual rivers compared to SEGs at the river scale, depending on the contrast in size between rivers and the correlation (or lack thereof) in escapement and/or productivity
 
 
-\linebreak
+
 
 **Salmon Scanner**
 
