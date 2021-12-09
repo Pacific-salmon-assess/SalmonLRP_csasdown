@@ -16,6 +16,8 @@ We used data on total annual spawner abundances, recruitment by age (from natura
 ```{r density-cor-plot, fig.cap="Distribution of correlations in spawner abundances among CUs (or inlets for WCVI Chinook) for 3 case studies", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/DataOut/WCVI_Spawner_cors.csv', './data/chinook-Scors.csv',  mode="wb")
 
+#download chum data from here: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/chum-escapement-correlation-matrix.csv 
+
 df <- data.frame(read.csv("data/chinook-Scors.csv", header=TRUE))
 colnames(df) <- c("cor")
 df$SMU <- rep("WCVI Chinook", length(read.csv("data/chinook-Scors.csv", header=TRUE)))
