@@ -56,8 +56,8 @@ In some cases, single-metric approaches in which <!-- KH: salmon --> spawning bi
 - Are there examples where aggregate abundance-based LRPs are used for in-season HCRs?  E.g., once an escapement goal has been met, surplus production can be harvested? I'm not sure how often this applies to the SMU level though. Does Fraser Sockeye do anything like this?
 CH: I think the pgh above starts to get at this, though let me know if you think we should expand more.
 
-- KH: Also, is it worth mentioning cases like Nass / Skeena Sockeye were abundance-based LRPs are required for other management processes (PST), and there is a desire to identify aggregate-abundance based LRPs for those processes that have a high probability of maintaining CU-level abundances above red.  
-CH: I added this to CH4, step 7, when deciding if aggregate-abundance based LRPs are necessary. Let me know if you think it should be here too
+- KH: Also, is it worth mentioning cases like Nass / Skeena Sockeye were abundance-based LRPs are required for other management processes (PST), and there is a desire to identify aggregate abundance-based LRPs for those processes that have a high probability of maintaining CU-level abundances above red.  
+CH: I added this to CH4, step 7, when deciding if aggregate abundance-based LRPs are necessary. Let me know if you think it should be here too
 
 KH (Dec 8) Both of these sound good to me; you can delete comments
 
