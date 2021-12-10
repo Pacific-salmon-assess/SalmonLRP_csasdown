@@ -179,10 +179,11 @@ And, could then go on to state that multidimensional is preferred, but proportio
 <!--KH: To think about for guidelines paper: are we recommending average PNI > 0.5 over the available time series as a threshold for including in LRP calculations?  If so, do we have advice about how to deal with trends in PNI over time? When looking at the Interior Fraser Chinook data way back when, I seem to recall that PNI was variable over time for several of those streams.  -->
 
 
-## PROPORTION OF CUS
+## CU STATUS ESTIMATION
 
-### METHODS
-$S_{REP}$ values were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006 (Appendix X, to be included). <!--KH: suggest moving this first sentence about Srep to below these first three equations; it seems to make more sense to start this section with a definition of Sgen, which is the primary benchmark of interest for LRP development  --> The Wild Salmon Policy lower benchmark on abundances, $S_{gen}$, the spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$.<!-- BC: Is it necessary to re-introduce these since they were already defined in the coho section? CW thinks it is a good idea to redefine to leave chapters as stand alone?
+CU status was derived by applying the multidimensional approach used within the Pacific Salmon Status Scanner to individual inlets. We found that the status using this method was equivalent to status on a single metric, abundance relative to a lower benchmark $S_{gen}$ for all inlets. Here we present analyses and results for status on that single metric.
+
+To estimate benchmarks, $S_{REP}$ values were first derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006 (Appendix X, to be included). <!--KH: suggest moving this first sentence about Srep to below these first three equations; it seems to make more sense to start this section with a definition of Sgen, which is the primary benchmark of interest for LRP development  --> The Wild Salmon Policy lower benchmark on abundances, $S_{gen}$, the spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$.<!-- BC: Is it necessary to re-introduce these since they were already defined in the coho section? CW thinks it is a good idea to redefine to leave chapters as stand alone?
 -->
 
 \begin{equation}
@@ -247,13 +248,15 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 ```
 
 
+## LRP ESTIMATION: PROPORTION OF CUS
 
+### Methods
 The LRP on the proportion of CUs was identified as all 3 CUs containing inlets with current statuses exclusively above their lower benchmarks. For this SMU, serious harm was identified as any one inlet within each of the 3 CUs dropping below its lower benchmark or in the red zone under the Wild Salmon Policy. Because inlets are nested within CUs, this LRP accounts for the distribution of spawning within CUs. Status of inlets within CUs was identified in two ways: spawner abundances relative to  $S_{gen}$ and multi-dimensional status assessments developed by the DFO's State of the Salmon program (S. Grant. pers. comm. DFO Science; Figure \@ref(fig:decision-tree)).
 <!--CH revised this section to put more emphasis on multidimensional approach-->
 
 <!--KH: May be worth noting that you are applying the multidimensional scanning tool on the inlet scale, not the CU scale as it was intended.  This will not matter for your case study because you only use relative abundance thresholds, but, for a case with  absolute abundance, changing the scale may make some of the absolute threshold benchmarks (e.g., <1500 fish = red) not applicable.-->
 
-### RESULTS: PROPORTION OF CUs
+### Results
 In the most recent year with data, 2020, 4 of 5 inlets are above their abundance-based lower benchmark, $S_{gen}$ (Figure \@ref(fig:chinook-InletTimeSeries)). Therefore, 2 of 3 CUs contain inlets with current statuses exclusively above their lower benchmarks. One CU, Southern Vancouver Island, contains an inlet, Clayoquot, with status that has been consistently below its lower benchmark throughout the available time-series. Therefore this SMU falls below the LRP of 3/3 CUs.
 
 
@@ -262,12 +265,13 @@ Using the multidimensional approach, the status was the same as for the abundanc
 
 
 
-## AGGREGATE-ABUNDANCE, EMPIRICAL LRPS
+## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
+
 
 Empirical LRPs based on the probability of all component inlets (nested within CUs) being above their lower benchmarks could not be identified for WCVI Chinook because there are no years when all inlets were above their lower benchmark in the historical record (Figure \@ref(fig:chinook-InletTimeSeries)). In order to fit a logistic regression model to data, observations of successes (years when all inlets were > lower benchmarks) and failures (years when all inlets were not > lower benchmarks) are required. The estimation of empirical LRPs is limited to SMUs with historical records that demonstrate contrast in status over time.
 
-## AGGREGATE-ABUNDANCE, PROJECTION-BASED LRPS
-### METHODS
+## LRP ESTIMATION: PROJECTION-BASED LRPS
+### Methods
 
 Projection-based LRPs were derived for WCVI Chinook by projecting inlet-specific population dynamics using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). We chose to project inlet-specific rather than CU-specific population dynamics to reflect the importance of the inlet scale of diversity for long-term sustainability of the SMU. Population dynamics and exploitation parameters were derived from a previously developed CU-specific run-reconstruction for WCVI Chinook based on spawner abundances and age compositions from indicator stocks, and exploitation rates from the Robertson Creek hatchery indicator stock (D. Dobson & D. McHugh, pers. comm. DFO South Coast Stock Assessment). CU-specific parameters were applied across all component inlets. Inlet-specific capacities, or spawner abundances at replacement, were estimated from the watershed-area model [@parkenHabitatbasedMethodsEstimate2006] (Table \@ref(tab:chinook-WA)) and applied in projections of recruitment. The model was projected for 30 years from initial equilibrium abundances <!--BC:Why not recent abundances? I may have missed this somewhere.  --> <!--CW add--> as recent abundance data is not available. Projections were summarized over 50,000 random Monte Carlo trials. A relatively large number of Monte Carlo trials was required for LRP estimation because the algorithm required a sufficient sample size within each 200-fish incremental bin of aggregate abundances along a range of realistic abundances (from near zero to capacity). <!-- CH comment: and 10,000 for sensitivity analyses, to be increased to 50,000. --> Base-case parameters are provided in Table \@ref(tab:chinook-BaseCasePars); sensitivity analyses from base case parameterizations are described in the text.  Projection-based LRPs were identified from the aggregate abundances with specified probabilities of all component inlets being above lower benchmarks. 
 <!-- CH comment: consider redoing table in kableExtra, if that will allow for spaces between rows of text, and separate rows for each value in the 2nd column
@@ -564,7 +568,7 @@ knitr::include_graphics("figure/chinook-compareEscCor-Ages.png")
 
 ```
 
-### RESULTS: AGGREGATE-ABUNDANCE, PROJECTION-BASED LRPS
+## Results
 
 Projection-based LRPs were developed under the base-case assumptions of (1) interannual variability in exploitation rates among inlets with a cv = 0.085, (2) correlations in recruitment residuals among inlets equal to observed spawner correlations among inlets, and (3) variability in age proportions among CUs and years. We identified a provisional aggregate abundance LRP with p=0.5 (50% probability of all inlets being greater than their lower benchmark) equal to `r (read.csv("data/chinook-ProjectedLRPsbaseER_ALLp.csv")%>% pull(LRP))[1]` (Figure \@ref(fig:chinook-baseCaseProjLRP)). Provisional LRPs at p=0.66 ("likely" that all inlets are above their lower benchmarks) is also shown, near 20 000 (Figure \@ref(fig:chinook-baseCaseProjLRP)). Probabilities that all inlets exceeded lower benchmarks did not exceed 0.9 so LRPs at higher p values could not be estimated. Note, the LRP at p=0.66 requires more MC trials for full stabilization and is shown here for demonstration purposes only.
 
@@ -588,7 +592,7 @@ knitr::include_graphics("figure/chinook-SMU-timeseries.png")
 
 ```
 
-### Sensitivity Analyses
+## Sensitivity Analyses
 
 We considered sensitivity analyses on interannual variability in exploitation rates among inlets with cv = 0 and 0.17 (Figure  \@ref(fig:chinook-projLRPcvER)), and found LRPs at 50% probability were not sensitive to this assumption.
 
@@ -660,7 +664,7 @@ Abund: Proj: Sgen
 -->
 
 
-## OVERALL CONCLUSIONS AND FUTURE ANALYSES
+## DISCUSSION
 
 A few key conclusions from this case study are highlighted for broader relevance:
 
