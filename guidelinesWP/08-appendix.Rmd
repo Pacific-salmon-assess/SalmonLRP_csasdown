@@ -5,15 +5,18 @@ After that, all subsequent sections will be turned into appendices. -->
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
-# APPENDIX 1{#app:first-appendix}
 
-## Resources for the implementation of LRPs (links to be added)
+# Resources for the implementation of LRPs {#app:first-appendix}
 
-- For single metrics, link to WSP metrics repository
+
+- For single metrics of status used under the Wild Salmon Policy, see Github reposity [WSP-Metrics-Pkg](https://github.com/Pacific-salmon-assess/WSP-Metrics-Pkg)
+<!--CH remove for now, as they are private:
 - For watershed-area model, link to Carrie's repository (currently private due to data concerns)
 -	For multi-dimensional CU-status, link to Rapid Multidimensional Scanner Tool 
-- For estimation of correlations among CUs within SMUs, see Github repository [lrp-smu-corr](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
-- For aggregate-based benchmarks link to example application of these methods to case studies.
-- Note we used R for most data manipulation and projections.  We used TMB and TMBStan for estimation of stock-recuritment benchmarks and logistict-regression based LRPs.
--	Justification of using TMB/TMBStan for logistic regression based in part on integrated models to propagate uncertainty from stock-recruitment models through to LRP estimates (highlight integrated Sgen-LRP model and Watershed-Area model)
+-->
+- For implementation of proportion-based and aggregate abundance-based LRPs to three case studies, see Github repository [pacific-salmon-assess/SalmonLRP_RetroEval](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
+- For estimation of correlations among CUs within SMUs, see Github repository [pacific-salmon-assess/lrp-smu-corr](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
+- For write-up of this working paper, see Github repository [pacific-salmon-assess/SalmonLRP_csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
+
+Note we used R for data manipulation and projections.  We used TMB and TMBStan for estimation of stock-recruitment benchmarks and logistic regression-based LRPs.
 
