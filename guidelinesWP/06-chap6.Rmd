@@ -33,18 +33,27 @@ Uncertainties in status derived from proportion-based LRPs can arise from the ex
 ### Logistic-regression based LRPs
 
 For logistic regression-based LRPs, we provide 95% CIs and assess their overlap with current status. These CIs represent uncertainty in the estimation of the logistic regression incorporating uncertainty in the underlying benchmarks (e.g., from spawner-recruitment relationships or the watershed-area model). When estimated in a Bayesian framework, the probability distribution of LRPs can be generated to provide the probability that the current status is above LRP given uncertainties in the LRP. In future analyses, uncertainty in current spawner abundances could be integrated with uncertainty to derive probabilities of breaching LRPs that accounts for both. 
+<!--CH add: "The estimation of logistic regression model can be statistically integrated with estimation of underlying spawner-recruitment relationships at the CU-level when CU status is derived from spawner-recruitment based benchmarks. This statistical integration allow propagate uncertainties from CU level to SMU level."-->
 
 Similar to proportion-based LRPs, uncertainties in logistic regression-based LRPs can arise from the exclusion of data-limited CUs from analyses when these CUs are not well represented by data-rich CUs that are included. Further uncertainties in logistic regression-based LRPs can arise if the management systems has changed over time such that selectivity among CUs has diverged, or if the covariance in population dynamics has changed due to other natural or anthropogenic factors.<!--CH omit: such that the relationship between aggregate abundances and CU statuses has changed-->  
 
 Logistic regression-based LRPs are derived from proportion of CUs above their lower benchmark on a single metric as a proxy for status on multiple dimensions as implemented in the Salmon Scanner. In some cases, status on a single metric may deviate from that from the Salmon Scanner. These deviations result because of additional metrics considered and the generational smoothed time-series used to assess current status in the Salmon Scanner. Further details on assumptions that are required for logistic regression-based LRPs and conditions when they may be considered are described in Section \@ref(guidelines). 
 
+<!--CH comment: Suggest removing next bullet as I feel like it's getting into the weeds too much, and only makes sense after a bullet describing how logistic regression-based LRPs can be statistically integrated with SR-based benchmarks and CU status.
+
+For logistic regression-based LRPs derived from CU assessments that are independent of spawner-recruitment models (e.g, that use habitat-based benchmarks), it is still be possible to integrate uncertainties from the CU assessments to SMU-level LRPs though bootstrapping methods. For example, where CU benchmark estimates are provided with uncertainties, benchmarks can be sampled from those distributions randomly and used to estimate a distribution of LRPs. In preliminary analyses, this approach was applied to the case study for West Coast Vancouver Island Chinook Salmon to derive uncertainty in logistic regression-based LRPs that accounted for uncertainty in status of component inlets from a watershed-area model. However, because the data did not support the use of logistic regression for that case study, results are not presented, but code to apply this method is available in our repository.
+-->
 
 ### Projection-based LRPs
 
 Projection-based LRPs explicitly account for underlying uncertainties in population and harvest parameters, such as CU-level productivity and capacity, age-structure, covariance in recruitment deviations, and variability in implementation of fixed exploitation strategies over time and among CUs. The inclusion of structural uncertainty in the form of the stock-recruitment relationship is demonstrated for the case study on Interior Fraser Coho. We recommend a thorough review of assumptions and either including them directly in random sampling in projections or including them as sensitivity analyses.
 One caveat of this approach is that the LRP depends on the management procedure applied in the projections, implemented as a constant exploitation strategy for our case studies, which is not uncommon among Pacific salmon SMUs. Projection-based LRPs derived in this way can not be used to assess status if management procedures changes. 
+<!--CH: mention "structural uncertainty included through model ensemble approaches" in pgh above-->
 
 Similar to proportion-based LRPs, uncertainties in projection-based LRPs can arise from the exclusion of data-limited CUs from analyses when these CUs are not well represented by data-rich CUs that are included. Further details on assumptions that are required for projection-based LRPs and conditions when they may be considered are described in Section \@ref(guidelines). 
+
+
+One difference between projection-based and logistic regression-based LRPs is that for projection based LRPs, uncertainties in all underlying parameters and CU-level benchmarks are integrated into the probability of all CUs being above their lower benchmarks, so that the LRP itself does not have statistical uncertainty associated with it. In contrast, 95% CIs associated with logistic regression-based LRPs account for estimation uncertainty not included in projection-based LRPs. 
 
 
 ## Impact of missing CUs on SMU-level status
