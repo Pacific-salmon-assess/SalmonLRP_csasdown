@@ -98,7 +98,7 @@ CW:Should we recommend (hint) that RP will likely need to be designed to include
 CH: Not exactly sure what was meant here. In the recommendations section, we do mention that MPs beyond aggregate abundance HCRs will need to be considered, e.g., MPs that include fine-scale time-area closures, habitat enhancement at a variety of scales, as well as hatchery supplementation.-->
 
 
-Once LRPs are identified, SMU-level objectives and management procedures can then be evaluated to identify those approaches that best meet objectives, including the prioritization of CU-specific interventions. Furthermore, objectives and management actions can be adapted to a range of spatial scales from CU to regional or multi-SMU scales and then evaluated in a hierarchical context. The proposed LRP presented here of 100$\%$ of component CUs above the red status within an SMU is a first step in that process.
+Once LRPs are identified, SMU-level objectives <!--KH: can be specified and -->and management procedures can then be evaluated to identify those approaches that best meet objectives, including the prioritization of CU-specific interventions. Furthermore, objectives and management actions can be adapted to a range of spatial scales from CU to regional or multi-SMU scales and then evaluated in a hierarchical context. The proposed LRP presented here of 100$\%$ of component CUs above the red status within an SMU is a first step in that process.
 
 
 ### Assess Status Relative to Proportion-based LRP (Step 5)
@@ -111,7 +111,23 @@ Because WSP Integrated status assessments are time-intensive processes and are n
 <!--CH comment: this section needs input from Sue-->
 
 We recommend peer-review of the CU data and assessments used in steps 1 and 5 if CU assessment are developed outside of an existing published, peer-reviewed process. Also, we recommend peer-review of decisions on SMU-scale aggregation from steps 2, 3 and 4. This peer review can occur, at least in part, through DFO's State of the Salmon Program's annual implementation of the Pacific Salmon Status Scanner. The Salmon Scanner will be applied annually as part of of a process integrating outputs with local expertise to provide provisional statuses for CUs. Expert review is required to vet statuses derived from the implementation of the Salmon Scanner to ensure they are consistent with underlying biological categories (e.g., WSP red zone is associated with elevated risk of extinction) given the multiple and sometimes conflicting dimensions of status. <!--CH: Ann-Marie suggested an example from Fraser Sockeye Shuswap here, but I wonder if it might make the flow of this section awkward? Happy to consider an inclusion from Ann-Marie--> The outputs from that process can be used as a basis for developing CU-level statuses to inform SMU-level LRPs. For CUs or SMUs not included or not fully reviewed in that annual process and where SMU-scale LRPs are required <!--CH addition: under the Fisheries Act?, but mentioned below, so maybe not needed here, CW doesn't hurt the flow of the sentence to include-->, we recommend a separate SMU-scale peer-review process that includes assessment of component CUs and decisions about data deficiencies and CU representativeness, covering steps 1-5. When used to support decisions under Canada's Fisheries Act, the steps involved in LRP development should be documented in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Report.<!--CH question: Is this requirement for CSAS documentation okay? We should ask Julie/Jason to what extent this is consistent with out marine species, and then mention the consistency here. Some TWG participants suggested LRP identification could occur in the rebuilding plan, but this seems awkward as rebuilding objectives may be related to LRPs, or at least they will in other species, so best to keep the 2 processes separate I think.
-CW: Agree with keeping rebuilding plan and LRP separate. -->
+CW: Agree with keeping rebuilding plan and LRP separate. 
+
+KH comments on above paragraph: 
+
+1) Also agree that LRPs need to be defined seperate from a rebuilding plan.   
+
+2) It seems to me that the following sentences from above are saying that SMU-level CSAS reviews are not needed if CU statuses for all CUs within an SMU are reviewed through the annual SOTS expert review:
+
+"The outputs from that process can be used as a basis for developing CU-level statuses to inform SMU-level LRPs. For CUs or SMUs not included or not fully reviewed in that annual process and where SMU-scale LRPs are required under the Fisheries Act, we recommend a separate SMU-scale peer-review process that includes assessment of component CUs and decisions about data deficiencies and CU representativeness, covering steps 1-5."
+
+Is this the intention?  It seems to contradict the following statement that 
+
+"When used to support decisions under Canada's Fisheries Act, the steps involved in LRP development should be documented in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Report."
+
+Because it still seems a bit unknown what annual expert SOTS reviews will look like (i.e., to what extent will external participants be involved), perhaps we should just highlight the importance of peer-review, and note that whether the SOTS annual process will be enough to meet that bar is still uncertain.  (This is just a thought though; i'm open to other options too)
+
+-->
 
 <!--SG comment: if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP. -->
 
