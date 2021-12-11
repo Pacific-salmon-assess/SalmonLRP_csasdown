@@ -4,6 +4,6 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # DATA AND ANALYSIS LINKS {#app:github-appendix}
 
+Code for data and analysis for the case studies are available on the Git Hub repository [pacific-salmon-assess/SalmonLRP_RetroEval](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
 
-
-Data and analysis code for the ISC Chum case study are available at: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval
+Code for the write-up of this report are available on the Git Hub repository [pacific-salmon-assess/SalmonLRP_csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
