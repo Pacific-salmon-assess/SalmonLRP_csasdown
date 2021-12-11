@@ -128,8 +128,7 @@ csasdown::csas_table(dat, booktabs = T, caption = "Sum of watershed areas for in
 Spawner abundances were provided for 20 WCVI indicators stocks, (D. Dosbon and D. McHugh pers .comm.; Table \@ref(tab:chinook-Overview); Figure \@ref(fig:chinook-IndTimeSeries)). These time-series are compiled annually by DFO Area Staff for local and international assessment and management (e.g., @dfoWCVISalmonBulletin2021). Missing values were not infilled. In future work, infilled time-series of indicators within inlets (or CUs) could be developed to extend the available time-series. 
 
 
-<!--BC: Consider having x-axis only displayed on bottom row (e.g., by specifying only free y axis scale in ggplot) and  dividing y-axis scale in units of 1000s of fish so that less space is taken up with axis lables -->
-```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by indicator stock. Dark blue time-series are indicator stocks with Proportionate Natural Index (PNI) values <= 0.5; light blue time-series are indicator stocks with PNI < 0.5, i.e., are highly enhanced.",  warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by indicator stock, in units of 1000s. Dark blue time-series are indicator stocks with Proportionate Natural Index (PNI) values <= 0.5; light blue time-series are indicator stocks with PNI < 0.5, i.e., are highly enhanced.",  warning=FALSE, echo=FALSE, fig.align="center"}
 
 knitr::include_graphics("figure/chinook-IndicatorTimeSeries.png")
 ```
