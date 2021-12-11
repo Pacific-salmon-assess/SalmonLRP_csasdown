@@ -149,12 +149,11 @@ CH: my initial thinking would be remove time-periods where PNI is very high from
 -->
 
 
-## CU AND INLET STATUS ESTIMATION
+## INLET AND CU STATUS ESTIMATION
 <!--CH: Mention caveat about northern CU/inlet being DD possibly?-->
 
 
-Inlet status was derived by applying the multidimensional approach used within the Pacific Salmon Status Scanner to individual inlets. We found that the status using this method was equivalent to status on a single metric, abundance relative to a lower benchmark S~gen~for all inlets. Here we present analyses and results for status on that single metric, though it also represents multidimensional status in this case.
-
+Inlet status was derived by applying the multidimensional approach used within the Pacific Salmon Status Scanner to individual inlets (Pestal et al., in prep). We found that the status using this method was equivalent to status on a single metric, abundance relative to a lower benchmark S~gen~for all inlets, because abundances were available on a relative scale (only indicator stocks are monitored consistently), not absolute (as shown in Figure \@ref(fig:decision-tree)). Here we present analyses and results for status on that single metric, though it also represents multidimensional status in this case.
 
 The Wild Salmon Policy lower benchmark on abundances, S~gen~, the spawner abundances required to achieve S~MSY~ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to S~MSY~.
 
@@ -178,12 +177,11 @@ where,
 
 and $a$ is recruits-per-spawner at low productivity. Ricker $a$ values were approximated for WCVI Chinook from a life-stage model that partitioned survival across freshwater and marine life-stages for ocean-type Chinook based on empirical data and expert opinion. Life-stage specific survival rates were then combined to derive an overall survival from spawners to recruitment (W. Luedke pers. comm. DFO South Coast Stock Assessment). Despite the relatively large uncertainties in the life-stage specific survival rates, this approach provides an approximation for productivity that is more realistic than the high estimate previously derived from the watershed-area model [@parkenHabitatbasedMethodsEstimate2006], (>7 recruits/spawner).  From the life-stage model, mean $\log(a)$ was estimated at ~ 1 (~$a$=2.72 recruits/spawner), with standard errors (1.96 SDs) +/- 0.5 ($a$ ranging from 1.6 to 4.5), representing relatively large uncertainty in productivity. 
 
-Maximum likelihood estimates of S~REP~ values (and 95% CIs) were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006, that included hierarchical structure in the underlying meta-analysis accounting for similarities in productivity among ocean-type and stream-type fish @liermannUsingAccessibleWatershed2010. <!--CH: Add when developed (Appendix \@ref(), link to code in Appendix \@ref(github-appendix)). -->
+Maximum likelihood estimates of S~REP~ values (and 95% CIs) were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006, that included hierarchical structure in the underlying meta-analysis accounting for similarities in productivity among ocean-type and stream-type fish @liermannUsingAccessibleWatershed2010 (Table \@ref(chinook-benchmarks)). <!--CH: Add when developed (Appendix \@ref(), link to code in Appendix \@ref(github-appendix)). -->
 
 Our approach to estimating S~gen~ differed from that of @parkenHabitatbasedMethodsEstimate2006, because we derived productivity independently from the life-stage specific models, whereas @parkenHabitatbasedMethodsEstimate2006 estimated both S~MSY~ and S~REP~ from the watershed-area model thereby inferring mean estimates of productivity which were deemed unrealistically high for WCVI Chinook. 
 
-
-Bootstrapped confidence intervals in  S~gen~ (Equation \@ref(eq:Sgen)) were estimated by repeated sampling from normal distributions of S~REP~ and $\log(a)$, with standard deviations in log(S~REP~) derived from the watershed-area model. This method does not account for covariance between productivity and capacity typically found in stock-recruitment relationships, and will overestimate uncertainty in derived benchmarks. <!--CH Q to Catarina: Is this bootstrapping method okay? It feels a little ad hoc, but was supported by the TWG--> 
+Bootstrapped confidence intervals in  S~gen~ (Equation \@ref(eq:Sgen)) were estimated by repeated sampling from normal distributions of S~REP~ and $\log(a)$, with standard deviations in log(S~REP~) derived from the watershed-area model. This method does not account for covariance between productivity and capacity typically found in stock-recruitment relationships, and will overestimate uncertainty in derived benchmarks. <!--CH Q to Catarina: Is this bootstrapping method okay? It feels a little ad hoc, but was supported by the TWG.  --> 
 
 
 ```{r chinook-benchmarks}
@@ -224,20 +222,16 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 ```
 
 
+CU status was derived from the proportion of component inlets above lower benchmarks. Serious harm was identified as any one inlet within each of the 3 CUs dropped below its lower benchmark. Here we have assumed the status of the one indicator stock in the West Vancouver Island-North CU (Marble Creek) is representative of the CU. However, further consideration of this assumption is warranted with local expertise.
+
 ## LRP ESTIMATION: PROPORTION OF CUS
 
 ### Methods
-The LRP on the proportion of CUs was identified as all 3 CUs containing inlets with current statuses exclusively above their lower benchmarks. For this SMU, serious harm was identified as any one inlet within each of the 3 CUs dropping below its lower benchmark or in the red zone under the Wild Salmon Policy. Because inlets are nested within CUs, this LRP accounts for the distribution of spawning within CUs. Status of inlets within CUs was identified in two ways: spawner abundances relative to S~gen~ and multidimensional status assessments developed by the DFO's State of the Salmon program (S. Grant. pers. comm. DFO Science; Figure \@ref(fig:decision-tree)).
-<!--CH revised this section to put more emphasis on multidimensional approach-->
+The LRP on the proportion of CUs was identified as all 3 CUs containing inlets with current statuses exclusively above their lower benchmarks. For the component inlets, abundances relative to lower benchmarks reflects status above/below the red zone based on the multidimensional approach used in the Pacific Salmon Status Scanner. Because inlets are nested within CUs, this LRP accounts for the distribution of spawning within CUs. 
 
-<!--KH: May be worth noting that you are applying the multidimensional scanning tool on the inlet scale, not the CU scale as it was intended.  This will not matter for your case study because you only use relative abundance thresholds, but, for a case with  absolute abundance, changing the scale may make some of the absolute threshold benchmarks (e.g., <1500 fish = red) not applicable.-->
 
 ### Results
 In the most recent year with data, 2020, 4 of 5 inlets are above their abundance-based lower benchmark, S~gen~ (Figure \@ref(fig:chinook-InletTimeSeries)). Therefore, 2 of 3 CUs contain inlets with current statuses exclusively above their lower benchmarks. One CU, Southern Vancouver Island, contains an inlet, Clayoquot, with status that has been consistently below its lower benchmark throughout the available time-series. Therefore this SMU falls below the LRP of 3/3 CUs.
-
-
-Using the multidimensional approach, the status was the same as for the abundance-based lower benchmarks. For this SMU, time-series of abundances for WCVI Chinook are not absolute (only indicator stocks are monitored consistently) and  relative-abundance benchmarks can be identified (S~gen~ and S~MSY~), and so according to the multidimensional decision tree (Figure \@ref(fig:decision-tree), status is derived from abundance-based benchmarks as above. Therefore, similar to above, 2 of 3 CUs met the criteria of containing inlets with status above the red zone under the multi-dimensional approach, falling below the LRP of 3/3 CUs.
-
 
 
 
