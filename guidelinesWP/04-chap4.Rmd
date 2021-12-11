@@ -16,16 +16,19 @@ We used data on total annual spawner abundances, recruitment by age (from natura
 ```{r density-cor-plot, fig.cap="Distribution of correlations in spawner abundances among CUs (or inlets for WCVI Chinook) for 3 case studies", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/DataOut/WCVI_Spawner_cors.csv', './data/chinook-Scors.csv',  mode="wb")
 
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/chum-escapement-correlation-matrix.csv', './data/chum-Scors.csv',  mode="wb")
+
 #download chum data from here: https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/chum-escapement-correlation-matrix.csv 
 
 df <- data.frame(read.csv("data/chinook-Scors.csv", header=TRUE))
 colnames(df) <- c("cor")
 df$SMU <- rep("WCVI Chinook", length(read.csv("data/chinook-Scors.csv", header=TRUE)))
 
-# Make DFs for IFR coho and ISC chum (columns: "cor" and "SMU"), and then merge() with df above
+chum <- read.csv("data/chum-Scors.csv", header=TRUE)[,2:8]
+df_chum <- data.frame(cor=chum[lower.tri(chum)==TRUE], SMU="ISC Chum")
 
-library(ggplot2)
-ggplot(df, aes(cor, fill=SMU, colour=SMU)) + geom_density(alpha=0.1) + xlim(0,1)
+df <- df %>% add_row(df_chum)
+ggplot(df, aes(cor, fill=SMU, colour=SMU)) + geom_density(alpha=0.1) + xlim(-1,1)
 
 ```
 

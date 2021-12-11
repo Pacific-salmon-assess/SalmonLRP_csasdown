@@ -7,7 +7,7 @@ output:
 # CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK{#WCVIchinookChapter}
 ## CONTEXT
 
-The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series and consistent observation methodology (Figure \@ref(fig:chinook-map); Table \@ref(tab:chinook-Overview), @riddellReview2001Chinook2002). Hatchery enhancement is an important component of many of these stocks. Hatcheries are a conservation tool for wild salmon populations and can increase the availability of fish for harvest, but they can also reduce wild genetic diversity and are considered a risk factor for the long-term sustainability of CUs [@withlerGeneticallyBasedTargets2018]. Therefore only indicator stocks without significant enhancement were included in our analyses. Proportionate Natural Influence, PNI, is a metric of the genetic risk of hatcheries on natural populations, with values < 0.5 indicating Integrated-Hatchery populations where most fish are hatchery origin [@withlerGeneticallyBasedTargets2018]. Only stocks with PNI values $\geqslant$ 0.5 were included in the development of LRPs and assessment against those LRPs (J. Bokvist, pers. comm. DFO South Coast Stock Assessment). 
+The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series and consistent observation methodology (Figure \@ref(fig:chinook-map); Table \@ref(tab:chinook-Overview), @riddellReview2001Chinook2002). Hatcheries produce a relatively large component of the total production in many of these stocks, where they help achieve harvest, conservation and assessment objectives. However, they are also considered a risk factor for the long-term sustainability of CUs because they can also reduce wild genetic diversity[@withlerGeneticallyBasedTargets2018]. As described in Holt et al. (in review), only indicator stocks without significant enhancement, i.e.,  stocks with Proportionate Natural Influence, PNI, values $\geqslant$ 0.5 were included. Most fish are natural origin in these populations, though the of 'wild' fish, second generation natural-origin fish may be in the minority [@withlerGeneticallyBasedTargets2018]. 
 
 <!--Sabrina email: In short, the management of hatchery produced fish must be separated from wild production. This is a bit tricky for WCVI as we don’t have enough information or data to quantitatively separate ‘natural’ and ‘hatchery’. It would be ideal to remove 1st generation hatchery-origin fish but for WCVI we simply don’t have that information. Strays have been a real issue but hard to quantify the impacts to each non-targeted hatchery system without collecting the data needed annually as each year would differ. How much stray to a particular system and for how long are factors but we don’t assess this enough or adequately. For example, during a M/R project in the Moyeha the 2010 half the samples were hatchery but only 12 samples were collected and the next year all samples were natural origin. 
 We need to be clear to include this uncertainty for WCVI in the report stating results could change if more data was available to adequately and quantitatively (not just I see a clipped salmon or not but genetics and/or more directed projects to the cause) separate the hatchery/1st generation from natural spawners. This is after all a ‘tool-kit’ that has options to choose from but may not have the full picture until gaps are filled. Highlighting the much needed information to properly segregate hatchery to natural spawners would be required to adequately assess.-->
@@ -19,14 +19,14 @@ knitr::include_graphics("figure/chinook-map.png")
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
-\caption{Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island.}
+\caption{Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. }
 \begin{tabular}{p{0.3\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
 \hline
 CU       &  Inlets   & Indicators\\ 
 \hline
-WCVI-South (CK-31) & San Juan, Nitinat, Barkley, Clayoquot & \emph{San Juan}, \emph{Nitinat}, Nahmint , \emph{Sarita}, \emph{Somass}, Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
-WCVI-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis, Zeballos, Artlish, Kaouk, Tahsish \\
-WCVI-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
+West Vancouver Island-South (CK-31) & San Juan, Nitinat, Barkley, Clayoquot & \emph{San Juan}, \emph{Nitinat}, Nahmint , \emph{Sarita}, \emph{Somass}, Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
+West Vancouver Island-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis, Zeballos, Artlish, Kaouk, Tahsish \\
+West Vancouver Island-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
 \hline
 \end{tabular}
 (\#tab:chinook-Overview)
@@ -34,58 +34,46 @@ WCVI-North (CK-33) &  Quatsino  & Cayeghle, Marble \\
 
 
 
-
-
-<!-- CH comment: # Ask Luke to change San Juan River to San Juan, and Nitinat Lake to Nitinat
- 
-
-CW: the table in md written below seems to be causing the text to go beyond the end of the page. I tried to fix it but I wasn't able to.  I re wrote the table in latex and it seems it makes the problem go away, but formatting is not as pretty in the final pdf. 
-
+<!-- CH: Thanks for formatting this table Catarina. If we have time, I'd like to format it so that the second column as a separate row for each inlet. I could not get it work in the pdf version of the table below, and I noticed, all inlets are in a string in the table above. I can work on this next week.
 
 
 ----------------------- ----------------------- ----------------------------------------------
 CU                      Inlets                  Indicators
 ----------------------- ----------------------- ----------------------------------------------
-WCVI-South              San Juan,               *San Juan*, 
-(CK-31)                 Nitinat,                *Nitinat*, 
+West Vancouver Island-  San Juan,               *San Juan*, 
+South (CK-31)           Nitinat,                *Nitinat*, 
                         Barkley,                Nahmint , *Sarita*, *Somass*, 
                         Clayoquot,              Bedwell/Ursus , Megin , Moyeha , *Tranquil*
                                                           
-WCVI-Nootka & Kyuoquot  Nootka/Esperanza,       *Burman*, *Conuma*, *Gold*, *Leiner*, Tahsis,
-(CK-32)                 Kyuquot                 Zeballos,
-                                                Artlish, Kaouk, Tahsish,
+West Vancouver Island-  Nootka/Esperanza,       *Burman*, *Conuma*, *Gold*, *Leiner*, Tahsis,
+Nootka & Kyuoquot       Kyuquot                 Zeballos,
+(CK-32)                                                Artlish, Kaouk, Tahsish,
                                          
-WCVI-North              Quatsino                Cayeghle, Marble
-(CK-33)                
+West Vancouver Island-  Quatsino                Cayeghle, Marble
+North (CK-33)                
 
 ----------------------- ----------------------- ----------------------------------------------                        
 
-Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5. Note, the inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island. 
-
-
-
-
+Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island. 
  -->
 
 
-
-
-This SMU was included as a case study to demonstrate the development of LRPs under data limitations when stock-recruitment relationships are not available to develop stock-recruitment based benchmarks, but habitat-based benchmarks are, as is common for Chinook salmon in BC. WCVI Chinook is also included in the proposed first batch of major stocks for regulation under the Fish Stock provisions, necessitating the development of LRPs for this SMU.<!-- CH comment: add reference here?-->
-
-<!-- KH: Two more unique aspects of this case study that you may wish to mention here are:
-
-(1) high levels of enhancement; required us to apply rules about PNI based on previous work by Withler et al.
-
-(2) demonstration of a hybrid approach that preserved CU-scale diversity, while also considering inlet-scale diversity.  Note that this shows how proposed LRP methods can be tailored for specific SMUs so long as they still meet the requirements of the WSP to preserve CUs ??? ... (I'm not sure how far we want to go down this path, but it may be worth mentioning???)
-
--->
+This SMU was included as a case study to demonstrate the development of LRPs under data limitations when recruitment data are not available for deriving stock-recruitment based benchmarks, but habitat-based benchmarks exist, as is the case for Chinook Salmon in BC. WCVI Chinook is also included in the proposed first batch of major stocks for regulation under the Fish Stock provisions, necessitating the development of LRPs for this SMU. WCVI Chinook is also highly enhanced yet does not have data on the proportion of hatchery-origin spawners contributing to total production, similar to many other Chinook Salmon SMUs. Furthermore, this SMU was unique among the case studies in the consideration of inlets within CUs demonstrating various spatial scales that can be integrated into SMU-level assessments. 
 
 Most Chinook in this SMU are 'ocean type', entering the ocean 1-3 months after emergence from spawning gravel [@dfoAssessmentWestCoast2012]. 'Stream type' fish, those that stay in the river for one year after emergence, are rare. After entering the ocean, WCVI Chinook migrate into northern BC and southeast Alaska waters to rear for 2 to 7 years, returning to spawn predominantly at ages 4 and 5 [@dfoAssessmentWestCoast2012].
 
 
+We considered the 4 criteria identified in Holt et al. (in prep) to evaluate if status of any one CU within this SMU could be inferred from the remaining CUs. Several dominant threats are similar across the 3 WCVI CUs. Large-scale hatcheries operating within all three CUs have resulted in genetic risks from introgression [@cosewiccommitteeonthestatusofendangeredwildlifeincanadaCOSEWICAssessmentStatus2020]. Also, straying from hatchery-influenced populations likely compromises the genetic composition of spawners across WCVI.  Landslides and sedimentation from forestry impact spawning habitat across WCVI <!--CH Q: Is this true for NWVI too?-->. However, unique to West Vancouver Island-South is the relatively large number of aquaculture facilities for Atlantic salmon in nearshore habitat used by Chinook Salmon, which poses a threat to this CU [@cosewiccommitteeonthestatusofendangeredwildlifeincanadaCOSEWICAssessmentStatus2020]. Also unique to West Vancouver Island-Nootka and Kyuquot are threats from tourism (~100 lodges located in important areas of Chinook Salmon rearing) and industrial effluents from pulp mills [@cosewiccommitteeonthestatusofendangeredwildlifeincanadaCOSEWICAssessmentStatus2020].
+
+All three CUs likely experience similar freshwater environmental conditions being part of the same Freshwater Adaptive Zone, West Vancouver Island, characterized by very high annual water flow, relatively warm temperatures, low wetland influence, and low alpine cold water and glacial influences [@holtbyConservationUnitsPacific2007a]. Spawning habitats for all three CUs are primarily within the Coastal Western Hemlock biogeoclimatic zone. However, the marine environment experienced by juveniles from the West Vancouver Island-Nootka and Kyuoquot and West Vancouver Island-South CUs differs from that of the West Vancouver Island North CU to the north [@holtbyConservationUnitsPacific2007a]. The two southern CUs are influenced by the Juan de Fuca Strait which determines food chain productivity in nearshore environment. For the northern CU,  nearshore marine environment is influenced primarily by the northward flowing coastal current in the North Pacific ocean [@cosewiccommitteeonthestatusofendangeredwildlifeincanadaCOSEWICAssessmentStatus2020].
+ 
+The average generation time is consistent across all three CUs, and they exhibit ocean-type life-history variant and full run timing.  Absolute abundances are not available for these CUs [@brown2020SummaryAbundance2020]. <!--CH note: watershed-area estimate of population capacity for indicator stocks only as well, so are not absolute habitat capacities-->
+
+Based on differences in threats and the coastal marine environment, we suggest that CU status cannot be inferred from neighboring CUs. We identified similarities in conditions at the CU scale because published threats assessments are available at this scale. Finer analyses at the inlet-scale could further inform the extent to which data-deficient inlets can be represented by those with data. 
+
 ### Previous assessments
 
-Two of the 3 CUs in this SMU, WCVI-South and WCVI-Nootka & Kyuquot, were assessed as 'red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016]. For these CUs, assessments were based on component stocks without hatchery enhancement within the most recent 12 years, omitting stocks with enhancement during that period. For WCVI-South, red status was based primarily on threats of genetic introgression from strays from nearby large-scale hatcheries. For WCVI-Nootka & Kyuoquot, red status was based on a very low index of abundance for non-enhanced populations and threats of genetic introgression from strays from large-scale hatcheries. The third CU, WCVI-North, was not assessed by DFO in 2016 because all component stocks had some level of enhancement over the most recent 12 years (other metrics of hatchery enhancement, e.g., Proportionate Natural Influence or PNI were not considered). A list of indicator and non-indicator stocks within each CU is available in @brown2020SummaryAbundance2020. 
+Two of the 3 CUs in this SMU, West Vancouver Island-South and West Vancouver Island-Nootka & Kyuquot, were assessed as 'red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016]. For these CUs, assessments were based on component stocks without hatchery enhancement within the most recent 12 years, omitting stocks with enhancement during that period. For West Vancouver Island-South, red status was based primarily on threats of genetic introgression from strays from nearby large-scale hatcheries. For West Vancouver Island-Nootka & Kyuoquot, red status was based on a very low index of abundance for non-enhanced populations and threats of genetic introgression from strays from large-scale hatcheries. The third CU, West Vancouver Island-North, was not assessed by DFO in 2016 because all component stocks had some level of enhancement over the most recent 12 years (other metrics of hatchery enhancement, e.g., Proportionate Natural Influence or PNI were not considered). A list of indicator and non-indicator stocks within each CU is available in @brown2020SummaryAbundance2020. 
 
 <!-- KH: It's interesting that the decision to assess WCVI-South as 'red' was based on hatchery straying; not low abundance of non-enhanced population components. This is something that wouldn't be captured in the multidimensional scanner tool, right?  Also interesting that WCVI-North was not assessed by WSP, but we do use it as part of the LRP work which we are designing to match with the WSP. I'm just flagging this for now as something I want to think more about / keep in mind as I read guidelines paper recommendations on enhancement  -->
 
@@ -171,10 +159,11 @@ And, could then go on to state that multidimensional is preferred, but proportio
 <!--KH: To think about for guidelines paper: are we recommending average PNI > 0.5 over the available time series as a threshold for including in LRP calculations?  If so, do we have advice about how to deal with trends in PNI over time? When looking at the Interior Fraser Chinook data way back when, I seem to recall that PNI was variable over time for several of those streams.  -->
 
 
-## PROPORTION OF CUS
+## CU STATUS ESTIMATION
 
-### METHODS
-$S_{REP}$ values were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006 (Appendix X, to be included). <!--KH: suggest moving this first sentence about Srep to below these first three equations; it seems to make more sense to start this section with a definition of Sgen, which is the primary benchmark of interest for LRP development  --> The Wild Salmon Policy lower benchmark on abundances, $S_{gen}$, the spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$.<!-- BC: Is it necessary to re-introduce these since they were already defined in the coho section? CW thinks it is a good idea to redefine to leave chapters as stand alone?
+CU status was derived by applying the multidimensional approach used within the Pacific Salmon Status Scanner to individual inlets. We found that the status using this method was equivalent to status on a single metric, abundance relative to a lower benchmark $S_{gen}$ for all inlets. Here we present analyses and results for status on that single metric.
+
+To estimate benchmarks, $S_{REP}$ values were first derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006 (Appendix X, to be included). <!--KH: suggest moving this first sentence about Srep to below these first three equations; it seems to make more sense to start this section with a definition of Sgen, which is the primary benchmark of interest for LRP development  --> The Wild Salmon Policy lower benchmark on abundances, $S_{gen}$, the spawner abundances required to achieve $S_{MSY}$ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to $S_{MSY}$.<!-- BC: Is it necessary to re-introduce these since they were already defined in the coho section? CW thinks it is a good idea to redefine to leave chapters as stand alone?
 -->
 
 \begin{equation}
@@ -239,13 +228,15 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 ```
 
 
+## LRP ESTIMATION: PROPORTION OF CUS
 
+### Methods
 The LRP on the proportion of CUs was identified as all 3 CUs containing inlets with current statuses exclusively above their lower benchmarks. For this SMU, serious harm was identified as any one inlet within each of the 3 CUs dropping below its lower benchmark or in the red zone under the Wild Salmon Policy. Because inlets are nested within CUs, this LRP accounts for the distribution of spawning within CUs. Status of inlets within CUs was identified in two ways: spawner abundances relative to  $S_{gen}$ and multi-dimensional status assessments developed by the DFO's State of the Salmon program (S. Grant. pers. comm. DFO Science; Figure \@ref(fig:decision-tree)).
 <!--CH revised this section to put more emphasis on multidimensional approach-->
 
 <!--KH: May be worth noting that you are applying the multidimensional scanning tool on the inlet scale, not the CU scale as it was intended.  This will not matter for your case study because you only use relative abundance thresholds, but, for a case with  absolute abundance, changing the scale may make some of the absolute threshold benchmarks (e.g., <1500 fish = red) not applicable.-->
 
-### RESULTS: PROPORTION OF CUs
+### Results
 In the most recent year with data, 2020, 4 of 5 inlets are above their abundance-based lower benchmark, $S_{gen}$ (Figure \@ref(fig:chinook-InletTimeSeries)). Therefore, 2 of 3 CUs contain inlets with current statuses exclusively above their lower benchmarks. One CU, Southern Vancouver Island, contains an inlet, Clayoquot, with status that has been consistently below its lower benchmark throughout the available time-series. Therefore this SMU falls below the LRP of 3/3 CUs.
 
 
@@ -254,12 +245,13 @@ Using the multidimensional approach, the status was the same as for the abundanc
 
 
 
-## AGGREGATE-ABUNDANCE, EMPIRICAL LRPS
+## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION LRPS
+
 
 Empirical LRPs based on the probability of all component inlets (nested within CUs) being above their lower benchmarks could not be identified for WCVI Chinook because there are no years when all inlets were above their lower benchmark in the historical record (Figure \@ref(fig:chinook-InletTimeSeries)). In order to fit a logistic regression model to data, observations of successes (years when all inlets were > lower benchmarks) and failures (years when all inlets were not > lower benchmarks) are required. The estimation of empirical LRPs is limited to SMUs with historical records that demonstrate contrast in status over time.
 
-## AGGREGATE-ABUNDANCE, PROJECTION-BASED LRPS
-### METHODS
+## LRP ESTIMATION: PROJECTION-BASED LRPS
+### Methods
 
 Projection-based LRPs were derived for WCVI Chinook by projecting inlet-specific population dynamics using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). We chose to project inlet-specific rather than CU-specific population dynamics to reflect the importance of the inlet scale of diversity for long-term sustainability of the SMU. Population dynamics and exploitation parameters were derived from a previously developed CU-specific run-reconstruction for WCVI Chinook based on spawner abundances and age compositions from indicator stocks, and exploitation rates from the Robertson Creek hatchery indicator stock (D. Dobson & D. McHugh, pers. comm. DFO South Coast Stock Assessment). CU-specific parameters were applied across all component inlets. Inlet-specific capacities, or spawner abundances at replacement, were estimated from the watershed-area model [@parkenHabitatbasedMethodsEstimate2006] (Table \@ref(tab:chinook-WA)) and applied in projections of recruitment. The model was projected for 30 years from initial equilibrium abundances <!--BC:Why not recent abundances? I may have missed this somewhere.  --> <!--CW add--> as recent abundance data is not available. Projections were summarized over 50,000 random Monte Carlo trials. A relatively large number of Monte Carlo trials was required for LRP estimation because the algorithm required a sufficient sample size within each 200-fish incremental bin of aggregate abundances along a range of realistic abundances (from near zero to capacity). <!-- CH comment: and 10,000 for sensitivity analyses, to be increased to 50,000. --> Base-case parameters are provided in Table \@ref(tab:chinook-BaseCasePars); sensitivity analyses from base case parameterizations are described in the text.  Projection-based LRPs were identified from the aggregate abundances with specified probabilities of all component inlets being above lower benchmarks. 
 <!-- CH comment: consider redoing table in kableExtra, if that will allow for spaces between rows of text, and separate rows for each value in the 2nd column
@@ -556,7 +548,7 @@ knitr::include_graphics("figure/chinook-compareEscCor-Ages.png")
 
 ```
 
-### RESULTS: AGGREGATE-ABUNDANCE, PROJECTION-BASED LRPS
+## Results
 
 Projection-based LRPs were developed under the base-case assumptions of (1) interannual variability in exploitation rates among inlets with a cv = 0.085, (2) correlations in recruitment residuals among inlets equal to observed spawner correlations among inlets, and (3) variability in age proportions among CUs and years. We identified a provisional aggregate abundance LRP with p=0.5 (50% probability of all inlets being greater than their lower benchmark) equal to `r (read.csv("data/chinook-ProjectedLRPsbaseER_ALLp.csv")%>% pull(LRP))[1]` (Figure \@ref(fig:chinook-baseCaseProjLRP)). Provisional LRPs at p=0.66 ("likely" that all inlets are above their lower benchmarks) is also shown, near 20 000 (Figure \@ref(fig:chinook-baseCaseProjLRP)). Probabilities that all inlets exceeded lower benchmarks did not exceed 0.9 so LRPs at higher p values could not be estimated. Note, the LRP at p=0.66 requires more MC trials for full stabilization and is shown here for demonstration purposes only.
 
@@ -580,7 +572,7 @@ knitr::include_graphics("figure/chinook-SMU-timeseries.png")
 
 ```
 
-### Sensitivity Analyses
+## Sensitivity Analyses
 
 We considered sensitivity analyses on interannual variability in exploitation rates among inlets with cv = 0 and 0.17 (Figure  \@ref(fig:chinook-projLRPcvER)), and found LRPs at 50% probability were not sensitive to this assumption.
 
@@ -652,7 +644,7 @@ Abund: Proj: Sgen
 -->
 
 
-## OVERALL CONCLUSIONS AND FUTURE ANALYSES
+## DISCUSSION
 
 A few key conclusions from this case study are highlighted for broader relevance:
 
