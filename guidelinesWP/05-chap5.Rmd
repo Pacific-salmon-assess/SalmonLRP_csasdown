@@ -61,23 +61,8 @@ The PA policy also suggests that when a stock is DD, a meta analysis approach sh
 This may be a bit out there but: maybe we could suggest the establishment of a data collection plan that would be analogous to the recovery plan but to address data deficiency. -This plan would include a list of data that could be collected (e.g. monitoring of spawning grounds, establishment of genetic markers, catch sampling, ageing, etc.) and potential costs associated with everything? -- Also this plan could clearly indicate if spawning grounds are too remote, inaccessible, or too costly to monitor. -- I think that having that kind of information documented would go a long way in establishing priorities.    
 -->
 
-<!--CH additional comments (8 Dec)
-If at least one CU in an SMU is data deficient and its status cannot be inferred from the remaining CUs, then we had argued that the SMU was data deficient. However, if at least one of the data-rich CUs is red, then perhaps it’s not data-deficient as an SMU, but below the LRP. I think we need to revise our wording around data-deficient SMUs. We can provide status on an SMU with as little as one data-rich CU, but the power to detect a red is low.
-
-I know we had reserved ‘interim status’ for cases where there were data-deficient CUs, and where status could be inferred from the other CUs, However, I’m rethinking this. Perhaps that could be called status (or some other qualifier?), while reserving ‘interim’ status for SMUs where status of data deficient CUs cannot be inferred from data-rich CUs.  One challenge is that an interim status with only 1 green status may create incentives to not increase monitoring (to avoid finding a red).  However an ‘interim’ red status should trigger a rebuilding plan. Thoughts?
-
-[4:38 PM] Holt, Carrie
-There are two cases: (1) there are data-deficient CUs and status cannot be inferred from data-rich CUs and (2) there are data-deficient CUs and status can be inferred from data rich CUs.
-
-[4:38 PM] Holt, Carrie
-For (1), I think these should be interim status with strong recommendation for monitoring. Because, I now realize that even one data-rich red can trigger a rebuilding plan and should not be ignored.
-
-[4:39 PM] Holt, Carrie
-For (2), I'm not sure what to call those. 'interim status' as well, just plain 'status', or some other qualifier that indicates we're not very certain. This would also be associated with recommendation for monitoring (though perhaps lower priority). We had called these 'interim', but now it's confusing with category (1).
-
-Though we don't have colors for SMU status. Our metric is proportion of CUs above red as a %, either below 100% or at 100%. So the 100% is always provisional, but any other % is also provisional. The fact that LRP is breached is not provisional though. But then what is the difference between categories (1) and (2). Are they the exact same? If so, we don't need the 4 criteria...??
-
-
+<!--CH additional comments, from KH text (8 Dec)
+ if there are missing CUs and we cannot infer their status, then we shouldn't say the SMU is above the LRP. What if the term 'interim' only applied to status statements that were above the LRP. Could we do: Case 1 (Data deficient CUs and status cannot be inferred from data rich): If one or more CUs with data is red, then SMU is below LRP. If all CUs are amber or green, then SMU is data deficient. Case 2 (Data deficient and status can be inferred from other CUs): If one or more CUs with data is red, then SMU is below LRP. If all CUs are amber or green, then SMU is provisionally above LRP, i.e., interim status.
 
 -->
 
