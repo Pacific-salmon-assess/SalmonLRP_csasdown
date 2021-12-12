@@ -1,17 +1,9 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# Retrospective analysis of CU benchmarks based on S\textsubscript{gen} and percentiles
+# Retrospective analysis of CU benchmarks for Inside South Coast Chum
 
-*\textcolor{cyan}{LT: open to other name of this appendix*
-
-<!-- CW: Title suggestion - Retrospective analysis of CU benchmarks for Inside South Coast Chum -->
-
-<!-- CW:Start with an opening paragraph explaining what this appendix is about , something like:
-
-We conducted a retrospective analysis using the data for the Inside South Coast Chum to evaluate the impacts of specific data points and the length of the time-series on the estimates of stock recruitment parameters, S\textsubscript{gen} and percentile benchmarks. 
--->
-
+We conducted a retrospective analysis using the data for the Inside South Coast Chum to evaluate how increasing the length of the time series affected the estimates of stock recruitment parameters, S\textsubscript{gen} and percentile benchmarks. 
 
 In the retrospective analysis, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} changed as progressively more years of data were included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying parameters. Rather, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits. Since $\alpha$ and $\beta$ are correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind, especially when model fits have large residuals. Similarly, since $\alpha$ and  $\beta$ determine S\textsubscript{MSY} and S\textsubscript{gen}, changes in these derived parameters can be challenging to interpret and can be due to changes in $\alpha$,  $\beta$, and their relative values.
 
