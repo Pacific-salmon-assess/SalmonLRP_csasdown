@@ -1,9 +1,0 @@
-<!-- The following code should appear at the beginning of the first appendix.
-After that, all subsequent sections will be turned into appendices. -->
-
-
-# DATA AND ANALYSIS LINKS {#app:github-appendix}
-
-Code for data and analysis for the case studies are available on the Git Hub repository [pacific-salmon-assess/SalmonLRP_RetroEval](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
-
-Code for the write-up of this report are available on the Git Hub repository [pacific-salmon-assess/SalmonLRP_csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)

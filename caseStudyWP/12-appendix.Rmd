@@ -2,7 +2,7 @@
 After that, all subsequent sections will be turned into appendices. -->
 
 
-# Interior Fraser Coho Model Fits {#app:coho-appendix}
+# INTERIOR FRASER RIVER COHO MODEL FITS {#app:coho-appendix}
 
 
 
