@@ -9,7 +9,6 @@ rmd_files: ["index.Rmd",
             "07-references.Rmd",
             "08-appendix-chum-data.Rmd",
             "09-appendixsamSim.Rmd",
-            "10-appendix.Rmd",
             "11-appendix.Rmd",
             "12-appendix.Rmd",
             "13-appendix-github-links.Rmd"]

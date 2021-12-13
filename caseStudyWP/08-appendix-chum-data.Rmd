@@ -5,17 +5,19 @@ After that, all subsequent sections will be turned into appendices. -->
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
-# DATA SOURCES & TREATMENT FOR INNER SOUTH COAST CHUM SALMON - NON FRASER {#app:08-appendix-chum-data}
+# SUPPORTING INFORMATION FOR INNER SOUTH COAST CHUM SALMON CASE STUDY {#app:08-appendix-chum-data}
+
+## DATA SOURCES & TREATMENT FOR INNER SOUTH COAST CHUM SALMON - NON FRASER 
  
-## Spawner counts / escapement
+### Spawner counts / escapement
 
 We used spawning escapement data from 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program). The number of Chum salmon that return to spawn is typically counted using visual surveys.  Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by walking streams and counting fish, *\textcolor{cyan}{LW: helicopter counts?}* and using fences or weirs on some rivers. Total escapement for each stream is usually a peak counts or estimated using the area under the curve (AUC) method.
 
-## Fishery harvest, genetics, and age
+### Fishery harvest, genetics, and age
 
 The number of chum caught in fisheries in the Inside South Coast area were taken from the DFO Clockwork Database, which includes the DFO Fishery Operating System and Sales slip databases and Genetic Stock Identification data. Age distributions for each year were taken from the Johnstone Strait fishery aggregate, as age data for specific CUs or streams was not available. Harvest data was available for 1954-2018. Age composition data was available for 1958-2018.
 
-## Data treatment
+### Data treatment
 
 We removed the summer run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall.  
 
@@ -74,5 +76,38 @@ Note that the two CUs requiring CU-level infilling correspond to only one Fisher
 ```{r chum-spawner-distribution, fig.cap="Density (smoothed histogram) of chum escapement for the seven Conservation Units. Note that x axis is on logarithmic scale.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_spawner_dist.png', './figure/fig-spawner-dist.png', mode="wb")
 knitr::include_graphics("figure/fig-spawner-dist.png")
+```
+
+## RETROSPECTIVE ANALYSIS OF CU BENCHMARKS FOR INSIDE SOUTH COAST CHUM SALMON - NON FRASER
+
+We conducted a retrospective analysis using the data for the Inside South Coast Chum to evaluate how increasing the length of the time series affected the estimates of stock recruitment parameters, S\textsubscript{gen} and percentile benchmarks. 
+
+In the retrospective analysis, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} changed as progressively more years of data were included (Figures \@ref(fig:chum-a-b-SMSY-Sgen-retro)). Note that these are not estimates based on a model that accounts for time-varying parameters. Rather, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} in a given year come from fitting a Ricker model to spawners and recruits for all years up to and including that year, for each CU. Each subsequent year includes another year of data. Thus, as more data is included, the estimates of $\alpha$, $\beta$, and S\textsubscript{gen} may change. These results should be interpreted with caution due to the large residuals in observed vs. predicted recruits. Since $\alpha$ and $\beta$ are correlated, the meaning of any trends in one parameter should be interpreted with the other parameter in mind, especially when model fits have large residuals. Similarly, since $\alpha$ and  $\beta$ determine S\textsubscript{MSY} and S\textsubscript{gen}, changes in these derived parameters can be challenging to interpret and can be due to changes in $\alpha$,  $\beta$, and their relative values.
+
+```{r chum-a-b-SMSY-Sgen-retro, fig.cap="Retrospective estimates of $\\alpha$, $\\beta$, S\textsubscript{gen} (black line with gray confidence intervals) and S\textsubscript{MSY} (blue line) for five CUs in the Inside South Coast Chum SMU. Note y axis is identical across CUs for $\\alpha$ but varies for other parameters.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_SMSY_Sgen_retro.png', './figure/chum-a-b-SMSY-Sgen-retro.png',  mode="wb")
+knitr::include_graphics('figure/chum-a-b-SMSY-Sgen-retro.png')
+```
+
+Retrospective estimates of $\alpha$ and $\beta$ for Southern Coastal Streams show declines over time. S\textsubscript{MSY} and S\textsubscript{gen} increase sharply in the first few years due to large decreases in $\alpha$ and $\beta$. S\textsubscript{MSY} then decreases over time, while S\textsubscript{gen} stays relatively stable. This is because as $\alpha$ decreases below ~2.5, S\textsubscript{gen} decreases, but as $\beta$ decreases, S\textsubscript{gen} decreases, so that a simultaneous decrease in $\alpha$ and $\beta$ can cancel out. However, the lower alpha is below 2.5, the less influence $\beta$ has on S\textsubscript{gen}. *\textcolor{cyan}{This is from my work on sensitivity of Sgen and SMSY to alpha and beta. Not sure if we can include here}*
+
+Increasing S\textsubscript{gen} for North East Vancouver Island is mainly due to an increase in $\alpha$ from <1.5 to >2 and then a decrease in $\beta$. 
+
+$\alpha$ for Loughborough showed modest decreases over time, and S\textsubscript{gen} was fairly stable. 
+
+The Georgia Strait CU shows evidence of increasing $\alpha$, and its S\textsubscript{gen} estimate was fairly stable. 
+
+Howe Sound-Burrard Inlet S\textsubscript{gen} was fairly stable, and then increased due to  decreases in $\alpha$ and $\beta$. 
+
+
+
+```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by gray and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark. Green and red points indicate status above or below benchmark, respectively. Transparent points are years with CU-level infilling.", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
+knitr::include_graphics('figure/chum-perc-retro.png')
+```
+
+```{r chum-logistic-sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their S\textsubscript{gen} benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes the 5 CUs without CU-level infilling (no Bute Inlet or Upper Knight)", warning=FALSE, echo=FALSE, fig.align="center"}
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
+knitr::include_graphics('figure/chum-logistic-sgen.pdf')
 ```
 
