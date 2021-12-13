@@ -6,17 +6,32 @@ author: |
   Luke Warkentin^1^
   Catarina Wor^2^
   Brooke Davis^3^
-  others (TBD)^2^
-author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C. and others(TBD)"
+  Jessy Bokvist^4^
+  Sabrina Crowley^5^
+  Wilf Luedke^4^
+  Diana McHugh^4^
+  Candace Picco^6^
+  others (TBD)
+author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Bokvist, J., Crowley, S., Luedke, W., McHugh, D., Picco, C. and others(TBD)"
 address: |
   ^1^Institute of Ocean Sciences\
-     Fisheries and Oceans Canada, Sidney, Canada\
+     Fisheries and Oceans Canada,  9860 W Saanich Rd
+     Sidney, British Columbia, V8L 5T5 Canada\
   ^2^Pacific Biological Station\
-     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
+     Fisheries and Oceans Canada, 3190 Hammond Bay Rd\
      Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^3^Delta Regional Office\
+  ^3^Lower Fraser Area Office\
      Fisheries and Oceans Canada, 100 Annacis Pkwy Unit 3\
      Delta, British Columbia, V3M 6A2, Canada\
+  ^4^Southcoast Area Office\
+     Fisheries and Oceans Canada, 3225 Stephenson Point Rd\
+     Nanaimo, British Columbia, V9T 1K3, Canada\
+  ^5^Nuu-chah-nulth Tribal Council\
+     5001 Mission Rd\
+     Port Alberni, British Columbia, V9Y 8X9, Canada\
+  ^6^Ha'oom Fisheries Socierty\
+     320 Opitsaht IR Road\
+     Tofino, British Columbia, V0R 2Z0, Canada\
 month: Month # fill in
 year: 2022
 report_number: nnn

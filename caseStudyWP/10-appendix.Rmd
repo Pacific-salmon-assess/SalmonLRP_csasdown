@@ -1,7 +1,7 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# Retrospective analysis of CU benchmarks for Inside South Coast Chum
+# RETROSPECTIVE ANALYSIS OF CU BENCHMARKS FOR INSIDE SOUTH COAST CHUM SALMON - NON FRASER
 
 We conducted a retrospective analysis using the data for the Inside South Coast Chum to evaluate how increasing the length of the time series affected the estimates of stock recruitment parameters, S\textsubscript{gen} and percentile benchmarks. 
 
