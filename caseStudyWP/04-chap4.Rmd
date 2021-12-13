@@ -28,7 +28,7 @@ CU       &  Inlets   & Indicators\\
  & Clayoquot & Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
 \multirow{2}{*}{\parbox{4cm}{West Vancouver Island-Nootka \& Kyuoquot (CK-32)}} & Nootka/Esperanza,  & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis,  \\
 &  Kyuquot &  Zeballos, Artlish, Kaouk, Tahsish \\
-West Vancouver Island-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
+West Vancouver Island-North (CK-33) &  Quatsino  &  \emph{Cayeghle}, Marble \\                     
 \hline
 \end{tabular}
 (\#tab:chinook-Overview)
