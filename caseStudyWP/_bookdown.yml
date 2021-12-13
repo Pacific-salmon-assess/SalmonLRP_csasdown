@@ -11,5 +11,5 @@ rmd_files: ["index.Rmd",
             "09-appendixsamSim.Rmd",
             "11-appendix.Rmd",
             "12-appendix.Rmd",
-            "13-appendix-github-links.Rmd"]
+            "appendix-github-links.Rmd"]
 delete_merged_file: true
