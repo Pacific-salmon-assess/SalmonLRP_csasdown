@@ -9,8 +9,6 @@ output:
 
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series and consistent observation methodology (Figure \@ref(fig:chinook-map); Table \@ref(tab:chinook-Overview), @riddellReview2001Chinook2002). Hatcheries produce a relatively large component of the total production in many of these stocks, where they help achieve harvest, conservation and assessment objectives. However, they are also considered a risk factor for the long-term sustainability of CUs because they can also reduce wild genetic diversity[@withlerGeneticallyBasedTargets2018]. As described in Holt et al. (in review), only indicator stocks without significant enhancement, i.e.,  stocks with Proportionate Natural Influence, PNI, values $\geqslant$ 0.5 were included. Most fish are natural origin in these populations, though the of 'wild' fish, second generation natural-origin fish may be in the minority [@withlerGeneticallyBasedTargets2018]. 
 
-<!--Sabrina email: In short, the management of hatchery produced fish must be separated from wild production. This is a bit tricky for WCVI as we don’t have enough information or data to quantitatively separate ‘natural’ and ‘hatchery’. It would be ideal to remove 1st generation hatchery-origin fish but for WCVI we simply don’t have that information. Strays have been a real issue but hard to quantify the impacts to each non-targeted hatchery system without collecting the data needed annually as each year would differ. How much stray to a particular system and for how long are factors but we don’t assess this enough or adequately. For example, during a M/R project in the Moyeha the 2010 half the samples were hatchery but only 12 samples were collected and the next year all samples were natural origin. 
-We need to be clear to include this uncertainty for WCVI in the report stating results could change if more data was available to adequately and quantitatively (not just I see a clipped salmon or not but genetics and/or more directed projects to the cause) separate the hatchery/1st generation from natural spawners. This is after all a ‘tool-kit’ that has options to choose from but may not have the full picture until gaps are filled. Highlighting the much needed information to properly segregate hatchery to natural spawners would be required to adequately assess.-->
 
 ```{r chinook-map, fig.cap="Map of the WCVI Chinook SMU, component CUs (coloured red, blue, and yellow), and inlets (labelled in black- NAMES TO BE REVISED).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chinook-map.png")
@@ -33,9 +31,10 @@ West Vancouver Island-North (CK-33) &  Quatsino  & Cayeghle, Marble \\
 \end{table}
 
 
-
 <!-- CH: Thanks for formatting this table Catarina. If we have time, I'd like to format it so that the second column as a separate row for each inlet. I could not get it work in the pdf version of the table below, and I noticed, all inlets are in a string in the table above. I can work on this next week.
+-->
 
+<!--
 
 ----------------------- ----------------------- ----------------------------------------------
 CU                      Inlets                  Indicators
@@ -52,7 +51,7 @@ Nootka & Kyuoquot       Kyuquot                 Zeballos,
 West Vancouver Island-  Quatsino                Cayeghle, Marble
 North (CK-33)                
 
------------------------ ----------------------- ----------------------------------------------                        
+----------------------- ----------------------- ----------------------------------------------            
 
 Table: (\#tab:chinook-Overview) Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. WCVI is West Coast of Vancouver Island. 
  -->
@@ -257,9 +256,9 @@ Parameter & Value & Source \\
 Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
 Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\
-$S_REP$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\
+$S_{REP}$ (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\
 
-$S_REP$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\
+$S_{REP}$ (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\
 
 Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
@@ -275,7 +274,7 @@ Interannual variability in exploitation rates (CV) & 0.17 & Estimated from pre-t
 
 Variability in exploitation rates among inlets (CV) & 0.085 &  Assumed to be half of interannual variability, varied in a sensitivty analysis (0-0.17). Assumed to be beta distributed, constrained between 0-1.\\
 
-Initial abundances  &  $S_REP$(inlet-specific) & MLE from watershed-area model\\
+Initial abundances  &  $S_{REP}$(inlet-specific) & MLE from watershed-area model\\
 
 Extirpation threshold &  2 & Mating constraint \\
 \hline
