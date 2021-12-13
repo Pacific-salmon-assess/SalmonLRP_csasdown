@@ -1,7 +1,7 @@
 # CASE STUDIES {#case-studies}
 
 
-We applied candidate methods for LRPs developed in Section \@ref(est-methods) to three SMUs as case studies to demonstrate the application of candidate methods, evaluate sensitivity of LRPs to various assumptions, and inform the guidelines presented in Section \@ref(guidelines).  The case studies were Interior Fraser River Coho Salmon, West Coast Vancouver Island (WCVI) Chinook Salmon, and Inner South Coast Chum Salmon  (*Oncorhynchus keta*)- excluding Fraser, each comprising of 3-7 CUs<!--CH: latin names for other salmon species provided at first instance in Ch1. Chum salmon not mentioned in that chapter-->. These were chosen because they varied in data types and availabilities ranging from data-rich (Interior Fraser River Coho) to data-limited (Inner South Coast Chum), to represent a range of SMUs that may require LRPs. Furthermore, they varied in hatchery contributions from high (WCVI Chinook) to relatively low (Interior Fraser River Coho and Inside South Coast Chum) and two are included in the proposed first batch of stocks to be put under regulation for the Fish Stock provisions (Interior Fraser River Coho and WCVI Chinook). For each case study, the set of LRP methods considered is a function of available data and previously developed assessment methods for component CUs. In this section, we provide a brief description of each case study and methods applied to each. More thorough descriptions of case studies, including SMU characteristics, data sources, analysis methods, and results, are available in Holt et al. (in review). An overview of the approaches applied are provided in Table \@ref(). <!--CH: To add, drafted in "Table of LRP approaches.docx". Table 1. Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b).-->
+We applied candidate methods for LRPs developed in Section \@ref(est-methods) to three SMUs as case studies to demonstrate the application of candidate methods, evaluate sensitivity of LRPs to various assumptions, and inform the guidelines presented in Section \@ref(guidelines).  The case studies were Interior Fraser River Coho Salmon, West Coast Vancouver Island (WCVI) Chinook Salmon, and Inner South Coast Chum Salmon  (*Oncorhynchus keta*)- excluding Fraser, each comprising of 3-7 CUs<!--CH: latin names for other salmon species provided at first instance in Ch1. Chum salmon not mentioned in that chapter-->. These were chosen because they varied in data types and availabilities ranging from data-rich (Interior Fraser River Coho) to data-limited (Inner South Coast Chum), to represent a range of SMUs that may require LRPs. Furthermore, they varied in hatchery contributions from high (WCVI Chinook) to relatively low (Interior Fraser River Coho and Inside South Coast Chum) and two are included in the proposed first batch of stocks to be put under regulation for the Fish Stock provisions (Interior Fraser River Coho and WCVI Chinook). For each case study, the set of LRP methods considered is a function of available data and previously developed assessment methods for component CUs. In this section, we provide a brief description of each case study and methods applied to each. More thorough descriptions of case studies, including SMU characteristics, data sources, analysis methods, and results, are available in Holt et al. (in review). An overview of the approaches applied are provided in Table \@ref(tab:lrpapproaches). <!--CH: To add, drafted in "Table of LRP approaches.docx". Table 1. Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b).-->
 
 <!--CW work in progress in the table below -->
 \renewcommand*{\arraystretch}{1.4}
@@ -31,11 +31,12 @@ We applied candidate methods for LRPs developed in Section \@ref(est-methods) to
 \midrule
 \multicolumn{2}{l}{Proportion-based LRP} &  Yes &   Yes &   Yes\\
 \midrule
-\multirow{2}{*}{\parbox{3.2cm}{Aggregate-abundance based LRPs}} & Logistic regression-based LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
+\multirow{2}{*}{\parbox{3.2cm}{Aggregate abundance-based LRPs}} & Logistic regression-based LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
 \cline{2-5}
  & Projection-based  LRP & Yes  & Yes &  - \\
 \bottomrule
 \end{tabular}
+(\#tab:lrpapproaches)
 \end{table}
 
 
