@@ -42,7 +42,7 @@ After that, all subsequent sections will be turned into appendices. -->
 
   Two levels of infilling have previously been used for ISC Chum CUs (@holtEvaluatingBenchmarksBiological2018; Figure \@ref(fig:chum-escapement-infill)). The first level, infilling by stream, is used when a CU has some streams counted in a year.  In this case, stream-level infilling is done by borrowing information from other streams within the same CU. The second level, infilling by CU, is used when there are no counts of spawners for a CU in a given year. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling to calculate LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
 
-#### Infilling by stream
+#### Infilling by Stream
 
   This applies to CUs and years when there were counts in some streams in the CU in a given year. For each stream, the geometric mean of escapement over all years was calculated as the stream's average escapement. Then the total average escapement for each CU in each year was the sum of the average escapements from all streams. Then a proportion of monitored escapement in each year was the sum of average escapement of all streams with counts in a year divided by the sum of the average escapements for all streams (counted and uncounted) in that CU. The infilled escapement for a CU in given year was the sum of the observed escapements for that CU and year divided by the proportion of the monitored escapement for that CU and year. 
 
@@ -59,7 +59,7 @@ download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/
 knitr::include_graphics("figure/chum-escapement-infill.png")
 ```
 
-### Run reconstruction to estimate recruitment
+### Run Reconstruction to Estimate Recruitment
 
   We reconstructed the returns for each brood year to give recruits for brood years 1955-2012 (age composition data from 1958-2018, minimum fish age was 3 years, maximum fish age was 6 years). Using CU benchmarks based on stock-recruit parameters - in this case, Sgen - requires knowing the spawners and recruits (adult offspring produced by each brood year of spawners) for each brood year (spawning year). Estimating recruits requires knowing wild spawner escapement, number of wild fish caught in fisheries, and the age of these fish. 
 
@@ -72,7 +72,7 @@ download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/
 knitr::include_graphics("figure/fig-spawner-dist.png")
 ```
 
-## RETROSPECTIVE ANALYSIS OF CU BENCHMARKS FOR INSIDE SOUTH COAST CHUM SALMON - NON FRASER
+## Retrospective Analysis of CU Benchmarks
 
   We conducted a retrospective analysis using the data for the Inside South Coast Chum to evaluate how increasing the length of the time series affected the estimates of stock recruitment parameters, S\textsubscript{gen} and percentile benchmarks. 
 
