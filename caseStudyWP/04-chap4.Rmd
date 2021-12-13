@@ -22,8 +22,12 @@ knitr::include_graphics("figure/chinook-map.png")
 \hline
 CU       &  Inlets   & Indicators\\ 
 \hline
-West Vancouver Island-South (CK-31) & San Juan, Nitinat, Barkley, Clayoquot & \emph{San Juan}, \emph{Nitinat}, Nahmint , \emph{Sarita}, \emph{Somass}, Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
-West Vancouver Island-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis, Zeballos, Artlish, Kaouk, Tahsish \\
+\multirow{4}{*}{\parbox{4cm}{West Vancouver Island-South (CK-31)}} & San Juan,  & \emph{San Juan}, \\
+ & Nitinat, & \emph{Nitinat},  \\
+ & Barkley,  & Nahmint , \emph{Sarita}, \emph{Somass},  \\
+ & Clayoquot & Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
+\multirow{2}{*}{\parbox{4cm}{West Vancouver Island-Nootka \& Kyuoquot (CK-32)}} & Nootka/Esperanza,  & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis,  \\
+&  Kyuquot &  Zeballos, Artlish, Kaouk, Tahsish \\
 West Vancouver Island-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
 \hline
 \end{tabular}
