@@ -44,7 +44,7 @@ KH comment: although, given that we are using different Sgens, this may not appl
 
 \newpage
 \begin{landscape}
-```{r decision-tree, fig.cap="Decision tree to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program", warning=FALSE, echo=FALSE, fig.align="center",out.width = "100%" }
+```{r decision-tree, fig.cap="Decision tree used in Pacific Salmon Status Scanner to assess status of Conservation Units based on the Wild Salmon Policy, under development by State of the Salmon Program (Pestal et al. in press)", warning=FALSE, echo=FALSE, fig.align="center",out.width = "100%" }
 source("R/make_tree_diagram.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
