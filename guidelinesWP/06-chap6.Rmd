@@ -1,6 +1,6 @@
 # DISCUSSION AND RECOMMENDATIONS FOR FUTURE WORK {#recommendations}
 
-## Key uncertainties that affect LRP estimates 
+## KEY UNCERTAINTIES THAT AFFECT LRP ESTIMATES 
 <!--CH: this section is a TOR element-->
 
 ### CU assessments
@@ -56,7 +56,7 @@ Similar to proportion-based LRPs, uncertainties in projection-based LRPs can ari
 One difference between projection-based and logistic regression-based LRPs is that for projection based LRPs, uncertainties in all underlying parameters and CU-level benchmarks are integrated into the probability of all CUs being above their lower benchmarks, so that the LRP itself does not have statistical uncertainty associated with it. In contrast, 95% CIs associated with logistic regression-based LRPs account for estimation uncertainty not included in projection-based LRPs. 
 
 
-## Impact of missing CUs on SMU-level status
+## IMPACT OF MISSING CUS ON SMU-LEVEL STATUS
 
 For proportion-based LRPs, if the LRP of 100% of CUs above red status has been breached for an SMU, the inclusion of additional CUs may further deplete or improve status defined as the percentage of CUs above red status, but will not increase status to above the LRP of 100%. In contrast, if the LRP is not breached for an SMU, then the inclusion of additional CUs may deplete status to below the LRP or keep status at 100% of CUs above the red zone.  <!--CH Q: Is this next sentence true for proportion-based LRPs? I know it does NOT apply for logistic regression-based LRPs (topic of following pgh)--> The power to detect a breach of a proportion-based LRP is relatively weak when the sample size of CUs is small relative to the total number of component CUs. Therefore, statuses that rely on only a small number of CUs tend to be provide more optimistic status than those that include a larger sample of CUs for proportion-based LRPs, as shown for Inside South Coast Chum case study.  This asymmetrical impact of increased monitoring of CUs on SMU status may reduce incentives to extend monitoring to data-deficient CUs.
 
@@ -64,7 +64,7 @@ For proportion-based LRPs, if the LRP of 100% of CUs above red status has been b
 For logistic regression-based LRPs, we found that removing component CUs from assessments of an SMU tended to increase variability in SMU-level status, which may be more pessimistic or optimistic than when all CUs are considered depending on which CU is removed and the level of covariation among CUs.  For this LRP, the addition of CUs affects the fit of the logistic regression model, which impacts the aggregate abundance-based LRP and status in ways that are difficult to predict *a priori*.
 
 
-## Time-varying parameters and impacts on LRPs
+## TIME-VARYING PARAMETERS AND IMPACTS ON LRPS
 
 There is increasing evidence of time varying parameters in Pacific salmon populations, particularly relating to trends in productivity [e.g.,;  @dornerSpatialTemporalPatterns2018; @malickRegionalScaleDeclinesProductivity2016; @petermanWidespreadDecreaseProductivity2012]. <!--CW note: it is probably better to group/ describe these papers a bit more, or exclude some of them. CH: I suggest removing these:  @holtImpactTimevaryingProductivity2020;  @connorsClimateCompetitionInfluence2020; @debertinMarineGrowthPatterns2017 --> In Canada, DFO assessments identified declines in productivity for various CUs, e.g., Fraser River Sockeye [@grantEvaluationUncertaintyFraser2011;  @huangRecoveryPotentialAssessment2021], Southern BC Chinook [@dfoIntegratedBiologicalStatus2016], and Interior Fraser River Coho [@arbeiderInteriorFraserCoho2020]. These assessments relied on a variety of tools to identify trends in productivity including the evaluation of trends in recruits per spawner <!--CH: I changed this from: "log spawners per recruit", okay? I'm not sure the logged scale is critically relevant, but the R/S vs S/R is important---> [@arbeiderInteriorFraserCoho2020], evaluation of trends in residuals from recruitment curve fits [@grantEvaluationUncertaintyFraser2011], and explicit consideration of time-varying parameters when fitting recruitment curves using Kalman filter or recursive Bayes approaches [@huangRecoveryPotentialAssessment2021]. 
 
@@ -80,8 +80,7 @@ Time-varying stock-recruitment dynamics usually occur at the CU level, and the i
 
 
 
-
-## Future research
+## FUTURE RESEARCH
 
 Here we identify three approaches for developing LRPs aligned with the key principles in Section \@ref(principles). Additional approaches may be developed in the future to capture a broader range of data availability, quality, and types, and dimensions of biological status. As methods are developed and revised, SMU statuses can also be updated in accordance with principle 2, using the best available information for the development of LRPs. 
 
