@@ -5,7 +5,8 @@ output:
 ---
 # GUIDELINES FOR APPLYING LRPS {#guidelines}
 
-## Stepwise approach for selecting LRPs
+<!--CH: could change list level as this next section is the only one at that level, but then need to capitalize all level 2 title-->
+## STEPWISE APPROACH FOR SELECTING LRPS
 
 We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above red as the default method. Aggregate abundance-based LRPs are considered "<!--KH: replace 'considered' with 'presented as an option for cases in which they are required for ....' ?? -->when required for fisheries management (e.g., local or international), and <!--replace 'and' with 'but'? --> are considered supplemental to the proportion of CUs with status above red. The step-wise approach considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated.
 

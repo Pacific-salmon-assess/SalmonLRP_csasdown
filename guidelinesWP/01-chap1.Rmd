@@ -1,6 +1,6 @@
 # INTRODUCTION {#intro}
 
-## Background
+## BACKGROUND
 
 <!--CH comment: change all reference of multidimensional tool to the Pacific Salmon Status Scanner and for short the Salmon Scanner-->
 <!--CH: change all instances of $S_gen$ and other benchmarks to  S~gen~ and S~MSY~, after confirming with group-->
@@ -25,7 +25,7 @@ Under the WSP, the assessment of Pacific salmon has focused on setting benchmark
 
 
 
-## Review of Reference Points for Pacific Salmon
+## REVIEW OF REFERENCE POINTS FOR PACIFIC SALMON
  <!--
 
 CH: I think we should keep benchmarks as biological values as defined in the WSP, i.e. not management benchmarks. We've spent along time trying to differentiate biologically based benchmarks developed under the WSP for OCPs used in management". Also, I moved the reference to other policies up, and am trying to differentiate LRPs from OCPs, though LRPs can inform OCPs (and are used in them sometimes) I'd like to distinguish them at least theoretically, so added some text explicitly on this above and made some revisions here--> 
@@ -46,7 +46,7 @@ For Pacific salmon, @portleyLimitReferencePoints2014 reviewed the use of LRPs an
 
 
 Under Canada's WSP, status assessments generally integrate data across numerous dimensions of population characteristics <!--KH: replace 'dimensions' with "numerous metrics representing different population characteristics" -->, including current spawner abundances, short and long-term trends in abundances, distribution of spawning, and fishing mortality relative to productivity, <!--KH: suggest starting new sentence here that says something like "Benchmarks are established for each metric, and an overall multidimensional estimate of CU status is obtained by integrating status among metrics." --> with benchmarks along each metric [@holtEvaluationBenchmarksConservation2009].  One advantage of this approach is that CUs missing data for any single metric can still be evaluated against remaining metrics, making the framework applicable across a relatively broad range of CUs. A second advantage is that <!--KH: A second advantage is that the approach allows stability in annual status estimates despite highly variable population dynamics for some CUs and large observation errors because a single-metric dropping below the benchmark may not trigger red status. -->a single-metric dropping below the benchmark may not trigger red status over all given high variability in abundances for some CUs. In general, persistence at low levels below abundance-based benchmarks and significant declining trends are required for red status overall. <!--CH comment; this is still a problem for logistic regression based LRPs that are impacted by CUs dropping below LBMs in only a single year even if not associated with what local experts would deem serious harm. I have highlighted this as uncertainty for that approach in the last chapter of this WP.
-CW: True, but unless that year is the only (or one of a few) red status years, the aggregate abundance LRP estimate should be robust to that "false red status"--> Expert-driven processes to integrate sometimes conflicting metrics within the multidimensional framework have been implemented for numerous Pacific salmon stocks in Canada (e.g., Fraser River Sockeye Salmon, *Oncorhynchus nerka* [@grantEvaluationUncertaintyFraser2011, @grantIntegratedBiologicalStatus2013, @grant2017FraserSockeye2020], Interior Fraser River Coho Salmon, *Oncorhynchus kisutch* [@dfoWildSalmonPolicy2015], and Southern BC Chinook Salmon, *Oncorhynchus tshawytscha* [@dfoIntegratedBiologicalStatus2016]). One challenge in implementing these expert-driven assessments is high demand on time and staff resources. Based on the consistencies that emerged from assessments where the integration of multiple metrics has been applied, (Pestal et al. in prep) developed an algorithm to approximate overall WSP status by combining those metrics in a decision tree, at the scale of CUs. This algorithm, known as the Rapid Multidimensional Scanning Tool, was ground-truthed by local assessment experts and tested with stocks not included in the original formulation.
+CW: True, but unless that year is the only (or one of a few) red status years, the aggregate abundance LRP estimate should be robust to that "false red status"--> Expert-driven processes to integrate sometimes conflicting metrics within the multidimensional framework have been implemented for numerous Pacific salmon stocks in Canada (e.g., Fraser River Sockeye Salmon, *Oncorhynchus nerka* [@grantEvaluationUncertaintyFraser2011, @grantIntegratedBiologicalStatus2013, @grant2017FraserSockeye2020], Interior Fraser River Coho Salmon, *Oncorhynchus kisutch* [@dfoWildSalmonPolicy2015], and Southern BC Chinook Salmon, *Oncorhynchus tshawytscha* [@dfoIntegratedBiologicalStatus2016]). One challenge in implementing these expert-driven assessments is high demand on time and staff resources. Based on the consistencies that emerged from assessments where the integration of multiple metrics has been applied, (Pestal et al. in prep) developed an algorithm to approximate overall WSP status by combining those metrics in a decision tree, at the scale of CUs. This algorithm, known as the Pacific Salmon Status Scanner, was ground-truthed by local assessment experts and tested with stocks not included in the original formulation.
 
 
 In some cases, single-metric approaches in which <!-- KH: salmon --> spawning biomass <!--KH: replace biomass with abundance? --> is compared with an abundance-based benchmark, have been used as proxies for status outside of DFO [@pacificsalmonfoundationMethodsAssessingStatus2020] <!--note that this citation reads as "Foundation 2020" when knit -->  and occasionally within DFO (e.g., Barkley Sockeye Salmon @chaputConsiderationsDefiningReference2012). <!-- KH: In addition, single-metric approaches are sometimes used in harvest control rules. --> While biological assessments under the WSP are implemented at the scale of CU, fisheries management <!--KH: and associated harvest control rules -->often operates at larger scales, aggregating over multiple CUs. For some stock aggregates, harvest control rules are developed to achieve a low probability of individual CUs breaching their lower benchmark on spawner abundances, among other socio-economic considerations, e.g., Fraser River sockeye salmon [@chaputConsiderationsDefiningReference2012]. This approach supports management of weak stocks and is aligned with DFO's Precautionary Approach Framework [@dfoFisheryDecisionMakingFramework2009].
@@ -66,7 +66,7 @@ KH (Dec 8) Both of these sound good to me; you can delete comments
 
 
 
-## Alternative spatial scales
+## ALTERNATIVE SPATIAL SCALES
 
 The Fish Stock provisions pertain to the management of fisheries. For Pacific salmon, threats occur at a range of spatial scales from local habitat disturbances impacting local spawning habitat, to regional-scale climate change. Also, multiple levers are used by managers to achieve objectives for Pacific salmon which extend beyond fisheries, including habitat restoration and hatchery enhancement, which also occur at a variety of spatial scales.  Indeed, for many SMUs, fisheries have been limited in recent years [@grantStateCanadianPacific2020], such that habitat and hatchery management are playing an increasingly dominant role in management responses. These decisions require stock assessments and responses at a hierarchy of spatial scales from a watershed-level within CUs to larger aggregates of CUs at regional-scales, sometimes across Pacific salmon species. The LRPs presented here are applied at the SMU scale, though methods could also be applied at smaller or larger scales to inform a variety management decisions.
 
@@ -76,7 +76,7 @@ Alternative spatial scales of assessment and management are used by agencies out
 <!--CW: I am not sure this paragraph should be here, it reads more like a review. I included it in a comment above.  -->
 A mismatch in scales among biological stocks, the unit of management, and the spatial scale of data collection are not uncommon among marine fish species, especially invertebrate species [@dfoProceedingsNationalPeer2016; @mullowneyBiologicalPerspectivesComplexities2020], creating challenges when identifying LRPs [@dfoScienceAdvicePrecautionary2021]. This mismatch can make undesirable states in fish populations difficult to detect, and weaken the effectiveness of resulting management measures. <!--CH: could include snow crab example from Mullowney et al. 2020 if we wanted to flush this out a bit. I couldn't find any reference for American Lobster- i.e., Adam Cook's ppt from TESA workshop-->
 
-## Goals of Working Paper
+## GOALS OF WORKING PAPER
 
 The goals of this working paper were to:
 
@@ -93,7 +93,7 @@ Pacific salmon are unique among marine fish species because of their anadromous 
 
 <!--KH: suggestion to move the ending paragraph about how unique salmon are to the top of this section as some background context for the goals of the working paper (i.e., why Pacific salmon need their own separate guidelines)-->
 
-## Scope of Working Paper
+## SCOPE
 
 <!--CW: suggest an opening sentece to the first paragraph in this section with what is in scope. Something Like:
 
@@ -109,13 +109,13 @@ While one role of LRPs is to trigger the development of rebuilding plans under t
 
 Time-varying population processes, such as changes in productivity, have important impacts on biological benchmark, LRPs, and assessment against LRPs. While we describe some recent approaches for considering those changes, a full review and evaluation of impacts of time-varying parameters on LRPs is beyond our scope though is an important area of future research.
 
-While we follow the recommendation of @holtIndicatorsStatusBenchmarks2009a to assess status of CUs using multiple metrics, we have implemented this approach using a multidimensional algorithm, the Rapid Multidimensional Scanning Tool, documented in Pestal et al. (in prep), developed from the implementation of formal, peer-reviwed WSP assessments for Pacific salmon stocks in Canada. A full review of the Rapid Multidimensional Scanning Tool is beyond the scope of this paper.  Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.
+While we follow the recommendation of @holtIndicatorsStatusBenchmarks2009a to assess status of CUs using multiple metrics, we have implemented this approach using a multidimensional algorithm, the Pacific Salmon Status Scanner (or Salmon Scanner), documented in Pestal et al. (in prep), developed from the implementation of formal, peer-reviwed WSP assessments for Pacific salmon stocks in Canada. A full review of the Salmon Scanner is beyond the scope of this paper.  Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.
 
 Decisions about prioritizing CUs for conservation within an SMU (e.g., evaluating the costs and benefits of conserving individual CUs given differential vulnerability to climate change or other stressors) is also beyond our scope, requiring a broader discussion with <!-- cwsugges: local experts,--> managers and stakeholders.
  
 
 
-## Enhancement
+## ENHANCEMENT
 
  Hatcheries contribute to spawning abundances of many salmon stocks and can be used as a conservation tool and to increase the availability of fish for harvest. Hatchery enhancement can also reduce wild genetic diversity and is considered a risk factor for the long-term sustainability of CUs [@withlerGeneticallyBasedTargets2018]. Salmon that are enhanced by hatcheries are not considered "wild" under the Wild Salmon Policy and are not usually included in assessments of biological status. However separating out the influence of hatchery enhancement in time-series of spawner abundances and recruitment is challenging, in part because hatchery-origin fish are not usually visibly marked and so are indistinguishable from natural-origin spawners. 
 
@@ -134,7 +134,7 @@ In addition, some populations without hatcheries may be influenced by straying f
 <!--CH removed: "Recruitment data are generally not available for these stocks, so stock-recruitment analyses are usually not implemented. In one exception for Pitt River Sockeye Salmon,  spawner abundances were determined from brood take plus total spawners in the natural environment and recruitment was total recruits from both hatchery and natural environment (Pitt River, Grant et al. 2011)".-->
 
 
-## Role of LRPs {#roleLRPs}
+## ROLE OF LRPS {#roleLRPs}
 
 LRPs have several roles, including triggering rebuilding plans under the Fisheries Act, communicating conservation risks to decision makers and the public, and informing management decisions about fisheries. LRPs are biologically based values that are separate from management measures, but can be used to inform management decisions. For example, LRPs can be used to identify operational control points which are points where management actions are triggered within harvest control rules, <!-- KH: replace 'but are not necessarily operational control points themselves' with 'without actually being operational control points themselves' --> but are not necessarily operational control points themselves. <!--CW: Although I understand this, I still find it confusing. To me, a rebuilding plan is  (has to be) a management action, so what is the difference between the LRP triggering a rebuilding plan and an OCP trigerring other managent action? --> <!--KH: For example, -->Within a harvest control rule, a conservation goal might be to avoid low biomass levels where serious harm is occurring which can be translated to a measurable objective to avoid spawner abundances lower than an LRP with a high probability (e.g., 95%) over a specified time period.  However, operational control points can be identified to achieve a suite of biological and socioeconomic objectives, beyond those associated with serious harm, usually by a diverse range of managers and stakeholders. In contrast, DFO's Science Sector is responsible for identifying LRPs using <!--based only --> biological considerations [@dfoScienceAdvicePrecautionary2021]. 
 
@@ -149,7 +149,7 @@ More generally, LRPs can be used within a Management Procedure Framework (or Man
 <!--CH side note:  DFO's Fisheries Sustainability checklist shows LRPs that usually management operational control points, and not biological LRPs per se-->
 
 
-## Process to identify candidate LRPs and guidelines
+## PROCESS TO IDENTIFY CANDIDATE LRPS AND GUIDELINES
 
 A technical working group <!--KH: composed of DFO and First Nations analysts--> was developed to capture expertise and knowledge associated with <!--the --> biological basis of serious harm to SMUs <!-- replace 'to SMUs' with 'at an SMU-level'--> <!-- and --> to support the development and application of candidate methods for LRPs <!--KH: moved the following to above:, composed of DFO and First Nations analysts-->. The technical working group was not meant to be a venue for engagement or to capture stakeholder perspectives or socioeconomic objectives, <!--KH: These considerations are relevant when developing management responses to stock assessments, but not in the assessment of stock status using LRPs. --> considerations that are included when developing management responses to stock assessments.
 
