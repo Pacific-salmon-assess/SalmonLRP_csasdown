@@ -1,7 +1,44 @@
 # CASE STUDIES {#case-studies}
 
 
-We applied candidate methods for LRPs developed in Section \@ref(est-methods) to three SMUs as case studies to demonstrate the application of candidate methods, evaluate sensitivity of LRPs to various assumptions, and inform the guidelines presented in Section \@ref(guidelines).  The case studies were Interior Fraser River Coho Salmon, West Coast Vancouver Island (WCVI) Chinook Salmon, and Inner South Coast Chum Salmon  (*Oncorhynchus keta*)- excluding Fraser, each comprising of 3-7 CUs<!--CH: latin names for other salmon species provided at first instance in Ch1. Chum salmon not mentioned in that chapter-->. These were chosen because they varied in data types and availabilities ranging from data-rich (Interior Fraser River Coho) to data-limited (Inner South Coast Chum), to represent a range of SMUs that may require LRPs. Furthermore, they varied in hatchery contributions from high (WCVI Chinook) to relatively low (Interior Fraser River Coho and Inside South Coast CHum) and two are included in the proposed first batch of stocks to be put under regulation for the Fish Stock provisions (Interior Fraser River Coho and WCVI Chinook). For each case study, the set of LRP methods considered is a function of available data and previously developed assessment methods for component CUs. In this section, we provide a brief description of each case study and methods applied to each. More thorough descriptions of case studies, including SMU characteristics, data sources, analysis methods, and results, are available in Holt et al. (in review). An overview of the approaches applied are provided in Table \@ref(). <!--CH: To add, drafted in "Table of LRP approaches.docx". Table 1. Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b).-->
+We applied candidate methods for LRPs developed in Section \@ref(est-methods) to three SMUs as case studies to demonstrate the application of candidate methods, evaluate sensitivity of LRPs to various assumptions, and inform the guidelines presented in Section \@ref(guidelines).  The case studies were Interior Fraser River Coho Salmon, West Coast Vancouver Island (WCVI) Chinook Salmon, and Inner South Coast Chum Salmon  (*Oncorhynchus keta*)- excluding Fraser, each comprising of 3-7 CUs<!--CH: latin names for other salmon species provided at first instance in Ch1. Chum salmon not mentioned in that chapter-->. These were chosen because they varied in data types and availabilities ranging from data-rich (Interior Fraser River Coho) to data-limited (Inner South Coast Chum), to represent a range of SMUs that may require LRPs. Furthermore, they varied in hatchery contributions from high (WCVI Chinook) to relatively low (Interior Fraser River Coho and Inside South Coast Chum) and two are included in the proposed first batch of stocks to be put under regulation for the Fish Stock provisions (Interior Fraser River Coho and WCVI Chinook). For each case study, the set of LRP methods considered is a function of available data and previously developed assessment methods for component CUs. In this section, we provide a brief description of each case study and methods applied to each. More thorough descriptions of case studies, including SMU characteristics, data sources, analysis methods, and results, are available in Holt et al. (in review). An overview of the approaches applied are provided in Table \@ref(tab:lrpapproaches). <!--CH: To add, drafted in "Table of LRP approaches.docx". Table 1. Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b).-->
+
+<!--CW work in progress in the table below -->
+\renewcommand*{\arraystretch}{1.4}
+\begin{table}[!htbp]
+\centering
+\footnotesize   
+\caption{Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied }
+\begin{tabular}{p{3.2cm} p{3.2cm} p{2.4cm} p{2.4cm} p{2.4cm}}
+\multicolumn{5}{l}{(a) CU-level assessments }\\
+\toprule
+\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
+\midrule
+\multicolumn{2}{l}{Rapid Multidimensional Scanning  Tool} & Yes (only for proportion-based LRPs) &   Yes (only for proportion-based LRPs)  &  Yes (only for proportion-based LRPs)\\
+\midrule
+\multirow{3}{*}{\parbox{3.2cm}{Single metric approaches: spawner abundances relative to benchmark}} & Spawner-recruitment benchmark & Yes & - & -\\
+\cline{2-5}
+& Habitat-based benchmark & - & Yes & -\\
+\cline{2-5}
+& Percentile benchmark & - & - & Yes\\
+\cline{1-5}
+\multicolumn{2}{l}{Single metric approaches: distribution} & Yes & - & - \\
+\hline
+\multicolumn{5}{l}{ }\\
+\multicolumn{5}{l}{(a) LRPs }\\
+\toprule
+\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
+\midrule
+\multicolumn{2}{l}{Proportion-based LRP} &  Yes &   Yes &   Yes\\
+\midrule
+\multirow{2}{*}{\parbox{3.2cm}{Aggregate abundance-based LRPs}} & Logistic regression-based LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
+\cline{2-5}
+ & Projection-based  LRP & Yes  & Yes &  - \\
+\bottomrule
+\end{tabular}
+(\#tab:lrpapproaches)
+\end{table}
+
 
 
 ## INTERIOR FRASER RIVER COHO
@@ -36,6 +73,7 @@ We characterized CU status in three ways, using: (1) the Pacific Salmon Status S
 For this SMU, we evaluated the sensitivity of LRPs based on aggregate abundances to underlying assumption with a retrospective analysis by removing years of data an re-estimating CU-level benchmarks, CU statuses, SMU-level LRPs, as well as sensitivity analyses where one or two CUs were removed from the analyses iteratively and CU-level benchmarks, CU statuses, SMU-level LRPs, and SMU-level statuses were re-estimated. We further ran sensitivity analyses on structural assumptions about stock-recruitment relationship when deriving CU-level benchmarks for all proportion-based and aggregate abundance-based LRP methods.
 
 We found that LRPs and resulting status were more sensitive to structural assumptions about the shape of the stock-recruitment model than to the choice of LRP methods or CU assessment approach (Pacific Salmon Status Scanner vs single-metric on spawner abundances vs. single metric on distribution) or the addition of more years or CUs of data.  However, we note that the inclusion of additional CUs occasionally results in more pessimistic status relative to the LRP, but not more optimistic status, possibly creating disincentives to monitoring. This asymmetry is a consequence of the LRP being triggered by any single CU having red status. <!--CH: Kendra, is there anything more we should highlight here?-->
+ However, we note that the inclusion of additional CUs occasionally results in more pessimistic status relative to the LRP, but not more optimistic status, possibly creating disincentives to monitoring. This asymmetry is a consequence of the LRP being triggered by any single CU having red status. <!--CH: Kendra, is there anything more we should highlight here?--> <!--CW this past two sentences are true for the proportion-based LRP, but I am not too sure if the same is true for the aggregate abundance LRP, I think we saw more positive status when CUs were removed but I don't think that behavior is generalizable -->
 
 For this case study, we further demonstrated the approach of averaging over structural uncertainties to provide a projection-based LRP that accounts for that uncertainty. Similar averaging is also possible for logistic regression-based LRPs.
 
@@ -43,7 +81,7 @@ For this case study, we further demonstrated the approach of averaging over stru
 
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series of spawner abundances with consistent observation methodology [@riddellReview2001Chinook2002]. Hatchery enhancement is an important component of many of these stocks and only indicator stocks without significant enhancement (PNI>0.5) were included in our analyses.  Because times-series of the proportion of hatchery-origin spawners are not available for these stocks, total spawner abundances were used in the assessment of CU and aggregate SMU level statuses, which may results in overly optimistic assessments of status relative to if hatchery-origin fish were excluded (as in Interior Fraser River Coho case study). Spawner abundances tend to be positively correlated among inlets, with an average correlation of 0.28 (Figure \@ref(density-cor-plot)).
 
-Under the WSP, CUs are identified at a spatial scale to conserve for long-term sustainability of the species [@holtbyConservationUnitsPacific2007]. For WCVI Chinook, inlets nested within CUs are important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying among inlets (D. McHugh pers. comm. DFO South Coast Stock Assessment). Similar to the Interior Fraser River Coho case study analysis that considered spawner abundances to subpopulations within CUs, we considered spawner abundances at the scale of inlets within CUs because of limited demographic exchange between these units.
+Under the WSP, CUs are identified at a spatial scale to conserve for long-term sustainability of the species [@holtbyConservationUnitsPacific2007]. For WCVI Chinook, inlets nested within CUs are important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying among inlets (D. McHugh pers. comm. DFO South Coast Stock Assessment). Similar to the Interior Fraser River Coho case study analysis that considered spawner abundances to subpopulations within CUs <!--CW: I suggest removing reference to coho, as we did use complete CU data for the SR estimates (correct?). Brendan already asked why did you choose to split chinook but combine coho, mentioning it here could also lead to another off topic discussion-->, we considered spawner abundances at the scale of inlets within CUs because of limited demographic exchange between these units.
 
 Two of the 3 CUs in this SMU, WCVI-South and WCVI-Nootka & Kyuquot, were assessed as 'red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016].  WCVI Chinook was identified as a stock of concern in the 2021 Integrated Fisheries Management Plan, IFMP and a rebuilding plan is under development [@dfoIntegratedFisheriesManagement2021]. Poor marine survival rates for WCVI Chinook and low spawner levels over the past 2 decades are highlighted as reasons for conservation concern in the IFMP [@dfoIntegratedFisheriesManagement2021, p. 129]. 
 
@@ -51,7 +89,7 @@ Biological benchmarks have been estimated for WCVI indicator stocks using an emp
 
 We characterized CU status in two ways for this case study, using: (1) the Pacific Salmon Status Scanner, (2) CU-level abundances relative to S~gen~ derived from watershed-area model estimates of S~REP~ and productivity derived from a life-stage specific survival model with expert opinion. We calculated two types of LRPs: proportion-based LRPs and projection-based LRPs. Based on CU-level assessments, there were no years in historical data where all CUs were above the red zone, so it was not possible to identify logistic regression-based LRPs.  Even though aggregate abundance-based LRPs are not required for harvest management of this SMU, we provide projection-based LRPs for demonstration purposes. We implemented sensitivity analyses on projection-based LRPs to two key uncertainties, variability in exploitation among inlets and intrinsic productivity. Further analyses exploring impacts of exploitation, variability in productivity, and capacity are provided in an Appendix to Holt et al. in (review).
 
-In this case study, we found that status was consistent across the LRP methods that were available, and with a previously published assessment. However, projection-based were also highly sensitivity to underlying population productivities. Although the base-case LRP assumes a relatively diffuse distribution of productivities aligned with the range of expert opinion, declines (by 25%) or increases (by 50%) from this value resulted in relatively large changes in LRPs estimates. 
+In this case study, we found that status was consistent across the LRP methods that were available, and with a previously published assessment. However, projection-based were also highly sensitivity to underlying population productivities. Although the base-case LRP assumes a relatively diffuse distribution of productivities aligned with the range of expert opinion, declines (by 25%) or increases (by 50%) from this value resulted in <!--remove:relatively--> large changes in LRPs estimates. 
 
 
 ## INNER SOUTHCOAST CHUM - NON FRASER
