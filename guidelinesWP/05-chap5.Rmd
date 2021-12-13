@@ -101,9 +101,9 @@ Because WSP Integrated status assessments are time-intensive processes and are n
 <!--CH: reworded text on 'interim' status. Please let me know what you think.-->
 *Interim status*
 
-Given an LRP of 100% of CUs above red status, where data deficient CUs are represented by CUs with data we refer to resulting status as 'interim' when all CUs included in assessment are above red status. This 'interim status' is provisional until all component CUs can be assessed. In some cases natural variability alone may result in differences in status and trends even if the four criteria listed above are met, which underscores the benefits of monitoring and assessing all component CUs. Where data deficient CUs are not represented by CUs with data, and all CUs included in the assessment are above red status, then the SMU is considered data deficient and SMU status cannot be evaluated. In both cases, we recommend improved monitoring to fill CU-level assessment gaps.
+Given an proportion-based LRP of 100% of CUs above red status, when data deficient CUs are represented by CUs with data we refer to resulting status as 'interim' when all CUs included in assessment are above red status. This 'interim status' is provisional until all component CUs can be assessed. In some cases natural variability alone may result in differences in status and trends even if the four criteria listed above are met, which underscores the value of monitoring and assessing all component CUs. Where data deficient CUs are not represented by CUs with data, and all CUs included in the assessment are above red status, then the SMU is considered data deficient and SMU status cannot be evaluated. In both cases, we recommend improved monitoring to fill CU-level assessment gaps.
 
-When data are missing for one or more CUs, and at least one of data-rich CUs are below the red zone, the LRP of 100% CUs above the red zone is considered breached, regardless of whether the data-deficient CUs are represented by data-rich CUs or not. A breach of the LRP (i.e., at least one CU with red status) can be used to trigger a rebuilding plan under the Fish Stock provisions since the improved monitoring of data-deficient CUs alone will not result in an increase in SMU status to 100% (all CUs above red status). 
+When data are missing for one or more CUs, and at least one of data-rich CUs have red status, the LRP of 100% CUs above the red zone is considered breached, regardless of whether the data-deficient CUs are represented by data-rich CUs or not. A breach of the LRP (i.e., at least one CU with red status) can be used to trigger a rebuilding plan under the Fish Stock provisions since the improved monitoring of data-deficient CUs alone will not result in an increase in SMU status to 100% (all CUs above red status). Further monitoring of data-deficient CUs is still warranted in this case to inform status of remaining components of the SMU and associated rebuilding efforts. 
 
 <!--CW: From the PA Policy:
 
@@ -270,8 +270,7 @@ Projection-based LRPs may be inappropriate when:
 
 ### Apply aggregate abundance-based LRPs (Step 10)
 
-Any aggregate-abundance methods that meet the above criteria are applied. See the companion working paper, Holt et al. (in review) for details of applications of these methods. Summaries are provided in Section \@ref(case-studies).
-
+Any aggregate-abundance methods that meet the above criteria are applied. See the companion working paper, Holt et al. (in review) for details of applications of these methods. Summaries are provided in Section \@ref(case-studies). When status of an SMU is inferred from aggregate abundance-based LRPs using a subset of CUs that are considered representative of the remaining data-deficient CUs, then the resulting status should be considered 'interim' until all component CUs can be assessed. When status of data-deficient CUs cannot be inferred from data-rich CUs, status can not be assessed with aggregate abundance based LRPs.
 
 ### Compare aggregate abundance-based LRPs (Step 11)
 
