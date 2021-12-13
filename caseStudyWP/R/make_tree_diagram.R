@@ -4,11 +4,11 @@ library(rsvg)
 
 # State of the Salmon Learning Tree 3 - full names, no abbreviations
 
-decision_tree <- grViz("digraph graph2 {
+decision_tree <- grViz("digraph {
       # define node aesthetics
 graph [layout = dot]
 
-node [shape= rectangle, style=filled, fillcolor='floralwhite', fontsize=20, fontname = Arial, penwidth=0.1]        
+node [shape= rectangle, style=filled, fillcolor='floralwhite', fontsize=30, fontname = Arial, penwidth=0.1]        
 tab1 [label =  'Is abundance absolute & < 1500?']
 tab2 [label = 'Are abundances absolute & < 10,000?']
 tab3 [label = 'RED', fillcolor=Red, shape=oval]
@@ -26,7 +26,7 @@ tab20 [label = 'AMBER', fillcolor=Gold, shape=oval]
 tab21 [label = 'RED', fillcolor=Red, shape=oval]
 tab22 [label = 'AMBER', fillcolor=Gold, shape=oval]
 tab23 [label = 'RED', fillcolor=Red, shape=oval]
-tab32 [label = 'Is abundance < 233% x the long-term \\ngeometric average?' ]
+tab32 [label = 'Is abundance < 2.33 x the long-term \\ngeometric average?' ]
 tab33 [label = 'RED', fillcolor=Red, shape=oval]
 tab36 [label = 'GREEN', fillcolor=Limegreen, shape=oval]
 tab37 [label = 'AMBER', fillcolor=Gold, shape=oval]
@@ -35,7 +35,7 @@ tab65 [label = 'AMBER', fillcolor=Gold, shape=oval]
 
 # set up node layout
 
-edge [fontname=Arial, fontsize=20, color=DimGray, fontcolor=DimGray]
+edge [fontname=Arial, fontsize=24, color=DimGray, fontcolor=DimGray, minlen=3]
 tab1 -> tab2 [label='no'];
 tab1 -> tab3 [label='yes'];
 tab2 -> tab4 [label='no'];
