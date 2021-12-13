@@ -22,9 +22,13 @@ knitr::include_graphics("figure/chinook-map.png")
 \hline
 CU       &  Inlets   & Indicators\\ 
 \hline
-West Vancouver Island-South (CK-31) & San Juan, Nitinat, Barkley, Clayoquot & \emph{San Juan}, \emph{Nitinat}, Nahmint , \emph{Sarita}, \emph{Somass}, Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
-West Vancouver Island-Nootka \& Kyuoquot (CK-32) & Nootka/Esperanza, Kyuquot & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis, Zeballos, Artlish, Kaouk, Tahsish \\
-West Vancouver Island-North (CK-33) &  Quatsino  & Cayeghle, Marble \\                     
+\multirow{4}{*}{\parbox{4cm}{West Vancouver Island-South (CK-31)}} & San Juan,  & \emph{San Juan}, \\
+ & Nitinat, & \emph{Nitinat},  \\
+ & Barkley,  & Nahmint , \emph{Sarita}, \emph{Somass},  \\
+ & Clayoquot & Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
+\multirow{2}{*}{\parbox{4cm}{West Vancouver Island-Nootka \& Kyuoquot (CK-32)}} & Nootka/Esperanza,  & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis,  \\
+&  Kyuquot &  Zeballos, Artlish, Kaouk, Tahsish \\
+West Vancouver Island-North (CK-33) &  Quatsino  &  \emph{Cayeghle}, Marble \\                     
 \hline
 \end{tabular}
 (\#tab:chinook-Overview)
@@ -182,7 +186,7 @@ Ricker $a$ values were approximated for WCVI Chinook from a life-stage model tha
 
 Our approach to estimating S~MSY~ (and S~gen~) differed from that of @parkenHabitatbasedMethodsEstimate2006, because we derived productivity independently from the life-stage specific models, whereas @parkenHabitatbasedMethodsEstimate2006 estimated both S~MSY~ and S~REP~ from the watershed-area model thereby inferring mean estimates of productivity, $a$. Those estimates of productivity which were deemed unrealistically high for WCVI Chinook, necessitating the life-stage modelling approach. 
 
-Bootstrapped confidence intervals in  S~gen~ (Equation \@ref(eq:Sgen)) were estimated by repeated sampling of the normal distributions of S~REP~ and $\log(a)$, with standard deviations in log(S~REP~) derived from the watershed-area model. This method does not account for covariance between productivity and capacity typically found in stock-recruitment relationships, and will overestimate uncertainty in derived benchmarks. <!--CH Q to Catarina: Is this bootstrapping method okay? It feels a little ad hoc, but was supported by the TWG.  --> 
+Bootstrapped confidence intervals in  S~gen~ (Equation \@ref(eq:Sgen)) were estimated by repeated sampling of the normal distributions of S~REP~ and $\log(a)$, with standard deviations in log(S~REP~) derived from the watershed-area model. This method does not account for covariance between productivity and capacity typically found in stock-recruitment relationships, and will overestimate uncertainty in derived benchmarks. <!--CH: we used 95%CI of SREP to approximate the Bayesian posteriors for SREP (and resulting uncertainty in Sgen). We recommend performing Bayesian estimation in the future to facilitate integration of uncertainties from various sources. --> 
 
 
 <!--CH: if there is time, I'd love help to make this table prettier-->

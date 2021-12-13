@@ -57,10 +57,11 @@ We chose the ISC Chum SMU as a case study because we were interested in explorin
 ## DATA
 
 
+
 We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updated with five additional years of data. Available data included spawner abundance time series from 1959 - 2018 and corresponding CU-level recruitment estimated from run reconstruction. Spawner abundance series rely heavily on infilling; 60% of observations (count of spawners for an individual stream, in a given year) were missing and needed to be infilled. Recruitment data are considered highly uncertain for all ISC Chum CUs due to uncertain assumptions required to assign mixed fishery catch to CUs within the run reconstruction model. As a result, we did not consider spawner recruit series to be reliable enough to estimate stock recruitment-based benchmarks such as S\textsubscript{MSY} and S\textsubscript{gen}.  We did however use spawner recruit model fits to provide approximate estimates of CU-level productivity, which are used to inform the application of percentile-based benchmarks.
 
 
-@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:appendix-chum). Note that we removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River (part of the Georgia Strait CU), as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. <!--CH to revise this paragraph to align with Whither et al. 2018-->
+@vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:appendix-chum). We removed systems with extensive hatchery influence (Qualicum River, Little Qualicum River, and Puntledge River, within the Georgia Strait CU) aligned with recommendations from @withlerGeneticallyBasedTargets2018. Hatchery contribution to spawning was near 100% for these systems.
 
 
 Links to data and analysis code repository are in Appendix \@ref(app:github-appendix). 
