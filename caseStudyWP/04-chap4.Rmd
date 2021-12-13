@@ -154,12 +154,12 @@ CH: my initial thinking would be remove time-periods where PNI is very high from
 
 Inlet status was derived by applying the multidimensional approach used within the Pacific Salmon Status Scanner to individual inlets (Pestal et al., in prep). We found that the status using this method was equivalent to status on a single metric, abundance relative to a lower benchmark S~gen~ for all inlets, because abundances were only available on a relative scale (only indicator stocks are monitored consistently); absolute numbers were not available (as shown in Figure \@ref(fig:decision-tree)). Here we present analyses and results for status on that single metric, though it also represents multidimensional status in this case.
 
-The Wild Salmon Policy lower benchmark on abundances, S~gen~, the spawner abundances required to achieve S~MSY~ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to S~MSY~ (Equation repeated again here for transparency).
+The lower benchmark on abundances applied under the WSP, S~gen~, the spawner abundances required to achieve S~MSY~ within one generation without fishing under equilibrium conditions, was derived by optimizing the Ricker equation with recruitment set to S~MSY~ (equation \@ref(eq:Sgen) repeated again here for transparency):
 
 
 \begin{equation}
   S_{MSY} = a * S_{gen}* e^{-b * S_{gen}}
-   (\#eq:Sgen)
+   (\#eq:Sgen2)
 \end{equation}
 
 where, 
@@ -177,7 +177,7 @@ where,
 
 and $a$ is recruits-per-spawner at low productivity. Maximum likelihood estimates of S~REP~ values (and 95% CIs) were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006, that included hierarchical structure in the underlying meta-analysis accounting for similarities in productivity among ocean-type and stream-type fish @liermannUsingAccessibleWatershed2010 (Table \@ref(chinook-benchmarks)). <!--CH: Add when developed (Appendix \@ref(), link to code in Appendix \@ref(github-appendix)). -->
 
-Ricker $a$ values were approximated for WCVI Chinook from a life-stage model that partitioned survival across freshwater and marine life-stages for ocean-type Chinook based on empirical data and expert opinion. Life-stage specific survival rates were then combined to derive an overall survival from spawners to recruitment (W. Luedke pers. comm. DFO South Coast Stock Assessment). Despite the relatively large uncertainties in the life-stage specific survival rates, this approach provides an approximation for productivity that is more realistic than the high estimate previously derived from the watershed-area model [@parkenHabitatbasedMethodsEstimate2006], (>7 recruits/spawner).  From the life-stage model, mean $\log(a)$ was estimated at ~ 1 (~$a$=2.72 recruits/spawner), with standard errors (1.96 SDs) +/- 0.5 ($a$ ranging from 1.6 to 4.5), representing relatively large uncertainty in productivity. 
+Ricker $a$ values were approximated for WCVI Chinook from a life-stage model that partitioned survival across freshwater and marine life-stages for ocean-type Chinook based on empirical data and expert opinion. Life-stage specific survival rates were then combined to derive an overall survival from spawners to recruitment (W. Luedke pers. comm. DFO South Coast Stock Assessment). Despite the relatively large uncertainties in the life-stage specific survival rates, this approach provides an approximation for productivity that is more realistic than the high estimate previously derived from the watershed-area model [@parkenHabitatbasedMethodsEstimate2006], (>7 recruits/spawner).  From the life-stage model, mean $\log(a)$ was estimated at ~ 1 (~$a$=2.72 recruits/spawner), with standard errors (1.96 SDs) +/- 0.5 ($a$ ranging from 1.6 to 4.5), representing relatively large uncertainty in productivity. <!--CH Q: do you think I need to mention this? "We assumed these parameter distribution represented expected productivity, and so log-normal bias corrections were not applied."-->
 
 
 

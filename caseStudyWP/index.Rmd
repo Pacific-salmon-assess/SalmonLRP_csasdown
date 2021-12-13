@@ -18,7 +18,7 @@ address: |
      Fisheries and Oceans Canada, 100 Annacis Pkwy Unit 3\
      Delta, British Columbia, V3M 6A2, Canada\
 month: Month # fill in
-year: 2021
+year: 2022
 report_number: nnn
 region: Pacific Region
 citation_other_language: "Last, F.M. et Smith, A.B. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2019/nnn. iv + 13 p."
