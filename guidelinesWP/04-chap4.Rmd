@@ -62,7 +62,10 @@ df$SMU <- rep("WCVI Chinook", length(read.csv("data/chinook-Scors.csv", header=T
 chum <- read.csv("data/chum-Scors.csv", header=TRUE)[,2:8]
 df_chum <- data.frame(cor=chum[lower.tri(chum)==TRUE], SMU="ISC Chum")
 
-df <- df %>% add_row(df_chum)
+coho <- read.csv("data/coho-amongCUCorr-natSpawners.csv")
+df_coho <- data.frame(cor=coho$amongCUCorr, SMU="IFR Coho")
+
+df <- df %>% add_row(df_chum) %>% add_row(df_coho)
 ggplot(df, aes(cor, fill=SMU, colour=SMU)) + geom_density(alpha=0.1) + xlim(-1,1)
 
 ```
