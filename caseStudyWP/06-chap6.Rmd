@@ -47,7 +47,7 @@ The projection-based LRP approach is flexible and allows for consideration of st
 We also demonstrated that projection-based LRPs are sensitive to the assumed levels of exploitation in the projections. Higher exploitation rates resulted in higher required SMU aggregate abundance to ensure that all CUs remain above their lower benchmarks. The sensitivity to exploitation rate increases as variability in stock-recruitment parameters among CUs increase, and also as uncertainty in parameter estimates increase. This property of projection-based LRPs is explored in Appendix \@ref(app:ERsensitivity-appendix). Therefore projection-based LRPs developed under historical and current exploitation rates cannot necessarily be used as a basis for evaluating alternative management procedures. However demonstrating the changes in aggregate abundances required for all CUs to be above lower benchmarks (i.e. changes in projection-based LRP) under different exploitation scenarios may help analysts and managers understand the implications of changing exploitation rates on the ability to achieve WSP objectives.
 
 
-
+<!--CH suggestion: Catarina and Kendra thoughts? "Furthermore, we demonstrated an approach to choosing parameters and model assumptions used in the projections so that correlations in spawner abundances in projections were similar to observed correlations.  We recommend that correlations in CUs within projections are explored under various model assumptions, and that model is tuned to derive realistic correlations."-->
 
 <!-- KH: (CH: I think the first three are captured, but could add the last if there is interest...?)
 
