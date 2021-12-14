@@ -64,7 +64,7 @@ We used the same data used in @holtEvaluatingBenchmarksBiological2018, but updat
 
 @vanwillInnerSouthCoast2014 provides more details on the data sources, infilling procedures and run reconstruction, which were reproduced for this study. We did not include the Lower Fraser or Fraser Canyon chum CUs. More details can be found in Appendix \@ref(app:appendix-chum). We removed systems with extensive hatchery influence (Qualicum River, Little Qualicum River, and Puntledge River, within the Georgia Strait CU) aligned with recommendations from @withlerGeneticallyBasedTargets2018. Hatchery contribution to spawning was near 100% for these systems.
 
-
+<!--KH: Note that I have included a link the this appendix in the chapter 2 overview, where I mention that code for all case studies is in the appendix. So, it may not be necessary to include in each case study individually?-->
 Links to data and analysis code repository are in Appendix \@ref(app:github-appendix). 
 
 ## CU STATUS ESTIMATION
