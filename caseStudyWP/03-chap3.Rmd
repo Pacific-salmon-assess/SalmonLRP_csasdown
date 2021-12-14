@@ -648,6 +648,7 @@ knitr::include_graphics("figure/coho-statusPlot_withBars2020.png")
 
 ## DISCUSSION
 
+<!--CH; I wonder if subheadings within the Discussion might help orient the reader a bit? It does contain a lot of information-->
 
 <!--BC: Not sure if this is the right place but might also recap insights gleaned from exploration of multidimensional approach and its utility in this context? -->
 
