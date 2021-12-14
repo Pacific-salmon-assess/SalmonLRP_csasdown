@@ -1,10 +1,6 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-`r if(knitr:::is_latex_output()) '\\Appendices'`
-
-`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
-
 # SUPPORTING INFORMATION FOR INNER SOUTH COAST CHUM SALMON CASE STUDY {#app:appendix-chum}
 
 ## Data Sources and Treatment
