@@ -8,7 +8,7 @@ decision_tree <- grViz("digraph {
       # define node aesthetics
 graph [layout = dot]
 
-node [shape= rectangle, style=filled, fillcolor='floralwhite', fontsize=30, fontname = Arial, penwidth=0.1]        
+node [shape= rectangle, style=filled, fillcolor='floralwhite', fontsize=50, fontname = Arial, penwidth=0.1]        
 tab1 [label =  'Is abundance absolute & < 1500?']
 tab2 [label = 'Are abundances absolute & < 10,000?']
 tab3 [label = 'RED', fillcolor=Red, shape=oval]
@@ -35,7 +35,7 @@ tab65 [label = 'AMBER', fillcolor=Gold, shape=oval]
 
 # set up node layout
 
-edge [fontname=Arial, fontsize=24, color=DimGray, fontcolor=DimGray, minlen=3]
+edge [fontname=Arial, fontsize=50, color=DimGray, fontcolor=DimGray, minlen=3]
 tab1 -> tab2 [label='no'];
 tab1 -> tab3 [label='yes'];
 tab2 -> tab4 [label='no'];
@@ -61,7 +61,7 @@ tab11 -> tab23 [label='yes']
 }
 ")
 decision_tree %>%
-  export_svg %>% charToRaw %>% rsvg_png("figure/decision_tree.png")
+  export_svg %>% charToRaw %>% rsvg_png("figure/decision_tree.png", width=4000, height=2000)
 
 
 # State of the Salmon Learning Tree 3 - Original names
