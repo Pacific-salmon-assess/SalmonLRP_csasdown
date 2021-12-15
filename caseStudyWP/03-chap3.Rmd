@@ -517,7 +517,7 @@ Parameter & Value & Source \\
 \hline
 \endhead
 \hline
- Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix E) & Drawn from joint posterior from MCMC model fit to 1998-2016 brood years
+ Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix C) & Drawn from joint posterior from MCMC model fit to 1998-2016 brood years
 \\\\
 
 Smolt-to-adult marine survival rate (all CUs) & Drawn from Lognormal(-4.83, 1.21), bound between [-9.21, -3.32]
