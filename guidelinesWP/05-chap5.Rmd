@@ -237,12 +237,14 @@ LRPs based on logistic regressions may not be appropriate when:
 - There is only 1 CU in the SMU. In this case, the CU-level status equates to the SMU-level status.
 
 <!--CH Tentative exclusion b/c may be implied by stepwise order, but happy to add back in:
-- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended to supplement proportion-based LRPs and not replace them. In this case, there may be risk of loss of CU-level biodiversity due to infrequent extreme events not captured in the model. -->
+- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended to supplement proportion-based LRPs and not replace them. In this case, there may be risk of loss of CU-level biodiversity due to infrequent extreme events not captured in the model.
+
+CW: Agree with the exclusion, otherwise we would also have to point out that aggregate abundance methods may not be appropriate when one or more CU's are missing data. -->
 
 
 #### Projection based LRPs
 
-Projection-based LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above red status as indicated by a single metric, spawner abundances relative to a lower benchmark. We did not consider CU-status derived from the Pacific Salmon Status Scanne for projection-based LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above lowe benchmarks and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.<!-- CH: we should mention in the other paper that projection-based LRP is an equilibrium approach-->
+Projection-based LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above red status as indicated by a single metric, spawner abundances relative to a lower benchmark. We did not consider CU-status derived from the Pacific Salmon Status Scanner for projection-based LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above lower benchmarks and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.<!-- CH: we should mention in the other paper that projection-based LRP is an equilibrium approach-->
 
 
 Projection-based LRPs may be appropriate when:
