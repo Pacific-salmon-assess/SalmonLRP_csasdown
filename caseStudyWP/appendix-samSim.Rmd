@@ -311,6 +311,8 @@ Once $\alpha_{i}$ is specified, the true management quantities $Smsy_{i}$ and $S
 
 In this step, we compute the observed proportions of returns at age and the observed recruitment for each brood year. The observation error for the proportions of returns at age is given by a multivariate logistic error structure as described by @schnuteInfluenceErrorPopulation1995. Observation error for the proportions of returns at age is not included in the LRP study cases, i.e., the variability parameter, $\varphi$, is set to zero.
 
+<!--CW: Note that the variable p_{y,i,j} is not defined in the text, it is calculated manually for each j, here: https://github.com/Pacific-salmon-assess/samSim/blob/f055ade3dd50ae3ad994868993a5673d08ffcb87/R/genericRecoverySimulator.R#L1407. I found it a bit cumbersome to write out in simple equations, So I ommited it from the text. 
+-->
  
 \begin{align}
   obsp_{y,i,j} \sim \text{Multivariate Logistic}(p_{y,i,j}, \varphi) 
