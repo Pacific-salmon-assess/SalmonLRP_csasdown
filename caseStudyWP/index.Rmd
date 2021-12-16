@@ -3,35 +3,46 @@ title: "Case Study Applications of LRP Estimation Methods to Pacific Salmon Stoc
 author: |
   Kendra Holt^1^
   Carrie A. Holt^2^
-  Luke Warkentin^1^
+  Luke Warkentin^3^
   Catarina Wor^2^
   Brooke Davis^3^
-  Jessy Bokvist^4^
-  Sabrina Crowley^5^
-  Wilf Luedke^4^
-  Diana McHugh^4^
-  Candace Picco^6^
+  Michael Arbeider^4^
+  Jessy Bokvist^5^
+  Sabrina Crowley^6^
+  Sue Grant^3^
+  Wilf Luedke^5^
+  Diana McHugh^5^
+  Candace Picco^7^
+  Pieter Van Will^5^
   others (TBD)
-author_list: "Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Bokvist, J., Crowley, S., Luedke, W., McHugh, D., Picco, C. and others(TBD)"
+author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C. Van Will, P., and others(TBD)"
 address: |
-  ^1^Institute of Ocean Sciences\
-     Fisheries and Oceans Canada,  9860 W Saanich Rd
-     Sidney, British Columbia, V8L 5T5 Canada\
-  ^2^Pacific Biological Station\
-     Fisheries and Oceans Canada, 3190 Hammond Bay Rd\
-     Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^3^Lower Fraser Area Office\
-     Fisheries and Oceans Canada, 100 Annacis Pkwy Unit 3\
-     Delta, British Columbia, V3M 6A2, Canada\
-  ^4^Southcoast Area Office\
-     Fisheries and Oceans Canada, 3225 Stephenson Point Rd\
-     Nanaimo, British Columbia, V9T 1K3, Canada\
-  ^5^Nuu-chah-nulth Tribal Council\
+  ^1^Fisheries and Oceans Canada\
+     Institute of Ocean Sciences\
+     9860 W Saanich Rd\
+     Sidney, BC, V8L 5T5\
+  ^2^Fisheries and Oceans Canada\
+     Pacific Biological Station\
+     3190 Hammond Bay Rd.\
+     Nanaimo, BC, V9T 6N7\
+  ^3^Fisheries and Oceans Canada\
+     Annacis Office\
+     100 Annacis Pkwy Unit 3\
+     Delta, BC, V3M 6A2\
+  ^4^Fisheries and Oceans Canada\
+     BC Interior Area Office\ 
+     986 McGill Place\
+     Kamloops, BC V2C 6X6\
+  ^5^Fisheries and Oceans Canada\
+     Southcoast Area Office\
+     3225 Stephenson Point Rd\
+     Nanaimo, BC, V9T 1K3\
+  ^6^Nuu-chah-nulth Tribal Council\
      5001 Mission Rd\
-     Port Alberni, British Columbia, V9Y 8X9, Canada\
-  ^6^Ha'oom Fisheries Socierty\
+     Port Alberni, BC, V9Y 8X9\
+  ^7^Ha'oom Fisheries Socierty\
      320 Opitsaht IR Road\
-     Tofino, British Columbia, V0R 2Z0, Canada\
+     Tofino, BC, V0R 2Z0\
 month: Month # fill in
 year: 2022
 report_number: nnn
