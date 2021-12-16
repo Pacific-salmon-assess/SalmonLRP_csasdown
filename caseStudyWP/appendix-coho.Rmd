@@ -9,14 +9,14 @@ After that, all subsequent sections will be turned into appendices. -->
 
 
 
-```{r coho-SrepPrior, fig.cap="Prior distribution of SRep used when fitting the Ricker\\_priorCap model.The red dashed line shows the maximum likelihood estimate of SRep from the base Ricker model stock recruitment fit. The mean of the SRep prior was set to 1.35 times the maximum likelihood estimate", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+```{r coho-SrepPrior, fig.cap="Prior distribution of SREP used when fitting the Ricker\\_priorCap model.The red dashed line shows the maximum likelihood estimate of SRep from the base Ricker model stock recruitment fit. The mean of the SRep prior was set to 1.35 times the maximum likelihood estimate", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
 knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```
 
 
-
-
-To Do: improve table formatting; can I make font arial?
+<!--To Do: improve table formatting; can I make font arial?
+CH: could do after submission to TWG, if required at all?
+-->
 
 ```{r coho-postSummary-Ricker, warning=FALSE, echo=FALSE}
 
