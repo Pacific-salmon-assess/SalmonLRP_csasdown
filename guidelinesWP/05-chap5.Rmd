@@ -289,7 +289,7 @@ Principle 6 for the development of LRPs states that alternative paradigms for de
 
 ### Compare status from aggregate abundance-based LRPs to that from Prorportion-based LRPs (Step 12)
 
-In this step, we recommend comparing status from aggregate abundance-based LRPs to that from proportion-based LRPs identified in Step 5. While aggregate abundance-based LRPs exploit observed covariation in dynamics among CUs,  observation errors, temporal variation in covariation, and/or infrequent extreme events may result in a break-down in that covariation, and hence statuses from abundance-based LRPs that differ from those based on proportion-base LRPs. We recommend proportion-based LRPs as the default LRP to implement Fish Stock provisions, with aggregate abundance-based LRPs supplemental where required for harvest management. 
+In this step, we recommend comparing status from aggregate abundance-based LRPs to that from proportion-based LRPs identified in Step 5. While aggregate abundance-based LRPs exploit observed covariation in dynamics among CUs, observation errors, temporal variation in covariation, and/or infrequent extreme events may result in a break-down in that covariation, and hence statuses from abundance-based LRPs that differ from those based on proportion-base LRPs. We recommend proportion-based LRPs as the default LRP to implement Fish Stock provisions, with aggregate abundance-based LRPs supplemental where required for harvest management. 
 
 <!-- CW: Can we say how often these comparisons should happen? 
 Is it realistic to suggest that comparisons will be done every year? Or would these comparisons be done every X years?
