@@ -9,10 +9,7 @@
 # samSim MODEL DOCUMENTATION {#app:samsim-appendix}
 
 `samSim` is the closed loop simulation modelling tool used for calculation of the projection-based LRPs. An overview of `samSim` and the code can be found in the LRP project [github page](https://github.com/Pacific-salmon-assess/samSim/tree/LRP). samSim has been previously used to evaluate harvest control rule performance relative to recovery potential ([@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]). We created a modified version of samSim to support LRP estimation for this paper. 
-<!-- KH comment: I have moved this here for now (was previously in chapter 2).  May wish to move again?? Or, put in the readme for the LRP branch of samSim?? 
 
-CH: I'm happy to leave it here. Thanks.
--->
 Updated functionality for the LRP version of samSim include:
 
 
@@ -26,7 +23,7 @@ Updated functionality for the LRP version of samSim include:
 
 * Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
 
-This appendix describes the `samSim` model equations and the structure. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extensions already implemented within `samSim`. `samSim` includes two population scales, which can be applied to one Conservation Unit (CU) with component spawning populations or one Stock Management Unit (SMU, referred to as Management Unit, MU in the `samSim` code and this Appendix) with component CUs. <!--CH: I suggest leaving this last option out as I'm not sure SR model would be biologically meaningful at those large spatial scales, ", or one region with component SMUs."--> For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. Model indicies are defined in Table \@ref(tab:indtab), model parameters and inputs are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the repository's [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme) file. 
+This appendix describes the `samSim` model equations and the structure. We focus on providing detailed descriptions of the modeling options used for LRP study cases but include brief mentions of other model extensions already implemented within `samSim`. `samSim` includes two population scales, which can be applied to one Conservation Unit (CU) with component spawning populations or one Stock Management Unit (SMU, referred to as Management Unit, MU in the `samSim` code and this Appendix) with component CUs. For the projection-based LRP analysis two SMUs and their component CUs were used as study cases: the West Coast of Vancouver Island (WCVI) Chinook SMU (with five CUs) and the Interior Fraser Coho Salmon SMU (with three CUs). The following sections in this appendix are organized similarly to the `samSim` code, for this reason the subheadings of this appendix can be read as pseudo code. The simulation model has two main phases: Model Priming and Projections. The model priming phase recreates data for past years, either by populating objects with observed data or by generating population trends based on input parameters. The projection phase generates data for future years based on the input data and parameters as well as the user defined scenarios and management procedures. Model indicies are defined in Table \@ref(tab:indtab), model parameters and inputs are defined in Table \@ref(tab:paramtab) and the modeled quantities are defined in Table \@ref(tab:modtab). Detailed definitions of the input data and parameters are provided in the repository's [README](https://github.com/Pacific-salmon-assess/samSim/tree/LRP#readme) file. 
 
 
 \begin{table}[ht]
@@ -85,7 +82,7 @@ $\hat{\beta}_{y,i}$ & Estimated Ricker inverse capacity parameter \\
 \end{longtable}
 
 
-<!--CH: In samSim, I think we call calendar recruitment, 'returns'. I've added this in parentheses below to help with cross-checking against code. Okay?-->
+<!--CH: In samSim, I think we call calendar recruitment, 'returns'. I've added this in parentheses below to help with cross-checking against code. -->
 
 \begin{longtable}[]{l p{13.5cm}}
 \caption{List of \texttt{samSim} model variables.}\\
@@ -171,7 +168,7 @@ Seq_{i} = \alpha_{i}/\beta_{i}
 
 
 
-The age structure of the recruitment by BY <!--CH: changed this from retuns to R by BY--> is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{p}_{i,j}$ and the CU-specific variability parameter $\tau_i$ [@schnuteInfluenceErrorPopulation1995]  (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. Calendar year recruitment is then calculated after the sixth year of the priming phase. It is the product of the brood year recruitment and the age structure of the recruits <!--CH: changes this from returns to recruits--> (Equation \@ref(eq:RY).
+The age structure of the recruitment by brood year is computed following a multivariate logistic error structure based on the long term average age structure for each CU, $\overline{p}_{i,j}$ and the CU-specific variability parameter $\tau_i$ [@schnuteInfluenceErrorPopulation1995]  (Equation \@ref(eq:mat). The age structure error can vary or be held constant among CUs. Calendar year recruitment is then calculated after the sixth year of the priming phase. It is the product of the brood year recruitment and the age structure of the recruits <!--CH: changes this from returns to recruits--> (Equation \@ref(eq:RY).
 
 <!--CH: I think this is the same thing but I just wanted to be clear that the multivariate logistic aging error was applied to recruitment by BY, not calendar year Returns. Total returns are calculated in the 2nd eqn below.
 -->
@@ -261,7 +258,7 @@ Although in our implementation of `samSim` for Interior Fraser Coho with marine 
 In the priming loop, the management quantities and benchmarks are only calculated in the last two generations. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". `samSim` has the capability of estimating management quantities and benchmarks on a yearly basis, relying on the data obtained from the beginning of the time series to the current simulation year. However for the purpose of the LRP study cases, time invariant management benchmarks were used. For this reason we omit the time index, $y$, from the notation used for the management quantities. 
 
  
-If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ and $Sgen_{i}$<!--CH: I revised these benchmarks by taking out the y subscript, as described in the pgh above--> calculated based on the stock-recruitment parameters. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerellExplicitSolutionCalculating2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holtIndicatorsStatusBenchmarks2009a. The lower benchmark is set to $Sgen_{i}$ and the upper benchmark is set to 80\% of $Smsy_{i}$.<!--CH: again y subscript removed-->
+If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ and $Sgen_{i}$ calculated based on the stock-recruitment parameters. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerellExplicitSolutionCalculating2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holtIndicatorsStatusBenchmarks2009a. The lower benchmark is set to $Sgen_{i}$ and the upper benchmark is set to 80\% of $Smsy_{i}$.
 
 
 \begin{align}
@@ -285,7 +282,7 @@ If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ a
 \end{align}
 
 
-If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. <!--CH: added this next 2 sentences-->Note, percentile-based benchmarks were not implemented in our case studies for projection-based LRPs. Future applications could vary the percentiles used as lower and upper benchmarks as recommended in holtEvaluatingBenchmarksBiological2018. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
+If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. <!--CH: added this next 2 sentences-->Note, percentile-based benchmarks were not implemented in our case studies for projection-based LRPs. Future applications could vary the percentiles used as lower and upper benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
 
 
 ### Infill missing data
@@ -301,7 +298,7 @@ The model projection phase is used to represent future potential outcomes. The s
 
 ### Specify stock recruitment parameters
 
-Similarly to the priming phase, the first step on the projection loop is to define the stock recruitment parameters. The $\beta_{i}$ and $\sigma_{i}$ parameters are fixed through time and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha_{y,i}$ <!--CH: I added an underscore (_) here to make the {y,i} subscripted, okay?--> is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
+Similarly to the priming phase, the first step on the projection loop is to define the stock recruitment parameters. The $\beta_{i}$ and $\sigma_{i}$ parameters are fixed through time and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha_{y,i}$  is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
 
 ### Project management benchmarks
 
@@ -330,15 +327,9 @@ The observed recruitment by brood year is retrieved by multiplying the true recr
   (\#eq:obsR)
 \end{align}
 
-<!--CH: I'm not sure these equations capture these lines of code? lines 1407-1458
-https://github.com/Pacific-salmon-assess/samSim/blob/f055ade3dd50ae3ad994868993a5673d08ffcb87/R/genericRecoverySimulator.R#L1407
-
-i.e., in samSim the multivariate logistic aging error is applied to observed ppns of returns at age, not true proportions. These observed  ppns of returns have to be calculated manually as in those lines of code. I think we did this because the true and observed ppns of returns can deviate quite a bit, and we wanted aging error to capture this.
-
-This is inconsequential for our analysis (where obs error = 0), but I think does deviate from the code. If I'm understanding the code and this write-up correctly, then I think we could add a note that we implement an alternative version in the code, if we don't have time to write up those eqns. Let me know if I'm way off base here! 
 
 
--->
+
 
 ### Project recruitment forecast
 
@@ -425,7 +416,7 @@ ER_{y,i,n}
  
 
 
-The catch for Canada is further divided in two components, mixed-stock fishery and single-stock fisheries (Equations \@ref(eq:tacmix) and \@ref(eq:tacsingle)). Single-stock fisheries were not included in our LRP analyses, setting $psi_{y,i}$ =1, where:<!--CH: added this last sentence, okay?-->
+The catch for Canada is further divided in two components, mixed-stock fishery and single-stock fisheries (Equations \@ref(eq:tacmix) and \@ref(eq:tacsingle)). Single-stock fisheries were not included in our LRP analyses, setting $psi_{y,i}$ =1, where:
 
 
 
@@ -458,7 +449,7 @@ The next step is to compute the aggregate exploitation rate and the remaining nu
 
 ### Project observed data
 
-In this step, observation error is added to the quantities calculated in the current time step. <!--CH: added next sentence to remind readers that we didn't use this-->Observation errors were not included in our implementation for LRPs because LRPs were derived from true underlying population dynamics without observation errors and the management procedure applied (constant exploitation rates) did not require information on observed abundances. 
+In this step, observation error is added to the quantities calculated in the current time step. Observation errors were not included in our implementation for LRPs because LRPs were derived from true underlying population dynamics without observation errors and the management procedure applied (constant exploitation rates) did not require information on observed abundances. 
 
 Catch observation error is given by a log normal distribution (Equations \@ref(eq:obsC)-\@ref(eq:obssingleC)), the distribution is truncated between the 0.0001 and 0.9999 quantiles. If the catch is taken in a mixed-stock fishery, additional multivariate logistic error is incorporated to account for uncertainty in the stock assignment process (Equation \@ref(eq:obspCU)).
 
@@ -514,7 +505,6 @@ u_{y,i,n} &\sim logN(0,\sigma_{C})
 (\#eq:obsSz)
   z_{y,i} &\sim logN(0,\sigma_{S})
 \end{align}
-
 
 
 
