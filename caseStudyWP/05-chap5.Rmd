@@ -10,7 +10,7 @@ output:
 ## CONTEXT
 
 
-The Inside South Coast Chum - Non-Fraser SMU (hereafter ISC Chum) includes seven CUs of Chum Salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island [Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007]. This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats. 
+The Inside South Coast Chum - Non-Fraser SMU (hereafter ISC Chum) includes seven CUs of Chum Salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats. 
 
 
 
