@@ -19,33 +19,18 @@ The number of Chum caught in fisheries in the Inside South Coast area were taken
 
 ### Data Selection and Infilling
 
+We removed summer-run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall. Summer-run fish are relatively minor portion of the total abundances for these CUs (Table \@ref(tab:CU-summary)). Because hatchery fish are not visibly marked, time-series of proportion of hatchery-origin and natural origin-fish were not available. However, we removed three systems because of high hatchery enhancement: Qualicum River, Little Qualicum River, and Puntledge River. These systems have been nearly 100% enhanced at least since enhancement began at these locations. Hatchery enhancement is likely a relatively small component of total production in the remaining systems. Brood take and rack abundances were also removed from spawner abundances to derive time-series of 'natural' escapement.
 
-We removed summer-run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall. Summer-run fish are relatively minor portion of the total abundances for these CUs.<!--CH: I added this last sentence. Is it true?--> 
-<!--CH my new suggested text below-->
-
-We removed summer-run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall. Summer-run fish are relatively minor portion of the total abundances for these CUs.<!--CH: I added this last sentence. Is it true?--> Because hatchery fish are not visibly marked, time-series of proportion of hatchery-origin and natural origin-fish were not available. However, we removed three systems because of high hatchery enhancement: Qualicum River, Little Qualicum River, and Puntledge River. These systems have been nearly 100% enhanced at least since enhancement began at these locations. Hatchery enhancement is likely a relatively small component of total production in the remaining systems. Brood take and rack abundances were also removed from total spawner abundances to derive time-series of 'natural' escapement.
-
-<!--Luke's original text:
-To get wild escapement, we kept only wild spawners and removed hatchery-origin spawners (with clipped adipose fins), spawners harvested at a facility, and spawners collected for brood stock. 
-
-
-CH: this seems contrary to SEP (Brock Ramshaw)'s inidcation that
-"SEP hasn’t marked the vast majority of our chum production in a long time (15-20 years) and very little assessment takes place. There is some sampling in Area 8 of Snootli chum and at their hatchery, but other than that there isn’t any escapement sampling data as far as I know. Attached is a file that Pieter sent me a couple of months ago where he estimates the enhanced contribution (row 63) but I don’t know the methods used. Sorry I can’t be more help."-->
-
-<!--CH; I moved this text up to new pgh above. Delete here
-We also removed spawners for the Qualicum River, Little Qualicum River, and Puntledge River, as these systems have been nearly 100% enhanced at least since enhancement began at these locations. We made the assumption that these streams had 100% hatchery origin spawners. 
--->
 
 After these removals, the steps for preparing the data for analysis were:
 
 - Infill total and wild escapement by CU and Area, (by stream for CUs with observations, by CU for years with no observations in a CU)
-- Run reconstruction, required to estimate CU-specific productivity from stock-recruitment models:<!--CH: I added this last phrase, as I don't think we needed the run reconstruction otherwise--> 
+- Run reconstruction, required to estimate CU-specific productivity from stock-recruitment models:
   - Add fishery catch by CU and Area to total escapement to estimate total returns
   - Use proportion of natural escapement:total escapement (which includes brood stock and rack abundances and the three large hatchery systems), by CU and Area to estimate number of wild returns 
   - Use age proportions of catch to estimate age of returns and get recruits by brood year for each CU. Result is wild spawners and corresponding recruits by brood year for each CU
 
-<!--CH: I included phrase "(which includes brood stock and rack abundances...)" to be specific about those times-series are derived
-Also, I changed "wild" to "natural". Wild has a specific definition under the WSP, 2nd generation natural spawners-->
+
 ### Infilling of Spawner Escapement Data
 
 The data we used had years where not all streams were counted. Missing escapement values require infilling for two purposes: 
@@ -55,18 +40,18 @@ The data we used had years where not all streams were counted. Missing escapemen
 2. To create CU-level time series of wild escapement that can be used to calculate status relative to CU-level benchmarks, as well as LRPs based on CU status.
 
 
-Two levels of infilling have previously been used for ISC Chum CUs (@holtEvaluatingBenchmarksBiological2018; Figure \@ref(fig:chum-escapement-infill)). The first level, infilling by stream, is used when a CU has some streams counted in a year.  In this case, stream-level infilling is done by borrowing information from other streams within the same CU. The second level, infilling by CU, is used when there are no counts of spawners for a CU in a given year. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling to calculate LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
+Two levels of infilling have previously been used for ISC Chum CUs [@holtEvaluatingBenchmarksBiological2018, Figure \@ref(fig:chum-escapement-infill)]. The first level, infilling by stream, is used when a CU has some streams counted in a year.  In this case, stream-level infilling is done by borrowing information from other streams within the same CU. The second level, infilling by CU, is used when there are no counts of spawners for a CU in a given year. We had to infill by CU to get total spawners to use for the run reconstruction, but we did not use CUs with CU-level infilling to calculate LRPs because the infilling procedure assumes that escapement is correlated between CUs in a given year. 
 
 #### Infilling by Stream
 
 This applies to CUs and years when there were counts in some streams in the CU in a given year. For each stream, the geometric mean of escapement over all years was calculated as the stream's average escapement. Then the total average escapement for each CU in each year was the sum of the average escapements from all streams. Then a proportion of monitored escapement in each year was the sum of average escapement of all streams with counts in a year divided by the sum of the average escapements for all streams (counted and uncounted) in that CU. The infilled escapement for a CU in given year was the sum of the observed escapements for that CU and year divided by the proportion of the monitored escapement for that CU and year. 
 
 
-Infilling by stream typically made up a small proportion of the total escapement for each CU, with the exception of Howe Sound-Burrard Inlet. This was partly due to increasing escapements in the Cheakamus River and Indian River since 2000. This method assumes that escapement among streams is correlated, which is not always the case (see Fig. \@ref(fig:chum-spawner-corr) for correlations among CUs).<!--CH I added this Figure refence, but feel free to remove as it's the wrong scale, CUs not streams--> 
+Infilling by stream typically made up a small proportion of the total escapement for each CU, with the exception of Howe Sound-Burrard Inlet. This was partly due to increasing escapements in the Cheakamus River and Indian River since 2000. This method assumes that escapement among streams is correlated, which is not always the case (see Figure \@ref(fig:chum-spawner-corr) for correlations among CUs).
 
 #### Infilling by CU
 
-If there were no counts of any streams in a CU in a given year, a second round of infilling was done with data set that had already been infilled by stream. This was the case for two CUs: Upper Knight (22 years: 1979-1980, 1982, 1984, 1989, 1991,1996,2004-2018) and Bute Inlet (13 years: 2005-2006, 2008-2018). <!--CH Added this next sentence. okay?--> We describe this level of infilling below, though it was not applied for development of LRPs as it violates assumptions of independence among CUs.
+If there were no counts of any streams in a CU in a given year, a second round of infilling was done with data set that had already been infilled by stream. This was the case for two CUs: Upper Knight (22 years: 1979-1980, 1982, 1984, 1989, 1991,1996,2004-2018) and Bute Inlet (13 years: 2005-2006, 2008-2018). We describe this level of infilling below, though it was not applied for development of LRPs as it violates assumptions of independence among CUs.
 
 
 Using by-stream infilled escapement summed for each CU, the CUs and years with missing data were infilled assuming the total CU escapement was correlated between CUs. The procedure was similar to that for infilling by stream, but a geometric average for each CU across all years was used to calculate the proportion of the average for each year, and then that was used to estimate escapement for the two CUs with no observations.
@@ -105,21 +90,23 @@ knitr::include_graphics('figure/chum-a-b-SMSY-Sgen-retro.png')
 
 
 Retrospective estimates of $\alpha$ and $\beta$ for Southern Coastal Streams show declines over time. S\textsubscript{MSY} and S\textsubscript{gen} increase sharply in the first few years due to large decreases in $\alpha$ and $\beta$. S\textsubscript{MSY} then decreases over time, while S\textsubscript{gen} stays relatively stable. This is because as $\alpha$ decreases below ~2.5, S\textsubscript{gen} decreases, but as $\beta$ decreases, S\textsubscript{gen} decreases, so that a simultaneous decrease in $\alpha$ and $\beta$ can cancel out. However, the lower alpha is below 2.5, the less influence $\beta$ has on S\textsubscript{gen}. <!--CH: it doesn't relate directly, but doesn't hurt to include for now.  
-LUke: *\textcolor{cyan}{This is from my work on sensitivity of Sgen and SMSY to alpha and beta. Not sure if we can include here}*
+Luke: *\textcolor{cyan}{This is from my work on sensitivity of Sgen and SMSY to alpha and beta. Not sure if we can include here}*
 -->
 
 Increasing S\textsubscript{gen} for North East Vancouver Island is mainly due to an increase in $\alpha$ from <1.5 to >2 and then a decrease in $\beta$. $\alpha$ for Loughborough showed modest decreases over time, and S\textsubscript{gen} was fairly stable. The Georgia Strait CU shows evidence of increasing $\alpha$, and its S\textsubscript{gen} estimate was fairly stable. Howe Sound-Burrard Inlet S\textsubscript{gen} was fairly stable, and then increased due to  decreases in $\alpha$ and $\beta$. 
 
-<!--CH: added next text-->
-Despite large uncertainties in the underlying recruitment data and stock-recruitment benchmarks, we estimated a logistic regression model based on aggregate abundances vs. CU status from abundances relative stock-recruitment benchmarks. Similar to our results for the logistic regression model based on percentile benchmarks, the model fit was poor and cannot be used as a basis for estimating LRPs (Fig. \@ref(fig:chum-logistic-sgen)).
+Despite large uncertainties in the underlying recruitment data and stock-recruitment benchmarks, we estimated a logistic regression model based on aggregate abundances vs. CU status from abundances relative stock-recruitment benchmarks. Similar to our results for the logistic regression model based on percentile benchmarks, the model fit was poor and cannot be used as a basis for estimating LRPs (Figure \@ref(fig:chum-logistic-sgen)).
+
 
 ```{r chum-logistic-sgen, fig.cap="Logistic regression of whether escapement of all component CUs were above their $S_{gen}$ benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes the 5 CUs without CU-level infilling (no Bute Inlet or Upper Knight)", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-sgen.pdf')
 ```
 
-<!--CH: addend next sentence-->
-We further evaluated status based on percentile-based benchmarks retrospectively, where status was evaluated annually based on benchmarks estimated from data prior to that year (Fig. \@ref(@r chum-perc-retro))
+
+We further evaluated status based on percentile-based benchmarks retrospectively, where status was evaluated annually based on benchmarks estimated from data prior to that year (Figure \@ref(fig:chum-perc-retro)).
+
+
 ```{r chum-perc-retro, fig.cap="Escapement with 25th and 50th percentile benchmarks shown by grey and black dotted lines, respectively. Benchmarks are calculated using escapements up to the given year. Values following the CU names indicate the appropriate percentile benchmark. Green and red points indicate status above or below benchmark, respectively. Transparent points are years with CU-level infilling.", warning=FALSE, echo=FALSE, fig.align="center"}
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
 knitr::include_graphics('figure/chum-perc-retro.png')
