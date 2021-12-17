@@ -112,7 +112,7 @@ Estimates of S\textsubscript{gen} are required when assessing CU status using bo
 
 The formulations for our two stock recruitment models using the assumption of independent productivity among CUs are described below. 
 
-*Model 1: Ricker*
+***Model 1: Ricker***
 
 The base Ricker stock recruit model formulation was:
 
@@ -152,7 +152,7 @@ This model formulation is similar to the Ricker model used in @arbeiderInteriorF
 \end{equation}
 
 
-*Model 2: Ricker_priorCap*
+***Model 2: Ricker_priorCap***
 
 To maintain consistency with this previous work on Interior Fraser Coho, we also consider a version of the Ricker model that uses an informative prior distribution on S~REP~ to increase carrying capacity.  @kormanEvaluationFrameworkAssessing2019 suggested that the Ricker model with a survival co-variate (Model 1) over-estimated compensatory dynamics at high spawner abundances when applied only to data from 1998 onwards.  They noted that spawner abundances since 1998 have been much lower than historic levels.  Given that sparse data at high spawner abundances makes it difficult to estimate carrying capacity, base Ricker estimates of carrying capacity may be unreliable [@kormanEvaluationFrameworkAssessing2019]. Furthermore, they observed that one brood line had persisted at a relatively higher and more stable spawner abundance than the other two brood lines, which they viewed as evidence for a higher capacity than the base Ricker model estimates. Based on these concerns, @kormanEvaluationFrameworkAssessing2019 proposed an alternative Ricker model that used an informative prior distribution to increase carrying capacity (represented as the spawner abundance at which the stock replaces itself, S~REP~). @arbeiderInteriorFraserCoho2020 followed the approach of @kormanEvaluationFrameworkAssessing2019 by considering both the base Ricker model and a version of the Ricker model with an informative prior distribution on S~REP~ to be plausible when providing management advice.
 
@@ -176,7 +176,7 @@ knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
 
 \linebreak
 
-*Calculation of Sgen*  
+***Calculation of Sgen***  
 
 The inclusion of a marine survival co-variate in all four stock recruit models means that the realized productivity changes from year to year with changing marine survival. We incorporated this adjustment into our calculations of S\textsubscript{gen} by first calculating the effective productivity for each CU as:
 
@@ -287,9 +287,6 @@ When the Logistic:Sgen-Ricker model was used, aggregate abundance-based LRPs ran
 
 When CU status was based on the IFCRT distributional target, the fit of the logistic curve was more gradual than the two Sgen models due to a greater overlap in 'successful' (all CUs > distributional target) and 'unsuccessful' (<100% of CUs above distributional target) years at low to moderate aggregate abundances.  In 3 of the 6 years with aggregate abundances below 20,000 spawners, the distributional target was not met for all CUs (Figure \@ref(fig:coho-IM-logisticFit2020)). LRPs based on this model also became increasingly large at high probability thresholds (Table \@ref(tab:logisticLRPs2020)). The LRP based on a 99% probability was 44,403 spawners, with a 95% confidence interval extending from 15,102 - 73,703 spawners.  
 
-<!--CH: Does this table need to be updated based on Catarina's updated analyses?, Maybe not, as I think the new data-stream only impacted spawner times-series for assessments, not benchmarks per se-->
-
-<!--KH: It looks like this table was already updated, which it needed to be because using natural-origin spawners when comparing to Sgen did affect logistic regression fit, and therefore, LRPs  -->
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
@@ -370,7 +367,7 @@ knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurvCap-50.png")
 \linebreak
 
 
-LRPs based on the Logistic:IFCRT model could be estimated for all four-CU data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five four-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for the South Thompson CU, which is an influential observation that has a large impact on the shape of the fit model. The South Thompson CU fails to meet the IFCRT distributional target in 2015. Because it is the only CU that misses the target in 2015, its removal leads to 'failure' year (i.e., at least one CU below its lower benchmark) becoming a 'success' (all CUs above lower benchmark). This shift results in a lower LRP and a higher status estimate. <!--CH: might be helpful to say if it's red status year, so brings LRP down; when missing LRP is higher.  KH: I have updated the sentence above to descibe what is happening-->For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the four-CU or full data scenarios, and showed high variability among scenarios in estimated status.  
+LRPs based on the Logistic:IFCRT model could be estimated for all four-CU data scenarios in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for four of the five CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the five four-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for the South Thompson CU, which is an influential observation that has a large impact on the shape of the fit model. The South Thompson CU fails to meet the IFCRT distributional target in 2015. Because it is the only CU that misses the target in 2015, its removal leads to 'failure' year (i.e., at least one CU below its lower benchmark) becoming a 'success' (all CUs above lower benchmark). This shift results in a lower LRP and a higher status estimate. For missing data scenarios in which only three CUs were included, status estimates often had higher uncertainty than the four-CU or full data scenarios, and showed high variability among scenarios in estimated status.  
 
 
 ```{r coho-distributional-missingCUs, fig.cap="Retrospective estimates of aggregate status (with 95\\% confidence intervals) from the Logistic:IFCRT model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs. Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios. Note that the y-axis has been truncated at 8, so the upper limits of some error bars are not shown.", warning=FALSE, echo=FALSE, out.width = '70%',  fig.align="center"}
@@ -428,6 +425,8 @@ knitr::include_graphics("figure/coho-ObsAgeProp-byCU.png")
 ```
 
 \linebreak
+
+
 ***Covariance in exploitation***
 
 We assumed an average exploitation rate of 12.5% for all CUs in forward projections based on average historical values, with common interannual variability in exploitation rates due to shared fishery impacts among CUs each year. Interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), with the standard deviation of the beta distribution parameterized from estimated exploitation rates for 1998 - 2016 brood years. The corresponding coefficient of variation (CV) for interannual variability was 0.44.
@@ -538,7 +537,7 @@ knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 
 \linebreak
 
-***Sensitivity Analyses***  
+***Sensitivity Analyses***
 
 Increasing $\sigma_{\gamma}$, which corresponded with reduced between-CU correlation in spawner abundances over time (Figure \@ref(fig:coho-sigGammaCorrelation)), resulted in a flattening of the projected relationship between aggregate spawner abundances and the probability of all CUs being above their lower benchmarks. LRP estimates corresponding to a given probability threshold increased as $\sigma_{\gamma}$ increased as curves shifted to the right and became more gradual (i.e., less steep). For the two highest $\sigma_{\gamma}$ scenarios examined ($\sigma_{\gamma}$=0.0675 and 0.09), a 99% probability of all CUs being above their lower S\textsubscript{gen} benchmark was never achieved.            
 
