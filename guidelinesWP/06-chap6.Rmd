@@ -29,7 +29,7 @@ Although uncertainties in status derived from the Salmon Scanner are not current
 
 ### Proportion-based LRPs
 
-Uncertainties in status derived from proportion-based LRPs can arise from the exclusion of data-limited CUs from analyses when these CUs are not well represented by data-rich CUs that are included. Even when data-limited CUs have similar threats, environmental conditions and drivers, life-history characteristics and capacities as data-rich CUs, population dynamics may diverge due to other random<!--LW: suggest removing random, as it could just be variables we don't know about/account for--> variables. We recommend caution when applying interim LRPs that do not include all CUs. In these cases, we <!-- LW: suggest remove further-->further recommend developing a monitoring plan to inform CU-specific assessments.
+Uncertainties in status derived from proportion-based LRPs can arise from the exclusion of data-limited CUs from analyses when these CUs are not well represented by data-rich CUs that are included. Even when data-limited CUs have similar threats, environmental conditions and drivers, life-history characteristics and capacities as data-rich CUs, population dynamics may diverge due to other other random variables. We recommend caution when applying interim LRPs that do not include all CUs. In these cases, we recommend developing a monitoring plan to inform CU-specific assessments.
 
 
 ### Logistic-regression based LRPs
