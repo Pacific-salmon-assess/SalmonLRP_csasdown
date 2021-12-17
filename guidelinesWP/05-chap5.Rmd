@@ -130,23 +130,40 @@ We recommend peer-review of the CU data and assessments used in steps 1 and 5 if
 CW: Agree with keeping rebuilding plan and LRP separate. 
 LW: I agree as well.-->
 
-<!--CH: not working!
+<!--
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{5cm} p{3.5cm} p{3.5cm}}
-\caption{Guidelines on assessing status for proportion-based LRPs of 100% of CUs being above red status, when at least one CU is data-deficient}\\
+\caption{Guidelines on assessing status for proportion-based LRPs of 100\% of CUs being above red status, when at least one CU is data-deficient}\\
 \hline
-- & Status of data-rich CUs & - \\ 
+ & Status of data-rich CUs &  \\ 
 \hline
-- & All above red status & At least one red status \\ 
+ & All above red status & At least one red status \\ 
+ \hline
 \endhead
-Status of data-deficient CUs can be inferred from data-rich CUs  &  Interim SMU status = above LRPs & SMU Status = Below LRP\\
-Status of data-deficient CUs cannot be inferred from data-rich CUs  &  SMU Status = Data Deficient & SMU Status = Below LRP\\
+Status of data-deficient CUs can be inferred from data-rich CUs  &  Interim SMU status above LRPs & SMU Status = below LRP\\
+Status of data-deficient CUs cannot be inferred from data-rich CUs  &  SMU Status = Data Deficient & SMU Status = below LRP\\
 
 \hline
 (\#tab:GuidanceDDCUs)
 \end{longtable}
+
 -->
 
++--------------------------+-------------------------+-------------------------+
+|                          | Status of data-rich CUs:| Status of data-rich CUs:                         
+|                          | All above red status    | At least one red status 
++==========================+=========================+=========================+
+| Status of data-deficient | Interim SMU status=     | SMU Status = Below LRP  
+| CUs can be inferred from | above LRP               |                         
+| data-rich CUs            |                         |                         
++--------------------------+-------------------------+-------------------------+
+| Status of data-deficient | SMU status = data-      | SMU Status = Below LRP  
+| CUs cannot be inferred   | deficient               |                         
+| from data-rich CUs       |                         |                         
++--------------------------+-------------------------+-------------------------+
+
+
+Table: (\#tab:GuidanceDDCUs2) Guidelines on assessing status for proportion-based LRPs of 100\% of CUs being above red status, when at least one CU is data-deficient. 
 
 
 <!--KH comments on above paragraph: 
