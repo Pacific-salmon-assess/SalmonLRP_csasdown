@@ -149,8 +149,10 @@ If spawner-recruitment data are available, the number of initialization years 'n
 When Recruitment data are not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, typically from MCMC samples. If MCMC samples are provided, a different set of parameters is used for each simulation trial.
 
 The stock-recruitment parameters can be altered according to the user defined scenarios, e.g., to simulate regime shifts. `samSim` includes options to adjust the productivity parameter, $\alpha_{i}$, the capacity parameter $\beta_{i}$, and the recruitment standard deviations, $\sigma_{i}$. The LRP case studies do not include adjustments or changes in productivity over time, therefore we will not describe the parameter adjustment options in this appendix. Recruitment is assumed to be correlated between the CUs, where the variance-covariance matrix is calculated based on CU-specific recruitment variances and the correlation matrix in recruitment residuals specified in an input files.   
+
  
 Once stock-recruitment parameters are defined, the number of spawners is initialized. The number of spawners is set at equilibrium for the first 6 years (the maximum possible number of age classes) and then calculated based on recruitment and exploitation rates in the previous years (Equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set to zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
+
 
 \begin{align}
 S_{y,i} =
@@ -536,11 +538,11 @@ The management quantities, i.e., $Sgen$ and $Smsy$ or Spawners quantiles, can th
 ### Project population dynamics
 
 
-In this section the brood year recruitment for the current projection year is computed. The first step is to generate the marine survival estimates which are used to project recruitment when the Ricker model with survival covariates is applied. The survival covariates are generated using the method described in Section \@ref(recruitment-data-is-not-available) and Equations \@ref(eq:survCY) and \@ref(eq:surv). Marine survival covariates are considered to be constant across CUs.
+In this section the brood year recruitment for the current projection year is computed. The first step is to generate the marine survival estimates which are used to project recruitment when the Ricker model with survival covariates is applied. The survival covariates are generated using the method described in Section \@ref(recruitment-data-are-not-available) and Equations \@ref(eq:survCY) and \@ref(eq:surv). Marine survival covariates are considered to be constant across CUs.
 
-The following step is to compute the age structure of the returns with random error, which follows the same procedure described in Section \@ref(recruitment-data-is-not-available). The age structure follows a distribution with mean age structure and standard deviation for each CU given in the input files.
+The following step is to compute the age structure of the returns with random error, which follows the same procedure described in Section \@ref(recruitment-data-are-not-available). The age structure follows a distribution with mean age structure and standard deviation for each CU given in the input files.
 
-In the next step generates recruitment deviations, which are computed with multivariate normal distribution, reflecting the recruitment covariance among CUs. Recruitment is then calculated following the same procedure described in Section\@ref(recruitment-data-is-not-available) and using Equation \@ref(eq:Rickersimple) for the simple Ricker model, or Equation \@ref(eq:Rickersurv) for the Ricker model with survival covariates. 
+In the next step generates recruitment deviations, which are computed with multivariate normal distribution, reflecting the recruitment covariance among CUs. Recruitment is then calculated following the same procedure described in Section\@ref(recruitment-data-are-not-available) and using Equation \@ref(eq:Rickersimple) for the simple Ricker model, or Equation \@ref(eq:Rickersurv) for the Ricker model with survival covariates. 
 
 The last step of the projection loop is to compute the true and observed upper and lower benchmarks, which are based on the management quantities described in the previous section (Section \@ref(run-stock-assessment-and-calculate-management-quantities). These are either stock-recruit or percentile benchmarks, as described in section \@ref(compute-management-quantities-and-benchmarks) computed based on the true and observed spawner abundances. 
 
