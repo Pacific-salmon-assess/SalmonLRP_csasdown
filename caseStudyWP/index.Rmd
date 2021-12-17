@@ -40,7 +40,7 @@ address: |
   ^6^Nuu-chah-nulth Tribal Council\
      5001 Mission Rd\
      Port Alberni, BC, V9Y 8X9\
-  ^7^Ha'oom Fisheries Socierty\
+  ^7^Ha'oom Fisheries Society\
      320 Opitsaht IR Road\
      Tofino, BC, V0R 2Z0\
 month: Month # fill in
