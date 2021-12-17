@@ -81,10 +81,12 @@ For this case study, we further demonstrated the approach of averaging over stru
 
 ## WESTCOAST VANCOUVER ISLAND CHINOOK
 
+
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series of spawner abundances with consistent observation methodology [@riddellReview2001Chinook2002]. Hatchery enhancement is an important component of many of these stocks and only indicator stocks without significant enhancement (PNI $\geqslant$ 0.5) were included in our analyses.  Because times-series of the proportion of hatchery-origin spawners are not available for these stocks, total spawner abundances were used in the assessment of CU and aggregate SMU level statuses, which may results in overly optimistic assessments of status relative to if hatchery-origin fish were excluded (as in Interior Fraser River Coho case study). Spawner abundances tend to be positively correlated among inlets, with an average correlation of 0.28 (Figure \@ref(fig:density-cor-plot)).
 
 
 Under the WSP, CUs are identified at a spatial scale to conserve for long-term sustainability of the species [@holtbyConservationUnitsPacific2007]. For WCVI Chinook, inlets nested within CUs are important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying among inlets (D. McHugh pers. comm. DFO South Coast Stock Assessment). We considered spawner abundances at the scale of inlets within CUs because of limited demographic exchange between these units.
+
 
 Two of the 3 CUs in this SMU, WCVI-South and WCVI-Nootka & Kyuquot, were assessed as 'red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016].  WCVI Chinook was identified as a stock of concern in the 2021 Integrated Fisheries Management Plan, IFMP and a rebuilding plan is under development [@dfoIntegratedFisheriesManagement2021]. Poor marine survival rates for WCVI Chinook and low spawner levels over the past 2 decades are highlighted as reasons for conservation concern in the IFMP [@dfoIntegratedFisheriesManagement2021, p. 129]. 
 
