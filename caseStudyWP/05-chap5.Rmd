@@ -169,7 +169,7 @@ knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 <!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
 
 
-```{r chum-perc-status-static, fig.cap="Spawner escapement (solid black line) with generational mean (4 year rolling geometric mean) of escapement in points. Dashed lines indicate percentile lower benchmarks (\@ref(tab:CU-summary)). Red points indicate years when the generational mean of abundance was below the lower benchmark, and gray points indicate when it was above. Southern Coastal Streams and Bute Inlet are omitted because they do not have appropriate percentile benchmarks due to low productivity and moderate to high harvest. Note that Upper Knight is missing observations in 1979-1980, 1982, 1984, 1989, 1991, 1996, and 2004-2018.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
+```{r chum-perc-status-static, fig.cap="Spawner escapement (solid black line) with generational mean (4 year rolling geometric mean) of escapement in points. Dashed lines indicate percentile lower benchmarks. Red points indicate years when the generational mean of abundance was below the lower benchmark, and gray points indicate when it was above. Southern Coastal Streams and Bute Inlet are omitted because they do not have appropriate percentile benchmarks due to low productivity and moderate to high harvest. Note that Upper Knight is missing observations in 1979-1980, 1982, 1984, 1989, 1991, 1996, and 2004-2018.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
 knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
 ```
 
