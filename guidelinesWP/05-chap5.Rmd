@@ -128,8 +128,28 @@ LW: I agree, that would be useful!
 
 We recommend peer-review of the CU data and assessments used in steps 1 and 5 if CU assessment are developed outside of an existing published, peer-reviewed process. Also, we recommend peer-review of decisions on SMU-scale aggregation from steps 2, 3 and 4. This peer review can occur, at least in part, through DFO's State of the Salmon Program's annual implementation of the Pacific Salmon Status Scanner. The Salmon Scanner will be applied annually as part of of a process integrating outputs with local expertise to provide provisional statuses for CUs. Expert review is required to vet statuses derived from the implementation of the Salmon Scanner to ensure they are consistent with underlying biological categories given the multiple and sometimes conflicting dimensions of status. <!--CH: Ann-Marie suggested an example from Fraser Sockeye Shuswap here, but I wonder if it might make the flow of this section awkward? Happy to consider an inclusion from Ann-Marie--> The outputs from that process can be used as a basis for developing CU-level statuses to inform SMU-level LRPs. We emphasize the importance of rigorous peer-review of LRPs and status assessments against them for those SMUs prescribed under regulation, either as part the annual application of Salmon Scanner or in a separate SMU-specific  peer-review process. This peer review process would include assessment of component CUs and decisions about data deficiencies and CU representativeness covering steps 1-5 above, and be documented in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Report.<!--CH question: Is this requirement for CSAS documentation okay? We should ask Julie/Jason to what extent this is consistent with out marine species, and then mention the consistency here. Some TWG participants suggested LRP identification could occur in the rebuilding plan, but this seems awkward as rebuilding objectives may be related to LRPs, or at least they will in other species, so best to keep the 2 processes separate I think.
 CW: Agree with keeping rebuilding plan and LRP separate. 
-LW: I agree as well.
-KH comments on above paragraph: 
+LW: I agree as well.-->
+
+<!--CH: not working!
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}[]{p{5cm} p{3.5cm} p{3.5cm}}
+\caption{Guidelines on assessing status for proportion-based LRPs of 100% of CUs being above red status, when at least one CU is data-deficient}\\
+\hline
+- & Status of data-rich CUs & - \\ 
+\hline
+- & All above red status & At least one red status \\ 
+\endhead
+Status of data-deficient CUs can be inferred from data-rich CUs  &  Interim SMU status = above LRPs & SMU Status = Below LRP\\
+Status of data-deficient CUs cannot be inferred from data-rich CUs  &  SMU Status = Data Deficient & SMU Status = Below LRP\\
+
+\hline
+(\#tab:GuidanceDDCUs)
+\end{longtable}
+-->
+
+
+
+<!--KH comments on above paragraph: 
 
 1) Also agree that LRPs need to be defined seperate from a rebuilding plan.   
 
