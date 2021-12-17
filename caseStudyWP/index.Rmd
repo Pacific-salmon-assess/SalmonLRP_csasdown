@@ -14,8 +14,8 @@ author: |
   Diana McHugh^5^
   Candace Picco^7^
   Pieter Van Will^5^
-  others (TBD)
-author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C. Van Will, P., and others(TBD)"
+
+author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P."
 address: |
   ^1^Fisheries and Oceans Canada\
      Institute of Ocean Sciences\
@@ -47,7 +47,7 @@ month: Month # fill in
 year: 2022
 report_number: nnn
 region: Pacific Region
-citation_other_language: "Last, F.M. et Smith, A.B. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2019/nnn. iv + 13 p."
+citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., et Van Will, P.. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2022/nnn. iv + 13 p."
 abstract: |
   The revised fisheries act required that Limit Reference Points (LRPs) be identified for all major fish stocks. For Pacific Salmon, major fish stocks are represented by stock management units (SMUs), which are composed of one or more salmon conservation units (CUs), which are the assessment units under the Wild Salmon Policy. We introduce LRP estimation methods based on aggregating status assessments from the CU level to the SMU level. We demonstrate and evaluate the LRPs for three case study SMUs: Interior Fraser Coho, West Coast Vancouver Island (WCVI) Chinook, and Inner South Coast Chum - excluding Fraser. Methods are divided into two categories: Proportion-based LRPs and Aggregate abundance-based LRPs, which is further sub divided into Logistic regression-based LRPs and Projection-based LRPs. The suitability of each method depends on the availability and quality of data for each SMU, as well as on the historic CU statuses. Proportion-based LRPs are recommended as the default method, while aggregate abundance-based methods are complementary and may be needed to meet management requirements. Proportion-based LRPs are based on individual CU status assessments. Aggregate abundance Logistic regression-based LRPs are based on past status assessments and are estimable when abundance-based CU status is available, and the SMU has observations when the LRP has been breached (at least one CU under red status) and not breached (all CUs above red status). Aggregate abundance Projection-based LRPs are based on future projections and do not require contrast in previous status observations. However, projections require estimates for population dynamics parameters, as well as estimates of covariation among CUs. We discuss suitability and requirements for the applications of the LRP estimation methods drawing from the range of data and information availability in the study cases.  
 
