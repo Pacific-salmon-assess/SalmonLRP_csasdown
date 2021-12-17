@@ -293,7 +293,7 @@ When CU status was based on the IFCRT distributional target, the fit of the logi
 <!--KH: It looks like this table was already updated, which it needed to be because using natural-origin spawners when comparing to Sgen did affect logistic regression fit, and therefore, LRPs  -->
 
 \renewcommand*{\arraystretch}{1.5}
-\begin{table}
+\begin{table}[ht]
 \caption{Aggregate abundance based LRPs (with 95\% confidence intervals) from three different logistic regression-based LRP models. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark.}
 \begin{tabular}{p{3.5cm} p{3.5cm} p{3.5cm} p{3cm}}
 \hline  
@@ -317,7 +317,7 @@ The Wald Test showed that logistic model coefficient for aggregate abundance was
 
 
 \renewcommand*{\arraystretch}{1.5}
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Model diagnostic statistics from Sgen:LRP, Sgen\_priorCap:LRP, and Dist-LRP model fits. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for all four probability thresholds considered.  The symbol \* indicates a result that only marginally met the recommended criteria for demonstrating good model fit}
 \begin{tabular}{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
 \hline  
@@ -385,7 +385,7 @@ knitr::include_graphics("figure/coho-StatusByNCUs-SPopAbundThreshST-50.png")
 
 Forward projections of each of the five CUs with the Interior Fraser Coho SMU were done using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Finer-scale projections at the scale of sub-populations were not possible as spawner-recruit data series were not available at this scale. As a result, projection-based LRPs using the IFCRT recovery target was not possible; we were restricted to looking at CU-level status estimates based on S~gen~. Parameters characterizing CU-level population dynamics, marine survival rates, and exploitation rates were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below.  
 
-Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods). Forward projections were run for 30 years over 20,000 simulation trials, with projections initialized using spawner abundances from the most recent four return years, 2016 - 2020.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probability thresholds.  Simulated trajectories were near equilibrium after 4 years of  projections during which trajectories depended primarily on the historical time-series (Figures. \@ref(coho-CUProjections-Ricker) and \@ref(coho-CUProjections-Ricker-priorCap)).
+Projection model outputs were used to estimate projection-based LRPs using the methods described on Section \@ref(projectedMethods). Forward projections were run for 30 years over 20,000 simulation trials, with projections initialized using spawner abundances from the most recent four return years, 2016 - 2020.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probability thresholds.  Simulated trajectories were near equilibrium after 4 years of projections during which trajectories depended primarily on the historical time-series (Figures \@ref(fig:coho-CUProjections-Ricker) and \@ref(fig:coho-CUProjections-Ricker-priorCap)).
 
 
 ***Stock recruitment dynamics***  
@@ -499,7 +499,7 @@ knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
 
 
 \renewcommand*{\arraystretch}{1.5}
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Projection-based LRPs from forward projections under two different stock recruit model options (Ricker and Ricker\_priorCap), as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark of S\textsubscript{gen}.}
 \begin{tabular}{p{3.5cm} p{3cm} p{3.5cm} p{3cm}}
 \hline  
