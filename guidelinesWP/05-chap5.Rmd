@@ -1,8 +1,4 @@
----
-output:
-  word_document: default
-  html_document: default
----
+
 # GUIDELINES FOR APPLYING LRPS {#guidelines}
 
 <!--CH: could change list level as this next section is the only one at that level, but then need to capitalize all level 2 title
@@ -17,7 +13,8 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 
 The first step is to compile CU-level data to support biological status assessments as described under the WSP [@holtIndicatorsStatusBenchmarks2009a; @holtEvaluatingBenchmarksBiological2018], where those data exist. These data include (but are not limited to) time-series of spawner abundances, recruitment, hatchery contributions, productivity, and biological benchmarks on spawner abundances.   This step generally includes aggregating fine scale data on streams or spawning sites to the CU level. 
 
-In some cases, finer a spatial scales than CU (e.g., watersheds or subpopulations within CUs) may be considered to delineate serious harm to the SMU. Although CUs are the population unit of assessment and conservation required under the WSP, distribution of spawning within CUs, for example among watersheds, can be an important component of status [@holtIndicatorsStatusBenchmarks2009a] and these finer scales can be considered. 
+In some cases, finer spatial scales than CU (e.g., watersheds or subpopulations within CUs) may be considered to delineate serious harm to the SMU. Although CUs are the population unit of assessment and conservation required under the WSP, the distribution of spawning within CUs (e.g., among watersheds) can be an important component of status [@holtIndicatorsStatusBenchmarks2009a] and these finer scales can be considered. 
+
 
 Distribution is a commonly cited component of salmon viability and recovery [@mcelhanyViableSalmonidPopulations2010]. When applied to the identification of recovery targets for Pacific salmon, @bradfordReviewBiologicalPrinciples2004 defined the relevant scale of distribution as spatial units that are demographically independent such that the  population dynamics of one unit are unlikely to affect the dynamics of another, but that genetic exchange is expected to occur at greater rates than observed among populations (CUs), and would likely exceed 10 effective migrants per generation. When applying these criteria to Interior Fraser River Coho salmon, @bradfordReviewBiologicalPrinciples2004 defined subpopulations on the basis of large watersheds or lakes, or partial barriers to migration. 
 
@@ -25,6 +22,19 @@ We recommend that the decision on spatial scale of conservation for biological a
 
 
 Within this step, information on hatchery enhancement is used to identify populations where production is dominated by hatchery-origin fish.  Populations in which production is dominated by hatchery-origin fish (defined as PNI values < 0.5) should be excluded from analyses, while those that are dominated by natural-origin fish (PNI values are $\geqslant$ 0.5), should be  included in analyses.  These thresholds are based on guidelines established by [@withlerGeneticallyBasedTargets2018]. Further, where time-series of the proportion of marked fish on the spawning grounds are available and production is dominated by natural-origin fish, these proportions can be used to identify time-series of natural-origin recruitment for benchmark estimation and natural-origin spawners for status assessment against benchmarks. When the influence of hatchery production is removed in this way, the assessments are less sensitive to annual variation in hatchery practices.  
+
+Infilling among streams or spawning sites for years with missing data is commonly used when compiling CU-level spawner abundance series. When infilled time series are being  LRPs and monitoring stock status relative to LRPs, consideration should be given to the scale at which infilling is being done at.  For example, if LRPs are based on maintaining CU-level (or inlet-level) diversity, infilling of missing data should not be based on escapements from outside of the CU (or inlet). In addition, hatchery enhancement should be carefully considered when infilling to avoid overestimating abundances when infilled numbers are based on sites that are artificially enhanced, to the extent possible. 
+
+<!--KH:
+
+I am wondering if it would be relevant to include mention of infilling here.  Or, maybe in the next step 2?  Luke uses it for Chum, but it is not used for Chinook (likely because of complications with hatchery enhancement).  I also think that stream-level infilling was done for some of the coho data before I received it. I did add an edit to the case study paper that said to refer to the guidlines paper on infilling guidelines, so let me know if it isn;t relevant to the guidelines paper, and I will remove the case study paper reference.
+
+Maybe adding a paragraph along the lines of:
+
+Infilling among streams or spawning sites for years with missing data is commonly used when compiling CU-level spawner abundance series. When infilled time series are being  LRPs and monitoring stock status relative to LRPs, consideration should be given to the scale at which infilling is being done at.  For example, if LRPs are based on maintaining CU-level (or inlet-level) diversity, infilling of missing data should not be based on escapements from outside of the CU (or inlet). Similarly, for CUs with moderate or high hatchery enhancement and / or straying among sites of hatchery fish, infilling should not be done among sites with varying levels of hatchery enhancement.  (KH: is this the best way to say this?  Are there other ways)      
+
+CH: added, rewording the last sentence. Does it look okay? I think avoiding strays is pretty hard, and may be  as much a genetic concern as a demographic numbers concern.
+-->
 
 
   
@@ -104,9 +114,46 @@ Because WSP Integrated status assessments are resources-intensive processes invo
 
 **Interim status**
 
-Given a proportion-based LRP of 100% of CUs above red status, when data deficient CUs are represented by CUs with data we refer to resulting status as 'interim' when all CUs included in assessment are above red status. This 'interim status' is provisional until all component CUs can be assessed. In some cases natural variability alone may result in differences in status and trends even if the four criteria listed above are met, which underscores the value of monitoring and assessing all component CUs. Where data deficient CUs are not represented by CUs with data, and all CUs included in the assessment are above red status, then the SMU is considered data deficient and SMU status cannot be evaluated. In both cases, we recommend improved monitoring to fill CU-level assessment gaps.
+Given a proportion-based LRP of 100% of CUs above red status, when data deficient CUs are represented by CUs with data we refer to resulting status as 'interim' when all CUs included in assessment are above red status (Table \@ref(tab:GuidanceDDCUs2)). This 'interim status' is provisional until all component CUs can be assessed. In some cases natural variability alone may result in differences in status and trends even if the four criteria listed above are met, which underscores the value of monitoring and assessing all component CUs. Where data deficient CUs are not represented by CUs with data, and all CUs included in the assessment are above red status, then the SMU is considered data deficient and SMU status cannot be evaluated. In both cases, we recommend improved monitoring to fill CU-level assessment gaps.
 
-When data are missing for one or more CUs, and at least one of data-rich CUs have red status, the LRP of 100% CUs above the red zone is considered breached, regardless of whether the data-deficient CUs are represented by data-rich CUs or not. A breach of the LRP (i.e., at least one CU with red status) can be used to trigger a rebuilding plan under the Fish Stock provisions since the improved monitoring of data-deficient CUs alone will not result in an increase in SMU status to 100% (all CUs above red status). Further monitoring of data-deficient CUs is still warranted in this case to inform status of remaining components of the SMU and associated rebuilding efforts. 
+When data are missing for one or more CUs, and at least one of data-rich CUs have red status, the LRP of 100% CUs above the red zone is considered breached, regardless of whether the data-deficient CUs are represented by data-rich CUs or not <!--(Table \@ref(tab:GuidanceDDCUs2))-->. A breach of the LRP (i.e., at least one CU with red status) can be used to trigger a rebuilding plan under the Fish Stock provisions since the improved monitoring of data-deficient CUs alone will not result in an increase in SMU status to 100% (all CUs above red status). Further monitoring of data-deficient CUs is still warranted in this case to inform status of remaining components of the SMU and associated rebuilding efforts. 
+
+
+
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}[]{p{5cm} p{3.5cm} p{3.5cm}}
+\caption{Guidelines on assessing status for proportion-based LRPs of 100\% of CUs being above red status, when at least one CU is data-deficient}\\
+\hline
+ & Status of data-rich CUs: all above red status &  Status of data-rich CUs: at least one red status \\ 
+\hline
+\endhead
+Status of data-deficient CUs can be inferred from data-rich CUs  &  Interim SMU status above LRPs & SMU Status = below LRP\\
+Status of data-deficient CUs {\it cannot} be inferred from data-rich CUs  &  SMU Status = Data Deficient & SMU Status = below LRP\\
+
+\hline
+(\#tab:GuidanceDDCUs)
+\end{longtable}
+
+
+
+<!--
++--------------------------+-------------------------+-------------------------+
+|                          | Status of data-rich CUs:| Status of data-rich CUs:                         
+|                          | all above red status    | at least one red status 
++==========================+=========================+=========================+
+| Status of data-deficient | Interim SMU status=     | SMU Status = below LRP  
+| CUs can be inferred from | above LRP               |                         
+| data-rich CUs            |                         |                         
++--------------------------+-------------------------+-------------------------+
+| Status of data-deficient | SMU status = data-      | SMU Status = below LRP  
+| CUs cannot be inferred   | deficient               |                         
+| from data-rich CUs       |                         |                         
++--------------------------+-------------------------+-------------------------+
+
+
+Table: (\#tab:GuidanceDDCUs2) Guidelines on assessing status for proportion-based LRPs of 100\% of CUs being above red status, when at least one CU is data-deficient. 
+
+-->
 
 <!--CW: From the PA Policy:
 
@@ -128,8 +175,11 @@ LW: I agree, that would be useful!
 
 We recommend peer-review of the CU data and assessments used in steps 1 and 5 if CU assessment are developed outside of an existing published, peer-reviewed process. Also, we recommend peer-review of decisions on SMU-scale aggregation from steps 2, 3 and 4. This peer review can occur, at least in part, through DFO's State of the Salmon Program's annual implementation of the Pacific Salmon Status Scanner. The Salmon Scanner will be applied annually as part of of a process integrating outputs with local expertise to provide provisional statuses for CUs. Expert review is required to vet statuses derived from the implementation of the Salmon Scanner to ensure they are consistent with underlying biological categories given the multiple and sometimes conflicting dimensions of status. <!--CH: Ann-Marie suggested an example from Fraser Sockeye Shuswap here, but I wonder if it might make the flow of this section awkward? Happy to consider an inclusion from Ann-Marie--> The outputs from that process can be used as a basis for developing CU-level statuses to inform SMU-level LRPs. We emphasize the importance of rigorous peer-review of LRPs and status assessments against them for those SMUs prescribed under regulation, either as part the annual application of Salmon Scanner or in a separate SMU-specific  peer-review process. This peer review process would include assessment of component CUs and decisions about data deficiencies and CU representativeness covering steps 1-5 above, and be documented in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Report.<!--CH question: Is this requirement for CSAS documentation okay? We should ask Julie/Jason to what extent this is consistent with out marine species, and then mention the consistency here. Some TWG participants suggested LRP identification could occur in the rebuilding plan, but this seems awkward as rebuilding objectives may be related to LRPs, or at least they will in other species, so best to keep the 2 processes separate I think.
 CW: Agree with keeping rebuilding plan and LRP separate. 
-LW: I agree as well.
-KH comments on above paragraph: 
+LW: I agree as well.-->
+
+
+
+<!--KH comments on above paragraph: 
 
 1) Also agree that LRPs need to be defined seperate from a rebuilding plan.   
 
@@ -166,8 +216,7 @@ In the context described here, aggregate abundance-based LRPs are scientifically
 ### What is Acceptable Probability of Achieving Proportion-Based LRP? (Step 8)
 
 
-Aggregate abundance-based LRPs are defined to be consistent with the WSP objective of maintaining biodiversity at the scale of CUs. First, an acceptable probability of achieving the proportion-based LRP (i.e., all CUs above red status) is identified. We recommend applying a probability of at least 50% of all CUs being above red status to align with WSP objectives. We provide LRPs associated with four probabilities, 50%, 66%, 90%, and 99% derived from categories of likelihoods used by the International Panel on Climate Change [@mastrandreaGuidanceNoteLead2010], instead of specifying a single probability because we could not identify a scientific basis for the choice (see Section \@ref(logisticMethods)). <!--CH consider removing the next 2 sentences as they are about trigger not LRP itself. "DFO's Guidelines for the Implementation of Fish Stock Provisions for Rebuilding states “Unless otherwise defined in stock-specific precautionary approach frameworks, the LRP should be considered breached if the terminal year stock status indicator is estimated to be at or below the LRP with a greater than 50$\%$ probability or if the projected stock status indicator falls below the LRP with a greater than 50$\%$ probability under a zero catch scenario in a 1 year projection” [@dfoScienceGuidelinesSupport2021]."--> In our case studies, we provide logistic regression-based LRPs for those four probabilities, and focus sensitivity analyses on a 50% probability of all component CUs having status above red. This approach to delineating serious harm could be considered risk neutral, where risks may be accounted for directly and explicitly in harvest control rules that trade-off multiple objectives. 
-
+Aggregate abundance-based LRPs are defined to be consistent with the WSP objective of maintaining biodiversity at the scale of CUs. First, an acceptable probability of achieving the proportion-based LRP (i.e., all CUs above red status) is identified. We recommend applying a probability of at least 50% of all CUs being above red status to align with WSP objectives. We provide LRPs associated with four probabilities, 50%, 66%, 90%, and 99% derived from categories of likelihoods used by the International Panel on Climate Change [@mastrandreaGuidanceNoteLead2010], instead of specifying a single probability because we could not identify a scientific basis for the choice (see Section \@ref(logisticMethods)). 
 
 
 \renewcommand*{\arraystretch}{1.6}
@@ -184,6 +233,12 @@ $>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
 \hline
 (\#tab:LikelihoodsIPCC)
 \end{longtable}
+
+
+
+Future applications of this Step 8 when setting LRPs may want to consider the relevance of probability thresholds for triggering LRPs described in DFO's Guidelines for the Implementation of Rebuilding Plans [@dfoScienceGuidelinesSupport2021].  These guidelines specify that, "unless otherwise defined in stock-specific precautionary approach frameworks, the LRP should be considered breached if the terminal year stock status indicator is estimated to be at or below the LRP with a greater than 50% probability or if the projected stock status indicator falls below the LRP with a greater than 50% probability under a zero catch scenario in a 1 year projection". While using a 50$% probability threshold of one or more CUs having red status is not directly analagous, in both cases the probability threshold chosen represents the probability of the stock avoiding serious harm. In our case studies, we provide logistic regression-based LRPs for the four probability thresholds described above, and focus sensitivity analyses on a 50% probability of all component CUs having status above red. This approach to delineating serious harm could be considered risk neutral, where risks may be accounted for directly and explicitly in harvest control rules that trade-off multiple objectives.    
+
+
 
 
 
