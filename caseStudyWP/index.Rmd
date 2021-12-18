@@ -9,10 +9,10 @@ author: |
   Michael Arbeider^4^
   Jessy Bokvist^5^
   Sabrina Crowley^6^
-  Sue Grant^3^
+  Sue Grant^7^
   Wilf Luedke^5^
   Diana McHugh^5^
-  Candace Picco^7^
+  Candace Picco^8^
   Pieter Van Will^5^
 
 author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P."
@@ -40,7 +40,11 @@ address: |
   ^6^Nuu-chah-nulth Tribal Council\
      5001 Mission Rd\
      Port Alberni, BC, V9Y 8X9\
-  ^7^Ha'oom Fisheries Society\
+  ^7^Fisheries and Oceans Canada\
+     Regional Headquarters, Pacific\
+     200-401 Burrard Street\
+     Vancouver, BC, V6C 3S4\
+  ^8^Ha'oom Fisheries Society\
      320 Opitsaht IR Road\
      Tofino, BC, V0R 2Z0\
 month: Month # fill in
