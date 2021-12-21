@@ -154,19 +154,19 @@ The stock-recruitment parameters can be altered according to the user defined sc
 Once stock-recruitment parameters are defined, the number of spawners is initialized. The number of spawners is set at equilibrium for the first 6 years (the maximum possible number of age classes) and then calculated based on recruitment and exploitation rates in the previous years (Equation \@ref(eq:Seqinit)). If the calculated number of spawners is lower than the user inputted extinction threshold, then the number of spawners is set to zero. Recruitment error is given by a multivariate normal distribution reflecting the recruitment covariance among CUs. 
 
 
-\begin{align}
+\begin{equation}
 S_{y,i} =
  \begin{cases}
    Seq_{i} &\text{ if } y = \leq 6\\
    RY_{y,i} \cdot (1 - \overline{ER}_{n}) &\text{ otherwise}
   \end{cases}
   (\#eq:Seqinit)
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 Seq_{i} = \alpha_{i}/\beta_{i}
 (\#eq:Seq)
-\end{align}
+\end{equation}
 
 
 
@@ -174,60 +174,59 @@ The age structure of the recruitment by brood year is computed following a multi
 
 <!--CH: I think this is the same thing but I just wanted to be clear that the multivariate logistic aging error was applied to recruitment by BY, not calendar year Returns. Total returns are calculated in the 2nd eqn below.
 -->
-\begin{align}
-  p_{y,i,j} \sim \text{Multivariate Logistic}(\overline{p}_{i,j},\tau_{i}) \\
+\begin{equation}
+  p_{y,i,j} \sim \text{Multivariate Logistic}(\overline{p}_{i,j},\tau_{i}) 
   (\#eq:mat)
-\end{align}
+\end{equation}
 
-
+if y>6:
 \begin{align}
-\text{if y>6}\\
   RY_{y,i} = \sum_j(R_{y-j,i} \cdot p_{y-j,i,j})
   (\#eq:RY)
 \end{align}
 
  The computation of brood year recruitment follows the recruitment curve of choice. For the LRP version of `samSim`, three options for the recruitment curve are available: a simple Ricker curve (equation \@ref(eq:Rickersimple) when $\rho = 0$), Ricker curve with temporal autocorrelation in recruitment error (equation \@ref(eq:Rickersimple)), and Ricker curve with a smolt-to-adult marine survival covariate (Equations \@ref(eq:Rickersurv) and \@ref(eq:Rickersurvsum), also described in Chapter \@ref(IFCChapter)). Recruitment error is assumed to be correlated among CUs for all versions of the Ricker curve. Random recruitment deviates can be generated with multivariate t or multivariate normal distributions, that can be symmetric or skewed. The study cases used in this report all assume that recruitment deviates come from a symmetrical multivariate normal distribution (Equation \@ref(eq:CUautocorr)). 
 
-\begin{align}
-  R_{y,i} &= S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \frac{\sigma_{i}^{2}}{2}}\\
+\begin{equation}
+  R_{y,i} = S_{y,i} \cdot e^{\alpha{i} - \beta{i} \cdot S_{y,i} + w_{y,i} - \frac{\sigma_{i}^{2}}{2}}
   (\#eq:Rickersimple)
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
  w_{y,i} = 
 \begin{cases}
  v_{y,i} & \text{if } y = 1 \\
  w_{y-1,i} * \rho + v_{y,i} & \text{if } y > 1
 \end{cases}
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
   v_{y,i} \sim N(\mu=0,covMat)
   (\#eq:CUautocorr)
-\end{align}
+\end{equation}
 
 
 \begin{align}
-  Ra_{y,i,j} &= p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot sv_{y,j} + v_{y,i} - \frac{\sigma_{i}^{2}}{2}}
+  Ra_{y,i,j} = p_{y,i,j} \cdot S_{y,i} \cdot e^{\alpha_{i} - \beta_{i} \cdot S_{y,i} + \gamma_{i} \cdot sv_{y,j} + v_{y,i} - \frac{\sigma_{i}^{2}}{2}}
   (\#eq:Rickersurv)
 \end{align}
 
-\begin{align}
-  R_{y,i} &= \sum_{j}Ra_{y,i,j}
+\begin{equation}
+  R_{y,i} = \sum_{j}Ra_{y,i,j}
   (\#eq:Rickersurvsum)
-\end{align}
+\end{equation}
 
 
 For the Ricker model with the marine survival covariate, the covariates for each calendar year are generated following a normal distribution with user defined mean and variance (Equation \@ref(eq:survCY)). The distribution of survival covariates is truncated between maximum and minimum values provided in the input files. The brood year survival covariates, $Surv_{y,j}$, are currently populated following the dominant life history types from Interior Fraser Coho. For that stock, fish with a 3-year life cycle differ from those with a 4-year life cycle in the number of years spent in freshwater as juveniles, i.e., 18 months vs 30 months; both life cycles spend 18 months at sea before returning to spawn. Fish with a 2-year life cycle spend 18 months in the freshwater environment and only 6 months at sea before returning as jacks. This life history results in the survival covariate being lagged by one year for ages 2 and 3 Equation \@ref(eq:surv)). The exception is the first two years of the priming loop, when no lag is applied to the covariates.
  
-\begin{align}
+\begin{equation}
 sv_{y,j} = 
 \begin{cases}
  svCY_{y-1} & \text{if } j\leq 3 \\
  svCY_{y} & \text{otherwise}
 \end{cases}
  (\#eq:surv)
-\end{align}
+\end{equation}
 
 \begin{align}
   svCY_{y} &= wsv_{y} - \dfrac{{\sigma_{sv}}^2}{2}\\
@@ -247,10 +246,10 @@ knitr::include_graphics('figure/cohofreshwatersurvivaldiagram.png')
 
 Recruitment numbers produced with either formulation of the Ricker model are capped. The default maximum recruitment value is  $3 \cdot S_{eq}$, but the scalar can be modified by the user via the $\Upsilon$ variable (Equation \@ref(eq:reccapscalar)). In addition, if the generated recruitment is lower than the user defined extinction threshold, then recruitment is set to zero.  
 
-\begin{align}
+\begin{equation}
   R_{y,i} = min(R_{y,i}, \Upsilon \cdot Seq_{i})
   (\#eq:reccapscalar)
-\end{align}
+\end{equation}
 
 <!--CH addition below-->
 Although in our implementation of `samSim` for Interior Fraser Coho with marine survival covariate, data were used to prime the model, equations for simulating dynamics during this period are provided here for completeness. The equations for simulating population dynamics are also used in the projection phase of the model (see below).
@@ -263,25 +262,25 @@ In the priming loop, the management quantities and benchmarks are only calculate
 If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ and $Sgen_{i}$ calculated based on the stock-recruitment parameters. When the model with the survival covariate is used, the $\alpha_{i}$ parameter is modified to incorporate the survival component (Equation \@ref(eq:alphamb)). In order to keep the management benchmarks constant through time, the long term average of the survival covariate is used. $Smsy_{i}$ is calculated following the explicit solution provided by @scheuerellExplicitSolutionCalculating2016 using the Lambert W function (Equation  \@ref(eq:smsysamsim)). $Sgen_{i}$ is estimated by solving Equation \@ref(eq:Sgensamsim) numerically, as described by @holtIndicatorsStatusBenchmarks2009a. The lower benchmark is set to $Sgen_{i}$ and the upper benchmark is set to 80\% of $Smsy_{i}$.
 
 
-\begin{align}
+\begin{equation}
 {\alpha^\prime}_{i} =
 \begin{cases}
 \alpha_{i} + \gamma_{i}\cdot \overline{sv} & \text{for Ricker with survival} \\
 \alpha_{i}  & \text{for simple Ricker}
 \end{cases}  
   (\#eq:alphamb)
-\end{align}
+\end{equation}
 
-\begin{align}
-  Smsy_{i} &= \dfrac{1 - W(e^{1-{\alpha^\prime}_{i}})}{\beta_{i}}
+\begin{equation}
+  Smsy_{i} = \dfrac{1 - W(e^{1-{\alpha^\prime}_{i}})}{\beta_{i}}
   (\#eq:smsysamsim)
-\end{align}
+\end{equation}
 
 
-\begin{align}
+\begin{equation}
   Smsy_{i} = Sgen_{i} \cdot e^{{\alpha^\prime}_{i}\cdot \left( 1-\dfrac{Sgen_{i}}{\beta_{i}}\right)}
   (\#eq:Sgensamsim)
-\end{align}
+\end{equation}
 
 
 If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. <!--CH: added this next 2 sentences-->Note, percentile-based benchmarks were not implemented in our case studies for projection-based LRPs. Future applications could vary the percentiles used as lower and upper benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
@@ -313,10 +312,10 @@ In this step, we compute the observed proportions of returns at age and the obse
 <!--CW: Note that the variable p_{y,i,j} is not defined in the text, it is calculated manually for each j, here: https://github.com/Pacific-salmon-assess/samSim/blob/f055ade3dd50ae3ad994868993a5673d08ffcb87/R/genericRecoverySimulator.R#L1407. I found it a bit cumbersome to write out in simple equations, So I ommited it from the text. 
 -->
  
-\begin{align}
+\begin{equation}
   obsp_{y,i,j} \sim \text{Multivariate Logistic}(p_{y,i,j}, \varphi) 
   (\#eq:obsppn)
-\end{align}
+\end{equation}
 
 
 
@@ -324,10 +323,10 @@ The observed recruitment by brood year is retrieved by multiplying the true recr
 
 
 
-\begin{align}
-  obsR_{y-j,i} &= \sum^j (RY_{y-j,i} \cdot obsp_{y-j,i,j})
+\begin{equation}
+  obsR_{y-j,i} = \sum^j (RY_{y-j,i} \cdot obsp_{y-j,i,j})
   (\#eq:obsR)
-\end{align}
+\end{equation}
 
 
 
@@ -337,15 +336,15 @@ The observed recruitment by brood year is retrieved by multiplying the true recr
 
  When forecast error is included in the projection scenarios, it is generated by adding lognormal error around the calendar year recruitment (Equations \@ref(eq:FctR) and \@ref(eq:Fct)). The error distribution is also truncated between the 0.0001 and 0.9999 quantiles to avoid extreme forecast values. Forecast error is not considered in the LRP study cases.
 
-\begin{align}
-  f(RY_{y,i}) &= RY_{y,i} \cdot exp(\omega_{y,i})
+\begin{equation}
+  f(RY_{y,i}) = RY_{y,i} \cdot exp(\omega_{y,i})
   (\#eq:FctR)
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
   \omega_{y,i} \sim N(\overline{\omega},\sigma_{\omega})
   (\#eq:Fct)
-\end{align}
+\end{equation}
 
 
 
@@ -357,64 +356,64 @@ The next step is to calculate the realized catches following a harvest control r
  The first layer of catch variability is implemented at the MU level. The error is assumed to be the same for all CUs within an MU. The mean and variance for the MU level error are defined in the input files and then transformed into shape parameters for the Beta distribution draw (Equations \@ref(eq:ERMU)-\@ref(eq:deER1) ).
 
 
-\begin{align}
+\begin{equation}
 ER^{MU}_{y,n} 
 \begin{cases}
   \sim Beta(d1,d2) & \text{n=Canada} \\
    = \overline{ER}_{n}  & \text{n=U.S.}
 \end{cases}
   (\#eq:ERMU)
-\end{align}
+\end{equation}
 
 
-\begin{align}
+\begin{equation}
 (\#eq:deER1)
-   d1 &= {\overline{ER}_{n}}^2 \cdot \left(\frac{1-\overline{ER}_{n}}{\vartheta^{2}}-\frac{1}{\overline{ER}_{n}}\right)  
-\end{align}
+   d1 = {\overline{ER}_{n}}^2 \cdot \left(\frac{1-\overline{ER}_{n}}{\vartheta^{2}}-\frac{1}{\overline{ER}_{n}}\right)  
+\end{equation}
 
 
-\begin{align}
-   d2 &= d1 \cdot \frac{1}{\overline{ER}_{n}-1}
-\end{align}
+\begin{equation}
+   d2 = d1 \cdot \frac{1}{\overline{ER}_{n}-1}
+\end{equation}
 
-\begin{align}
-   \vartheta &= CV(\overline{ER}_{n}) \cdot \overline{ER}_{n}  
+\begin{equation}
+   \vartheta = CV(\overline{ER}_{n}) \cdot \overline{ER}_{n}  
   (\#eq:deER)
-\end{align}
+\end{equation}
 
 In the second layer, CU-specific exploitation rates are drawn from a beta distribution using the output exploitation rate from the first layer as mean and CU-specific CV defined in the input files. The mean and CVs are transformed into shape parameters for the Beta distribution draws (Equations \@ref(eq:ERCU)-\@ref(eq:oERCU)). The Catches are then computed by multiplying the CU specific $ER$ and the calendar year recruits Equation \@ref(eq:Catagg).
 
 
-\begin{align}
+\begin{equation}
 ER_{y,i,n} 
 \begin{cases}
  \sim Beta(o1_{y,i},o2_{y,i}) & \text{n=Canada} \\
  =\overline{ER}_{n}  & \text{n=U.S.}
 \end{cases}  
   (\#eq:ERCU)
-\end{align}
+\end{equation}
 
 
-\begin{align}
-   o1_{y,i} &= ({ER^{MU}_{y,n}})^2 \cdot \left(\frac{1-ER^{MU}_{y,n}}{\phi_{y,i,n}^{2}}-\frac{1}{ER^{MU}_{y,n}}\right)
-\end{align}
+\begin{equation}
+   o1_{y,i} = ({ER^{MU}_{y,n}})^2 \cdot \left(\frac{1-ER^{MU}_{y,n}}{\phi_{y,i,n}^{2}}-\frac{1}{ER^{MU}_{y,n}}\right)
+\end{equation}
 
 
-\begin{align}
-   o2_{y,i} &= o1_{y,i} \cdot \dfrac{1}{ER^{MU}_{y,n}-1}
-\end{align}
+\begin{equation}
+   o2_{y,i} = o1_{y,i} \cdot \dfrac{1}{ER^{MU}_{y,n}-1}
+\end{equation}
 
-\begin{align}
-   \phi_{y,i,n} &= CV(ER_{y,i,n}) \cdot ER^{MU}_{y,n}
+\begin{equation}
+   \phi_{y,i,n} = CV(ER_{y,i,n}) \cdot ER^{MU}_{y,n}
    (\#eq:oERCU)
-\end{align}
+\end{equation}
 
 
  
-\begin{align}
-  {C}_{y,i,n} &= ER_{y,i,n} \cdot RY_{y,i}
+\begin{equation}
+  {C}_{y,i,n} = ER_{y,i,n} \cdot RY_{y,i}
   (\#eq:Catagg)
-\end{align}
+\end{equation}
  
 
 
@@ -422,31 +421,31 @@ The catch for Canada is further divided in two components, mixed-stock fishery a
 
 
 
-\begin{align}
+\begin{equation}
 (\#eq:tacmix)
-  {mC}_{y,i} &=  C_{y,i,n=Canada} \cdot \psi_{y,i} 
-\end{align}
+  {mC}_{y,i} =  C_{y,i,n=Canada} \cdot \psi_{y,i} 
+\end{equation}
 
-\begin{align}
-  {sC}_{y,i} &= C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
+\begin{equation}
+  {sC}_{y,i} = C_{y,i,n=Canada} \cdot (1- \psi_{y,i})
   (\#eq:tacsingle)
-\end{align}
+\end{equation}
 
 
 The next step is to compute the aggregate exploitation rate and the remaining number of spawners (Equations \@ref(eq:eragg) and \@ref(eq:spawners)).
 
 
 
-\begin{align}
+\begin{equation}
   (\#eq:eragg)
   ERagg_{y,i} = \dfrac{\sum^n C_{y,i,n}}{RY_{y,i}}
-\end{align}
+\end{equation}
 
 
-\begin{align}
+\begin{equation}
   S_{y,i} = RY_{y,i} \cdot(1-ERagg_{y,i}) 
    (\#eq:spawners)
-\end{align}
+\end{equation}
  
 
 ### Project observed data
@@ -457,79 +456,79 @@ Catch observation error is given by a log normal distribution (Equations \@ref(e
 
 
 
-\begin{align}
+\begin{equation}
 obsC_{y,i,n} =
  \begin{cases}
    C_{y,i,n} \cdot u_{y,i,n} &\text{ n=U.S.}\\
    {obsmC}_{y,i} +{obssC}_{y,i} &\text{ n=Canada}
   \end{cases}
   (\#eq:obsC)
-\end{align}
+\end{equation}
 
 
 Canadian mixed-stock fisheries observed catches:
-\begin{align}
-  {obsmC}_{y,i} &= {mC}_{y,i} \cdot u_{y,i,n} \cdot obspCU_{y,i} 
+\begin{equation}
+  {obsmC}_{y,i} = {mC}_{y,i} \cdot u_{y,i,n} \cdot obspCU_{y,i} 
   (\#eq:obsmixC)
-\end{align}
+\end{equation}
 
 
 Canadian single-stock fisheries observed catches:
 
-\begin{align}
-  {obssC}_{y,i} &= {sC}_{y,i} \cdot u_{y,i,n}
+\begin{equation}
+  {obssC}_{y,i} = {sC}_{y,i} \cdot u_{y,i,n}
   (\#eq:obssingleC)
-\end{align}
+\end{equation}
 
 
-\begin{align}
-u_{y,i,n} &\sim logN(0,\sigma_{C})
-\end{align}
+\begin{equation}
+u_{y,i,n} \sim logN(0,\sigma_{C})
+\end{equation}
 
-\begin{align}
-  obspCU_{y,i}  &\sim \text{Multivariate Logistic}(pCU_{y,i},\kappa)
+\begin{equation}
+  obspCU_{y,i}  \sim \text{Multivariate Logistic}(pCU_{y,i},\kappa)
   (\#eq:obspCU)
-\end{align}
+\end{equation}
 
-\begin{align}
-  pCU_{y,i} &= \dfrac{{mC}_{y,i}}{\sum^i {mC}_{y,i}}
-\end{align}
+\begin{equation}
+  pCU_{y,i} = \dfrac{{mC}_{y,i}}{\sum^i {mC}_{y,i}}
+\end{equation}
 
 
  Observed number of spawners is given by a log normal distribution truncated between the 0.0001 and 0.9999 quantiles (Equation \@ref(eq:obsS)). The observed recruitment  is the sum of observed catches and observed spawner numbers (Equation \@ref(eq:obsRY)). The observed exploitation rate is directly calculated by dividing the observed catches by the observed recruitment (Equation \@ref(eq:obsER)).
 
-\begin{align}
+\begin{equation}
 (\#eq:obsS)
-  obsS_{y,i} &= S_{y,i} \cdot  \cdot z_{y,i}
-\end{align}
+  obsS_{y,i} = S_{y,i} \cdot  \cdot z_{y,i}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 (\#eq:obsSz)
-  z_{y,i} &\sim logN(0,\sigma_{S})
-\end{align}
+  z_{y,i} \sim logN(0,\sigma_{S})
+\end{equation}
 
 
 
-\begin{align}
-  obsRY_{y,i} &= \sum^{n}obsC_{y,i,n} + obsS_{y,i}
+\begin{equation}
+  obsRY_{y,i} = \sum^{n}obsC_{y,i,n} + obsS_{y,i}
    (\#eq:obsRY)
-\end{align}
+\end{equation}
 
 
-\begin{align}
-  obsER_{y,i} &= \frac{\sum_{n}obsC_{y,i,n}}{obsRY_{y,i}}
+\begin{equation}
+  obsER_{y,i} = \frac{\sum_{n}obsC_{y,i,n}}{obsRY_{y,i}}
   (\#eq:obsER)
-\end{align}
+\end{equation}
 
 
 ### Run stock assessment and calculate management quantities
 
 This next phase of the projection loop simulates salmon stock assessment analysis. The linearized simple Ricker stock-recruit curve is fit to the observed data and $\hat{a}_{y,i}$ and $\hat{b}_{y,i}$ are estimated. Again, this step was not implemented for LRP analyses, which used benchmarks calculated from true underlying parameters provided as inputs (i.e., from a normative period).<!--CH: moved this sentence up  from below to here-->
 
-\begin{align}
-  log \left( \dfrac{obsR_{1:y,i}}{obsS_{1:y,i}}\right) &= \hat{\alpha}_{y,i}-\hat{\beta}_{y,i} \cdot  obsS_{y,i}\\
+\begin{equation}
+  log \left( \dfrac{obsR_{1:y,i}}{obsS_{1:y,i}}\right) = \hat{\alpha}_{y,i}-\hat{\beta}_{y,i} \cdot  obsS_{y,i}
   (\#eq:obslogRS)
-\end{align}
+\end{equation}
 
 The management quantities, i.e., $Sgen$ and $Smsy$ or Spawners quantiles, can then be recalculated based on the estimated stock-recruitment parameters and the observed time series of spawners using the same procedure described in section \@ref(compute-management-quantities-and-benchmarks). 
 
