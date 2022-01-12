@@ -20,6 +20,7 @@ When only a single metric is applied to derive status, there is a risk of provid
 
 When assessing CU status relative to abundance-based lower benchmarks, we use generational mean spawner abundances as a basis for determining whether each CU is above or below its lower benchmark. Generational smoothing integrates status over cohorts within a generation, which can exhibit relatively independent dynamics <!--is there a good reference for this? CH: not sure, but can look for one later-->. This approach reduces noise in annual CU status determination due to annual fluctuations in CU abundances from any single cohort. It also makes our determination of CU status consistent with the approach taken for abundance-based benchmarks in WSP assessments and the Pacific Salmon Status Scanner.
 
+
 ## ESTIMATION OF LRPS: AGGREGATING CU BENCHMARKS AND STATUS TO SMUS
 
 ### Proportion-based LRPs

@@ -22,6 +22,15 @@ Under DFO's Precautionary Approach Framework, LRPs represent the stock status be
 
 Furthermore, the definition of serious harm from @dfoFisheryDecisionMakingFramework2009 indicates that LRPs should be *above* the level where serious harm occurs, not at the level where it is occurring, and that long-term losses should be avoided.  Defining the level before serious harm occurs to a species or ecosystem is a pervasive challenge as harm is often not identified until it is already occurring [@hilbornQuantitativeFisheriesStock1986]. Also, this definition of serious harm mentions possible impacts on other ecosystem components, which are often challenging to identify because of limited data and poor understanding of mechanisms driving declines in productivity [but see @chagarisEcologicalReferencePoints2020].
  
+ <!--CH add Marentette's more nuanced description of serious harm:
+ "In the context of fisheries, serious harm can be interpreted as any undesirable changes to the biological attributes of the stock that make growth to target1 levels cease to be considered rapid and secure,1 and would thus encompass stock states before extinction is a concern.2,3 These changes can be associated with:
+•	a loss of resilience4 (an impaired ability to rebuild, exceed replacement5 or to recover from perturbation6);
+•	impaired productivity1-8 (resulting from changes to biological processes such as recruitment, growth, maturation and survival1,3); 
+•	increased risk of depensation or Allee effects3,7; and/or
+•	more generally, states where population dynamics cease to be well-understood.3 
+Serious harm may be irreversible or only slowly reversible over the long-term,5 and may due to fishing, other human-induced mortality, or other changes in population dynamics.3 When a stock is estimated to be at risk of serious harm, there may also be resultant impacts to the broader socio-ecological system, such as the ecosystem, associated or dependent species, and a long-term loss of fishing opportunities.6 Economic inefficiencies such as growth overfishing or reduced yield, however, do not in and of themselves constitute serious harm to the stock.5
+The LRP is a reference point that generally represents a threshold to stock states considered at rapidly increasing risk of serious harm.1,2 Under Canada’s PA Policy, the LRP is the boundary between the Critical and Cautious zones, and the LRP also often functions as an operational control point (points at which management measures change) in harvest strategies.6,8"
+ -->
 
 Canada's Wild Salmon Policy, WSP, represents DFO's implementation of the Precautionary Approach Framework for Pacific salmon. The goal of the WSP is to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity [@dfoCanadaPolicyConservation2005]. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). 
 
@@ -37,6 +46,17 @@ While the assessment of Pacific salmon under the WSP has focused on setting benc
 
 
 ## REVIEW OF REFERENCE POINTS FOR PACIFIC SALMON
+
+<!--CH Consider Marentette' et al. in prep's categorization of LRPs and status indicators:
+-	LRPs can be categorized as: theoretical (Sgen), historical (percentiles), empirical benchmarks (trends benchmarks)? 
+o	Options based on (a) resilience (Sgen), (b) recruitment over fishihng (e.g., SR based like % RMAX, SPR methods, relative depletion as proxy for recruitment threshold, historical or empirical proxy for relative depletion), (c) depensation, (d) impaired production (% BMSY or % of SPR, or % of B0 i.e, % of depletion, historical/empirical proxies of  MSY RPs), (e) unknown stock dynamics at low levels
+
+- However our text on benchmarks isn't provided until Ch3, Estimation of CU status
+
+-	Marentette-- Indicators can be categorized as: natural (total spawners), proxy (indicator stocks as proxy), composite indicators (multi-dimensional approach)
+o	Considerations for indicators: proportionality, representativeness, other less common indicators.
+-->
+
 
 LRPs are commonly used in the assessment and management of marine fisheries where they are used to identify and communicate status and inform harvest control rules. Reviews of the application of reference points and harvest control rules can be found in @kvamsdalHarvestControlRules2016 and @puntHarvestControlRules2010. @dowlingEmpiricalHarvestStrategies2015 reviewed the use of harvest control rules and management procedures in data-poor fisheries. In Canada, @sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and LRPs before the publication of DFO's Precautionary Approach Framework in 2009. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 12 years after the publication of DFO's Precautionary Approach Framework, a review by @marentetteSpecificationPrecautionaryApproach2021 showed that the principles of the Framework, including the adoption of LRPs, are now widespread in the management of Canadian stocks. This review was based on a survey of 177 Canadian stocks of cultural, economic and/or environmental importance, excluding salmonids and transboundary stocks. They identified that 102 stocks had adopted LRPs, although the method used to estimate the LRPs varied considerably among stocks. @kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. Diagnosing where serious harm is occurring is a pervasive challenge when identifying LRPs, as is addressing the impacts of non-stationarity in underlying biological processes such as natural mortality [@kronlundConsiderationsDesignRebuilding2021].
 
