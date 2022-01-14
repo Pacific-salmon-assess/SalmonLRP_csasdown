@@ -7,6 +7,10 @@ output:
 # CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK{#WCVIchinookChapter}
 ## CONTEXT
 
+<!--Comments from mary thiess:
+1.	In the WCVI case study, I’m wondering if a bit more attention should be put on consistent use of some of the terminology… for example, clearly differentiating “stocks” (WCVI Chinook as an FSP “Stock”, and/or enhanced stocks) from “populations” (the wild things that comprise CU/DUs)?
+2.	I also Added some clarifications around the WCVI CK data sources and wonder about the extent to which some of the PNIs have been validated (Marble R, in particular stands out as one that has an exceptionally high PNI value given the hatchery there?) I know a lot of work has taken place since I was last involved, but some of the pers. comm.’s are hard to reconcile with my past understanding (and even with statements in the working paper itself).  The bottom line is that hatchery influence (both directly and through straying) continues to be a difficult concept to estimate quantitatively given the data constraints.
+-->
 The West Coast of Vancouver Island (WCVI) Chinook SMU is comprised of 3 CUs [@holtbyConservationUnitsPacific2007], 7 large inlets (or sounds), and 20 indicators stocks, which are stocks with relatively complete time-series and consistent observation methodology (Figure \@ref(fig:chinook-map); Table \@ref(tab:chinook-Overview), @riddellReview2001Chinook2002). Hatcheries produce a relatively large component of the total production in many of these stocks, where they help achieve harvest, conservation and assessment objectives. However, they are also considered a risk factor for the long-term sustainability of CUs because they can also reduce wild genetic diversity[@withlerGeneticallyBasedTargets2018]. As described in Holt et al. (in review), only indicator stocks without significant enhancement, i.e.,  stocks with Proportionate Natural Influence, PNI, values $\geqslant$ 0.5 were included. Most fish are natural origin in these populations, though the of 'wild' fish, second generation natural-origin fish may be in the minority [@withlerGeneticallyBasedTargets2018]. 
 
 
