@@ -129,7 +129,7 @@ csasdown::csas_table(dat, booktabs = T, caption = "Sum of watershed areas for es
 ```
 
 ### Spawner Abundances
-Spawner abundances were provided for 20 WCVI escapement indicators stocks (D. Dosbon and D. McHugh pers .comm.; Table \@ref(tab:chinook-Overview); Figure \@ref(fig:chinook-IndTimeSeries)). These time-series are compiled annually by DFO Southcoast Area Staff for local and international assessment and management [e.g., @dfoWCVISalmonBulletin2021]. Missing values were not infilled, which limited the estimation of historical SMU status to years with complete data series.  Although the time-series of some escapement indicators stocks begin in 1953, others began as late as 1995 limiting our analyses to these recent time-series that are based on a consistent escapement methodology [@pacificsalmoncommissionPacificSalmonCommission201]. <!--CH: I haven't added the numbers of missing values, but they can be seen in the historical status plot -->In future work, infilled time-series of escapement indicator stocks within inlets (or CUs) could be developed to extend the available time-series. Spawner abundances for escapement indicators stocks were estimated from a combination of snorkel,  boat or aerial surveys, bank walks, and fence counts, which range in accuracy and precision [see @dfoWestCoastVancouver2014 for a summary of monitoring and assessment methods]. Although indicator stocks are chosen in part based on the consistency of the methods applied, spawner estimates from visual surveys are a source of uncertainty for this SMU. Abundances are usually estimated using Area-Under-the-Curve (AUC) or associated maximum likelihood methods. For stocks that are not surveyed continuously over the spawning season, abundances are estimated using peak counts or a combination of observations from multiple surveys, contributing additional uncertainties to abundance estimates. 
+Spawner abundances were provided for 20 WCVI escapement indicators stocks (D. Dosbon and D. McHugh pers .comm.; Table \@ref(tab:chinook-Overview); Figure \@ref(fig:chinook-IndTimeSeries)). These time-series are compiled annually by DFO Southcoast Area Staff for local and international assessment and management [e.g., @dfoWCVISalmonBulletin2021]. Missing values were not infilled, which limited the estimation of historical SMU status to years with complete data series.  Although the time-series of some escapement indicators stocks begin in 1953, others began as late as 1995 limiting our analyses to these recent time-series that are based on a consistent escapement methodology [@pacificsalmoncommissionPacificSalmonCommission2018]. <!--CH: I haven't added the numbers of missing values, but they can be seen in the historical status plot -->In future work, infilled time-series of escapement indicator stocks within inlets (or CUs) could be developed to extend the available time-series. Spawner abundances for escapement indicators stocks were estimated from a combination of snorkel,  boat or aerial surveys, bank walks, and fence counts, which range in accuracy and precision [see @dfoWestCoastVancouver2014 for a summary of monitoring and assessment methods]. Although indicator stocks are chosen in part based on the consistency of the methods applied, spawner estimates from visual surveys are a source of uncertainty for this SMU. Abundances are usually estimated using Area-Under-the-Curve (AUC) or associated maximum likelihood methods. For stocks that are not surveyed continuously over the spawning season, abundances are estimated using peak counts or a combination of observations from multiple surveys, contributing additional uncertainties to abundance estimates. 
 
 
 <!--Diana McHugh: Citations for AUC
@@ -252,7 +252,7 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 ```
 
 
-CU status was derived from the proportion of component inlets above lower benchmarks. Serious harm was identified as any one inlet within each of the 3 CUs dropped<!--dropping?--> below its lower benchmark. Here we have assumed the status of the one indicator stock in the West Vancouver Island-North CU (Marble Creek) is representative of the CU. However, further consideration of this assumption is warranted with local expertise.
+CU status was derived from the proportion of component inlets above lower benchmarks. Serious harm was identified as any one inlet within each of the 3 CUs dropping below its lower benchmark. Here we have assumed the status of the one escapement indicator stock in the West Vancouver Island-North CU (Marble River) is representative of the CU. However, further consideration of this assumption is warranted with local expertise.
 
 ## LRP ESTIMATION: PROPORTION OF CUS
 
@@ -268,7 +268,7 @@ The LRP on the proportion of CUs was identified as all 3 CUs containing inlets w
 ## LRP ESTIMATION: AGGREGATE ABUNDANCE LOGISTIC REGRESSION-BASED LRPS
 
 
-Empirical LRPs based on the probability of all component inlets (nested within CUs) being above their lower benchmarks could not be identified for WCVI Chinook because there are no years when all inlets were above their lower benchmark in the historical record (Figure \@ref(fig:chinook-InletTimeSeries)). In order to fit a logistic regression model to data, observations of successes (years when all inlets were > lower benchmarks) and failures (years when all inlets were not > lower benchmarks) are required. The estimation of empirical LRPs is limited to SMUs with historical records that demonstrate contrast in status over time.
+Empirical LRPs based on the probability of all component inlets (nested within CUs) exceeded their lower benchmarks could not be identified for WCVI Chinook because there are no years when all inlets were above their lower benchmark in the historical record (Figure \@ref(fig:chinook-InletTimeSeries)). In order to fit a logistic regression model to data, observations of successes (years when all inlets were > lower benchmarks) and failures (years when all inlets were not > lower benchmarks) are required. The estimation of empirical LRPs is limited to SMUs with historical records that demonstrate contrast in status over time.
 
 ## LRP ESTIMATION: PROJECTION-BASED LRPS
 ### Methods
@@ -415,7 +415,7 @@ We assumed an average exploitation rate as observed for WCVI Chinook in recent y
 
 In forward projections, interannual variability in exploitation rates was assumed to be beta distributed (constrained between 0 and 1), parameterized from estimated pre-terminal exploitation rates for Robertson Creek, with a coefficient of variation (CV) = 0.17 (Table \@ref(tab:chinook-BaseCasePars)). Without data to parameterize inlet-specific variability in exploitation rates, we assumed the inlet-specific variability was half the common (SMU-level) interannual variability (CV=0.085), and varied this in sensitivity analyses from 0 and 0.17 to cover plausible bounds (Figure \@ref(fig:chinook-ERdist)). 
 
-```{r chinook-ERdist, echo=FALSE, fig.cap = "Variability in projected exploitation rates over time (cv=0.17) and among inlets (CV=0.085), from an average explotation of 0.3.", out.width = '50%'}
+```{r chinook-ERdist, echo=FALSE, fig.cap = "Variability in projected exploitation rates over time (cv=0.17) and among inlets (CV=0.085), from an average exploitation of 0.3.", out.width = '50%'}
 nTrials <- 100000
 canERlabel <- 0.30
 set.seed(1)
@@ -504,8 +504,8 @@ knitr::include_graphics("figure/chinook-compareEscCor.png")
 *Covariance in recruitment residuals*
 
 We parameterized correlations in recruitment residuals among inlets from the observed correlations in spawner abundances among inlets derived from the WCVI Chinook run reconstruction (D. Dobson and D. McHugh, pers. comm. DFO South Coast Stock Assessment, Fig. \@ref(fig:chinook-bubbleCor)). 
-However, spawner abundances may be more weakly correlated than recruitment due to differences in exploitation among inlets.  <!--CH: added the last sentence to justify sensitivity analysis-->
-In sensitivity analyses, we scaled the pairwise correlations in recruitment residuals among inlets by 0.5 and 0 of the observed spawner correlations (0 representing recruitment residuals that were uncorrelated among inlets in the projections). 
+However, spawner abundances may be more weakly correlated than recruitment due to differences in exploitation among inlets and sub-populations within inlets.
+In sensitivity analyses, we scaled pairwise correlations in recruitment residuals among inlets by 0.5 and 0 of the observed spawner correlations (0 representing recruitment residuals that were uncorrelated among inlets in the projections). 
 We then compared the resulting correlations in projected spawner abundances to observed correlations, to evaluate the extent to which the model provided realistic projections under each assumption. 
 
 
@@ -522,10 +522,10 @@ When we scaled correlations in recruitment residuals to less than observed spawn
 
 *Variability in age proportions recruits among inlets*
 
-For the base case, we assumed that age proportions of recruits varied over time and among inlets parameterized from age proportions of recruits calculated for each CU in the WCVI Chinook run reconstruction (D. Dobson pers. comm. DFO Science; inlet-specific age-proportions were not available) (Figure \@ref(fig:chinook-agePpns)). We used the CU-specific mean proportions at each age from the run reconstruction with annual deviations in those proportions based on a multivariate logistic distribution, parameterized from the estimated time-series of age proportions.
+For the base case, we assumed that age proportions of recruitment varied over time and among inlets parameterized from age proportions of recruits calculated for each CU in the WCVI Chinook run reconstruction (D. Dobson pers. comm. DFO Science; inlet-specific age-proportions were not available) (Figure \@ref(fig:chinook-agePpns)). We used the CU-specific mean proportions at each age from the run reconstruction with annual deviations in those proportions based on a multivariate logistic distribution, parameterized from the estimated time-series of age proportions.
 
 
-```{r chinook-agePpns, echo=FALSE, fig.cap="Time-series of proportions at age in recruitment aligned by brood year, calculated from run reconstruction for West Coast of Vancouver Island Chinook by CU.", out.width = '60%'}
+```{r chinook-agePpns, echo=FALSE, fig.cap="Time-series of proportions at age in recruitment aligned by brood year, calculated from run reconstruction for WCVI Chinook by CU.", out.width = '60%'}
 cuAges <- read.csv("data/WCVICUages.csv")
 cuAges <- cuAges %>% tidyr::pivot_longer(cols=c("age2", "age3", "age4", "age5"),
                                   names_to="Age", values_to="Proportion")
@@ -537,7 +537,7 @@ cuAges$CU_Names. <- factor(cuAges$CU_Names,
                                      "Westcoast_Vancouver_Island"))
 
 cuAges %>% filter(CU_Names!="Westcoast_Vancouver_Island") %>%
-  ggplot(aes(Year, Proportion, group=CU_Names., colour=CU_Names.)) +
+  ggplot(aes(BroodYear, Proportion, group=CU_Names., colour=CU_Names.)) +
   geom_line() +
   facet_wrap(~Age, ncol=1)
 #If required, consider adding geom_density of pairwise correlations in estimated age ppns of recruits
@@ -609,7 +609,7 @@ Given uncertainty in current and anticipated productivity, projection-based LRPs
 
 Projection-based LRPs tended to increase under low productivity and vice versa (Figure \@ref(fig:chinook-projLRPsAlpha)), a trend that was expected due to the inverse relationship between productivity and inlet-specific S~gen~ values [@holtCautionsUsingPercentilebased2015]. At low productivity, S~gen~ tends to increase, thereby becoming more precautionary.  The sensitivity of LRPs to productivity highlights the value of updating benchmarks and projection-based LRPs as productivity changes. Our results also show that uncertainty in projections increased under low productivity, likely requiring more random Monte Carlo trials for stabilization at p=0.5, i.e., 50% probability of CUs being above their lower benchmarks. The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 ['likely' category, @mastrandreaGuidanceNoteLead2010] when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. At high productivity, LRPs at the p=0.5 level could not be estimated. More detailed analyses of LRPs along the entire range of productivities and exploitation was beyond the scope of this case study.
    
-
+<!--CH: add Mike Staley's concern about depensaion. to what extent can this SA on low produciivty inform Q about depensation?  Mention, "all models are wrong but some are useful", or reword this-->
 
 ```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection-based LRPs estimated under assumptions of reduced productivity (0.75x of current levels) and increased productivity (1.5x current levels).  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue) are highlighted. More Monte Carlo trials are required for stabilization of LRPs at low productivity. LRPs at p=0.66 could not be estimated at low productivity, and LRPs at p=0.5 could not be estimated at high productivity", out.width = '80%'}
 
