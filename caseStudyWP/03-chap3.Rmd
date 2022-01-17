@@ -120,7 +120,7 @@ The formulations for our two stock recruitment models using the assumption of in
 
 ***Model 1: Ricker***
 
-The base Ricker stock recruit model formulation was:
+The base Ricker stock-recruit model formulation was:
 
 \begin{equation}
   R_{i,a,t} = P_{i,a,t-a}S_{i,t-a}e^{log(\alpha_i) + \gamma log(m_{t-1})-\beta_i S_{i,t-a}e^{v_i}-\sigma^2/2}
