@@ -21,10 +21,15 @@ In Press]
 \begin{itemize}
 
 \item The revised Fisheries Act includes new Fish Stocks provisions that introduced legal
-obligations to manage major fish stocks at levels necessary to promote sustainability,
-avoid limit reference points, and implement plans to rebuild stocks that have declined to,
-or below, a limit reference point, all while taking into account the biology of the fish and
-environmental conditions facing the stock.
+obligations to identify limit reference points for major fish stocks prescribed under regulation.
+
+\item Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is occurring to the stock.
+
+\item Canada's Wild Salmon Policy, WSP, includes an objective to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), the focus of biological assessments under the WSP.
+
+\item The revised *Fisheries Act" indicates that a single LRP is required for each "Major Fish Stock",  defined as Stock Management Units (SMUs) for Pacific salmon, which are groups of CUs that are managed as a unit to achieve joint status.  
+
+\item This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain CUs within an SMU above their lower benchmarks under the WSP.
 
 \end{itemize}
 
@@ -63,14 +68,26 @@ While the assessment of Pacific salmon under the WSP has focused on setting benc
 
 ## REVIEW OF REFERENCE POINTS FOR PACIFIC SALMON
 
-<!--CH Consider Marentette' et al. in prep's categorization of LRPs and status indicators:
--	LRPs can be categorized as: theoretical (Sgen), historical (percentiles), empirical benchmarks (trends benchmarks)? 
-o	Options based on (a) resilience (Sgen), (b) recruitment over fishihng (e.g., SR based like % RMAX, SPR methods, relative depletion as proxy for recruitment threshold, historical or empirical proxy for relative depletion), (c) depensation, (d) impaired production (% BMSY or % of SPR, or % of B0 i.e, % of depletion, historical/empirical proxies of  MSY RPs), (e) unknown stock dynamics at low levels
+<!--\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\subsection*{Key Points:}
 
-- However our text on benchmarks isn't provided until Ch3, Estimation of CU status
+\begin{itemize}
 
--	Marentette-- Indicators can be categorized as: natural (total spawners), proxy (indicator stocks as proxy), composite indicators (multi-dimensional approach)
-o	Considerations for indicators: proportionality, representativeness, other less common indicators.
+\item The revised Fisheries Act includes new Fish Stocks provisions that introduced legal
+obligations to identify limit reference points for major fish stocks prescribed under regulation.
+
+\item Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is occurring to the stock.
+
+\item Canada's Wild Salmon Policy, WSP, includes an objective to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), the focus of biological assessments under the WSP.
+
+\item The revised *Fisheries Act" indicates that a single LRP is required for each "Major Fish Stock",  defined as Stock Management Units (SMUs) for Pacific salmon, which are groups of CUs that are managed as a unit to achieve joint status.  
+
+\item This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain CUs within an SMU above their lower benchmarks under the WSP.
+
+\end{itemize}
+
+
+\end{tcolorbox}
 -->
 
 
@@ -87,6 +104,16 @@ For Pacific salmon, @portleyLimitReferencePoints2014 reviewed the use of LRPs an
 
 In some cases, single-metric approaches in which spawner abundances are compared with an abundance-based benchmark have been used as proxies for status outside of DFO [@pacificsalmonfoundationMethodsAssessingStatus2020; @pacificsalmoncommissionChapterPerformanceEvaluation2016]  and occasionally within DFO [e.g., Barkley Sockeye Salmon @chaputConsiderationsDefiningReference2012]. In addition, single-metric approaches are sometimes used in harvest control rules. While biological assessments under the WSP are implemented at the scale of CU, fisheries management and associated harvest control rules often operates at larger scales, aggregating over multiple CUs. For some stock aggregates, harvest control rules are developed to achieve a low probability of individual CUs breaching their lower benchmark on spawner abundances, among other socio-economic considerations, e.g., Fraser River sockeye salmon [@chaputConsiderationsDefiningReference2012]. This approach supports management of weak stocks and is aligned with DFO's Precautionary Approach Framework [@dfoFisheryDecisionMakingFramework2009].
 
+
+<!--CH included Marentette' et al. in prep's categorization of LRPs and status indicators:
+-	LRPs can be categorized as: theoretical (Sgen), historical (percentiles), empirical benchmarks (trends benchmarks)? 
+o	Options based on (a) resilience (Sgen), (b) recruitment over fishihng (e.g., SR based like % RMAX, SPR methods, relative depletion as proxy for recruitment threshold, historical or empirical proxy for relative depletion), (c) depensation, (d) impaired production (% BMSY or % of SPR, or % of B0 i.e, % of depletion, historical/empirical proxies of  MSY RPs), (e) unknown stock dynamics at low levels
+
+- However our text on benchmarks isn't provided until Ch3, Estimation of CU status
+
+-	Marentette-- Indicators can be categorized as: natural (total spawners), proxy (indicator stocks as proxy), composite indicators (multi-dimensional approach)
+o	Considerations for indicators: proportionality, representativeness, other less common indicators.
+-->
 
 
 
