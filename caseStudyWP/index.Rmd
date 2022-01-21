@@ -73,7 +73,9 @@ header-includes:
   - \usepackage{amsmath}
   - \usepackage{graphics}
   - \usepackage{tcolorbox}
-# - \usepackage{tikz}
+  - \usepackage{tikz}
+  - \usetikzlibrary{shapes, arrows.meta, positioning}
+
 ---
 
 ```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
