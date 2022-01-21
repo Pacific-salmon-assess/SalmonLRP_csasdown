@@ -83,29 +83,27 @@ The goals of this working paper as outlined in the Terms of Reference were to:
 
 - Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the WSP objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See Section \@ref(cu-est-methods))
 
-- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See Section \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).^[Holt et al. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] 
+- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See Section \@ref(est-methods) and Appendix \@ref(app:links)). More details are provided in companion paper, Holt et al. (in review).^[Holt et al. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] 
 
 - Document key uncertainties that affect LRP estimates for each method considered, including uncertainties arising from missing or limited CU-level data. (See Section \@ref(recommendations))
 
 - Provide guidance and recommendations on the application of candidate methods over a range of data types and availability. (See Section \@ref(guidelines))
 
 
-This working paper addresses these four goals, while the companion Working Paper (Holt et al. in review) provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies.
+This working paper addresses these four goals, while the companion Working Paper (Holt et al. in review) provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies. Summaries of methods and case sutides are included here for the completeness of these guidelines.
 
 
-In particular, this paper has six components: 
+In particular, this paper has five components: 
 
 1. A review of reference points and their roles for Pacific salmon (Section \@ref(review))
 
 2. Principles for the development of LRPs for Pacific salmon (Section \@ref(principles))
 
-3. A tool kit of candidate LRP methods (Section \@ref(est-methods)), with further details in Holt et al. (in review)
+3. A tool kit of candidate LRP methods (Section \@ref(est-methods)), with further details in Holt et al. (in review). Appendix \@ref(app:case-studies) summaries their application to case studies.
 
-4. A summary of the application of candidate LRPs to case studies (Section \@ref(case-studies)), with further details in Holt et al. (in review)
+4. Guidelines on the implementation of LRPs including recommendations on when, and when not to use each candidate LRP method (Section \@ref(guidelines))
 
-5. Guidelines on the implementation of LRPs including recommendations on when, and when not to use each candidate LRP method (Section \@ref(guidelines))
-
-6. Recommendations on future research (Section \@ref(recommendations))
+5. Recommendations on future research (Section \@ref(recommendations))<!--CH maybe revise this-->
 
 This work was lead by a technical working group composed of DFO and First Nations analysts with expertise and knowledge associated with the biological basis of serious harm and analytical to support the development and application of candidate methods for LRPs. The technical working group was not meant to be a venue for engagement or to capture stakeholder perspectives or socioeconomic objectives. These considerations are relevant when developing management responses to stock assessments, but not in the assessment of stock status using LRPs. 
 
@@ -113,8 +111,7 @@ This work was lead by a technical working group composed of DFO and First Nation
 ### SCOPE
 
 
-
-The LRPs considered here focus on characterizing serious harm to the stock based on levels and/or trends in spawner abundance. We have not included metrics or benchmarks of the status of salmon habitat [@stalbergCanadaPolicyConservation2009] or the ecosystem as a whole, though future analyses could include a more thorough characterization of the nature of serious harm to salmon [as in @dfoUpdateAssessmentFramework2016].
+<!--CH: Sue suggested omitting: The LRPs considered here focus on characterizing serious harm to the stock based on levels and/or trends in spawner abundance. We have not included metrics or benchmarks of the status of salmon habitat [@stalbergCanadaPolicyConservation2009] or the ecosystem as a whole, though future analyses could include a more thorough characterization of the nature of serious harm to salmon [as in @dfoUpdateAssessmentFramework2016].-->
 
 While one role of LRPs is to trigger the development of rebuilding plans under the Fish Stocks provisions, the content and implementation of rebuilding plans is beyond the scope of this paper. A full review of how LRPs can be integrated into salmon management processes outside of the Fish Stocks provisions is beyond our scope, and is a gap that warrants further discussion.  We highlight a few possible roles for LRPs below. We also do not review the current definition of 'major stock' as a SMU for Pacific salmon under the Fish Stocks provisions.
 
