@@ -62,12 +62,97 @@ Differences in adaptive traits among CUs results in diversity in CU-level respon
 Under the WSP, status of individual CUs is represented by comparing status indicators to biological benchmarks delineating three zones of status: green, amber, and red. These zones represent increasing conservation concern from green to red requiring increasing management intervention. The lower benchmark, delineating the red and amber zones, is intended to be at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", the Committee on the Status of Endangered Wildlife in Canada [holtIndicatorsStatusBenchmarks2009a; dfoCanadaPolicyConservation2005a]. One recommended lower benchmark on spawning abundances is S~gen~, the abundance resulting in recovery to S~MSY~ in one salmon generation under equilibrium conditions, [@holtEvaluationBenchmarksConservation2009]. Benchmarks for data-limited contexts have also been identified in recognition that the data required to estimate spawner-recruitment based benchmarks are often not available [@parkenHabitatbasedMethodsEstimate2006]. See Section \@ref(cu-est-methods).
 
 
-While the assessment of Pacific salmon under the WSP has focused on setting benchmarks for individual salmon CUs [@dfoCanadaPolicyConservation2005], the revised *Fisheries Act" indicates that a single LRP is required for each "Major Fish Stock"[@dfoScienceAdvicePrecautionary2021]. In the context of Pacific salmon, "Major Fish Stocks" are defined as Stock Management Units (SMUs), which are groups of CUs that are managed as a unit to achieve joint status.  This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain all CUs within an SMU above their lower benchmarks. The present work expands on previous work to establish assessment methods under the WSP by providing guidance on establishing LRPs for at the scale of Pacific salmon SMUs.  Given the similar intent of LRPs defined by DFO's Precautionary Approach Framework and lower benchmarks under the WSP, lower benchmarks can be used as proxies for LRPs but applied at the scale of CUs instead of SMUs. Our challenge is to identify LRPs that integrate CU-level estimates of status relative to lower benchmarks across all component CUs within an SMU. 
+### SPATIAL SCALES
+
+While the assessment of Pacific salmon under the WSP has focused on setting benchmarks for individual salmon CUs [@dfoCanadaPolicyConservation2005], the revised *Fisheries Act* indicates that a single LRP is required for each "Major Fish Stock"[@dfoScienceAdvicePrecautionary2021]. In the context of Pacific salmon, "Major Fish Stocks" are defined as Stock Management Units (SMUs), which are groups of CUs that are managed as a unit to achieve joint status.  This provision created the need for the development of methodologies to estimate LRPs for management at the SMU level, while considering the need to maintain all CUs within an SMU above their lower benchmarks. The present work expands on previous work to establish assessment methods under the WSP by providing guidance on establishing LRPs at the scale of Pacific salmon SMUs.  Given the similar intent of LRPs defined by DFO's Precautionary Approach Framework and lower benchmarks under the WSP, lower benchmarks can be used as proxies for LRPs but applied at the scale of CUs instead of SMUs. Our challenge is to identify LRPs that integrate CU-level estimates of status relative to lower benchmarks across all component CUs within an SMU. 
+
+
+Considering the smaller scale of CUs is important because threats on Pacific salmon act at a variety of scales. The Fish Stocks provisions pertain to fisheries at scales relevant to harvest management, but for Pacific salmon, threats and management actions can range from local freshwater habitats and estuaries to regional climate change in marine and freshwater environments. Also, multiple levers are used by managers to achieve objectives for Pacific salmon which extend beyond fisheries, including habitat restoration and hatchery enhancement which occur at a variety of spatial scales.  Indeed, for many SMUs, fisheries have been restricted in recent decades [@grantStateCanadianPacific2020], such that habitat and hatchery management are playing an increasingly dominant role in management responses. These decisions require stock assessments and responses at a hierarchy of spatial scales from a watershed-level within CUs to larger aggregates of CUs at regional-scales, sometimes across Pacific salmon species. The LRPs presented here are applied at the SMU scale, though methods could also be applied at smaller or larger scales to inform a variety management decisions.
+
+Alternative spatial scales of assessment and management are used by agencies outside of DFO for Pacific salmon, including Designatable Units used by COSEWIC and Stock Groups under the Pacific Salmon Treaty. These units are often not aligned with Conservation Units - the biological unit of conservation under DFO's WSP - and are not considered further here.
+
+
+## GOALS AND COMPONENTS OF THE WORKING PAPER
+
+Pacific salmon are unique among marine fish species because of their anadromous and semelparous life-history and significant meta-population structure, which results in differences in data availability and modelling approaches for assessments. These differences necessitate advice on LRP development that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. In prep.).
+
+Therefore, the goals of this working paper were to:
+
+1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See Section \@ref(cu-est-methods))
+
+2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See Section \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).^[Holt et al. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] 
+
+3. Document key uncertainties that affect LRP estimates for each method considered, including uncertainties arising from missing or limited CU-level data. (See Section \@ref(recommendations))
+
+4. Provide guidance and recommendations on the application of candidate methods over a range of data types and availability. (See Section \@ref(guidelines))
 
 
 
 
-## REVIEW OF REFERENCE POINTS FOR PACIFIC SALMON
+This paper provides guidelines to operationalize the use of LRP methods including advice of when to apply each method based on data availability and management requirements. The companion Working Paper (Holt et al. in review) provides detailed descriptions of candidate methods for developing LRPs and demonstrates their implementation on three case studies.
+
+
+
+In particular, this paper has six components: 
+
+1. A review of reference points and their roles for Pacific salmon (Section \@ref(review))
+
+2. Principles for the development of Pacific salmon LRPs (Section \@ref(principles))
+
+3. A tool kit of candidate LRP methods (Section \@ref(est-methods)), with further details in Holt et al. (in review)
+
+4. A demonstration of the application of candidate LRPs to case studies (Section \@ref(case-studies)), with further details in Holt et al. (in review)
+
+5. Recommendations on when, and when not to use each candidate LRP method (Section \@ref(guidelines))
+
+6. Recommendations on future research (Section \@ref(recommendations))
+
+This work was lead by a technical working group composed of DFO and First Nations analysts with expertise and knowledge associated with the biological basis of serious harm and analytical to support the development and application of candidate methods for LRPs. The technical working group was not meant to be a venue for engagement or to capture stakeholder perspectives or socioeconomic objectives. These considerations are relevant when developing management responses to stock assessments, but not in the assessment of stock status using LRPs. 
+
+
+### SCOPE
+
+
+
+The LRPs considered here focus on characterizing serious harm to the stock based on levels and/or trends in spawner abundance. We have not included metrics or benchmarks of the status of salmon habitat [@stalbergCanadaPolicyConservation2009] or the ecosystem as a whole, though future analyses could include a more thorough characterization of the nature of serious harm to salmon [as in @dfoUpdateAssessmentFramework2016].
+
+While one role of LRPs is to trigger the development of rebuilding plans under the Fish Stocks provisions, the content and implementation of rebuilding plans is beyond the scope of this paper. A full review of how LRPs can be integrated into salmon management processes outside of the Fish Stocks provisions is beyond our scope, and is a gap that warrants further discussion.  We highlight a few possible roles for LRPs below. We also do not review the current definition of 'major stock' as a SMU for Pacific salmon under the Fish Stocks provisions.
+
+Time-varying population processes, such as changes in productivity, have important impacts on biological benchmark, LRPs, and assessment against LRPs. While we describe some recent approaches for considering those changes in Section \@ref(review) on the review of reference points, a comprehensive review and evaluation of the impacts of time-varying parameters on LRPs is beyond the scope of this study. This theme is an important area for future research.
+
+While we follow the recommendation of @holtIndicatorsStatusBenchmarks2009 to assess status of CUs using multiple metrics, we have implemented this approach using a multidimensional algorithm, the Pacific Salmon Status Scanner (or Salmon Scanner), documented in Pestal et al. (in prep), developed from the implementation of formal, peer-reviewed WSP assessments for Pacific salmon stocks in Canada. A full review of the Salmon Scanner is beyond the scope of this paper.  Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.
+
+Decisions about prioritizing CUs for conservation within an SMU (e.g., evaluating the costs and benefits of conserving individual CUs given differential vulnerability to climate change or other stressors) is also beyond our scope, requiring a broader discussion with local knowledge holders, managers and stakeholders.
+
+Our applications of LRP methods to case studies are for demonstration purposes only, and are not meant to be formal implementation of LRPs for those SMUs. While candidate LRPs were evaluated to an extent through sensitivity analyses and retrospective analyses, a more rigorous closed-loop simulation evaluation of candidate LRPs was beyond the scope of both working papers, and is recommended as a next step.
+ 
+Here, we follow recommendations of @withlerGeneticallyBasedTargets2018 on the biological assessments of hatchery-influenced populations under the WSP, as described in Section \@ref(est-methods). Following recent WSP assessments, we also removed the demographic influence of hatchery production from time-series of abundances when data on the proportion of hatchery- vs. natural-origin fish on the spawning grounds were available. A review of methods for estimating proportion of hatchery-origin spawners or accounting for them in biological assessments was beyond the scope of this study.
+
+
+
+
+<!--CH: Not sure is the R chunk below is necessary? If we remove, do we need to add gpplot2, knitr, bookdown, devtools to index file? Leave for now-->
+
+```{r load_pkgs, message=FALSE, echo=FALSE}
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg)) {
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+}
+library(csasdown)
+library(ggplot2)
+```
+
+
+
+<!--PUT THIS IN NEW CHAPTER-->
+
+## REVIEW OF REFERENCE POINTS AND THEIR ROLES FOR PACIFIC SALMON
 
 <!--\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
@@ -116,80 +201,6 @@ o	Options based on (a) resilience (Sgen), (b) recruitment over fishihng (e.g., S
 o	Considerations for indicators: proportionality, representativeness, other less common indicators.
 -->
 
-
-
-## ALTERNATIVE SPATIAL SCALES
-
-The Fish Stocks provisions pertain to the management of fisheries. For Pacific salmon, threats occur at a range of spatial scales from local habitat disturbance in freshwater and estuaries to regional climate change in marine and freshwater environments. Also, multiple levers are used by managers to achieve objectives for Pacific salmon which extend beyond fisheries, including habitat restoration and hatchery enhancement, which occur at a variety of spatial scales.  Indeed, for many SMUs, fisheries have been restricted in recent decades [@grantStateCanadianPacific2020], such that habitat and hatchery management are playing an increasingly dominant role in management responses. These decisions require stock assessments and responses at a hierarchy of spatial scales from a watershed-level within CUs to larger aggregates of CUs at regional-scales, sometimes across Pacific salmon species. The LRPs presented here are applied at the SMU scale, though methods could also be applied at smaller or larger scales to inform a variety management decisions.
-
-Alternative spatial scales of assessment and management are used by agencies outside of DFO for Pacific salmon, including Designatable Units used by COSEWIC and Stock Groups under the Pacific Salmon Treaty. These units are often not aligned with Conservation Units - the biological unit of conservation under DFO's WSP - and are not considered further here.
-
-
-## GOALS OF WORKING PAPER
-
-Pacific salmon are unique among marine fish species because of their anadromous and semelparous life-history and significant meta-population structure, which results in differences in data availability and modelling approaches for assessments. These differences necessitate advice on LRP development that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. In prep.).
-
-Therefore, the goals of this working paper were to:
-
-1. Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the Wild Salmon Policy objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (See Section \@ref(cu-est-methods))
-
-2. Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (See Section \@ref(est-methods) and \@ref(app:first-appendix)). More details are provided in companion paper, Holt et al. (in review).^[Holt et al. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] 
-
-3. Document key uncertainties that affect LRP estimates for each method considered, including uncertainties arising from missing or limited CU-level data. (See Section \@ref(recommendations))
-
-4. Provide guidance and recommendations on the application of candidate methods over a range of data types and availability. (See Section \@ref(guidelines))
-
-
-
-## SCOPE
-
-
-This paper provides guidelines to operationalize the use of LRP methods including advice of when to apply each method based on data availability and management requirements. The companion Working Paper (Holt et al. in review) provides detailed descriptions of candidate methods for developing LRPs and demonstrates their implementation on three case studies. Our applications of LRP methods are for demonstration purposes only, and are not meant to be formal implementation of LRPs for those SMUs. While candidate LRPs were evaluated to an extent through sensitivity analyses and retrospective analyses, a more rigorous closed-loop simulation evaluation of candidate LRPs was beyond the scope of both working papers, and is recommended as a next step.
-
-The LRPs considered here focus on characterizing serious harm to the stock based on levels and/or trends in spawner abundance. We have not included metrics or benchmarks of the status of salmon habitat [@stalbergCanadaPolicyConservation2009] or the ecosystem as a whole, though future analyses could include a more thorough characterization of the nature of serious harm to salmon [as in @dfoUpdateAssessmentFramework2016].
-
-While one role of LRPs is to trigger the development of rebuilding plans under the Fish Stocks provisions, the content and implementation of rebuilding plans is beyond the scope of this paper. A full review of how LRPs can be integrated into salmon management processes outside of the Fish Stocks provisions is beyond our scope, and is a gap that warrants further discussion.  We highlight a few possible roles for LRPs below. We also do not review the current definition of 'major stock' as a SMU for Pacific salmon under the Fish Stocks provisions.
-
-Time-varying population processes, such as changes in productivity, have important impacts on biological benchmark, LRPs, and assessment against LRPs. While we describe some recent approaches for considering those changes, a full review and evaluation of the impacts of time-varying parameters on LRPs is beyond the scope of this study. This theme is an important area for future research.
-
-While we follow the recommendation of @holtIndicatorsStatusBenchmarks2009 to assess status of CUs using multiple metrics, we have implemented this approach using a multidimensional algorithm, the Pacific Salmon Status Scanner (or Salmon Scanner), documented in Pestal et al. (in prep), developed from the implementation of formal, peer-reviewed WSP assessments for Pacific salmon stocks in Canada. A full review of the Salmon Scanner is beyond the scope of this paper.  Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.
-
-Decisions about prioritizing CUs for conservation within an SMU (e.g., evaluating the costs and benefits of conserving individual CUs given differential vulnerability to climate change or other stressors) is also beyond our scope, requiring a broader discussion with local knowledge holders, managers and stakeholders.
- 
-
-
-## ENHANCEMENT
-
- Hatcheries contribute to spawning abundances of many salmon stocks and can be used as a conservation tool and to increase the availability of fish for harvest. Hatchery enhancement can also reduce wild genetic diversity and fitness defined as adult-to-adult reproductive success, and is considered a risk factor for the long-term persistence of CUs [@withlerGeneticallyBasedTargets2018]. Salmon that are enhanced by hatcheries are not considered "wild" under the Wild Salmon Policy and are not usually included in assessments of biological status. However separating out the influence of hatchery enhancement in time-series of spawner abundances and recruitment is challenging, in part because hatchery-origin salmon are not usually visibly marked, e.g.,  with fin clips or fish tags, and so are indistinguishable from natural-origin spawners. Also, many salmon escapement programs, such as those where salmon spawners are counted from helicopters [@parkenIncorporatingUncertaintyArea2003] do not have biological sampling programs to collect mark and tag data from individual salmon.
-
-
-Following @withlerGeneticallyBasedTargets2018, we recommend including only populations without significant enhancement in analyses of CU and SMU biological status consistent with the WSP. Proportionate Natural Influence, PNI, is a metric of the genetic risk of hatcheries on natural populations, with values $<$ 0.5 indicating integrated-hatchery populations, where most fish are hatchery origin, values  $\geqslant$ 0.5 and $<$ 0.72 indicating integrated-transition where natural-origin fish predominate, and values $\geqslant$ 0.72 indicating integrated-wild populations, where most fish are considered 'wild' under the WSP with parents who were born in the natural environment [@withlerGeneticallyBasedTargets2018]. While these guidelines were proposed for Chinook Salmon where hatchery enhancement is most common, they are also applicable to other salmon species [@withlerGeneticallyBasedTargets2018]. 
-
-
-
-@withlerGeneticallyBasedTargets2018 recommend the inclusion of integrated-wild for biological assessments under the WSP, and provisionally, integrated-transition populations (i.e., PNI  $\geqslant$ 0.5 ). Similarly, only populations with PNI values $\geqslant$ 0.5 were included in the assessment of CU and SMU status here. Stricter definitions of hatchery enhancement can be considered by including only populations with PNI values $\geqslant$ 0.72. In practice, applying this stricter threshold for our case study on Chinook Salmon resulted in excluding most data since reliable time-series of PNI values and spawner abundances are only available for exploitation-rate indicator populations where coded-wire tags have been applied and sampled for recoveries, which tend to be populations with hatcheries. Adopting a threshold of $\geqslant$ 0.5, a level associated with most fish being natural origin, was the result of a trade-off between assessing remaining CU-level biodiversity and excluding significant hatchery impacts. For some populations, early periods of high enhancement can be removed from time-series and assessments can focus on recent periods without significant enhancement [@grantEvaluationUncertaintyFraser2011]. Here we used thermal marks be used to identify the proportion of hatchery-origin spawners on the spawning grounds to derive PNI values. When data on thermal marking were not available, coded-wire tags (CWTs) were used to identify hatchery-origin spawners, but were associated with increased uncertainty in the proportion of hatchery-origin spawners.
-
-Large interannual variability in PNI values can result from natural variability in survival of hatchery vs. natural-origin spawners, low sampling rates for hatchery-origin spawners, use of coded wire-tags instead of thermal marks, and high observation errors requiring decisions about temporal averaging.  Here we average over the available time series where hatchery objectives have remained constant, though recommend further research quantifying the sources of uncertainties and evaluating the sensitivity of results to various time periods for averaging (e.g., recent generation vs entire time period). In addition to guidance on biological assessments under the WSP, @withlerGeneticallyBasedTargets2018 further recommend developing biological goals for hatchery-influenced populations documenting tradeoffs between increased genetic risk to wild populations from hatchery production and increased abundance required to support other objectives.<!--CH: this last sentence is in response to Chuck's Q as to if Withler recommend actions given a PNI value, or recommend management populations to a PNI value(goal). It's both. PNI goals are supposed to be developed for all pops. But for WSP assessments, hatchery-dominated pops are removed from analyses [focus of this section]-->Guidelines and methods for estimating PNI values are currently being documented by DFO's Salmonid Enhancement Program (DFO in review)^[DFO in review. Guidelines for Calculating the Proportionate Natural Influence Index as a Metric of the Genetic Influence of Enhanced Pacific Salmon on Wild Populations. Report of the Salmonid Enhancement Program, Vancouver, BC].
-
-
-
-
-For integrated-transition and integrated-wild populations, WSP assessments of status have generally removed the demographic influence of hatchery production from time-series of abundances when data on the proportion of hatchery- vs. natural-origin fish on the spawning grounds are available [e.g., from marking of hatchery-origin fish, @dfoWildSalmonPolicy2015]. Specifically, the contribution of hatchery-origin production is removed from both the benchmark estimation and metric of stock status. For stock-recruitment based benchmarks, the contribution of hatchery-origin fish is removed from recruitment estimates but not escapement, as it is assumed that these fish reproduce successfully in the wild and contribute to natural production. This way the spawner-recruitment relationship represents the production derived from spawners in the natural environment. For the current metric of stock status, the contribution of hatchery-origin fish is removed from spawner time-series to remove the influence of variability in annual production from hatcheries on current status [@dfoWildSalmonPolicy2015].
-
-
-In some cases where hatchery-origin fish are not marked or sampled on the spawning grounds, data on the proportion of hatchery-origin spawners are not available. In these cases, WSP assessments generally rely on total spawner abundances including hatchery contribution, as long as spawner abundances are believed to be at least predominantly hatchery origin (e.g., PNI $\geqslant$ 0.5)[e.g., Southern BC Chinook Salmon, @dfoIntegratedBiologicalStatus2016]. In these cases, there may be risks that current status reflects hatchery production which masks changes in natural production production and obscures inferences for unenhanced populations in the CU. These risks are partly mediated but not dismissed by removing populations that are dominated by hatchery-origin fish from assessments.
-
-
-<!--CH: does this new pgh fit here?-->
-In addition, @withlerGeneticallyBasedTargets2018 recommend that wild populations not part of, or influenced by hatchery programs would be included in CU assessments under the WSP, as would 'wild stray-influenced' populations, which receive strays from out-of-basin hatchery programs. Although the majority of fish may be wild in 'wild stray-influenced' populations, one-way gene flow modelling suggests that over time PNI values will decline to levels consistent with hatchery-dominated systems with continued straying. In practice, straying from out-of-basin hatcheries and the genetic impacts are generally not monitored or assessed and so out-of-basin strays included in total abundances within biological assessments. However, this represents a gap in our knowledge of hatchery impacts and our ability to implement @withlerGeneticallyBasedTargets2018's recommendations.  Two exceptions are @candyPatternsHomingStraying2000 which describes patterns of straying of Chinook salmon in BC, and the west coast of Vancouver Island where studies estimating the extent of straying for Chinook Salmon are on-going and may inform the evaluation of hatchery impacts in future biological assessments (W. Luedke pers. comm.). 
-
-
-<!--CH remove, replaced with pgh above: In addition, some populations without hatcheries may be influenced by straying from hatcheries from neighbouring populations ('out-of-basin' strays). In this case, a very large fraction of fish may be wild, however, if straying continues over long time periods, gene flow modelling shows that that the genetic influence of hatcheries will increase as well [@withlerGeneticallyBasedTargets2018].The impact of these strays is generally excluded in assessments in part because of the absence of marking and spawning ground sampling for hatchery fish or genetic studies to determine their influence, and so out-of-basin strays are included in total abundances. Studies evaluating the extent of straying for Chinook Salmon for the West Coast of Vancouver Island are on-going (W. Luedke pers. comm.) and previous research by Candy and Beacham (2000) described the patterns in Southern BC. 
- -->
-
-<!--CH removed: "Recruitment data are generally not available for these stocks, so stock-recruitment analyses are usually not implemented. In one exception for Pitt River Sockeye Salmon,  spawner abundances were determined from brood take plus total spawners in the natural environment and recruitment was total recruits from both hatchery and natural environment (Pitt River, Grant et al. 2011)".-->
-
-
 ## ROLE OF LRPS {#roleLRPs}
 
 LRPs have several roles, including triggering rebuilding plans under DFO's Precautionary Approach Framework @dfoFisheryDecisionMakingFramework2009 and the *Fisheries Act", communicating conservation risks to decision makers and the public, and informing management decisions about fisheries. LRPs are biologically based values which can be used to inform fishery management decisions. For example, LRPs can be used to as part of measurable objectives to identify operational control points which are points where management actions are triggered within harvest control rules, and can also be applied as operational control points themselves. Within a harvest control rule, a conservation goal might be to avoid low biomass levels where serious harm is occurring which can be translated to a measurable objective to avoid spawner abundances lower than an LRP with a high probability (e.g., 95%) over a specified time period.  However, there can be several operational control points in the harvest control rule and these can be positioned to achieve a suite of biological and socioeconomic objectives beyond those associated with serious harm, usually by a diverse range of managers and stakeholders. In contrast, DFO's Science Sector is responsible for identifying LRPs based only on biological considerations [@dfoScienceAdvicePrecautionary2021]. 
@@ -203,37 +214,4 @@ One advantage of this approach is that a single best underlying model (or LRP) d
 <!--CH side note:  DFO's Fisheries Sustainability checklist shows LRPs that usually management operational control points, and not biological LRPs per se-->
 
 
-## PROCESS TO IDENTIFY CANDIDATE LRPS AND GUIDELINES
-
-A technical working group composed of DFO and First Nations analysts was developed to capture expertise and knowledge associated with the biological basis of serious harm to at the SMU level and to support the development and application of candidate methods for LRPs. The technical working group was not meant to be a venue for engagement or to capture stakeholder perspectives or socioeconomic objectives. These considerations are relevant when developing management responses to stock assessments, but not in the assessment of stock status using LRPs. 
-
-In particular, the technical working group informed five components of the work: 
-
-1. Principles for the development of Pacific salmon LRPs (Section \@ref(principles))
-
-2. A tool kit of candidate LRP methods (Section \@ref(est-methods))
-
-3. A demonstration of the application of candidate LRPs to case studies (Section \@ref(case-studies))
-
-4. Recommendations on when, and when not to use each candidate LRP method (Section \@ref(guidelines))
-
-5. Recommendations on future research (Section \@ref(recommendations))
-
-
-<!--CH: Not sure is the R chunk below is necessary? If we remove, do we need to add gpplot2, knitr, bookdown, devtools to index file? Leave for now-->
-
-```{r load_pkgs, message=FALSE, echo=FALSE}
-# List of packages required for this analysis
-pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools")
-# Check if packages are not installed and assign the
-# names of the packages not installed to the variable new.pkg
-new.pkg <- pkg[!(pkg %in% installed.packages())]
-# If there are any packages in the list that aren't installed,
-# install them
-if (length(new.pkg)) {
-  install.packages(new.pkg, repos = "http://cran.rstudio.com")
-}
-library(csasdown)
-library(ggplot2)
-```
-
+<!--MOVE SECTION ON TIMVE-VARYYING rpS HERE-->
