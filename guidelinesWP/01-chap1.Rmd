@@ -145,16 +145,14 @@ library(csasdown)
 library(ggplot2)
 ```
 
-Figure \@ref(fig:flowchar)
 
-\newpage
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\begin{tikzpicture} [node distance = 1.5cm]
 \tikzstyle{box} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black]
 \tikzstyle{boxgray} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black, fill=gray!10]
 \tikzstyle{boxno} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, text width = 4cm, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture} [node distance = 1.5cm]
 \node(1) [box, fill=blue!10] {1. Compile CU-level abundances and benchmarks};
 \node(2) [box, fill=green!10, below of=1] {2. Identify if any CUs are data deficient};
 \node(3) [box, fill=yellow!10, below of= 2] {3. Identify if missing CUs can be represented by CUs with data};
@@ -188,5 +186,5 @@ Figure \@ref(fig:flowchar)
 \draw[arrow] (11) -- (12);
 \end{tikzpicture}
 \caption{Steps for setting LRPs and assessing status} 
-\label{fig:flowchart}
+(\#fig:flowchart)
 \end{figure}
