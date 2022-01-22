@@ -1,12 +1,6 @@
-<!-- The following code should appear at the beginning of the first appendix.
-After that, all subsequent sections will be turned into appendices. -->
-
-`r if(knitr:::is_latex_output()) '\\Appendices'`
-
-`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
 
 
-# RESOURCES FOR THE IMPLEMENTATION OF LRPS {#app:first-appendix}
+# RESOURCES FOR THE IMPLEMENTATION OF LRPS {#app:links}
 
 
 - For single metrics of status used under the Wild Salmon Policy, see Github repository [WSP-Metrics-Pkg](https://github.com/Pacific-salmon-assess/WSP-Metrics-Pkg)
