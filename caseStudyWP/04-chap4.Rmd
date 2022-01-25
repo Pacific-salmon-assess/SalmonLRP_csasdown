@@ -27,7 +27,7 @@ knitr::include_graphics("figure/chinook-map.png")
 \caption{Overview of WCVI Chinook Stock Management Unit. Italics represent indicators with average PNI values < 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain indicator stocks with PNI < 0.5 and are not included in these analyses. }
 \begin{tabular}{p{0.3\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
 \hline
-CU       &  Inlets   & Indicators\\ 
+CU       &  Inlets   &  Indicators \\ 
 \hline
 \multirow{4}{*}{\parbox{4cm}{West Vancouver Island-South (CK-31)}} & San Juan,  & \emph{San Juan}, \\
  & Nitinat, & \emph{Nitinat},  \\
