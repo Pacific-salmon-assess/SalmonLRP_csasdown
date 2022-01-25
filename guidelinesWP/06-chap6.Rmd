@@ -1,7 +1,7 @@
 # DISCUSSION AND RECOMMENDATIONS FOR FUTURE WORK {#recommendations}
 
 ## KEY UNCERTAINTIES THAT AFFECT LRP ESTIMATES
-
+<!--CH: change names of LRPs according to decssion on Jan. 25-->
 
 ### CU assessments
 
