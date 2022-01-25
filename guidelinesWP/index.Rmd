@@ -42,10 +42,10 @@ link-citations: true
 bibliography: bib/refs.bib
 # Any extra LaTeX code for the header:
 header-includes:
-  - \usepackage{amsmath}
-  - \usepackage{tcolorbox}
-  - \usepackage{tikz}
-  - \usetikzlibrary{shapes, arrows.meta, positioning}
+  - \usepackage{amsmath} \usepackage{tcolorbox} \usepackage{tikz} \usetikzlibrary{shapes, arrows.meta, positioning}
+#  - \usepackage{tcolorbox}
+#  - \usepackage{tikz}
+#  - \usetikzlibrary{shapes, arrows.meta, positioning}
 
 ---
 

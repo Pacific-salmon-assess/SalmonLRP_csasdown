@@ -45,6 +45,8 @@ To be consistent with the multidimensional approach to WSP status assessments de
 \begin{tabular}{p{3.2cm} p{3.2cm} p{5.2cm} p{4.2cm}}
 \multicolumn{2}{l}{}\\
 \toprule
+\multicolumn{2}{l}{Category} & Metrics \\
+\midrule
 \multicolumn{2}{l}{Metrics on abundances} & Absolute spawner abundances relative to absolute abundance benchmark (e.g., 1500 spawner) \\
 
 \multicolumn{2}{l}{} & Absolute or index of spawner abundances relative to estimated benchmarks (e.g., stock-recruitment based benchmark) \\
