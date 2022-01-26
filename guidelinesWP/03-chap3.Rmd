@@ -90,8 +90,22 @@ For example, CUs can be assessed individually when threats and responses are loc
 
 In addition to proportional LRPs, we considered two LRPs on aggregate SMU-level abundance that account for component CU-level statuses: (1) logistic regression-based LRPs, or simply, logistic regression LRPs and (2) projection-based, or simply projection LRPs (Table \@ref(tab:candidateLRPs)), which are described below. Both of these LRPs rely on the relationship between observed aggregate abundances and statuses of component CUs, but they differ in that logistic regression LRPs rely on empirical data directly whereas projection LRPs are derived from projections of CU-level population dynamics usually parameterized from empirical data.  The reliability of aggregate-abundance LRPs to represent thresholds of serious harm at the CU level depend on the strength of the underlying relationship between aggregate abundance and CU statuses as inferred from observed data. Both of these LRPs are probabilistic in nature, identifying the aggregate abundances associated with an acceptable probability of all CUs achieving status above the Red zone. To an extent uncertainty in the underlying relationship between observed aggregate abundances and CU-level statuses is represented in the probabilistic nature of these LRPs; larger uncertainties result in higher LRP values and vice versa, with all else remaining equal.  
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+\tikzstyle{box} = [rectangle, rounded corners, text centered, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\node(1) [box, minimum width=10 cm, minimum height=1 cm, fill=orange!10] at(0,0) {Proportional LRP};
+\node(2) [box,  minimum width=10 cm, minimum height=1 cm, fill=teal!10] at(0,-2) {Aggregate Abundance LRP};
+\node(2a) [box, minimum width=4 cm, minimum height=1 cm, fill=teal!10] at(-3,-3.5) {Logistic Regression LRP};
+\node(2b) [box, minimum width=4 cm, minimum height=1 cm, fill=teal!10] at(3,-3.5) {Projection LRP};
+\draw[arrow] (2.south -| 2a) -- (2a);
+\draw[arrow] (2.south -| 2b) -- (2b);
+\end{tikzpicture}
+\caption{Types of LRPs for Pacific Salmon} 
+(\#fig:LRP-types)
+\end{figure}
 
-<!--CH: Add simple bubble diagram of proportion based LRP, aggregate abundance LRP and logistic regression LRP and projection based LRPs. This will help show that next two sections are nested within aggregate abundance LRPs-->
 
 
 
