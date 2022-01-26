@@ -4,6 +4,8 @@
 <!--CH: could change list level as this next section is the only one at that level, but then need to capitalize all level 2 title
 CW: CSASdown automatically capitalizes the titles and subtitles according to the rules - see below:
 -->
+
+<!-- change 10 steps to 9, here and everywhere-->
 ## STEPWISE APPROACH FOR SELECTING LRPS
 
 We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method. This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., local or international), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated. <!--CH: insert new figure-->
@@ -26,7 +28,7 @@ Within this step, information on hatchery enhancement is used to identify popula
 Infilling among streams or spawning sites for years with missing data is commonly used when compiling CU-level spawner abundance series [e.g., see @grantEvaluationUncertaintyFraser2011; @brown2020SummaryAbundance2020]. When infilled time series are used to estimate LRPs and monitor stock status relative to LRPs, consideration should be given to the scale at which infilling is done at. For example, if LRPs are based on maintaining CU-level (or inlet-level) diversity, infilling of missing data should not be based on escapements from outside of the CU (or inlet). In addition, hatchery enhancement should be carefully accounted for when infilling to avoid overestimating abundances when infilled numbers are based on sites that are artificially enhanced and when enhancement levels vary during the time series, to the extent possible. 
 
 
-### Step 2: Assessing Data Deficiency
+### Step 2: Assessing CU Data Deficiency
 
 Second, CUs with data to support biological assessments are identified; those without sufficient data are considered data deficient. CUs are assessed based on a variety of metrics including abundances and trends, and data requirements for these metrics vary. At a minimum, a CU must have an index of spawner abundance time-series. These data can be used to estimate trends over time against benchmarks that are common across CUs [@@holtIndicatorsStatusBenchmarks2009]. For short-term trend analyses, data are considered insufficient when they include less than half of available years in the last three generations or are of low quality representing only presence/absence. These criteria for trend detection are similar to criteria described in @brown2020SummaryAbundance2020 and applied to spawning sites of Chinook Salmon in Southern BC. 
 
@@ -245,6 +247,12 @@ $>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
 An additional consideration in this step is the probability threshold for triggering LRPs described in DFO's Guidelines for the Implementation of Rebuilding Plans [@dfoScienceGuidelinesSupport2021].  These guidelines specify that, "unless otherwise defined in stock-specific precautionary approach frameworks, the LRP should be considered breached if the terminal year stock status indicator is estimated to be at or below the LRP with a greater than 50% probability or if the projected stock status indicator falls below the LRP with a greater than 50% probability under a zero catch scenario in a 1 year projection". While using a 50% probability threshold of one or more CUs having Red status is not directly analogous, in both cases the probability threshold chosen represents the probability of the stock avoiding serious harm. In our case studies, we provide logistic regression LRPs for the four probability thresholds described above, and focus sensitivity analyses on a 50% probability of all component CUs having status above Red. This approach to delineating serious harm could be considered risk neutral, where risks may be accounted for directly and explicitly in harvest control rules that trade-off multiple objectives.    
 
 
+<!-- from ch 6. Does this belonw here? reword?-->
+
+
+
+Although, @dfoScienceAdvicePrecautionary2021 reiterates @dfoFisheryDecisionMakingFramework2009 that LRPs under Fish Stock provisions be identified by Science, we were unable to identify a specific probability level for all CUs being above Red status that aligned with scientific principles. Although it may be possible to select a probability level based on the IPCC likelihood categorization scheme (e.g., more likely than not, likely, very likely, virtually certain) further guidance on choosing among these options is required. <!--CW -I am not sure if the probability level is part of the LRP. I think it is part of the objective, and as such, it should not be determined by science. LW: related to comments in Ch 4, re: probability higher than 0.5 --> Alternatively, proportional LRPs can be used as the basis for serious harm instead of identifying a specific probability for aggregate abundance LRPs, where biological objectives for SMUs can be derived from the probability of achieving those proportional LRPs over a specified time frame to inform the performance of various candidate management procedures. The probability and time-frame identified within the objective are identified with managers and stakeholders. When used as part of Management Procedure Framework (e.g.,  @dfoManagementProcedureFramework2021) or management strategy evaluation (MSE), the performance of a variety of management procedures against objectives can be evaluated, where management procedures can extend beyond aggregate abundance-based harvest control rules to include time-area closures, habitat enhancement or hatchery supplementation. Therefore, proportional LRPs may be preferred as the biological basis of serious harm to clearly distinguish the biologically derived component from desired probability which requires input from managers and stakeholders.
+
 
 **Choose among aggregate abundance LRPs**
 
@@ -343,7 +351,7 @@ Projection LRPs may be inappropriate when:
 -->
 
 
-### Step 10: Apply Aggregate Abundance LRPs
+### Step 9: Apply Aggregate Abundance LRPs
 
 Any aggregate-abundance methods that meet the above criteria are applied. See the companion working paper, Holt et al. (in review) for details of applications of these methods. Summaries are provided in Section \@ref(case-studies). When status of an SMU is inferred from aggregate abundance LRPs using a subset of CUs that are considered representative of the remaining data-deficient CUs, then the resulting status should be considered 'interim' until all component CUs can be assessed. When status of data-deficient CUs cannot be inferred from data-rich CUs, status cannot be assessed with aggregate abundance LRPs.
 
