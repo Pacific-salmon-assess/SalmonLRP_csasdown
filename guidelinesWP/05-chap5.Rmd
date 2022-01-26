@@ -37,7 +37,7 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \draw[arrow] (6) -- (7);
 \draw[arrow] (7) -- node[anchor=east] {Yes} (8);
 \draw[arrow] (7) -| node[anchor=west] {No} (8n);
-\draw[arrow] (8) -- node[anchor=east] {Assumptions for at least one method met} (9);
+\draw[arrow] (8) -- node[anchor=east] {Assumptions met} (9);
 \draw[arrow] (8) -| node[anchor=west] {Assumptions not met} (9n);
 \end{tikzpicture}
 \caption{Steps for setting LRPs and assessing status} 
