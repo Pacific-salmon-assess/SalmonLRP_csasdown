@@ -6,4 +6,6 @@
 knitr::include_graphics("figure/lrp-smu-corr.png")
 
 ```
-Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). A link to the Github repository containing code to perform these analyses are provided in Appendix \@ref(app:first-appendix).
+
+
+In a meta-analysis of spawner time-series across Pacific salmon species throughout BC, pairwise correlations in spawner abundances among CUs within SMUs tended to be positive for Pink, Chum, Coho, and Sockeye Salmon. For Chinook Salmon, correlations were more variable among CUs and sometimes negative, in part due to the confounding influence of hatchery production in some of those systems.  A pervasive problem with correlation analyses for Pacific salmon is that populations with available time-series tend to be more heavily managed or suitable for less expensive spawner surveys, and may not represent those without data which tend to be remote, expensive for spawner surveys, and without direct management interventions.  Data are taken from the [Pacific Salmon Explorer](https://www.salmonexplorer.ca/), provided by E. Hertz (Pacific Salmon Foundation, July 2020). A link to the Github repository containing code to perform these analyses are provided in Appendix \@ref(app:first-appendix).

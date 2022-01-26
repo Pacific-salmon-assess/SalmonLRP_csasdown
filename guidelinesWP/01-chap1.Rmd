@@ -162,7 +162,7 @@ library(ggplot2)
 5b. For those CUs without rel. abundance-based benchmarks, use multi-dimensional approach to assess status of each CU integrating both abundances and trends, to evaluate if the proportion of CUs $>$ red zone exceeds proportion LRP};
 {6. Identify proportion of CUs (of those not data deficient) required to avoid serious harm: 100\% default};
 \node(6) [box, below of=5, fill=lime!10, yshift=-1.7cm] {6. Review CU assessments (step 5) and SMU-scale aggregation (steps 3 \& 4) with local experts, considering the context of the current assessment};
-\node(7) [box, below of=6, fill=magenta!10, yshift=-0.5cm] {7. Are aggregate abundance based LRPs required for fisheries management decision making? (beyond Fish Stock provisions)};
+\node(7) [box, below of=6, fill=magenta!10, yshift=-0.5cm] {7. Are aggregate abundance LRPs required for fisheries management decision making? (beyond Fish Stock provisions)};
 \node(8) [box, below of=7, fill=brown!10, yshift=-0.5cm] {8. Identity acceptable probability, 50\% or higher of  all CUs $>$ lower benchmarks to avoid serious harm to the SMU.};
 \node(8n) [boxno, right of=8, xshift=6cm] {Use proportion of CUs as an LRP (step 5)};
 \node(9) [box, below of=8, fill=teal!10] {9. Choose among aggregate-abundance based LRPs: empirical logistic regression-based, projection-based LRP};
