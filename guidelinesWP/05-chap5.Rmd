@@ -8,7 +8,52 @@ CW: CSASdown automatically capitalizes the titles and subtitles according to the
 <!-- change 10 steps to 9, here and everywhere-->
 ## STEPWISE APPROACH FOR SELECTING LRPS
 
-We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method. This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., local or international), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated. <!--CH: insert new figure-->
+We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method (Fig. \@ref(fig:flowchart)). This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., local or international), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated. 
+
+
+\begin{figure}[ht]
+\centering
+\tikzstyle{box} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black]
+\tikzstyle{boxgray} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black, fill=gray!10]
+\tikzstyle{boxno} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, text width = 4cm, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture} [node distance = 1.5cm]
+\node(1) [box, fill=blue!10] {1. Compile CU-level abundances and benchmarks};
+\node(2) [box, fill=green!10, below of=1] {2. Identify if any CUs are data deficient};
+\node(3) [box, fill=yellow!10, below of= 2] {3. Identify if missing CUs can be represented by CUs with data};
+\node(4) [box, fill=pink!10, below of= 3] {4. Identify proportion of CUs (of those not data deficient) required to avoid serious harm: 100\% default};
+\node(4n) [boxno, right of= 4, xshift=6cm] {SMU is data deficient};
+\node(5) [box, fill=cyan!10, below of= 4, yshift=-1.5cm] {5a. If recent, peer-reviewed WSP statuses exist for all CUs in step 4, evaluate if the proportion of CUs $>$ red zone exceeds the proportion LRP. \\
+5b. For those CUs without rel. abundance-based benchmarks, use multi-dimensional approach to assess status of each CU integrating both abundances and trends, to evaluate if the proportion of CUs $>$ red zone exceeds proportion LRP};
+{6. Identify proportion of CUs (of those not data deficient) required to avoid serious harm: 100\% default};
+\node(6) [box, below of=5, fill=lime!10, yshift=-1.7cm] {6. Review CU assessments (step 5) and SMU-scale aggregation (steps 3 \& 4) with local experts, considering the context of the current assessment};
+\node(7) [box, below of=6, fill=magenta!10, yshift=-0.5cm] {7. Are aggregate abundance LRPs required for fisheries management decision making? (beyond Fish Stock provisions)};
+\node(8) [box, below of=7, fill=brown!10, yshift=-0.5cm] {8. Identity acceptable probability, 50\% or higher of  all CUs $>$ lower benchmarks to avoid serious harm to the SMU.};
+\node(8n) [boxno, right of=8, xshift=6cm] {Use proportion of CUs as an LRP (step 5)};
+\node(9) [box, below of=8, fill=teal!10] {9. Choose among aggregate-abundance based LRPs: empirical logistic regression-based, projection-based LRP};
+\node(10) [boxgray, below of=9] {10. Apply all method(s) that meet criteria to develop aggregate abundance-based LRPs};
+\node(10n) [boxno, right of=10, xshift=6cm, yshift=-1.5cm] {If assumptions are not met for any aggregate abundance LRP method, then aggregate abundance-based LRPs may not be possible for this SMU};
+\node(11) [boxgray, below of=10] {11. Compare statuses among methods applied. Reconsider assumptions if status differs between method};
+\node(12) [boxgray, below of=11] {12. Compare status of aggregate abundance-based LRPs to status relative to proportion of CUs  (step 5)};
+\draw[arrow] (1) -- (2);
+\draw[arrow] (2) -- (3);
+\draw[arrow] (3) -- node[anchor=east] {yes} (4);
+\draw[arrow] (3) -| node[anchor=west] {no} (4n);
+\draw[arrow] (4) -- (5);
+\draw[arrow] (5) -- (6);
+\draw[arrow] (6) -- (7);
+\draw[arrow] (7) -- node[anchor=east] {yes} (8);
+\draw[arrow] (7) -| node[anchor=west] {no} (8n);
+\draw[arrow] (8) -- (9);
+\draw[arrow] (9) -- node[anchor=east] {yes} (10);
+\draw[arrow] (9) -| node[anchor=west] {no} (10n);
+\draw[arrow] (10) -- (11);
+\draw[arrow] (11) -- (12);
+\end{tikzpicture}
+\caption{Steps for setting LRPs and assessing status} 
+(\#fig:flowchart)
+\end{figure}
+
 
 ### Step 1: Data Compilation
 
@@ -72,7 +117,7 @@ CUs with similar **life-history characteristics** are more likely to respond to 
 
 CUs with very different **population capacities** may respond differently to similar threats. For example, very small CUs may be more vulnerable to moderate fishing pressure if abundances drop below critical conservation thresholds (e.g., 1500 fish, an abundance threshold within the Pacific Salmon Status Scanner), whereas larger CUs may be more resilient to common threats.  
 
-Covariation in productivity is well documented among spatially proximate populations across Pacific salmon species [@petermanPatternsCovariationSurvival1998; @pyperSpatialCovariationSurvival2002; @dornerSpatialTemporalPatterns2018], providing some support for the use of data-rich CUs to inform CUs without data. In a meta-analysis of spawner time-series across Pacific salmon species throughout BC using data extracted from the Pacific Salmon Explorer Tool (Pacific Salmon Foundation 2020), pairwise correlations in spawner abundances among CUs within SMUs tended to be positive (Appendix \@ref(app:meta-analysis-appendix), Figure \@ref(fig:lrp-smu-corr-plot)). 
+Covariation in productivity is well documented among spatially proximate populations across Pacific salmon species [@petermanPatternsCovariationSurvival1998; @pyperSpatialCovariationSurvival2002; @dornerSpatialTemporalPatterns2018], providing some support for the use of data-rich CUs to inform CUs without data. In a meta-analysis of spawner time-series across Pacific salmon species throughout BC using data extracted from the Pacific Salmon Explorer Tool (Pacific Salmon Foundation 2020), pairwise correlations in spawner abundances among CUs within SMUs tended to be positive (Appendix \@ref(app:meta-analysis-appendix), Fig. \@ref(fig:lrp-smu-corr-plot)). 
 
 
 
