@@ -2,6 +2,20 @@
 
 
 
+\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\subsection*{Key Points:}
+\begin{itemize}
+\item Principles for identifying Pacific salmon LRPs are adapted from national guidance on LRPs as:
+\item \textbf{Principle 1.} LRPs should be selected based on the best available information 
+\item \textbf{Principle 2.} LRPs should be consistent with the goal of avoiding serious harm 
+\item \textbf{Principle 3.} LRPs should be operational, i.e., feasible to calculate and relevant to policy and management
+\item \textbf{Principle 4.} LRPs should be reliably estimatable 
+\item \textbf{Principle 5.} When selecting among multiple methods for determining LRPs, the choice should take into account uncertainty 
+\item \textbf{Principle 6.} Pacific salmon LRPs should be consistent with the goals and objectives of the WSP
+\item These principles are intended to guide our approach for developing Pacific salmon LRPs while providing flexibility due to differences in local biological characteristics, data qualities and data quantities, among salmon stocks. 
+\end{itemize}
+\end{tcolorbox}
+
 Here we outline principles for developing LRPs for Pacific salmon, adapted from those developed for national-level guidance on LRPs (Marentette et al. In prep.). That guidance allows for flexibility in the development of LRPs to respect differences in species life-histories and data types, quantities, and qualities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs are aligned with national direction. 
 
 
@@ -84,12 +98,11 @@ Principle 5: When selecting from multiple alternatives, the choice of stock stat
 **Principle 6**.  In addition to principles derived for marine species in general (Principles 1-5) and to meet the goals of DFO's Precautionary Approach Policy (Principle 2), Pacific salmon LRPs should be consistent with the goals and objectives of the WSP. The WSP framework requires both the definition of biological units and an assessment of their status along biological metrics, with lower benchmarks used to represent the level of a metric that avoids risk of extinction. This approach is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above Red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status by focusing solely on SMU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a possibly misleading indication of serious harm and status. Therefore, to be consistent with the WSP, LRPs should consider status of component CUs.
 
 
-## APPLYING THE PRINCIPLES TO LRP DEVELOPMENT
+**Applying the principles to LRP development**
 
+Our goal is to provide overall guidelines on LRP development following the principles listed above while providing flexibility due to differences in local biological characteristics, data qualities and data quantities, among salmon stocks. We demonstrate the extent to which candidate LRP methods proposed here are aligned with these principles. Alternative LRP methods, aligned with these key principles, may be developed in the future to capture a broader range of data availability, quality, and types, and/or dimensions of biological status.
 
-Our goal is to provide overall guidelines on LRP development following the principles listed above while providing flexibility in application of these methods due to differences in local biological characteristics, data qualities and data quantities, among other factors. We demonstrate the extent to which the candidate LRP methods are aligned with Principles 1-5 from Marentette et al. (In prep.), and Principle 6 for Pacific salmon.  Alternative LRP methods aligned with the key principles above may be developed in the future to capture a broader range of data availability, quality, and types, and/or dimensions of biological status.
-
-Our intention is to describe approaches for deriving CU status applicable over a range of data qualities and types, and provide LRPs that integrate the CU-level information to the scale of SMUs.  In the next section, methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Candidate LRPs that integrate CU statuses are proposed, falling into two categories: those based on the proportion of component CUs above the Red zone called proportional LRPs, and those based on aggregate abundances, called aggregate abundance LRPs.  A more detailed description of LRPs with technical details is included in Holt et al. (In review). Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). 
+In the next section, methods for estimating CU status are described, as implemented in previous status assessments under the WSP. Candidate LRPs that integrate CU statuses are then proposed, falling into two categories: those based on the proportion of component CUs above the Red zone called proportional LRPs, and those based on aggregate abundances, called aggregate abundance LRPs.  A more detailed description of LRPs with technical details is included in Holt et al. (In review). Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). 
 
 
 
