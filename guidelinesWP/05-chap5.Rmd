@@ -8,6 +8,15 @@ CW: CSASdown automatically capitalizes the titles and subtitles according to the
 <!-- change 10 steps to 9, here and everywhere-->
 ## STEPWISE APPROACH FOR SELECTING LRPS
 
+\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\subsection*{Key Points:}
+\begin{itemize} 
+\item ...
+\end{itemize}
+\end{tcolorbox}
+
+
+
 We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method (Fig. \@ref(fig:flowchart)). This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., local or international), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further evaluated. 
 
 
@@ -278,7 +287,7 @@ CH: revised accordingly. Does this revised text capture it?
 
 <!--SG comment: if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP. -->
 
-The frequency of SMU-scale peer reviews outside of the annual implementation of the Salmon Scanner will depend on variability in CU-level population dynamics over time and how LRPs and SMU-level assessments are used to inform decision making (e.g., if an SMU is batched under the *Fisheries Act"), among other factors. In the future, management procedures with various frequencies of assessments could be evaluated in a simulation framework to identify risks of delaying assessments relative to costs of implementing them. 
+The frequency of SMU-scale peer reviews outside of the annual implementation of the Salmon Scanner will depend on variability in CU-level population dynamics over time and how LRPs and SMU-level assessments are used to inform decision making (e.g., if an SMU is batched under the *Fisheries Act*), among other factors. In the future, management procedures with various frequencies of assessments could be evaluated in a simulation framework to identify risks of delaying assessments relative to costs of implementing them. 
 
 ### Step 7: Are Aggregate Abundance LRPs Required For Fisheries Management? 
 
