@@ -35,11 +35,11 @@ if(!all(folders %in%  list.files(here(path))))
   walk(zips, unzip, exdir=here(path))
 # Read in species shapefiles
 chum_cu <- st_read(here("caseStudyWP","data","Chum_Salmon_CU_Boundary", "Chum Salmon CU Boundary_En.shp"))
-coho_cu <- st_read(here("caseStudyWP","data","Coho_Salmon_CU_Boundary", "Coho_Salmon_CU_Boundary_En.shp"))
+coho_cu <- st_read(here("caseStudyWP","data","Coho_Salmon_CU_Boundary", "Coho_Salmon_CU_Boundary_En_edit.shp")) # includes manual edit removing area below Hell's Gate, done in QGIS
 chinook_cu <- st_read(here("caseStudyWP","data","Chinook_Salmon_CU_Boundary", "Chinook_Salmon_CU_Boundary_En.shp"))
 
-# Get just Nahatlatch for IFR Coho Fraser Canyon CU boundary- downloaded from https://maps.gov.bc.ca/ess/hm/imap4m/ 
-nahat <- st_read(here("caseStudyWP", "data", "FWA_NAMED_WATERSHEDS_POLY", "FWNMDWTRSH_polygon.shp"))
+# # Get just Nahatlatch for IFR Coho Fraser Canyon CU boundary- downloaded from https://maps.gov.bc.ca/ess/hm/imap4m/ 
+# nahat <- st_read(here("caseStudyWP", "data", "FWA_NAMED_WATERSHEDS_POLY", "FWNMDWTRSH_polygon.shp"))
 
 # Provincial and US Borders and Coastlines (not using rgovcan because they are more complicated file source urls)
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Admin/canvec_1M_CA_Admin_shp.zip', destfile=here("caseStudyWP",'data/can_admin.zip'), mode="wb")
@@ -184,7 +184,6 @@ ggplot(ifc) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
   geom_sf(data=borders[borders$juri_en == "Alberta",], fill=land_col, size=0) +
   geom_sf_label(data=ifc, aes(label = CU_name, colour=CU_name),  size=4.5, fontface="bold") +
-  geom_sf(data=nahat, fill="red") +
   #geom_sf_label(data=drop_multi_poly(fma), aes(label = MNGMNTR), size=3,label.size=0.1, colour="coral",alpha=0.7, fontface="bold") +
   annotate( geom="text", label = "BRITISH COLUMBIA", x = -119, y = 49.3, color = "grey22", size = 4) +
   annotate( geom="text", label = "WASHINGTON", x = -121.8, y = 48.5, color = "grey22", size = 4) +
