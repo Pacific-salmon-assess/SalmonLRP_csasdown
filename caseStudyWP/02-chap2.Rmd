@@ -12,9 +12,9 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \begin{table}[!htbp]
 \centering
 \footnotesize   
-\caption{Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b) }
+\caption{Overview of CU assessment methods applied for each case study (a) and approaches used to estimate LRPs (b) }
 \begin{tabular}{p{3.2cm} p{3.2cm} p{2.4cm} p{2.4cm} p{2.4cm}}
-\multicolumn{5}{l}{(a) CU-level assessments }\\
+\multicolumn{5}{l}{**(a) CU-level assessments** }\\
 \toprule
 \multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
 \midrule
@@ -29,7 +29,7 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \multicolumn{2}{l}{Single metric approaches: distribution} & Yes & - & - \\
 \hline
 \multicolumn{5}{l}{ }\\
-\multicolumn{5}{l}{(b) LRPs }\\
+\multicolumn{5}{l}{**(b) LRPs** }\\
 \toprule
 \multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
 \midrule
