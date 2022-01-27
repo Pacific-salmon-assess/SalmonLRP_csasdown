@@ -5,7 +5,46 @@ output:
 ---
 # LRP ESTIMATION METHODS{#MethodsChapter}
 
-In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections \@ref(IFCChapter) (Interior Fraser Coho), \@ref(WCVIchinookChapter) (West Coast Vancouver Island Chinook), and \@ref(ISCchumChapter) (Inner South Coast Chum, excluding Fraser). Links to GitHub repositories with the data and analysis code used for all three case studies are in Appendix \@ref(app:github-appendix).
+In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections \@ref(IFCChapter) (Interior Fraser Coho), \@ref(WCVIchinookChapter) (West Coast Vancouver Island Chinook), and \@ref(ISCchumChapter) (Inner South Coast Chum, excluding Fraser). Links to GitHub repositories with the data and analysis code used for all three case studies are in Appendix \@ref(app:github-appendix). An overview of the approaches applied to each of the three case studies are provided in Table \@ref(tab:lrpapproaches).
+
+
+\renewcommand*{\arraystretch}{1.4}
+\begin{table}[!htbp]
+\centering
+\footnotesize   
+\caption{Approaches used to estimate LRPs for each case study (a) and CU assessment methods applied (b) }
+\begin{tabular}{p{3.2cm} p{3.2cm} p{2.4cm} p{2.4cm} p{2.4cm}}
+\multicolumn{5}{l}{(a) CU-level assessments }\\
+\toprule
+\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
+\midrule
+\multicolumn{2}{l}{Pacific Salmon Status Scanner} & Yes (only for proportional LRPs) &   Yes (only for proportional LRPs)  &  Yes (only for proportional LRPs)\\
+\midrule
+\multirow{3}{*}{\parbox{3.2cm}{Single metric approaches: spawner abundances relative to benchmark}} & Spawner-recruitment benchmark & Yes & - & Attempted, estimates unreliable\\
+\cline{2-5}
+& Habitat-based benchmark & - & Yes & -\\
+\cline{2-5}
+& Percentile benchmark & - & - & Yes\\
+\cline{1-5}
+\multicolumn{2}{l}{Single metric approaches: distribution} & Yes & - & - \\
+\hline
+\multicolumn{5}{l}{ }\\
+\multicolumn{5}{l}{(b) LRPs }\\
+\toprule
+\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
+\midrule
+\multicolumn{2}{l}{Proportional LRP} &  Yes &   Yes &   Yes\\
+\midrule
+\multirow{2}{*}{\parbox{3.2cm}{Aggregate abundance LRPs}} & Logistic regression LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
+\cline{2-5}
+ & Projection LRP & Yes  & Yes &  - \\
+\bottomrule
+\end{tabular}
+(\#tab:lrpapproaches)
+\end{table}
+
+ 
+
 
 ## OVERVIEW
 
@@ -247,6 +286,9 @@ An example of the derivation of an LRP from the projected curve of aggregate abu
 ```{r example-projectedCurve, fig.cap="Example of projected probability curve derived from projections over 30 years and 10,000 MC trials.  The curve shows the projected probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance, where aggregate spawning abundance is a bin of 200 fish (e.g., 0-200, 201-400, etc.). Each dot in the curve therefore represents a single 200-fish bin. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) for the probability that all CUs are greater than their LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-ProjectedLRP.png")
 ```
+
+
+
 
 
 <!--
