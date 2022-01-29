@@ -15,7 +15,7 @@
 \item The distribution of spawning among sub-populations within a CU can be important for the viability of the CU and SMU, and ignoring or misidentifying this stock structure may increase uncertainty in assessed status
 \item Uncertainties in all LRPs can arise from the exclusion of data-limited CUs from analyses when these CUs are poorly represented by data-rich CUs that are included. We recommend caution when applying provisional LRPs that do not include all CUs.
 \item Uncertainties in \textbf{logistic regression LRPs} arise from statistical estimation of the stock-recruitment and logistic models, as well as changes in the population parameters and covariance among CUs over time.
-\item For projection LRPs, uncertainties in underlying parameters and CU-level benchmarks are integrated into the probability of all CUs being above their lower benchmarks, so that the LRP itself does not have statistical estimation uncertainty. Projection LRPs explicitly account for underlying uncertainties in population parameters, such as CU-level productivity and capacity, age-structure, covariance in recruitment deviations, and variability in implementation of fixed exploitation strategies over time and among CUs. 
+\item For \textbf{projection LRPs}, uncertainties in underlying parameters and CU-level benchmarks are integrated into the probability of all CUs being above their lower benchmarks, and the LRP itself does not have statistical estimation uncertainty. Projection LRPs explicitly account for underlying uncertainties in population parameters, such as CU-level productivity and capacity, age-structure, covariance in recruitment deviations, and variability in implementation of fixed exploitation strategies over time and among CUs. 
 \end{itemize}
 \end{tcolorbox}
 
@@ -89,7 +89,7 @@ One difference between projection and logistic regression LRPs is that for proje
 \begin{itemize} 
 \item For \textbf{proportional LRPs},  we recommend SMU status be either provisional or data deficient when an SMU contains data-deficient CUs and remaining data-rich CUs are above Red Status, due to possible positive biases in status based on data-rich CUs alone. An SMU status is provisional when data-rich CUs are deemed representative of data-deficient CUs, and data-deficient when they are not.
 \item In contrast, if any component CU has Red status, the LRP of 100% CUs above the Red status is considered breached regardless of the presence of data-deficient of CUs how representative they are of data-riCh CUs.
-\item For For \textbf{aggregate abundance LRPs} we recommend that SMU status be provisional when SMUs contain data-deficient CUs that can be represented by data-rich CUs regardless of the status of data-rich CUs.
+\item For \textbf{aggregate abundance LRPs} we recommend that SMU status be provisional when SMUs contain data-deficient CUs that can be represented by data-rich CUs regardless of the status of data-rich CUs.
 \end{itemize}
 \end{tcolorbox}
 
