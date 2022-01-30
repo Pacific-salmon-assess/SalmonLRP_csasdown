@@ -1,0 +1,8 @@
+# ACKNOWLEDGEMENTS
+
+We gratefully acknowledge the considerable support provided by our Technical Working Group on Salmon LRPs over the 3 years leading up to this review (alphabetical order by last name): ...
+
+We especially thank the contributions of our First Nations members of the Technical Working Group who brought unique perspectives and
+insights into our discussions.
+
+We also thank Julie Marentette, Tim Barrett, Mary Thiess, Danny Ings, and Jason Ladell, from National Headquarters for their valuable input during the development of ideas in this paper, and review of preliminary drafts.
