@@ -58,7 +58,7 @@ At minimum, indicators, LRPs and therefore status should be feasible to measure 
 
 **Principle 4**. LRPs should be reliably estimated. To the extent possible, LRPs should indicate a level above where serious harm occurs with acceptable accuracy and precision, instead of random noise or observation errors. Reliable estimation will depend on the quality and frequency of data collection, model specification, and the evidence to support underlying relationships and population dynamics used to derive LRPs. Reliability can be addressed by checking the sensitivity of LRPs to uncertainties in underlying data, model or assumptions, simulation evaluation, or simply assessing plausibility given biological or life-history information about the SMU (Marentette et al. In prep.).
 
-LRPs can be derived using multiple analytical approaches. If LRPs cannot be estimated reliably using one method or approach, then consider alternatives approaches based on different sets of assumptions and/or data. When LRP estimates converge when derived using different approaches, increases support that the methods capture underlying population dynamics despite differing assumptions and use of available data.
+LRPs can be derived using multiple analytical approaches. If LRPs cannot be estimated reliably using one method or approach, then consider alternative approaches based on different sets of assumptions and/or data. When LRP estimates converge when derived using different approaches, increases support that the methods capture underlying population dynamics despite differing assumptions and use of available data.
 
 <!--RE: pgh below
 CW: 'statistically integrated' or sequential Bayes? i.e. sampling from posterior. 
