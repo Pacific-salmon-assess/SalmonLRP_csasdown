@@ -17,6 +17,7 @@ LRP methods require assessments of status at the scale of CUs. Abundance data re
 \end{tcolorbox}
 
 Hatcheries contribute to spawning abundances of many salmon stocks and can be used as a conservation tool as well as to increase the availability of fish for harvest. Hatcheries can also reduce wild genetic diversity and fitness defined as adult-to-adult reproductive success, and is considered a risk factor for the long-term persistence of CUs [@withlerGeneticallyBasedTargets2018]. Salmon that are hatchery-origin and their progeny are not considered "wild" under the Wild Salmon Policy and typically only populations dominated by wild salmon are included in assessments of biological status. However, separating out the influence of hatcheries in time-series of spawner abundances and recruitment is challenging, in part because hatchery-origin salmon are not often not marked, e.g., with fin clips or fish tags, and so are indistinguishable from natural-origin spawners. Also, many salmon escapement programs, such as those where salmon spawners are counted from helicopters [@parkenIncorporatingUncertaintyArea2003] do not have biological sampling programs to collect mark and tag data from individual salmon. 
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
@@ -33,12 +34,14 @@ Data used to assess hatchery contribution to spawning and estimate PNI values ar
 
 
 In addition to guidance on biological assessments under the WSP, @withlerGeneticallyBasedTargets2018 further recommend developing biological goals for hatchery-influenced populations documenting trade-offs between increased genetic risk to wild populations from hatchery production and increased abundance required to support other objectives.<!--CH: this last sentence is in response to Chuck's Q as to if Withler recommend actions given a PNI value, or recommend management populations to a PNI value(goal). It's both. PNI goals are supposed to be developed for all pops. But for WSP assessments, hatchery-dominated pops are removed from analyses [focus of this section]-->Guidelines and methods for estimating PNI values are currently being documented by DFO's Salmonid Enhancement Program (DFO In revision)^[DFO In revision. Guidelines for Calculating the Proportionate Natural Influence Index as a Metric of the Genetic Influence of Enhanced Pacific Salmon on Wild Populations. Report of the Salmonid Enhancement Program, Vancouver, BC].
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
 **Wild populations influenced by straying from hatcheries**
 
 In addition, @withlerGeneticallyBasedTargets2018 recommend that populations dominated by wild fish but influenced by hatchery stays (called 'wild stray-influenced' populations) should be included in CU assessments under the WSP. These populations receive strays from out-of-basin hatchery programs, but do not contain hatcheries themselves. Although the majority of fish may be wild in these populations, one-way gene flow modelling suggests that over time PNI values will decline to levels consistent with hatchery-dominated systems with continued straying. In practice, straying from out-of-basin hatcheries and the genetic impacts are generally not monitored or assessed and so out-of-basin strays included in total abundances within biological assessments. However, this represents a gap in our knowledge of hatchery impacts and our ability to implement @withlerGeneticallyBasedTargets2018's recommendations.  Two exceptions are @candyPatternsHomingStraying2000 which describes patterns of straying of Chinook salmon in BC, and the west coast of Vancouver Island where studies estimating the extent of straying for Chinook Salmon are on-going and may inform the evaluation of hatchery impacts in future biological assessments (W. Luedke pers. comm.). 
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
@@ -131,7 +134,8 @@ When assessing CU status relative to abundance-based lower benchmarks, we use ge
 
 ### Proportional LRPs
 
-Proportion-based or proportional LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above the Red status zone. To be consistent with the intent of the WSP to preserve biodiversity at the CU-level, we identify an LRP at 100% of CUs having status above Red (i.e., either Amber or Green). <!--CH Sue suggested removing as she wasn't sure what happened when LRP is breached, I think. I agree the act of breaching is not entirely relevant here, but I did think it might help explain the proportional LRP "When any individual CU falls into the Red zone, then the LRP is considered breached."--> See Section \@ref(guidelines) for a step-wise approach for identifying LRPs that further considers data limitations when identifying the proportion of CUs above the Red zone, and Section \@ref(recommendations) for a description of associated uncertainties. CU statuses are derived using the approaches described in Section \@ref(cu-est-methods), and are submitted to peer review, as described in Section \@ref(guidelines). See.
+Proportion-based or proportional LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above the Red status zone. To be consistent with the intent of the WSP to preserve biodiversity at the CU-level, we identify an LRP at 100% of CUs having status above Red (i.e., either Amber or Green). <!--CH Sue suggested removing as she wasn't sure what happened when LRP is breached, I think. I agree the act of breaching is not entirely relevant here, but I did think it might help explain the proportional LRP "When any individual CU falls into the Red zone, then the LRP is considered breached."--> See Section \@ref(guidelines) for a step-wise approach for identifying LRPs that further considers data limitations when identifying the proportion of CUs above the Red zone, and Section \@ref(recommendations) for a description of associated uncertainties. CU statuses are derived using the approaches described in Section \@ref(cu-est-methods), and are submitted to peer review, as described in Section \@ref(guidelines).
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
@@ -164,9 +168,7 @@ In addition to proportional LRPs, we developed LRPs along a gradient of aggregat
 
 
 ### Aggregate Abundance LRPs
-<!--CH: the following 2 lines give a line break before the next heading-->
-\
-&nbsp;
+
 **Logistic regression LRPs**
 
 Logistic regression LRPs can be derived from an empirically estimated relationship between CU-level statuses and aggregate SMU abundance. This method extends the proportional LRP by identifying the aggregate abundance level that has historically been associated with all component CUs having status above the Red zone, as approximated from status on a single metric of spawner abundances relative to a lower benchmark. For each year of observed data, SMU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have estimated status greater than the lower benchmark and 0 (failure) = all CUs did not have status greater than the lower benchmark, or at least one CU was assessed below the lower benchmark. A logistic regression is then fit to these outcomes to estimate the probability that all CUs will have statuses greater than Red as a function of aggregate SMU spawner abundances. The following logistic regression equation is used to estimate LRPs,
@@ -255,6 +257,7 @@ knitr::include_graphics("figure/methods-Example-ProjectedLRP.png")
 Similar to logistic regression LRPs, for projection LRPs the uncertainty in CU benchmarks and status are explicitly accounted for when deriving the probability of all CUs being above their lower benchmarks. However, unlike logistic regression LRPs, there is no estimation uncertainty in projection LRPs because a logistic regression (or other model) is not required. Probabilities are derived directly from projections and underlying uncertainties are integrated directly into the overall probability. Therefore, confidence intervals are not provided. 
 
 Also, similar to logistic regression based LRPs, structural uncertainty in underlying population dynamics can be considered through sensitivity analyses or model averaging by combining results from stochastic random trials across those structural assumptions. See our implementation for Interior Fraser Coho Salmon in Holt et al. (In review) for more details.
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
