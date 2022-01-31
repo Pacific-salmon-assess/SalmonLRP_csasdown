@@ -4,6 +4,8 @@ We gratefully acknowledge the considerable support provided by our Technical Wor
 
 We especially thank the contributions of the First Nations members of the Technical Working Group who brought unique perspectives and insights to our discussions.
 
+The State of the Salmon Program, led by Sue Grant, provided helpful leadership and guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it.<!--CH: although I'd like to thank Sue directly, it feels funny as she's a co-author. I could revise anyways...?-->
+
 In addition, Brooke Davis provided invaluable help developing early versions of the code for the integrated logistic regression model, for which we are extremely grateful.
 
 We also thank Julie Marentette, Tim Barrett, Mary Thiess, Jason Ladell, and Danny Ings for their perspectives on LRPs nationally and as applied to other taxonomic groups.  Julie Marentette, Tim Barrett, and Mary Thiess also provided helpful comments on an earlier draft.
