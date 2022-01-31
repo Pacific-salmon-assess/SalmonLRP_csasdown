@@ -252,7 +252,7 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 ```
 
 
-CU status was derived from the proportion of component inlets above lower benchmarks. Serious harm was identified as any one inlet within each of the 3 CUs dropping below its lower benchmark. Here we have assumed the status of the one escapement indicator stock in the West Vancouver Island-North CU (Marble River) is representative of the CU. However, further consideration of this assumption is warranted with local expertise.
+CU status was derived from the proportion of component inlets above lower benchmarks. Serious harm is expected to occur when <!--KH: changed from 'was identified as'--> any one inlet within each of the 3 CUs drops below its lower benchmark. Here we have assumed the status of the one escapement indicator stock in the West Vancouver Island-North CU (Marble River) is representative of the CU. However, further consideration of this assumption is warranted with local expertise.
 
 ## LRP ESTIMATION: PROPORTION OF CUS
 
