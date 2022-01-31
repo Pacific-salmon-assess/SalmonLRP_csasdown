@@ -464,6 +464,9 @@ Furthermore, Projection LRPs may be more appropriate when pairwise correlations 
 
 Aggregate abundance methods are then applied to derived LRPs based on the guidance above (see Appendix \@ref(app:case-studies) and Holt et al. (In review) for example applications). When status of an SMU is inferred from aggregate abundance LRPs using a subset of CUs that are considered representative of the remaining data-deficient CUs, then the resulting status should be considered 'provisional' until the status of all component CUs can be assessed. When status of data-deficient CUs cannot be inferred from data-rich CUs, status cannot be assessed with aggregate abundance LRPs.
 
+We use generational mean spawner abundances as a basis for determining whether the SMU is above or below its LRP. Taking the generational mean integrates status over cohorts within a generation, which can exhibit relatively independent dynamics in some species<!--is there a good reference for this? CH: not sure, but can look for one later-->. This approach reduces noise in annual LRP status determination due to annual fluctuations in abundances from any single cohort. It also makes our determination of LRP status consistent with the approach taken for abundance-based benchmarks in WSP assessments and the Pacific Salmon Status Scanner at the CU level.
+
+
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
 &nbsp;
