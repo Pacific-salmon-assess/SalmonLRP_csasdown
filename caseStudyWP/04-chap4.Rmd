@@ -622,7 +622,7 @@ Given uncertainty in current and anticipated productivity, projection LRPs were 
 
 Projection LRPs tended to increase under low productivity and vice versa (Figure \@ref(fig:chinook-projLRPsAlpha)), a trend that was expected due to the inverse relationship between productivity and inlet-specific S~gen~ values [@holtCautionsUsingPercentilebased2015]. At low productivity, S~gen~ tends to increase, thereby becoming more precautionary.  The sensitivity of LRPs to productivity highlights the value of updating benchmarks and projection LRPs as productivity changes. Our results also show that uncertainty in projections increased under low productivity, likely requiring more random Monte Carlo trials for stabilization at p=0.5, i.e., 50% probability of CUs being above their lower benchmarks. The probability of all inlets being above their lower benchmark rarely met or exceeded 0.66 ['likely' category, @mastrandreaGuidanceNoteLead2010] when productivity was low, so LRPs at this level could not be estimated. When productivity was high, the probability of all inlets being above their lower benchmark rarely dropped below 0.66. At high productivity, LRPs at the p=0.5 level could not be estimated. More detailed analyses of LRPs along the entire range of productivities and exploitation was beyond the scope of this case study.
    
-<!--CH: add Mike Staley's concern about depensation. to what extent can this SA on low produciivty inform Q about depensation?  Mention, "all models are wrong but some are useful", or reword this-->
+
 
 ```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection LRPs estimated under assumptions of reduced productivity (0.75x of current levels) and increased productivity (1.5x current levels).  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue) are highlighted. More Monte Carlo trials are required for stabilization of LRPs at low productivity. LRPs at p=0.66 could not be estimated at low productivity, and LRPs at p=0.5 could not be estimated at high productivity", out.width = '80%'}
 
@@ -660,7 +660,9 @@ A key uncertainty for this SMU is the contribution of hatcheries to total abunda
 
 We recommend a few areas for further research relevant to this SMU:
 
-- In the development of proportional and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
+- The projection LRPs should further be evaluated for sensitivity to key structural assumptions, such as the stock-recruitment model and presence and magnitude of depensation among other assumptions. This evaluation is especially important for this SMU because of the lack of peer-reviewed stock assessments that include stock-recruitment relationships. We based our assumption of a Ricker form of the stock-recruitment relationship based on its application to other Chinook stocks in BC [parkenHabitatbasedMethodsEstimate2006], but this form may not represent the high observed variability and declining productivity that are now common for Chinook salmon. 
+
+-In the development of proportional and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
 
 - Future iterations of the multidimensional status assessments used within the Pacific Salmon Status Scanner could include information on the distribution of spawners across inlets within CUs to incorporate this finer scale of biodiversity. 
 
