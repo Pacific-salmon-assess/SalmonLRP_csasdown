@@ -9,7 +9,7 @@ LRPs are defined within DFO's 'Precautionary Approach to Fisheries Decision-Maki
 
 The specific goals of this working paper are to:
 
--	demonstrate alternative LRP estimation methods for three Pacific Salmon case study SMUs
+-	demonstrate alternative LRP estimation methods for three Pacific Salmon case study SMUs, and
 
 -	evaluate candidate LRPs using a combination of sensitivity analyses and, where possible, retrospective analyses.
 
@@ -22,12 +22,12 @@ The case studies considered include:
 
 2)	West Coast Vancouver Island (WCVI) Chinook Salmon (*O. tshawytscha*), and 
 
-3)	Inside South Coast Chum Salmon (*O. keta*;  excluding Fraser River CUs). 
+3)	Inside South Coast Chum Salmon (*O. keta*), excluding Fraser River CUs
 
 Each of these SMUs consists of 3-7 CUs and was selected to represent a different level of data availability ranging from data rich (Interior Fraser Coho) to data-limited (Inside South Coast Chum and West Coast Vancouver Island Chinook). For each case study, the set of LRP estimation methods considered is a function of available data and previously developed assessment methods for the SMU. 
 
 
-The LRPs presented in this paper are for demonstration purposes only, and not meant to provide formal LRP estimates. The development of LRPs to support implementation of the *Fisheries Act* for our case study stocks will require a more thorough review of data and assumptions with local analysts and partners than has been taken here.  
+The LRPs presented in this paper are for demonstration purposes only, and not meant to provide formal LRP estimates. The development of LRPs to support implementation of the *Fisheries Act* will require a more thorough review of data and assumptions with local analysts and partners than has been taken here.  
 
 
 
