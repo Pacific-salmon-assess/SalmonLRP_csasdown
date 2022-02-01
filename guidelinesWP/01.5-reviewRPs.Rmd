@@ -8,7 +8,7 @@
 \begin{itemize}
 \item LRPs have been widely adopted in Canadian fisheries.
 \item LRPs can be categorized into those derived from theoretical relationships, historical patterns, or empirical analyses. Also, LRPs can be identified along a variety of indicators, and those indicators can be categorized as natural metrics, proxies for natural metrics, or composites of metrics.
-\item Under Canada's WSP, a composite of metrics ('multidimensional approach') are used in stock assessments, including metrics on current spawner abundances, short and long-term trends in abundances, and the distribution of spawning, among others.
+\item Under Canada's WSP, a composite of metrics ('multidimensional approach') are<!--'LW comment: 'is'? not sure if composite or metrics is the subject here--> used in stock assessments, including metrics on current spawner abundances, short and long-term trends in abundances, and the distribution of spawning, among others.
 \item DFO has implemented the multidimensional approach for salmon assessments within the Pacific Salmon Status Scanner tool.
 \item In some cases, single-metric approaches in which spawner abundances are compared with an abundance-based benchmark have been used as proxies for status.
 \end{itemize}
