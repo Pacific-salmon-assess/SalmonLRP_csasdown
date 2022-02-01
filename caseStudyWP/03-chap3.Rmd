@@ -8,14 +8,14 @@ output:
 
 
 ## CONTEXT
-<!--CH 1 Feb: slighlty reworded below-->
+
 The Interior Fraser Coho SMU is well-suited for illustrating aggregate abundance LRPs due to the long history of using aggregate abundance-based recovery targets and fisheries reference points at the SMU scale. These rely on an underlying relationship between aggregate abundance and the distribution of abundance among sub-populations and CUs. Furthermore, it is a relatively data-rich SMU with spawner-recruitment time series available for all CUs starting in 1998.
 
 The SMU includes Coho Salmon that spawn in the Fraser River and tributaries upstream of Hells Gate in the Fraser Canyon. Like most Coho Salmon, Interior Fraser Coho spend at least one full year in freshwater as fry before migrating to the ocean as smolts [@arbeiderInteriorFraserCoho2020]. Most (88%) Interior Fraser Coho have a 3-year life history, in which they leave freshwater in their second year and spend 18 months at sea prior to returning to their natal system to spawn. The remaining 12% have a 4-year life history in which they spend an additional year in freshwater before migrating as smolts in their third year. Both the 3-year and 4-year life histories spend 18 months at sea. Less than 1% of Interior Fraser Coho are believed to return as jacks (precocious mature males that spend only 6 months as sea) or at ages older than 4 years [@arbeiderInteriorFraserCoho2020].
 
 Five WSP CUs have been identified for Interior Fraser Coho based on genetics and geographic separation: Middle Fraser, Fraser Canyon, Lower Thompson, North Thompson, and South Thompson (Figure \@ref(fig:coho-map)) [@dfoWildSalmonPolicy2015]. Previous work by the Interior Fraser Coho Recovery Team (IFCRT) identified 11 sub-populations nested within the five CUs, and developed recovery objectives based on maintaining abundance above a 1000-spawner threshold in each of these sub-populations [@ifcrtConservationStrategyCoho2006, Table \@ref(tab:cohoCU2SP)]. The delineation of sub-populations was based on several factors, including the presence of natural barriers, the influence of large lakes on downstream discharge and thermal regimes, observations of spawner aggregations under differing discharge conditions, and genetic differentiation. The 11 sub-populations are described in detail by the @ifcrtConservationStrategyCoho2006.  
 
-Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate on the Fraser River) is included in our delineation of Interior Fraser Coho. This delineation is consistent with previous analyses for this SMU. As a result, Nahatlatch is the only sub-population included in our description of the Fraser Canyon CU. Kawakawa Creek has been excluded.
+Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate on the Fraser River) is included in our delineation of Interior Fraser Coho. This delineation is consistent with previous analyses for this SMU (e.g. @arbeiderInteriorFraserCoho2020). As a result, Nahatlatch is the only sub-population included in our description of the Fraser Canyon CU. Kawkawa Creek, which is located below the Fraser Canyon near Hope, BC, is not included in the data we use.
 
 
 ```{r coho-map, fig.cap="Distribution of the Interior Fraser Coho SMU, including the five CUs that make up the SMU. Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate) is shown here to be consistent with the spatial scale of the data that was used for analyses.", out.width = '70%', warning=FALSE, echo=FALSE, fig.align="center"}
@@ -491,6 +491,7 @@ Variability in exploitation rates among CUs & CV = 0.221 & Assumed to be half of
 \\\\ 
 
 Initial abundances  & CU-specific & Abundance initialized using spawner-recruit time series
+\\
 \hline
 (\#tab:coho-BaseProjectPars)
 \end{longtable}
