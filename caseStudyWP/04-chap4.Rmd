@@ -33,7 +33,7 @@ CU       &  Inlets   &  Indicators \\
  & Nitinat, & \emph{Nitinat},  \\
  & Barkley,  & Nahmint , \emph{Sarita}, \emph{Somass},  \\
  & Clayoquot & Bedwell/Ursus , Megin , Moyeha , \emph{Tranquil} \\
-\multirow{2}{*}{\parbox{4cm}{West Vancouver Island-Nootka \& Kyuoquot (CK-32)}} & Nootka/Esperanza,  & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis,  \\
+\multirow{2}{*}{\parbox{4cm}{West Vancouver Island-Nootka \& Kyuquot (CK-32)}} & Nootka/Esperanza,  & \emph{Burman}, \emph{Conuma}, \emph{Gold}, \emph{Leiner}, Tahsis,  \\
 &  Kyuquot &  Zeballos, Artlish, Kaouk, Tahsish \\
 West Vancouver Island-North (CK-33) &  Quatsino  &  \emph{Cayeghle}, Marble \\                     
 \hline
@@ -56,7 +56,7 @@ South (CK-31)           Nitinat,                *Nitinat*,
                         Clayoquot,              Bedwell/Ursus , Megin , Moyeha , *Tranquil*
                                                           
 West Vancouver Island-  Nootka/Esperanza,       *Burman*, *Conuma*, *Gold*, *Leiner*, Tahsis,
-Nootka & Kyuoquot       Kyuquot                 Zeballos,
+Nootka & Kyuquot       Kyuquot                 Zeballos,
 (CK-32)                                                Artlish, Kaouk, Tahsish,
                                          
 West Vancouver Island-  Quatsino                Cayeghle, Marble
@@ -77,7 +77,7 @@ We considered the 4 criteria identified in Holt et al. (in review) to evaluate i
 
 
 
-All three CUs likely experience similar freshwater environmental conditions being part of the same Freshwater Adaptive Zone, West Vancouver Island, characterized by very high river discharge, low wetland influence, and low alpine cold water and glacial influences [@holtbyConservationUnitsPacific2007]. Spawning habitats for all three CUs are primarily within the Coastal Western Hemlock biogeoclimatic zone. However, the marine environment experienced by juveniles from the West Vancouver Island-Nootka and Kyuoquot and West Vancouver Island-South CUs differs from that of the West Vancouver Island-North CU [@holtbyConservationUnitsPacific2007]. The two southern CUs are influenced by the Juan de Fuca Strait which affects food chain productivity in the nearshore environments. For the northern CU, the nearshore marine environment is influenced primarily by the northward flowing coastal current in the North Pacific ocean [@cosewicCOSEWICAssessmentStatus2020].
+All three CUs likely experience similar freshwater environmental conditions being part of the same Freshwater Adaptive Zone, West Vancouver Island, characterized by very high river discharge, low wetland influence, and low alpine cold water and glacial influences [@holtbyConservationUnitsPacific2007]. Spawning habitats for all three CUs are primarily within the Coastal Western Hemlock biogeoclimatic zone. However, the marine environment experienced by juveniles from the West Vancouver Island-Nootka and Kyuquot and West Vancouver Island-South CUs differs from that of the West Vancouver Island-North CU [@holtbyConservationUnitsPacific2007]. The two southern CUs are influenced by the Juan de Fuca Strait which affects food chain productivity in the nearshore environments. For the northern CU, the nearshore marine environment is influenced primarily by the northward flowing coastal current in the North Pacific ocean [@cosewicCOSEWICAssessmentStatus2020].
  
 The average generation time is consistent across all three CUs, and they exhibit a typical ocean-type life-history and fall run timing.  Absolute abundances are not available for any of these CUs [@brown2020SummaryAbundance2020]. 
 
@@ -87,7 +87,7 @@ Based on differences in threats and the coastal marine environment, we suggest t
 
 ### Previous assessments
 
-Two of the three CUs in this SMU, West Vancouver Island-South and West Vancouver Island-Nootka & Kyuquot, were assessed as 'Red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016]. For these CUs, assessments were based on component populations without hatchery enhancement within the most recent 12 years, omitting populations with enhancement during that period. For West Vancouver Island-South, Red status was based primarily on threats of genetic introgression from strays from nearby large-scale hatcheries. For West Vancouver Island-Nootka & Kyuoquot, Red status was based on a very low index of abundance for non-enhanced populations and threats of genetic introgression from strays from large-scale hatcheries. The third CU, West Vancouver Island-North, was not assessed by DFO in 2016 because the indicator site for this CU was enhanced over the most recent 12 years (other metrics of hatchery enhancement, e.g., Proportionate Natural Influence or PNI were not considered). A list of indicator and non-indicator populations within each CU is available in @brown2020SummaryAbundance2020. 
+Two of the three CUs in this SMU, West Vancouver Island-South and West Vancouver Island-Nootka & Kyuquot, were assessed as 'Red' status in an integrated Wild Salmon Policy assessment [@dfoIntegratedBiologicalStatus2016]. For these CUs, assessments were based on component populations without hatchery enhancement within the most recent 12 years, omitting populations with enhancement during that period. For West Vancouver Island-South, Red status was based primarily on threats of genetic introgression from strays from nearby large-scale hatcheries. For West Vancouver Island-Nootka & Kyuquot, Red status was based on a very low index of abundance for non-enhanced populations and threats of genetic introgression from strays from large-scale hatcheries. The third CU, West Vancouver Island-North, was not assessed by DFO in 2016 because the indicator site for this CU was enhanced over the most recent 12 years (other metrics of hatchery enhancement, e.g., Proportionate Natural Influence or PNI were not considered). A list of indicator and non-indicator populations within each CU is available in @brown2020SummaryAbundance2020. 
 
 
 WCVI Chinook was identified as a stock of concern in the 2021 Integrated Fisheries Management Plan, IFMP, for South Coast Salmon, and a rebuilding plan is under development [@dfoIntegratedFisheriesManagement2021]. Poor smolt-age 2 survival rates for WCVI Chinook and low spawner levels over the past two decades are reasons for conservation concern in the IFMP [@dfoIntegratedFisheriesManagement2021, p. 129]. Since the mid 1990s, a variety of management measures have been implemented to restrict harvest on WCVI Chinook and address these concerns, described in the IFMP [@dfoIntegratedFisheriesManagement2021].
@@ -103,7 +103,7 @@ In November 2020, @cosewicCOSEWICAssessmentStatus2020 designated the West Vancou
 
 ### Spatial scale
 
-Under Canada's Wild Salmon Policy, CUs are identified at a spatial scale that allows for long-term sustainability of the species [@holtbyConservationUnitsPacific2007]. For WCVI Chinook, inlets nested within CUs are another important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying among inlets (D. McHugh pers. comm. DFO South Coast Stock Assessment). We used a hybrid approach in which LRPs were developed to preserve inlet-scale diversity within CUs. However, only 5 of the 7 inlets on the west coast of Vancouver Island contained indicator populations without significant hatchery influence. Both Nitnat and San Juan inlets, which are the two most southern inlets within the WCVI-South CU, have large-scale hatcheries and infrequent monitoring of sites with natural spawning. These two inlets lack escapement indicator populations without significant hatchery influence.  Because the remaining 5 inlets with significant natural spawning are nested within the 3 WCVI Chinook CUs, preserving this inlet-scale biodiversity will also preserve CU-scale biodiversity required under the Wild Salmon Policy. Future analyses could limit LRP estimation to the scale of CUs or extend it to include all 7 inlets with additional natural indicators for Nitinat Lake and San Juan Bay, if they are developed. 
+Under Canada's Wild Salmon Policy, CUs are identified at a spatial scale that allows for long-term sustainability of the species [@holtbyConservationUnitsPacific2007]. For WCVI Chinook, inlets nested within CUs are another important spatial scale of diversity for sustainability given geographic separation of spawning habitats among inlets and limited straying among inlets (D. McHugh pers. comm. DFO South Coast Stock Assessment). We used a hybrid approach in which LRPs were developed to preserve inlet-scale diversity within CUs. However, only 5 of the 7 inlets on the west coast of Vancouver Island contained indicator populations without significant hatchery influence. Both Nitinat and San Juan inlets, which are the two most southern inlets within the WCVI-South CU, have large-scale hatcheries and infrequent monitoring of sites with natural spawning. These two inlets lack escapement indicator populations without significant hatchery influence.  Because the remaining 5 inlets with significant natural spawning are nested within the 3 WCVI Chinook CUs, preserving this inlet-scale biodiversity will also preserve CU-scale biodiversity required under the Wild Salmon Policy. Future analyses could limit LRP estimation to the scale of CUs or extend it to include all 7 inlets with additional natural indicators for Nitinat Lake and San Juan Bay, if they are developed. 
 
 ### Watershed Areas
 
@@ -292,20 +292,20 @@ Projection LRPs were derived for WCVI Chinook by projecting inlet-specific popul
 Parameter & Value & Source \\ 
 \hline
 \endhead
-Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuoquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
+Ricker $a$ (mean)  &  WCVI-South = 1.14, WCVI-Nootka \& Kyuquot =1.58, WCVI-North = 1.53 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
 Ricker $a$ (SD) & 0.5 &  Approximate 95\% CI and bounds from life-stage specific model (W. Luedke per. comm.)\\
 S\textsubscript{REP} (Spawners at replacement, mean) & Barkley = 637, Clayoquot = 7879, Nootka/Esperanza = 1184, Kyuquot = 5273, Quatsino = 3384 & MLE estimate from watershed-area model \\
 
 S\textsubscript{REP} (SD) & Barkley = 0.40, Clayoquot = 0.30, Nootka/Esperanza = 0.37, Kyuquot = 0.31, Quatsino = 0.32 & Derived from standard error of MLE estimate from the watershed-area model \\
 
-Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuoquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
+Ricker sigma & WCVI-South = 0.80, WCVI-Nootka \& Kyuquot = 0.69, WCVI- North = 0.68 & Run reconstruction for WCVI Chinook (1985-2019, D. Dobson \& D. McHugh pers. comm.)\\
 
 Covariance in Ricker residuals among inlets & Equal to covariance in spawner time-series among inlets & Covariance in spawners among inlets from wild indicator populations (D. Dobson \& D. McHugh, pers. comm.) \\ 
 
-Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuoquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Average proportions from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\ 
+Ave age proportions at maturity (age 2, 3, 4 and 5). Ages 5 and 6 are grouped. &  WCVI-South = 0.02, 0.14, 0.45, 0.38; WCVI-Nootka \& Kyuquot = 0.01, 0.10, 0.48, 0.40; WCVI-North = 0.02, 0.15, 0.47, 0.36 & Average proportions from run reconstruction (D. Dobson \& D. McHugh pers. comm.) \\ 
 
-Variability in age proportions (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuoquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of proportions of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\
+Variability in age proportions (tau from multivariate logistic distribution)  & WCVI-South = 0.7, WCVI-Nootka \& Kyuquot = 0.6, WCVI-North = 0.7 & Estimated from time-series of proportions of ages-at-maturity from the run reconstruction. Assumed variable over CUs and years. \\
 
 Average exploitation rate & 0.30 & Average pre-terminal ERs 2010-2019 for Robertson Creek hatchery indicator (D. Dobson \& D. McHugh pers. comm.). Varied in sensitivity analyses 0.05 - 0.45.\\
 
@@ -329,7 +329,7 @@ Extirpation threshold &  2 & Mating constraint \\
 Paremeter               Value                       Source
 ----------------------- --------------------------- ------------------------------------------
 Ricker $a$ (mean)       WCVI-South = 1.14,          Run reconstruction for WCVI Chinook (1985- 
-                        WCVI-Nootka & Kyuoquot =    2019, D. Dobson & D. McHugh pers. comm.)
+                        WCVI-Nootka & Kyuquot =    2019, D. Dobson & D. McHugh pers. comm.)
                         1.58,                          
                         WCVI-North = 1.53
 
@@ -353,7 +353,7 @@ $S_{REP}$ (SD)          Barkley = 0.40,             Derived from standard error 
                         Quatsino = 0.32,
 
 Ricker sigma            WCVI-South = 0.80,          Run reconstruction for WCVI Chinook (1985- 
-                        WCVI-Nootka & Kyuoquot =    2019, D. Dobson & D. McHugh pers. comm.)
+                        WCVI-Nootka & Kyuquot =     019, D. Dobson & D. McHugh pers. comm.)
                         0.69,
                         WCVI- North = 0.68
                          
@@ -364,13 +364,13 @@ residuals among inlets  spawner time-series         wild indicator populations (
 
 Ave age proportions     WCVI-South = 0.02, 0.14,    Ave ppns from run reconstruction (D. 
 at maturity (age 2, 3,  0.45, 0.38;                 Dobson & D. McHugh pers. comm.)
-4 and 5). Ages 5 and 6  WCVI-Nootka & Kyuoquot = 
+4 and 5). Ages 5 and 6  WCVI-Nootka & Kyuquot = 
 are grouped.            0.01, 0.10, 0.48, 0.40;
                         WCVI-North = 0.02, 0.15,
                         0.47, 0.36
 
 Variability in age      WCVI-South = 0.7,           Estimated from time-series of ppns of 
-ppns (tau from          WCVI-Nootka & Kyuoquot =    ages-at-maturity from the run  
+ppns (tau from          WCVI-Nootka & Kyuquot =     ages-at-maturity from the run  
 multivariate            0.6,                        reconstruction. Assumed variable over CUs
 logistic distribution)  WCVI-North = 0.7            and years. 
                                                     
