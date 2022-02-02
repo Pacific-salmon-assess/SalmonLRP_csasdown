@@ -443,8 +443,8 @@ Variability in exploitation rates among CUs & CV = 0.221 & Assumed to be half of
 \\\\ 
 
 Initial abundances  & CU-specific & Based on spawner-recruit series
-<!--\\
-\hline-->
+
+\hline
 (\#tab:coho-BaseProjectPars)
 \end{longtable}
 
