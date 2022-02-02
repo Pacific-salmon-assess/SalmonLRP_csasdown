@@ -18,10 +18,10 @@ Five WSP CUs have been identified for Interior Fraser Coho based on genetics and
 Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate on the Fraser River) is included in our delineation of Interior Fraser Coho. This delineation is consistent with previous analyses for this SMU (e.g. @arbeiderInteriorFraserCoho2020). As a result, Nahatlatch is the only sub-population included in our description of the Fraser Canyon CU. Kawkawa Creek, which is located below the Fraser Canyon near Hope, BC, is not included in the data we use.
 
 
-```{r coho-map, fig.cap="Distribution of the Interior Fraser Coho SMU, including the five CUs that make up the SMU. Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate) is shown here to be consistent with the spatial scale of the data that was used for analyses.", out.width = '70%', warning=FALSE, echo=FALSE, fig.align="center"}
+```{r coho-map, fig.cap="Distribution of the Interior Fraser Coho SMU, including the five CUs that make up the SMU. Only the upper portion of the Fraser Canyon CU (upstream of Hells Gate) is shown here to be consistent with the spatial scale of the data that was used for analyses.", out.width = '65%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-map.png")
 ```
-
+&nbsp;
 
 +-------------------+--------------------------------+
 | Conservation Unit | Sub-populations                  
@@ -45,6 +45,8 @@ knitr::include_graphics("figure/coho-map.png")
 
 Table: (\#tab:cohoCU2SP) Interior Fraser Coho Conservation Units (CUs) and associated sub-populations. Note that the definition of these sub-populations, including mapped boundaries, are provided in @ifcrtConservationStrategyCoho2006.
 
+\newpage
+
 Hatchery enhancement has occurred, and continues to occur in some parts of the Interior Fraser Coho SMU. Two CUs are currently considered wild populations based on the criteria developed by @withlerGeneticallyBasedTargets2018 (i.e., do not have hatchery programs; strays from out-of-basin hatchery production are limited to <3% per year), while the other three are considered integrated-wild populations (i.e., with Proportionate Natural Influence (PNI) values most likely $\geq$ 0.72; M. Arbeider, pers. comm.). Within integrated-wild populations, most fish are considered 'wild' under the WSP with parents who were born in the natural environment. The Lower Thompson CU had higher levels of hatchery enhancement between 1998 and 2005, so would likely have been considered an integrated-transition population (0.5 $\leq$ PNI < 0.72) during this period.
 
 The five Interior Fraser Coho CUs have historically shown relatively high levels of covariation in escapement among CUs, with an average correlation in spawner abundances among CUs of 0.56. Similarity among CU responses to environmental and anthropogenic drivers is further supported by application of the four criteria proposed by Holt et al. (in review) to evaluate the extent to which status of data deficient CUs can be inferred from CUs with data. A summary of our consideration of these criteria for Interior Fraser Coho are provided in Appendix \@ref(app:coho-appendix). Results showed that Interior Fraser Coho CUs have many shared characteristics. We found few significant indicators that would have prevented us from inferring CU status for one CU from neighboring CUs prior to our case study analyses.
@@ -54,13 +56,13 @@ Interior Fraser Coho is included in the first batch of major stocks proposed for
 
 ### Previous assessments
 
-Declines in Interior Fraser Coho spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions starting in 1998 [@deckerAssessmentInteriorFraser2014]. <!--CH 1 Feb: rearranged this next sentence-->Evidence of a new, lower productivity regime starting in return year 1994 has been well documented, coinciding with declines in spawner abundances [@deckerAssessmentInteriorFraser2014]. In 2002, the Interior Fraser Coho stock management unit was designated 'endangered' by the  Committee on the Status of Endangered Wildlife in Canada (COSEWIC) based on the stock unit being assessed as a single 'Designatable Unit' (DU).  
+Declines in Interior Fraser Coho spawner abundance throughout the 1990’s led to a suite of management actions to promote recovery, including significant fishery restrictions starting in 1998 [@deckerAssessmentInteriorFraser2014]. Evidence of a new, lower productivity regime starting in return year 1994 has been well documented, coinciding with declines in spawner abundances [@deckerAssessmentInteriorFraser2014]. In 2002, the Interior Fraser Coho stock management unit was designated 'endangered' by the  Committee on the Status of Endangered Wildlife in Canada (COSEWIC) based on the stock unit being assessed as a single 'Designatable Unit' (DU).  
 
-Subsequent work by the Interior Fraser Coho Recovery Team (IFCRT) led to a conservation strategy outlining short-term and long-term recovery objectives for the management unit [@ifcrtConservationStrategyCoho2006]. In 2014, Decker et al. <!--CH 1 Feb: assuming this is referenced elswhere and replaced here to avoid repeated mention of '2014' @deckerAssessmentInteriorFraser2014-->assessed status relative to the 2006 IFCRT objectives, and concluded that Interior Fraser Coho had been above the short-term recovery target in every year since 2008, and above the long-term recovery target in the most recent two return years (2012 and 2013). Also in 2014, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP). The WSP Integrated Status Assessment classified three of these CUs as being Amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as Amber/Green status [Lower Thompson, North Thompson, @dfoWildSalmonPolicy2015]. As part of the WSP assessment, S~gen~ and S~MSY~ were estimated for each CU and used along with other benchmarks when assigning integrated CU status. A subsequent COSEWIC assessment in 2016 upgraded the status assessment for the Interior Fraser Coho DU from 'endangered' to 'threatened' [@cosewicCOSEWICAssessmentStatus2016]. In 2018, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho that described status, habitat, threats, limiting factors to recovery, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm [@arbeiderInteriorFraserCoho2020]. 
+Subsequent work by the Interior Fraser Coho Recovery Team (IFCRT) led to a conservation strategy outlining short-term and long-term recovery objectives for the management unit [@ifcrtConservationStrategyCoho2006]. In 2014, Decker et al. assessed status relative to the 2006 IFCRT objectives, and concluded that Interior Fraser Coho had been above the short-term recovery target in every year since 2008, and above the long-term recovery target in the most recent two return years (2012 and 2013). Also in 2014, Interior Fraser Coho were assessed under the framework of DFO’s Wild Salmon Policy (WSP). The WSP Integrated Status Assessment classified three of these CUs as being Amber status (Middle Fraser, Fraser Canyon, South Thompson) and the remaining two CUs as Amber/Green status [Lower Thompson, North Thompson, @dfoWildSalmonPolicy2015]. As part of the WSP assessment, S~gen~ and S~MSY~ were estimated for each CU and used along with other benchmarks when assigning integrated CU status. A subsequent COSEWIC assessment in 2016 upgraded the status assessment for the Interior Fraser Coho DU from 'endangered' to 'threatened' [@cosewicCOSEWICAssessmentStatus2016]. In 2018, DFO undertook a Recovery Potential Assessment (RPA) for Interior Fraser Coho that described status, habitat, threats, limiting factors to recovery, candidate recovery targets, and abundance projections for the DU, as well as recommendations regarding mitigation and allowable harm [@arbeiderInteriorFraserCoho2020]. 
 
 ### History of aggregate-abundance based reference points
 
-Interior Fraser Coho show a strong positive relationship between their spatial distribution and overall abundance, which has been used as a basis for identifying aggregate abundance recovery targets and reference points for the stock group. Starting in 2006, the IFCRT identified a recovery goal of one or more viable sub-populations in each of the five 'populations', where their definition of populations aligns with CUs under the WSP [@ifcrtConservationStrategyCoho2006]. Note that from this point on, we use the term CU instead of population when describing IFCRT recovery goals to be consistent with the WSP. The IFCRT identified a short-term recovery objective that the 3-year average escapement in at least half of the sub-populations within each of the five CUs was to exceed 1,000 <!--CH 1 Feb: changed from 'wild-origin'--> natural-origin spawning Coho Salmon, excluding hatchery fish spawning in the wild. Based on analysis of the relationship between aggregate abundance and the number of CUs that met this objective based on historical data, the IFCRT identified an abundance short-term recovery target of 20,000 spawners as the level required to meet their distributional objective. In addition, the IFCRT identified a long-term recovery target of 40,000 spawners, which represented a level that was expected to maintain 1,000 or more wild Coho Salmon in all 11 sub-populations. @deckerAssessmentInteriorFraser2014 updated the IFCRT's original analysis using a longer time series of escapement data. They also quantified the relationship between aggregate abundance and distribution by using a logistic regression to estimate the probability of meeting short-term and long-term recovery objectives as a function of aggregate abundance. They concluded that aggregate spawner abundance levels of 20,000 and 40,000 spawners would result in near 100% probability that the IFCRT’s short-term objective and long-term recovery objectives would be met, respectively.
+Interior Fraser Coho show a strong positive relationship between their spatial distribution and overall abundance, which has been used as a basis for identifying aggregate abundance recovery targets and reference points for the stock group. Starting in 2006, the IFCRT identified a recovery goal of one or more viable sub-populations in each of the five 'populations', where their definition of populations aligns with CUs under the WSP [@ifcrtConservationStrategyCoho2006]. Note that from this point on, we use the term CU instead of population when describing IFCRT recovery goals to be consistent with the WSP. The IFCRT identified a short-term recovery objective that the 3-year average escapement in at least half of the sub-populations within each of the five CUs was to exceed 1,000 natural-origin spawning Coho Salmon, excluding hatchery fish spawning in the wild. Based on analysis of the relationship between aggregate abundance and the number of CUs that met this objective based on historical data, the IFCRT identified an abundance short-term recovery target of 20,000 spawners as the level required to meet their distributional objective. In addition, the IFCRT identified a long-term recovery target of 40,000 spawners, which represented a level that was expected to maintain 1,000 or more wild Coho Salmon in all 11 sub-populations. @deckerAssessmentInteriorFraser2014 updated the IFCRT's original analysis using a longer time series of escapement data. They also quantified the relationship between aggregate abundance and distribution by using a logistic regression to estimate the probability of meeting short-term and long-term recovery objectives as a function of aggregate abundance. They concluded that aggregate spawner abundance levels of 20,000 and 40,000 spawners would result in near 100% probability that the IFCRT’s short-term objective and long-term recovery objectives would be met, respectively.
 
 
 @kormanEvaluationFrameworkAssessing2019 also used logistic regressions of the relationship between the IFCRT's distributional objectives and aggregate abundance when evaluating how exploitation and smolt-to-adult survival rates affected the ability of Interior Fraser Coho to meet conservation targets. Their approach was similar to that of @deckerAssessmentInteriorFraser2014, except they applied logistic regressions at the CU-level instead of the SMU-level. Using this approach, they calculated the probability that IFCRT sub-population objectives were met as a function of total escapement to the CU within their simulation evaluation. When evaluating how well conservation targets were met at the SMU-level, they chose to rely on the previous values of 20,000 and 40,000 identified by the IFCRT instead of updating these values. Finally, the 2018 RPA used an updated logistic regression to identify a long-term recovery target for Interior Fraser Coho that met the long-term IFCRT objective of 1000 spawners in all sub-populations [@arbeiderInteriorFraserCoho2020]. As a result, @arbeiderInteriorFraserCoho2020 recommended that the long-term recovery target for the stock should be a 3-year geometric mean abundance of 35,935 natural-origin spawners.  
@@ -76,8 +78,8 @@ Two types of spawner abundance series were provided: total spawners and natural-
 
 Data were similar to those previously described in @arbeiderInteriorFraserCoho2020; data treatments, assumptions, infilling, and data quality are described in detail in that document. More recent updates that are not described in @arbeiderInteriorFraserCoho2020 include the incorporation of three additional years of data (return years 2018-2020; brood years 2014-2016), updates to the SMU smolt-to-adult survival rate index to use a weighted average by release size, and increased data quality screening of scale ages used to calculate the proportion of recruits at age (M. Arbeider, pers. comm.). 
 
-The exploitation rate time series is a large source of uncertainty for Interior Fraser Coho. Exploitation rates are only available at the SMU-level, so are assumed identical among all CUs. This assumption is unlikely to be true because of known differences in freshwater fisheries among CUs. Furthermore, models used to reconstruct exploitation rates require a large number of assumptions that are expected to be incorrect [@arbeiderInteriorFraserCoho2020]. Because exploitation rate time series are used to reconstruct recruitment time series, errors in exploitation rates will propagate through to estimates of stock-recruitment parameters, relative abundance benchmarks such as S~gen~, and covariation in recruitment residuals. Additional sources of uncertainty in Interior Fraser Coho data sets include observation errors in spawner abundance estimates and estimates of age-at-escapement. Spawner abundance estimates are largely derived from visual surveys, for which observer efficiency is not estimated and survey life is difficult to estimate accurately. Scale sampling to determine age structure is incomplete at the CU-level with small sample sizes, missing data, and limited spatial representation within CUs in some years [@kormanEvaluationFrameworkAssessing2019].
 
+The exploitation rate time series is a large source of uncertainty for Interior Fraser Coho. Exploitation rates are only available at the SMU-level, so are assumed identical among all CUs. This assumption is unlikely to be true because of known differences in freshwater fisheries among CUs. Furthermore, models used to reconstruct exploitation rates require a large number of assumptions that are expected to be incorrect [@arbeiderInteriorFraserCoho2020]. Because exploitation rate time series are used to reconstruct recruitment time series, errors in exploitation rates will propagate through to estimates of stock-recruitment parameters, relative abundance benchmarks such as S~gen~, and covariation in recruitment residuals. Additional sources of uncertainty in Interior Fraser Coho data sets include observation errors in spawner abundance estimates and estimates of age-at-escapement. Spawner abundance estimates are largely derived from visual surveys, for which observer efficiency is not estimated and survey life is difficult to estimate accurately. Scale sampling to determine age structure is incomplete at the CU-level with small sample sizes, missing data, and limited spatial representation within CUs in some years [@kormanEvaluationFrameworkAssessing2019].
 
 
 ## CU STATUS ESTIMATION
@@ -86,16 +88,19 @@ We use three alternative ways to characterize CU status when developing LRPs for
 
 The first approach, which uses the Salmon Scanner tool developed by the State of the Salmon program (Section \@ref(rapidToolMethods)), is consistent with Canada's WSP and is recommended by Holt et al. (in review) as the method that should be used to estimate CU status for proportional reference points when a recent WSP status assessment is not available. The other two approaches are primarily used to develop aggregate abundance LRPs in this case study, as well as for a point of comparison with the Salmon Scanner tool.
 
-The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of S~gen~, where CU status is considered Red<!--CH 1 Feb. Changed from "poor". I see that 'Red' is described in more detail which I think works well. ---> when abundance drops below S~gen~. The value of S~gen~ represents the number of spawners required to recover to S~MSY~ (spawners at maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holtIndicatorsStatusBenchmarks2009]. S~gen~ is one of several benchmarks available for assigning multidimensional CU status in WSP Integrated Status Assessments and the Salmon Scanner<!--CH 1 Feb. added the salmon scanner for clarity. Might not be neccesary given last sentcne of this pgh though?-->; it represents a lower benchmark between Red and Amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015]. While estimates of CU status relative to S~gen~ is a readily available output from the Salmon Scanner tool, we calculated this metric external to the tool for our case study. 
 
-The third approach is based on the distribution of spawning escapement among sub-populations nested within CUs (Table \@ref(tab:cohoCU2SP)). We apply this approach for Interior Fraser Coho to maintain consistency with previous recovery planning processes for this SMU [@ifcrtConservationStrategyCoho2006; @arbeiderInteriorFraserCoho2020]. Since the distributional target we use was initially developed by the Interior Fraser Coho Recovery Team in 2006, we refer to it as "IFCRT distributional". Specifically, we use the IFCRT's short-term recovery objective that the 3-year geometric average escapement in at least half of the sub-populations within each of the five CUs is to exceed 1,000 wild-origin spawning Coho salmon, excluding hatchery fish spawning in the wild. We selected the short-term recovery target as a proxy for the lower benchmark <!--CH 1 FEb. suggested rewording to avoid the word 'poor', "to represent poor CU status"-->in our case study <!--CH 1 Feb. remove "(e.g., below a lower benchmark)"--> because, as noted by @arbeiderInteriorFraserCoho2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. We have included this third approach to defining CU status to demonstrate the range of approaches and metrics that can be used, and to demonstrate sensitivity of the LRP to choice of metrics for assigning CU-status.  Future iterations of the Pacific Salmon Status Scanner approach could include distributional metrics such as those used in the IFCRT approach.  
+The second approach is based on comparing the current abundance of each CU to its CU-specific estimate of S~gen~, where CU status is considered Red when abundance drops below S~gen~. The value of S~gen~ represents the number of spawners required to recover to S~MSY~ (spawners at maximum sustainable yield) within one generation, under equilibrium conditions in the absence of fishing [@holtIndicatorsStatusBenchmarks2009]. S~gen~ is one of several benchmarks available for assigning multidimensional CU status in WSP Integrated Status Assessments and the Salmon Scanner; it represents a lower benchmark between Red and Amber status zones and was used as part of the 2014 Integrated Status Assessment for Interior Fraser Coho [@dfoWildSalmonPolicy2015]. While estimates of CU status relative to S~gen~ is a readily available output from the Salmon Scanner tool, we calculated this metric external to the tool for our case study. 
+
+
+The third approach is based on the distribution of spawning escapement among sub-populations nested within CUs (Table \@ref(tab:cohoCU2SP)). We apply this approach for Interior Fraser Coho to maintain consistency with previous recovery planning processes for this SMU [@ifcrtConservationStrategyCoho2006; @arbeiderInteriorFraserCoho2020]. Since the distributional target we use was initially developed by the Interior Fraser Coho Recovery Team in 2006, we refer to it as "IFCRT distributional". Specifically, we use the IFCRT's short-term recovery objective that the 3-year geometric average escapement in at least half of the sub-populations within each of the five CUs is to exceed 1,000 wild-origin spawning Coho salmon, excluding hatchery fish spawning in the wild. We selected the short-term recovery target as a proxy for the lower benchmark in our case study because, as noted by @arbeiderInteriorFraserCoho2020, the short-term target was designed as an immediate target when the population was endangered. As such, it was interpreted as a level expected to prevent extinction or loss of genetic diversity. We have included this third approach to defining CU status to demonstrate the range of approaches and metrics that can be used, and to demonstrate sensitivity of the LRP to choice of metrics for assigning CU-status.  Future iterations of the Pacific Salmon Status Scanner approach could include distributional metrics such as those used in the IFCRT approach.  
 
 
 ### Estimation of Sgen{#cohoSgen}
 
 Estimates of S~gen~ are required when assessing CU status using both the multidimensional algorithm within the Pacific Salmon Status Scanner and the comparison of current CU-level abundance to S~gen~. While the application of the Salmon Scanner to Interior Fraser Coho CUs in Pestal et al. (in prep) relies on peer-reviewed estimates of S~gen~ from the WSP Integrated Status Assessment [@dfoWildSalmonPolicy2015], we re-estimate S~gen~ here using data updated to 2020. In addition, we explore alternative stock-recruitment model formulations to better understand how model assumptions at the CU-level affect resulting LRP estimates.
 
-Two different formulations of stock recruitment model were used to estimate S~gen~: (i) a base Ricker model, which includes a smolt-to-adult survival covariate, and (ii) <!--CH 1 Feb. rewored-->an alternative form of the Ricker model in which an informative prior distribution is used to increase S~REP~ compared to the base model, labelled 'Ricker_priorCap'. S~REP~ is the spawner abundance level at which the stock replaces itself; the relationship between S~REP~ and Ricker stock recruitment model parameters is shown below (Equation \@ref(eq:beta-Srep)). Both of these models have been previously developed and applied to Interior Fraser Coho CUs. The smolt-to-adult survival covariate used when fitting both models is a hatchery-based smolt-to-adult survival rate index. The index is not CU-specific; the same index is applied to all CUs. A third Ricker model, in which both an informative prior on S~REP~ and depensatory mortality were included, was also used by @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020; however, we did not include it in our case study for simplicity. As noted by @kormanEvaluationFrameworkAssessing2019, there is no indication in available data of depensatory dynamics, and the SR model fit with depensatory mortality required a highly uncertain assumption about the escapement level at which <!--CH 1 Feb. Suggest simplifying form: "recruitment is reduced to 50% of the value it would have been in the absence of depensatory mortality", to:--> depensation occurs.  Furthermore, formal model selection criteria showed that adding depensatory mortality into models lead to a reduction in model fit [@kormanEvaluationFrameworkAssessing2019].
+
+Two different formulations of stock recruitment model were used to estimate S~gen~: (i) a base Ricker model, which includes a smolt-to-adult survival covariate, and (ii) an alternative form of the Ricker model in which an informative prior distribution is used to increase S~REP~ compared to the base model, labelled 'Ricker_priorCap'. S~REP~ is the spawner abundance level at which the stock replaces itself; the relationship between S~REP~ and Ricker stock recruitment model parameters is shown below (Equation \@ref(eq:beta-Srep)). Both of these models have been previously developed and applied to Interior Fraser Coho CUs. The smolt-to-adult survival covariate used when fitting both models is a hatchery-based smolt-to-adult survival rate index. The index is not CU-specific; the same index is applied to all CUs. A third Ricker model, in which both an informative prior on S~REP~ and depensatory mortality were included, was also used by @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020; however, we did not include it in our case study for simplicity. As noted by @kormanEvaluationFrameworkAssessing2019, there is no indication in available data of depensatory dynamics, and the SR model fit with depensatory mortality required a highly uncertain assumption about the escapement level at which depensation occurs. Furthermore, formal model selection criteria showed that adding depensatory mortality into models lead to a reduction in model fit [@kormanEvaluationFrameworkAssessing2019].
 
 
 @kormanEvaluationFrameworkAssessing2019 and @arbeiderInteriorFraserCoho2020 used a hierarchical model structure for both the base Ricker and Ricker_priorCap models that assumed CU-level productivity parameters were sampled from a common, normal distribution shared by all CUs. Using formal model selection criteria (i.e., DIC), @kormanEvaluationFrameworkAssessing2019 found higher support for the hierarchical structure than when productivity parameters were assumed independent among CUs. However, our initial examination of the hierarchical approach applied to the updated data set lead us to select the independent CU approach for our evaluation. Firstly, we found that LRP estimates were sensitive to the assumed standard deviation on the hyper-distribution prior for the productivity parameter. Using the individual model approach removed prior influence on model results. Secondly, a logistic regression fit to status estimates obtained using the hierarchical model was unable to converge on a solution in several years between 2015 and 2020, including the most recent year (2020). 
@@ -104,7 +109,10 @@ Two different formulations of stock recruitment model were used to estimate S~ge
 Future stock recruitment analyses for Interior Fraser Coho may wish to re-visit the hierarchical approach to modelling productivity. Bayesian posterior distributions of the productivity parameter from our individual model fits show some differences in productivity among CUs (particularly for the Fraser Canyon CU; Appendix \@ref(app:coho-appendix)). However, there was substantial overlap in CU-level distributions for all other CUs. We do not expect our decision to apply an individual-stock modelling approach here will affect our general conclusions. In preliminary analyses, LRPs were similar between individual and hierarchical modelling approaches.
 
 
-The formulations for the two-stock recruitment models <!--CH 1 feb. Remove, repetitive? "using the assumption of independent productivity among CUs +-->are described below. 
+The formulations for the two-stock recruitment models are described below. 
+
+\
+&nbsp;
 
 ***Model 1: Ricker***
 
@@ -155,6 +163,8 @@ This model formulation is similar to the Ricker model used in @arbeiderInteriorF
   \sigma_{v_i} \sim Inverse Gamma (0.1,0.1)
 \end{equation}
 
+\
+&nbsp;
 
 ***Model 2: Ricker_priorCap***
 
@@ -170,16 +180,8 @@ To maintain consistency with this previous work on Interior Fraser Coho, we also
 \end{equation}
 
 
-@arbeiderInteriorFraserCoho2020 and @kormanEvaluationFrameworkAssessing2019 set $\mu_{S_{REP}}$ at 1.5 times the S~REP~ value estimated from the base model fit without a prior on S~REP~. For our <!--CH 1 FEb remove here? these labels aren't yet defined and might be okay without, "integrated Sgen-LRP"-->model fits (described in Section \@ref(logistic)), we found that we needed to constrain $\mu_{SREP}$ at no more than 1.4 times the S~REP~ value to achieve model convergence, so we used the 1.4 times expansion instead.  We set $\sigma_{SREP}$ at $\sqrt{2} \times 1000 = 1414$ spawners, which is the same value used by @arbeiderInteriorFraserCoho2020. Note that the "$\times 1000$" term is used to correct for scaling spawner abundance by 1/1000 when fitting models. The effect of adding the prior on S~REP~ when fitting individual models to available data is shown in Figure \@ref(fig:coho-SR-fit).  
+@arbeiderInteriorFraserCoho2020 and @kormanEvaluationFrameworkAssessing2019 set $\mu_{S_{REP}}$ at 1.5 times the S~REP~ value estimated from the base model fit without a prior on S~REP~. For our model fits (described in Section \@ref(logistic)), we found that we needed to constrain $\mu_{SREP}$ at no more than 1.4 times the S~REP~ value to achieve model convergence, so we used the 1.4 times expansion instead.  We set $\sigma_{SREP}$ at $\sqrt{2} \times 1000 = 1414$ spawners, which is the same value used by @arbeiderInteriorFraserCoho2020. Note that the "$\times 1000$" term is used to correct for scaling spawner abundance by 1/1000 when fitting models. The effect of adding the prior on S~REP~ when fitting individual models to available data is shown in Figure \@ref(fig:coho-SR-fit).  
   
- 
-<!-- LW: Resolution on these figs looks kind of low-->  
-<!--CH 1 Feb. I agree. If you have time, consider replotting? If in base R, use png(file='', res=600), or higher.-->
-```{r coho-SR-fit, fig.cap="Spawner-recruitment curves fit to spawner and recruitment data using individual models for each CU. Solid black lines shows the MLE fit for the base Ricker model while solid blue lines shows the MLE fit for the Ricker\\_priorCap model. Associated black and blue shaded regions show the 95 percent confidence intervals on respective model fits using the average long-term smolt-to-adult survival rate from the available time series. The red lines show the replacement line.", warning=FALSE, echo=FALSE, fig.align="center"}
-knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
-```
-
-\linebreak
 
 ***Calculation of Sgen***  
 
@@ -206,45 +208,53 @@ where, $W$ represents the Lambert W function [@scheuerellExplicitSolutionCalcula
   (\#eq:Sgen)
 \end{equation}
 
+\linebreak
+
+```{r coho-SR-fit, echo=FALSE, fig.align="center", fig.cap="Spawner-recruitment curves fit to spawner and recruitment data using individual models for each CU. Solid black lines shows the MLE fit for the base Ricker model while solid blue lines shows the MLE fit for the Ricker\\_priorCap model. Associated black and blue shaded regions show the 95 percent confidence intervals on respective model fits using the average long-term smolt-to-adult survival rate from the available time series. The red lines show the replacement line.", out.width = '85%', warning=FALSE}
+knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
+```
+
+\linebreak
+
 
 
 ## LRP ESTIMATION: PROPORTION OF CUS
 
 ### Methods
-<!--CH 1 Feb. reworded fist sentence-->
+
 To derive proportional LRPs, we calculated the proportion of CUs that had multidimensional statuses from the Pacific Salmon Status Scanner above the Red zone. Status was assessed as being below the LRP in years in which one or more CUs assessed as having Red status. Both Ricker model formulations described above were used to estimate abundance-based benchmarks (lower benchmark \= S~gen~ and upper benchmark \= 0.8S~MSY~) when assessing status with the Pacific Salmon Status Scanner: the base Ricker model and the Ricker_priorCap model. Estimates of S~gen~ and S~MSY~ were estimated using all data available up to 2020.
 
-<!--CH 1 Feb. reworded sentence to focus on the act of deriving the LRP, and simplify the sentence-->
+
 For comparison, we also calculated LRPs from the proportion of CUs that had recent generational average (3-year) spawning abundance greater than S~gen~ and from the proportion of CUs that failed to meet the IFCRT distributional target of at least half of all sub-populations within each CU having more than 1000 spawners.  
 
 ### Results
 
-Estimates of S~gen~ based on the Ricker_priorCap model were higher than those based on the base Ricker model for four of the five CUs (Middle Fraser, Lower Thompson, North Thompson, and South Thompson) and were approximately equal for the fifth CU (Fraser Canyon; Appendix \@ref(app:coho-appendix)). As a result, generational average spawning abundance was more likely to drop below S~gen~ when it was estimated using the Ricker_priorCap model. Under the base Ricker model formulation, generational average spawning abundance remained above S~gen~ for all years between 2000 and 2020 (Figure \@ref(fig:coho-CU-multiDim-Ricker)).  In comparison, under the Ricker_priorCap formulation, generational average abundance dropped below S~gen~ for 5 of the 21 years between 2000 and 2020. These occurrences included the Lower Thompson CU (2006), the Middle Fraser CU (2006, 2008), and the South Thompson CU (2000, 2006, 2007, 2015; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)).  All five CUs had spawning abundances above S~gen~ in 2020, regardless of which spawner recruitment model was used, indicating that the stock would be <!--CH 1 FEb. suggest removing "well" -->above a proportional LRP based on S~gen~.
+Estimates of S~gen~ based on the Ricker_priorCap model were higher than those based on the base Ricker model for four of the five CUs (Middle Fraser, Lower Thompson, North Thompson, and South Thompson) and were approximately equal for the fifth CU (Fraser Canyon; Appendix \@ref(app:coho-appendix)). As a result, generational average spawning abundance was more likely to drop below S~gen~ when it was estimated using the Ricker_priorCap model. Under the base Ricker model formulation, generational average spawning abundance remained above S~gen~ for all years between 2000 and 2020 (Figure \@ref(fig:coho-CU-multiDim-Ricker)).  In comparison, under the Ricker_priorCap formulation, generational average abundance dropped below S~gen~ for 5 of the 21 years between 2000 and 2020. These occurrences included the Lower Thompson CU (2006), the Middle Fraser CU (2006, 2008), and the South Thompson CU (2000, 2006, 2007, 2015; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)).  All five CUs had spawning abundances above S~gen~ in 2020, regardless of which spawner recruitment model was used, indicating that the stock would be above a proportional LRP based on S~gen~.
 
 
-```{r coho-CU-multiDim-Ricker, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). First geometric mean includes years 1998-2000. Grey dots indicate years when all CUs had Pacific Salmon Status Scanner assessments above Red when Sgen was estimated using the Ricker model, while red dots indicate years when one or more CUs had Pacific Salmon Status Scanner assessments in the Red zone, which would trigger a breach of the LRP. Solid orange lines show estimates of Sgen from the Ricker model for comparison.", warning=FALSE, echo=FALSE, fig.align="center"}
+The frequency of years in which the IFCRT distributional target failed to be met for one or more CUs was similar to that observed when S~gen~ based on the Ricker_priorCap was used, with distributional targets not met in 4 of the 21 years between 2000 and 2020 (breached in 2006, 2015-2017). Eight of the 11 sub-populations had generational average escapement drop below the 1000 spawner threshold in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the distributional target of at least half of the sub-populations within each CU with greater than 1000 fish was more often met than not. All 11 sub-populations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on the IFCRT-distributional target (Figure \@ref(fig:coho-Subpop-timeseries)).
+
+\newpage
+```{r coho-CU-multiDim-Ricker, fig.cap="Escapement time series for Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). First geometric mean includes years 1998-2000. Grey dots indicate years when all CUs had multidimensional Salmon Scanner assessments above Red when S\\textsubscript{gen} was estimated using the Ricker model, while red dots indicate when one or more CUs had assessments in the Red zone, which would trigger a breach of the LRP. Orange lines show estimated S\\textsubscript{gen}.", warning=FALSE, echo=FALSE, out.width= '80%', fig.align="center"}
 knitr::include_graphics("figure/coho-CU-EscpSeries-wMultiStatus-Ricker.png")
 ```
 
-```{r coho-CU-multiDim-Ricker-Cap, fig.cap="Escapement time series for five Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). First geometric mean includes years 1998-2000. Grey dots indicate years in which all CUs had Pacific Salmon Status Scanner assessments above Red when Sgen was estimated using the Ricker\\_priorCap model, while red dots indicate years in which one or more CUs had Pacific Salmon Status Scanner status in the Red zone, which would trigger a breach of the LRP. Solid orange lines show estimates of Sgen from the Ricker\\_priorCap model for comparison.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r coho-CU-multiDim-Ricker-Cap, fig.cap="Escapement time series for Interior Fraser Coho CUs shown as annual escapements (lines) and 3-year geometric mean escapements (dots). Grey dots indicate years in which all CUs had multidimensional Salmon Scanner assessments above Red when S\\textsubscript{gen} was estimated using the Ricker\\_priorCap model, while red dots indicate years in which one or more CUs had assessments in the Red zone, which would trigger a breach of the LRP. Orange lines show estimates of S\\textsubscript{gen}.", out.width= '80%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-CU-EscpSeries-wMultiStatus_Ricker_priorCap.png")
 ```
 
-\linebreak
-
-The frequency of years in which the IFCRT distributional target failed to be met for one or more CUs was similar to that observed when S~gen~ based on the Ricker_priorCap was used, with distributional targets not met in 4 of the 21 years between 2000 and 2020 (breached in 2006, 2015-2017). Eight of the 11 sub-populations had generational average escapement drop below the 1000 spawner threshold in one or more years (Figure \@ref(fig:coho-Subpop-timeseries)). Sub-populations tended to differ in which years they dropped below the 1000 spawner threshold, which meant that the distributional target of at least half of the sub-populations within each CU with greater than 1000 fish was more often met than not. All 11 sub-populations had generational average spawning abundances above 1000 spawners in 2020, indicating that the stock would be well above a proportional LRP based on the IFCRT-distributional target (Figure \@ref(fig:coho-Subpop-timeseries)).
+\newpage
 
 
 ```{r coho-Subpop-timeseries, fig.cap="Escapement time series for 11 sub-populations of Interior Fraser Coho shown as annual escapements (lines) and 3-year geometric mean escapements (dots). First geometric mean includes years 1998-2000. Grey dots shows years in which the 3-year geometric mean escapement was above the 1000 fish threshold used to assess distributional status, while red dots show years in which the 1000 fish threshold was not met. CUs are represented by columns with labels long the y axis.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/coho-Subpop-EscpSeries-wStatus.png")
 ```
 
-\linebreak
-<!--CH 1 Feb. reworded this sentence-->
+
 Multidimensional status derived from the Salmon Scanner is driven by abundance metrics for this SMU. Because absolute abundance data and benchmarks based on S~gen~ and S~MSY~ were available, the multidimensional algorithm within the Salmon Scanner (Figure \@ref(fig:decision-tree)) most often assigned CU status based on this metric (Figures \@ref(fig:coho-CU-multiDim-Ricker) and \@ref(fig:coho-CU-multiDim-Ricker-Cap)). Though status in some cases was also influenced by absolute abundance relative to the threshold of 1500 spawners. This occurred in the Fraser Canyon CU between 2015 and 2017. In these years, the generational average of absolute spawning abundance was < 1500 spawners and the CU was assigned Red status under the first node of the decision tree even though spawning abundances are above S~gen~.
 
  
-The total number of years in which an LRP would have been breached using the multidimensional approach <!--CH 1Feb changed from PSSS-->depended on which Ricker stock recruitment model was used to estimate S~gen~.  When status was assessed using abundance-based benchmarks estimated from the base Ricker model, a proportional LRP for the SMU would have been breached in 4 of 21 years. For three of these years, the breach was based on Fraser Canyon spawning abundances dropping below 1500 spawners (2015-2017), while for the one additional year (2000) it was due to the Lower Thompson CU having spawning abundance < S~gen~ (Figure \@ref(fig:coho-CU-multiDim-Ricker)). In comparison, when status was assessed using abundance-based benchmarks from the Ricker_priorCap model, a proportional LRP would have been breached in 9 of 21 years (2000-2001, 2005-2007, 2010, 2015-2017; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)). <!--CH 1 FEb. I rewrorded a bit-->For both stock-recruitment models, multidimensional status from the Salmon Scanner was above Red for all CUs based on the most recent generational average, indicating that the SMU is currently above a proportional LRP, regardless of spawner recruitment model.
+The total number of years in which an LRP would have been breached using the multidimensional approach depended on which Ricker stock recruitment model was used to estimate S~gen~.  When status was assessed using abundance-based benchmarks estimated from the base Ricker model, a proportional LRP for the SMU would have been breached in 4 of 21 years. For three of these years, the breach was based on Fraser Canyon spawning abundances dropping below 1500 spawners (2015-2017), while for the one additional year (2000) it was due to the Lower Thompson CU having spawning abundance < S~gen~ (Figure \@ref(fig:coho-CU-multiDim-Ricker)). In comparison, when status was assessed using abundance-based benchmarks from the Ricker_priorCap model, a proportional LRP would have been breached in 9 of 21 years (2000-2001, 2005-2007, 2010, 2015-2017; Figure \@ref(fig:coho-CU-multiDim-Ricker-Cap)). For both stock-recruitment models, multidimensional status from the Salmon Scanner was above Red for all CUs based on the most recent generational average, indicating that the SMU is currently above a proportional LRP, regardless of spawner recruitment model.
 
 
 ## LRP ESTIMATION: AGGREGATE ABUNDANCE, LOGISTIC REGRESSION LRPS
@@ -263,17 +273,11 @@ When estimating logistic regression LRPs using S~gen~, we used an integrated mod
 
 We initially considered a third version of the logistic regression model, in which we used the multidimensional algorithm within Salmon Scanner to characterize CU status. Preliminary model evaluations led us to exclude this model due to poor fit. The multidimensional algorithm relies on generational mean (smoothed abundances) to assess status of individual CUs against benchmarks, while our logistic regression approach uses raw (unsmoothed) aggregate abundance as a predictor variable. As a result, when logistic regressions were fit to multidimensional CU status estimates, there was a mismatch in the timing of abundance highs and lows. This mismatch led to a weak/nonexistent relationship between SMU status and the raw (unsmoothed) abundances. Using the generational mean of aggregate abundance as the predictor variable in the logistical regression fit, instead of raw annual abundance values, introduced considerable autocorrelation in statuses.
 
-<!--
-Proposing to remove the following based on comments from Sue.  She noted that the example of using trends was not relevant to coho because we only use abundance-based benchmarks for setting status.  In addition, she noted that the inability of the single Sgen approach to recognize red status at very low abundances (<1500 spawners) was a disadvantge of that approach, so it didn't make sense to make it sounds like this was a limitation of the scanner.  I don't think this effect of the 1500 fish trheshold was as big of a deal compared to the mis-match of using unsmoothed vs smoothed abudnances, so I have suggested just removing this whole point.
-==================================================
-
-The second limiting factor in establishing a statistical relationship between the Pacific Salmon Status Scanner estimates of CU status and aggregate spawner abundance is that the Salmon Scanner includes criteria that are not continuously tied to the CU abundance. For example, CU status can be determined based on trends, which is not congruent with logistic regression goal of identifying underlying relationship between aggregate abundance and CU statuses. In addition, the Pacific Salmon Status Scanner includes absolute abundance thresholds (e.g. generational mean should be above 1500 fish) that are not proportional to the size of a CU. These absolute benchmarks introduce a disconnect between the SMU abundance and status, even when there is high correlation between CUs, because small CUs will be more likely to be below the absolute threshold despite high aggregate abundances.
-
-CH 1 Feb.: okay, but in general I think this is still a limitation
--->
+\
+&nbsp;
 
 ***Retrospective Analysis and Analysis Evaluating Impact of Missing CUs***
-<!--CH 1 Feb. I revised the title, as I think retrospective analyses only pertains to the analyses where we change the time-period not the number of CUs. Could be reworded to make is sound better!-->
+
 
 We used retrospective analyses to examine the effect of time series length on logistic regression LRP estimates.  For each year between 2010 and 2020, we used data only available up to that year to calculate LRPs and associated confidence intervals.
 
@@ -295,11 +299,10 @@ where $nCU$ is the number of CUs being used (3, 4, or 5), $S_{i,t}$ is the abund
 Logistic regression model fits in 2020 from the integrated Logistic:Sgen-Ricker, Logistic:Sgen-priorCap and Logistic:IFCRT models are shown in Figure \@ref(fig:coho-IM-logisticFit2020). All three logistic regression LRP methods were able to converge on a solution in 2020. Resulting LRPs for different *p* thresholds are shown on the regression curves, as well as in Table \@ref(tab:logisticLRPs2020). There was considerable uncertainty around predicted curves as seen in the large areas of gray shading in Figure \@ref(fig:coho-IM-logisticFit2020).  
 
 
-
 ```{r coho-IM-logisticFit2020, fig.cap="Logistic regression fit from the three logistic regression models: Logistic:Sgen-Ricker, Logistic:Sgen-priorCap and Logistic:IFCRT LRP model using data from 1998 - 2020. Dots represent individual years and 'x' represents the latest year in the time series. The yellow vertical line shows the LRP estimate based on the requirement of a 50\\% probability of all CUs being above Sgen, while the yellow shaded region shows the associated 95\\% confidence interval around the LRP. LRPs for three alternative probability thresholds, 66\\%, 90\\%, and 99\\%, are shown in blue, green, and orange, respectively.", warning=FALSE, echo=FALSE, out.width = '90%', fig.align="center"}
 knitr::include_graphics("figure/coho-all-LogisticLRP.png")
 ```
-<!--CH 1 Feb. removed "(MLE estimates only; no confidence intervals) " from caption"-->
+\linebreak
   
 When the Logistic:Sgen-Ricker model was used, aggregate abundance LRPs ranged from  21,189 to 35,737 spawners, depending on whether the required probability of all CUs being above S~gen~ was moderate (50%) or very likely (99%) (Table \@ref(tab:logisticLRPs2020)). LRPs increased across all probability levels when the carrying capacity was assumed higher under the Logistic:Sgen-priorCap model (Table \@ref(tab:logisticLRPs2020)). The higher S~gen~ values for most CUs under the alternative Logistic:Sgen_priorCap model formulation resulted in more historical years in which < 100% of CUs were above S~gen~. The result was a shift of the logistic curve to the right (Figure \@ref(fig:coho-IM-logisticFit2020)). LRPs based on the Logistic:Sgen_priorCap model ranged from 23,245 to 39,200 spawners, depending on whether the required probability of all CUs being above S~gen~ was moderate (50%) or very likely (99%).  
 
@@ -323,6 +326,9 @@ When CU status was based on the IFCRT distributional target, the fit of the logi
 (\#tab:logisticLRPs2020)
 \end{table}
 
+\
+&nbsp;
+&nbsp;
 
 ***Logistic Regression Diagnostics***
 
@@ -354,20 +360,20 @@ The Wald test showed that the logistic model coefficient for aggregate abundance
 
 Sample sizes were small due to the short time series available for Interior Fraser Coho; only 23 years of observations were available to fit logistic regression models. @peduzziSimulationStudyNumber1996 recommend a minimum requirement of 10 data points for the least frequent outcome based on their simulation studies in the field of clinical epidemiology. In our case, the least frequent outcome was the failure of all CUs to be above their benchmarks (i.e., 0). We were not able to make this minimum requirement for any of our model fits; we had only 7, 8, and 5 data points at the least frequent outcome for the Logistic:Sgen-Ricker, Logistic:Sgen-priorCap, and Logistic-IFCRT models, respectively. Based on the current ratio of successes and fails in the data, the estimated minimum sample sizes that would be required to meet the criteria of @peduzziSimulationStudyNumber1996 ranged from 26 to 42 years. However, despite small sample sizes, hit ratios are high for all models at p = 50%.  As a result, we suggest that logistic regression LRPs may still be useful for this SMU.  We proceeded with retrospective analyses in order to examine how sensitive LRPs based on these model fits were to variations in the level of available data.
 
-***Retrospective Analysis and Analysis Evaluating Impact of Missing CUs***
-<!--CH 1 Feb. As above I revised the title. I also revised the figure captions accordingly Figs. 11-13-->
+\
+&nbsp;
 
-<!--CH 1 Feb. I see you had written out numbers for clarity, but I found it a little awkward as numbers are used in previous & subsequent text. I changed most back to numbers, but kept a few as written words when the number would have caused excessive confusion-->
+***Retrospective Analysis and Analysis Evaluating Impact of Missing CUs***
+
 We started the retrospective analyses for the three logistic regression models in 2010. Throughout the time series, the Logistic:Sgen-Ricker did not converge when the estimates were truncated to 2013 and 2014. The Logistic:Sgen-priorCap model did not converge on an LRP estimate in 2018. All three models showed some fluctuations in LRP estimates over time (Figure \@ref(fig:coho-retroLRPs)). The Logistic:IFCRT model tended to produce the lowest estimates of LRPs over time, followed by the Logistic:Sgen-Ricker and the Logistic:Sgen-priorCap. However there was considerable overlap between the confidence interval of all three LRP estimates (Figure \@ref(fig:coho-retroLRPs)).  
 
-```{r coho-retroLRPs, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) and associated time series of retrospective LRPs from logistic regression estimation methods. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. Annual LRP estimates are shown as maximum likelihood values (coloured lines) and associated 95\\% confidence intervals (shaded areas).", warning=FALSE, echo=FALSE, out.width = '70%', fig.align="center"}
+```{r coho-retroLRPs, fig.cap="Three-year geometric mean of aggregate spawning abundance for the Interior Fraser Coho SMU (black line) and associated time series of retrospective LRPs from logistic regression estimation methods. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. Annual LRP estimates are shown as maximum likelihood values (coloured lines) and associated 95\\% confidence intervals (shaded areas).", warning=FALSE, echo=FALSE, out.width = '60%', fig.align="center"}
 knitr::include_graphics("figure/coho_LRP_compareRetro.png")
 ```
 
-\linebreak
+\
+&nbsp;
 
-
- 
 When the Logistic:Sgen-Ricker model was applied retrospectively to missing data scenarios with 4 out of the 5 CUs, only a subset of scenarios had LRP estimates that converged on a solution (Figure \@ref(fig:coho-IM-missingCUs)). All 5 possible combinations of 4 CUs had estimates in 2017-2019, while only 4 combinations had estimates in 2020. For scenarios in which LRP estimates were possible, estimates of aggregate status (Equation \@ref(eq:status)) were often close to the estimate obtained when all 5 CUs were used, and always overlapped with the 95% confidence interval of the full data estimate. The Logistic:Sgen-Ricker model was less likely to converge on a solution when data from only three CUs were used. This pattern was especially true for 2020 when only 6 out of the 10 possible combinations had estimates. For scenarios that were able to converge, aggregate status estimates from 3 CUs tended to be more uncertain than 4- and 5-CU estimates, and showed larger deviations from estimated status when all CUs were used. One missing data scenario in 2019 had a status estimate that fell outside of the 95% confidence interval of the full data estimate.  
 
 
@@ -375,7 +381,7 @@ When the Logistic:Sgen-Ricker model was applied retrospectively to missing data 
 knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurv-50.png")
 ```  
 
-\linebreak
+\newpage
   
 When the Logistic:Sgen-priorCap model was applied to missing data scenarios in which 4 out of 5 CUs had data, LRP estimates were only available for 2 of the 5 CU combinations (Figure \@ref(fig:coho-IMCap-missingCUs)). For scenarios in which LRP estimates were available, status was poorly estimated with the estimate often falling outside of the 95% confidence interval of the full data estimate. While convergence was more frequent when only 3 CUs were used, estimates had high uncertainty and were variable among scenarios. Several of the status estimates from 3-CU scenarios fell outside of the 95% confidence interval for the full data case. In the year 2018 the model did not converge when all CUs were included, but estimates for missing CU scenarios were available.
 
@@ -388,7 +394,7 @@ knitr::include_graphics("figure/coho-StatusByNCUs-IndivRickerSurvCap-50.png")
 \linebreak
 
 
-LRPs based on the Logistic:IFCRT model could be estimated for all 4-CU data scenarios <!--CH 1 Feb. could 'scenarios' be 'combinations' to be consistent with wording in previous pghs?-->in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for 4 of the 5 CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the 5 four-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for the South Thompson CU, which is an influential observation that has a large impact on the shape of the model fit. The South Thompson CU is the only CU that failed to meet the distributional target in 2015, which meant that its removal leads to a 'failure' year (i.e., at least one CU below its lower benchmark) becoming a 'success' (all CUs above lower benchmark). This shift results in a lower LRP and a higher status estimate. For missing data scenarios in which only 3 CUs were included, status estimates often had higher uncertainty than the 4-CU or full data scenarios, and showed high variability among scenarios in estimated status.  
+LRPs based on the Logistic:IFCRT model could be estimated for all 4-CU data combinations in all years (Figure \@ref(fig:coho-distributional-missingCUs)). Resulting estimates of SMU status were similar to the full data estimate for 4 of the 5 CU combinations. Status estimates were highest and most uncertain when the South Thompson CU was dropped from the analysis (i.e., the last of the 5 four-CU combinations shown for each year in Figure \@ref(fig:coho-distributional-missingCUs)). This pattern is due the 2015 data point for the South Thompson CU, which is an influential observation that has a large impact on the shape of the model fit. The South Thompson CU is the only CU that failed to meet the distributional target in 2015, which meant that its removal leads to a 'failure' year (i.e., at least one CU below its lower benchmark) becoming a 'success' (all CUs above lower benchmark). This shift results in a lower LRP and a higher status estimate. For missing data scenarios in which only 3 CUs were included, status estimates often had higher uncertainty than the 4-CU or full data scenarios, and showed high variability among scenarios in estimated status.  
 
 
 ```{r coho-distributional-missingCUs, fig.cap="Estimates of SMU status (with 95\\% confidence intervals) from the Logistic:IFCRT model under different scenarios about missing CUs, where status is characterized as the recent generational mean of aggregate abundance / LRP. LRPs are based on a 50\\% probability that all CUs will be above their lower benchmarks. The set of status estimates associated with each number of CUs on the x-axis represents all possible combinations of CUs created by selecting that number from the 5 available CUs. Red dashed lines show the maximum likelihood estimate when no data is missing (i.e., all 5 CUs) for comparison with the missing data scenarios. Note that the y-axis has been truncated at 8, so the upper limits of some error bars are not shown.", warning=FALSE, echo=FALSE, out.width = '70%',  fig.align="center"}
@@ -400,16 +406,62 @@ knitr::include_graphics("figure/coho-StatusByNCUs-SPopAbundThreshST-50.png")
 
 ### Methods
 
-Projections of each of the five CUs with the Interior Fraser Coho SMU were implemented using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Finer-scale projections at the scale of sub-populations were not possible as spawner-recruitment data series were not available at this scale. As a result, projection LRPs using the IFCRT recovery target was not possible; we were restricted to estimating CU-level status based on S~gen~<!--there is a mix of S~gen~ and Sgen (mainly captions). Not sure what we decided on for consistency.--><!--CH 1 Feb. use S\\textsubscript{gen} in figure captions-->. Parameters characterizing CU-level population dynamics, smolt-to-adult survival rates, and exploitation rates were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below.  
+Projections of each of the five CUs with the Interior Fraser Coho SMU were implemented using the `samSim` modelling tool (Appendix \@ref(app:samsim-appendix)). Finer-scale projections at the scale of sub-populations were not possible as spawner-recruitment data series were not available at this scale. As a result, projection LRPs using the IFCRT recovery target was not possible; we were restricted to estimating CU-level status based on S~gen~. Parameters characterizing CU-level population dynamics, smolt-to-adult survival rates, and exploitation rates were derived directly from data sets described in Section \@ref(cohoData). Base case parameters and alternative parameter values tested in sensitivity analyses are provided in Table \@ref(tab:coho-BaseProjectPars). Additional details on key model parameterizations and sensitivity analyses are also described in text below.  
 
-<!--CH 1 Feb. suggest removing, as this should be clear already. "Projection model outputs were used to estimate projection LRPs using the methods described on Section \@ref(projectedMethods). "-->Projections were run for 30 years over 20,000 simulation trials, with projections initialized using spawner abundances from the most recent 4 return years, 2016 - 2020.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probability thresholds.  The distribution of projected trajectories were near equilibrium after 4 years of projections. During the first 4 years, trajectories depended primarily on the historical time-series (Figures \@ref(fig:coho-CUProjections-Ricker) and \@ref(fig:coho-CUProjections-Ricker-priorCap)).<!--CH 1 FEb. reworded slightely-->
 
+\newpage
+
+\begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
+\caption{Parameters used for CU-specific projections of Interior Fraser Coho population dynamics.}\\
+\hline
+Parameter & Value & Source \\ 
+\hline
+\endhead
+\hline
+ Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix C) & Drawn from posterior from MCMC model fit to 1998-2016 brood years
+\\\\
+
+ Smolt-to-adult survival rate (all CUs) & Drawn from Lognormal(-4.83, 1.21), bound between [-9.21, -3.32]
+ & Estimated from brood years 1998 - 2016, with bounds set at lowest and highest observations
+\\\\  
+
+ Among-CU variability in smolt-to-adult survival coefficient $\gamma$  &  $\sigma_{\gamma}$ = 0 (all CUs the same) & Assumed value when fitting models. Varied between 0 and 0.09 in sensitivity analyses
+\\\\
+
+ Ave age proportions at maturity (ages 3, 4) &  MiddleFR, LThomp, SThomp = (0.86,0.14) , FRCanyon = (0.87, 0.13), NThomp = (0.88, 0.12) & Estimated from time-series of proportions of recruits at age
+ \\\\  
+
+ Interannual variability in age proportions (tau from multivariate logistic distribution)  & MiddleFR, NThomp, SThomp = 1.0, LThomp = 0.9, FRCanyon = 0.8 & Estimated from time-series of ppns of recruits at age \\\\
+
+ Average exploitation rate & 0.125 & Estimated from annual estimates, brood years 1998 - 2016. Varied in sensitivity analyses (0.05 - 0.35).
+ \\\\
+
+Interannual variability in exploitation rates & CV = 0.442  & Estimated from annual estimates from brood years 1998 - 2016. Assumed to be Beta distributed.
+\\\\
+
+Variability in exploitation rates among CUs & CV = 0.221 & Assumed to be half of interannual variability. Varied in a sensitivity analysis (0-0.442).
+\\\\ 
+
+Initial abundances  & CU-specific & Based on spawner-recruit series
+<!--\\
+\hline-->
+(\#tab:coho-BaseProjectPars)
+\end{longtable}
+
+
+Projections were run for 30 years over 20,000 simulation trials, with projections initialized using spawner abundances from the most recent 4 return years, 2016 - 2020.  The high number of simulation trials was required to stabilize LRP estimates given the binning of aggregate escapement in 200-fish intervals to identify LRPs based on probability thresholds.  The distribution of projected trajectories were near equilibrium after 4 years of projections. During the first 4 years, trajectories depended primarily on the historical time-series (Figures \@ref(fig:coho-CUProjections-Ricker) and \@ref(fig:coho-CUProjections-Ricker-priorCap)).
+
+\
+&nbsp;
 
 ***Stock-recruitment dynamics***  
 
 Stock recruitment parameters for all 5 CUs were drawn from joint posterior distributions obtained by fitting the two stock recruit models described in Section \@ref(cohoSgen) (Ricker and Ricker_priorCap) to available spawner-recruit data using Bayesian Markov Chain Monte Carlo (MCMC) estimation. Bayesian estimation was done using 'tmbStan' [@kristensenTMBAutomaticDifferentiation2016], which is an R package that allows MCMC samples to be drawn from a TMB model object using 'rStan' [@standevelopmentteamRStanInterfaceStan2020]. Three MCMC chains were run for 14,000 iterations, with the first half of each chain excluded from the final posterior sample. Resulting joint posterior distributions included 21,000 samples. Posterior sampling was initiated at the MLE estimates for each model formulation. Neither model showed signs of convergence failure based on our examination of $\hat{R}$ and effective sample size diagnostics, as well as visual inspections of marginal posterior distributions. A summary of marginal posterior distributions for each stock recruitment parameter ($\alpha$, $\beta$, $\gamma$, and $\sigma$) is provided in Appendix \@ref(app:coho-appendix). 
 
 The two stock recruitment models, Ricker and Ricker_priorCap, were treated as two alternative hypotheses about stock recruitment dynamics, which we compare against each other. We also considered a simple model-averaging approach, in which we equally weighted the two stock recruit models by combining projections prior to calculating a projection LRP as a demonstration of model averaging. Additional sensitivity analyses described below were applied to the base Ricker model.  
+
+\
+&nbsp;
 
 ***Covariance in recruitment residuals***
 
@@ -422,6 +474,7 @@ We initially attempted to reduce covariation in spawner abundances among CUs by 
 knitr::include_graphics("figure/coho-RecuitResidCorrelation-Ricker.png")
 ```
 \linebreak
+
 
 ***Variability in smolt-to-adult survival coefficient among CUs***
 
@@ -445,7 +498,7 @@ Annual variability in the age structure of recruitments has not been included in
 knitr::include_graphics("figure/coho-ObsAgeProp-byCU.png")
 ```
 
-\linebreak
+\newpage
 
 
 ***Covariance in exploitation***
@@ -454,56 +507,6 @@ We assumed an average exploitation rate of 12.5% for all CUs in forward projecti
 
 Exploitation rates for Interior Fraser Coho are only available at the SMU-level due to limited coded-wire indicator stocks (1-2 CUs with indicators / year) that have been available for the Fishery Regulation Assessment Model used by the Pacific Salmon Commission for Coho Salmon [@pacificsalmoncommissionJointCohoTechnical2013]. As a result, empirically-based estimates of among-CU variability in exploitation rates are not available. However, there are reasons to expect exploitation rates to vary among CUs in a given year, including differences in freshwater fisheries.  We assumed that CU-specific variability in exploitation rates was half the common (SMU-level) interannual variability (CV=0.22), and varied this in sensitivity analyses from 0 and 0.44 to cover plausible bounds. Varying assumptions about variability in exploitation among CUs between CV = 0 and 0.44 in forward projections did not impact the distribution of correlations in spawner abundances in the projections (results not shown).  
 
-
-<!--BC Comment:
-•  A extirpation threshold of 2 seems really low, is this consistent with other IFC coho simulations? .
--->
-
-\begin{longtable}[]{p{3.7cm} p{5cm} p{6.3cm}}
-\caption{Parameters used for CU-specific projections of Interior Fraser Coho population dynamics.}\\
-\hline
-Parameter & Value & Source \\ 
-\hline
-\endhead
-\hline
- Ricker Parameters ($\alpha$, $\beta$, $\gamma$,$\sigma$)  &  CU-specific (Appendix C) & Drawn from joint posterior from MCMC model fit to 1998-2016 brood years
-\\\\
-
-Smolt-to-adult survival rate (all CUs) & Drawn from Lognormal(-4.83, 1.21), bound between [-9.21, -3.32]
- & Estimated from annual survival rate estimates from brood years 1998 - 2016, with bounds set at lowest and highest observations
-\\\\  
-
- Among-CU variability in smolt-to-adult survival coefficient $\gamma$  &  $\sigma_{\gamma}$ = 0 (all CUs the same) & Assumed value when fitting models. Varied between 0 and 0.09 in sensitivity analyses
-\\\\
-
- Ave age proportions at maturity (ages 3, 4) &  MiddleFR, LThomp, SThomp = (0.86,0.14) , FRCanyon = (0.87, 0.13), NThomp = (0.88, 0.12) & Estimated from time-series of proportions of recruits at age
- \\\\  
-
- Interannual variability in age proportions (tau from multivariate logistic distribution)  & MiddleFR, NThomp, SThomp = 1.0, LThomp = 0.9, FRCanyon = 0.8 & Estimated from time-series of ppns of recruits at age. \\\\
-
- Average exploitation rate & 0.125 & Estimated from annual exploitation rate estimates from brood years 1998 - 2016. Varied in sensitivity analyses (0.05 - 0.35).
- \\\\
-
-Interannual variability in exploitation rates & CV = 0.442  & Estimated from annual exploitation rate estimates from brood years 1998 - 2016. Assumed to be Beta distributed, constrained between 0-1.
-\\\\
-
-Variability in exploitation rates among CUs & CV = 0.221 & Assumed to be half of interannual variability. Varied in a sensitivity analysis (0-0.442).
-\\\\ 
-
-Initial abundances  & CU-specific & Abundance initialized using spawner-recruit time series
-\\
-\hline
-(\#tab:coho-BaseProjectPars)
-\end{longtable}
-
-
-<!--CH 1 FEb. I removed this from WCVI Chinook, as the difference between 2 and 0 is in consequential. I think in absence of our statement, the assumption would be zero, which is fine here.
-
-\\\\
-
-Extirpation threshold &  2 & Mating constraint \\
-
--->
 
 
 ### Results
@@ -514,9 +517,9 @@ Extirpation threshold &  2 & Mating constraint \\
 
 ***LRP Estimates***
 
-Aggregate abundance LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used<!--CH 1 FEb suggest removing:  to derive the LRP -->(Figure \@ref(fig:coho-projLRPCurveByOM); Table \@ref(tab:projectedLRPs2020)). This result is similar to the logistic regression LRPs, where LRPs derived using S~gen~ estimates from the Ricker_priorCap model were higher due to higher S~gen~ values.  The projected curve showing the probability of all CUs being above S~gen~ had a slope that was more gradual and further <!--CH 1 Feb replaced: to the right-->from the origin for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref(fig:coho-projLRPCurveByOM)). When projection outputs from both stock recruitment model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
+Aggregate abundance LRPs estimated using the Ricker model as a basis for forward projections were lower than those obtained when the Ricker_priorCap model was used, regardless of which probability threshold was used (Table \@ref(tab:projectedLRPs2020); Figure \@ref(fig:coho-projLRPCurveByOM)). This result is similar to the logistic regression LRPs, where LRPs derived using S~gen~ estimates from the Ricker_priorCap model were higher due to higher S~gen~ values.  The projected curve showing the probability of all CUs being above S~gen~ had a slope that was more gradual and further from the origin for the Ricker_priorCap model compared to the base Ricker model (Figure \@ref(fig:coho-projLRPCurveByOM)). When projection outputs from both stock recruitment model formulations were combined prior to binning in order to create a model-averaged scenario (with equal weight assigned to both scenarios), the resulting probability curve was mid-way between the curves from the two individual models. In all cases, projected curves had higher scatter with increasing aggregate abundance, such that LRP estimates at probability thresholds of p = 0.90 and p = 0.99 were unstable.
 
-```{r coho-projLRPCurveByOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruitment models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > lower benchmarks. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
+```{r coho-projLRPCurveByOM, fig.cap="Probability of all CUs being above their lower benchmark of Sgen along a gradient in aggregate abundances within bins of 200 fish for two different stock recruit model options (Ricker and Ricker\\_priorCap) as well as a model averaged case (Combined) in which results from both stock recruitment models were equally weighted. Results are derived from projections over 30 years and 20,000 MC Trials. Each dot is the proportion of MC trials where all CUs were > lower benchmarks of S\\textsubscript{gen}. Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue), 0.90 (green), and 0.99 (orange) are highlighted.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
 ```
 
@@ -537,26 +540,11 @@ Probability & Ricker & Ricker\_priorCap & Combined \\
 (\#tab:projectedLRPs2020)
 \end{table}
 
-<!--
-+-------------+-----------------+-------------------+-----------------+
-| Probability | Ricker          | Ricker_priorCap   | Combined
-+=============+=================+===================+=================+
-| 50%         | 20,100          | 32,700            | 26,500
-+-------------+-----------------+-------------------+-----------------+             
-| 66%         | 24,900          | 40,100            | 33,500
-+-------------+-----------------+-------------------+-----------------+  
-| 90%         | 41,100          | 68,900            | 65,300
-+-------------+-----------------+-------------------+-----------------+
-| 99%         | 75,100          | 87,300            | 83,500
-+-------------+-----------------+-------------------+-----------------+
-
-Table: (\#tab:projectedLRPs2020) projection LRPs from forward projections under two different stock recruit model options (Ricker and Ricker\\_priorCap), as well as a model averaged case (Combined) in which results from both stock recruit models were equally weighted. For each probability level, the LRP estimate represents that probability that all CUs will be above their lower benchmark of $S_{gen}$.
--->
 
 Generational average spawning abundance (based on a 3-year geometric mean) remained above the projection LRP derived using the Ricker model with a probability threshold of p = 0.5 for most years between 2000 and 2020. There were two years when aggregate spawning abundance decreased below the LRP: 2006 and 2007 (Figure \@ref(fig:coho-AggEscpSeries-wProjLRP)). In comparison, when projection LRPs were derived using the Ricker_priorCap model with p = 0.5, aggregate spawning abundance remained below the LRP for 11 out of the 21 years.  
 
 
-```{r coho-AggEscpSeries-wProjLRP, fig.cap="Three-year geometric mean of aggregate natural-origin spawning abundance for the Interior Fraser Coho SMU (black line) relative to projection LRP estimates using two different stock recruitment model formulations, Ricker and Ricker\\_priorCap, with a probability threshold of p=0.5. Forward projections used to estimate reference points were parameterized using available 1998-2020 time series under base model assumptions.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+```{r coho-AggEscpSeries-wProjLRP, fig.cap="Three-year geometric mean of aggregate natural-origin spawning abundance for the Interior Fraser Coho SMU (black line) relative to projection LRP estimates using two different stock recruitment model formulations, Ricker and Ricker\\_priorCap, with a probability threshold of p=0.5. Forward projections used to estimate reference points were parameterized using available 1998-2020 time series under base model assumptions.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 ```
 
@@ -577,6 +565,7 @@ Increasing the average exploitation rate used in forward projections also led to
 knitr::include_graphics("figure/coho-projLRPCurve-byER.png")
 ```
 
+\linebreak
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
 
@@ -590,32 +579,36 @@ knitr::include_graphics("figure/coho-statusPlot_withBars2020.png")
 
 We show historical results for three types of proportional LRP methods: using the proportion of CUs with Pacific Salmon Status Scanner status > Red (e.g., Prop: Scanner-Ricker), using the proportion of CUs with abundance > Sgen (e.g., Prop: Sgen-Ricker), and using the IFCRT distributional target status (Prop: IFCRT) . Holt et al. (in review) recommend CU statuses be derived from the multidimensional approach used within the Salmon Scanner; however, we show results for the single metric S~gen~ and IFCRT approaches to demonstrate how these approaches impact SMU status. This comparison is of interest because our aggregate abundance LRPs use status estimates based on a single metric rather than a multidimensional approach.   
 
+
 In addition to the LRP estimation methods presented so far in this case study, we include the full WSP assessment that was conducted in 2014 as an option for estimating CU status for use in a proportional LRP. We label this case "Prop : WSP-2014". SMU status would have been assessed as being above the LRP at this time as all CUs were assessed as Amber or Amber/Green.  
+
 
 In general, estimated LRP breaches coincided with low points in the aggregate abundance time series (2000, 2005 - 2007 and 2015-2017). However, there were differences among methods in the years that SMU status was estimated to be below the LRP, as well as a couple methods for which status was never estimated to be below the LRP (Prop: Sgen-Ricker and Abund: Logistic: IFCRT).  
 
 Comparison of SMU status estimates over time for all LRP estimation methods that used S~gen~ from the base Ricker model showed differences in statuses between the proportion- and aggregate abundance methods (status bars 2-5 in Figure \@ref(fig:coho-statusPlot-withBars)). Under the 'Prop: Scanner-Ricker' method, the LRP was breached in years 2000 and 2015-2017, but for the 'Prop: Sgen-Ricker' method, the LRP was only breached in the year 2000. The multidimensional algorithm includes a step in which CU status is designated as Red when the generational mean spawning abundance is less than 1500 spawners (Figure \@ref(fig:decision-tree)). Because estimated S~gen~ is less than 1500 spawners for the Fraser Canyon CU, it is possible for the criteria of <1500 spawners in a CU to be breached even though abundance exceeds S~gen~. This situation occured for the Fraser Canyon CU in 2015-2017. Therefore, LRP methods that use the multidimensional approah to characterize CU status can be more precautionary than methods that rely on a single S~gen~ benchmark.
 
+
 In the years 2005-2006, SMU status for both the 'Abund: Proj: Sgen-Ricker' and 'Abund: Logistic:Sgen-Ricker' methods fell below the LRP, while the proportional methods (labelled 'Prop:') did not. Declines in aggregate SMU abundance in 2005-2006 were driven by declines in the four larger CUs (which, still remained above their individual S~gen~ estimates). Declines in the  abundance of the Fraser Canyon CU were not as drastic. As a result, while SMU-level aggregate abundance dropped below the abundance LRP, the Fraser Canyon CU that triggered Red status in 2015-2017 exceeded 1500 spawners and did not trigger the Prop: Scanner-Ricker method. The aggregate abundance LRP from the 'Abund: Proj: Sgen-Ricker' estimation method was higher than that from the 'Abund: Logistic: Sgen-Ricker', so only the former method triggered an LRP breach. 
+
 
 When the Ricker-priorCap model was used to estimate S~gen~ instead of the base Ricker model, both S~gen~ and LRP estimates were higher than under the base Ricker model formulation. This in turn resulted in more frequent LRP breaches when the Ricker-priorCap model was used (status bars 6-9 in Figure \@ref(fig:coho-statusPlot-withBars)).  Among the 'priorCap' methods, status was most frequently estimated to be below the LRP when the 'Abund: Proj:Sgen-priorCap' method was used; for this method, the LRP was triggered in 14 out of the 21 years between 2000 and 2020. In comparison, the LRP was triggered in 9, 9, and 8 of the 21 years for the 'Prop: Scanner-priorCap', 'Prop: Sgen-priorCap' and 'Abund: Logistic:Sgen-priorCap' methods, respectively.    
 
+
 Finally, SMU status was below the LRP in four years (2006, 2015-2017) out of the 21 years for the 'Prop: IFCRT' method, but was only triggered in 2006 under the 'Abund: Logistic: IFCRT method' (status bars 10-11 Figure \@ref(fig:coho-statusPlot-withBars)). The 'Abund: Logistic: IFCRT method' produced the lowest LRP of all logistic methods (Figure \@ref(fig:coho-IM-logisticFit2020) and Table \@ref(tab:logisticLRPs2020)), therefore the LRP tended to get breached less often.  
 
-Despite the differences in status estimates in some years for proportional and aggregate abundance LRPs highlighted above, estimated status tended to match in more years than not for proportional and aggregate abundance methods. Out of the 21 years available for comparison, the number of years with consistent status estimates for proportional and aggregate abundance LRPs ranged from 15 - 18 years (71 - 86% of years), depending on the exact methods being compared.  For the Base Ricker models,<!--CH 1 Feb. I added "for the base Ricker models, pls change if not correct--> the proportion of years with consistent status estimates was lowest when comparing the Prop:Scanner-Ricker method to the Abund:Logistic:Sgen-Ricker and Abund:Proj:Sgen-Ricker methods (15 / 21 years; 72%) <!--CH 1 Feb. why only one %, when I think there are 2 comparisons mentioned in this setntence?-->.  This proportion was higher when comparing among <!--CH 1 Feb. I added 'among'-->the Ricker_priorCap models<!--CH 1 Feb consider removing this phrase as Sgen is inherent in the priorcap model  "was used to estimate S~gen~"--><!--CH 1 Feb. Also I suggest replacing the last sentence with:-->(86% and 81% for the same comparisons). <!--CH 1 Feb. possibly remove: "The proportion of years with consistent status estimates was lowest when comparing the Prop:Scanner-Ricker_priorCap method to the Abund:Logistic:Sgen-priorCap and Abund:Proj:Sgen-priorCap methods (86% and 81%, respectively). "-->
-  
+
+Despite the differences in status estimates in some years for proportional and aggregate abundance LRPs highlighted above, estimated status tended to match in more years than not for proportional and aggregate abundance methods. Out of the 21 years available for comparison, the number of years with consistent status estimates for proportional and aggregate abundance LRPs ranged from 15 - 18 years (71 - 86% of years), depending on the exact methods being compared. For the Base Ricker models, the proportion of years with consistent status estimates was lowest when comparing the Prop:Scanner-Ricker method to the Abund:Logistic:Sgen-Ricker and Abund:Proj:Sgen-Ricker methods (15 / 21 years; 72% for both comparisons).  These proportions were higher when comparing among the Ricker_priorCap models (86% and 81% for the same comparisons).
   
 
 ## DISCUSSION
 
-<!--BC: Not sure if this is the right place but might also recap insights gleaned from exploration of multidimensional approach and its utility in this context? -->
 
 The Interior Fraser Coho SMU is considered a data-rich SMU because it has stock-recruitment time series for all five CUs within the SMU, which allowed for the estimation of stock recruitment-based benchmarks (S~gen~). However, time series were restricted to years after 1998, when spawner abundance data were collected with more consistent methodologies and regularity. This period also aligns with the low productivity period [@deckerAssessmentInteriorFraser2014] when the SMU abundance is considered depressed relative to historical levels. Despite the short time series, Interior Fraser Coho are well-suited for looking at the application of aggregate abundance LRPs due to the long history of using aggregate abundance recovery targets and fisheries reference points [@ifcrtConservationStrategyCoho2006; @kormanEvaluationFrameworkAssessing2019; @arbeiderInteriorFraserCoho2020]. While we were able to estimate aggregate abundance LRPs using a suite of CU-level benchmarks and LRP estimation methods (logistic regression and projection), our results highlight variability in status against aggregate abundance LRPs that in some cases deviates from status against proportional LRPs. Our results also highlight the sensitivity of logistic regression based LRPs to data availability.
 
 
 ### Proportional vs. Aggregate Abundance LRP Methods
 
-Comparisons of status between the abundance-based methods and the proportional methods yielded mixed results. While there were differences in the years in which proportional and aggregate-abundance based methods dropped below LRPs<!--CH 1 Feb. suggest removing " for a given method of characterizing CU status"-->, status tended to match in more years than not. Out of the 21 years available for comparison, the number of years with consistent status estimates for proportional and aggregate abundance LRPs ranged from 15 - 18 years (72-86% of years), depending on the exact methods being compared.
+Comparisons of status between the abundance-based methods and the proportional methods yielded mixed results. While there were differences in the years in which proportional and aggregate-abundance based methods dropped below LRPs, status tended to match in more years than not. Out of the 21 years available for comparison, the number of years with consistent status estimates for proportional and aggregate abundance LRPs ranged from 15 - 18 years (72-86% of years), depending on the exact methods being compared.
 
 Consistency between proportional and aggregate abundance LRPs depended on the method used to assess CU status. For methods using the base Ricker model, status tended to drop below proportional LRPs when abundance of individual CUs was low (2000-2001, 2015-2017), and drop below aggregate abundance LRPs when aggregate abundances were low (2006-2007). As a result, proportional LRPs were breached in years with low abundance in only one CU (e.g, 2000, 2015-2017) whereas the aggregate abundance methods did not. In comparison, status was generally consistent for the scenarios in which the Ricker_priorCap model was used with LRPs breached in similar years. This result occurred because estimated S~gen~ and aggregate abundance LRPs were higher under the Ricker_priorCap model, which resulted in a more frequent occurrence of years with both aggregate abundance below the LRP and individual CUs below benchmarks. Finally, when the IFCRT distributional target was used, the proportional LRP was breached for 3 years in which the aggregate abundance was not (2015-2017) due to low abundance in one CU. 
 
@@ -630,7 +623,8 @@ Most methods evaluated for the Interior Fraser Coho case study relied on the eva
 
 We considered alternative Ricker models for Interior Fraser Coho  to represent different assumptions regarding carrying capacity, which in turn affected productivity. This approach has also been used in previous analyses for this SMU. @arbeiderInteriorFraserCoho2020 used a model averaging approach with three SR models equally weighted when assessing recovery potential for the Interior Fraser Coho SMU (the base Ricker and Ricker_priorCap models we used, as well as a third depensatory mortality version that we did not consider). @kormanEvaluationFrameworkAssessing2019 also considered multiple Ricker model formulations when estimating reference points for the Interior Fraser Coho SMU; however, they opted to focus on results for the base Ricker model instead of using model averaging approaches. 
 
-One approach to accounting for uncertainty in underlying model structure is to integrate estimates of LRP status over those alternative structures. We demonstrate this approach when using projection estimates of aggregate abundance LRPs, in which we combine projections under each SR model scenario before calculating the LRP. This approach is basically a model averaging approach in which both scenarios are equally weighted.  However, other methods of assigning weights among model are possible, such as weighting based on prediction skill [@kellValidationStockAssessment2021]. In other cases, such as for proportional LRPs, uncertainty in model structure may require integration at earlier stages (i.e., when estimating biological benchmarks) or based on expert opinion.<!--CH 1 Feb. Consider rewording this last sentence. Or can we remove 'or based on expert opinion"? Expert opinion could also be used for combining structural uncertainty in projection LRPs)-->
+One approach to accounting for uncertainty in underlying model structure is to integrate estimates of LRP status over those alternative structures. We demonstrate this approach when using projection estimates of aggregate abundance LRPs, in which we combine projections under each SR model scenario before calculating the LRP. This approach is basically a model averaging approach in which both scenarios are equally weighted.  However, other methods of assigning weights among model are possible, such as weighting based on prediction skill [@kellValidationStockAssessment2021].
+
 
 ### Logisic Regression LRPs
 
@@ -648,8 +642,4 @@ Projection LRPs have the advantage of being able to incorporate uncertainty abou
 
 The sensitivity of projection LRPs to exploitation rate means that these LRPs are specific to the management context.  In our Interior Fraser Coho projections, we set exploitation rates at the recent average as fishery restrictions since 1998 been stable. In this case, the LRP represents the level of aggregate abundance that would be required to ensure all CUs were above S~gen~ given that constant exploitation rate. However, Interior Fraser Coho are not managed using a fixed ER policy.  While harvest has been relatively constant for several recent years, target harvest rates can vary among years for several reasons, including fishery plans for other species (e.g., Fraser Sockeye Salmon). For years in which target exploitation rates are increased, the LRP would also need be increased accordingly to ensure that the underlying objective of all CUs above S~gen~ could be achieved. This pattern arises due to variability in productivity among CUs; when higher exploitation rates are applied, some low productivity CUs will require higher spawning abundances to ensure that they remain above S~gen~. This effect is demonstrated in Appendix \@ref(app:ERsensitivity-appendix). As a result, projection LRPs are not static measures of serious harm, as commonly developed for other stocks and species.
 
-Projection LRPs were also sensitive to the level of covariation in spawner abundances among CUs over time. Reductions in covariation resulted in increased LRP estimates. This pattern will result in higher LRPs as the relationship between aggregate abundance and CU status weakens because random dynamics among CUs will increase the probability of any one CU having Red status<!--CH 1 Feb. I suggested some rewording, instad of :"projected LRPs will need to be higher to help avoid the situation where low productivity CUs become Red status"-->. We recommend that possible instabilities in projections be evaluated for this SMU, and other applications for projection LRPs, which could arise due to changes in covariation of spawner abundance among CUs due to CUs with different productivity levels responding differently to exploitation.
-
-<!--CH: I think projection LRPs are also sensitivity to differences in size/capacity of component CUs. I guess this is shown somewhat in the Appendix on sens to ER, where I kept SREP constant or varying. If it comes up in the review we can point participants there-->
-
-
+Projection LRPs were also sensitive to the level of covariation in spawner abundances among CUs over time. Reductions in covariation resulted in increased LRP estimates. This pattern will result in higher LRPs as the relationship between aggregate abundance and CU status weakens because random dynamics among CUs will increase the probability of any one CU having Red status. We recommend that possible instabilities in projections be evaluated for this SMU, and other applications for projection LRPs, which could arise due to changes in covariation of spawner abundance among CUs due to CUs with different productivity levels responding differently to exploitation.
