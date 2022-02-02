@@ -3,6 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
+\newpage
 # CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER{#ISCchumChapter}
 
 <!-- # Add a comment in colour: *\textcolor{cyan}{LW: some text}* -->
@@ -14,7 +15,7 @@ The Inside South Coast Chum - Non-Fraser SMU (hereafter ISC Chum) includes 7 CUs
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chum-map.png")
 ```
-
+\linebreak
 
 The ISC Chum SMU is considered data-limited. While escapement time series are available for many streams starting in 1953, several series are incomplete and require infilling assumptions (i.e., not all streams counted each year, some CUs have no counts in some years). In addition, run reconstructions of recruitment are uncertain, making the development of benchmarks based on spawner and recruitment data problematic. There are also no data on marine survival [although there are some scale/growth data in @debertinMarineGrowthPatterns2017]. Other unique characteristics of this SMU include high contrast in abundance among CUs and relatively low correlation in abundance among CUs over time. The SMU covers a large area with many diverse watersheds, flow regimes, and ocean entry locations. Wild Salmon Policy status assessments have not been done on any ISC Chum CUs. @godboutStockStatusWild2004 identified long-term increases or variable abundance in Georgia Strait and Howe Sound-Burrard Inlet and declines in Northeast Vancouver Island and especially in the Southern Coastal Streams CU (from 1953-2002). @holtEvaluatingBenchmarksBiological2018 found similar results in a provisional assessment of status. At this time, a peer-reviewed WSP status assessment has not been developed for ISC chum.
 
@@ -24,11 +25,13 @@ Holt et al. (in review) provide steps for applying LRPs to salmon SMUs, one of w
 
 Upper Knight and Bute Inlet CUs are both associated with long fjords that run from the Broughton Archipelago through the Coast Mountains. They include rivers with headwaters in the Cariboo region farther inland than other CUs in the SMU (Figure \@ref(fig:chum-map)). Southern Coastal Streams, Georgia Strait, and Howe Sound-Burrard Inlet also include portions of the Coast Mountains and some glaciers, but to a lesser extent and their inlets are shorter and their watersheds do not go as far inland. Upper Knight and Bute Inlet are unique in that they are the only CUs in the SMU that only include watersheds that drain into the upper end of long inlets. They are both more remote than the other CUs, which is partly why there are fewer observations over time for Chum with fall run timing.
 
-Chum from the Upper Knight and Bute Inlet CUs are exposed to different threats to habitat, survival and productivity than the other five CUs in both the fresh water and the early marine phase. While these two CUs have, on average, lower impacts from forest harvest, impervious area, and roads, they have larger impacts from forest defoliation and pests [@pacificsalmonfoundationPacificSalmonExplorer2021]. They may also have different levels of risk from disturbances such as glacier melt, avalanches, debris flows, and floods because they have large melting glaciers associated with lakes, steep slopes, and unstable terrain. In the Bute Inlet CU, the glacial lake outburst flood that caused a debris flow in the Southgate River in November 2020 is one example of such an event. These events are capable of killing an entire brood year of eggs/alevins and reshaping habitat with impacts on spawning habitat and stream ecosystems for many years. They can also change water quality in near shore marine habitats. These catastrophic events may be less likely in watersheds with gentler topography and that lack glaciers and glacial lakes. 
+
+Chum from the Upper Knight and Bute Inlet CUs are exposed to different threats to habitat, survival and productivity than the other five CUs in both the freshwater and the early marine phase. While these two CUs have, on average, lower impacts from forest harvest, impervious area, and roads, they have larger impacts from forest defoliation and pests [@pacificsalmonfoundationPacificSalmonExplorer2021]. They may also have different levels of risk from disturbances such as glacier melt, avalanches, debris flows, and floods because they have large melting glaciers associated with lakes, steep slopes, and unstable terrain. In the Bute Inlet CU, the glacial lake outburst flood that caused a debris flow in the Southgate River in November 2020 is one example of such an event. These events are capable of killing an entire brood year of eggs/alevins and reshaping habitat with impacts on spawning habitat and stream ecosystems for many years. They can also change water quality in near shore marine habitats. These catastrophic events may be less likely in watersheds with gentler topography and that lack glaciers and glacial lakes. 
+
 
 Environmental drivers, biological characteristics, and population capacity for Upper Knight and Bute Inlet CUs also differ from the other seven CUs. The hydrology of these two CUs likely differs from that of other CUs with more low-lying topography. The two largest watersheds in these CUs (Homathko and Klinaklini) fall within their own Freshwater Adaptive Zone, which indicates unique freshwater habitat conditions (Figure 76 and Table 52 in @holtbyConservationUnitsPacific2007). These watersheds have large glaciers and high amounts of snowmelt, compared to more low-elevation coastal watersheds with more rain-dominant hydrographs. Marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, as they are entering the upper ends of large fjords. Competition with other salmon in the ocean and ocean conditions affect chum salmon in this SMU [@debertinMarineGrowthPatterns2017, @litzCompetitionOddyearPink2021], although declines in Pink salmon stocks in this general area may suggest that these factors are not affecting these CUs only. Regarding biological characteristics, Bute Inlet and Upper Knight have a higher proportion of summer-run populations of Chum (Table \@ref(tab:CU-summary)). Recruits per spawner of the Upper Knight and Bute Inlet CUs (estimated using CU-level infilling, which introduces error) are more variable than for other CUs in this SMU, exhibiting very productive years (>100 recruits per spawner) and years with very low productivity. These CUs also have lower habitat capacity, with fewer streams with fall timed Chum spawners than the other CUs (Table \@ref(tab:CU-summary)). Based on these differences, we cannot infer the status for Bute Inlet and Upper Knight from the other CUs. Note that these criteria used to evaluate whether status can be inferred for these CUs extends to whether reliable spawner escapement data can be infilled using escapement in the other CUs. Thus, these CUs are dropped for years with no spawner data in this case study. 
 
-
+\newpage
 ```{r CU-summary, echo=FALSE}
 d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
 csasdown::csas_table(d,
@@ -135,12 +138,12 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 When describing ISC Chum LRP scenarios in Table \@ref(tab:LRP-scenarios) and throughout this case study, we use the following labeling convention: *Metric : CU Status Method : Data Scenario*. 'Metric' refers to the choice to base all ISC Chum LRPs on the proportion of CUs above Red CU status (Prop). The 'CU Status Method' can be based on the multidimensional algorithm within the Salmon Scanner (Scanner) or on a single percentile benchmark used to characterize CU status (Percentile).  Finally, 'Data Scenario' labels indicate both the number of CUs represented (4, 5, or 7) and the completeness of the time series (Full or Partial). 'Full' scenarios only included CUs with complete time series (no CUs with missing years). 'Partial' scenarios included CUs with incomplete time series (years that did not have observations in those CUs were omitted). When using percentile benchmarks in these scenarios, we used percentiles based on @holtEvaluatingBenchmarksBiological2018. The benchmarks were estimated using the entire time series. 
 
 
-For scenarios 2 and 4 in Table \@ref(tab:LRP-scenarios), we used CU status based on percentile benchmarks that are determined by productivity and historical exploitation outlined in @holtEvaluatingBenchmarksBiological2018. This method used the annual escapement values to calculate the benchmarks and the generational mean of escapement  (geometric mean over 4 years) to assess status in each year. Scenario 2 includes the four CUs that had complete time series (observations in each year, no CU-level infilling required) and that also had appropriate percentile benchmarks (Table \@ref(tab:LRP-scenarios)). For example, Upper Knight was excluded because it did not have a complete time series, Southern Coastal Streams was excluded because it does not have an appropriate percentile benchmark, and Bute Inlet was excluded for both of these reasons. We then relaxed this requirement for all CUs to have data in all years and included all CUs that meet the constraints of @holtEvaluatingBenchmarksBiological2018 even if they had missing data for some years (Scenario 4). This scenario included Upper Knight in some years, which meant that it had five CUs in some years and four in others. Thus, the power to detect Red status varied among years in Scenario 4, using more of the available data than Scenario 2. For scenarios 1, 3, 5 and 6, we used status based on the multidimensional algorithm within the Salmon Scanner. To compare results between status on a single metric (abundance relative to percentile benchmarks) and the multidimensional approach, we applied the multidimensional algorithm to the same two data sets used for percentiles, i.e., using same CUs and years. For examples, scenarios 1 and 2 use the same data, and scenarios 3 and 4 use the same data. Because the multidimensional assessments do not require abundance-based benchmarks to assign status, this method could also be used for CUs that did not have appropriate percentile benchmarks (Southern Coastal Streams and Bute Inlet). Scenario 5 only included CUs with a full time series, and Scenario 6 included Upper Knight and Bute Inlet, which had some missing years. 
+For Scenarios 2 and 4 in Table \@ref(tab:LRP-scenarios), we used CU status based on percentile benchmarks that are determined by productivity and historical exploitation, as outlined in @holtEvaluatingBenchmarksBiological2018. This method used annual escapement values to calculate benchmarks and the generational mean of escapement (geometric mean over 4 years) to assess status in each year. Scenario 2 includes the four CUs that had complete time series (observations in each year, no CU-level infilling) and that also had appropriate percentile benchmarks (Table \@ref(tab:LRP-scenarios)). For example, Upper Knight was excluded because it did not have a complete time series, Southern Coastal Streams was excluded because it does not have an appropriate percentile benchmark, and Bute Inlet was excluded for both of these reasons. We then relaxed this requirement for all CUs to have data in all years and included all CUs that meet the constraints of @holtEvaluatingBenchmarksBiological2018 even if they had missing data for some years (Scenario 4). This scenario included Upper Knight in some years, which meant that it had five CUs in some years and four in others. Thus, the power to detect Red status varied among years in Scenario 4, using more of the available data than Scenario 2.  
 
+For Scenarios 1, 3, 5 and 6 in Table \@ref(tab:LRP-scenarios), we used status based on the multidimensional algorithm within the Salmon Scanner. To compare results between status on a single metric (abundance relative to percentile benchmarks) and the multidimensional approach, we applied the multidimensional algorithm to the same two data sets used for percentiles, i.e., using same CUs and years. For examples, Scenarios 1 and 2 use the same data, and Scenarios 3 and 4 use the same data. Because the multidimensional assessments do not require abundance-based benchmarks to assign status, this method could also be used for CUs that did not have appropriate percentile benchmarks (Southern Coastal Streams and Bute Inlet). Scenario 5 only included CUs with a full time series, and Scenario 6 included Upper Knight and Bute Inlet, which had some missing years. 
 
 
 ### Results
-
 
 **CU Status Based on the Multidimensional Approach within the Salmon Scanner**
 
@@ -153,6 +156,9 @@ knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 
 <!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
 
+<!--KH: added below lines to force a space before next header -->
+\
+&nbsp;
 
 **CU Status Based on Percentile Benchmarks**
 
@@ -186,16 +192,15 @@ Projection LRPs are an alternative aggregate abundance LRP that we did not consi
 
 ### Results
 
-The logistic model predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figure \@ref(fig:chum-logistic-perc)). The sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark. 
+The logistic model predicting whether all CUs were above their benchmark based on aggregate abundance fit the data poorly (Figure \@ref(fig:chum-logistic-perc)). The sum of abundance for all CUs in a given year was not a good predictor of whether those CUs were above their benchmarks in that year. Years with high aggregate abundance but with some CUs below their benchmark make a logistic model unsuitable for the purpose of estimating which aggregate abundance is linked to a high probability of each component CU being above its lower benchmark.  
+
+The diagnostics for the logistic regression indicated that the model fit was poor  (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). Pseudo $R^2$ was low (0.03), indicating a poor fit. The Box-Tidwell test indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds (p-value = 0.02), which means that the assumption that the relationship between aggregate abundance and log-odds is linear was not met. Including aggregate abundance in the model did not improve fit over the null model based on a Goodness of fit p-value of 0.13 (>0.05). The ratio of correct classifications (above below LRP) relative to all classification was 0.7 based an LRP at p=0.5. Note that this method tends to have overly optimistic values when the data used to fit the logistic model and to evaluate classification accuracy are the same. The Wald p-value was not significant for $B_{1}$ (p=0.19, the coefficient for aggregate abundances). There was no evidence of outliers or autocorrelation in residual deviations. Despite meeting the last two assumptions (no autocorrelation or outliers), they were not enough to overcome the deficiencies identified by the other diagnostic criteria.  
 
 ```{r chum-logistic-perc, fig.cap="Logistic regression of whether escapement of all component CUs were above their percentile benchmarks based on aggregate abundance, for Inside South Coast Chum SMU. Includes CUs where percentile benchmarks were appropriate (no Bute Inlet, Upper Knight, or Southern Coastal Streams)", warning=FALSE, echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-logistic-perc.pdf'))
   download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-perc.pdf')
 ```
-
-
-The diagnostics for the logistic regression indicated that the model fit was poor  (Table \@ref(tab:logistic-diag-chum), Figure \@ref(fig:chum-logistic-perc)). Pseudo $R^2$ was low (0.03), indicating a poor fit. The Box-Tidwell test indicated a significant lack of linearity in the relationship between aggregate abundance and log-odds (p-value = 0.02), which means that the assumption that the relationship between aggregate abundance and log-odds is linear was not met. Including aggregate abundance in the model did not improve fit over the null model based on a Goodness of fit p-value of 0.13 (>0.05). The ratio of correct classifications (above below LRP) relative to all classification was 0.7 based an LRP at p=0.5. Note that this method tends to have overly optimistic values when the data used to fit the logistic model and to evaluate classification accuracy are the same. The Wald p-value was not significant for $B_{1}$ (p=0.19, the coefficient for aggregate abundances). There was no evidence of outliers or autocorrelation in residual deviations. Despite meeting the last two assumptions (no autocorrelation or outliers), they were not enough to overcome the deficiencies identified by the other diagnostic criteria.  
 
 
 <!--
@@ -227,24 +232,31 @@ Download diagnostic info for checking
 
 Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  
 
+\pagebreak
 
 Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude (Figure \@ref(fig:chum-spawner-distribution)). In addition, the correlation in escapement among these seven CUs is low (Figure \@ref(fig:chum-spawner-corr)). These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. The low pairwise correlations in CU escapements are likely due to the SMU covering a large area, with varying numbers of populations affected by both local and regional factors, as described in Sectoin \@ref(chum-context).
 
-In a preliminary retrospective analysis, the logistic model fits were more appropriate using a truncated portion of the data that ended in the 1980s. Although logistic regression may be used to estimated LRPs based on aggregate abundance in SMUs where abundance is more even among CUs and escapements are more correlated, these relationships may not remain static and could break down over time.
-
-
-```{r chum-spawner-corr, fig.cap="Pairwise correlations of spawner abundance between Inside South Coast Chum Conservation Units.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-spawner-corr, fig.cap="Pairwise correlations of spawner abundance between Inside South Coast Chum Conservation Units.", warning=FALSE, out.width='80%',echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-spawners-corr.png'))
 download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
 knitr::include_graphics('figure/chum-spawners-corr.png')
 ```
+\linebreak
 
+In a preliminary retrospective analysis, the logistic model fits were more appropriate using a truncated portion of the data that ended in the 1980s. Although logistic regression may be used to estimated LRPs based on aggregate abundance in SMUs where abundance is more even among CUs and escapements are more correlated, these relationships may not remain static and could break down over time.
 
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
 
-The ISC Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of LRP estimation method  (Figure \@ref(fig:chum-LRP-compare). While the aggregate abundance of the SMU increased over time, SMU status remained below the LRP in every year of the past two decades except 2004 for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as North East Vancouver Island, Loughborough, and Southern Coastal Streams, remained low (Figures \@ref(fig:chum-perc-status-static), \@ref(fig:chum-escapement-infill)).
+The ISC Chum SMU was consistently below the LRP for large portions of the historical time series, regardless of LRP estimation method  (Figure \@ref(fig:chum-LRP-compare)). While the aggregate abundance of the SMU increased over time, SMU status remained below the LRP in every year of the past two decades except 2004 for all estimation methods. These results were mainly due to the tendency of Georgia Strait and Burrard Inlet-Howe Sound CUs to have high and increasing abundances while smaller CUs, such as North East Vancouver Island, Loughborough, and Southern Coastal Streams, remained low (Figures \@ref(fig:chum-perc-status-static), \@ref(fig:chum-escapement-infill)).
 
+
+```{r chum-LRP-compare, fig.cap="Comparison of LRP status (red = below LRP, gray = above LRP) for six scenarios. The black line shows aggregate abundance. Scenarios 1-3 and 6 do not include Bute Inlet or Southern Coastal Streams (no appropriate percentile benchmarks). 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.", echo=FALSE, fig.align="center"}
+#if(!file.exists('figure/chum-compare-LRP-methods.png'))
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
+knitr::include_graphics('figure/chum-compare-LRP-methods.png')
+```
+\linebreak
 
 When using the same data, LRP status based on a single metric on abundances relative to percentile benchmarks and the multidimensional approach within the Salmon Scanner were identical (Figure \@ref(fig:chum-LRP-compare)). This result can be seen by comparing Scenario 1 and 2 and Scenario 3 and 4. These identical results occur because all CUs in Scenarios 1-4 have percentile benchmarks and never drop below 1500 fish, which means that the multidimensional approach relies on percentile benchmarks to assess CU status for all CUs in all years. If some CUs did not have percentile benchmarks, requiring trends to be used instead, or if their absolute abundances dropped below 1500 spawners, then the two approaches could have led to different results.
 
@@ -253,13 +265,6 @@ In this case study, adding more data changed the number of years that the SMU wa
 
 
 We found that SMU status can be below the LRP even if the aggregate abundance increases (Figure \@ref(fig:chum-LRP-compare)). For ISC Chum, this is mainly due to years with high abundances of Georgia Strait and Howe Sound-Burrard Inlet and low abundances and Red status in other, smaller CUs, such as Southern Coastal Streams. The moderate correlation in spawner abundances in Georgia Strait and Howe Sound-Burrard Inlet exacerbates this pattern (Figure \@ref(fig:chum-spawner-corr)). This highlights the importance of including metrics of status at the CU level, which influence the overall SMU status.  
-
-
-```{r chum-LRP-compare, fig.cap="Comparison of LRP status (red = below LRP, gray = above LRP) for six scenarios. The black line shows aggregate abundance. Scenarios 1-3 and 6 do not include Bute Inlet or Southern Coastal Streams (no appropriate percentile benchmarks). 'Full' scenarios use only years with full time series (no CU-level infilled CUs) and 'partial' scenarios include CU-level infilled CUs but drop years with CU-level infilling for those CUs.", echo=FALSE, fig.align="center"}
-#if(!file.exists('figure/chum-compare-LRP-methods.png'))
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
-knitr::include_graphics('figure/chum-compare-LRP-methods.png')
-```
 
 
 ## DISCUSSION

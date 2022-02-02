@@ -76,7 +76,7 @@ knitr::include_graphics("figure/ERsSameProd-hCor-ProjLRPCurve-ALLp.png")
 
 \linebreak
 
-When S~REP~ was fixed at the mean value among inlets and random trials in Scenario 3, productivity was higher for inlets and trials that remained above the benchmarks compared to those that dropped below them, similar to the Scenario when both S~REP~ and productivity varied (Scenario 1) (Fig. \@ref(fig:chinook-SRHistSameSREP)). The LRPs varied with exploitation rates but to a lesser extent than when both productivity and S~REP~ varied (Fig. \@ref(fig:chinook-ProjLRPs-SameSREP)).
+When S~REP~ was fixed at the mean value among inlets and random trials in Scenario 3, productivity was higher for inlets and trials that remained above benchmarks compared to those that dropped below them, similar to the scenario when both S~REP~ and productivity varied (Scenario 1) (Fig. \@ref(fig:chinook-SRHistSameSREP)). LRPs varied with exploitation rates but to a lesser extent than when both productivity and S~REP~ varied (Fig. \@ref(fig:chinook-ProjLRPs-SameSREP)).
 
 
 
