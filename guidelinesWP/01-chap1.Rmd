@@ -55,7 +55,8 @@ Genetic and phenotypic diversity among CUs is important because it allows for di
 Under the WSP, the status of individual CUs is inferred by comparing status indicators to biological benchmarks delineating three zones: Green, Amber, and Red. These zones represent increasing conservation concern from Green to Red requiring increasing management intervention. The lower benchmark, delineating the Red and Amber zones, is intended to be at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", where COSEWIC is the Committee on the Status of Endangered Wildlife in Canada [@holtIndicatorsStatusBenchmarks2009; @dfoCanadaPolicyConservation2005]. In practice, CUs in the WSP Red zone tend to align with Endangered or Threatened COSEWIC statuses, and Green with Not at Risk COSEWIC categories.<!--CH: added this for Sue. However, I don't think we can comment on the presence or size of buffer  
 
 
-KH: Is the last sentence always true?  IF coho are assessed as Threatened by COSEWIC, but all CUs are either Amber or Green/Amber in the WSP assessment. --> 
+KH: Is the last sentence always true?  IF coho are assessed as Threatened by COSEWIC, but all CUs are either Amber or Green/Amber in the WSP assessment. 
+CH: you're right about IFR coho, but they do 'tend' to in my experience. --> 
 
 
 
@@ -99,7 +100,7 @@ Alternative spatial scales of assessment and management are used by agencies out
 
 ### Goals
 
-The goals of this and the companion working paper, Holt et al. (In review)^[Holt et al. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] as outlined in the Terms of Reference, were to:
+The goals of this and the companion working paper, Holt et al. (In review)^[Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] as outlined in the Terms of Reference, were to:
 
 - Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the WSP objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (Section \@ref(est-methods))
 
@@ -141,7 +142,7 @@ While candidate LRPs were evaluated to an extent through sensitivity analyses an
 
 Time-varying population processes, such as changes in productivity, have important impacts on biological benchmarks, LRPs, and assessment against LRPs. While we describe some recent approaches for considering those impacts in Section \@ref(recommendations), a comprehensive review and evaluation of the impacts of time-varying parameters on LRPs is beyond the scope of this study. This theme is an important area for future research.
 
-When developing LRPs, we follow the recommendations of @withlerGeneticallyBasedTargets2018 on biological assessments of hatchery-influenced populations under the WSP, as described in Section \@ref(est-methods). Following recent WSP assessments, we removed the demographic influence of hatchery production from time-series of abundances when data on the proportion of hatchery- vs. natural-origin fish on the spawning grounds were available in our case studies. A review <!--KH: should it be 'evaluation' instead of 'review'  --> of methods for estimating proportion of hatchery-origin spawners or accounting for them in biological assessments was beyond the scope of this study.
+When developing LRPs, we follow the recommendations of @withlerGeneticallyBasedTargets2018 on biological assessments of hatchery-influenced populations under the WSP, as described in Section \@ref(est-methods). Following recent WSP assessments, we removed the demographic influence of hatchery production from time-series of abundances when data on the proportion of hatchery- vs. natural-origin fish on the spawning grounds were available in our case studies. A evaluation of methods for estimating proportion of hatchery-origin spawners or accounting for them in biological assessments was beyond the scope of this study.
 
 Here we follow the recommendation of @holtIndicatorsStatusBenchmarks2009 to assess status of CUs using multiple metrics, and have implemented this approach using the Pacific Salmon Status Scanner tool (or, Salmon Scanner), documented in Pestal et al. (In prep.)^[Pestal, G., MacDonald, B, Grant, S, and Holt, C. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci. In prep.]. The Salmon Scanner was developed from the implementation of formal, peer-reviewed WSP assessments for Pacific salmon stocks in Canada (Section \@ref(est-methods)). A full review of the Salmon Scanner is beyond the scope of this paper. <!-- Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.-->
 
