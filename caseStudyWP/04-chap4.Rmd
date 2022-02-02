@@ -4,6 +4,7 @@ output:
   html_document: default
 ---
 
+\newpage
 # CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK{#WCVIchinookChapter}
 ## CONTEXT
 
