@@ -1,7 +1,7 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# SUPPORTING INFORMATION FOR INNER SOUTH COAST CHUM SALMON CASE STUDY {#app:appendix-chum}
+# SUPPORTING INFORMATION FOR INSIDE SOUTH COAST CHUM SALMON CASE STUDY {#app:appendix-chum}
 
 ## Data Sources and Treatment
  

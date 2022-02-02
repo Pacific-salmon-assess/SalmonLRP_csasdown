@@ -4,16 +4,22 @@
 
 The three SMUs used as case studies were selected to represent a range of levels of data availability, ranging from data-rich to data-limited. For each case study, the set of LRP estimation methods considered (Table \@ref(tab:lrpapproaches)) was a function of available data and previously developed assessment methods for the SMU. Each case study section includes its own discussion section highlighting conclusions from that case study. In this section, we provide an summary of key lessons learned when looking across all three case studies. These lessons were used to inform the development of guidelines for defining LRPs for Pacific Salmon SMUs, as described in Holt et al. (in review).
 
+\
+&nbsp;
 
 **Lesson 1: Proportional LRPs based on the multidimensional algorithm within the Salmon Scanner could be readily estimated for all SMUs over a wide range of data availabilities, and were consistent with the multidimensional approach that has been developed for Wild Salmon Policy assessments.  This was not the case for aggregate abundance LRPs.**
 
 Proportional LRPs based on the Salmon scanner could be applied in all three case studies; whereas aggregate-abundance methods required a strong positive relationship between observed aggregate abundance and the log-odds of all CUs being above their lower benchmarks (logistic regression LRP) and / or sufficient data to parameterize a population dynamics model (projection LRP).  While the Interior Fraser Coho case study met both of these requirements, WCVI Chinook could only meet the second, and ISC Chum could not meet either of them. The use of the Pacific Salmon Scanner tool to estimate multidimensional statuses for proportional LRPs was especially valuable for data-poor SMUs because it allowed a mix of data quality and benchmark types to be applied, depending on what was available for a given CU in a given year. For example, in the ISC Chum case study, applying the Salmon Scanner to develop proportional LRPs allowed all seven CUs to be included when assessing SMU status by using alternative trend-based metrics for CUs without percentile benchmarks. The ability to assess CUs lacking abundance-based lower benchmarks is particularly important when SMUs are composed of CUs with low levels of synchrony in which data deficient CUs cannot be represented by proxy, as was the case for ISC Chum. 
 
+\
+&nbsp;
 
 **Lesson 2: Annual status estimates from aggregate abundance LRPs and proportional LRPs will differ from each other in some cases.**
 
 While annual status estimates from aggregate abundance methods were generally consistent with estimates from proportional methods using the recommended Salmon Scanner tool, they did not always match. For the Interior Fraser Coho case study, status tended to drop below proportional LRPs when abundance of individual CUs was low, and drop below aggregate abundance LRPs when aggregate abundances were low.  While these conditions corresponded in most years, they did not always. For our case study on Interior Fraser River Coho, we found that the proportion of years with matching status estimates for proportional and aggregate abundance LRPs ranged from 72-86%, depending on the method used to estimate CU status.
 
+\
+&nbsp;
 
 **Lesson 3:  Data from all component CUs should be used whenever possible. When data are missing from one or more CUs, careful consideration should be given to the question of whether status can be inferred from other CUs within the SMU.  While there may be cases where inference is possible, uncertainty in resulting status estimates will increase, and this uncertainty should be clearly communicated in status assessments.**
 
@@ -21,8 +27,10 @@ In the case of ISC Chum, using data from all seven CUs when available (even if o
 
 In the case of Interior Fraser Coho, results from missing data scenarios for the logistic regression approach showed that it may be possible to use data-rich CUs as indicators for CUs with missing data.  However, logistic regression-based LRPs were more uncertain when more than 1 CUs was missing, and the logistic regression model frequently failed to converge, so caution should be used when applying this method to SMUs with missing data.  Furthermore, Interior Fraser Coho display higher levels of among-CU correlations in spawner abundances over time that ISC Chum, so the extent to which this result can be applied to other SMUs is expected to be dependent on the level of covariation in CU status among CUs within an SMU.
 
-**Lesson 4: Logistic regression LRPs have several limitations and should only be used when (i) aggregate abundance LRPs are required and (ii) all assumptions of the logistic regression model can be met.**
+\
+&nbsp;
 
+**Lesson 4: Logistic regression LRPs have several limitations and should only be used when (i) aggregate abundance LRPs are required and (ii) all assumptions of the logistic regression model can be met.**
 
 Logistic regression LRPs are empirically derived from past observations of SMU abundance and CU statuses. By fitting a logistic regression to historical data, we identified historical abundance levels associated with probabilities that all component CUs have statuses above their lower benchmarks. Similar to the proportional LRP, this aggregate abundance method depends on the outcomes of individual CU assessments, which are sensitive to structural assumptions underlying the CU-level benchmarks and data availability.
 
@@ -35,6 +43,8 @@ First, logistic regression LRPs are limited to conditions that have been histori
 
 Second, model diagnostics do not support logistic regressions and their associated LRPs when CU-level abundances are not correlated or only weakly correlated.  Here, we found that logistic regression LRPs could be estimated for Interior Fraser Coho (average correlation in spawner abundances among CUs of 0.56), but not for Inside South Coast Chum (average correlation among CUs of 0.12). Also, the wide range in productivities and capacities among CUs for the Inside South Coast Chum case study contributed to the weak relationship between aggregate abundances and CU-level statuses. In general, model diagnostics as described in Section \@ref(MethodsChapter) can be used to support or reject logistic regression LRPs. We illustrate how these diagnostics are used to evaluate model fit in Sections \@ref(IFCChapter) and \@ref(ISCchumChapter).    
 
+\
+&nbsp;
 
 **Lesson 5: Stochastic projections can be used to estimate aggregate abundance LRPs under various assumptions about population dynamics and covariance in dynamics among CUs. This approach allows uncertainties in our understanding of population dynamics to be represented in a more comprehensive way than other LRP methods.**
 
@@ -49,6 +59,8 @@ The projection LRP approach is flexible in that allows for consideration of stru
 
 Future implementations of projection LRPs could also consider temporal shifts in stock recruitment parameters, the potential for depensatory population dynamics at low stock size, and future variability in fishery exploitation rates. Decisions about which scenarios to consider should be made on a case-by-case basis, and should be dependent on current understandings of key uncertainties for each SMU.
 
+\
+&nbsp;
 
 **Lesson 6: Projection LRPs are highly sensitive to exploitation rates**
 

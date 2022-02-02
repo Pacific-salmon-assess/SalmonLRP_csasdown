@@ -31,7 +31,7 @@ Based on similarities in threats, life history, population capacity, and some sh
 ## Bayesian Stock Recruitment Model Parameter Estimates
 
 
-```{r coho-SrepPrior, fig.cap="Prior distribution for SRep (the spawner abundance level at which the stock replaces itself) used when fitting the Ricker\\_priorCap model. The red dashed line shows the maximum likelihood estimate of SRep from the base Ricker model stock recruitment fit. The mean of the SRep prior was set to 1.4 times the maximum likelihood estimate", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+```{r coho-SrepPrior, fig.cap="Prior distribution for S\\textsubscript{REP} (the spawner abundance level at which the stock replaces itself) used when fitting the Ricker\\_priorCap model. The red dashed line shows the maximum likelihood estimate of S\\textsubscript{REP} from the base Ricker model stock recruitment fit. The mean of the SRep prior was set to 1.4 times the maximum likelihood estimate", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
 knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```
 
@@ -101,6 +101,7 @@ knitr::include_graphics("figure/coho-adjProdPosts-priorCap.png")
 
 
 \newpage
+
 
 ## Projected Spawner Abundances used for the Projection LRP Method
 
