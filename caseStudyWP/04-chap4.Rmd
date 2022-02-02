@@ -649,7 +649,7 @@ A key uncertainty for this SMU is the contribution of hatcheries to total abunda
 
 We recommend a few areas for further research relevant to this SMU:
 
-- The projection LRPs illustrated here should further be evaluated for sensitivity to key structural assumptions, such as the stock-recruitment model, and the presence and magnitude of depensation, among other assumptions. This evaluation is especially important for this SMU because of the lack of peer-reviewed  stock-recruitment models. We based our assumption of a Ricker form of the stock-recruitment relationship from its application to other Chinook populations in BC [parkenHabitatbasedMethodsEstimate2006], but this form may not represent the high observed variability and declining productivity that are now common for Chinook salmon. 
+- The projection LRPs illustrated here should further be evaluated for sensitivity to key structural assumptions, such as the stock-recruitment model, and the presence and magnitude of depensation, among other assumptions. This evaluation is especially important for this SMU because of the lack of peer-reviewed  stock-recruitment models. We based our assumption of a Ricker form of the stock-recruitment relationship from its application to other Chinook populations in BC [@parkenHabitatbasedMethodsEstimate2006], but this form may not represent the high observed variability and declining productivity that are now common for Chinook salmon. 
 
 - In the development of proportional and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
 
