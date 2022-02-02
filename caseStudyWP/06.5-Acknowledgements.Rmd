@@ -4,7 +4,7 @@ We gratefully acknowledge the considerable support provided by our Technical Wor
 
 DFO's State of the Salmon Program, led by Sue Grant, provided helpful guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it. 
 
-We thank Julie Marentette, Tim Barrett, Mary Thiess, Jason Ladell, and Danny Ings for their perspectives on LRPs nationally, which were used to inform the development of the companion working paper by Holt et al. (in review), and as a result, this paper.
+<!--CH 1 Feb. My understanding was that NHA only looked at the Guidelines paper? I think it's okay to keep our thanks to them there. We thank Julie Marentette, Tim Barrett, Mary Thiess, Jason Ladell, and Danny Ings for their perspectives on LRPs nationally, which were used to inform the development of the companion working paper by Holt et al. (in review), and as a result, this paper.-->
 
 We also thank Chuck Parken, Brendan Connors, and Mary Thiess for helpful comments on draft versions of this working paper.
 
