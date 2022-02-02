@@ -54,7 +54,7 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \draw[arrow] (8) -- node[anchor=east] {Assumptions met} (9);
 \draw[arrow] (8) -| node[anchor=west] {Assumptions not met} (9n);
 \end{tikzpicture}
-\caption{Steps for setting LRPs and assessing status. Coloured boxes indicated those used in LRP estimation. Grey boxes indicate those used in the implementation of LRPs for status assessments. White boxes indicate when<!--LW comment: "aggregate"? --> LRP methods are not recommended.} 
+\caption{Steps for setting LRPs and assessing status. Coloured boxes indicated those used in LRP estimation. Grey boxes indicate those used in the implementation of LRPs for status assessments. White boxes indicate when specified LRP methods are not recommended.} 
 (\#fig:flowchart)
 \end{figure}
 
@@ -384,6 +384,7 @@ We use generational mean spawner abundances as a basis for determining whether t
 \
 &nbsp;
 **Compare Aggregate Abundance LRPs**
+
 Using multiple analytical approaches to define LRPs is consistent with the principle of using the best available information if evidence to support one method over the other is lacking. Statuses that converge among methods provide a stronger weight-of-evidence that the chosen LRP represents a level above where serious harm may occur. Although LRPs that converge may be based on assumptions that are coincidentally incorrect, the principle of Occam's razor supports explanations with fewer exceptions. When LRPs diverge, the underlying assumptions causing those divergences should be explored and further reviewed. <!--CH repeated above: We suggest comparing aggregate abundance LRPs to current generational (geometric) average spawner abundances instead of annual abundances to integrate across independent cohorts within a generation when deriving SMU status. This approach is consistent with methods used in formal WSP assessments of CUs [e.g., @grant2017FraserSockeye2020]. -->
 
 <!--CH: the following 2 lines give a line break before the next heading-->

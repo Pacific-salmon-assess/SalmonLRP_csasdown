@@ -12,12 +12,11 @@ LRP methods require assessments of status at the scale of CUs. Abundance data re
 \begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
 \begin{itemize} 
-\item While hatcheries are useful tool for augmenting production for harvest and conservation, they can reduce wild genetic diversity and fitness and are considered a risk factor for the long-term persistence of CUs.
+\item While hatcheries are a useful tool for augmenting production for harvest and conservation, they can reduce wild genetic diversity and fitness and are considered a risk factor for the long-term persistence of CUs.
 \item Salmon that are enhanced by hatcheries are not considered 'wild' under the Wild Salmon Policy and are not usually included in assessments of biological status.
-\item Following previous Science guidance, we recommend including only populations without significant influence from hatcheries in analyses of biological status under the WSP.
 \item The data used to assess the contribution of hatcheries to spawning are associated with high uncertainties related to the tagging method used, sampling rates, uncertainty in survival of natural vs. hatchery-origin fish, and observation errors.
-\item Populations dominated by wild fish but influenced by hatchery strays from outside the basin (called 'wild stray-influenced' populations) are generally included in CU assessments, but these out-of-basin strays may bias estimates of natural production and resulting assessments, representing an important source of uncertainty for these populations.
-\item Following previous WSP status assessments, when data are available, the demographic influence of hatchery production is removed from time-series of abundances. This step applies to populations included in analyses, after removing populations with high hatchery influence. Where data to differentiate hatchery- from natural-origin spawners are not available, total spawner abundances include hatchery-origin fish, representing a key source of uncertainty for hatchery-influenced populations.
+\item Populations dominated by wild fish but influenced by hatchery strays from outside of the basin are generally included in CU assessments, but these strays may bias estimates of natural production and resulting assessments. 
+\item Following previous WSP status assessments, when data are available, the demographic influence of hatchery production can be removed from time-series of abundances. This step applies to populations included in analyses, after removing populations with high hatchery influence. Where data to differentiate hatchery- from natural-origin spawners are not available, total spawner abundances include hatchery-origin fish, representing a key source of uncertainty for hatchery-influenced populations.
 \end{itemize}
 \end{tcolorbox}
 
@@ -31,7 +30,7 @@ Following @withlerGeneticallyBasedTargets2018, we recommend including only popul
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{3.2cm} p{5.2cm} }
 \caption{Potential guidelines for the inclusion of integrated hatchery populations in WSP assessments
-based on their biological designation, taken from Withler et al. (2018)}
+based on their biological designation, adapted from Withler et al. (2018)}
 \hline
 Designation & PNI (Inclusion in WSP assessment) \\
 \hline
@@ -100,7 +99,7 @@ In most cases where hatchery-origin fish are not marked or sampled on the spawni
 \begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
 \begin{itemize} 
-\item We recommend that CU-level status consider multiple metrics, either integrated through formal status assessments or through the Pacific Salmon Status Scanner tool, also called the Salmon Scanner.
+\item We recommend that CU-level status consider multiple metrics, either integrated through formal status assessments or through the \textbf{Pacific Salmon Status Scanner tool}, also called the Salmon Scanner.
 \item The Salmon Scanner provides status from a composite of metrics and benchmarks on spawner abundances, and long- and short-term trends in spawner abundances.
 \item Various benchmarks on spawner abundances have been identified to account for differences in data types, quantities and qualities among CUs, including those based on stock-recruitment relationships, percentiles of historical spawner abundances and freshwater spawning and rearing capacity.
 \item Distributional metrics of spawning have been included in formal WSP assessments.
@@ -155,23 +154,30 @@ When assessing CU status relative to abundance-based lower benchmarks, we use ge
 \begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
 \begin{itemize} 
-\item Proportional LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above Red status, with a default of 100\% as the LRP.
+\item \textbf{Proportional LRPs} are calculated from the proportion of CUs within an SMU that are assessed as being above Red status, with 100\% as the recommended LRP.
 \item Proportional LRPs are recommended as the default approach for estimating LRPs for Pacific salmon and triggering rebuilding plans under the \textit{Fisheries Act}.
-\item Advantages of proportional LRPs include that they are consistent with the established framework for status assessments under the WSP, they are easy to communicate, and the spatial scale of proportional LRPs can be easily adapted to match the scale at which management decisions are required.
-\item LRPs along a gradient of aggregate SMU-level abundances ('aggregate abundance LRPs') may be required for fisheries management decisions at the SMU scale, and are considered supplemental to proportional LRPs.
-\item Two types of aggregate abundance LRPs are identified: logistic regression LRPs and projection LRPs. Both rely on the relationship between observed aggregate abundances and statuses of component CUs, but logistic regression LRPs rely on empirical data directly whereas projection LRPs are derived from projections of CU-level population dynamics, usually parameterized from empirical data.  
+\item LRPs along a gradient of aggregate SMU-level abundances (\textbf{'aggregate abundance LRPs'}) may be required for fisheries management decisions at the SMU scale, and are considered supplemental to proportional LRPs.
+\item Two types of aggregate abundance LRPs are identified: \textbf{logistic regression LRPs} and \textbf{projection LRPs}. 
+\begin{itemize} 
+\item Both rely on the relationship between observed aggregate abundances and statuses of component CUs, but logistic regression LRPs rely on empirical data directly whereas projection LRPs are derived from projections of CU-level population dynamics, usually parameterized from empirical data.  
 \item Both aggregate abundance LRPs are probabilistic in nature, identifying the aggregate abundances associated with an acceptable probability of all CUs achieving status above Red.
-\item An assumption of the logistic LRPs is that the relationship between aggregate abundance and CU-level status observed historically represents the current (and future) relationship. If the covariance in population dynamics among CUs is non-stationary, logistic regression LRPs may not represent levels above serious harm. 
+\end{itemize}
+\item An assumption of the logistic regression LRPs is that the relationship between aggregate abundance and CU-level status observed historically represents the current (and future) relationship. If the covariance in population dynamics among CUs is non-stationary, logistic regression LRPs may not represent levels above serious harm. 
 \item Projection LRPs can integrate plausible ranges of parameter uncertainties that may differ from those observed historically, unlike logistic regression LRPs.
-\item For projection LRPs, there is no uncertainty from statistical estimation, unlike logistic regression LRPs. Probabilities are derived directly from projections and underlying uncertainties are integrated directly into the overall probability.
-\item For both aggregate abundance LRPs, uncertainties in CU-level benchmarks and assessments can be accounted for explicitly and quantitatively.
-\item Also for both aggregate abundance LRPs, structural uncertainty in underlying population dynamics can be considered through sensitivity analyses or model averaging across structural assumptions.
  
 \end{itemize} 
 \end{tcolorbox}
 
+<!--
+Additional points to add for the SAR:
+\item Advantages of proportional LRPs include that they are consistent with the established framework for status assessments under the WSP, they are easy to communicate, and the spatial scale of proportional LRPs can be easily adapted to match the scale at which management decisions are required.
+\item For projection LRPs, there is no uncertainty from statistical estimation, unlike logistic regression LRPs. Probabilities are derived directly from projections and underlying uncertainties are integrated directly into the overall probability.
+\item For both aggregate abundance LRPs, uncertainties in CU-level benchmarks and assessments can be accounted for explicitly and quantitatively.
+\item Also for both aggregate abundance LRPs, structural uncertainty in underlying population dynamics can be considered through sensitivity analyses or model averaging across structural assumptions.
 
-In this section, LRPs that integrate statuses of component CUs are proposed. These LRPs fall into two categories: those based on the proportion of component CUs above the Red zone, called proportional LRPs, and those based on aggregate abundances, called aggregate abundance LRPs.  Aggregate abundance LRPs are further subdivided into logistic regression LRPs and projection LRPs (Fig. \@ref(fig:LRP-types). A more detailed description of LRPs is included in Holt et al. (In review). 
+
+-->
+In this section, LRPs that integrate statuses of component CUs are proposed. These LRPs fall into two categories: those based on the proportion of component CUs above the Red zone, called proportional LRPs, and those based on aggregate abundances, called aggregate abundance LRPs.  Aggregate abundance LRPs are further subdivided into logistic regression LRPs and projection LRPs (Fig. \@ref(fig:LRP-types)). A more detailed description of LRPs is included in Holt et al. (In review). 
 
 
 \begin{figure}[ht]
@@ -255,9 +261,9 @@ CH: I think the inital description covers this? ".5, 0.66, 0.90, 0.99, represent
 Probability & Definition \\ 
 \hline
 \endhead
-33\%-66\%  &  range covering, 'about as likely as not' that all CUs are above their lower benchmark. \\
-= 50\%  &  mid-point of the 33\%-66\% range . \\
-$>$ 50\%  &  more likely than not that all CUs are above their lower benchmark. \\
+33\%-66\%  &  range covering, 'about as likely as not' that all CUs are above their lower benchmark \\
+= 50\%  &  mid-point of the 33\%-66\% range \\
+$>$ 50\%  &  more likely than not that all CUs are above their lower benchmark \\
 $>$ 66\%  &  likely that all CUs are above their lower benchmark\\
 $>$ 90\%  &  very likely that all CUs are above their lower benchmark\\
 $>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\

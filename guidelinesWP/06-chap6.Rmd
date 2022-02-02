@@ -5,7 +5,7 @@
 \begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
 \begin{itemize} 
-\item Uncertainties in  \textbf{CU-level benchmarks} affect both proportional and aggregate abundance LRPs, and can arise because of:
+\item Uncertainties in \textbf{CU-level benchmarks} affect both proportional and aggregate abundance LRPs, and can arise because of:
 \begin{itemize} 
 \item observation errors in underlying data, e.g., related to uncertainty in the hatchery contribution to spawning,
 \item estimation uncertainty in benchmarks arising from statistical model fitting and time-varying parameters, and
@@ -96,7 +96,7 @@ When considering both logistic regression and projection LRPs under alternative 
 \item SMU status is provisional when data-rich CUs are deemed representative of data-deficient CUs
 \item SMU status is data-deficient when data-rich CUs are not representative of data-deficient CUs
 \end{itemize}
-\item Also for \textbf{proportional LRPs}, when any component CU has Red status, we recommend SMU status be assessed as below the LRP regardless of the presence of data-deficient CUs and whether the status data-deficient CUs can be inferred from data-rich CUs.
+\item Also for proportional LRPs, when any component CU has Red status, we recommend SMU status be assessed as below the LRP regardless of the presence of data-deficient CUs and whether the status data-deficient CUs can be inferred from data-rich CUs.
 \item For \textbf{aggregate abundance LRPs}, we recommend that SMU status be provisional when SMUs contain data-deficient CUs that can be inferred from data-rich CUs, regardless of the status of the data-rich CUs.
 \end{itemize}
 \end{tcolorbox}
