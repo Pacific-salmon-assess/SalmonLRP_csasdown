@@ -11,8 +11,8 @@
 \item  \textbf{Step 2.} Assess CU data deficiencies
 \item  \textbf{Step 3.} Evaluate if data-deficient CUs be represented by CUs with data
 \item  \textbf{Step 4.} Identify what proportion of CUs above red status (among those with data) is required to avoid serious harm. We recommend 100\% as the default.
-\item  \textbf{Step 5.} Assess SMU status relative to proportional LRP
-\item  \textbf{Step 6.} Peer-review status relative to proportional LRP
+\item  \textbf{Step 5.} Assess SMU status relative to CU status-based LRP
+\item  \textbf{Step 6.} Peer-review status relative to CU status-based LRP
 \item  \textbf{Step 7.} Identify if aggregate abundance LRPs are required for fisheries management. 
 \item  \textbf{Step 8.} If yes, estimate aggregate abundance LRPs and evaluate the extent to which underlying assumptions are met.
 \item  \textbf{Step 9.} If yes, apply aggregate abundance LRPs to derive SMU-level status.
@@ -36,11 +36,11 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \node(2) [box, fill=green!10, below of=1] {2. Assess CU data deficiency};
 \node(3) [box, fill=yellow!10, below of= 2] {3. Determine whether status of data-deficient CUs can be inferred from CUs with data};
 \node(4) [box, fill=cyan!10, below of= 3] {4. What proportion of CUs above Red status is required to avoid serious harm? Default = 100\%};
-\node(5) [boxgray, below of=4] {5. Assess status relative to proportional LRP};
-\node(6) [boxgray, below of=5] {6. Peer-review of status relative to proportional LRP (including review of steps 1-5)};
+\node(5) [boxgray, below of=4] {5. Assess status relative to CU status-based LRP};
+\node(6) [boxgray, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
 \node(7) [box, below of=6, fill=magenta!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
 \node(8) [box, below of=7, fill=brown!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
-\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Use proportional LRPs (step 5)};
+\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely soley on CU status-based LRP (step 5)};
 \node(9) [boxgray, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from proportional LRPs  (step 5)};
 \node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Aggregate abundance LRPs cannot be estimated};
 \draw[arrow] (1) -- (2);
@@ -338,7 +338,7 @@ CW: Agree with the exclusion, otherwise we would also have to point out that agg
 &nbsp;
 **Projection LRPs**
 
-Projection LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above Red status as indicated by a single metric, spawner abundances relative to a lower benchmark.  CU-status derived from multidimensional assessments within the Salmon Scanner were not considered for projection LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above lower benchmarks and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.
+Projection LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above Red status as indicated by a single metric, spawner abundances relative to a lower benchmark.  CU status derived from multidimensional assessments within the Salmon Scanner were not considered for projection LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above lower benchmarks and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.
 
 <!--CH: the following 2 lines give a line break before the next heading-->
 \
