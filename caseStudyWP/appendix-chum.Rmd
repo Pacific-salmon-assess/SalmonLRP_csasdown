@@ -1,7 +1,7 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-# SUPPORTING INFORMATION FOR INNER SOUTH COAST CHUM SALMON CASE STUDY {#app:appendix-chum}
+# SUPPORTING INFORMATION FOR INSIDE SOUTH COAST CHUM SALMON CASE STUDY {#app:appendix-chum}
 
 ## Data Sources and Treatment
  
@@ -19,7 +19,7 @@ The number of Chum caught in fisheries in the Inside South Coast area were taken
 
 ### Data Selection and Infilling
 
-We removed summer-run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall. Summer-run fish are relatively minor portion of the total abundances for these CUs (Table \@ref(tab:CU-summary)). Because hatchery fish are not visibly marked, time-series of proportion of hatchery-origin and natural origin-fish were not available. However, we removed three systems because of high hatchery enhancement: Qualicum River, Little Qualicum River, and Puntledge River. These systems have been nearly 100% enhanced at least since enhancement began at these locations. Hatchery enhancement is likely a relatively small component of total production in the remaining systems. Brood take and rack abundances were also removed from spawner abundances to derive time-series of 'natural' escapement.
+We removed summer-run fish because all of the data that goes into the run reconstruction work is associated with populations that return in the fall. Summer-run fish are relatively minor portion of the total abundances for these CUs (Table \@ref(tab:CU-summary)). Because hatchery fish are not visibly marked, time-series of proportion of hatchery-origin and natural origin-fish were not available. However, we removed three systems because of high enhancement: Qualicum River and Little Qualicum River (spawning channels), and Puntledge River (hatchery production). These systems have been nearly 100% enhanced at least since enhancement began at these locations. It is assumed that hatchery enhancement is a relatively small component of total production in the remaining systems [@lynchAssessmentEnhancedChum2020]. Brood take and rack abundances were also removed from spawner abundances to derive time-series of 'natural' escapement.
 
 
 After these removals, the steps for preparing the data for analysis were:

@@ -1,0 +1,40 @@
+# ACKNOWLEDGEMENTS
+
+We gratefully acknowledge the considerable support provided by our Technical Working Group on Salmon LRPs over the three years leading up to this review, who are (alphabetical order by last name, excluding co-authors): Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Brendan Connors, Steve Cox-Rogers, Shaun Davies, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Ann-Marie Huang, Pete Nicklin, Chuck Parken, Mike Staley, Pieter Van Will, Antonio Velez-Espino, and Ryan Whitmore. 
+
+DFO's State of the Salmon Program, led by Sue Grant, provided helpful guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it. 
+
+We also thank Chuck Parken, Brendan Connors, and Mary Thiess for helpful comments on draft versions of this working paper.
+
+<!-- Full list of TWG members:
+Michael Arbeider,
+Jessy Bokvist,
+Nicholas Brown,
+Charmaine Carr-Harris,
+Kelsey Campbell,
+Brendan Connors,
+Steve Cox-Rogers,
+Sabrina Crowley,
+Shaun Davies,
+Brooke Davis,
+Diana Dobson,
+Michael Folkes
+Aaron Foos,
+Nicole Frederickson,
+Sue Grant,
+Carrie Holt,
+Kendra Holt,
+Wilf Luedke,
+Ann-Marie Huang,
+Diana McHugh,
+Pete Nicklin,
+Chuck Parken,
+Candace Picco,
+Mike Staley,
+Pieter Van Will,
+Antonio Velez-Espino,
+Luke Warkentin,
+Ryan Whitmore,
+Catarina Wor,
+-->
+

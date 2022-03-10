@@ -11,7 +11,7 @@ library(PNWColors)
 library(leaflet)
 
 # where to save data
-path <- here("data")
+path <- here("caseStudyWP", "data")
 
 # Download Salmon Conservation Unit shapefiles
 # id of the Conservation Unit spatial data on open.canada.ca
@@ -34,25 +34,28 @@ zips <- here(path,list.files(path, pattern="zip"))
 if(!all(folders %in%  list.files(here(path))))
   walk(zips, unzip, exdir=here(path))
 # Read in species shapefiles
-chum_cu <- st_read(here("data","Chum_Salmon_CU_Boundary", "Chum Salmon CU Boundary_En.shp"))
-coho_cu <- st_read(here("data","Coho_Salmon_CU_Boundary", "Coho_Salmon_CU_Boundary_En.shp"))
-chinook_cu <- st_read(here("data","Chinook_Salmon_CU_Boundary", "Chinook_Salmon_CU_Boundary_En.shp"))
+chum_cu <- st_read(here("caseStudyWP","data","Chum_Salmon_CU_Boundary", "Chum Salmon CU Boundary_En.shp"))
+coho_cu <- st_read(here("caseStudyWP","data","Coho_Salmon_CU_Boundary", "Coho_Salmon_CU_Boundary_En_edit.shp")) # includes manual edit removing area below Hell's Gate, done in QGIS
+chinook_cu <- st_read(here("caseStudyWP","data","Chinook_Salmon_CU_Boundary", "Chinook_Salmon_CU_Boundary_En.shp"))
+
+# # Get just Nahatlatch for IFR Coho Fraser Canyon CU boundary- downloaded from https://maps.gov.bc.ca/ess/hm/imap4m/ 
+# nahat <- st_read(here("caseStudyWP", "data", "FWA_NAMED_WATERSHEDS_POLY", "FWNMDWTRSH_polygon.shp"))
 
 # Provincial and US Borders and Coastlines (not using rgovcan because they are more complicated file source urls)
-download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Admin/canvec_1M_CA_Admin_shp.zip', destfile=here('data/can_admin.zip'), mode="wb")
+download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Admin/canvec_1M_CA_Admin_shp.zip', destfile=here("caseStudyWP",'data/can_admin.zip'), mode="wb")
 fs <- unzip(zipfile=here('data/can_admin.zip'), list=TRUE) # get all files
 # just unzip region boundaries
-unzip(zipfile=here('data/can_admin.zip'),  files=fs$Name[grep("region", fs$Name)], exdir=here('data'))
-borders <- st_read(here('data/canvec_1M_CA_Admin/geo_political_region_2.shp'))
+unzip(zipfile=here("caseStudyWP",'data/can_admin.zip'),  files=fs$Name[grep("region", fs$Name)], exdir=here('data'))
+borders <- st_read(here("caseStudyWP",'data/canvec_1M_CA_Admin/geo_political_region_2.shp'))
 
 # Rivers + lakes
 # This one takes ~20 min to download, don't download if already present
-if(!file.exists(here('data/canvec_50K_BC_Hydro/waterbody_2.shp')))
+if(!file.exists(here("caseStudyWP",'data/canvec_50K_BC_Hydro/waterbody_2.shp')))
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Hydro/canvec_50K_BC_Hydro_shp.zip', destfile=here('data/rivers_lakes.zip'), mode="wb")
-fs1 <- unzip(zipfile=here('data/rivers_lakes.zip'), list=TRUE) # get all files
+fs1 <- unzip(zipfile=here("caseStudyWP",'data/rivers_lakes.zip'), list=TRUE) # get all files
 # Unzip (large file)
-unzip(zipfile=here('data/rivers_lakes.zip'), files=fs1$Name[grep("waterbody_2", fs1$Name)], exdir=here('data'))
-water <- st_read(here('data/canvec_50K_BC_Hydro/waterbody_2.shp'))
+unzip(zipfile=here("caseStudyWP",'data/rivers_lakes.zip'), files=fs1$Name[grep("waterbody_2", fs1$Name)], exdir=here("caseStudyWP",'data'))
+water <- st_read(here("caseStudyWP",'data/canvec_50K_BC_Hydro/waterbody_2.shp'))
 water <- water[!water$definit_en == "Ocean", ] # remove ocean polygons
 # get area of water objects
 water$area_m2 <- as.numeric(st_area(water))
@@ -60,18 +63,19 @@ water$area_m2 <- as.numeric(st_area(water))
 water1 <- water[!(water$definit_en=="Lake" & water$area_m2 < 100000), ]
 
 # Point shapefile of place names for labels
-download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Toponymy/canvec_50K_BC_Toponymy_shp.zip', destfile=here('data/place_names.zip'), mode="wb")
-fs2 <- unzip(zipfile=here('data/place_names.zip'), list=TRUE)
-unzip(zipfile=here('data/place_names.zip'), files=fs2$Name[grep("bdg_named_feature_0", fs2$Name)], exdir=here('data'))
-pnames <- st_read(here('data/canvec_50K_BC_Toponymy/bdg_named_feature_0.shp'))
+download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Toponymy/canvec_50K_BC_Toponymy_shp.zip', destfile=here("caseStudyWP",'data/place_names.zip'), mode="wb")
+fs2 <- unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), list=TRUE)
+unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), files=fs2$Name[grep("bdg_named_feature_0", fs2$Name)], exdir=here('data'))
+pnames <- st_read(here("caseStudyWP",'data/canvec_50K_BC_Toponymy/bdg_named_feature_0.shp'))
 
 # Dowdload DFO Fishery Management areas shapefile from:
 # https://catalogue.data.gov.bc.ca/dataset/dfo-statistical-areas-boundaries#edc-pow
-fma <- st_read(here("data/dfo_fishery_mgmt_areas_shapefile/DFO_STAT_A_polygon.shp"))
+fma <- st_read(here("caseStudyWP","data/dfo_fishery_mgmt_areas_shapefile/DFO_STAT_A_polygon.shp"))
 
 areas <- c(12:19,28,29) # make vector of areas used in chum analysis
 fma <- fma[!fma$MNGMNTR==0, ] # remove small areas (?)
 fma <- fma[fma$MNGMNTR %in% areas, ] # keep only areas used in chum analysis
+
 
 
 # get bc_maps layers
@@ -106,7 +110,7 @@ drop_multi_poly <- function(y) {
 }
 
 # plot with ggplot
-png(here("figure/chum-map.png"), width=8, height=7, units="in", res=600)
+png(here("caseStudyWP","figure/chum-map.png"), width=8, height=7, units="in", res=600)
 ggplot(scc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
@@ -172,7 +176,7 @@ bounds <- as.numeric(st_bbox(ifc))
 # Get palette
 pal <- pnw_palette("Starfish", length(ifc$CU_name), type="continuous")
 
-png(here("figure/coho-map.png"), width=8, height=7, units="in", res=600)
+png(here("caseStudyWP","figure/coho-map.png"), width=8, height=7, units="in", res=600)
 ggplot(ifc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
@@ -217,7 +221,7 @@ chk_lab <- chk_lab[!duplicated(chk_lab$name_en), ] # remove duplicated labels
 chk_lab$name_en[grep("Nitinat Lake", chk_lab$name_en)]  <- "Nitinat"
 chk_lab$name_en[grep("San Juan Point", chk_lab$name_en)] <- "San Juan"
 
-png(here("figure/chinook-map2.png"), width=8, height=7, units="in", res=600)
+png(here("caseStudyWP","figure/chinook-map2.png"), width=8, height=7, units="in", res=600)
 ggplot(isc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
