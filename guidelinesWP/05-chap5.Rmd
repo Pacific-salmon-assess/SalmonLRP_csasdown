@@ -22,7 +22,7 @@
 
 
 We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method (Fig. \@ref(fig:flowchart)). This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., locally or internationally), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further applied and evaluated across additional SMUs and contexts. These steps were developed to be consistent with the principles described in Section \@ref(principles).
-
+<!-- CH: old colours: fill=yellow!10, fill=cyan!10, fill=magenta!10, fill=brown!10, fill=green!10, boxgray, intead of box,-->
 
 
 \begin{figure}[ht]
@@ -32,16 +32,16 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \tikzstyle{boxno} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, text width = 4cm, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \begin{tikzpicture} [node distance = 1.5cm]
-\node(1) [box, fill=blue!10] {1. Data compilation};
-\node(2) [box, fill=green!10, below of=1] {2. Assess CU data deficiency};
+\node(1) [box, fill=yellow!10] {1. Data compilation};
+\node(2) [box, fill=yellow!10, below of=1] {2. Assess CU data deficiency};
 \node(3) [box, fill=yellow!10, below of= 2] {3. Determine whether status of data-deficient CUs can be inferred from CUs with data};
-\node(4) [box, fill=cyan!10, below of= 3] {4. What proportion of CUs above Red status is required to avoid serious harm? Default = 100\%};
-\node(5) [boxgray, below of=4] {5. Assess status relative to CU status-based LRP};
-\node(6) [boxgray, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
-\node(7) [box, below of=6, fill=magenta!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
-\node(8) [box, below of=7, fill=brown!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
+\node(4) [box, fill=yellow!10, below of= 3] {4. What proportion of CUs above Red status is required to avoid serious harm? Default = 100\%};
+\node(5) [box, fill=yellow!10, below of=4] {5. Assess status relative to CU status-based LRP};
+\node(6) [box, fill=yellow!10, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
+\node(7) [box, below of=6, fill=blue!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
+\node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
 \node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely soley on CU status-based LRP (step 5)};
-\node(9) [boxgray, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from proportional LRPs  (step 5)};
+\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from proportional LRPs  (step 5)};
 \node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Aggregate abundance LRPs cannot be estimated};
 \draw[arrow] (1) -- (2);
 \draw[arrow] (2) -- (3);
