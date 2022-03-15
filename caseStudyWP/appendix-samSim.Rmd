@@ -279,7 +279,7 @@ If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ a
 
 
 \begin{equation}
-  Smsy_{i} = Sgen_{i} \cdot e^{{\alpha^\prime}_{i}\cdot \left( 1-\dfrac{Sgen_{i}}{\beta_{i}}\right)}
+  Smsy_{i} = Sgen_{i} \cdot  e^{{\alpha^\prime}_{i}- \beta_{i} \cdot Sgen_{i}}
   (\#eq:Sgensamsim)
 \end{equation}
 
