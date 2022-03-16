@@ -248,11 +248,14 @@ CU status was derived from the proportion of component inlets above their lower 
 
 ## LRP ESTIMATION: PROPORTION OF CUS
 
+*\textcolor{cyan}{LW: what should this heading be now? LRP ESTIMATION: CU STATUS-BASED?}*
+
+
 ### Methods
 
 The LRP on the proportion of CUs was identified as all 3 CUs containing inlets with current statuses exclusively above Red status.  Because inlets are nested within CUs, this LRP accounts for the distribution of spawning among inlets within CUs. If any CU contained an inlet with Red status, the LRP was considered breached. Status of component inlets was derived from the multidimensional approach used within the Pacific Salmon Status Scanner, which for this SMU reduced to a single metric of spawner abundances relative to the lower benchmark, S~gen~. 
 
-We further considered a proportional LRP based on CU statuses derived from a previously published WSP integrated assessment [status in 2014 only, @dfoIntegratedBiologicalStatus2016].
+We further considered a CU status-based LRP based on CU statuses derived from a previously published WSP integrated assessment [status in 2014 only, @dfoIntegratedBiologicalStatus2016].
 
 ### Results
 
@@ -625,9 +628,9 @@ knitr::include_graphics("figure/chinook-Alphas-ProjLRPCurve-ALLp.png")
 
 ## HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS
 
-We evaluated the status of WCVI Chinook using LRPs estimated using proportional and projection methods. We show status against three types of proportional LRPs: an LRP based all component inlets having status above Red using the multidimensional algorithm in the Salmon Scanner, an LRP based all component inlets having spawner abundances above  S~gen~, and status based on the previously published WSP integrated assessment of CUs [status in 2014 only, @dfoIntegratedBiologicalStatus2016, Figure \@ref(fig:chinook-retro)]. The results from the multidimensional approach and abundances against S~gen~ are identical, but are shown separately for clarity. Although the Salmon Scanner can equally provide status on a single metric of abundances, we have differentiated them here to highlight the unique approach to multidimensional assessments provided within the Scanner. 
+We evaluated the status of WCVI Chinook using LRPs estimated using CU status-based and projection methods. We show status against three types of CU status-based LRPs: an LRP based all component inlets having status above Red using the multidimensional algorithm in the Salmon Scanner, an LRP based all component inlets having spawner abundances above  S~gen~, and status based on the previously published WSP integrated assessment of CUs [status in 2014 only, @dfoIntegratedBiologicalStatus2016, Figure \@ref(fig:chinook-retro)]. The results from the multidimensional approach and abundances against S~gen~ are identical, but are shown separately for clarity. Although the Salmon Scanner can equally provide status on a single metric of abundances, we have differentiated them here to highlight the unique approach to multidimensional assessments provided within the Scanner. 
 
-All methods indicate this SMU being below its LRP for years where data are available. We use the same nomenclature as for Interior Fraser River Coho Salmon, where 'Prop' indicates proportional LRPs, 'Abund' indicates aggregate abundance LRPs, 'Scanner' indicates CU-level assessments derived from multidimensional approach within the the Pacific Salmon Status Scanner, 'Sgen' indicates CU assessments derived on a single metric, (e.g., abundances relative to the lower benchmark S~gen~), and 'Proj' indicates projection LRPs. 
+All methods indicate this SMU being below its LRP for years where data are available. We use the same nomenclature as for Interior Fraser River Coho Salmon, where 'Prop' indicates CU status-based LRPs, 'Abund' indicates aggregate abundance LRPs, 'Scanner' indicates CU-level assessments derived from multidimensional approach within the the Pacific Salmon Status Scanner, 'Sgen' indicates CU assessments derived on a single metric, (e.g., abundances relative to the lower benchmark S~gen~), and 'Proj' indicates projection LRPs. 
    
 
 ```{r chinook-retro, echo=FALSE, fig.cap="Historical evaluation of status using available methods for estimating LRPs. Red bars indicate status below LRP; grey x's indicate status not available", out.width = '80%'}
@@ -641,7 +644,7 @@ knitr::include_graphics("figure/chinook-statusPlot-withBars2020.png")
 
 ## DISCUSSION
 
-A few key conclusions from this case study are highlighted for broader relevance. Status was consistent across the LRP methods that were available, and with a previously published assessment. This SMU is generally managed at scales smaller than the SMU supporting the application of proportional LRPs to allow management decisions to be responsive to CU- or inlet-level statuses. However, aggregate abundance, projection LRPs were also estimated here for demonstration purposes. It was not possible to estimate a logistic regression LRP due to lack of contrast in the time-series. 
+A few key conclusions from this case study are highlighted for broader relevance. Status was consistent across the LRP methods that were available, and with a previously published assessment. This SMU is generally managed at scales smaller than the SMU supporting the application of CU status-based LRPs to allow management decisions to be responsive to CU- or inlet-level statuses. However, aggregate abundance, projection LRPs were also estimated here for demonstration purposes. It was not possible to estimate a logistic regression LRP due to lack of contrast in the time-series. 
 
 Projection LRPs were highly sensitive to average exploitation for this SMU. LRPs derived assuming current exploitation rates cannot be used as an indicator of serious harm if the management procedure changes. Projection LRPs were also highly sensitive to underlying population productivities. As productivity declined, LRPs increased, becoming more precautionary, reflecting trends of underlying benchmarks. Projection LRPs at probabilities levels of 90% and 99% could not be estimated for this SMU because of the relatively low covariation in population dynamics among CUs. The probability of all CUs exceeding their lower benchmarks was never high, even at high aggregate abundances. 
 
@@ -651,7 +654,7 @@ We recommend a few areas for further research relevant to this SMU:
 
 - The projection LRPs illustrated here should further be evaluated for sensitivity to key structural assumptions, such as the stock-recruitment model, and the presence and magnitude of depensation, among other assumptions. This evaluation is especially important for this SMU because of the lack of peer-reviewed  stock-recruitment models. We based our assumption of a Ricker form of the stock-recruitment relationship from its application to other Chinook populations in BC [@parkenHabitatbasedMethodsEstimate2006], but this form may not represent the high observed variability and declining productivity that are now common for Chinook salmon. 
 
-- In the development of proportional and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
+- In the development of CU status-based and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
 
 - Future iterations of the multidimensional status assessments used within the Pacific Salmon Status Scanner could include information on the distribution of spawners across inlets within CUs to incorporate this finer scale of biodiversity. 
 

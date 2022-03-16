@@ -21,7 +21,7 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \toprule
 \multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
 \toprule
-\multicolumn{2}{l}{\parbox{5.8cm}{Multidimensional approach used in the Salmon Scanner}}& Yes (only for proportional LRPs) &   Yes (only for proportional LRPs)  &  Yes (only for proportional LRPs)\\
+\multicolumn{2}{l}{\parbox{5.8cm}{Multidimensional approach used in the Salmon Scanner}}& Yes (only for CU status-based LRPs) &   Yes (only for CU status-based LRPs)  &  Yes (only for CU status-based LRPs)\\
 \midrule
 \multirow{3}{*}{\parbox{3.2cm}{Single metric approaches: spawner abundances relative to benchmark}} & Spawner-recruitment benchmark & Yes & - & Attempted, estimates unreliable\\
 \cline{2-5}
@@ -36,7 +36,7 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \toprule
 \multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
 \toprule
-\multicolumn{2}{l}{Proportional LRP} &  Yes &   Yes &   Yes\\
+\multicolumn{2}{l}{CU status-based LRP} &  Yes &   Yes &   Yes\\
 \midrule
 \multirow{2}{*}{\parbox{3.2cm}{Aggregate abundance LRPs}} & Logistic regression LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
 \cline{2-5}
@@ -58,14 +58,14 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 
 We consider two types of LRPs based on two different metrics:
 
-1) Proportional LRPs use a proportion as the metric upon which LRPs are based. Specifically, they use the proportion of CUs within an SMU that are above the Red WSP status zone. We assume that in order for an SMU to remain above its proportional LRP, 100% of CUs must have status estimates above Red (i.e., either Amber or Green).
+1) CU status-based LRPs use a proportion as the metric upon which LRPs are based. Specifically, they use the proportion of CUs within an SMU that are above the Red WSP status zone. We assume that in order for an SMU to remain above its CU status-based LRP, 100% of CUs must have status estimates above Red (i.e., either Amber or Green).
 
 2) Aggregate abundance LRPs use the total SMU-level spawning abundance as the metric upon which LRPs are based. Two methods of developing aggregate abundance LRPs are applied: (i) Logistic Regression LRPs and (ii) Projection LRPs.
 
-We propose that proportional LRPs are more appropriate for Pacific salmon SMUs because they more directly align with DFO's WSP objectives of maintaining salmon biodiversity; however, aggregate abundance LRP methods may be added to meet specific fisheries management requirements. 
+We propose that CU status-based LRPs are more appropriate for Pacific salmon SMUs because they more directly align with DFO's WSP objectives of maintaining salmon biodiversity; however, aggregate abundance LRP methods may be added to meet specific fisheries management requirements. 
 
 
-We implement proportional LRPs using approaches developed to assess CU status under DFO's WSP [@dfoCanadaPolicyConservation2005; @holtIndicatorsStatusBenchmarks2009] and implemented for a subset of priority CUs [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020]. These approaches use multiple metrics to evaluate status including trends in abundance and abundance metrics, and an expert-driven integration approach to combine statuses across metrics into a single status for each CU. In our case study applications, we apply the recently developed Pacific Salmon Status Scanner tool (also referred to as the 'Salmon Scanner'; Pestal et al., in prep^[Pestal, G., MacDonald, B, Grant, S, and Holt, C., in prep. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci.]) as a way to rapidly approximate more detailed WSP status assessments. The Salmon Scanner allows us to rapidly generate up-to-date estimates of integrated CU status for all of our case study applications, and is recommended as an approach for defining LRPs in our companion working paper (Holt et al., in review).
+We implement CU status-based LRPs using approaches developed to assess CU status under DFO's WSP [@dfoCanadaPolicyConservation2005; @holtIndicatorsStatusBenchmarks2009] and implemented for a subset of priority CUs [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020]. These approaches use multiple metrics to evaluate status including trends in abundance and abundance metrics, and an expert-driven integration approach to combine statuses across metrics into a single status for each CU. In our case study applications, we apply the recently developed Pacific Salmon Status Scanner tool (also referred to as the 'Salmon Scanner'; Pestal et al., in prep^[Pestal, G., MacDonald, B, Grant, S, and Holt, C., in prep. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci.]) as a way to rapidly approximate more detailed WSP status assessments. The Salmon Scanner allows us to rapidly generate up-to-date estimates of integrated CU status for all of our case study applications, and is recommended as an approach for defining LRPs in our companion working paper (Holt et al., in review).
 
 
 When developing candidate aggregate abundance LRPs, we aim to maintain consistency with the WSP by defining LRPs as aggregate abundance levels that have a high probability of all CUs being above their Red status zone. For these LRPs, estimates of CU status are approximated based on a comparison of spawning abundance to a single lower benchmark for each CU. Exceptions are described in the application to case studies.
@@ -77,16 +77,16 @@ We also maintain consistency with the WSP by only including spawning streams wit
 Systems with levels of PNI $\geqslant$ 0.5 can still have hatchery influences; however, dynamics are predominately natural origin. Where time-series of the proportion of hatchery marked fish on the spawning grounds are available (e.g., Interior Fraser Coho case study), these proportions are used to inform assessments in two ways: first to develop time-series of natural-origin recruitment for benchmark estimation based on stock-recruitment relationships and second to develop time series of natural-origin spawners for status assessment against benchmarks.  When reliable time-series of the proportion of hatchery influence are not available (WCVI Chinook), total spawners are used for LRP analyses provided that the threshold of assumed PNI $\geqslant$ 0.5 has been met.     
 
 
-More detailed descriptions of LRP estimation methods are provided in the following sections, while guidance on when and how proportional and aggregate abundance LRPs should be applied is provided in Holt et al. (in review). We recommend that users consult Holt et al. (in review) before applying any of the methods described in this case study paper.
+More detailed descriptions of LRP estimation methods are provided in the following sections, while guidance on when and how CU status-based and aggregate abundance LRPs should be applied is provided in Holt et al. (in review). We recommend that users consult Holt et al. (in review) before applying any of the methods described in this case study paper.
 
 
 
-## PROPORTIONAL LRPS
+## CU STATUS-BASED LRPS
 
-A proportional LRP was set as 100% of CUs above their red Red status zone. The LRP therefore acts as a trigger that is breached when one or more CUs in an SMU is assessed as having Red status. Rationale for this choice of 100% of CUs required to be above Red status is described in Holt et al. (in review).
+A CU status-based LRP was set as 100% of CUs above their red Red status zone. The LRP therefore acts as a trigger that is breached when one or more CUs in an SMU is assessed as having Red status. Rationale for this choice of 100% of CUs required to be above Red status is described in Holt et al. (in review).
 
 
-We compare three different methods of assessing CU status when using proportional LRPs: (i) the proportion of CUs with a recent WSP status assessment above the Red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent Salmon Scanner status assessment above Red (see below for more details), and (iii) the proportion of CUs with status estimated to be below a single CU lower benchmark (e.g., S~gen~, percentile-based benchmarks, etc.). We recommend methods (i) and (ii) for CU assessments, and provide method (iii) for comparison purposes.
+We compare three different methods of assessing CU status when using CU status-based LRPs: (i) the proportion of CUs with a recent WSP status assessment above the Red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent Salmon Scanner status assessment above Red (see below for more details), and (iii) the proportion of CUs with status estimated to be below a single CU lower benchmark (e.g., S~gen~, percentile-based benchmarks, etc.). We recommend methods (i) and (ii) for CU assessments, and provide method (iii) for comparison purposes.
 
 
 When assessing CU status relative to a single abundance-based lower benchmark in approach (iii), we compare generational mean spawner abundances to the benchmark, as described in Holt et al. (In review). <!--CH 1 Feb: this is repeated in the Guidelines paper. Can we omit here? (though I think this text explains it a bit better than my explanation in the other WP. I'll revised the Guidelines paper with this text if okay with you?): "The use of generational means is consistent with the approach taken for abundance-based benchmarks in WSP assessments and the Salmon Scanner tool (approaches i and ii). A generational mean integrates status over cohorts within a generation, which are generally independent of each other because of the anadromous, semelparous life-history of Pacific salmon and the dominance of a single age-at-maturity for many stocks [@holtIndicatorsStatusBenchmarks2009; @porsztReliabilityIndicatorsDecline2012]. As a result, generational smoothing reduces noise in annual CU status determination arising from both interannual variability in CU abundances from different cohorts and annual observation error in estimated spawner abundances."
@@ -129,7 +129,7 @@ knitr::include_graphics("figure/decision_tree.png")
 
 ## AGGREGATE ABUNDANCE LRPS{#aggAbundMethods}
 
-Aggregate abundance LRPs are based on the assumption that there is a predictable relationship between SMU-level abundance and the probability that all CUs will be above Red status. When estimating aggregate abundance LRPs, status relative to a single lower benchmark (LBM) is used a proxy for status above the Red zone. Aggregate abundance LRPs are then estimated by using the predicted relationship to find the SMU-level abundance at which there is a prescribed probability that 100% of CUs (the same proportion that was used for proportional LRPs) will be above the LBM. 
+Aggregate abundance LRPs are based on the assumption that there is a predictable relationship between SMU-level abundance and the probability that all CUs will be above Red status. When estimating aggregate abundance LRPs, status relative to a single lower benchmark (LBM) is used a proxy for status above the Red zone. Aggregate abundance LRPs are then estimated by using the predicted relationship to find the SMU-level abundance at which there is a prescribed probability that 100% of CUs (the same proportion that was used for CU status-based LRPs) will be above the LBM. 
 
 
 The above definition of aggregate abundance LRPs requires a decision to be made about the required probability that 100% of CUs will be above their LBMs. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@frameGuidanceNoteLead2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance LRPs is included in (Holt et al. in review).
@@ -147,7 +147,7 @@ For both logistic regression and projection LRPs, we characterize annual CU stat
 When assessing CU status for the purpose of estimating aggregate abundance LRPs, we used unsmoothed annual spawner abundances instead of generational averages. This approach was based on preliminary analyses of the logistic regression method that showed using unsmoothed spawner abundances improved the spread in the data used to establish a relationship between CU status and aggregate spawning abundance. Furthermore, using generational means in the logistic regression approach led to considerable autocorrelation in the aggregate abundance time series, violating assumptions of the logistic regression.
 
 
-However, when assessing SMU status, we used generational running averages (geometric average) of aggregate spawner abundances. This approach reduced variability in annual decisions about whether an LRP had been breached arising from variability in cohorts within a generation.  The decision to use generational averages of aggregate spawner abundances when determining whether an LRP is breached is consistent with the approach used for proportional LRPs. In both cases, the underlying metric being used to determine SMU status (either aggregate abundance or CU-level status of component CUs for the proportional approach) is based on generational-averaged values in order to reduce annual variability in status.
+However, when assessing SMU status, we used generational running averages (geometric average) of aggregate spawner abundances. This approach reduced variability in annual decisions about whether an LRP had been breached arising from variability in cohorts within a generation.  The decision to use generational averages of aggregate spawner abundances when determining whether an LRP is breached is consistent with the approach used for CU status-based LRPs. In both cases, the underlying metric being used to determine SMU status (either aggregate abundance or CU-level status of component CUs for the CU status-based approach) is based on generational-averaged values in order to reduce annual variability in status.
 
 
 ### Logistic regression LRPs{#logisticMethods}  
