@@ -31,16 +31,38 @@ Chum from the Upper Knight and Bute Inlet CUs are exposed to different threats t
 
 Environmental drivers, biological characteristics, and population capacity for Upper Knight and Bute Inlet CUs also differ from the other seven CUs. The hydrology of these two CUs likely differs from that of other CUs with more low-lying topography. The two largest watersheds in these CUs (Homathko and Klinaklini) fall within their own Freshwater Adaptive Zone, which indicates unique freshwater habitat conditions (Figure 76 and Table 52 in @holtbyConservationUnitsPacific2007). These watersheds have large glaciers and high amounts of snowmelt, compared to more low-elevation coastal watersheds with more rain-dominant hydrographs. Marine conditions when smolts enter the ocean in these systems may vary from that of the other five CUs, as they are entering the upper ends of large fjords. Competition with other salmon in the ocean and ocean conditions affect chum salmon in this SMU [@debertinMarineGrowthPatterns2017, @litzCompetitionOddyearPink2021], although declines in Pink salmon stocks in this general area may suggest that these factors are not affecting these CUs only. Regarding biological characteristics, Bute Inlet and Upper Knight have a higher proportion of summer-run populations of Chum (Table \@ref(tab:CU-summary)). Recruits per spawner of the Upper Knight and Bute Inlet CUs (estimated using CU-level infilling, which introduces error) are more variable than for other CUs in this SMU, exhibiting very productive years (>100 recruits per spawner) and years with very low productivity. These CUs also have lower habitat capacity, with fewer streams with fall timed Chum spawners than the other CUs (Table \@ref(tab:CU-summary)). Based on these differences, we cannot infer the status for Bute Inlet and Upper Knight from the other CUs. Note that these criteria used to evaluate whether status can be inferred for these CUs extends to whether reliable spawner escapement data can be infilled using escapement in the other CUs. Thus, these CUs are dropped for years with no spawner data in this case study. 
 
-\newpage
+\needspace{0.35\textheight}
+
 ```{r CU-summary, echo=FALSE}
-d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
-csasdown::csas_table(d,
-   align = c('l', 'c', 'c','c','c'),
-   caption = #ifelse(french,
-                   #"French goes here",
-                   "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
-            #)
+ d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
+ csasdown::csas_table(d,
+    align = c('l', 'c', 'c','c','c'),
+    caption = #ifelse(french,
+                    #"French goes here",
+                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
+             #)
 ```
+
+\afterpage{\clearpage}
+
+
+
+<!-- \begin{center} -->
+<!-- \begin{longtable}{ l c c c c } -->
+<!-- \caption{The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.} \label{tab:CU-summary} \\ -->
+<!-- \hline -->
+<!-- CU Name & Fall run streams & Summer run streams & LBM & UBM  \\ -->
+<!-- \hline -->
+<!-- Southern Coastal Streams & 23 & 8 & NA & NA \\ -->
+<!-- North East Vancouver Island & 17 & 0 & 50\% & 50\% \\ -->
+<!-- Upper Knight & 3 & 2 & 50\% & 50\% \\ -->
+<!-- Loughborough & 37 & 0 & 50\% & 50\% \\ -->
+<!-- Bute Inlet & 4 & 1 & NA & NA \\ -->
+<!-- Georgia Strait & 125 & 1 & 25\% & 50\% \\ -->
+<!-- Howe Sound-Burrard Inlet & 66 & 0 & 25\% & 50\% \\ -->
+<!-- \hline -->
+<!-- \end{longtable} -->
+<!-- \end{center} -->
 
 <!-- LW: should alpha and exploitation rate be added to this table as justification for which percentile benchmarks were chosen? Also available in Holt et al. 2018.
   CW: I suggest removin the UBM estimates, as we do not use them. And I like the idea of adding alpha and ER.
@@ -80,6 +102,7 @@ Percentile benchmarks can be applied to assess status of CUs when other data - l
 
 For this case study, percentile benchmarks were calculated using the raw infilled time series of annual escapement (i.e., not smoothed). In contrast, status for year $i$ was determined by comparing the generational mean (geometric mean on a 4 year window, ending with year $i$) spawner abundance with the benchmark. This approach of using raw (unsmoothed) escapements when calculating benchmarks, and generational smoothed escapements when estimating CU status relative to benchmarks, is consistent with the approaches taken for our other two case studies for proortional LRPs. 
 
+\needspace{0.35\textheight}
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
@@ -97,6 +120,7 @@ Productivity (Ricker $\alpha$) & >4 & 25th (lower)  50th (upper) & 25th (lower) 
 (\#tab:holt-tab6)
 \end{table}
 
+\afterpage{\clearpage}
 
 
 Based on recommendations in @holtEvaluatingBenchmarksBiological2018 (Table \@ref(tab:holt-tab6)), Georgia Strait and Howe Sound-Burrard Inlet fall in the category of using 25% as a lower benchmark and 50% as an upper benchmark (Ricker $\alpha$ 2.5-4, harvest rate 20-40%). Loughborough, Northeast Vancouver Island, and Upper Knight ($\alpha$ 1.5-2.5 and harvest rate 0-20%) had a 50% lower and upper benchmark recommended. Bute Inlet ($\alpha$ 1.5-2.5, harvest rate 20-40%) needed further evaluation and percentile benchmarks were not recommended. Percentile benchmarks were also not recommended for Southern Coastal Streams due to low productivity ($\alpha$ <1.5; Table \@ref(tab:CU-summary)). 
@@ -113,7 +137,7 @@ To derive proportional LRPs, we calculated the proportion of CUs that had status
 
 
 The single-metric approach to assessing CU status based on percentiles has specific data requirements [@holtEvaluatingBenchmarksBiological2018] while the multidimensional approach can be applied to any CU with at least a consistent time-series of spawner abundances. <!--SG: Again, they are the same…Scanner can use percentiles as BM. LW: see above comment -->To compare LRPs based on CU assessment from these two approaches we compared data subsets including those that used the same data for each method, and all appropriate data for each method. We evaluated six different combinations of data and LRP methods (Table \@ref(tab:LRP-scenarios)). 
-
+\needspace{0.35\textheight}
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
@@ -133,6 +157,8 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 \end{tabular}
 (\#tab:LRP-scenarios)
 \end{table}
+
+\afterpage{\clearpage}
 
 
 When describing ISC Chum LRP scenarios in Table \@ref(tab:LRP-scenarios) and throughout this case study, we use the following labeling convention: *Metric : CU Status Method : Data Scenario*. 'Metric' refers to the choice to base all ISC Chum LRPs on the proportion of CUs above Red CU status (Prop). The 'CU Status Method' can be based on the multidimensional algorithm within the Salmon Scanner (Scanner) or on a single percentile benchmark used to characterize CU status (Percentile).  Finally, 'Data Scenario' labels indicate both the number of CUs represented (4, 5, or 7) and the completeness of the time series (Full or Partial). 'Full' scenarios only included CUs with complete time series (no CUs with missing years). 'Partial' scenarios included CUs with incomplete time series (years that did not have observations in those CUs were omitted). When using percentile benchmarks in these scenarios, we used percentiles based on @holtEvaluatingBenchmarksBiological2018. The benchmarks were estimated using the entire time series. 
@@ -211,6 +237,7 @@ Download diagnostic info for checking
 #LRdiagOut
 ```
 --> 
+\needspace{0.35\textheight}
 
 +-------------------------+--------------+
 | Diagnostic Test         | Value        | 
@@ -232,7 +259,7 @@ Download diagnostic info for checking
 
 Table: (\#tab:logistic-diag-chum) Model diagnostic statistics from logistic regression LRP using percentile benchmarks. A description of diagnostic tests is provided in Section 2. Hit ratios are shown for p=0.5.  
 
-\pagebreak
+\afterpage{\clearpage}
 
 Several factors led to these poor model fits. The Inside South Coast Chum SMU is made up of seven CUs that vary in their escapement abundance. In many years, escapement in Georgia Strait and Howe Sound-Burrard Inlet is greater than in other CUs by two orders of magnitude (Figure \@ref(fig:chum-spawner-distribution)). In addition, the correlation in escapement among these seven CUs is low (Figure \@ref(fig:chum-spawner-corr)). These characteristics mean that the aggregate abundance may be high due to one or more CUs with high escapements, while one more smaller CUs are below their benchmark. High aggregate escapements do not mean that all CUs are above their benchmark. The low pairwise correlations in CU escapements are likely due to the SMU covering a large area, with varying numbers of populations affected by both local and regional factors, as described in Sectoin \@ref(chum-context).
 

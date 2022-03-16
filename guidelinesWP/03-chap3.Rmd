@@ -185,10 +185,10 @@ In this section, LRPs that integrate statuses of component CUs are proposed. The
 \begin{tikzpicture}
 \tikzstyle{box} = [rectangle, rounded corners, text centered, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
-\node(1) [box, minimum width=10 cm, minimum height=1 cm, fill=orange!10] at(0,0) {Proportional LRP};
-\node(2) [box,  minimum width=10 cm, minimum height=1 cm, fill=teal!10] at(0,-2) {Aggregate Abundance LRP};
-\node(2a) [box, minimum width=4 cm, minimum height=1 cm, fill=teal!10] at(-3,-3.5) {Logistic Regression LRP};
-\node(2b) [box, minimum width=4 cm, minimum height=1 cm, fill=teal!10] at(3,-3.5) {Projection LRP};
+\node(1) [box, minimum width=10 cm, minimum height=1 cm, fill=yellow!10] at(0,0) {CU status-based LRP};
+\node(2) [box,  minimum width=10 cm, minimum height=1 cm, fill=blue!10] at(0,-2) {Aggregate Abundance LRP};
+\node(2a) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(-3,-3.5) {Logistic Regression LRP};
+\node(2b) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(3,-3.5) {Projection LRP};
 \draw[arrow] (2.south -| 2a) -- (2a);
 \draw[arrow] (2.south -| 2b) -- (2b);
 \end{tikzpicture}
@@ -198,7 +198,7 @@ In this section, LRPs that integrate statuses of component CUs are proposed. The
 
 ### Proportional LRPs
 
-Proportional LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above Red status. To be consistent with the intent of the WSP to preserve biodiversity at the CU-level, we identify an LRP at 100% of CUs having status above Red (i.e., either Amber or Green). <!--CH Sue suggested removing as she wasn't sure what happened when LRP is breached, I think. I agree the act of breaching is not entirely relevant here, but I did think it might help explain the proportional LRP "When any individual CU falls into the Red zone, then the LRP is considered breached."--> See Section \@ref(guidelines) for a step-wise approach for identifying LRPs that further considers data limitations when identifying the proportion of CUs above the Red zone, and Section \@ref(recommendations) for a description of associated uncertainties. CU statuses are derived using the approaches described in Section \@ref(cu-est-methods), and are submitted to peer review, as described in Section \@ref(guidelines).
+Proportional LRPs are calculated from the proportion of CUs within an SMU that are assessed as being above Red status (Fig. \@ref(fig:CU-status-based-LRP)). To be consistent with the intent of the WSP to preserve biodiversity at the CU-level, we identify an LRP at 100% of CUs having status above Red (i.e., either Amber or Green). <!--CH Sue suggested removing as she wasn't sure what happened when LRP is breached, I think. I agree the act of breaching is not entirely relevant here, but I did think it might help explain the proportional LRP "When any individual CU falls into the Red zone, then the LRP is considered breached."--> See Section \@ref(guidelines) for a step-wise approach for identifying LRPs that further considers data limitations when identifying the proportion of CUs above the Red zone, and Section \@ref(recommendations) for a description of associated uncertainties. CU statuses are derived using the approaches described in Section \@ref(cu-est-methods), and are submitted to peer review, as described in Section \@ref(guidelines).
 
 
 
@@ -217,9 +217,77 @@ A further advantage of this method is that it can easily be extended to other sp
 &nbsp;
 In addition to proportional LRPs, we developed LRPs along a gradient of aggregate SMU-level abundance accounting for component CU-level statuses. These 'aggregate abundance LRPs' may be required for fisheries management decisions at the SMU scale, but are considered supplemental to proportional LRPs for the purposes of the Fish Stocks provisions. We identified two types of aggregate abundance LRPs: (1) logistic regression LRPs and (2) projection LRPs (Fig. \@ref(fig:LRP-types)). Both LRPs rely on the relationship between observed aggregate abundances and statuses of the component CUs, but they differ in that logistic regression LRPs rely on empirical data directly, whereas projection LRPs are derived from projections of CU-level population dynamics usually parameterized from empirical data.  Also, both LRPs are probabilistic in nature, identifying the aggregate abundances associated with an acceptable probability of all CUs achieving status above the Red zone. To an extent uncertainty in the underlying relationship between observed aggregate abundances and component CU-level statuses is represented in the probabilistic nature of these LRPs; larger uncertainties result in higher LRP values and vice versa, all else remaining equal. The ability of aggregate-abundance LRPs to reliably represent thresholds of serious harm at the CU level depend on the strength of the underlying relationship between aggregate abundance and CU statuses as inferred from observed data.
 
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture} [ font=\sffamily]
+
+\tikzstyle{gstat} = [circle, minimum width = 0.9 cm, fill=green!90]
+\tikzstyle{gstatf} = [circle, minimum width = 0.9 cm, fill=green!5]
+\tikzstyle{astat} = [circle, minimum width = 0.9 cm, fill=orange!90]
+\tikzstyle{astatf} = [circle, minimum width = 0.9 cm, fill=orange!10]
+\tikzstyle{rstat} = [circle, minimum width = 0.9 cm, fill=red!90]
+\tikzstyle{rstatf} = [circle, minimum width = 0.9 cm, fill=red!5]
+\tikzstyle{SMU} = [rectangle, rounded corners, dashed, draw=gray]
+
+\node at (2,4.75) {CU1}; 
+\node at (3,4.75) {CU2}; 
+\node at (4,4.75) {CU3}; 
+\node at (5,4.75) {CU4}; 
+
+\node() [gstat] at (2,4) {};
+\node() [gstat] at (3,4) {};
+\node() [gstatf] at (4,4) {};
+\node() [gstatf] at (5,4) {};
+
+\node() [astatf] at (2,3) {};
+\node() [astatf] at (3,3) {};
+\node() [astatf] at (4,3) {};
+\node() [astat] at (5,3) {};
+
+\node() [rstatf] at (2,2) {};
+\node() [rstatf] at (3,2) {};
+\node() [rstat] at (4,2) {};
+\node() [rstatf] at (5,2) {};
+
+\node() [SMU, minimum width=5cm, minimum height=4.5 cm] at (3.5, 3.25) {};
+\node at (3.5,5.75) {Stock Management Unit A}; 
+
+\draw [line width = 1 mm] (1,2.5) -- (6,2.5);
+\node() [align=center] at (7,2.5) {CU status-\\based LRP};
 
 
+\node() [single arrow, shape border rotate=270, draw, minimum height=0.6 cm, minimum width=0.7 cm, single arrow head extend=0.1cm] at (3.5, 0.65) {}; 
+\node() at (3.5, 0) {SMU status = below LRP};
 
+\node at (9,4.75) {CU5}; 
+\node at (10,4.75) {CU6}; 
+\node at (11,4.75) {CU7}; 
+
+\node() [gstatf] at (9,4) {};
+\node() [gstat] at (10,4) {};
+\node() [gstat] at (11,4) {};
+
+\node() [astat] at (9,3) {};
+\node() [astatf] at (10,3) {};
+\node() [astatf] at (11,3) {};
+
+\node() [rstatf] at (9,2) {};
+\node() [rstatf] at (10,2) {};
+\node() [rstatf] at (11,2) {};
+
+\node() [SMU, minimum width=4cm, minimum height=4.5 cm] at (10, 3.25) {};
+\node at (10,5.75) {Stock Management Unit B}; 
+
+\draw [line width = 1 mm] (8,2.5) -- (12,2.5);
+
+\node() [single arrow, shape border rotate=270, draw, minimum height=0.6 cm, minimum width=0.7 cm, single arrow head extend=0.1cm] at (10, 0.65) {}; 
+\node() at (10, 0) {SMU status = above LRP};
+
+
+\end{tikzpicture}
+\caption{Schematic of ‘CU status-based LRP’ applied two example SMUs. ‘Stock Management Unit A’ (left) consists of four component CUs, of which two are Green status, one is Amber status, and one is Red status. ‘Stock Management Unit B’ (right) consists of three component CUs of which two are Green status and one is Amber status.  ‘Stock Management Unit A’ would be assessed as below the LRP while ‘Stock Management Unit B’ would be assessed as above the LRP.} 
+(\#fig:CU-status-based-LRP)
+\end{figure}
 
 
 ### Aggregate Abundance LRPs
