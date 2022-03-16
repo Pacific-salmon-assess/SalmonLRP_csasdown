@@ -217,10 +217,11 @@ A further advantage of this method is that it can easily be extended to other sp
 &nbsp;
 In addition to proportional LRPs, we developed LRPs along a gradient of aggregate SMU-level abundance accounting for component CU-level statuses. These 'aggregate abundance LRPs' may be required for fisheries management decisions at the SMU scale, but are considered supplemental to proportional LRPs for the purposes of the Fish Stocks provisions. We identified two types of aggregate abundance LRPs: (1) logistic regression LRPs and (2) projection LRPs (Fig. \@ref(fig:LRP-types)). Both LRPs rely on the relationship between observed aggregate abundances and statuses of the component CUs, but they differ in that logistic regression LRPs rely on empirical data directly, whereas projection LRPs are derived from projections of CU-level population dynamics usually parameterized from empirical data.  Also, both LRPs are probabilistic in nature, identifying the aggregate abundances associated with an acceptable probability of all CUs achieving status above the Red zone. To an extent uncertainty in the underlying relationship between observed aggregate abundances and component CU-level statuses is represented in the probabilistic nature of these LRPs; larger uncertainties result in higher LRP values and vice versa, all else remaining equal. The ability of aggregate-abundance LRPs to reliably represent thresholds of serious harm at the CU level depend on the strength of the underlying relationship between aggregate abundance and CU statuses as inferred from observed data.
 
+<!-- LW: change colours back to Green4, Orange1, and Red1 when I figure out how to pass option x11names to package xcolor-->
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture} [ font=\sffamily]
-
+ 
 \tikzstyle{gstat} = [circle, minimum width = 0.9 cm, fill=green!90]
 \tikzstyle{gstatf} = [circle, minimum width = 0.9 cm, fill=green!5]
 \tikzstyle{astat} = [circle, minimum width = 0.9 cm, fill=orange!90]
