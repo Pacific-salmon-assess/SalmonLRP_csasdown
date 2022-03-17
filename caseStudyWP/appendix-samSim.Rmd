@@ -13,13 +13,13 @@
 Updated functionality for the LRP version of samSim include:
 
 
-* The option to sample stock recruitment parameter sets directly from an estimated Bayesian joint posterior distribution.
+* The option to sample stock-recruitment parameter sets directly from an estimated Bayesian joint posterior distribution.
 
-* The addition of a stock recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study).
+* The addition of a stock-recruitment function that includes an environmental co-variate, as well as specification of future variability in the environmental co-variate (required for Interior Fraser Coho case study).
 
 * The option to initialize population dynamics for individual CUs at unfished equilibrium when historical recruitment data are not available. While this option would not be appropriate for projections aimed at estimating recovery from a current state, it can be used to estimate projection-based LRPs because we are only interested in the underlying relationship between aggregate abundance and the probability individual CUs will be above their lower benchmark at equilbrium levels.
 
-* The option to include a log-normal bias-correction factor of $-\sigma^2 / 2$ to recruitment projected using one of the two available Ricker stock recruit models. This option was added to accommodate cases in which samSim is parameterized using stock recruitment parameters that have been corrected for log-normal bias to represent expected (mean) parameters. The log-nomral bias correction is commonly applied in stock recruit modelling because the expected value of *e*^$\sigma$ is *e*^$\sigma^2 / 2$ rather than zero when recruitment deviations are normally distributed [@coxCandidateLimitReference2019; @ohlbergerBayesianLifecycleModel2019; @olmosEvidenceSpatialCoherence2019; @forrestAssessmentPacificCod2020]. When input parameters have been corrected for this log-normal bias, the bias correction must also be added to projections (as in Weir et al. (in press))^[Weir, L., et al. Recovery Potential Assessment for 11 Designatable Units of Chinook Salmon, Oncorhynchus tshawytscha, Part 2: Elements 12 to 22. DFO Can. Sci. Advis. Sec. Res. Doc.  In press]. We use a log-normal bias correction factor for all of our case study analyses.
+* The option to include a log-normal bias-correction factor of $-\sigma^2 / 2$ to recruitment projected using one of the two available Ricker stock-recruit models. This option was added to accommodate cases in which samSim is parameterized using stock-recruitment parameters that have been corrected for log-normal bias to represent expected (mean) parameters. The log-nomral bias correction is commonly applied in stock-recruit modelling because the expected value of *e*^$\sigma$ is *e*^$\sigma^2 / 2$ rather than zero when recruitment deviations are normally distributed [@coxCandidateLimitReference2019; @ohlbergerBayesianLifecycleModel2019; @olmosEvidenceSpatialCoherence2019; @forrestAssessmentPacificCod2020]. When input parameters have been corrected for this log-normal bias, the bias correction must also be added to projections (as in Weir et al. (in press))^[Weir, L., et al. Recovery Potential Assessment for 11 Designatable Units of Chinook Salmon, Oncorhynchus tshawytscha, Part 2: Elements 12 to 22. DFO Can. Sci. Advis. Sec. Res. Doc.  In press]. We use a log-normal bias correction factor for all of our case study analyses.
 
 * Specification of variability in exploitation rates as a function of both variability among years and variability among CUs.
 
@@ -116,7 +116,7 @@ $o1$, $o2$ & Shape parameters for Beta distribution used to generate CU-specific
 $\phi_{y,i,n}$ & Standard deviation for CU-specific exploitation rate variability\\
 ${C}_{y,i,n}$ & Catch \\
 ${mC}_{y,i}$ & Mixed-stock Canadian catches \\
-${sC}_{y,i}$ & Wingle-stock Canadian catches\\
+${sC}_{y,i}$ & Single-stock Canadian catches\\
 $ERagg_{y,i}$ & Aggregate exploitation rates\\
 ${obsC}_{y,i,n}$ & Observed nation-specific catches \\
 ${obsmC}_{y,i}$ & Observed mixed-stock Canadian catches\\
@@ -147,7 +147,7 @@ If spawner-recruitment data are available, the number of initialization years 'n
 
 ### Recruitment data are not available
 
-When Recruitment data are not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, typically from MCMC samples. If MCMC samples are provided, a different set of parameters is used for each simulation trial.
+When Recruitment data are not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock-recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, typically from MCMC samples. If MCMC samples are provided, a different set of parameters is used for each simulation trial.
 
 The stock-recruitment parameters can be altered according to the user defined scenarios, e.g., to simulate regime shifts. `samSim` includes options to adjust the productivity parameter, $\alpha_{i}$, the capacity parameter $\beta_{i}$, and the recruitment standard deviations, $\sigma_{i}$. The LRP case studies do not include adjustments or changes in productivity over time, therefore we will not describe the parameter adjustment options in this appendix. Recruitment is assumed to be correlated between the CUs, where the variance-covariance matrix is calculated based on CU-specific recruitment variances and the correlation matrix in recruitment residuals specified in an input files.   
 
@@ -284,12 +284,12 @@ If the "stockRecruit" option is used, the management quantities are $Smsy_{i}$ a
 \end{equation}
 
 
-If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. <!--CH: added this next 2 sentences-->Note, percentile-based benchmarks were not implemented in our case studies for projection-based LRPs. Future applications could vary the percentiles used as lower and upper benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
+If the "percentile" benchmark option is chosen, the upper benchmark is set to the 50^th^ percentile of historical spawners ($S_{1:y,i}$). The lower benchmark is set to the 25^th^ percentile of historical spawners. <!--CH: added this next 2 sentences-->Note, percentile-based benchmarks were not implemented in our case studies for projection-based LRPs. Future applications could vary the percentiles used as lower and upper benchmarks as recommended in @holtEvaluatingBenchmarksBiological2018. If the "habitat" benchmark option is chosen, the benchmarks are computed using the same approach as in the "stockRecruit" option. The difference is in the origin of the stock-recruit parameters, i.e., from the habitat model instead of spawner-recruitment curve.
 
 
 ### Infill missing data
 
-The last step of the model priming is infilling, which is only relevant if stock recruitment data are available and there are gaps in the last 12 years of the time series. Any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period. In the priming phase, we assume that all variables are known without error, therefore all observations are set to the true simulation values, i.e., no observation error is added. 
+The last step of the model priming is infilling, which is only relevant if stock-recruitment data are available and there are gaps in the last 12 years of the time series. Any gaps in the last 12 years of the Spawners and Recruits time series are infilled with a geometric mean of the entire priming period. In the priming phase, we assume that all variables are known without error, therefore all observations are set to the true simulation values, i.e., no observation error is added. 
 
 
 ## MODEL PROJECTIONS
@@ -300,7 +300,7 @@ The model projection phase is used to represent future potential outcomes. The s
 
 ### Specify stock recruitment parameters
 
-Similarly to the priming phase, the first step on the projection loop is to define the stock recruitment parameters. The $\beta_{i}$ and $\sigma_{i}$ parameters are fixed through time and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha_{y,i}$  is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
+Similarly to the priming phase, the first step on the projection loop is to define the stock-recruitment parameters. The $\beta_{i}$ and $\sigma_{i}$ parameters are fixed through time and were already defined in the priming phase. However, if the user specifies productivity changes through time, then the productivity parameter $\alpha_{y,i}$  is adjusted every year following a linear trend. A detailed description of the algorithm used to generate productivity trends is out of the scope of this report as the study cases do not include scenarios with productivity changes. As the productivity parameter is held constant in the study cases, we will continue to use the time-invariant notation ($\alpha_{i}$) for the parameter in the sections to follow. 
 
 ### Project management benchmarks
 
