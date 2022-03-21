@@ -58,8 +58,8 @@ Designation & PNI & Inclusion in WSP assessments \\
 \endhead
 Wild  & na & Yes\\
 Wild-stray influenced  & na & Provisional \\
-Integrated-wild  & $>$= 0.72 & Yes \\
-Integrated-transition  & $>$= 0.5, $<$ 0.72 & Provisional \\
+Integrated-wild  & $\geq$ 0.72 & Yes \\
+Integrated-transition  & $\geq$ 0.5, $<$ 0.72 & Provisional \\
 Integrated-hatchery  & $<$ 0.5 & No \\
 \hline
 (\#tab:PNIcategories)
@@ -331,7 +331,7 @@ Probability & Definition \\
 \hline
 \endhead
 33\%-66\%  &  range covering, 'about as likely as not' that all CUs are above their lower benchmark \\
-= 50\%  &  mid-point of the 33\%-66\% range \\
+50\%  &  mid-point of the 33\%-66\% range \\
 $>$ 50\%  &  more likely than not that all CUs are above their lower benchmark \\
 $>$ 66\%  &  likely that all CUs are above their lower benchmark\\
 $>$ 90\%  &  very likely that all CUs are above their lower benchmark\\
