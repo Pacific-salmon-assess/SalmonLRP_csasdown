@@ -20,7 +20,7 @@ knitr::include_graphics("figure/chinook-map.png")
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
-\caption{Overview of WCVI Chinook Stock Management Unit. Italics represent escapement indicators with average PNI values $\geqslant$ 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain escapement indicator populations with PNI $<$ 0.5 and are not included in these analyses. }
+\caption{Overview of WCVI Chinook Stock Management Unit. Italics represent escapement indicators with average PNI values $<$ 0.5 and are excluded from analyses. The inlets, San Juan and Nitinat do not contain escapement indicator populations with PNI $\geqslant$ 0.5 and are not included in these analyses. }
 \begin{tabular}{p{0.3\textwidth}p{0.2\textwidth}p{0.4\textwidth}}
 \hline
 CU       &  Inlets   &  Indicators \\ 
@@ -123,7 +123,7 @@ dat <- dat %>% dplyr::filter(Stock != "Cypre") %>%
   # filter(Inlet != "San Juan") %>% filter(Inlet !="Nitinat")
   # dplyr::select(c(Stock, WA)) %>% dplyr::mutate(WA = round(WA,0)) %>%
   # dplyr::rename("Watershed Area" = WA)
-csasdown::csas_table(dat, booktabs = T, caption = "Sum of watershed areas for escapement indicator populations within inlets, km\\textsuperscript{2}. Only indicator populations that are not highly enhanced (i.e., PNI >= 0.5) are included.", col_names=c("Inlet", "Watershed Area,  km\\textsuperscript{2}"))
+csasdown::csas_table(dat, booktabs = T, caption = "Sum of watershed areas for escapement indicator populations within inlets, km\\textsuperscript{2}. Only indicator populations that are not highly enhanced (i.e., PNI $\\geqslant$ 0.5) are included.", col_names=c("Inlet", "Watershed Area,  km\\textsuperscript{2}"))
 
  
 ```
@@ -143,7 +143,7 @@ Perrin, C. J., and J. R. Irvine. A review of survey life estimates as they apply
 
 The WCVI indicator stocks are all estimated based on periodic snorkel surveys, except for Somass, which has fishways.  Snorkel surveys are better for counting the mixture of species present in Sept and Oct, compared to stream walks.  Area under the curve is used for most years, with the occasional peak count if timing or survey quality cannot support an AUC.  There have been some mark resight and mark recapture studies, but to keep the time series consistent, we have stuck with the AUC method primarily.
 -->
-```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by escapement indicator population, in units of 1000s. Dark blue time-series are escapement indicator populations where most production is from natural spawning and Proportionate Natural Index (PNI) values are generally >= 0.5; light blue time-series are escapement indicator populations where hatchery production is dominant, where PNI values are generally < 0.5 over available time-series. Provisional average PNI values are provided in the top right corner of each panel, where they are available.",  warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chinook-IndTimeSeries, fig.cap="Time-series of spawner abundances by escapement indicator population, in units of 1000s. Dark blue time-series are escapement indicator populations where most production is from natural spawning and Proportionate Natural Index (PNI) values are generally $\\geqslant$ 0.5; light blue time-series are escapement indicator populations where hatchery production is dominant, where PNI values are generally $<$ 0.5 over available time-series. Provisional average PNI values are provided in the top right corner of each panel, where they are available.",  warning=FALSE, echo=FALSE, fig.align="center"}
 
 knitr::include_graphics("figure/chinook-IndicatorTimeSeries.png")
 # from Watershed-Area model repository
@@ -194,7 +194,7 @@ where, <!-- comma seems unnecessary here?-->
    (\#eq:SMSY)
 \end{equation}
 
-and $a$ is recruits-per-spawner at low productivity and *W* represents a Lambert function [@scheuerellExplicitSolutionCalculating2016]. Maximum likelihood estimates of S~REP~ values (and 95% CIs) were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006, that included hierarchical structure in the underlying meta-analysis accounting for similarities in productivity among ocean-type and stream-type fish [@liermannUsingAccessibleWatershed2010] (Table \@ref(tab:chinook-benchmarks). 
+and $a$ is recruits-per-spawner at low productivity and *W* represents a Lambert function [@scheuerellExplicitSolutionCalculating2016]. Maximum likelihood estimates of S~REP~ values (and 95% CIs) were derived from the watershed-area model adapted from @parkenHabitatbasedMethodsEstimate2006, that included hierarchical structure in the underlying meta-analysis accounting for similarities in productivity among ocean-type and stream-type fish [@liermannUsingAccessibleWatershed2010, Table \@ref(tab:chinook-benchmarks)]. 
 
 Ricker $a$ values were approximated from a life-stage model that partitioned survival across freshwater and marine life-stages for ocean-type Chinook based on empirical data and expert opinion (W. Luedke pers. comm. DFO South Coast Stock Assessment). Life-stage specific survival rates were then combined to derive an overall survival from spawners to recruitment . Despite the relatively large uncertainties in the life-stage specific survival rates, this approach provides an approximation for productivity that is more realistic than the high estimate previously derived from the watershed-area model and reported for many other ocean-type Chinook populations  [$>$ 7 recruits/spawner, @parkenHabitatbasedMethodsEstimate2006].  From the life-stage model, mean $a$ values were estimated at ~2.7 recruits-per-spawner, with standard errors ranging from 1.6 to 4.5). <!--CH note to remind myself: "We assumed these parameter distribution represented expected productivity, and so log-normal bias corrections were not applied."  -->
 
