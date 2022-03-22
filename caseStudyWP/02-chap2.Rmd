@@ -15,32 +15,33 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \setlength\heavyrulewidth{0.25ex}
 \centering
 \footnotesize   
-\caption{Overview of CU assessment methods applied for each case study (a) and approaches used to estimate LRPs (b) }
+\caption{Overview of CU assessment methods and SMU assessment methods applied for each case study. Cells marked with ‘-‘ at the CU-Level Assessment level indicate that a method was not applied to CUs in that case study.}
 \begin{tabular}{p{3.2cm} p{3.2cm} p{2.4cm} p{2.4cm} p{2.4cm}}
-\multicolumn{5}{l}{(a) CU-level assessments }\\
 \toprule
-\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
-\toprule
-\multicolumn{2}{l}{\parbox{5.8cm}{Multidimensional approach used in the Salmon Scanner}}& Yes (only for CU status-based LRPs) &   Yes (only for CU status-based LRPs)  &  Yes (only for CU status-based LRPs)\\
+\multicolumn{2}{l}{} & \bf{Interior Fraser Coho} & \bf{WCVI Chinook} & \bf{ISC Chum} \\
 \midrule
-\multirow{3}{*}{\parbox{3.2cm}{Single metric approaches: spawner abundances relative to benchmark}} & Spawner-recruitment benchmark & Yes & - & Attempted, estimates unreliable\\
+\multicolumn{5}{l}{ \bf{CU-level Assessment} }\\
+\toprule
+
+\multicolumn{2}{l}{\parbox{5.8cm}{Composite Metric (Salmon Scanner) }}& \cellcolor{gray!10}Yes (only for CU status-based LRPs) &   \cellcolor{gray!10}Yes (only for CU status-based LRPs)  &  \cellcolor{gray!10}Yes (only for CU status-based LRPs)\\
+\midrule
+\multirow{3}{*}{\parbox{3.2cm}{Single Metric: Abundance relative to lower benchmark}} & Spawner-recruitment benchmark & \cellcolor{gray!10}Yes & - & \textit{Attempted, estimates unreliable}\\
 \cline{2-5}
-& Habitat-based benchmark & - & Yes & -\\
+& Habitat-based benchmark & - & \cellcolor{gray!10}Yes & -\\
 \cline{2-5}
-& Percentile benchmark & - & - & Yes\\
+& Percentile benchmark & - & - & \cellcolor{gray!10}Yes\\
 \cline{1-5}
-\multicolumn{2}{l}{Single metric approaches: distribution} & Yes & - & - \\
+\multicolumn{2}{l}{Single Metric: Distributional} & \cellcolor{gray!10}Yes & - & - \\
 \bottomrule
 \multicolumn{5}{l}{ }\\
-\multicolumn{5}{l}{(b) LRPs }\\
+\multicolumn{5}{l}{ \bf{SMU Assessment} }\\
 \toprule
-\multicolumn{2}{l}{} & Interior Fraser River Coho & WCVI Chinook & Inside South Coast Chum \\
-\toprule
-\multicolumn{2}{l}{CU status-based LRP} &  Yes &   Yes &   Yes\\
+
+\multicolumn{2}{l}{CU status-based LRP (Required for \textit{Fisheries Act})} &  \cellcolor{gray!10}Yes &   \cellcolor{gray!10}Yes &   \cellcolor{gray!10}Yes\\
 \midrule
-\multirow{2}{*}{\parbox{3.2cm}{Aggregate abundance LRPs}} & Logistic regression LRP & Yes & Attempted, data insufficient &  Attempted, estimates unreliable \\ 
+\multirow{2}{*}{\parbox{3.2cm}{Aggregate Abundance LRP (Supplemental)}} & Logistic Regression & \cellcolor{gray!10}Yes & \textit{Attempted, data-deficient} &  \textit{Attempted, unreliable} \\ 
 \cline{2-5}
- & Projection LRP & Yes  & Yes &  - \\
+ & Projection & \cellcolor{gray!10}Yes  & \cellcolor{gray!10}Yes &  \textit{Not attempted, deemed unreliable} \\
 \bottomrule
 \end{tabular}
 (\#tab:lrpapproaches)
