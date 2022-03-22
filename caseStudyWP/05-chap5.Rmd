@@ -177,7 +177,7 @@ For Scenarios 1, 3, 5 and 6 in Table \@ref(tab:LRP-scenarios), we used status ba
 
 Using the CU status based on the multidimensional approach within the Salmon Scanner, two out of five CUs with data in the most recent year of data (2018) would be above their lower benchmark (Amber or Green zone) and three would be below (Red zone; Figure \@ref(fig:chum-CU-status-tree)). Over the time series, status for Howe Sound-Burrard Inlet and Georgia Strait has improved, while status in other CUs has declined or switched from Green to Red several times.
 
-```{r chum-CU-status-tree, fig.cap="Status of CUs based on multi-dimensional status assessment (decision tree). Years with CU-level infilling were not included.", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r chum-CU-status-tree, fig.cap="Status of CUs based on multi-dimensional Salmon Scanner. Years with CU-level infilling were not included. The top row shows the overall SMU status based on the CU status-based LRP of all CUs being above Red status.", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 ```
 
