@@ -120,6 +120,7 @@ options(# Prevent xtable from adding a timestamp comment to the table code it pr
         scipen = 999)
 ```
 
+
 ```{r load-libraries, cache=FALSE}
 meta <- rmarkdown::metadata$output
 if (is.null(meta)) {
@@ -145,7 +146,6 @@ if (getOption("french")) {
   csl <- "csl/csas-french.csl"
   options(OutDec = ",")
 }
-
 # This hook simplifies document translation for the author.
 # When building in French, it draws a box around paragraphs contained in chunks
 #  which have the option `needs_trans = TRUE`. It also labels
