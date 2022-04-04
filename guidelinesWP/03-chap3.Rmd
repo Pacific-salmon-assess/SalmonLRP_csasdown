@@ -116,22 +116,25 @@ CH: the challenge is I had original text saying the Salmon Scanner did not incor
 \centering
 \footnotesize   
 \caption{Metrics currently used in the Pacific Salmon Status Scanner}
-\begin{tabular}{p{3.2cm} p{3.2cm} p{6.2cm} p{5.2cm}}
-\multicolumn{2}{l}{}\\
+\begin{tabular}{p{4.2cm} p{4.2cm} p{4.2cm} p{4.2cm} p{4.2cm} p{3.2cm} }
+\multicolumn{3}{l}{}\\
 \toprule
-\multicolumn{2}{l}{Category} & Metrics \\
+\multicolumn{3}{l}{Category} & Metrics & Example benchmarks (citations demsonstrating levels above serious harm)\\
 \midrule
-\multicolumn{2}{l}{Metrics on abundances} & Absolute spawner abundances relative to absolute abundance benchmark (e.g., 1500 spawners) \\
+\multicolumn{3}{l}{Metrics on abundances} & Absolute spawner abundances relative to absolute abundance benchmark & 1000 spawners (1,2) \\
 
-\multicolumn{2}{l}{} & Absolute or index of spawner abundances relative to estimated benchmarks (e.g., stock-recruitment based benchmarks) \\
+\multicolumn{3}{l}{} & Absolute or index of spawner abundances relative to estimated benchmarks & Sgen (3) or 25th percentile of observed spawner abundances (4)\\
 \midrule
-\multicolumn{2}{l}{Metrics on trends in spawner abundances} & Percent change in spawner abundances over the most recent 3 generations \\
-\multicolumn{2}{l}{} & Ratio of the current generational geometric mean to the geometric mean over the time-series\\
+\multicolumn{3}{l}{Metrics on trends} & Percent change in spawner abundances over the most recent 3 generations & 25 percent decline (1,5)\\
+\multicolumn{3}{l}{} & Ratio of the current generational geometric mean to the geometric mean over the time-series & 0.5 (5,6,7) \\
 
 \bottomrule
 \end{tabular}
 (\#tab:SSmetrics)
 \end{table}
+
+\scriptsize (1) [@cosewicCOSEWICWildlifeSpecies2021; @maceQuantificationExtinctionRisk2008]; (2) [@dfoNationalConservationStrategy2005]; (3) [@holtEvaluationBenchmarksConservation2009]; (4) [@holtEvaluatingBenchmarksBiological2018]; (5) [@holtIndicatorsStatusBenchmarks2009] (6) [@grantIntegratedBiologicalStatus2013]; (7) [@porsztReliabilityIndicatorsDecline2012]
+
 
 
 Various benchmarks on spawner abundances have been identified to account for differences in data types, quantities and qualities among CUs. For data-rich CUs where spawner-recruitment relationships can be reliably estimated, @holtEvaluationBenchmarksConservation2009 recommend a lower benchmark at the abundance resulting in recovery to spawner abundances at maximum sustained yield, S~MSY~, in one salmon generation under equilibrium conditions, S~gen~. When applying stock-recruitment analyses, the spatial scale of density dependence should be carefully considered, which may be smaller or larger than the CU. Where recruitment time-series are not available and productivity is assumed to be moderate or high, and harvest rates moderate or low, specified percentiles of observed spawner time-series (e.g., 25^th^) can be used as a proxy for spawner-recruitment benchmarks [@holtEvaluatingBenchmarksBiological2018]. For Chinook and Coho Salmon where production is often limited by the quantity of freshwater habitat, equilibrium spawner abundances can be predicted from habitat characteristics to inform abundance-based benchmarks [@nobleHabitatbasedEscapementBenchmarks2015; @parkenHabitatbasedMethodsEstimate2006]. For example, @parkenHabitatbasedMethodsEstimate2006 use the relationship between watershed area and spawner-recruitment based reference points in a meta-analysis of Chinook Salmon populations<!--LW: changed from stocks. Paper uses the word stock but I think they are different than SMUs or CUs (pre-CU and SMU definitions)--> from across the Pacific region to predict reference points for Chinook populations<!--LW: changed from stocks--> without recruitment data.
