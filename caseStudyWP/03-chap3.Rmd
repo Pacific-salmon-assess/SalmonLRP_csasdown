@@ -218,9 +218,8 @@ knitr::include_graphics("figure/coho-compare-SRFits-IM.png")
 
 
 
-## LRP ESTIMATION: PROPORTION OF CUS
+## LRP ESTIMATION: CU STATUS BASED
 
-*\textcolor{cyan}{LW: what should this heading be now? LRP ESTIMATION: CU STATUS-BASED?}*
 
 ### Methods
 
