@@ -54,7 +54,7 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \draw[arrow] (8) -- node[anchor=east] {Assumptions met} (9);
 \draw[arrow] (8) -| node[anchor=west] {Assumptions not met} (9n);
 \end{tikzpicture}
-\caption{Steps for setting LRPs and assessing status. Coloured boxes indicated those used in LRP estimation. Grey boxes indicate those used in the implementation of LRPs for status assessments. White boxes indicate when specified LRP methods are not recommended.} 
+\caption{Steps for setting LRPs and assessing status. Pale yellow boxes indicate those for estimating CU status-based LRPs. Blue boxes indicate those for aggregate abundance LRPs. White boxes indicate when aggregate abundance LRP methods are not recommended.} 
 (\#fig:flowchart)
 \end{figure}
 
