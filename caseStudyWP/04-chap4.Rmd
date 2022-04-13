@@ -246,9 +246,7 @@ knitr::include_graphics("figure/chinook-inlet-timeseries.png")
 
 CU status was derived from the proportion of component inlets above their lower benchmarks. Serious harm is expected to occur at levels where any one inlet within each of the three CUs dropped below its lower benchmark. Here we have assumed that the status of the one escapement indicator population in the West Vancouver Island-North CU (Marble River, in Quatsino Sound) is not significantly enhanced and is representative of the CU. However, further review of these assumptions by local experts is warranted.
 
-## LRP ESTIMATION: PROPORTION OF CUS
-
-*\textcolor{cyan}{LW: what should this heading be now? LRP ESTIMATION: CU STATUS-BASED?}*
+## LRP ESTIMATION: CU STATUS BASED
 
 
 ### Methods
@@ -654,7 +652,7 @@ We recommend a few areas for further research relevant to this SMU:
 
 - The projection LRPs illustrated here should further be evaluated for sensitivity to key structural assumptions, such as the stock-recruitment model, and the presence and magnitude of depensation, among other assumptions. This evaluation is especially important for this SMU because of the lack of peer-reviewed  stock-recruitment models. We based our assumption of a Ricker form of the stock-recruitment relationship from its application to other Chinook populations in BC [@parkenHabitatbasedMethodsEstimate2006], but this form may not represent the high observed variability and declining productivity that are now common for Chinook salmon. 
 
-- In the development of CU status-based and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  
+- In the development of CU status-based and projection LRPs, inlets were chosen as the spatial scale of biodiversity required for the sustainability for the SMU. In future analyses, alternative assumptions could be considered, including LRPs derived to maintain diversity at the CU scale by projecting CU-level abundances.  In addition, we recommend research on the development and evaluation of metrics and benchmarks of distribution of spawning within CUs, and guidelines on how to incorporate these into CU-level assessments under the WSP.
 
 - Future iterations of the multidimensional status assessments used within the Pacific Salmon Status Scanner could include information on the distribution of spawners across inlets within CUs to incorporate this finer scale of biodiversity. 
 
