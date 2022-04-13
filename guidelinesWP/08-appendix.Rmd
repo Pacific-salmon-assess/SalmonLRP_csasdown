@@ -8,7 +8,7 @@
 - For watershed-area model, link to Carrie's repository (currently private due to data concerns)
 -	For multi-dimensional CU-status, link to Rapid Multidimensional Scanner Tool 
 -->
-- For implementation of CU status-based and aggregate abundance LRPs to three case studies, see the Github repository on [case studies] (https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
+- For implementation of CU status-based and aggregate abundance LRPs to three case studies, see the Github repository on [case studies](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
 - For estimation of correlations among CUs within SMUs, see the Github repository on [CU correlations](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
 - For write-up of this working paper, see the Github repository on [csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
 
