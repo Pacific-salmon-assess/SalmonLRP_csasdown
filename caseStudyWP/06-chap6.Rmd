@@ -14,6 +14,23 @@ CU status-based LRPs based on the Salmon scanner could be applied in all three c
 \
 &nbsp;
 
+
+
+
+<!--
+** Lesson xx: The development of metrics and benchmarks on the distribution of spawning within a CU is a high priority to support WSP status assessments, which in turn will support the development of CU status-based LRPs at the SMU-level.
+
+
+Both the Interior Fraser Coho and WCVI Chinook case studies applied LRP estimation methods that considered the distribution of spawning abundance among smaller sub-units within within CUs; however, different approaches were used in each case. For Interior Fraser Coho, we relied on previously established distributional targets that recognized the biological importance of maintaining spawning abundance within 11 identified sub-populations nested within the 5 CUs. For WCVI Chinook, expert opinion brought into the development of the case study identified inlets as an important spatial scale of diversity for the SMU (D. McHugh pers. comm. DFO South Coast Stock Assessment). As a result, LRPs were developed to preserve inlet-scale diversity for this case study instead of CU-scale diversity.  
+
+
+Future research is needed to develop and evaluate distributional metrics and associated benchmarks that delineate WSP status zones.  The establishment of distributional benchmarks would allow the distribution of spawning abundance within a CU to be directly incorporated into multidimensional WSP status assessments, which in turn would enable a standardized approach to considering finer-scale spawning distribution when identifying LRPs at the SMU-level.
+
+
+-->
+
+
+
 **Lesson 2: Annual status estimates from aggregate abundance LRPs and CU status-based LRPs will differ from each other in some cases.**
 
 While annual status estimates from aggregate abundance methods were generally consistent with estimates from CU status-based methods using the recommended Salmon Scanner tool, they did not always match. For the Interior Fraser Coho case study, status tended to drop below CU status-based LRPs when abundance of individual CUs was low, and drop below aggregate abundance LRPs when aggregate abundances were low.  While these conditions corresponded in most years, they did not always. For our case study on Interior Fraser River Coho, we found that the proportion of years with matching status estimates for CU status-based and aggregate abundance LRPs ranged from 72-86%, depending on the method used to estimate CU status.
@@ -42,6 +59,8 @@ First, logistic regression LRPs are limited to conditions that have been histori
 
 
 Second, model diagnostics do not support logistic regressions and their associated LRPs when CU-level abundances are not correlated or only weakly correlated.  Here, we found that logistic regression LRPs could be estimated for Interior Fraser Coho (average correlation in spawner abundances among CUs of 0.56), but not for Inside South Coast Chum (average correlation among CUs of 0.12). Also, the wide range in productivities and capacities among CUs for the Inside South Coast Chum case study contributed to the weak relationship between aggregate abundances and CU-level statuses. In general, model diagnostics as described in Section \@ref(MethodsChapter) can be used to support or reject logistic regression LRPs. We illustrate how these diagnostics are used to evaluate model fit in Sections \@ref(IFCChapter) and \@ref(ISCchumChapter).    
+
+Finally, preliminary analyses of logistic regression LRPs for Fraser River Sockeye Salmon (not presented in this paper) showed that the method was not easily applied to cyclic stocks.  
 
 \
 &nbsp;
