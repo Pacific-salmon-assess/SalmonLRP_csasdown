@@ -148,12 +148,12 @@ The single-metric approach to assessing CU status based on percentiles has speci
 \hline    
 Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ North East Vancouver Island} &  \rotatebox{90}{ Upper Knight} &  \rotatebox{90}{ Loughborough} &  \rotatebox{90}{ Bute Inlet} & \rotatebox{90}{ Georgia Strait} & \rotatebox{90}{ Howe Sound-Burrard Inlet}\\ 
 \hline
-1. Prop: Scanner: 4CUs full       & - & Y & -  & Y & -  & Y & Y \\
-2. Prop: Percentile: 4CUs full    & - & Y & -  & Y & -  & Y & Y \\
-3. Prop: Scanner: 5CUs partial    & - & Y & YP & Y & -  & Y & Y \\
-4. Prop: Percentile: 5CUs partial & - & Y & YP & Y & -  & Y & Y \\
-5. Prop: Scanner: 5CUs full       & Y & Y & -  & Y & -  & Y & Y \\
-6. Prop: Scanner: 7CUs partial    & Y & Y & YP & Y & YP & Y & Y \\
+1. CUbased: Scanner: 4CUs full       & - & Y & -  & Y & -  & Y & Y \\
+2. CUbased: Percentile: 4CUs full    & - & Y & -  & Y & -  & Y & Y \\
+3. CUbased: Scanner: 5CUs partial    & - & Y & YP & Y & -  & Y & Y \\
+4. CUbased: Percentile: 5CUs partial & - & Y & YP & Y & -  & Y & Y \\
+5. CUbased: Scanner: 5CUs full       & Y & Y & -  & Y & -  & Y & Y \\
+6. CUbased: Scanner: 7CUs partial    & Y & Y & YP & Y & YP & Y & Y \\
 \hline
 \end{tabular}
 (\#tab:LRP-scenarios)
@@ -162,7 +162,7 @@ Scenario Name &   \rotatebox{90}{Southern Coastal Streams} &   \rotatebox{90}{ N
 \afterpage{\clearpage}
 
 
-When describing ISC Chum LRP scenarios in Table \@ref(tab:LRP-scenarios) and throughout this case study, we use the following labeling convention: *Metric : CU Status Method : Data Scenario*. 'Metric' refers to the choice to base all ISC Chum LRPs on the proportion of CUs above Red CU status (Prop). The 'CU Status Method' can be based on the multidimensional algorithm within the Salmon Scanner (Scanner) or on a single percentile benchmark used to characterize CU status (Percentile).  Finally, 'Data Scenario' labels indicate both the number of CUs represented (4, 5, or 7) and the completeness of the time series (Full or Partial). 'Full' scenarios only included CUs with complete time series (no CUs with missing years). 'Partial' scenarios included CUs with incomplete time series (years that did not have observations in those CUs were omitted). When using percentile benchmarks in these scenarios, we used percentiles based on @holtEvaluatingBenchmarksBiological2018. The benchmarks were estimated using the entire time series. 
+When describing ISC Chum LRP scenarios in Table \@ref(tab:LRP-scenarios) and throughout this case study, we use the following labeling convention: *Metric : CU Status Method : Data Scenario*. 'Metric' refers to the choice to base all ISC Chum LRPs on the proportion of CUs above Red CU status (CUbased). The 'CU Status Method' can be based on the multidimensional algorithm within the Salmon Scanner (Scanner) or on a single percentile benchmark used to characterize CU status (Percentile).  Finally, 'Data Scenario' labels indicate both the number of CUs represented (4, 5, or 7) and the completeness of the time series (Full or Partial). 'Full' scenarios only included CUs with complete time series (no CUs with missing years). 'Partial' scenarios included CUs with incomplete time series (years that did not have observations in those CUs were omitted). When using percentile benchmarks in these scenarios, we used percentiles based on @holtEvaluatingBenchmarksBiological2018. The benchmarks were estimated using the entire time series. 
 
 
 For Scenarios 2 and 4 in Table \@ref(tab:LRP-scenarios), we used CU status based on percentile benchmarks that are determined by productivity and historical exploitation, as outlined in @holtEvaluatingBenchmarksBiological2018. This method used annual escapement values to calculate benchmarks and the generational mean of escapement (geometric mean over 4 years) to assess status in each year. Scenario 2 includes the four CUs that had complete time series (observations in each year, no CU-level infilling) and that also had appropriate percentile benchmarks (Table \@ref(tab:LRP-scenarios)). For example, Upper Knight was excluded because it did not have a complete time series, Southern Coastal Streams was excluded because it does not have an appropriate percentile benchmark, and Bute Inlet was excluded for both of these reasons. We then relaxed this requirement for all CUs to have data in all years and included all CUs that meet the constraints of @holtEvaluatingBenchmarksBiological2018 even if they had missing data for some years (Scenario 4). This scenario included Upper Knight in some years, which meant that it had five CUs in some years and four in others. Thus, the power to detect Red status varied among years in Scenario 4, using more of the available data than Scenario 2.  
