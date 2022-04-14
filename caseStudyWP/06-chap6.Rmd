@@ -14,31 +14,23 @@ CU status-based LRPs based on the Salmon scanner could be applied in all three c
 \
 &nbsp;
 
+**Lesson 2: The development of metrics and benchmarks on the distribution of spawning within a CU is a high priority to support WSP status assessments, which in turn will support the development of CU status-based LRPs at the SMU-level.**
 
-
-
-<!--
-** Lesson xx: The development of metrics and benchmarks on the distribution of spawning within a CU is a high priority to support WSP status assessments, which in turn will support the development of CU status-based LRPs at the SMU-level.
-
-
-Both the Interior Fraser Coho and WCVI Chinook case studies applied LRP estimation methods that considered the distribution of spawning abundance among smaller sub-units within within CUs; however, different approaches were used in each case. For Interior Fraser Coho, we relied on previously established distributional targets that recognized the biological importance of maintaining spawning abundance within 11 identified sub-populations nested within the 5 CUs. For WCVI Chinook, expert opinion brought into the development of the case study identified inlets as an important spatial scale of diversity for the SMU (D. McHugh pers. comm. DFO South Coast Stock Assessment). As a result, LRPs were developed to preserve inlet-scale diversity for this case study instead of CU-scale diversity.  
-
+Both the Interior Fraser Coho and WCVI Chinook case studies applied LRP estimation methods that considered the distribution of spawning abundance among smaller sub-units within CUs; however, different approaches were used in each case. For Interior Fraser Coho, we relied on previously established distributional targets that recognized the biological importance of maintaining spawning abundance within 11 identified sub-populations nested within the 5 CUs. For WCVI Chinook, expert opinion brought into the development of the case study identified inlets as an important spatial scale of diversity for the SMU (D. McHugh pers. comm. DFO South Coast Stock Assessment). As a result, LRPs were developed to preserve inlet-scale diversity for this case study instead of CU-scale diversity.  
 
 Future research is needed to develop and evaluate distributional metrics and associated benchmarks that delineate WSP status zones.  The establishment of distributional benchmarks would allow the distribution of spawning abundance within a CU to be directly incorporated into multidimensional WSP status assessments, which in turn would enable a standardized approach to considering finer-scale spawning distribution when identifying LRPs at the SMU-level.
 
+\
+&nbsp;
 
--->
-
-
-
-**Lesson 2: Annual status estimates from aggregate abundance LRPs and CU status-based LRPs will differ from each other in some cases.**
+**Lesson 3: Annual status estimates from aggregate abundance LRPs and CU status-based LRPs will differ from each other in some cases.**
 
 While annual status estimates from aggregate abundance methods were generally consistent with estimates from CU status-based methods using the recommended Salmon Scanner tool, they did not always match. For the Interior Fraser Coho case study, status tended to drop below CU status-based LRPs when abundance of individual CUs was low, and drop below aggregate abundance LRPs when aggregate abundances were low.  While these conditions corresponded in most years, they did not always. For our case study on Interior Fraser River Coho, we found that the proportion of years with matching status estimates for CU status-based and aggregate abundance LRPs ranged from 72-86%, depending on the method used to estimate CU status.
 
 \
 &nbsp;
 
-**Lesson 3:  Data from all component CUs should be used whenever possible. When data are missing from one or more CUs, careful consideration should be given to the question of whether status can be inferred from other CUs within the SMU.  While there may be cases where inference is possible, uncertainty in resulting status estimates will increase, and this uncertainty should be clearly communicated in status assessments.**
+**Lesson 4:  Data from all component CUs should be used whenever possible. When data are missing from one or more CUs, careful consideration should be given to the question of whether status can be inferred from other CUs within the SMU.  While there may be cases where inference is possible, uncertainty in resulting status estimates will increase, and this uncertainty should be clearly communicated in status assessments.**
 
 In the case of ISC Chum, using data from all seven CUs when available (even if only a subset of years) resulted in status dropping below the LRP more frequently than when only a subset of CUs was used in all years. This result occurs because, for CU status-based LRPs, there is an asymmetry in how missing CUs may affect SMU status relative to the LRP. Adding additional CUs may decrease status from above to below the LRP if the additional CU is Red and all other CUs are Amber or Green. However, adding an additional CU will never increase status from below to above an LRP because if a Red CU already exists; the 100% threshold for all CUs to be above Red cannot be met in this case. Given that ISC Chum CUs have low correlations in among-CU spawner abundances over time, and experience different environmental drivers in their freshwater habitats, inferring status of missing CUs from other CUs with data is not recommended. Therefore, status estimates that only include a portion of CUs are potentially biased.  
 
@@ -47,7 +39,7 @@ In the case of Interior Fraser Coho, results from missing data scenarios for the
 \
 &nbsp;
 
-**Lesson 4: Logistic regression LRPs have several limitations and should only be used when (i) aggregate abundance LRPs are required and (ii) all assumptions of the logistic regression model can be met.**
+**Lesson 5: Logistic regression LRPs have several limitations and should only be used when (i) aggregate abundance LRPs are required and (ii) all assumptions of the logistic regression model can be met.**
 
 Logistic regression LRPs are empirically derived from past observations of SMU abundance and CU statuses. By fitting a logistic regression to historical data, we identified historical abundance levels associated with probabilities that all component CUs have statuses above their lower benchmarks. Similar to the CU status-based LRP, this aggregate abundance method depends on the outcomes of individual CU assessments, which are sensitive to structural assumptions underlying the CU-level benchmarks and data availability.
 
@@ -65,7 +57,7 @@ Finally, preliminary analyses of logistic regression LRPs for Fraser River Socke
 \
 &nbsp;
 
-**Lesson 5: Stochastic projections can be used to estimate aggregate abundance LRPs under various assumptions about population dynamics and covariance in dynamics among CUs. This approach allows uncertainties in our understanding of population dynamics to be represented in a more comprehensive way than other LRP methods.**
+**Lesson 6: Stochastic projections can be used to estimate aggregate abundance LRPs under various assumptions about population dynamics and covariance in dynamics among CUs. This approach allows uncertainties in our understanding of population dynamics to be represented in a more comprehensive way than other LRP methods.**
 
 Projection LRPs rely on closed-loop simulation models to quantify the emergent relationship between aggregate SMU abundances and the probabilities that all CUs are above their lower benchmarks, given a predefined level of exploitation. The most important requirements for this approach are CU-specific estimates of stock-recruitment parameters (productivity and capacity) and covariance in recruitment among CUs. Parameter estimates for productivity and capacity can be based on posterior distributions from stock-recruitment analyses (see Interior Fraser Coho case study, Section \@ref(IFCChapter)) or more qualitatively from expert input, life-stage models, or watershed-area model estimates (see WCVI Chinook case study, Section \@ref(WCVIchinookChapter)). 
 
@@ -81,7 +73,7 @@ Future implementations of projection LRPs could also consider temporal shifts in
 \
 &nbsp;
 
-**Lesson 6: Projection LRPs are highly sensitive to exploitation rates**
+**Lesson 7: Projection LRPs are highly sensitive to exploitation rates**
 
 Sensitivity analyses showed that projection LRPs are sensitive to the assumed levels of exploitation in the projections. Higher exploitation rates resulted in higher required SMU aggregate abundance to ensure that all CUs remain above their lower benchmarks. The sensitivity to exploitation rate increases as variability in stock-recruitment parameters among CUs increase and as uncertainty in parameter estimates increase. This property of projection LRPs is explored in Appendix \@ref(app:ERsensitivity-appendix). Therefore projection LRPs developed under historical and current exploitation rates cannot necessarily be used as a basis for evaluating alternative management procedures. However demonstrating the changes in aggregate abundances required for all CUs to be above lower benchmarks (i.e. changes in projection LRP) under different exploitation scenarios may help analysts and managers understand the implications of changing exploitation rates on the ability to achieve WSP objectives.
 
