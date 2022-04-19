@@ -71,7 +71,7 @@ Pacific salmon are unique among marine fish species due to their high levels of 
 Canada's Wild Salmon Policy, WSP, represents DFO's implementation of the Precautionary Approach Framework for Pacific salmon. The goal of the WSP is to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity [@dfoCanadaPolicyConservation2005]. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), where a CU is defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). 
 
 
-Genetic and phenotypic diversity among CUs is important because it allows for diversity in responses to threats and environmental drivers, contributing to the sustainability of the species and the ecosystem services they provide [@pricePortfolioSimplificationArising2021].  Portfolio effects have been shown to dampen interannual variance in aggregate-level abundances due to independent dynamics among component populations or CUs [@schindlerPopulationDiversityPortfolio2010]. Population and life-history diversity may buffer species from environmental variability and contribute to long-term stability through differing responses to environmental changes. However, deterioration of portfolio effects have been observed for Pacific salmon in Canada due to synchronous declining trends in abundances related to changes in climate and marine and freshwater habitats, as well as fishing practices that have historically overfished weak populations [@pricePortfolioSimplificationArising2021].
+Genetic and phenotypic diversity among CUs is important because it allows for diversity in responses to threats and environmental drivers, contributing to the sustainability of the species and the ecosystem services they provide [@pricePortfolioSimplificationArising2021a].  Portfolio effects have been shown to dampen interannual variance in aggregate-level abundances due to independent dynamics among component populations or CUs [@schindlerPopulationDiversityPortfolio2010a]. Population and life-history diversity may buffer species from environmental variability and contribute to long-term stability through differing responses to environmental changes. However, deterioration of portfolio effects have been observed for Pacific salmon in Canada due to synchronous declining trends in abundances related to changes in climate and marine and freshwater habitats, as well as fishing practices that have historically overfished weak populations [@pricePortfolioSimplificationArising2021a].
 
 Under the WSP, the status of individual CUs is inferred by comparing status indicators to biological benchmarks delineating three zones: Green, Amber, and Red. These zones represent increasing conservation concern from Green to Red requiring increasing management intervention. The lower benchmark, delineating the Red and Amber zones, is intended to be at the level to "ensure there is a substantial buffer between it and any level of abundance that could lead to a CU being considered at risk of extinction by COSEWIC", where COSEWIC is the Committee on the Status of Endangered Wildlife in Canada [@holtIndicatorsStatusBenchmarks2009; @dfoCanadaPolicyConservation2005]. In practice, CUs in the WSP Red zone tend to align with Endangered or Threatened COSEWIC statuses, and Green with Not at Risk COSEWIC categories.<!--CH: added this for Sue. However, I don't think we can comment on the presence or size of buffer  
 
@@ -132,11 +132,11 @@ We highlight previous recommendations to develop Integrated Management Processes
 
 ### Goals
 
-The goals of this and the companion working paper, Holt et al. (In review)^[Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review] as outlined in the Terms of Reference, were to:
+The goals of this and the companion working paper, @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)^[Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review]--> as outlined in the Terms of Reference, were to:
 
 - Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the WSP objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (Section \@ref(est-methods))
 
-- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (Section \@ref(est-methods) and Appendix \@ref(app:links)). More details are provided in Holt et al. (In review).
+- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (Section \@ref(est-methods) and Appendix \@ref(app:links)). More details are provided in @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->.
 
 - Document key uncertainties that affect LRP estimates for each method considered, including uncertainties arising from missing or limited CU-level data. (Section \@ref(recommendations))
 
@@ -144,7 +144,7 @@ The goals of this and the companion working paper, Holt et al. (In review)^[Holt
 
 ### What's in this paper?
 
-This working paper addresses these four goals, while the companion Working Paper (Holt et al. In review) provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies. Summaries of methods are included here for the completeness of these guidelines.
+This working paper addresses these four goals, while the companion Working Paper [@holtCaseStudyApplicationsInpress]<!--(Holt et al. In review)--> provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies. Summaries of methods are included here for the completeness of these guidelines.
 
 
 In particular, this paper has six sections: 
@@ -155,7 +155,7 @@ In particular, this paper has six sections:
 
 3. Principles for the development of LRPs for Pacific salmon
 
-4. A description of candidate LRP methods, with further details in Holt et al. (In review). Appendix \@ref(app:case-studies) summarizes their application to three case studies.
+4. A description of candidate LRP methods, with further details in @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->. Appendix \@ref(app:case-studies) summarizes their application to three case studies.
 
 5. Guidelines on the implementation of LRPs including recommendations on when, and when not to use each candidate LRP method
 
