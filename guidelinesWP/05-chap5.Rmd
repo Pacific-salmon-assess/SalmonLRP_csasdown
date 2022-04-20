@@ -40,7 +40,7 @@ We recommend a step-wise approach for identifying LRPs, with the proportion of c
 \node(6) [box, fill=yellow!10, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
 \node(7) [box, below of=6, fill=blue!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
 \node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
-\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely soley on CU status-based LRP (step 5)};
+\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely solely on CU status-based LRP (step 5)};
 \node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from CU status-based LRPs  (step 5)};
 \node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Aggregate abundance LRPs cannot be estimated};
 \draw[arrow] (1) -- (2);
