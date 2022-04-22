@@ -127,13 +127,13 @@ We highlight previous recommendations to develop Integrated Management Processes
 \item \textbf{Section 5.} Guidelines on the implementation of LRPs including recommendations on when, and when not to use candidate LRP methods
 \item \textbf{Section 6.} Recommendations on future research
 \end{itemize}
-\item This paper is scoped to focus on the estimation of LRPs with corresponding guidelines, and does not include a full quantitative evaluation of those LRPs. That step is included as important area of future research.
+\item This paper is scoped to focus on the estimation of LRPs with corresponding guidelines, and does not include a full quantitative evaluation of those LRPs. That step is included as an important area of future research.
 \end{itemize}
 \end{tcolorbox}
 
 ### Goals
 
-The goals of this and the companion Research Document, @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)^[Holt, K., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. CSAS Working Paper In review]--> as outlined in the Terms of Reference, were to:
+The goals of this Research Document as outlined in the Terms of Reference, were to:
 
 - Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the WSP objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (Section \@ref(est-methods))
 
