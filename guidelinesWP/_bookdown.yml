@@ -8,7 +8,7 @@ rmd_files: ["index.Rmd",
             "06-chap6.Rmd",
             "06.5-Acknowledgements.Rmd",
             "07-references.Rmd",
-            "08-appendix.Rmd",
             "10-appendixCaseStudies.Rmd",
+            "08-appendix.Rmd",
             "09-appendix.Rmd"]
 delete_merged_file: true
