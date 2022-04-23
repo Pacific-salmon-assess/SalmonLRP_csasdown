@@ -39,7 +39,7 @@ Environmental drivers, biological characteristics, and population capacity for U
     align = c('l', 'c', 'c','c','c'),
     caption = #ifelse(french,
                     #"French goes here",
-                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
+                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit, and the number of streams in the fall and summer runs. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
              #)
 ```
 

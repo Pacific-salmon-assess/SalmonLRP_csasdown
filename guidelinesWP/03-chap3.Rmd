@@ -52,7 +52,7 @@ Integrated-hatchery & $<$ 0.5 (No) \\
 
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{3.7cm} p{3cm} p{4.3cm}}
-\caption{Potential guidlines for the implementation of integrated hatchery popuations in WSP assessments based on their biological designation, taken from Withler et al. (2018).}\\
+\caption{Potential guidelines for the implementation of integrated hatchery popuations in WSP assessments based on their biological designation and Proportionate Natural Influence, PNI, taken from Withler et al. (2018).}\\
 \hline
 Designation & PNI & Inclusion in WSP assessments \\ 
 \hline

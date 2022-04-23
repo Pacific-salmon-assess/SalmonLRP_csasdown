@@ -231,7 +231,7 @@ bench <- bench %>% dplyr::filter(Stock != "Cypre"&
   
 
 bench <- bench %>% dplyr::select(c("Population or inlet", Sgen, Sgen.lwr, Sgen.upr, SREP, SREP.lwr, SREP.upr))
-csasdown::csas_table(bench, booktabs = T, caption = "Benchmarks and approximate 95% confidence limits (labelled to the right of each benchmark) for five inlets, including only escapement indicator populations that are not highly enhanced.", col_names =c("Population or Inlet", "S\\textsubscript{gen}", "upper 95%CL", "lower 95%CL",  "S\\textsubscript{REP}", "upper 95%CL", "lower 95%CL")) %>% kableExtra::row_spec(20, hline_after=TRUE)
+csasdown::csas_table(bench, booktabs = T, caption = "Benchmarks (in units of number of spawners) and approximate 95% confidence limits, CL (labelled to the right of each benchmark) for five inlets, including only escapement indicator populations that are not highly enhanced.", col_names =c("Population or Inlet", "S\\textsubscript{gen}", "upper 95%CL", "lower 95%CL",  "S\\textsubscript{REP}", "upper 95%CL", "lower 95%CL")) %>% kableExtra::row_spec(20, hline_after=TRUE)
 
 
 ```
