@@ -10,7 +10,7 @@ output:
 
 ## CONTEXT {#chum-context}
 
-The Inside South Coast Chum - Non-Fraser SMU (abbreviated as ISC Chum) includes 7 CUs of Chum Salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats. 
+The Inside South Coast Chum - Non-Fraser SMU (abbreviated as ISC Chum) includes seven CUs of Chum Salmon from rivers that drain into Johnstone Strait and the Salish Sea along the mainland of British Columbia and the east coast of Vancouver Island (Figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). This area includes deep fjords, glaciers, large rivers, and small coastal streams. Chum salmon CUs spawning in the Fraser River watershed are not included in this SMU. They have been categorized as a separate 'Inside South Coast Chum - Fraser' SMU. While these two SMUs have substantial overlap in ocean fisheries, they have been separated into two SMUs based on differences in terminal fishery impacts and freshwater habitats. 
 
 ```{r chum-map, fig.cap="The seven Conservation Units that make up the Inside South Coast Chum Stock Management Unit (not including Lower Fraser and Fraser Canyon Conservation Units).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chum-map.png")
@@ -39,7 +39,7 @@ Environmental drivers, biological characteristics, and population capacity for U
     align = c('l', 'c', 'c','c','c'),
     caption = #ifelse(french,
                     #"French goes here",
-                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
+                    "The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit, and the number of streams in the fall and summer runs. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.")
              #)
 ```
 
