@@ -10,7 +10,7 @@
 -->
 - For implementation of CU status-based and aggregate abundance LRPs to three case studies, see the Github repository on [case studies](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
 - For estimation of correlations among CUs within SMUs, see the Github repository on [CU correlations](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
-- For write-up of this working paper, see the Github repository on [csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
+- For write-up of this working paper, see the Github repository in [csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
 
 All data manipulation and projections were performed in R.  TMB and TMBStan were used for estimation of stock-recruitment parameters and benchmarks for logistic regression and projection LRPs.
 

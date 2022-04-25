@@ -8,11 +8,12 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # DATA AND ANALYSIS LINKS {#app:github-appendix}
 
-Code for data and analysis for the case studies are available on the Git Hub repository:
+Code for data and analysis for the case studies are available on the Git Hub repository:  
 
 [pacific-salmon-assess/SalmonLRP_RetroEval](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
 
-Code for the samSim closed loop simulation modelling tool used to conduct stochastic projections are available on the 'LRP' branch of the following Git Hub repository:
+Code for the samSim closed loop simulation modelling tool used to conduct stochastic projections are available on the 'LRP' branch of the following Git Hub repository:  
+
 [pacific-salmon-assess/SalmonLRP_samSim](https://github.com/Pacific-salmon-assess/samSim/tree/LRP)
 
 

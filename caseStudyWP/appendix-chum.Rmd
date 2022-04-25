@@ -89,7 +89,7 @@ knitr::include_graphics('figure/chum-a-b-SMSY-Sgen-retro.png')
 ```
 
 
-Retrospective estimates of $\alpha$ and $\beta$ for Southern Coastal Streams show declines over time. S\textsubscript{MSY} and S\textsubscript{gen} increase sharply in the first few years due to large decreases in $\alpha$ and $\beta$. S\textsubscript{MSY} then decreases over time, while S\textsubscript{gen} stays relatively stable. This is because as $\alpha$ decreases below ~2.5, S\textsubscript{gen} decreases, but as $\beta$ decreases, S\textsubscript{gen} decreases, so that a simultaneous decrease in $\alpha$ and $\beta$ can cancel out. However, the lower alpha is below 2.5, the less influence $\beta$ has on S\textsubscript{gen}. <!--CH: it doesn't relate directly, but doesn't hurt to include for now.  
+Retrospective estimates of $\alpha$ and $\beta$ for Southern Coastal Streams show declines over time. S\textsubscript{MSY} and S\textsubscript{gen} increase sharply in the first few years due to large decreases in $\alpha$ and $\beta$. S\textsubscript{MSY} then decreases over time, while S\textsubscript{gen} stays relatively stable. This is because as $\alpha$ decreases below approximately 2.5, S\textsubscript{gen} decreases, but as $\beta$ decreases, S\textsubscript{gen} decreases, so that a simultaneous decrease in $\alpha$ and $\beta$ can cancel out. However, the lower alpha is below 2.5, the less influence $\beta$ has on S\textsubscript{gen}. <!--CH: it doesn't relate directly, but doesn't hurt to include for now.  
 Luke: *\textcolor{cyan}{This is from my work on sensitivity of Sgen and SMSY to alpha and beta. Not sure if we can include here}*
 -->
 
