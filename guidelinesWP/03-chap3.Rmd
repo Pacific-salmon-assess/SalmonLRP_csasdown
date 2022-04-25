@@ -134,7 +134,7 @@ CH: the challenge is I had original text saying the Salmon Scanner did not incor
 (\#tab:SSmetrics)
 \end{table}
 
-\scriptsize (1) [@cosewicCOSEWICWildlifeSpecies2021; @maceQuantificationExtinctionRisk2008]; (2) [@dfoNationalConservationStrategy2005]; (3) [@holtEvaluationBenchmarksConservation2009]; (4) [@holtEvaluatingBenchmarksBiological2018]; (5) [@holtIndicatorsStatusBenchmarks2009] (6) [@grantIntegratedBiologicalStatus2013]; (7) [@porsztReliabilityIndicatorsDecline2012]
+\scriptsize (1) [@cosewicCOSEWICWildlifeSpecies2021; @maceQuantificationExtinctionRisk2008]; (2) [@cultussockeyerecoveryteamNationalConservationStrategy2005]; (3) [@holtEvaluationBenchmarksConservation2009]; (4) [@holtEvaluatingBenchmarksBiological2018]; (5) [@holtIndicatorsStatusBenchmarks2009] (6) [@grantIntegratedBiologicalStatus2013]; (7) [@porsztReliabilityIndicatorsDecline2012]
 
 
 
