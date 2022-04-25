@@ -2,7 +2,7 @@
 
 # LESSONS LEARNED FROM CASE STUDY APPLICATIONS
 
-The three SMUs used as case studies were selected to represent a range of levels of data availability, ranging from data-rich to data-limited. For each case study, the set of LRP estimation methods considered (Table \@ref(tab:lrpapproaches)) was a function of available data and previously developed assessment methods for the SMU. Each case study section includes its own discussion section highlighting conclusions from that case study. In this section, we provide an summary of key lessons learned when looking across all three case studies. These lessons were used to inform the development of guidelines for defining LRPs for Pacific Salmon SMUs, as described in Holt et al. (in review).
+The three SMUs used as case studies were selected to represent a range of levels of data availability, ranging from data-rich to data-limited. For each case study, the set of LRP estimation methods considered (Table \@ref(tab:lrpapproaches)) was a function of available data and previously developed assessment methods for the SMU. Each case study section includes its own discussion section highlighting conclusions from that case study. In this section, we provide an summary of key lessons learned when looking across all three case studies. These lessons were used to inform the development of guidelines for defining LRPs for Pacific Salmon SMUs, as described in @holtGuidelinesDefiningLimitInpress.
 
 \
 &nbsp;
