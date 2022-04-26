@@ -31,14 +31,14 @@ Based on similarities in threats, life history, population capacity, and some sh
 ## Bayesian Stock-Recruitment Model Parameter Estimates
 
 
-```{r coho-SrepPrior, fig.cap="Prior distribution for S\\textsubscript{REP} (the spawner abundance level at which the stock replaces itself) used when fitting the Ricker\\_priorCap model. The red dashed line shows the maximum likelihood estimate of S\\textsubscript{REP} from the base Ricker model stock-recruitment fit. The mean of the SRep prior was set to 1.4 times the maximum likelihood estimate", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+```{r coho-SrepPrior, fig.cap="Prior distribution for S\\textsubscript{REP} (the spawner abundance level at which the stock replaces itself) used when fitting the Ricker\\_priorCap model. The red dashed line shows the maximum likelihood estimate of S\\textsubscript{REP} from the base Ricker model stock-recruitment fit. The mean of the SRep prior was set to 1.4 times the maximum likelihood estimate.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
 knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```
 
 
 
 
-<!--To Do: To Do: improve table formatting so that differnt number of digits for different variables
+<!--To Do: improve table formatting so that different number of digits for different variables
 -->
 
 
@@ -47,16 +47,17 @@ knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```{r coho-postSummary-Ricker, warning=FALSE, echo=FALSE}
 
 dat <- as.data.frame(read.csv("data/coho-postSummary-Ricker.csv"))
-options(scipen=999, digits=2)
+options(scipen=999, digits=5)
 
-# dat[dat$Variable == "adjProd",3:6]<-round(dat[dat$Variable == "adjProd",3:6],digits=2)
-# dat[dat$Variable == "alpha",3:6]<-round(dat[dat$Variable == "alpha",3:6],digits=2)
-# dat[dat$Variable == "beta",3:6]<-round(dat[dat$Variable == "beta",3:6],digits=4)
-# dat[dat$Variable == "Sgen",3:6]<-round(dat[dat$Variable == "Sgen",3:6],digits=2)
-# dat[dat$Variable == "sigma",3:6]<-round(dat[dat$Variable == "sigma",3:6],digits=2)
-# dat[dat$Variable == "gamma",3:6]<-round(dat[dat$Variable == "gamma",3:6],digits=2)
+dat[dat$Variable == "adjProd",3:6]<-round(dat[dat$Variable == "adjProd",3:6],digits=2)
+dat[dat$Variable == "alpha",3:6]<-round(dat[dat$Variable == "alpha",3:6],digits=2)
+dat[dat$Variable == "beta",3:6]<-round(dat[dat$Variable == "beta",3:6],digits=4)
+dat[dat$Variable == "Sgen",3:6]<-round(dat[dat$Variable == "Sgen",3:6],digits=0)
+dat[dat$Variable == "sigma",3:6]<-round(dat[dat$Variable == "sigma",3:6],digits=2)
+dat[dat$Variable == "gamma",3:6]<-round(dat[dat$Variable == "gamma",3:6],digits=2)
 
-csasdown::csas_table(dat, digits=2, booktabs = T, caption = "Summary of posterior distribution mean and quantiles (5%, 50%, and 95%) for stock-recruit model parameters and Sgen lower benchmark from the Ricker model fit.  The 'adjProd' parameter is the effective productivity, $\\alpha$', from Equation 15 in the main document.")
+ csasdown::csas_table(dat, booktabs = T, caption = "Summary of posterior distribution mean and quantiles (5%, 50%, and 95%) for stock-recruit model parameters and Sgen lower benchmark from the Ricker model fit.  The 'adjProd' parameter is the effective productivity, $\\alpha$', from Equation 15 in the main document.")
+
  
 ```
 
@@ -77,30 +78,43 @@ csasdown::csas_table(dat, digits=2, booktabs = T, caption = "Summary of posterio
 &nbsp;
 &nbsp;
 
-```{r coho-Ricker-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+```{r coho-Ricker-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
 knitr::include_graphics("figure/coho-alphaPosts.png")
 ```
 
 
 
 
-```{r coho-Ricker-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+```{r coho-Ricker-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
 knitr::include_graphics("figure/coho-adjProdPosts.png")
 ```
 
 
 
-```{r coho-priorCap-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+```{r coho-priorCap-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '95%',  fig.align="center"}
 knitr::include_graphics("figure/coho-alphaPosts-priorCap.png")
 ```
 
+\linebreak
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
-```{r coho-priorCap-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '60%',  fig.align="center"}
+
+```{r coho-priorCap-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '95%',  fig.align="center"}
 knitr::include_graphics("figure/coho-adjProdPosts-priorCap.png")
 ```
 
-
-\newpage
+\
+&nbsp;
+&nbsp;
 
 
 ## Projected Spawner Abundances used for the Projection LRP Method

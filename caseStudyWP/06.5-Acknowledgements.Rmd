@@ -4,7 +4,7 @@ We gratefully acknowledge the considerable support provided by our Technical Wor
 
 DFO's State of the Salmon Program, led by Sue Grant, provided helpful guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it. 
 
-We also thank Chuck Parken, Brendan Connors, and Mary Thiess for helpful comments on draft versions of this working paper.
+We also thank Chuck Parken, Brendan Connors, and Mary Thiess for helpful comments on draft versions of this document. Finally, we thank Mike Bradford (DFO) and Will Atlas (Wild Salmon Center) for detailed review comments as part of the CSAP review process that improved this research document.
 
 <!-- Full list of TWG members:
 Michael Arbeider,
