@@ -8,7 +8,7 @@ After that, all subsequent sections will be turned into appendices. -->
 ### Spawner Escapement
 
 
-We used spawning escapement data from 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program). The number of Chum salmon that return to spawn is typically counted using visual surveys, such as <!--CH: removed until information can be added on who contributes: "Biologists from Fisheries and Oceans Canada and First Nations including ... (Island Marine Aquatic Working Group) *\textcolor{cyan}{LW: which ones?}* generate these data by+--> walking streams and counting fish <!--CH: removed for now", *\textcolor{cyan}{LW: helicopter counts?}*"--> and using fences or weirs on some rivers. Total escapement for each stream is usually a peak count or estimated using the area under the curve (AUC) method.
+We used spawning escapement data from 1953-2018. Most of the escapement data comes from the NUSEDS database (a small amount from Lower Fraser Stock Assessment for Areas 28 and 29, FSC in-river catch from some First Nations, and enhanced escapement from DFO Salmon Enhancement Program). The number of Chum salmon that return to spawn is typically counted using visual surveys, and using fences or weirs on some rivers. Total escapement for each stream is usually a peak count or estimated using the area under the curve (AUC) method.
 
 
 
