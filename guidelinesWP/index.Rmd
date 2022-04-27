@@ -18,7 +18,7 @@ address: |
      Fisheries and Oceans Canada, Sidney, BC, Canada\
   ^3^Annacis Island Regional Office\
      Fisheries and Oceans Canada, Delta, BC, Canada\
-  ^3^National Headquarters\
+  ^4^National Headquarters\
      Fisheries and Oceans Canada, Ottawa, ON, Canada\
 
 month: Month # fill in
