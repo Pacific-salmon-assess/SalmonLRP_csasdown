@@ -8,7 +8,8 @@ author: |
   Brendan Connors^2^ 
   Sue Grant^3^
   Ann-Marie Huang^3^ 
-author_list: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S. and Huang, A.-M."
+  Julie Marentette^4^
+author_list: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S., Huang, A.-M., and Marentette, J."
 address: |
   ^1^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
@@ -17,6 +18,8 @@ address: |
      Fisheries and Oceans Canada, Sidney, BC, Canada\
   ^3^Annacis Island Regional Office\
      Fisheries and Oceans Canada, Delta, BC, Canada\
+  ^3^National Headquarters\
+     Fisheries and Oceans Canada, Ottawa, ON, Canada\
 
 month: Month # fill in
 year: 2022
