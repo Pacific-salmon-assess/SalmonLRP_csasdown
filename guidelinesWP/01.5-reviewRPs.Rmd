@@ -3,7 +3,8 @@
 
 ## INDICATORS AND REFERENCE POINTS FOR PACIFIC SALMON
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize}
 \item LRPs have been widely adopted in Canadian fisheries.
@@ -43,7 +44,7 @@ In some cases, single-metric approaches in which spawner abundances are compared
 
 ## ROLES OF LRPS IN CANADA {#roleLRPs}
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize}
 \item The roles of LRPs for marine fish stocks in Canada can include:

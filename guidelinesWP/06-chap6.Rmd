@@ -2,7 +2,7 @@
 
 ## KEY UNCERTAINTIES THAT AFFECT LRP ESTIMATES
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item Uncertainties in \textbf{CU-level benchmarks} affect both CU status-based and aggregate abundance LRPs, and can arise because of:
@@ -88,7 +88,7 @@ When considering both logistic regression and projection LRPs under alternative 
 
 ## IMPACT OF MISSING CUS ON SMU-LEVEL STATUS
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item For \textbf{CU status-based LRPs} when an SMU contains data-deficient CUs and the remaining data-rich CUs are above Red Status, we recommend SMU status be either provisional (i.e., status with higher uncertainty) or data deficient.
@@ -112,7 +112,7 @@ For aggregate abundance LRPs we recommend that SMU status be provisional when SM
 
 ## FUTURE RESEARCH {#futureResearch}
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item We recommend future research be prioritized to evaluate the impacts of:

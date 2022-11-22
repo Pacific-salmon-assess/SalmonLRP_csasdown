@@ -9,7 +9,7 @@ LRP methods require assessments of status at the scale of CUs. Abundance data re
 
 ## CONTRIBUTION OF HATCHERIES
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item While hatcheries are a useful tool for augmenting production for harvest and conservation, they can reduce wild genetic diversity and fitness and are considered a risk factor for the long-term persistence of CUs.
@@ -95,7 +95,7 @@ In most cases where hatchery-origin fish are not marked or sampled on the spawni
 <!--CH removed: "Recruitment data are generally not available for these stocks, so stock-recruitment analyses are usually not implemented. In one exception for Pitt River Sockeye Salmon,  spawner abundances were determined from brood take plus total spawners in the natural environment and recruitment was total recruits from both hatchery and natural environment (Pitt River, Grant et al. 2011)".-->
 ## ESTIMATION OF CU STATUS {#cu-est-methods}
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item We recommend that CU-level status consider multiple metrics, either integrated through formal status assessments or through the \textbf{Pacific Salmon Status Scanner tool}, also called the Salmon Scanner.
@@ -155,7 +155,7 @@ When assessing CU status relative to abundance-based lower benchmarks, we use ge
 
 ## LRP ESTIMATION
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item \textbf{CU status-based LRPs} are calculated from the proportion of CUs within an SMU that are assessed as being above Red status, with 100\% as the recommended LRP.

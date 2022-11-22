@@ -14,10 +14,13 @@ address: |
   ^1^Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, BC, V9T 6N7, Canada\
+     \
   ^2^Institute of Ocean Sciences\
      Fisheries and Oceans Canada, Sidney, BC, Canada\
+     \
   ^3^Annacis Island Regional Office\
      Fisheries and Oceans Canada, Delta, BC, Canada\
+     \
   ^4^National Headquarters\
      Fisheries and Oceans Canada, Ottawa, ON, Canada\
 
@@ -30,12 +33,12 @@ abstract: |
 
   Limit reference points, LRPs, define the stock status below which serious harm is expected to occur to a stock. LRPs are required for major fish stocks, or Stock Management Units (SMUs) that are prescribed by regulation under amendments to the Canadian *Fisheries Act* (2019). Pacific salmon are unique among marine fish stocks due to their high levels of intraspecific diversity which gives rise to a large range in data availability, considerations, and approaches for assessments and LRP development. In this paper, we identify six principles for developing LRPs for Pacific salmon that are adapted from principles used more broadly among marine species. One principle unique to Pacific salmon is that LRPs should be aligned with Canada’s Wild Salmon Policy (WSP) objective of preserving biodiversity of salmon at the scale of Conservation Units (CUs), which are nested within SMUs. We developed methods for calculating LRPs, and established guidelines on how to implement them including under which conditions they should or should not be applied. We propose that LRPs be identified from the proportion of CUs that have status above the Red zone for WSP status assessments, as a default approach. This provides some consistency with status assessments already produced under the WSP, and can inform management decisions for harvest, habitat and hatcheries that often occur at finer, CU scales. To supplement the default approach, we provide LRPs based on metrics of aggregate abundances for the entire SMU, which may be required for fisheries management purposes in some cases. These latter LRPs are derived to have a desired probability of all component CUs being above Red status given an assumed relationship between aggregate abundance and the probability that all CUs will be above Red status. We identify uncertainties associated with each approach, and describe how they can be applied across a range of data types, qualities and quantities. Analyses to support our development of guidelines has been informed by three cases studies: Interior Fraser Coho Salmon *Oncorhynchus kisutch*, West Coast Vancouver Island Chinook Salmon, *O. tshawytscha*, and Inside South Coast Chum Salmon, *O. keta*, excluding the Fraser River.
   
-header: "Draft working paper --- Do not cite or circulate" # or "" to omit
+header: "" # or "" to omit
 output:
  csasdown::resdoc_pdf:
    french: false
    copy_sty: true
-   line_nums: true
+   line_nums: false
    line_nums_mod: 1
    lot_lof: false
 # ------------ resdoc_word or resdoc_pdf

@@ -3,7 +3,7 @@
 
 ## STEPWISE APPROACH FOR SELECTING LRPS
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize} 
 \item We recommend a step-wise approach for developing LRPs that highlights the important steps, considerations and decisions when identifying LRPs. These steps form our guidelines on the choice and implementation of candidate LRP methods.

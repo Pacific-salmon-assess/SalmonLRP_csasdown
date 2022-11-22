@@ -15,8 +15,8 @@ In Press]
 
 ## BACKGROUND
 
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
 \subsection*{Key Points:}
 \begin{itemize}
 \item The revised \emph{Fisheries} Act includes new Fish Stocks provisions that introduced legal
@@ -28,11 +28,11 @@ obligations to identify limit reference points (LRPs) for major fish stocks pres
 \end{itemize}
 \end{tcolorbox}
 
-Amendments to the Canadian *Fisheries Act* (2019) include new Fish Stocks provisions that introduce legal obligations to manage stocks to promote sustainability and avoid biological limit reference points, LRPs [@dfoScienceAdvicePrecautionary2021]. The provisions also require plans to rebuild fish stocks that have declined to, or below, an LRP while taking into account the biology of the fish and environmental conditions experienced by the stock. These obligations apply to major fish stocks that are prescribed under regulations. They reinforce the previously established DFO policies to manage stocks consistent with the precautionary approach. These include [The Fishery Decision Making Framework Incorporating the Precautionary Approach](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm) [@dfoFisheryDecisionmakingFramework2009], also known as DFO's Precautionary Approach Framework within the [Sustainable Fisheries Framework](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/overview-cadre-eng.html) and Canada's [Wild Salmon Policy](https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html) [@dfoCanadaPolicyConservation2005].
+Amendments to the Canadian *Fisheries Act* (2019) include new Fish Stocks provisions that introduce legal obligations to manage stocks to promote sustainability and avoid biological limit reference points, LRPs [@dfoScienceAdvicePrecautionary2021]. The provisions also require plans to rebuild fish stocks that have declined to, or below, an LRP while taking into account the biology of the fish and environmental conditions experienced by the stock. These obligations apply to major fish stocks that are prescribed under regulations. They reinforce the previously established DFO policies to manage stocks consistent with the precautionary approach. These include [The Fishery Decision Making Framework Incorporating the Precautionary Approach](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm) [@dfoFisheryDecisionmakingFramework2009], also known as DFO's Precautionary Approach Framework within the [Sustainable Fisheries Framework](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/overview-cadre-eng.htm) and Canada's [Wild Salmon Policy](https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html) [@dfoCanadaPolicyConservation2005].
 
 Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is expected to occur to the stock.   Definitions of serious harm within the DFO literature tend to focus on impaired productivity, although other aspects of serious harm are sometimes captured (see grey box below, adapted from Marentette et al. (In prep)^[Marentette, J.R., Barrett, T., Cogliati, K.M., Ings, D., Ladell, J., Thiess, M.  Operationalizing Serious Harm: Existing Guidance and Contemporary Canadian Practices. Can. Sci Avis. Secr. Working Paper In prep.]). 
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection{Interpretations of serious harm}
 Serious harm has been interpreted as any changes to the biological properties of the stock that make growth or rebuilding to target levels cease to be considered rapid and secure\textsuperscript{1}. These changes are considered difficult to reverse\textsuperscript{2,3}, and can be associated with: 
 
@@ -108,7 +108,7 @@ We highlight previous recommendations to develop Integrated Management Processes
  
 ## GOALS, COMPONENTS, and SCOPE OF THE RESEARCH DOCUMENT
 
-\begin{tcolorbox}[sharp corners, boxrule=0.2mm]
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection*{Key Points:}
 \begin{itemize}
 \item The goals of this Research Document are summarized as:
