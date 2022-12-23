@@ -2,7 +2,7 @@
 
 
 
-```{r lrp-smu-corr-plot, fig.cap="Distributiion of mean pairwise correlations between CUs for 40 SMUs of Pacific salmon arrange by species. Points are scaled to the number of CUs within a SMU with the largest point equal to 25 CUs. ", warning=FALSE, echo=FALSE, fig.align="center"}
+```{r lrp-smu-corr-plot, fig.cap="Distribution of mean pairwise correlations between CUs for 40 SMUs of Pacific salmon arrange by species. Points are scaled to the number of CUs within a SMU with the largest point equal to 25 CUs. ", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/lrp-smu-corr.png")
 
 ```

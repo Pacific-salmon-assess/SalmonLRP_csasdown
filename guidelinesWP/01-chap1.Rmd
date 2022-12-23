@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # INTRODUCTION {#intro}
 
 <!--Footnotes:
@@ -19,7 +24,7 @@ In Press]
 
 \subsection*{Key Points:}
 \begin{itemize}
-\item The revised \emph{Fisheries} Act includes new Fish Stocks provisions that introduced legal
+\item The revised \emph{Fisheries Act} includes new Fish Stocks provisions that introduced legal
 obligations to identify limit reference points (LRPs) for major fish stocks prescribed under regulation.
 \item Under DFO's Precautionary Approach Framework, LRPs define the stock status below which serious harm is expected to occur to the stock.
 \item Canada's Wild Salmon Policy (WSP) includes an objective to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), the focus of biological assessments under the WSP.
@@ -30,7 +35,7 @@ obligations to identify limit reference points (LRPs) for major fish stocks pres
 
 Amendments to the Canadian *Fisheries Act* (2019) include new Fish Stocks provisions that introduce legal obligations to manage stocks to promote sustainability and avoid biological limit reference points, LRPs [@dfoScienceAdvicePrecautionary2021]. The provisions also require plans to rebuild fish stocks that have declined to, or below, an LRP while taking into account the biology of the fish and environmental conditions experienced by the stock. These obligations apply to major fish stocks that are prescribed under regulations. They reinforce the previously established DFO policies to manage stocks consistent with the precautionary approach. These include [The Fishery Decision Making Framework Incorporating the Precautionary Approach](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/precaution-eng.htm) [@dfoFisheryDecisionmakingFramework2009], also known as DFO's Precautionary Approach Framework within the [Sustainable Fisheries Framework](https://www.dfo-mpo.gc.ca/reports-rapports/regs/sff-cpd/overview-cadre-eng.htm) and Canada's [Wild Salmon Policy](https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/wsp-pss/policy-politique-eng.html) [@dfoCanadaPolicyConservation2005].
 
-Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is expected to occur to the stock.   Definitions of serious harm within the DFO literature tend to focus on impaired productivity, although other aspects of serious harm are sometimes captured (see grey box below, adapted from Marentette et al. (In prep)^[Marentette, J.R., Barrett, T., Cogliati, K.M., Ings, D., Ladell, J., Thiess, M.  Operationalizing Serious Harm: Existing Guidance and Contemporary Canadian Practices. Can. Sci Avis. Secr. Working Paper In prep.]). 
+Under DFO's Precautionary Approach Framework, LRPs represent the stock status below which serious harm is expected to occur to the stock.   Definitions of serious harm within the DFO literature tend to focus on impaired productivity, although other aspects of serious harm are sometimes captured (see grey box below, adapted from Marentette et al. (In revision)^[Marentette, J.R., Barrett, T., Cogliati, K.M., Ings, D., Ladell, J., Thiess, M.  Operationalizing Serious Harm: Existing Guidance and Contemporary Canadian Practices. Can. Sci Avis. Secr. Res. Doc. In revision]). 
 
 \begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
 \subsection{Interpretations of serious harm}
@@ -66,7 +71,7 @@ Serious harm may be irreversible or slow to be reversed over the long-term,5 and
 The LRP is a reference point that generally represents a threshold to stock states considered at rapidly increasing risk of serious harm.1,2 Under Canada’s PA Policy, the LRP is the boundary between the Critical and Cautious zones, and the LRP also often functions as an operational control point (points at which management measures change) in harvest strategies.6,8"
  -->
 
-Pacific salmon are unique among marine fish species due to their high levels of intraspecific diversity which gives rise to a large range in data availability, considerations, and approaches for assessments and LRP development.  These differences necessitate guidance on LRP methods that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. In prep.).
+Pacific salmon are unique among marine fish species due to their high levels of intraspecific diversity which gives rise to a large range in data availability, considerations, and approaches for assessments and LRP development.  These differences necessitate guidance on LRP methods that is specific to Pacific salmon, while being consistent with the principles for LRP development across species (Marentette et al. In revision).
 
 Canada's Wild Salmon Policy, WSP, represents DFO's implementation of the Precautionary Approach Framework for Pacific salmon. The goal of the WSP is to restore and maintain healthy and diverse salmon populations and their habitats for the benefit and enjoyment of the people of Canada in perpetuity [@dfoCanadaPolicyConservation2005]. One objective of the WSP is to safeguard the genetic diversity of wild Pacific salmon by maintaining and protecting Conservation Units (CUs), where a CU is defined as a "group of wild salmon sufficiently isolated from other groups that, if extirpated is very unlikely to recolonize naturally within an acceptable time frame, such as a human lifetime or a specified number of salmon generations" (DFO 2005). 
 
@@ -177,7 +182,7 @@ Time-varying population processes, such as changes in productivity, have importa
 
 When developing LRPs, we follow the recommendations of @withlerGeneticallyBasedTargets2018 to remove hatchery-influenced populations from biological assessments under the WSP when hatchery production predominates over natural production, as described in Section \@ref(est-methods). Following recent WSP assessments, we also removed the demographic influence of hatchery production from time-series of abundances when data on the proportion of hatchery- vs. natural-origin fish on the spawning grounds were available in our case studies. An evaluation of methods for estimating proportion of hatchery-origin spawners or accounting for them in biological assessments was beyond the scope of this study.
 
-Here we follow the recommendation of @holtIndicatorsStatusBenchmarks2009 to assess status of CUs using multiple metrics, and have implemented this approach using the Pacific Salmon Status Scanner tool (or, Salmon Scanner), documented in Pestal et al. (In prep.)^[Pestal, G., MacDonald, B, Grant, S, and Holt, C. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci. In prep.]. The Salmon Scanner was developed from the implementation of formal, peer-reviewed WSP assessments for Pacific salmon CUs in Canada (Section \@ref(est-methods)). A peer-review of the Salmon Scanner is planned for 2022 and is beyond the scope of this paper. <!-- Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.-->
+Here we follow the recommendation of @holtIndicatorsStatusBenchmarks2009 to assess status of CUs using multiple metrics, and have implemented this approach using the Pacific Salmon Status Scanner tool (or, Salmon Scanner), documented in Pestal et al. (In revision)^[Pestal, G., MacDonald, B, Grant, S, and Holt, C. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci. In revision]. The Salmon Scanner was developed from the implementation of formal, peer-reviewed WSP assessments for Pacific salmon CUs in Canada (Section \@ref(est-methods)). A peer-review of the Salmon Scanner is planned for 2022 and is beyond the scope of this paper. <!-- Furthermore, a review of individual benchmarks of CU status is beyond the scope of this paper.-->
 
 Decisions about prioritizing CUs for management intervention within an SMU was also beyond our scope, and requires broader discussion with managers, First Nations, and stakeholders. This includes evaluating the costs and benefits of conserving individual CUs given differential vulnerability to climate change or other threats.
 
