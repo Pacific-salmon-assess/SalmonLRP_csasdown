@@ -1,0 +1,203 @@
+---
+title: "Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units"
+author: |
+  Kendra Holt^1^
+  Carrie A. Holt^2^
+  Luke Warkentin^3^
+  Catarina Wor^2^
+  Brooke Davis^3^
+  Michael Arbeider^4^
+  Jessy Bokvist^5^
+  Sabrina Crowley^6^
+  Sue Grant^7^
+  Wilf Luedke^5^
+  Diana McHugh^5^
+  Candace Picco^8^
+  Pieter Van Will^5^
+
+author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P."
+address: |
+  ^1^Fisheries and Oceans Canada, Institute of Ocean Sciences\
+     9860 W Saanich Rd\
+     Sidney, BC, V8L 5T5\
+     \
+  ^2^Fisheries and Oceans Canada, Pacific Biological Station\
+     3190 Hammond Bay Rd.\
+     Nanaimo, BC, V9T 6N7\
+     \
+  ^3^Fisheries and Oceans Canada, Annacis Office\
+     100 Annacis Pkwy Unit 3\
+     Delta, BC, V3M 6A2\
+     \
+  ^4^Fisheries and Oceans Canada, BC Interior Area Office\
+     986 McGill Place\
+     Kamloops, BC V2C 6X6\
+     \
+  ^5^Fisheries and Oceans Canada, Southcoast Area Office\
+     3225 Stephenson Point Rd\
+     Nanaimo, BC, V9T 1K3\
+     \
+  ^6^Nuu-chah-nulth Tribal Council\
+     5001 Mission Rd\
+     Port Alberni, BC, V9Y 8X9\
+     \
+  ^7^Fisheries and Oceans Canada, Pacific Regional Headquarters\
+     200-401 Burrard Street\
+     Vancouver, BC, V6C 3S4\
+     \
+  ^8^Ha'oom Fisheries Society\
+     320 Opitsaht IR Road\
+     Tofino, BC, V0R 2Z0\
+month: Month # fill in
+year: 2022
+report_number: nnn
+region: Pacific Region
+citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., et Van Will, P.. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2022/nnn. iv + 13 p."
+abstract: |
+  The revised *Fisheries Act* requires that Limit Reference Points (LRPs) be identified for all major fish stocks. For Pacific salmon, major fish stocks are represented by stock management units (SMUs). An SMU is composed of one or more salmon conservation units (CUs), which are the assessment units under the Wild Salmon Policy, WSP. We introduce methods to estimate LRPs at the SMU level that integrate statuses derived under the WSP at the CU level. We demonstrate and evaluate the LRPs for three case study SMUs: Interior Fraser Coho (*Oncorhynchus kisutch*), West Coast Vancouver Island (WCVI) Chinook (*O. tshawytscha*), and Inside South Coast Chum (*O. keta*) - excluding Fraser River. Methods are divided into two categories: CU status-based LRPs and aggregate abundance LRPs. CU status-based LRPs are recommended as the default method, and are based on the proportion of CUs above levels associated with increased risk of extinction (above 'Red' status) under the WSP. Aggregate abundance methods may be used supplementally to meet specific fisheries management requirements. Aggregate abundance LRPs are subdivided into logistic regression LRPs and projection LRPs.  Both types of aggregate abundance LRPs are defined at the SMU-level abundances associated with a desired probabilty of all component CUs being above Red status, but they differ in that logistic regression LRPs are determined directly from historical data while projection LRPs are determined from projections of CU-level population dynamics. We discuss suitability and requirements for the application of the various LRP estimation methods, drawing from the range of data and information availability among the case studies.  In general, the application of aggregate abundance LRPs may be limited to SMUs where the CU-level populations covary, as demonstrated for the Interior Fraser Coho case study, and where covariance has not changed over time or, for projection LRPs, those changes can be parameterized.
+
+header:
+output:
+ csasdown::resdoc_pdf:
+   french: true
+   copy_sty: true
+   line_nums: false
+   line_nums_mod: 1
+
+# ------------
+# End of options to set
+knit: bookdown::render_book
+link-citations: true
+bibliography: bib/refs.bib
+# Any extra LaTeX code for the header:
+header-includes:
+  - \usepackage{amsmath} \usepackage{graphics} \usepackage{tcolorbox} \usepackage{afterpage} \usepackage{needspace} \usepackage{tikz} \usetikzlibrary{shapes, arrows.meta, positioning}
+
+---
+
+```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
+library(knitr)
+if (is_latex_output()) {
+  knitr_figs_dir <- "knitr-figs-pdf/"
+  knitr_cache_dir <- "knitr-cache-pdf/"
+  fig_out_type <- "png"
+} else {
+  knitr_figs_dir <- "knitr-figs-docx/"
+  knitr_cache_dir <- "knitr-cache-docx/"
+  fig_out_type <- "png"
+}
+fig_asp <- 0.618
+fig_width <- 9
+fig_out_width <- "6in"
+fig_dpi <- 180
+fig_align <- "center"
+fig_pos <- "htb"
+opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.path = knitr_figs_dir,
+  cache.path = knitr_cache_dir,
+  fig.asp = fig_asp,
+  fig.width = fig_width,
+  out.width = fig_out_width,
+  echo = FALSE,
+  #  autodep = TRUE,
+  #  cache = TRUE,
+  cache.comments = FALSE,
+  dev = fig_out_type,
+  dpi = fig_dpi,
+  fig.align = fig_align,
+  fig.pos = fig_pos
+)
+options(# Prevent xtable from adding a timestamp comment to the table code it produces
+        xtable.comment = FALSE,
+        # Don't allow kableExtra to load packages, we add them manually in csasdown
+        kableExtra.latex.load_packages = FALSE,
+        # Stop chunk output (echo) running into the margins
+        width = 80,
+        # Don't use scientific notation (stops tables from showing 1.2e3, etc.)
+        scipen = 999)
+```
+
+
+```{r load-libraries, cache=FALSE}
+meta <- rmarkdown::metadata$output
+if (is.null(meta)) {
+  # This knitr chunk has been run in R without running bookdown::render_book("index.Rmd")
+  # so rmarkdown::metadata$output is not populated
+  options(french = FALSE)
+} else {
+  if (length(grep("pdf", names(meta)))) {
+    options(french = meta$`csasdown::resdoc_pdf`$french)
+    prepub <- meta$`csasdown::resdoc_pdf`$prepub
+  } else if (length(grep("word", names(meta)))) {
+    options(french = meta$`csasdown::resdoc_word`$french)
+    prepub <- meta$`csasdown::resdoc_word`$prepub
+  }
+}
+csl <- "csl/csas.csl"
+if (is.null(getOption("french"))) {
+  stop("`french` was not set up correctly in YAML header in index.Rmd. ",
+       "It must be true or false",
+       call. = FALSE)
+}
+if (getOption("french")) {
+  csl <- "csl/csas-french.csl"
+  options(OutDec = ",")
+}
+# This hook simplifies document translation for the author.
+# When building in French, it draws a box around paragraphs contained in chunks
+#  which have the option `needs_trans = TRUE`. It also labels
+#  the box with a 'Needs translation' tag in red and the chunk label in blue.
+# You need to change the `needs_trans` option to `FALSE` for a chunk once you
+#  have inserted the translated text into it. You will get a utf-8 error if
+#  you leave it as `TRUE` and there is French in the chunk.
+#  This function assumes you are translating from English to French.
+#  If you wrote your document in French and want to translate to English,
+#  put a ! before `getOption("french")` below and add the `need_trans`
+#  chunk options to your English paragraph chunks instead of the French ones.
+#  
+#  IMPORTANT NOTES
+#  - You must use double backslashes in all paragraph chunks, so anywhere you
+#    would normally use a single backslash, use two backslashes.
+#    Examples are \@ref() which needs to be \\@ref() and \pi which must now be \\pi.
+#  - French latex places a space before the colon by default so if you need a colon
+#    with no space before it, use \\hc .
+knit_hooks$set(needs_trans = function(before, options){
+  if(getOption("french") && options$needs_trans){
+    if (before){
+      paste0("\\
+       \\begin{lrbox}{\\userinput}
+       \\begin{minipage}{\\dimexpr\\linewidth-2\\fboxsep-2\\fboxrule}
+       \\textcolor{red}{\\textbf{Needs translation - \\textcolor{blue}{knitr chunk: ", options$label, "}}}
+       \\begin{lstlisting}
+      ")
+    } else {
+      "
+       \\end{lstlisting}
+       \\end{minipage}
+       \\end{lrbox}
+       \\noindent
+       \\fbox{\\usebox{\\userinput}}
+      "
+    }
+  }
+})
+
+# add other packages here:
+library(dplyr)
+library(readr)
+library(tibble)
+library(csasdown)
+library(kableExtra)
+library(ggplot2)
+library(viridis)
+library(tidyr)
+
+```
+
+---
+csl: `r csl`    
+---

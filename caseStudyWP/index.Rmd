@@ -17,33 +17,34 @@ author: |
 
 author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P."
 address: |
-  ^1^Fisheries and Oceans Canada\
-     Institute of Ocean Sciences\
+  ^1^Fisheries and Oceans Canada, Institute of Ocean Sciences\
      9860 W Saanich Rd\
      Sidney, BC, V8L 5T5\
-  ^2^Fisheries and Oceans Canada\
-     Pacific Biological Station\
+     \
+  ^2^Fisheries and Oceans Canada, Pacific Biological Station\
      3190 Hammond Bay Rd.\
      Nanaimo, BC, V9T 6N7\
-  ^3^Fisheries and Oceans Canada\
-     Annacis Office\
+     \
+  ^3^Fisheries and Oceans Canada, Annacis Office\
      100 Annacis Pkwy Unit 3\
      Delta, BC, V3M 6A2\
-  ^4^Fisheries and Oceans Canada\
-     BC Interior Area Office\ 
+     \
+  ^4^Fisheries and Oceans Canada, BC Interior Area Office\
      986 McGill Place\
      Kamloops, BC V2C 6X6\
-  ^5^Fisheries and Oceans Canada\
-     Southcoast Area Office\
+     \
+  ^5^Fisheries and Oceans Canada, Southcoast Area Office\
      3225 Stephenson Point Rd\
      Nanaimo, BC, V9T 1K3\
+     \
   ^6^Nuu-chah-nulth Tribal Council\
      5001 Mission Rd\
      Port Alberni, BC, V9Y 8X9\
-  ^7^Fisheries and Oceans Canada\
-     Regional Headquarters, Pacific\
+     \
+  ^7^Fisheries and Oceans Canada, Pacific Regional Headquarters\
      200-401 Burrard Street\
      Vancouver, BC, V6C 3S4\
+     \
   ^8^Ha'oom Fisheries Society\
      320 Opitsaht IR Road\
      Tofino, BC, V0R 2Z0\
@@ -55,7 +56,7 @@ citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis,
 abstract: |
   The revised *Fisheries Act* requires that Limit Reference Points (LRPs) be identified for all major fish stocks. For Pacific salmon, major fish stocks are represented by stock management units (SMUs). An SMU is composed of one or more salmon conservation units (CUs), which are the assessment units under the Wild Salmon Policy, WSP. We introduce methods to estimate LRPs at the SMU level that integrate statuses derived under the WSP at the CU level. We demonstrate and evaluate the LRPs for three case study SMUs: Interior Fraser Coho (*Oncorhynchus kisutch*), West Coast Vancouver Island (WCVI) Chinook (*O. tshawytscha*), and Inside South Coast Chum (*O. keta*) - excluding Fraser River. Methods are divided into two categories: CU status-based LRPs and aggregate abundance LRPs. CU status-based LRPs are recommended as the default method, and are based on the proportion of CUs above levels associated with increased risk of extinction (above 'Red' status) under the WSP. Aggregate abundance methods may be used supplementally to meet specific fisheries management requirements. Aggregate abundance LRPs are subdivided into logistic regression LRPs and projection LRPs.  Both types of aggregate abundance LRPs are defined at the SMU-level abundances associated with a desired probabilty of all component CUs being above Red status, but they differ in that logistic regression LRPs are determined directly from historical data while projection LRPs are determined from projections of CU-level population dynamics. We discuss suitability and requirements for the application of the various LRP estimation methods, drawing from the range of data and information availability among the case studies.  In general, the application of aggregate abundance LRPs may be limited to SMUs where the CU-level populations covary, as demonstrated for the Interior Fraser Coho case study, and where covariance has not changed over time or, for projection LRPs, those changes can be parameterized.
 
-header: "Draft working paper --- Do not cite or circulate" # or "" to omit
+header:
 output:
  csasdown::resdoc_pdf:
    french: false

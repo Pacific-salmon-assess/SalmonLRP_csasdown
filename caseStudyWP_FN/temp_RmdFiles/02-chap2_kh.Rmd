@@ -1,0 +1,24 @@
+# AGGREGATE ABUNDANCE LRP ESTIMATION METHODS
+
+## ESTIMATION OF CU STATUS
+
+- There are a variety of CU-level benchmarks on abundances, depending on species and data availability, etc. to draw from. These are described in more detail in Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”
+
+## EMPIRICAL LRPS
+
+-	Description of logistic model approach. This approach is described in more detail in the Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units” 
+
+-	Show example of binomial (proportion based) and Bernoulli (probability based) logistic regressions, and justification for focusing on binomial (proportion based).
+
+## PROJECTION-BASED LRPS
+
+-	Description of projected LRP approach. This approach is described in more detail in the Working Paper, “Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units”
+
+-	Reference to previously published samSim reports / papers, as well as GitHub repo with updated code
+
+-	Develop LRPs from projections at specific proportions instead of logistic regression
+
+-	Note that all abundance-based WSP benchmarks can all be used as a basis for defining prospective LRPs
+
+
+
