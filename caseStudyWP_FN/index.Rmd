@@ -1,5 +1,5 @@
 ---
-title: "Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units"
+title: "Application de méthodes d’estimation des points de référence limites à des unités de gestion des stocks de saumons du Pacifique dans le cadre d’études de cas"
 author: |
   Kendra Holt^1^
   Carrie A. Holt^2^
@@ -15,47 +15,47 @@ author: |
   Candace Picco^8^
   Pieter Van Will^5^
 
-author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P."
+author_list: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., et Van Will, P."
 address: |
-  ^1^Fisheries and Oceans Canada, Institute of Ocean Sciences\
-     9860 W Saanich Rd\
-     Sidney, BC, V8L 5T5\
+ ^1^Pêches et Océans Canada, Institut des sciences de la mer\
+     9860, chemin West Saanich\
+     Sidney (C.-B.)  V8L 5T5\
      \
-  ^2^Fisheries and Oceans Canada, Pacific Biological Station\
-     3190 Hammond Bay Rd.\
-     Nanaimo, BC, V9T 6N7\
+  ^2^Pêches et Océans Canada, Station biologique du Pacifique\
+     3190, chemin Hammond Bay\
+     Nanaimo (C.-B.)  V9T 6N7
      \
-  ^3^Fisheries and Oceans Canada, Annacis Office\
-     100 Annacis Pkwy Unit 3\
-     Delta, BC, V3M 6A2\
+  ^3^Pêches et Océans Canada, bureau d’Annacis\
+     100, promenade Annacis, unité 3\
+     Delta (C.-B.)  V3M 6A2\
      \
-  ^4^Fisheries and Oceans Canada, BC Interior Area Office\
-     986 McGill Place\
-     Kamloops, BC V2C 6X6\
+  ^4^Pêches et Océans Canada, bureau du secteur de l’intérieur de la Colombie-Britannique\
+     986, place McGill\
+     Kamloops (C.-B.)  V2C 6X6\
      \
-  ^5^Fisheries and Oceans Canada, Southcoast Area Office\
-     3225 Stephenson Point Rd\
-     Nanaimo, BC, V9T 1K3\
+  ^5^Pêches et Océans Canada, bureau du secteur de la côte sud\
+     3225, chemin Stephenson Point\
+     Nanaimo (C.-B.)  V9T 1K3\
      \
-  ^6^Nuu-chah-nulth Tribal Council\
-     5001 Mission Rd\
-     Port Alberni, BC, V9Y 8X9\
+  ^6^Conseil tribal de Nuu-chah-nulth\\
+     5001, chemin Mission\
+     Port Alberni (C.-B.)  V9Y 8X9\
      \
-  ^7^Fisheries and Oceans Canada, Pacific Regional Headquarters\
-     200-401 Burrard Street\
-     Vancouver, BC, V6C 3S4\
+  ^7^Pêches et Océans Canada, administration régionale du Pacifique\
+     401, rue Burrard, bureau 200\
+     Vancouver (C.-B.)  V6C 3S4\
      \
   ^8^Ha'oom Fisheries Society\
-     320 Opitsaht IR Road\
-     Tofino, BC, V0R 2Z0\
+     320, chemin Opitsaht IR\
+     Tofino (C.-B.)  V0R 2Z0\
+
 month: Month # fill in
 year: 2022
 report_number: nnn
-region: Pacific Region
-citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., et Van Will, P.. Title Here (*Latin Species Name*). DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2022/nnn. iv + 13 p."
+region: Région du Pacifique
+citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P. Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units. DFO Secr. Can._.... 2022/nnn. iv + xxx p."
 abstract: |
-  The revised *Fisheries Act* requires that Limit Reference Points (LRPs) be identified for all major fish stocks. For Pacific salmon, major fish stocks are represented by stock management units (SMUs). An SMU is composed of one or more salmon conservation units (CUs), which are the assessment units under the Wild Salmon Policy, WSP. We introduce methods to estimate LRPs at the SMU level that integrate statuses derived under the WSP at the CU level. We demonstrate and evaluate the LRPs for three case study SMUs: Interior Fraser Coho (*Oncorhynchus kisutch*), West Coast Vancouver Island (WCVI) Chinook (*O. tshawytscha*), and Inside South Coast Chum (*O. keta*) - excluding Fraser River. Methods are divided into two categories: CU status-based LRPs and aggregate abundance LRPs. CU status-based LRPs are recommended as the default method, and are based on the proportion of CUs above levels associated with increased risk of extinction (above 'Red' status) under the WSP. Aggregate abundance methods may be used supplementally to meet specific fisheries management requirements. Aggregate abundance LRPs are subdivided into logistic regression LRPs and projection LRPs.  Both types of aggregate abundance LRPs are defined at the SMU-level abundances associated with a desired probabilty of all component CUs being above Red status, but they differ in that logistic regression LRPs are determined directly from historical data while projection LRPs are determined from projections of CU-level population dynamics. We discuss suitability and requirements for the application of the various LRP estimation methods, drawing from the range of data and information availability among the case studies.  In general, the application of aggregate abundance LRPs may be limited to SMUs where the CU-level populations covary, as demonstrated for the Interior Fraser Coho case study, and where covariance has not changed over time or, for projection LRPs, those changes can be parameterized.
-
+  La *Loi sur les pêches* révisée exige que des points de référence limite (PRL) soient déterminés pour tous les grands stocks de poissons. Pour les saumons du Pacifique, les grands stocks de poissons sont représentés par des unités de gestion des stocks (UGS). Une UGS est composée d’une ou de plusieurs unités de conservation (UC) du saumon, qui sont les unités utilisées lors des évaluations en vertu de la Politique concernant le saumon sauvage (PSS). Nous présentons des méthodes d’estimation des PRL au à l’échelle de l’UGS qui intègrent les états des UC selon la PSS. Dans le cadre d’études de cas, nous démontrons et évaluons les PRL pour trois UGS : saumon coho du Fraser intérieur (*Oncorhynchus kisutch*), saumon chinook de la côte ouest de l’île de Vancouver (*O. tshawytscha*) et saumon kéta de la côte sud intérieure (*O. Keta*), à l’exclusion des UC du fleuve Fraser. Les méthodes sont divisées en deux catégories : PRL fondés sur l’état des UC et PRL fondés sur l’abondance agrégée. Les PRL fondés sur l’état des UC sont recommandés comme méthode par défaut et sont fondés sur la proportion d’UC se situant au-dessus des niveaux associés à un risque accru d’extinction (au-dessus de la zone rouge) selon la PSS. Les méthodes fondées sur l’abondance agrégée peuvent être utilisées en complément pour répondre à des exigences particulières de gestion des pêches. Les PRL fondés sur l’abondance agrégée sont subdivisés en PRL de régression logistique et en PRL de projection. Les deux types de PRL fondés sur l’abondance agrégée sont définis comme l’abondance à l’échelle de l’UGS associée à une probabilité souhaitée que l’état de toutes les UC constituantes se trouve au-dessus de la zone rouge, mais ils diffèrent en ce sens que les PRL de régression logistique sont déterminés directement à partir des données historiques et que les PRL de projection sont déterminés à partir des projections de la dynamique des populations à l’échelle de l’UC. Nous discutons de la pertinence et des exigences de l’application des diverses méthodes d’estimation des PRL, en nous inspirant d’une variété de quantités de données disponibles lors des études de cas. En général, l’application des PRL fondés sur l’abondance agrégée peut se limiter aux UGS où il y a une covariance des populations à l’échelle de l’UC, comme le démontre l’étude de cas sur le saumon coho du Fraser intérieur, et où la covariance n’a pas changé au fil du temps ou, pour les PRL de projection, où ces changements peuvent être mesurés.
 header:
 output:
  csasdown::resdoc_pdf:

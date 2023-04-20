@@ -3,9 +3,9 @@ output:
   pdf_document: default
   html_document: default
 ---
-# LRP ESTIMATION METHODS{#MethodsChapter}
+# MÉTHODES D’ESTIMATION DES PRL{#MethodsChapter}
 
-In this section, we provide an overview of methods used to develop LRPs for our three case studies. Detailed methods specific to each case study are provided in Sections \@ref(IFCChapter) (Interior Fraser Coho), \@ref(WCVIchinookChapter) (West Coast Vancouver Island Chinook), and \@ref(ISCchumChapter) (Inside South Coast Chum, excluding Fraser). Links to GitHub repositories with the data and analysis code used for all three case studies are in Appendix \@ref(app:github-appendix). An overview of the approaches applied to each of the three case studies are provided in Table \@ref(tab:lrpapproaches).
+Dans la présente section, nous donnons un aperçu des méthodes utilisées pour élaborer des PRL dans le cadre des trois études de cas. Des méthodes détaillées propres à chaque étude de cas sont fournies dans les sections \@ref(IFCChapter) (saumon coho du Fraser intérieur), \@ref(WCVIchinookChapter) (saumon chinook de la côte ouest de l’île de Vancouver) et \@ref(ISCchumChapter) (saumon kéta de la côte sud intérieure, à l’exclusion des UC du Fraser). Les liens vers les dépôts GitHub ainsi que les données et le code d’analyse utilisés pour les trois études de cas sont présentés à l’annexe \@ref(app:github-appendix). Un aperçu des approches appliquées à chacune des trois études de cas est présenté au tableau \@ref(tab:lrpapproaches).
 
 
 \renewcommand*{\arraystretch}{1.4}
@@ -13,276 +13,276 @@ In this section, we provide an overview of methods used to develop LRPs for our 
 \setlength\heavyrulewidth{0.25ex}
 \centering
 \footnotesize   
-\caption{Overview of CU assessment methods and SMU assessment methods applied for each case study. Cells marked with ‘-‘ at the CU-Level Assessment level indicate that a method was not applied to CUs in that case study.}
+\caption{Aperçu des méthodes d’évaluation des UC et des UGS appliquées pour chaque étude de cas. Les cellules comportant un «~- » au niveau de l’évaluation à l’échelle de l’UC indiquent qu’aucune méthode n’a été appliquée aux UC dans cette étude de cas.}
 \begin{tabular}{p{3.2cm} p{3.2cm} p{2.4cm} p{2.4cm} p{2.4cm}}
 \toprule
-\multicolumn{2}{l}{} & \bf{Interior Fraser Coho} & \bf{WCVI Chinook} & \bf{ISC Chum} \\
+\multicolumn{2}{l}{} & \bf{Saumon coho du Fraser intérieur }& \bf{Saumon chinook de la COIV} & \bf{Saumon kéta de la côte sud intérieure} \\
 \midrule
-\multicolumn{5}{l}{ \bf{CU-level Assessment} }\\
+\multicolumn{5}{l}{ \bf{Évaluation à l’échelle de l’UC} }\\
 \toprule
 
-\multicolumn{2}{l}{\parbox{5.8cm}{Composite Metric (Salmon Scanner) }}& \cellcolor{gray!10}Yes (only for CU status-based LRPs) &   \cellcolor{gray!10}Yes (only for CU status-based LRPs)  &  \cellcolor{gray!10}Yes (only for CU status-based LRPs)\\
+\multicolumn{2}{l}{\parbox{5.8cm}{Paramètre composite (Explorateur de l’état des saumons du Pacifique) }}& \cellcolor{gray!10}Oui (seulement pour les PRL fondés sur l’état des UC) &   \cellcolor{gray!10}Oui (seulement pour les PRL fondés sur l’état des UC)  &  \cellcolor{gray!10}Oui (seulement pour les PRL fondés sur l’état des UC)\\
 \midrule
-\multirow{3}{*}{\parbox{3.2cm}{Single Metric: Abundance relative to lower benchmark}} & Spawner-recruitment benchmark & \cellcolor{gray!10}Yes & - & \textit{Attempted, estimates unreliable}\\
+\multirow{3}{*}{\parbox{3.2cm}{Paramètre unique : abondance par rapport au point de référence inférieur}} & Point de référence : relation géniteur-recrutement & \cellcolor{gray!10}Oui & - & \textit{Tentative, estimations non fiables}\\
 \cline{2-5}
-& Habitat-based benchmark & - & \cellcolor{gray!10}Yes & -\\
+& Point de référence : habitat & - & \cellcolor{gray!10}Oui & -\\
 \cline{2-5}
-& Percentile benchmark & - & - & \cellcolor{gray!10}Yes\\
+& Point de référence : centile & - & - & \cellcolor{gray!10}Oui\\
 \cline{1-5}
-\multicolumn{2}{l}{Single Metric: Distributional} & \cellcolor{gray!10}Yes & - & - \\
+\multicolumn{2}{l}{Paramètre unique : répartition} & \cellcolor{gray!10}Oui & - & - \\
 \bottomrule
-\multicolumn{5}{l}{ \bf{SMU Assessment} }\\
+\multicolumn{5}{l}{ \bf{Évaluation à l’échelle de l’UGS } }\\
 \toprule
 
-\multicolumn{2}{l}{CU status-based LRP (Required for \textit{Fisheries Act})} &  \cellcolor{gray!10}Yes &   \cellcolor{gray!10}Yes &   \cellcolor{gray!10}Yes\\
+\multicolumn{2}{l}{PRL fondés sur l’état des UC (requis selon la \textit{Loi sur les pêches})} &  \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui\\
 \midrule
-\multirow{2}{*}{\parbox{3.2cm}{Aggregate Abundance LRP (Supplemental)}} & Logistic Regression & \cellcolor{gray!10}Yes & \textit{Attempted, data-deficient} &  \textit{Attempted, unreliable} \\ 
+\multirow{2}{*}{\parbox{3.2cm}{PRL fondés sur l’abondance agrégée (supplémentaires)}} & Régression logistique & \cellcolor{gray!10}Oui & \textit{Tentative, données insuffisantes} &  \textit{Tentative, données non fiables} \\ 
 \cline{2-5}
- & Projection & \cellcolor{gray!10}Yes  & \cellcolor{gray!10}Yes &  \textit{Not attempted, deemed unreliable} \\
+ & Projection & \cellcolor{gray!10}Yes  & \cellcolor{gray!10}Oui &  \textit{Aucune tentative, données jugées non fiables} \\
 \bottomrule
 \end{tabular}
 (\#tab:lrpapproaches)
 \end{table}
 
 
-## OVERVIEW
+## APERÇU
 
-We consider two types of LRPs based on two different metrics:
+Nous examinons deux types de PRL fondés sur deux paramètres différents.
 
-1) CU status-based LRPs use a proportion as the metric upon which LRPs are based. Specifically, they use the proportion of CUs within an SMU that are above the Red WSP status zone. We assume that in order for an SMU to remain above its CU status-based LRP, 100% of CUs must have status estimates above Red (i.e., either Amber or Green).
+1) Les PRL fondés sur l’état des UC (paramètre : une proportion sur laquelle les PRL sont fondés). Plus précisément, on utilise la proportion des UC à l’intérieur d’une UGS dont l’état se trouve au-dessus de la zone rouge de la PSS. Nous supposons que pour qu’une UGS demeure au-dessus de son PRL fondé sur l’état des UC, l’état de 100 % des UC doit se trouver au-dessus de la zone rouge (c’est-à-dire dans la zone ambre ou verte).
 
-2) Aggregate abundance LRPs use the total SMU-level spawning abundance as the metric upon which LRPs are based. Two methods of developing aggregate abundance LRPs are applied: (i) Logistic Regression LRPs and (ii) Projection LRPs.
+2) Les PRL fondés sur l’abondance agrégée (paramètre : l’abondance totale des géniteurs à l’échelle de l’UGS). On applique deux méthodes d’élaboration des PRL fondés sur l’abondance agrégée : (i) le PRL de régression logistique et (ii) le PRL de projection.
 
-We propose that CU status-based LRPs are more appropriate for Pacific salmon SMUs because they more directly align with DFO's WSP objectives of maintaining salmon biodiversity; however, aggregate abundance LRP methods may be added to meet specific fisheries management requirements. 
-
-
-We implement CU status-based LRPs using approaches developed to assess CU status under DFO's WSP [@dfoCanadaPolicyConservation2005; @holtIndicatorsStatusBenchmarks2009] and implemented for a subset of priority CUs [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020]. These approaches use multiple metrics to evaluate status including trends in abundance and abundance metrics, and an expert-driven integration approach to combine statuses across metrics into a single status for each CU. In our case study applications, we apply the recently developed Pacific Salmon Status Scanner tool (also referred to as the 'Salmon Scanner'; Pestal et al., In prep^[Pestal, G., MacDonald, B, Grant, S, and Holt, C., In prep. Rapid Status Approximations from Integrated Expert Assessments Under Canada’s Wild Salmon Policy. Can. Tech. Rep. Fish. Aquat. Sci.]) as a way to rapidly approximate more detailed WSP status assessments. The Salmon Scanner allows us to rapidly generate up-to-date estimates of integrated CU status for all of our case study applications.
+Nous sommes d’avis que les PRL fondés sur l’état des UC sont davantage appropriés pour les unités de gestion des saumons du Pacifique parce qu’ils correspondent plus directement aux objectifs de maintien de la biodiversité des saumons de la PSS du MPO. Toutefois, des méthodes de PRL fondés sur l’abondance agrégée peuvent être utilisées pour répondre à des exigences particulières de gestion des pêches. 
 
 
-When developing candidate aggregate abundance LRPs, we aim to maintain consistency with the WSP by defining LRPs as aggregate abundance levels that have a high probability of all CUs being above their Red status zone. For these LRPs, estimates of CU status are approximated based on a comparison of spawning abundance to a single lower benchmark for each CU. Exceptions are described within specific case study applications below.
+Nous mettons en œuvre des PRL fondés sur l’état des UC à l’aide d’approches élaborées pour évaluer l’état des UC dans le cadre de la PSS du MPO [@dfoCanadaPolicyConservation2005; @holtIndicatorsStatusBenchmarks2009] et mises en œuvre pour un sous-ensemble d’UC prioritaires [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020]. Ces approches utilisent de multiples paramètres pour évaluer l’état, y compris les tendances en matière d’abondance et des paramètres de l’abondance, et une approche d’intégration axée sur l’expertise pour combiner les états selon tous les paramètres en un seul état pour chaque UC. Dans nos applications aux études de cas, nous utilisons l’Explorateur de l’état des saumons du Pacifique récemment mis au point (Pestal et al., en préparation^[Pestal, G., MacDonald, B, Grant, S, and Holt, C.,. Approximations rapides de l’état tirées des évaluations d’experts intégrées en vertu de la Politique sur le saumon sauvage du Canada. Rapp. tech. can. sci. halieut. aquat.]) afin d’effectuer des approximations rapides d’évaluations détaillées de l’état selon la PSS. L’Explorateur de l’état des saumons du Pacifique nous permet de produire rapidement des estimations à jour de l’état intégré d’UC pour toutes nos applications aux études de cas.
 
 
-We also maintain consistency with the WSP by only including spawning streams without significant enhancement when evaluating CU and SMU status. We use the Proportionate Natural Influence metric, PNI,as a basis for defining 'significant enhancement'. PNI is a metric designed to estimate the relative strength of the hatchery and natural selective pressures resulting from gene flow between the two environments, and is used as a basis for determining genetic risk of hatcheries on natural populations. Values less than 0.5 indicate populations where most fish are hatchery origin (classified as integrated-hatchery populations) [@withlerGeneticallyBasedTargets2018]. We defined 'significantly enhanced' populations as those with PNI values $<$ 0.5 and excluded them from case study analyses. 
+Lors de l’élaboration des PRL fondés sur l’abondance agrégée possibles, nous visons à maintenir la cohérence avec la PSS en définissant les PRL comme des niveaux d’abondance agrégée associés à une forte probabilité que l’état de toutes les UC se situe au-dessus de la zone rouge. Pour ces PRL, les estimations de l’état des UC sont approximatives en fonction d’une comparaison de l’abondance des géniteurs à un seul point de référence inférieur pour chaque UC. Les exceptions sont décrites dans les applications distinctes aux études de cas ci-dessous.
 
 
-Systems with levels of PNI $\geqslant$ 0.5 can still have hatchery influences; however, dynamics are predominately natural origin. Where time-series of the proportion of hatchery marked fish on the spawning grounds are available (e.g., Interior Fraser Coho case study), these proportions are used to inform assessments in two ways: first to develop time-series of natural-origin recruitment for benchmark estimation based on stock-recruitment relationships and second to develop time series of natural-origin spawners for status assessment against benchmarks.  When reliable time-series of the proportion of hatchery influence are not available (WCVI Chinook), total spawners are used for LRP analyses provided that the threshold of assumed PNI $\geqslant$ 0.5 has been met.     
+Nous assurons également la cohérence avec la PSS en n’incluant que les cours d’eau de fraie qui n’ont pas été l’objet d’une mise en valeur importante lors de l’évaluation de l’état à l’échelle de l’UC et de l’UGS. Nous utilisons le paramètre de l’influence naturelle proportionnelle (INP) comme base pour définir une « mise en valeur importante ». L’INP est un paramètre conçu pour estimer la force relative des écloseries et les pressions de sélection naturelles résultant du flux génétique entre les deux environnements, et il sert de base pour déterminer le risque génétique des écloseries sur les populations naturelles. Les valeurs inférieures à 0,5 indiquent des populations où la plupart des poissons proviennent d’une écloserie (classées comme des populations d’écloserie intégrées) [@withlerGeneticallyBasedTargets2018]. Nous avons défini les populations « considérablement mises en valeur » comme celles dont les valeurs de l’INP $<$ 0,5 et nous les avons exclues des analyses des études de cas. 
 
 
-More detailed descriptions of LRP estimation methods are provided in the following sections, while guidance on when and how CU status-based and aggregate abundance LRPs should be applied is provided in @holtGuidelinesDefiningLimitInpress. We recommend that users consult @holtGuidelinesDefiningLimitInpress before applying any of the methods described in this case study paper.
+Les réseaux ayant des niveaux d’INP à $\geqslant$ 0,5 peuvent encore avoir une influence sur les écloseries; cependant, la dynamique est principalement d’origine naturelle. Lorsqu’une série chronologique de la proportion de poissons d’écloserie marqués présents dans les frayères est disponible (p. ex., étude de cas sur le saumon coho du Fraser intérieur), cette proportion sert à éclairer les évaluations de deux façons : premièrement, pour élaborer une série chronologique du recrutement d’origine naturelle pour l’estimation de points de référence fondés sur la relation stock-recrutement et, deuxièmement, pour élaborer une série chronologique des géniteurs d’origine naturelle pour l’évaluation de l’état par rapport aux points de référence. Lorsqu’une série chronologique fiable de la proportion de l’influence des poissons d’écloserie n’est pas disponible (saumon chinook de la COIV), le nombre total de géniteurs est utilisé pour les analyses de l’INP, à condition que le seuil de l’INP présumée de $\geqslant$ 0,5 ait été atteint.
 
 
+Des descriptions plus détaillées des méthodes d’estimation du PRL sont fournies dans les sections suivantes, tandis que des directives sur le moment et la façon d’appliquer les PRL fondés sur l’état des UC et l’abondance agrégée sont fournies dans @holtGuidelinesDefiningLimitInpress. Nous recommandons aux utilisateurs de consulter @holtGuidelinesDefiningLimitInpress avant d’appliquer l’une ou l’autre des méthodes décrites dans le présent document portant sur des études de cas.
 
-## CU STATUS-BASED LRPS
+## PRL FONDÉS SUR L’ÉTAT DES UC
 
-A CU status-based LRP was set as 100% of CUs above their Red status zone. The LRP therefore acts as a trigger that is breached when one or more CUs in an SMU is assessed as having Red status. Rationale for this choice of 100% of CUs required to be above Red status is described in @holtGuidelinesDefiningLimitInpress.
-
-
-We compare three different methods of assessing CU status when using CU status-based LRPs: (i) the proportion of CUs with a recent WSP status assessment above the Red zone (e.g., @grant2017FraserSockeye2020), (ii) the proportion of CUs with a recent Salmon Scanner status assessment above the Red zone (see below for more details), and (iii) the proportion of CUs with status estimated to be above a single CU lower benchmark (e.g., S~gen~, percentile-based benchmarks, etc.). We recommend methods using composite metrics such as (i) and (ii) for CU assessments, and provide method (iii) for comparison purposes.
+Un PRL fondé sur l’état des UC a été fixé à 100 % des UC dont l’état se situe au-dessus de la zone rouge. Le PRL sert donc de déclencheur qui est dépassé lorsque l’état d’une ou plusieurs UC d’une UGS est évalué comme se trouvant en zone rouge. La justification de ce choix de 100 % des UC affichant un état se situant au-dessus de la zone rouge est décrite dans @holtGuidelinesDefiningLimitInpress.
 
 
-When assessing CU status relative to a single abundance-based lower benchmark in approach (iii), we compare generational mean spawner abundances to the benchmark, as described in @holtGuidelinesDefiningLimitInpress.
+Nous comparons trois méthodes différentes d’évaluation de l’état des UC lorsque nous utilisons des PRL fondés sur l’état des UC : (i) la proportion d’UC ayant fait l’objet d’une évaluation récente de l’état selon la PSS qui se situent au-dessus de la zone rouge (p. ex., @grant2017FraserSockeye2020); (ii) la proportion d’UC ayant fait l’objet d’une évaluation récente de l’état selon l’Explorateur de l’état des saumons du Pacifique qui se situent au-dessus de la zone rouge (voir ci-dessous plus de détails); (iii) la proportion d’UC dont l’état est estimé être au-dessus du PRI d’une seule UC (G~gén~, points de référence fondés sur le centile, etc.). Nous recommandons des méthodes utilisant des paramètres composites comme (i) et (ii) pour les évaluations des UC, et nous fournissons la méthode (iii) à des fins de comparaison.
 
 
-### MULTIDIMENSIONAL APPROACH TO CU STATUS ASSESSMENTS WITHIN THE PACIFIC SALMON STATUS SCANNER {#rapidToolMethods}
-
-The Pacific Salmon Status Scanner (the Salmon Scanner) estimates statuses for individual WSP metrics and also integrates the statuses on multiple metrics into a single status estimate (e.g., Red, Amber, Green; Pestal et al., In prep).  By automating this process, the Salmon Scanner supports implementation of Canada's WSP by rapidly approximating the more detailed, comprehensive WSP status assessment process. The Salmon Scanner’s approach can be implemented annually and for a broader range of CUs, given it is less time and labour intensive that full WSP integrated status assessments. The Salmon Scanner was developed using Classification and Regression Tree (CART) analyses, and expert judgement gained from integrated status assessment processes, to create algorithms that approximate the integrated status assessment results. 
-
-Data inputs and outcomes from previous WSP assessment processes were used in analyses used to develop the Salmon Scanner: Fraser River Sockeye, Interior Fraser Coho, and Southern BC Chinook [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @dfo2017FraserSockeye2018;  @grant2017FraserSockeye2020]. Briefly, the Salmon Scanner uses a decision tree to estimate CU status based on data type, quality, abundance, and trends (e.g., Figure \@ref(fig:decision-tree)). The decision tree algorithm was verified with data and local expertise (Pestal et al. In prep). As with other methods, an expert review of rapid status results for each CU is intended to be incorporated into the application of this tool (S. Grant, DFO, Vancouver, BC, pers. comm.). Such a review would help identify occurrences of false negatives or false positives in estimated CU status through expert opinion.  When using this method in the case study, we took the outputs of the algorithms at face value and did not confirm them based on expert opinion. In practice, results from the Salmon Scanner will be validated against local expertise when implemented annually (S. Grant, DFO, Vancouver, BC, pers. comm.). 
-
-For absolute or relative abundance metrics, the Salmon Scanner uses the most recent generational mean spawner abundance (calculated as a running geometric mean) to compare to benchmarks, including absolute abundance thresholds (e.g., 1500 spawners), abundance-based lower benchmarks (e.g., S~gen~ or percentile), and abundance-based upper benchmarks (e.g., 0.8S~MSY~ or percentiles). Generational mean spawner abundances are also used when calculating trends in spawner abundances over time (Pestal et al., In prep.)
-
-## AGGREGATE ABUNDANCE LRPS{#aggAbundMethods}
-
-Aggregate abundance LRPs are based on the assumption that there is a predictable relationship between SMU-level abundance and the probability that all CUs will be above Red status. When estimating aggregate abundance LRPs, status relative to a single lower benchmark (LBM) is used a proxy for status above the Red zone. Aggregate abundance LRPs are then estimated by using the predicted relationship to find the SMU-level abundance at which there is a prescribed probability that 100% of CUs (the same proportion that was used for CU status-based LRPs) will be above the LBM. 
+Lorsque nous évaluons l’état des UC par rapport à un seul PRI fondé sur l’abondance selon l’approche (iii), nous comparons l’abondance moyenne générationnelle des géniteurs au point de référence, tel que décrit à la section @holtGuidelinesDefiningLimitInpress.
 
 
-The above definition of aggregate abundance LRPs requires a decision to be made about the required probability that 100% of CUs will be above their LBMs. We consider four alternative probability levels for our case studies that represent a range of calibrated probability categories developed by the Intergovernmental Panel on Climate Change [@mastrandreaGuidanceNoteLead2010]: 50%, 66%, 90%, and 99%. The 50% value represents the mid-point of the "About as likely as not" category (33 - 66%), indicating that there is an equal probability that all CUs will be above their LBMs as there is that they will not. The 66% values represents the lower end of the "Likely" category (i.e., it is "Likely" that all CUs will be above their LBMs), the 90% value represents the lower end of the "Very Likely" category, and the 99% value represents the "Virtually Certain" category. A discussion of considerations for selecting the appropriate probability threshold when calculating abundance LRPs is included in @holtGuidelinesDefiningLimitInpress.
+### APPROCHE MULTIDIMENSIONNELLE DES ÉVALUATIONS DE L’ÉTAT DES UC SELON L’EXPLORATEUR DE L’ÉTAT DES SAUMONS DU PACIFIQUE {#rapidToolMethods}
+
+L’Explorateur de l’état des saumons du Pacifique (ci-après appelé « l’Explorateur ») permet d’estimer les états selon des paramètres particuliers de la PSS et intègre également les états pour de multiples paramètres en une seule estimation de la zone d’état (rouge, ambre ou verte; Pestal et al., en préparation). En automatisant ce processus, l’Explorateur appuie la mise en œuvre de la PSS du Canada en reproduisant rapidement le processus d’évaluation de l’état de cette Politique, plus détaillé et plus complet. L’approche de l’Explorateur peut être mise en œuvre annuellement et pour un plus large éventail d’UC, étant donné qu’il faut moins de temps et de travail pour effectuer des évaluations intégrées de l’état selon la PSS. L’Explorateur a été mis au point à l’aide d’analyses de l’arbre de classification et de régression (CART) et du jugement d’experts tiré des processus intégrés d’évaluation de l’état, afin de créer des algorithmes qui se rapprochent des résultats de l’évaluation intégrée de l’état. 
+
+Les entrées de données et les résultats des processus d’évaluation antérieurs de la PSS ont été utilisés dans les analyses auxquelles on a eu recours pour élaborer l’Explorateur : saumon rouge du fleuve Fraser, saumon coho du Fraser intérieur et saumon chinook du sud de la Colombie-Britannique [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @dfo2017FraserSockeye2018;  @grant2017FraserSockeye2020]. En bref, l’Explorateur utilise un arbre de décision pour estimer l’état des UC en fonction du type de données, de la qualité, de l’abondance et des tendances (p. ex., figure \@ref(fig:decision-tree)). L’algorithme de l’arbre de décision a été vérifié à l’aide de données et de l’expertise locale (Pestal et al. en préparation). Comme pour les autres méthodes, un examen réalisé par des experts des résultats rapides relatifs à l’état de chaque UC doit être intégré à l’application de cet outil (S. Grant, MPO, Vancouver, C.-B., comm. pers.). Un tel examen aiderait à repérer les occurrences de faux négatifs ou de faux positifs liés à l’état estimé des UC au moyen de l’opinion d’experts. Lorsque nous avons utilisé cette méthode dans l’étude de cas, nous avons pris les résultats des algorithmes à leur valeur apparente et nous ne les avons pas confirmés en nous fondant sur l’opinion d’experts. En pratique, les résultats de l’Explorateur seront validés par rapport à l’expertise locale lorsqu’ils seront mis en œuvre chaque année (S. Grant, MPO, Vancouver, C.-B., comm. pers.). 
+
+Pour les paramètres de l’abondance absolue ou relative, l’Explorateur utilise l’abondance moyenne générationnelle des géniteurs la plus récente (calculée comme moyenne géométrique mobile) pour comparer les points de référence, y compris les seuils d’abondance absolus (p. ex., 1 500 géniteurs), les points de référence inférieurs fondés sur l’abondance (p. ex., G~gén~ ou centile) et les points de référence supérieurs fondés sur l’abondance (p. ex., 0,8G~RMD~ ou centiles). L’abondance moyenne générationnelle des géniteurs est également utilisée pour calculer les tendances de l’abondance des géniteurs au fil du temps (Pestal et al. en préparation).
+
+##PRL FONDÉS SUR L’ABONDANCE AGRÉGÉE{#aggAbundMethods}
+
+Les PRL fondés sur l’abondance agrégée se basent sur l’hypothèse qu’il existe une relation prévisible entre l’abondance à l’échelle de l’UGS et la probabilité que l’état de toutes les UC se situe au-dessus de la zone rouge. Pour estimer les PRL fondés sur l’abondance agrégée, on utilise l’état relatif à un seul PRI comme indicateur de l’état au-dessus de la zone rouge. On estime ensuite les PRL fondés sur l’abondance agrégée à l’aide de la relation prévue pour trouver l’abondance à l’échelle de l’UGS à laquelle il y a une probabilité prescrite que 100 % des UC (la même proportion utilisée pour les PRL fondés sur l’état des UC) se situent au-dessus du PRI. 
+
+
+La définition susmentionnée des PRL fondés sur l’abondance agrégée exige qu’une décision soit prise quant à la probabilité requise que 100 % des UC se situent au-dessus leur PRI. Nous considérons quatre niveaux de probabilité de rechange pour nos études de cas qui représentent une gamme de catégories de probabilité calibrées élaborées par le Groupe d’experts intergouvernemental sur l’évolution du climat[@mastrandreaGuidanceNoteLead2010] : 50 %, 66 %, 90 % et 99 %. La valeur de 50 % représente le point milieu de la catégorie « à peu près aussi probable qu’improbable » (de 33 % à 66 %), ce qui indique qu’il y a une probabilité égale que toutes les UC seront au-dessus de leur PRI, car il y a une probabilité égale qu’elles ne le seront pas. Les valeurs de 66 % représentent la limite inférieure de la catégorie « probable » (c’est-à-dire qu’il est « probable » que toutes les UC se situeront au-dessus de leur PRI), la valeur de 90 % représente la limite inférieure de la catégorie « très probable », et la valeur de 99 % représente la catégorie « pratiquement certain ». Une analyse des considérations pour le choix du seuil de probabilité approprié lors du calcul des PRL fondés sur l’abondance est incluse dans @holtGuidelinesDefiningLimitInpress.
  
  
-We consider two types of aggregate abundance LRPs in our case studies: logistic regression LRPs and projection LRPs. These two methods differ in the approach taken to estimate the underlying relationship between SMU-level aggregate abundance and the probability that all CUs will be above their LBMs. Logistic regression LRPs are estimated by fitting statistical models to historical data to estimate this relationship. In this case, LRPs are based on previously observed covariation in CU status, and thus implicitly assume the past is a reasonable approximation of the future. In comparison, projection LRPs use historical data as a basis for quantifying population dynamics, and then project population dynamics using stochastic simulations to identify an equilibrium state. Simulation outputs are then used to characterize the underlying relationship between aggregate abundance and the probability that all CUs will be above their LBMs. 
+Nous considérons deux types de PRL fondés sur l’abondance agrégée dans nos études de cas : le PRL de régression logistique et le PRL de projection. Les deux méthodes diffèrent selon l’approche adoptée pour estimer la relation sous-jacente entre l’abondance agrégée à l’échelle de l’UGS et la probabilité que toutes les UC se situent au-dessus de leur PRI. On estime les PRL de régression logistique en ajustant les modèles statistiques aux données historiques pour estimer cette relation. Dans ce cas, les PRL sont fondés sur la covariation observée précédemment dans l’état des UC et supposent donc implicitement que le passé est une approximation raisonnable de l’avenir. En comparaison, les PRL de projection utilisent les données historiques comme base pour quantifier la dynamique de la population, puis projettent la dynamique de la population à l’aide de simulations stochastiques pour déterminer un état d’équilibre. Les résultats de la simulation servent ensuite à caractériser la relation sous-jacente entre l’abondance agrégée et la probabilité que toutes les UC se situent au-dessus de leur PRI. 
 
 
-The projection LRP approach allows uncertainty in current (or future) processes that might affect estimation of the LRP to be accounted for through alternative scenarios. For example, if there is evidence of recent changes in covariation among CUs, possibly due to a subset of CUs experiencing reduced productivity, this hypothesis can be modelled in projections. In comparison, logistic regression LRPs are limited to using historically observed data, which may not include enough observations of the new and emerging covariation structure. 
-
+L’approche du PRL de projection permet de prendre en compte l’incertitude dans les processus actuels (ou futurs) qui pourrait avoir une incidence sur l’estimation du PRL, au moyen de scénarios de rechange. Par exemple, s’il existe des éléments de preuve de changements récents de la covariation entre les UC, possiblement en raison d’un sous-ensemble d’UC dont la productivité est réduite, cette hypothèse peut être modélisée dans les projections. En comparaison, le PRL de régression logistique se limite à l’utilisation de données observées historiquement, qui peuvent ne pas inclure suffisamment d’observations de la structure de covariation nouvelle et émergente. 
 
 \newpage
 \begin{landscape}
-```{r decision-tree, fig.cap="Decision tree (also referred to as the multidimensional algorithm) used in the Pacific Salmon Status Scanner to assess status of Conservation Units based on multiple metrics under the Wild Salmon Policy (Pestal et al. In prep.)", warning=FALSE, echo=FALSE, fig.align="center",out.width = "100%" }
+```{r decision-tree, fig.cap="Arbre de décision (aussi appelé algorithme multidimensionnel) utilisé dans l’Explorateur pour évaluer l’état des unités de conservation en fonction de multiples paramètres dans le cadre de la PSS (Pestal et al. en préparation)", warning=FALSE, echo=FALSE, fig.align="center",out.width = "100%" }
 source("R/make_tree_diagram.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
 \end{landscape}
 
 
-For both logistic regression and projection LRPs, we characterize annual CU status using a single metric, spawner abundances relative to a LBM, instead of using the status from the multidimensional algorithm within the Salmon Scanner tool. While in theory, estimates of CU status from the multidimensional approach could be used for logistic regression LRPs, we found little evidence of a statistical relationship between CU statuses from the Salmon Scanner and aggregate spawner abundances for the one case study where we considered this approach, Interior Fraser Coho. We provide further discussion of this result within the Interior Fraser Coho case study section of this paper. In addition, projection LRPs are derived from equilibrium conditions identified from projections that do not incorporate temporal dynamics required for assessment of trends in the multidimensional approach. While estimates of CU status relative to a single LBM such as S~gen~ is a readily available output from the Salmon Scanner tool, we calculated these metrics external to the tool for our case studies.
+Autant pour le PRL de régression logistique que pour le PRL de projection, nous caractérisons l’état annuel des UC à l’aide d’un paramètre unique, l’abondance des géniteurs par rapport à un PRI, plutôt que d’utiliser l’état selon l’algorithme multidimensionnel de l’Explorateur. Bien qu’en théorie, les estimations de l’état des UC réalisées à partir de l’approche multidimensionnelle pourraient être utilisées pour les PRL de régression logistique, nous avons trouvé peu de données probantes d’une relation statistique entre les états des UC selon l’Explorateur et l’abondance agrégée des géniteurs pour la seule étude de cas où nous avons examiné cette approche, celle du saumon coho du Fraser intérieur. Nous fournissons une analyse plus approfondie de ce résultat dans la section du présent document portant sur l’étude de cas sur le saumon coho du Fraser intérieur. De plus, les PRL de projection sont obtenus des conditions d’équilibre déterminées à partir de projections qui n’intègrent pas la dynamique temporelle requise pour l’évaluation des tendances dans l’approche multidimensionnelle. Bien que les estimations de l’état des UC par rapport à un seul PRI, comme G~gén~, soient des résultats facilement accessibles à partir de l’Explorateur, nous avons calculé ces paramètres sans avoir recours à l’outil pour nos études de cas.
 
 
-When assessing CU status for the purpose of estimating aggregate abundance LRPs, we used unsmoothed annual spawner abundances instead of generational averages. This approach was based on preliminary analyses of the logistic regression method that showed using unsmoothed spawner abundances improved the spread in the data used to establish a relationship between CU status and aggregate spawning abundance. Furthermore, using generational means in the logistic regression approach led to considerable autocorrelation in the aggregate abundance time series, violating assumptions of the logistic regression.
+Lors de l’évaluation de l’état des UC aux fins de l’estimation des PRL fondés sur l’abondance agrégée, nous avons utilisé l’abondance annuelle des géniteurs non lissée plutôt que la moyenne générationnelles Cette approche était fondée sur des analyses préliminaires de la méthode de régression logistique qui ont montré que l’utilisation de l’abondance des géniteurs non lissée a amélioré la propagation des données utilisées pour établir une relation entre l’état des UC et l’abondance agrégée des géniteurs. De plus, l’utilisation de la moyenne générationnelle dans l’approche de régression logistique a entraîné une autocorrélation considérable dans la série chronologique d’abondance agrégée, ce qui contrevient aux hypothèses de la régression logistique.
 
 
-However, when assessing SMU status, we used generational running averages (geometric average) of aggregate spawner abundances. This approach reduced variability in annual decisions about whether an LRP had been breached arising from variability in cohorts within a generation.  The decision to use generational averages of aggregate spawner abundances when determining whether an LRP is breached is consistent with the approach used for CU status-based LRPs. In both cases, the underlying metric being used to determine SMU status (either aggregate abundance or CU-level status of component CUs for the CU status-based approach) is based on generational-averaged values in order to reduce annual variability in status.
+Toutefois, lorsque nous avons évalué l’état à l’échelle de l’UGS, nous avons utilisé la moyenne générationnelle (moyenne géométrique) de l’abondance agrégée des géniteurs. Cette approche a réduit la variabilité des décisions annuelles quant à savoir si un PRL avait été dépassé en raison de la variabilité des cohortes au cours d’une génération. La décision d’utiliser la moyenne générationnelle de l’abondance agrégée des géniteurs pour déterminer si un PRL est dépassé est conforme à l’approche utilisée pour les PRL fondés sur l’état des UC. Dans les deux cas, le paramètre sous-jacent qui a servi à déterminer l’état de l’UGS (abondance agrégée ou état à l’échelle de l’UC des UC constituantes pour l’approche fondée sur l’état des UC) est fondé sur les valeurs de moyenne générationnelle afin de réduire la variabilité annuelle de l’état.
 
 
-### Logistic regression LRPs{#logisticMethods}  
+### PRL de régression logistique{#logisticMethods}  
 
 
-Logistic regression LRPs are derived from an empirically estimated relationship between CU-level status and aggregate SMU abundance. Using this approach, the LRP represents the aggregate abundance level that has historically been associated with a given probability of 100% of CUs having status above a selected LBM. For each year of observed data, CU-level status is quantified as a Bernoulli variable: 1 (success) = all CUs have estimated status greater than their LBM and 0 (failure) = all CUs do not have status > LBM. A logistic regression is then fit to these outcomes to predict the probability that all CUs will have status > LBM as a function of aggregate SMU spawner abundance using the logistic regression equation:
+Les PRL de régression logistique sont obtenus à partir d’une relation estimée empiriquement entre l’état à l’échelle de l'UC et l’abondance agrégée à l’échelle de l’UGS. À l’aide de cette approche, le PRL représente le niveau d’abondance agrégée qui a historiquement été associé à une probabilité donnée que 100 % des UC aient un état supérieur à un PRI sélectionné. Pour chaque année de données observées, l’état à l’échelle de l’UC est quantifié sous forme de variable de Bernoulli : 1 (réussite; toutes les UC présentent un état estimé supérieur à leur PRI) et 0 (échec; toutes les UC ne présentent pas un état supérieur à leur PRI). Une régression logistique est ensuite ajustée à ces résultats pour prédire la probabilité que toutes les UC aient un état supérieur à leur PRI en fonction de l’abondance agrégée des géniteurs à l’échelle de l’UGS à l’aide de l’équation de régression logistique :
+
 
 \begin{equation}
-  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t}
+  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nUC} G_{i,t}
    (\#eq:logistic)
 \end{equation}
 
-where, $p$ is probability, $B_0$ and $B_1$ are estimated logistic regression parameters and $S_{i,t}$ is spawner abundance to CU $i$ in year $t$. Equation \@ref(eq:logistic) is then re-arranged to calculate the LRP as the aggregate spawner abundance associated with the pre-specified probability threshold of $p^*$,
+où $p$ est la probabilité, $B_0$ et $B_1$ sont des paramètres de régression logistique estimés et $G_{i,t}$ est l’abondance des géniteurs par rapport à l’UC $i$ dans l’année $t$. L’équation \@ref(eq:logistic) est ensuite réorganisée pour calculer le PRL comme l’abondance agrégée des géniteurs associée au seuil de probabilité prédéterminé de $p^*$,
 
 \begin{equation}
-  LRP = \frac{log(\frac{p^*}{1-p^*}) - B_0}{B_1}
+  PRL = \frac{log(\frac{p^*}{1-p^*}) - B_0}{B_1}
   (\#eq:logisticLRP)
 \end{equation}
 
-An example logistic regression fit is shown in Figure \@ref(fig:example-logisticFit). We show the estimation of LRPs based on this fit for four possible probability thresholds: $p^*$ = 0.5, 0.66, 0.90, and 0.99. For each $p^*$ level, LRP estimates represent the aggregate abundance that is associated with that probability of all CUs having status greater than their LBM. LRPs were calculated from parameters of the logistic regression model (Eqn. \@ref(eq:logisticLRP)), with uncertainty in the LRP quantified based on a 95% confidence interval on the maximum likelihood estimate, MLE.  
+Un exemple d’ajustement de régression logistique est présenté à la figure \@ref(fig:example-logisticFit). Nous montrons l’estimation des PRL en fonction de cet ajustement pour quatre seuils de probabilité possibles : $p^*$ = 0,5, 0,66, 0,90 et 0,99. Pour chaque niveau $p^*$, les estimations du PRL représentent l’abondance agrégée associée à la probabilité que toutes les UC aient un état supérieur à leur PRI. Les PRL ont été calculés à partir des paramètres du modèle de régression logistique (équation. \@ref(eq:logisticLRP)), et l’incertitude du PRL a été quantifiée en fonction d’un intervalle de confiance de 95 % pour l’estimation correspondant à un maximum de vraisemblance.  
 
 
-```{r example-logisticFit, fig.cap="Logistic regression fit to annual Bernoulli data to predict the probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance. Each black dot represent a year in the observed time series as a Bernoulli indicator showing whether the requirement of all CUs above their LBM was met (success = 1) or not (failure = 0) as a function of aggregate spawning abundance to the SMU. The black solid line is the maximum likelihood model fit to indicator data, and the grey shaded region shows the 95\\% confidence interval around the fit model. Coloured lines illustrate aggregate abundance LRPs for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) probability that all CUs > LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
+```{r example-logisticFit, fig.cap="Régression logistique ajustée aux données annuelles de Bernoulli pour prévoir la probabilité que toutes les UC se trouvent au-dessus de leur PRI en fonction de l’abondance agrégée à l’échelle de l’UGS. Chaque point noir représente une année dans la série chronologique observée comme un indicateur de Bernoulli qui montre si l’exigence d’avoir toutes les UC au-dessus de leur PRI a été satisfaite (réussite = 1) ou non (échec = 0) en fonction de l’abondance agrégée des géniteurs à l’échelle de l’UGS. La ligne noire pleine représente l’ajustement du modèle de maximum de vraisemblance aux données de l’indicateur, et la zone grisée indique l’intervalle de confiance de 95\\% du modèle d’ajustement. Les lignes de couleur illustrent les PRL fondés sur l’abondance agrégée pour quatre seuils de probabilité différents : p* = 0,5 (jaune), 0,66 (bleu), 0,90 (vert) et 0,99 (orange) probabilité que toutes les UC soient au-dessus de leur PRI. Les lignes en pointillés horizontales croisent l’axe des y à chaque seuil de probabilité, tandis que les lignes verticales pleines montrent l’échappée agrégée correspondante qui représentera le PRL.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-LogisticLRP.png")
 ```
 &nbsp;
 
-We initially considered an alternative approach to logistic regression in which the LRP represents the aggregate abundance that has historically been associated with a pre-specified proportion of CUs being above their lower benchmark. Using this approach, a logistic regression was fit to predict the proportion of CUs with status > LBM as a function of aggregate spawner abundance to the SMU (i.e., abundance from nCUs combined). We do not present this method for our case studies, however, due to inherent limitations when the required proportion of CUs above their lower benchmarks is 100%. Equation \@ref(eq:logisticLRP) cannot be solved directly for a threshold proportion of $p^*$ = 100%, and LRP estimates were highly sensitive to the choice of $p^*$ value used as a proxy. Using $p^*$ = 99% vs. $p^*$ = 99.9% vs. $p^*$ = 99.99% gave very different LRP estimates. 
 
-The logistic regression model was implemented in TMB [@kristensenTMBAutomaticDifferentiation2016]. The model was statistically integrated, which means that both the CU-specific lower benchmarks (S~gen~) and the SMU logistic regression parameters were estimated within the same statistical model. The integrated approach allowed for the propagation of uncertainty in parameter estimates from the CU level to the SMU level, resulting in uncertainty intervals that better capture uncertainty in benchmarks as well as the logistic model fit.  
+Nous avons d’abord envisagé une autre approche de régression logistique dans laquelle le PRL représente l’abondance agrégée qui a toujours été associée à une proportion prédéterminée des UC se trouvant au-dessus de leur PRI. À l’aide de cette approche, une régression logistique était ajustée pour prédire la proportion d’UC dont l’état était supérieur au PRI en fonction de l’abondance agrégée des géniteurs à l’échelle de l’UGS (c’est-à-dire l’abondance des nUC combinées). Nous ne présentons pas cette méthode pour nos études de cas, toutefois, en raison de limites inhérentes lorsque la proportion requise d’UC au‑dessus de leur PRI est de 100 %. L’équation \@ref(eq:logisticLRP) ne peut pas être résolue directement pour une proportion seuil de $p^*$ = 100 %, et les estimations du PRL étaient très sensibles au choix de la valeur $p^*$ utilisée comme approximation. L’utilisation de $p^*$ = 99 % par rapport à $p^*$ = 99,9 % par rapport à $p^*$ = 99,99 % a donné des estimations très différentes du PRL. 
 
-
-##### Logistic Regression Model Diagnostics  
+Le modèle de régression logistique a été mis en œuvre dans TMB [@kristensenTMBAutomaticDifferentiation2016]. Le modèle a été statistiquement intégré, ce qui signifie que les PRI (G~gén~) propres aux UC et les paramètres de régression logistique à l’échelle de l’UGS ont été estimés dans le même modèle statistique. L’approche intégrée a permis la propagation de l’incertitude dans les estimations des paramètres de l’échelle de l’UC à l’échelle de l’UGS, ce qui a donné lieu à des intervalles d’incertitude qui saisissent mieux l’incertitude dans les points de référence ainsi que l’ajustement du modèle logistique.  
 
 
-There are several assumptions associated with logistic regression, three of which are relevant for our application to LRPs and are listed below. Model diagnostics were applied to evaluate the extent to which those assumptions were met, as well as statistical significance of model coefficients, goodness-of-fit, and classification accuracy of LRPs developed from the logistic regression. The three assumptions are as follows:
-
-1. The relationship between aggregate abundance and log-odds (the logarithm of the odds of all CUs being above their lower benchmark) is linear.
-
-2. The observations are independent of each other (i.e., residuals are not autocorrelated).
-
-3. There are no influential outliers. 
+##### Diagnostics du modèle de régression logistique  
 
 
-**Evaluating assumption of linearity (Assumption 1)**
+Plusieurs hypothèses sont associées à la régression logistique, dont trois sont pertinentes pour notre application aux PRL et sont énumérées ci-dessous. Les diagnostics du modèle ont été appliqués pour évaluer la mesure dans laquelle ces hypothèses ont été respectées, ainsi que la signification statistique des coefficients du modèle, la qualité de l’ajustement et l’exactitude de la classification des PRL élaborés à partir de la régression logistique. Les trois hypothèses sont les suivantes :
 
-A Box-Tidwell test was used to evaluate linearity by assessing the significance of an additional interaction term in the logistic regression, 
+1. la relation entre l’abondance agrégée et les logarithmes du rapport des cotes (le logarithme des probabilités que toutes les UC se trouvent au-dessus de leur PRI) est linéaire;
+
+2. les observations sont indépendantes les unes des autres (c’est-à-dire que les résidus ne sont pas autocorrélés);
+
+3. il n’y a pas de valeurs aberrantes influentes. 
+
+
+**Évaluation de l’hypothèse de linéarité (hypothèse 1)**
+
+Un test Box-Tidwell a servi à évaluer la linéarité en évaluant la signification d’un terme d’interaction supplémentaire dans la régression logistique. 
 
 \begin{equation}
-  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nCUs} S_{i,t} + B_2 \sum_{i}^{i=nCUs} S_{i,t} \times \log (\sum_{i}^{i=nCUs} S_{i,t})
+  \log(\frac{p}{1-p}) = B_0 + B_1 \sum_{i}^{i=nUC} S_{i,t} + B_2 \sum_{i}^{i=nUC} G_{i,t} \times \log (\sum_{i}^{i=nUC} G_{i,t})
    (\#eq:BoxTidwelllogistic)
 \end{equation}
 
-A significant interaction term $B_2$, indicates a non-linear relationship between aggregate abundance and log-odds, violating this assumption [@foxAppliedRegressionAnalysis2016].
+Un terme d’interaction significatif $B_2$, indique une relation non linéaire entre l’abondance agrégée et les logarithmes du rapport des cotes, ce qui va à l’encontre de cette hypothèse [@foxAppliedRegressionAnalysis2016].
 
 
-**Evaluating independence (Assumption 2)**
+**Évaluation de l’indépendance (hypothèse 2)**
 
-Deviance residuals, $d$, were estimated for each year,
+La somme des carrés résiduelle, $d$, a été estimée pour chaque année.
 
 \begin{equation}
    d = \pm \sqrt { -2 ( y \log(\frac{\mu}{y}) + (1-y)\log(\frac{1-\mu}{1-y}) ) }
    (\#eq:DevianceResid)
 \end{equation}
 
-where $\mu$ is the predicted probability of all CUs being above their lower benchmark and $y$ is the observation (1 or 0, indicating all CUs above Red or not, respectively), in a given year [@foxAppliedRegressionAnalysis2016]. Equation \@ref(eq:DevianceResid) reduces to [@ahmadDiagnosticResidualOutliers2011]:
+où $\mu$ est la probabilité prévue que toutes les UC se trouvent au-dessus de leur PRI et $y$ est l’observation (1 ou 0, indiquant toutes les UC au‑dessus de la zone rouge ou non, respectivement), au cours d’une année donnée [@foxAppliedRegressionAnalysis2016]. L’équation \@ref(eq:DevianceResid) se réduit à [@ahmadDiagnosticResidualOutliers2011] :
 
 \begin{align}
 d = 
 \begin{cases}
-  - \sqrt { -2 \log(1-\mu) } & \text{, if } y = 0 \\
-  \sqrt { -2 \log(\mu)  }  &\text{, if } y = 1
+  - \sqrt { -2 \log(1-\mu) } & \text{, si } y = 0 \\
+  \sqrt { -2 \log(\mu)  }  &\text{, si } y = 1
 \end{cases}
   (\#eq:DevianceResidy)
 \end{align}
 
-The magnitude of lag-1 autocorrelation was then estimated among deviance residuals and evaluated for statistical significance. 
+L’ampleur de l’autocorrélation du décalage-1 a ensuite été estimée entre la somme des carrés résiduelle et évaluée pour sa signification statistique. 
 
 
-**Evaluating outliers (Assumption 3)**
+**Évaluation des valeurs aberrantes (hypothèse 3)**
 
-We recommend identifying influential outliers using leverage statistics where possible. For our case studies, we identified outliers independent of their influence because the software used to estimate model parameters (TMB) does not provide the hat-matrix required to assess influence of individual points. Instead, we focused on identifying outliers based on the general rule of thumb that deviance residuals greater than 2 are considered to be outliers because 95\% of the distribution is expected to be within 2 standard deviations of the mean. Further work to identify influential outliers is recommended when other statistical model fitting tools are used. 
+Nous recommandons de repérer les valeurs aberrantes influentes au moyen de statistiques à effet de levier, dans la mesure du possible. Pour nos études de cas, nous avons détecté les valeurs aberrantes indépendantes de leur influence parce que le logiciel utilisé pour estimer les paramètres du modèle (TMB) ne fournit pas la matrice chapeau requise pour évaluer l’influence de points individuels. Nous nous sommes plutôt concentrés sur la détermination des valeurs aberrantes en nous fondant sur la règle empirique générale selon laquelle les sommes des carrés résiduelles supérieures à 2 sont considérées comme des valeurs aberrantes parce que 95\% de la répartition devrait se situer à l’intérieur de 2 écarts-types de la moyenne. Il est recommandé d’effectuer d’autres travaux pour déterminer les valeurs aberrantes influentes lorsque d’autres outils d’ajustement du modèle statistique sont employés. 
 
 \
 &nbsp;
 
-**Statistical significance of model coefficients**
+**Signification statistique des coefficients du modèle**
 
-Statistical significance of coefficients was evaluated using the Wald test statistic, calculated from the ratio of the $B_1$ model coefficient to the standard error of that coefficient, which is assumed to be normally distributed. Test statistics and significance were estimated within TMB [@kristensenTMBAutomaticDifferentiation2016]. 
+La signification statistique des coefficients a été évaluée à l’aide de la statistique du test de Wald, calculée à partir du ratio du coefficient du modèle $B_1$ par rapport à l’erreur type de ce coefficient, qui est supposé être distribué normalement. Les statistiques et la signification des tests ont été estimées à l’intérieur de TMB [@kristensenTMBAutomaticDifferentiation2016]. 
 
 
-**Goodness-of-fit**
+**Qualité de l’ajustement**
 
-The goodness-of-fit was evaluated by comparing the ratio of residual deviance to null deviance, similar to a likelihood ratio. This ratio is assumed to follow a Chi-square distribution with 1 degree of freedom derived from the difference in the number of parameters between full and null models. P-values <0.05 indicate significant lack of fit [@foxAppliedRegressionAnalysis2016].
+La qualité de l’ajustement a été évaluée en comparant le ratio entre la somme des carrés résiduelle et la somme des carrés nulle, semblable à un rapport de vraisemblance. On suppose que ce ratio suit une distribution du khi carré avec 1 degré de liberté calculé à partir de la différence dans le nombre de paramètres entre les modèles complets et nuls. Les valeurs p inférieures à 0,05 indiquent un manque important d’ajustement [@foxAppliedRegressionAnalysis2016].
 
-In addition, the pseudo-$R^2$ was calculated to indicate the ratio of the model fit to the null model without an independent variable [@dobsonIntroductionGeneralizedLinear2018], 
+De plus, le pseudo-$R^2$ a été calculé pour indiquer le ratio de l’ajustement du modèle par rapport au modèle nul sans variable indépendante [@dobsonIntroductionGeneralizedLinear2018]. 
 
 \begin{equation}
-   \text{pseudo-}R^2 =  1- \frac{\sum_{t}^{t=nYears} d}{\sum_{t}^{t=nYears} d_0} 
+   \text{pseudo-}R^2 =  1- \frac{\sum_{t}^{t=nAnnées} d}{\sum_{t}^{t=nAnnées} d_0} 
    (\#eq:psuedoR2)
 \end{equation}
 
-where $d_0$ are the deviance residuals for the null model. The pseudo-$R^2$ is a measure of the strength of the relationship between aggregate abundances and probability of all CUs being above their lower benchmarks. Unlike $R^2$ values for linear models, the pseudo-$R^2$ does not represent the percentage of variance explained by the model and is not related to the correlation coefficient.
+où $d_0$ est la somme des carrés résiduelle pour le modèle nul. Le pseudo-$R^2$ est un paramètre de la force de la relation entre l’abondance agrégée et la probabilité que toutes les UC se trouvent au-dessus de leur PRI. Contrairement aux valeurs $R^2$ pour les modèles linéaires, le pseudo -$R^2$ ne représente pas le pourcentage de variance expliqué par le modèle et n’est pas lié au coefficient de corrélation.
 
-In addition, the length of available time-series will impact the power to detect significant model coefficients. Coefficient estimates may be biased when time-series are short.  @peduzziSimulationStudyNumber1996 recommend a minimum of 10 data points for the least frequent outcome to avoid biases in model coefficients, based on simulation study of epidemiological data. For example, if the frequency of outcomes were 0.5 and 0.5 (for 0 and 1, respectively), then a sample size of at least 10/0.5 = 20 would be sufficient.  This minimum sample size would be higher if the data were skewed, e.g., if frequency of outcomes were 0.7 and 0.3, the minimum sample size would be 10/0.3 = 33. A similar evaluation of sample sizes to minimize biases in logistic regression LRPs for fisheries applications is warranted. Although it is possible to estimate LRPs with lower sample sizes, the risks of biases in model parameters (and LRPs) increases.  We calculate minimum sample sizes for our case studies using the approach of  @peduzziSimulationStudyNumber1996.
+De plus, la longueur des séries chronologiques disponibles aura une incidence sur la puissance de détection des coefficients de modèle significatifs. Les estimations de coefficients peuvent être biaisées lorsque les séries chronologiques sont courtes. @peduzziSimulationStudyNumber1996 recommandent un minimum de 10 points de données pour le résultat le moins fréquent afin d’éviter les biais dans les coefficients du modèle, en fonction d’une étude de simulation de données épidémiologiques. Par exemple, si la fréquence des résultats était de 0,5 et 0,5 (pour 0 et 1, respectivement), une taille d’échantillon d’au moins 10/0,5 = 20 serait suffisante. La taille minimale de l’échantillon serait plus élevée si les données étaient faussées. Par exemple, si la fréquence des résultats était de 0,7 et de 0,3, la taille minimale de l’échantillon serait de 10/0,3 = 33. Une évaluation semblable de la taille de l’échantillon est justifiée afin de minimiser les biais dans le PRL de régression logistique pour les applications à la pêche. Bien qu’il soit possible d’estimer les PRL ayant une taille d’échantillon plus faible, les risques de biais dans les paramètres du modèle (et les PRL) augmentent. Nous calculons la taille minimale de l’échantillon pour nos études de cas en utilisant l’approche de @peduzziSimulationStudyNumber1996.
 
 
-**Classification accuracy of LRPs**
+**Exactitude de la classification des PRL**
 
-Classification accuracy was evaluated based on the ratio of successful classifications to total number of data points in the logistic regression, also called the hit ratio. Successful classifications were the number of years when the model successfully predicted that all CUs were above their lower benchmark plus the number years when the model successfully predicted that at least one CU was below its lower benchmark. The hit ratio tends to be biased towards optimistic classification rates when computed with the same sample used for fitting the logistic model. Therefore, we also considered an out-of-sample approach to classification accuracy, where the logistic regression was estimated iteratively removing a single data point and the occurrence of successes relative to observations were based on the model that did not contain that data point. 
+L’exactitude de la classification a été évaluée en fonction du ratio des classifications réussies par rapport au nombre total de points de données dans la régression logistique, aussi appelé le taux de succès. Les classifications réussies étaient le nombre d’années où le modèle a permis de prédire avec succès que toutes les UC se trouvaient au-dessus de leur PRI plus le nombre d’années où le modèle a permis de prédire avec succès qu’au moins une UC se trouvait au-dessous de son PRI. Le taux de succès tend à être orienté vers des taux de classification optimistes lorsqu’il est calculé avec le même échantillon utilisé pour ajuster le modèle logistique. Par conséquent, nous avons également envisagé une approche hors échantillon de l’exactitude de la classification, dans le cadre de laquelle la régression logistique a été estimée de façon itérative en supprimant un point de données unique, et la fréquence des réussites par rapport aux observations était fondée sur le modèle qui ne contenait pas ce point de données. 
 
 \
 &nbsp;
 
-### PROJECTION LRPS{#projectedMethods}
+### PRL DE PROJECTION{#projectedMethods}
 
-Projection LRPs are estimated using simulated CU abundances to characterize the relationship between aggregate SMU-level spawner abundance and the probability that all CUs will be above their lower benchmarks (e.g., S~gen~). Parameters describing CU-level population dynamics are estimated from available data, and then individual CUs are projected forward under current exploitation rates (with sensitivity analyses used to explore alternative exploitation rates). This approach allows for explicit consideration of uncertainty as the user can specify various projection scenarios to reflect a lack of biological and/or fisheries information.  Natural variability in recruitment and ages-at-maturity are incorporated into projections, as is implementation uncertainty in exploitation rates. As with logistic regression LRPs, we relied on status estimated from a single metric rather than multidimensional status estimates from the Salmon Scanner tool to develop LRPs. 
-
-
-For our case studies, we ran projections for 30 years after an initialization period to identify aggregate abundances characterized by an equilibrium state represented by stable distribution of projected abundances. We recommend that the initialization and number of years be chosen on an SMU-by-SMU basis to ensure the distribution of trajectories capture equilibrium conditions. These projections should not be interpreted as predictions of future abundance; rather, they are used to simulate the underlying relationship between SMU-level abundance and the probability that all CUs will be above their LBMs. 
+Les PRL de projection sont estimées à l’aide de l’abondance simulée à l’échelle de l’UC pour caractériser la relation entre l’abondance agrégée des géniteurs à l’échelle de l’UGS et la probabilité que toutes les UC se situent au-dessus de leur PRI (p. ex., G~gén~). Les paramètres décrivant la dynamique de la population à l’échelle de l'UC sont estimés à partir des données disponibles, puis les UC particulières sont projetées prospectivement en fonction des taux d’exploitation actuels (avec des analyses de sensibilité utilisées pour explorer d’autres taux d’exploitation). Cette approche permet de tenir compte explicitement de l’incertitude, car l’utilisateur peut préciser divers scénarios de projection pour refléter un manque d’information sur la biologie ou les pêches. La variabilité naturelle du recrutement et de l’âge à la maturité est intégrée dans les projections, tout comme l’incertitude de la mise en œuvre dans les taux d’exploitation. Comme pour le PRL de régression logistique, nous nous sommes fondés sur l’estimation de l’état à partir d’un seul paramètre plutôt que sur des estimations multidimensionnelles de l’état à partir de l’Explorateur afin d’élaborer des PRL. 
 
 
-We used the samSim closed loop simulation modelling tool to conduct stochastic projections for our case study applications. samSim is an R package that was developed to evaluate fisheries rebuilding plans in simulation for Pacific salmon<!--CH 1 Feb: reworded this last sentence a bit--> [@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]. We created a modified version of samSim to support LRP estimation. The LRP version of samSim is described in detail in Appendix \@ref(app:samsim-appendix), and model code is available on GitHub (Appendix \@ref(app:github-appendix)).  
+Pour nos études de cas, nous avons effectué des projections pour 30 ans après une période d’initialisation afin de déterminer l’abondance agrégée caractérisée par un état d’équilibre représenté par une distribution stable de l’abondance projetée. Nous recommandons que l’initialisation et le nombre d’années soient choisis UGS par UGS pour s’assurer que la distribution des trajectoires capture les conditions d’équilibre. Ces projections ne doivent pas être interprétées comme des prévisions de l’abondance future; elles servent plutôt à simuler la relation sous-jacente entre l’abondance à l’échelle de l’UGS et la probabilité que toutes les UC se situent au-dessus de leurs PRI. 
 
 
-Detailed descriptions of the parameterization of samSim for our two case study applications of projection LRPs (Interior Fraser Coho and WCVI Chinook) are presented in Sections \@ref(IFCChapter) and \@ref(WCVIchinookChapter), respectively. In both cases, we incorporated uncertainty into projected CU dynamics through the specification of empirically-derived probability distributions for key biological and management parameters, including stock-recruitment parameters, proportion of recruits at age, and exploitation rates (ER). Larger structural uncertainties in model formulation were represented through the use of sensitivity analyses and/or specification of alternative model structures. Observation error was not included in projections because derivation of LRPs was based on projected 'true' abundance levels rather than observed abundance. 
+Nous avons utilisé l’outil de modélisation de simulation en boucle fermée samSim pour effectuer des projections stochastiques pour nos applications aux études de cas. samSim est un progiciel R qui a été élaboré pour évaluer en simulation des plans de rétablissement pour les saumons du Pacifique [@holtQuantitativeToolEvaluating2020; @freshwaterBenefitsLimitationsIncreasing2020]. Nous avons créé une version modifiée de samSim pour appuyer l’estimation des PRL. La version de SamSim pour les PRL est décrite en détail à l’annexe \@ref(app:samsim-appendix), et le code type est disponible sur GitHub (annexe \@ref(app:github-appendix)).  
 
-The following steps were taken to calculate projection LRPs:
 
-   1. Use samSim to project spawner abundances forward for $nYears$ over $nTrial$ stochastic simulations, under current exploitation.
+Des descriptions détaillées du paramétrage de samSim pour nos deux applications aux études de cas des PRL de projection (saumon coho du Fraser intérieur et saumon chinook de la COIV) sont présentées aux sections \@ref(IFCChapter) et \@ref(WCVIchinookChapter), respectivement. Dans les deux cas, nous avons intégré l’incertitude dans la dynamique projetée des UC par la spécification des distributions de probabilité obtenues de façon empirique pour les principaux paramètres biologiques et de gestion, y compris les modèles de la relation stock-recrutement, la proportion de recrues selon l’âge et les taux d’exploitation. Les incertitudes structurelles plus importantes dans la formulation du modèle ont été représentées par l’utilisation d’analyses de sensibilité ou la spécification de structures de modèle de rechange. L’erreur d’observation n’a pas été incluse dans les projections parce que la dérivation des PRL était fondée sur les niveaux d’abondance « réels » projetés plutôt que sur l’abondance observée. 
+
+Les étapes suivantes ont été suivies pour calculer les PRL de projection.
+
+   1. Utiliser samSim pour projeter l’abondance des géniteurs prospectivement pour les simulations stochastiques $nAnnée$ sur $nEssai$, selon l’exploitation actuelle.
    
 
-   2. For each simulated year-trial combination, characterize abundances as follows:
+   2. Pour chaque combinaison simulée année-essai, caractériser l’abondance comme suit :
 
-      * Assign aggregate SMU level spawner abundance for each year-trial combination to an abundance bin ($AggS_{bin}$), based on intervals of 200 fish . E.g., $AggS_{bin}$ = 0:200 fish, 201:400 fish, 401:600 fish, ... etc. 
+      * Attribuer l’abondance agrégée des géniteurs à l’échelle de l’UGS pour chaque combinaison année-essai à une tranche d’abondance (($AgrG_{tranche}$), selon des intervalles de 200 poissons. Par exemple, $AgrG_{ tranche}$ = 0:200 poisson, 201:400 poisson, 401:600 poisson, etc. 
       
-      * Determine whether all CUs for that year-trial combination were above their CU-level lower benchmarks on abundances. If they were, the year-trial combination is scored as a success (1). If they were not, the year-trial combination is scored as a failure (0).
+      * Déterminer si toutes les UC pour cette combinaison année-essai se situaient au-dessus de leur PRI sur l’abondance à l’échelle de l'UC. Si c’est le cas, la combinaison année-essai est considérée comme une réussite (1). Si ce n’est pas le cas, la combinaison année-essai est considérée comme un échec (0).
 
 
-   3. For each aggregate abundance bin, $AggS_{bin}$:
+   3. Pour chaque tranche d’abondance agrégée, $AgrG_{tranche}$ :
 
-      * Summarize the realized number of year-trial combinations that fell within that bin. For example, if a projection was run for 30 years with 1000 replicates, there might be 500 year-trial combinations that had an aggregate abundance in 10,000 - 10,200 fish bin.
+      * Résumer le nombre réalisé de combinaisons année-essai comprises dans cette tranche. Par exemple, si une projection a été effectuée pour 30 ans avec 1 000 répétitions, il pourrait y avoir 500 combinaisons année-essai dont l’abondance agrégée se trouvait dans la tanche de 10 000 à 10 200 poissons.
 
-      * Summarize the number of 'successful' year-trial combinations that occurred for that bin. For example, 125 of 500 year-trial combinations in the aggregate abundance bin of 10,000 - 10,200 fish are successes with all CUs above their lower benchmarks. 
+      * Résumer le nombre de combinaisons année-essai « réussies » qui se sont produites pour cette tranche. Par exemple, 125 des 500 combinaisons année-essai dans la tranche d’abondance agrégée de 10 000 à 10 200 poissons sont des réussites, toutes les UC se situant au-dessus de leur PRI. 
 
-      * Calculate the probability that all CUs will be above their lower benchmarks as the ratio of the number of successes to the number of realizations for each bin:
+      * Calculer la probabilité que toutes les UC se situent au-dessus de leur PRI en tant que ratio du nombre de réussites par rapport au nombre de réalisations pour chaque tranche :
 \begin{equation}
-   Pr(All CUs > LBM) = \frac{Number of successes in SAgg_{bin}} {Number of realizations in SAgg_{bin}}
+   Pr(Toutes les UC > PRI) = \frac{nombre de réussites dans GAgr_{tranche}} {Nombre de réalisations dans GAgr_{tranche}}
    (\#eq:projBins)
 \end{equation}
-For example, if 125 of the 500 realizations that fell within the $SAgg_{bin}$ of 10,000 - 10,200 fish were 'successes', there would be a 25% probability (125 / 500 = 0.25) that all CUs would be above their lower benchmarks when aggregate abundances are between 10,000 and 10,200 fish.
+Par exemple, si 125 des 500 réalisations comprises dans la $GAgr_{tranche}$ de 10 000 à 10 200 poissons étaient des « réussites », il y aurait une probabilité de 25 % (125/500 = 0,25) que toutes les UC soient au-dessus de leur PRI lorsque l’abondance agrégée se situe entre 10 000 et 10 200 poissons.
 
-   4. Identify the LRP as the mid-point of the aggregate abundance bin, $AggS_{bin}$, that is closest to the desired probability threshold that all CUs are above their LBMs.
-
-
-An example of the derivation of an LRP from the projected curve of aggregate abundance bins versus the probability of all CUs being > their lower benchmark is shown in Figure \@ref(fig:example-projectedCurve) for the four probability levels used in our case studies (p* = 0.5, 0.66, 0.90, and 0.99).
+   4. Indiquer que le PRL est le point milieu de la tranche d’abondance agrégée, $AgrG_{tranche}$, qui se rapproche le plus du seuil de probabilité souhaité selon lequel toutes les UC se trouvent au-dessus de leur PRI.
 
 
-```{r example-projectedCurve, fig.cap="Example of projected probability curve derived from projections over 30 years and 10,000 MC trials.  The curve shows the projected probability of all CUs being above their lower benchmark (LBM) as a function of aggregate SMU abundance, where aggregate spawning abundance is a bin of 200 fish (e.g., 0-200, 201-400, etc.). Each dot in the curve therefore represents a single 200-fish bin. Coloured lines demonstrate how aggregate abundance LRPs are calculated for 4 different probability thresholds: p* = 0.5 (yellow), 0.66 (blue), 0.90 (green), and 0.99 (orange) for the probability that all CUs are greater than their LBM. Horizontal dotted lines intersect the y-axis at each probability threshold, while the solid vertical lines show the corresponding aggregate escapement that will represent the LRP.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
+Un exemple de dérivation d’un PRL à partir de la courbe projetée des tranches d’abondance agrégée par rapport à la probabilité que toutes les UC soient au-dessus de leur PRI est présenté à la figure \@ref(fig:example-projectedCurve) pour les quatre niveaux de probabilité utilisés dans nos études de cas (p* = 0,5, 0,66, 0,90 et 0,99).
+
+```{r example-projectedCurve, fig.cap="Exemple de courbe de probabilité projetée obtenue à partir de projections sur 30 ans et de 10 000 simulations de Monte Carlo.  La courbe montre la probabilité projetée que toutes les UC se trouvent au-dessus de leur PRI en fonction de l’abondance agrégée à l’échelle de l’UGS, où l’abondance agrégée des géniteurs est une tranche de 200 poissons (0 à 200, 201 à 400, etc.). Chaque point de la courbe représente donc une seule tranche de 200 poissons. Les lignes de couleur illustrent comment les PRL fondés sur l’abondance agrégée sont calculés pour quatre seuils de probabilité différents : p* = 0,5 (jaune), 0,66 (bleu), 0,90 (vert) et 0,99 (orange) pour la probabilité que toutes les UC se situent au-dessus de leur PRI. Les lignes en pointillés horizontales croisent l’axe des y à chaque seuil de probabilité, tandis que les lignes verticales pleines montrent l’échappée agrégée correspondante qui représentera le PRL.", out.width = '60%', warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/methods-Example-ProjectedLRP.png")
 ```
 
 &nbsp;
 
-Uncertainty intervals for LRPs are not generated in this method because it does not include statistical estimation and projections integrate uncertainties in all underlying parameters to identify LRPs with specified probabilities of all CUs being above LBM. However, LRP estimates could be presented as a range based on the $SAgg_{bin}$ bin size.
+Les intervalles d’incertitude pour les PRL ne sont pas générés par cette méthode parce qu’elle ne comprend pas d’estimation statistique et que les projections intègrent des incertitudes dans tous les paramètres sous-jacents pour déterminer les PRL avec des probabilités précises que toutes les UC se trouvent au-dessus de leur PRI. Cependant, les estimations du PRL pourraient être présentées sous forme d’une fourchette fondée sur la taille de la tranche de $GAgr_{tranche}$.
+
+
