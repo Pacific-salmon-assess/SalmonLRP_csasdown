@@ -2,21 +2,18 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
-`r if(knitr:::is_latex_output()) '\\Appendices'`
+# LIENS MENANT AUX DONNÉES ET AUX ANALYSES {#app:github-appendix}
 
-`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
-
-# DATA AND ANALYSIS LINKS {#app:github-appendix}
-
-Code for data and analysis for the case studies are available on the Git Hub repository:  
+Le code pour les données et les analyses des études de cas est disponible dans le dépôt GitHub suivant :  
 
 [pacific-salmon-assess/SalmonLRP_RetroEval](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
 
-Code for the samSim closed loop simulation modelling tool used to conduct stochastic projections are available on the 'LRP' branch of the following Git Hub repository:  
+Le code pour l’outil de modélisation par simulation en boucle fermée (samSim) utilisé pour effectuer des projections stochastiques est disponible dans la section « LRP » (PRL) du dépôt GitHub suivant :  
 
 [pacific-salmon-assess/SalmonLRP_samSim](https://github.com/Pacific-salmon-assess/samSim/tree/LRP)
 
 
-Code for the write-up of this report are available on the Git Hub repository:
+Le code pour la rédaction de ce document est disponible dans le dépôt GitHub suivant :
 
 [pacific-salmon-assess/SalmonLRP_csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
+

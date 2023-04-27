@@ -1,10 +1,11 @@
-# ACKNOWLEDGEMENTS
+# REMERCIEMENTS
 
-We gratefully acknowledge the considerable support provided by our Technical Working Group on Salmon LRPs over the three years leading up to this review, who are (alphabetical order by last name, excluding co-authors): Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Brendan Connors, Steve Cox-Rogers, Shaun Davies, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Ann-Marie Huang, Pete Nicklin, Chuck Parken, Mike Staley, Pieter Van Will, Antonio Velez-Espino, and Ryan Whitmore. 
+Nous sommes reconnaissants du soutien considérable qu’ont fourni les membres du groupe de travail technique sur les PRL pour les saumons au cours des trois années qui ont précédé cet examen, c’est-à-dire (par ordre alphabétique de nom de famille, à l’exclusion des coauteurs) : Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Brendan Connors, Steve Cox-Rogers, Shaun Davies, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Ann-Marie Huang, Pete Nicklin, Chuck Parken, Mike Staley, Pieter Van Will, Antonio Velez-Espino et Ryan Whitmore. 
 
-DFO's State of the Salmon Program, led by Sue Grant, provided helpful guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it. 
+Le programme sur l’état des saumons du MPO, dirigé par Sue Grant, a fourni des conseils utiles sur l’Explorateur de l’état des saumons du Pacifique. Merci à Bronwyn MacDonald et à Gottfried Pestal pour leur travail d’analyse sur cet outil et pour avoir répondu à nos questions à son sujet. 
 
-We also thank Chuck Parken, Brendan Connors, and Mary Thiess for helpful comments on draft versions of this document. Finally, we thank Mike Bradford (DFO) and Will Atlas (Wild Salmon Center) for detailed review comments as part of the CSAP review process that improved this research document.
+Nous remercions également Chuck Parken, Brendan Connors et Mary Thiess pour leurs commentaires utiles sur les versions préliminaires de ce document. Enfin, nous remercions Mike Bradford (MPO) et Will Atlas (Wild Salmon Center) pour les commentaires détaillés qu’ils ont fournis dans le cadre du processus d’examen du Secrétariat canadien des avis scientifiques, lesquels ont contribué à améliorer le présent document de recherche.
+
 
 <!-- Full list of TWG members:
 Michael Arbeider,
