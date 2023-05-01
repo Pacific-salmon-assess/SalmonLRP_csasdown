@@ -8,38 +8,32 @@ After that, all subsequent sections will be turned into appendices. -->
 
 
 
-# SUPPORTING INFORMATION FOR INTERIOR FRASER COHO CASE STUDY {#app:coho-appendix}
+# RENSEIGNEMENTS À L’APPUI DE L’ÉTUDE DE CAS SUR LE SAUMON COHO DU FRASER INTÉRIEUR {#app:coho-appendix}
 
 
-## Assessment of CU Representativeness Based on Guidelines Criteria
+## Évaluation de la représentativité des UC selon les critères des lignes directrices
 
-We considered the 4 criteria identified in @holtGuidelinesDefiningLimitInpress to evaluate if status of any one CU within this SMU could be inferred from the remaining CUs; these criteria included similarity in (i) threats, (ii) environmental conditions and drivers, (iii) life history and (iv) population capacity. Although statuses are available for all CUs in this SMU, we consider the application of these criteria to evaluate how decisions about whether CU status can be inferred from other CUs based on these criteria differ from the results of sensitivity analyses presented in the main paper. As part of these sensitivity analyses, we explored how removing one or two CUs affected LRP estimation and status assessments against the LRP.
+Nous avons tenu compte des quatre critères définis dans @holtGuidelinesDefiningLimitInpress pour évaluer si l’état de n’importe quelle UC dans cette UGS pouvait être déduit des autres UC; ces critères comprenaient la similarité dans (i) les menaces, (ii) les conditions et les facteurs environnementaux, (iii) le cycle biologique; (iv) la capacité de la population. Bien que des états soient disponibles pour toutes les UC de cette UGS, nous examinons l’application de ces critères pour évaluer comment les décisions sur la question de savoir si l’état d’une UC peut être déduit de celui d’autres UC en fonction de ces critères diffèrent des résultats des analyses de sensibilité présentées dans le document principal. Dans le cadre de ces analyses de sensibilité, nous avons examiné comment le retrait d’une ou de deux UC a eu une incidence sur l’estimation du PRL et les évaluations de l’état par rapport au PRL.
 
-In an assessment of threats for Interior Fraser Coho completed as part of the 2018 Recovery Potential Assessment, @arbeiderInteriorFraserCoho2020 ranked a comprehensive set of threats on a scale of high, medium, low, and unknown.  The dominant threats to this SMU are from activities related to forestry, forest fires, agriculture, and urban and rural development. Specific threats arising from these activities included the modification of catchment surfaces, effluents from agriculture and forestry, and linear development, which is defined as the straightening and channelization of streams [@arbeiderInteriorFraserCoho2020]. While impacts from a given activity may be higher in some CUs than others, the interconnected threats stemming from multiple activities, as well as cumulative impacts, mean that it is hard to isolate one CU that experiences threats differently than another. Furthermore,  extensive agricultural and linear development in the lower Fraser River, which all Interior Fraser Coho smolts migrate through, and a proportion of juveniles rear in, means that there is a possibility that all CUs are affected by threats stemming from agriculture and linear development.
+Dans une évaluation des menaces pour le saumon coho du Fraser intérieur réalisée dans le cadre de l’évaluation du potentiel de rétablissement de 2018, @arbeiderInteriorFraserCoho2020 ont classé un ensemble complet de menaces sur une échelle allant d’élevée à moyenne, faible et inconnue. Les principales menaces qui pèsent sur cette UGS sont les activités liées à la foresterie, aux feux de forêt, à l’agriculture et au développement urbain et rural. Les menaces particulières découlant de ces activités comprenaient la modification des surfaces de captage, les effluents de l’agriculture et de la foresterie, et le développement linéaire, qui est défini comme le redressement et la canalisation des cours d’eau [@arbeiderInteriorFraserCoho2020]. Bien que les répercussions d’une activité donnée puissent être plus élevées pour certaines UC que pour d’autres, les menaces interreliées découlant d’activités multiples, ainsi que les effets cumulatifs, signifient qu’il est difficile d’isoler une UC qui subit des menaces différemment des autres. De plus, un développement agricole et linéaire important dans le cours inférieur du Fraser, que tous les saumons cohos du Fraser intérieur empruntent lors de la dévalaison en tant que smolts et où une proportion de juvéniles se développent, signifie qu’il est possible que toutes les UC soient touchées par les menaces découlant de l’agriculture et du développement linéaire.
 
-When evaluating the similarity of environmental conditions and drivers among CUs, we looked to multiple ecosystem classification schemes.  The first scheme, Marine Adaptive Zones, applies to the riverine, estuarine, and marine habitats utilized by juveniles, and were used to inform CU delineation [@holtbyConservationUnitsPacific2007]. For Interior Fraser Coho, all CUs belongs to the same Marine Adaptive Zone, Georgia Strait, suggesting that environmental conditions and drivers in these habitats are shared among all CUs.  The second scheme, Freshwater Adaptive Zones (FAZ), represents the freshwater ecological drainage units, and was also used to delineate CUs [@holtbyConservationUnitsPacific2007]. For Interior Fraser Coho, each CU belongs to a unique FAZ, which is often (but not always) the case with CU delineation.  Finally, we looked at Biogeoclimatic Zones <!-- citation needed-->derived from vegetation classification. All five Interior Fraser Coho CUs included a mix of Biogeoclimatic Zones with Interior vegetation, including Interior Douglas Fir, Bunchgrass, Montane Spruce, and Engelmann Spruce.  The Middle Fraser CU included some boreal vegetation zones, such as Sub-Boreal Pine and Sub-Boreal Pine--Spruce.  The Fraser Canyon CU was the only CU that included a more coastal vegetation type, Coastal Western Hemlock. However, it is not well understood how this difference would affect environmental conditions and drivers.  More work is needed to better understand whether these differences are substantial enough to affect the representativeness of CUs.
+Lorsque nous avons évalué la similitude des conditions et des facteurs environnementaux entre les UC, nous avons examiné de multiples systèmes de classification des écosystèmes. Le premier système, celui des zones adaptatives marines, s’applique aux habitats fluviaux, estuariens et marins utilisés par les juvéniles et a servi à éclairer la délimitation des UC [@holtbyConservationUnitsPacific2007]. Pour le saumon coho du Fraser intérieur, toutes les UC appartiennent à la même zone adaptative marine, le détroit de Géorgie, ce qui suggère que les conditions et les facteurs environnementaux des habitats qui s’y trouvent sont communs à toutes les UC. Le deuxième système, celui des zones adaptatives dulcicoles, représente les unités hydrographiques écologiques d’eau douce et a également été utilisé pour délimiter les UC [@holtbyConservationUnitsPacific2007]. Dans le cas du saumon coho du Fraser intérieur, chaque UC appartient à une zone adaptative dulcicole unique, ce qui est souvent (mais pas toujours) le cas avec la délimitation des UC. Enfin, nous avons examiné les zones biogéoclimatiques obtenues à partir de la classification de la végétation. Les cinq UC du saumon coho du Fraser intérieur comprenaient un mélange de zones biogéoclimatiques et de végétation intérieure, y compris les zones du sapin de Douglas de l’intérieur, des graminées cespiteuses, de l’épinette des montagnes et de l’épinette d’Engelmann. L’UC du moyen Fraser comprenait certaines zones de végétation boréale, comme la zone sub-boréale à pin et la zone sub-boréale à pin et épinette. L’UC du canyon du Fraser était la seule UC qui comprenait un type de végétation plus côtière, la zone côtière de la pruche occidentale. Cependant, on ne comprend pas bien comment cette différence influerait sur les conditions et les facteurs environnementaux. Il reste du travail à faire pour mieux comprendre si ces différences sont suffisamment importantes pour influer sur la représentativité des UC.
 
-All Interior Fraser Coho CUs have the same predominantly 3-year life history, with the proportion maturing at age 3 similar among CUs.   
+Toutes les UC de saumon coho du Fraser intérieur ont le même cycle biologique de trois ans, la proportion de poissons atteignant la maturité à l’âge 3 étant semblable entre les UC.   
 
-Finally, we use the estimated S~REP~, which is the spawner abundance at which the stock replaces itself, from a base Ricker model fit (described in the main body of the paper) to look for differences in habitat capacity among CUs. S~REP~ values ranged from 4023 (Fraser Canyon CU) to 14,595 (North Thompson CU), with S~REP~ values for the other three CUs evenly spaced within this range (Middle Fraser  = 6925, Lower Thompson = 8614, South Thompson = 10,498).  Given that there was no clear outlier in terms of extremely low or extremely high capacity, it is unclear whether these five CUs would respond differently to threats based on habitat capacity alone.
+Enfin, nous utilisons l’estimation de G~REM~, qui est l’abondance des géniteurs à laquelle le stock se remplace, à partir d’un modèle de Ricker de base (décrit dans le corps principal du document) pour rechercher les différences de capacité d’habitat entre les UC. Les valeurs de G~REM~ variaient de 4 023 (UC du canyon du Fraser) à 14 595 (UC de la Thompson Nord), les valeurs de G~REM~ pour les trois autres UC étant espacées de façon égale dans cette plage (moyen Fraser = 6 925, Thompson inférieure = 8 614, Thompson Sud = 10 498). Étant donné qu’il n’y avait pas de valeurs aberrantes évidentes en ce qui concerne la capacité extrêmement faible ou extrêmement élevée, il n’est pas clair si ces cinq UC réagiraient différemment aux menaces en fonction de la capacité d’habitat seulement.
 
-Based on similarities in threats, life history, population capacity, and some shared environmental drivers (i.e., lower Fraser River, estuary, and marine environments), we found few significant indicators that would have prevented us from inferring CU status for one CU from neighboring CUs prior to our case study analyses, especially when data from several other CUs are available to represent the missing CU. However, the large diversity in environmental conditions on land, Biogeoclimatic zones, and unique weather events, combined with the generally large areas encompassed by each CU, does require careful consideration when inferring CU status. For example, consideration may be required when environmental catastrophes occur that only impact individual CUs, or parts of CUs, such as landslides, floods, droughts, and forest fires; depending on the duration of the impacts of such events. An example of a recent catastrophic event is the Big Bar landslide, which only impacted one subpopulation within the Middle Fraser CU.If the impacts of this slide persist without mitigation, the status of the Middle Fraser CU would likely not be coupled with adjacent CUs. We also note that the Fraser Canyon CU may be the most unique in terms of it having the smallest capacity and a more coastal dominated biogeoclimatic zone, so special consideration may be given to cases in which CU-level data is missing from Fraser Canyon.
+Selon les similitudes entre les menaces, le cycle biologique, la capacité de la population et certains facteurs environnementaux communs (c’est-à-dire le cours inférieur du fleuve Fraser, l’estuaire et les milieux marins), nous avons trouvé peu d’indicateurs significatifs qui nous auraient empêchés de déduire l’état d’une UC à partir de celui d’une UC voisine avant nos analyses d’études de cas, surtout lorsque les données de plusieurs autres UC sont disponibles pour représenter l’UC sur laquelle il manque des données. Toutefois, la grande diversité des conditions environnementales sur terre, des zones biogéoclimatiques et des événements météorologiques uniques, combinée aux vastes zones généralement comprises dans chaque UC, nécessite une attention particulière lorsqu’on déduit l’état d’une UC. Par exemple, il peut être nécessaire de tenir compte des catastrophes environnementales qui ne touchent que des UC particulières ou des parties d’UC, comme les glissements de terrain, les inondations, les sécheresses et les incendies de forêt, selon la durée des répercussions de ces événements. Un exemple d’événement catastrophique récent est le glissement de terrain de Big Bar, qui n’a touché qu’une sous-population de l’UC du moyen Fraser. Si les répercussions de ce glissement persistent sans atténuation, l’état de l’UC du moyen Fraser ne serait probablement pas couplé avec celui des UC adjacentes. Nous remarquons également que l’UC du canyon du Fraser est peut-être la plus unique en ce sens qu’elle a la plus petite capacité et une zone biogéoclimatique plus côtière, de sorte qu’une attention particulière peut être accordée aux cas où des données à l’échelle de l’UC sont manquantes pour l’UC du canyon du Fraser.
 
 
 \newpage
 
-## Bayesian Stock-Recruitment Model Parameter Estimates
+## Estimations des paramètres du modèle bayésien de stock-recrutement
 
 
-```{r coho-SrepPrior, fig.cap="Prior distribution for S\\textsubscript{REP} (the spawner abundance level at which the stock replaces itself) used when fitting the Ricker\\_priorCap model. The red dashed line shows the maximum likelihood estimate of S\\textsubscript{REP} from the base Ricker model stock-recruitment fit. The mean of the SRep prior was set to 1.4 times the maximum likelihood estimate.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+```{r coho-SrepPrior, fig.cap="Distribution a priori pour G\\textsubscript{REM} (le niveau d’abondance des géniteurs auquel le stock se remplace) utilisé lors de l’ajustement du modèle de Ricker\\_aprioriCap. La ligne rouge pointillée montre l’estimation correspondant à un maximum de vraisemblance de G\\textsubscript{REM} à partir de l’ajustement du modèle de Ricker de base sur le stock-recrutement. La moyenne de G\\textsubscript{REM} a priori a été fixée à 1,4 fois l’estimation correspondant à un maximum de vraisemblance.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
 knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```
-
-
-
-
-<!--To Do: improve table formatting so that different number of digits for different variables
--->
 
 
 \newpage
@@ -47,6 +41,13 @@ knitr::include_graphics("figure/coho-SrepPriorDist.png")
 ```{r coho-postSummary-Ricker, warning=FALSE, echo=FALSE}
 
 dat <- as.data.frame(read.csv("data/coho-postSummary-Ricker.csv"))
+
+dat$CU[dat$CU == "Middle Fraser"]<- "Moyen Fraser"
+dat$CU[dat$CU == "Fraser Canyon"]<- "Canyon du Fraser"
+dat$CU[dat$CU == "North Thompson"]<- "Thompson Nord"
+dat$CU[dat$CU == "South Thompson"]<- "Thompson Sud"
+dat$CU[dat$CU == "Lower Thompson"]<- "Thompson inférieure"
+
 options(scipen=999, digits=5)
 
 dat[dat$Variable == "adjProd",3:6]<-round(dat[dat$Variable == "adjProd",3:6],digits=2)
@@ -56,78 +57,7 @@ dat[dat$Variable == "Sgen",3:6]<-round(dat[dat$Variable == "Sgen",3:6],digits=0)
 dat[dat$Variable == "sigma",3:6]<-round(dat[dat$Variable == "sigma",3:6],digits=2)
 dat[dat$Variable == "gamma",3:6]<-round(dat[dat$Variable == "gamma",3:6],digits=2)
 
- csasdown::csas_table(dat, booktabs = T, caption = "Summary of posterior distribution mean and quantiles (5%, 50%, and 95%) for stock-recruit model parameters and Sgen lower benchmark from the Ricker model fit.  The 'adjProd' parameter is the effective productivity, $\\alpha$', from Equation 15 in the main document.")
+ csasdown::csas_table(dat, booktabs = T, caption = "Résumé des moyennes de distribution a posteriori et des quantiles (5 %, 50 % et 95 %) pour les paramètres du modèle de stock-recrutement et le PRI fondé sur Ggén selon l’ajustement du modèle de Ricker. Le paramètre « adjProd » est la productivité effective, $\\alpha$', de l’équation 15 dans le document principal.")
 
  
 ```
-
-\newpage
-
-```{r coho-postSummary-RickerCap, warning=FALSE, echo=FALSE}
-
-dat <- as.data.frame(read.csv("data/coho-postSummary-RickerCap.csv"))
-options(scipen=999, digits=2)
-
-csasdown::csas_table(dat, digits=2, booktabs = T, caption = "Summary of posterior distribution mean and quantiles (5%, 50%, and 95%) for stock-recruit model parameters and Sgen lower benchmark from the Ricker\\_priorCap model fit. The 'adjProd' parameter is the effective productivity, $\\alpha$', from Equation 15 in the main document.")
- 
-```
-
-\
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
-```{r coho-Ricker-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
-knitr::include_graphics("figure/coho-alphaPosts.png")
-```
-
-
-
-
-```{r coho-Ricker-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the base Ricker stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
-knitr::include_graphics("figure/coho-adjProdPosts.png")
-```
-
-
-
-```{r coho-priorCap-alphaPosts, fig.cap="Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '95%',  fig.align="center"}
-knitr::include_graphics("figure/coho-alphaPosts-priorCap.png")
-```
-
-\linebreak
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
-
-```{r coho-priorCap-adjProdPosts, fig.cap="Posterior distributions for effective productivity ($\\alpha$') parameters, by CU, obtained from fitting the Ricker\\_priorCap stock-recruitment model.", warning=FALSE, echo=FALSE, out.width = '95%',  fig.align="center"}
-knitr::include_graphics("figure/coho-adjProdPosts-priorCap.png")
-```
-
-\
-&nbsp;
-&nbsp;
-
-
-## Projected Spawner Abundances used for the Projection LRP Method
-
-```{r coho-CUProjections-Ricker, fig.cap="Projected spawner abundances, for each of the five Interior Fraser Coho CUs, used to develop projection LRPs under the base Ricker model. The solid line shows the median spawning abundance in a projection year while the grey shading shows the 10th and 90th percentiles of spawner abundance", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
-knitr::include_graphics("figure/coho-CUSpawnerProj-Ricker.png")
-```
-
-
-
-```{r coho-CUProjections-Ricker-priorCap, fig.cap="Projected spawner abundances, for each of the five Interior Fraser Coho CUs, used to develop projection LRPs under the Ricker\\_priorCap model. The solid line shows the median spawning abundance in a projection year while the grey shading shows the 10th and 90th percentiles of spawner abundance", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
-knitr::include_graphics("figure/coho-CUSpawnerProj-Ricker_priorCap.png")
-```
-
-
-

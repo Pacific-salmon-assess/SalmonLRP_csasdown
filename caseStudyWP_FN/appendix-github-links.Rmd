@@ -2,6 +2,11 @@
 <!-- The following code should appear at the beginning of the first appendix.
 After that, all subsequent sections will be turned into appendices. -->
 
+
+`r if(knitr:::is_latex_output()) '\\Appendices'`
+
+`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'`
+
 # LIENS MENANT AUX DONNÉES ET AUX ANALYSES {#app:github-appendix}
 
 Le code pour les données et les analyses des études de cas est disponible dans le dépôt GitHub suivant :  

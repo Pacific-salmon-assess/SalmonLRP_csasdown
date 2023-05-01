@@ -459,7 +459,7 @@ Abondance initiale & Propre à l’UC & D’après la série chronologique de la
 \end{longtable}
 
 
-Des projections ont été effectuées pour 30 ans dans le cadre de plus de 20 000 essais de simulation, et les projections ont été initialisées à l’aide de l’abondance des géniteurs lors des quatre années de montaison les plus récentes, de 2016 à 2020. Le nombre élevé d’essais de simulation a été nécessaire pour stabiliser les estimations du PRL étant donné le groupement par tranche des échappées agrégées à des intervalles de 200 poissons pour déterminer les PRL en fonction des seuils de probabilité. La distribution des trajectoires projetées était près de l’équilibre après quatre années de projections. Au cours des quatre premières années, les trajectoires dépendaient principalement des séries chronologiques historiques (figures \@ref(fig:coho-CUProjections-Ricker) et \@ref(fig:coho-CUProjections-Ricker-aprioriCap)).
+Des projections ont été effectuées pour 30 ans dans le cadre de plus de 20 000 essais de simulation, et les projections ont été initialisées à l’aide de l’abondance des géniteurs lors des quatre années de montaison les plus récentes, de 2016 à 2020. Le nombre élevé d’essais de simulation a été nécessaire pour stabiliser les estimations du PRL étant donné le groupement par tranche des échappées agrégées à des intervalles de 200 poissons pour déterminer les PRL en fonction des seuils de probabilité. La distribution des trajectoires projetées était près de l’équilibre après quatre années de projections. Au cours des quatre premières années, les trajectoires dépendaient principalement des séries chronologiques historiques (figures \@ref(fig:coho-CUProjections-Ricker) et \@ref(fig:coho-CUProjections-Ricker-priorCap)).
 
 
 &nbsp;
@@ -479,7 +479,6 @@ Nous avons paramétré les corrélations dans les résidus du recrutement entre 
 Nous avons d’abord tenté de réduire la covariation dans l’abondance des géniteurs entre les UC par la mise à l’échelle des corrélations dans les résidus du recrutement (c’est-à-dire les scalaires inférieurs à 1). Cependant, nous avons constaté que les scalaires avaient peu d’effet sur les corrélations projetées dans l’abondance des géniteurs entre les UC en raison du coefficient de taux de survie partagé du stade de smolt à celui d’adulte qui domine la variabilité du recrutement entre les UC. Nous avons donc utilisé des analyses de sensibilité du niveau de variabilité des coefficients de survie du stade de smolt à celui d’adulte entre les UC pour déterminer les tendances de covariation dans l’abondance des géniteurs, comme il est décrit ci-dessous. Cette approche diffère de celle adoptée pour le saumon chinook de la COIV (section \@ref(WCVIchinookChapter)).
  
 
-<!--Still to update for French-->
 ```{r coho-recruitResid-Ricker, fig.cap="Graphique à bulles du coefficient des corrélations par paires dans les résidus du recrutement entre les UC à partir de l’ajustement du modèle de Ricker de base.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-RecuitResidCorrelation-Ricker.png")
 ```
@@ -492,7 +491,7 @@ Pour l’ajustement des modèles de stock-recrutement aux données, nous avons s
 
 Les corrélations résultantes dans l’abondance des géniteurs à partir des projections sont présentées à la figure \@ref(fig:coho-sigGammaCorrelation). Dans les projections prospectives, les corrélations par paires de l’abondance des géniteurs projetée entre les UC pour l’hypothèse de $\sigma_{\gamma}$ = 0 du scénario de référence étaient semblables aux corrélations par paires observées dans l’abondance de géniteurs entre les UC. L’augmentation de $\sigma_{\gamma}$ a entraîné une diminution de la corrélation entre les UC pour l’abondance des géniteurs projetée.
  
-<!--Still to update for French-->
+
 ```{r coho-sigGammaCorrelation, fig.cap="Distribution des corrélations de l’abondance des géniteurs entre les UC pour les données observées entre 1998 et 2020 et les séries chronologiques projetées selon d’autres hypothèses au sujet de l’écart-type sur le coefficient de survie du stade de smolt à celui d’adulte entre les UC pour la formulation du modèle de Ricker de base.", warning=FALSE, echo=FALSE, out.width = '50%',  fig.align="center"}
 knitr::include_graphics("figure/coho-corrEffect-sigGamma.png")
 ```
