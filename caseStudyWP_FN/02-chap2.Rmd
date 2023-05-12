@@ -105,7 +105,7 @@ L’approche du PRL de projection permet de prendre en compte l’incertitude da
 \newpage
 \begin{landscape}
 ```{r decision-tree, fig.cap="Arbre de décision (aussi appelé algorithme multidimensionnel) utilisé dans l’Explorateur pour évaluer l’état des unités de conservation en fonction de multiples paramètres dans le cadre de la PSS (Pestal et al. en préparation)", warning=FALSE, echo=FALSE, fig.align="center",out.width = "100%" }
-source("R/make_tree_diagram.R")
+source("R/make_tree_diagram_fr.R")
 knitr::include_graphics("figure/decision_tree.png")
 ```
 \end{landscape}

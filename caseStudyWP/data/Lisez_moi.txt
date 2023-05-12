@@ -1,0 +1,58 @@
+RÉSUMÉ DU PRODUIT
+CanVec est un produit numérique de référence cartographique de Ressources naturelles Canada (RNCan). Il est généré à partir des meilleures sources de données géospatiales 
+disponibles couvrant le territoire canadien, offre une information topographique de qualité en format vectoriel et est conforme aux normes internationales en géomatique. 
+CanVec est un produit multi-source provenant principalement de la Base nationale de données topographiques (BNDT), du processus de production de la Cartographie du Nord mené 
+par le Centre canadien de cartographie et d’observation de la Terre (CCCOT), de l’initiative GéoBase, des données de l’Atlas du Canada et de la mise à jour des données effectuée 
+à l’aide de la couverture d’imagerie satellitaire (ex. Landsat, Spot, Radarsat, etc). CanVec est composé de plus de 60 entités topographiques qui ont été regroupées dans les 8 
+thèmes suivants : Entités transport, Entités administratives, Entités hydro, Entités terre, Entités faites par l’homme, Entités élévation, Entités gestion des ressources et Entités toponymiques.
+
+DOCUMENTATION DU PRODUIT CANVEC :
+1-Catalogue d’entités
+2-Info.html
+3-Spécifications du produit
+4-Formats de distribution du produit
+5-Nom des attributs en format Shapefile
+6-Guide de transition entre l’ancienne et la nouvelle codification
+7-Liste des entités
+8-Symboles cartographiques pour le format FGDB
+9-Note de publication
+
+1-CATALOGUE D’ENTITÉS
+Un catalogue contient  le nom des entités, leur définition, leur code, leurs géométries et leurs attributs. Il y a un catalogue pour chacun des  thèmes.
+2-INFO.HTML
+Le fichier info.html permet de naviguer facilement  entre les catalogues, les spécifications et formats de distribution.
+3-SPÉCIFICATIONS DU PRODUIT
+Document qui décrit le produit et ses caractéristiques  :  l’accès aux données , le système de référence, la qualité et la maintenance des données.
+4-FORMATS DE DISTRIBUTION DU PRODUIT
+Document qui décrit les formats de distribution offerts (GML, Shapefile et FGDB).
+5-NOM DES ATTRIBUTS EN FORMAT SHAPEFILE
+Document qui contient la  table de correspondance entre le nom des attributs du catalogue et le nom des attributs en format Shapefile.
+6-GUIDE DE TRANSITION ENTRE L’ANCIENNE ET LA NOUVELLE CODIFICATION
+Le document CanVec_fr_Transition assure la corrélation entre l’ancienne et la nouvelle codification de CanVec. 
+7-LISTE DES ENTITÉS
+Le document CanVec_Code contient la liste des entités et les échelles auxquelles elles sont disponibles.
+8-SYMBOLES CARTOGRAPHIQUES POUR LE FORMAT FGDB
+Le fichier CanVec_fr_symbol contient tous les symboles cartographiques (symbologie) mais ne peut être utilisé qu’avec les fichiers en format FGDB seulement.
+9-NOTE DE PUBLICATION
+Le document Note de publication indique toutes les mises à jour, les améliorations et les corrections dans les données depuis la dernière publication.
+
+STRUCTURE DES RÉPERTOIRES FTP :
+1e niveau est le format : shp (Shapefile) ou fgdb
+2e niveau est le thème : 
+	Transport (Entités transport), Admin (Entités administratives), Hydro (Entités hydro), Land (Entités terre), ManMade (Entités faites par l’homme), Elevation (Entités élévation), 
+	Res_MGT (Entités gestion des ressources) et Toponymy (Entités toponymiques)
+3e niveau contient les fichiers compressés. Le nom des fichiers inclut :
+	Code des échelles :
+		50k – meilleures sources de données
+		250k – source BNDT à l’échelle 1/250 000 (généralisation pour RRN et RFN)
+		1M – source Atlas du Canada à l’échelle 1/1 000 000
+		5M– source Atlas du Canada à l’échelle 1/5 000 000
+		15M– source Atlas du Canada à l’échelle 1/15 000 000
+	Code de la province, du territoire ou Canada :
+		PE, NL, NS, NB, QC, ON, MB, SK, AB, BC, NU, NT, YK et CA.
+
+ARCHIVES :
+Accéder à la dernière version de CanVec publiée le 15 mai 2013 : 
+http://ftp.geogratis.gc.ca/pub/nrcan_rncan/vector/canvec/archive/canvec_archive_20130515/
+Accéder à la dernière version de CanVec+ publiée le 29 octobre 2015 : 
+http://ftp.geogratis.gc.ca/pub/nrcan_rncan/vector/canvec/archive/canvec+_archive_20151029/
