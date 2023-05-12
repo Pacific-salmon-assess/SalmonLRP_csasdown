@@ -221,8 +221,8 @@ chk_lab <- chk_lab[!duplicated(chk_lab$name_en), ] # remove duplicated labels
 chk_lab$name_en[grep("Nitinat Lake", chk_lab$name_en)]  <- "Nitinat"
 chk_lab$name_en[grep("San Juan Point", chk_lab$name_en)] <- "San Juan"
 
-png(here("caseStudyWP","figure/chinook-map2.png"), width=8, height=7, units="in", res=600)
-ggplot(isc) +
+png(here("caseStudyWP","figure/chinook-map.png"), width=8, height=7, units="in", res=600)
+ggplot(wvc) +
   #geom_sf(data=fma,colour="coral", size=1, fill=NA) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
   geom_sf(data=wvc, aes(fill=CU_NAME), size=0) +
