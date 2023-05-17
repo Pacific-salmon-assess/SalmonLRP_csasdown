@@ -63,6 +63,7 @@ water$area_m2 <- as.numeric(st_area(water))
 water1 <- water[!(water$definit_en=="Lake" & water$area_m2 < 100000), ]
 
 # Point shapefile of place names for labels
+if(!file.exists(here("caseStudyWP",'data/canvec_50K_BC_Toponymy/bdg_named_feature_0.shp')))
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Toponymy/canvec_50K_BC_Toponymy_shp.zip', destfile=here("caseStudyWP",'data/place_names.zip'), mode="wb")
 fs2 <- unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), list=TRUE)
 unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), files=fs2$Name[grep("bdg_named_feature_0", fs2$Name)], exdir=here('data'))
@@ -227,7 +228,8 @@ ggplot(wvc) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
   geom_sf(data=wvc, aes(fill=CU_NAME), size=0) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
-  geom_sf_label(data=wvc, aes(label = CU_NAME, colour=CU_NAME),  size=4.5, fontface="bold") +
+  geom_sf_label(data=wvc, aes(label = CU_NAME, colour=CU_NAME), 
+                nudge_y = c(0.3,0.25,0.5), nudge_x = c(1.5,1.5,1), size=4.5, fontface="bold") +
   #geom_sf_label(data=drop_multi_poly(fma), aes(label = MNGMNTR), size=3,label.size=0.1, colour="coral",alpha=0.7, fontface="bold") +
   annotate( geom="text", label = "BRITISH COLUMBIA", x = -119, y = 49.3, color = "grey22", size = 4) +
   annotate( geom="text", label = "WASHINGTON", x = -121.8, y = 48.5, color = "grey22", size = 4) +

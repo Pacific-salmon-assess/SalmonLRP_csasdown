@@ -8,9 +8,9 @@ library(ggspatial)
 library(purrr)
 library(rgdal)
 library(PNWColors)
-library(leaflet)
+#library(leaflet)
 
-# where to save data
+# where map data shapefiles are saved
 # Note that the files are all stored in the english Case Study paper folder
 path <- here("caseStudyWP", "data")
 
@@ -66,6 +66,7 @@ water$area_m2 <- as.numeric(st_area(water))
 water1 <- water[!(water$definit_en=="Lake" & water$area_m2 < 100000), ]
 
 # Point shapefile of place names for labels
+if(!file.exists(here("caseStudyWP",'data/canvec_50K_BC_Toponymy/bdg_named_feature_0.shp')))
 download.file('https://ftp.maps.canada.ca/pub/nrcan_rncan/vector/canvec/shp/Toponymy/canvec_50K_BC_Toponymy_shp.zip', destfile=here("caseStudyWP",'data/place_names.zip'), mode="wb")
 fs2 <- unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), list=TRUE)
 unzip(zipfile=here("caseStudyWP",'data/place_names.zip'), files=fs2$Name[grep("bdg_named_feature_0", fs2$Name)], exdir=here('caseStudyWP/data'))
@@ -233,16 +234,20 @@ ck_bounds <- as.numeric(st_bbox(wvc))
 # Get palette
 pal <- pnw_palette("Sunset", length(wvc$CU_NAME), type="continuous")
 # get labels for inlets
-inlets <- c("Quatsino", "Kyuquot", "Nootka / Esperenza", " ", "Clayoquot", "Barkley Sound", "Nitinat ", "San Juan")
-#inlets <- c("Quatsino", "Kyuquot", "Nootka Sound", "Esperanza Inlet", "Clayoquot", "Barkley Sound", "Nitinat Lake", "San Juan Point")
+#inlets <- c("Quatsino", "Kyuquot", "Nootka / Esperenza", " ", "Clayoquot", "Barkley Sound", "Nitinat ", "San Juan")
+inlets <- c("Quatsino", "Kyuquot", "Nootka Sound", "Esperanza Inlet", "Clayoquot", "Barkley Sound", "Nitinat Lake", "San Juan Point")
 inlets1 <- paste0("^", inlets, "$")
 keep <- grep(paste(inlets1, collapse="|"), pnames$name_en)
 chk_lab <- pnames[keep, ]
 chk_lab <- chk_lab[!duplicated(chk_lab$name_en), ] # remove duplicated labels
 chk_lab$name_en[grep("Nitinat Lake", chk_lab$name_en)]  <- "Nitinat"
 chk_lab$name_en[grep("San Juan Point", chk_lab$name_en)] <- "San Juan"
+
+
+# French
 chk_lab$name_en <- sub("Esperanza Inlet", "Inlet Esperanza", chk_lab$name_en)
 chk_lab$name_en <- sub("Barkley Sound", "Baie Barkley", chk_lab$name_en)
+
 
 
 png(here("caseStudyWP_FN","figure/chinook-map.png"), width=8, height=7, units="in", res=600)
@@ -251,10 +256,11 @@ ggplot(wvc) +
   geom_sf(data=borders[!borders$ctry_en == "Ocean",], fill=land_col, size=0.1, colour="black") +
   geom_sf(data=wvc, aes(fill=CU_NAME), size=0) +
   geom_sf(data=water1, fill=water_col, colour=water_col, size=0.1) +
-  geom_sf_label(data=wvc, aes(label = CU_NAME, colour=CU_NAME),  size=4.5, fontface="bold") +
+  geom_sf_label(data=wvc, aes(label = CU_NAME, colour=CU_NAME), 
+                nudge_y = c(0.3,0.25,0.5), nudge_x = c(1.5,1.5,1), size=4.5, fontface="bold") +
   #geom_sf_label(data=drop_multi_poly(fma), aes(label = MNGMNTR), size=3,label.size=0.1, colour="coral",alpha=0.7, fontface="bold") +
-  annotate( geom="text", label = "BRITISH COLUMBIA", x = -119, y = 49.3, color = "grey22", size = 4) +
-  annotate( geom="text", label = "WASHINGTON", x = -121.8, y = 48.5, color = "grey22", size = 4) +
+  #annotate( geom="text", label = "BRITISH COLUMBIA", x = -119, y = 49.3, color = "grey22", size = 4) +
+  #annotate( geom="text", label = "WASHINGTON", x = -121.8, y = 48.5, color = "grey22", size = 4) +
   geom_sf_text(data=chk_lab, aes(label=name_en))+
   #annotate( geom="text", label = "Pacific Ocean", x = -127.7, y = 49.3, fontface = "italic", color = "darkblue", size = 4) +
   #annotate( geom="text", label = "Salish Sea", x = -123.8, y = 49.3, fontface = "italic", color = "darkblue", size = 3, angle=327) +
