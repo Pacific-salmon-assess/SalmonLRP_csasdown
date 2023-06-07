@@ -6,7 +6,8 @@ output:
 
 \newpage
 # ÉTUDE DE CAS 2 : SAUMON CHINOOK DE LA CÔTE OUEST DE L’ÎLE DE VANCOUVER {#WCVIchinookChapter}
-##CONTEXTE
+
+## CONTEXTE
 
 
 <!-- LW comment: there are 8 labeled inlets in Fig 22, but Esparanza and Nootka are grouped together in Table 6 and the text refers to 7 inlets. Why are Nootka and Esperanza grouped? -->
@@ -482,7 +483,7 @@ knitr::include_graphics("figure/chinook-compareEscCor.png")
 # Consider adding another run with annualcvER=FALSE (cvER =0.21) in Appendix
 ```
 \newline
-**Covariance in recruitment residuals**
+
 
 **Covariance des résidus du recrutement**
 
