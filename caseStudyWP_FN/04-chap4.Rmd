@@ -383,7 +383,10 @@ Dans le modèle de projection prospective, les corrélations de l’abondance de
 
 ```{r chinook-ER, echo=FALSE, fig.cap = "Taux d’exploitation en zone pré-terminale pour la population indicatrice dotée de micromarques magnétisées codées du ruisseau Robertson.", out.width = '80%'}
 ERs <- read.csv("data/WCVIER.csv")
-ggplot(ERs,aes(Year, ER)) + geom_point() + geom_line()
+ggplot(ERs,aes(Year, ER)) + geom_point() + 
+  xlab("Année") + 
+  ylab("Taux d’exploitation") + 
+  geom_line()
 ```
 
 \newline
@@ -456,11 +459,12 @@ g2 <- out %>%  dplyr::filter(cvER=="0.085"|cvER=="0.17") %>%
   ggplot(aes(ExploitationRate, colour = cvER, fill = cvER)) +
   geom_density (alpha = 0.1) +
   xlim (0,1) +
+  xlab("Taux d’exploitation") +
+  ylab("Densit\u00e9") + 
+  labs(colour="cvTE", fill="cvTE") +
   geom_vline (xintercept = canERlabel) +
   theme(axis.title.x = element_text(size=18),
         axis.title.y = element_text(size=18))
-
-
 
 
 g2
@@ -477,7 +481,7 @@ Dans les projections prospectives, les corrélations par paires de l’abondance
 ```{r chinook-boxplots, echo=FALSE, fig.cap="Distribution des corrélations de l’abondance des géniteurs entre les inlets pour les données observées au cours des 20 dernières années (n = 10 corrélations par paires, 1er diagramme en boîte) et séries chronologiques projetées selon diverses hypothèses : avec un CV des taux d’exploitation entre les inlets de 0, 0,085 ou 0,17 (0,85 est le scénario de référence; du 2e au 4e diagramme en boîte), avec un scalaire sur la covariance des résidus du recrutement de 0 (aucune corrélation dans les résidus du recrutement), 0,5 et 1 (égal aux corrélations de géniteurs observées, scénario de référence; du 5e au 7e diagramme en boîte), et des proportions selon l’âge variables ou constantes entre les inlets (le scénario de référence correspond aux proportions variables; 8e et 9e diagrammes en boîte). Pour chaque ensemble d’hypothèses, les autres variables ont été maintenues constantes aux valeurs du scénario de référence.", out.width = '80%'}
 # knitr::include_graphics(here::here("figure/chinook-compareEscCor-cvER.png"))
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCor.png', './figure/chinook-compareEscCor.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/compareEscCorFR.png', './figure/chinook-compareEscCor.png',  mode="wb")
 knitr::include_graphics("figure/chinook-compareEscCor.png")
 
 # Consider adding another run with annualcvER=FALSE (cvER =0.21) in Appendix
@@ -523,11 +527,26 @@ cuAges$CU_Names. <- factor(cuAges$CU_Names,
                             levels=c("Southwest_Vancouver_Island",
                                      "Nootka_Kyuquot",
                                      "Northwest_Vancouver_Island",
-                                     "Westcoast_Vancouver_Island"))
+                                     "Westcoast_Vancouver_Island"),
+                              labels=c("Sud-ouest_île_Vancouver", 
+                                       "Nookta_Kyuoquot" ,
+                                       "Nord-ouest_île_Vancouver",
+                                       "Westcoast_Vancouver_Island"))
 
-cuAges %>% filter(CU_Names!="Westcoast_Vancouver_Island") %>%
-  ggplot(aes(BroodYear, Proportion, group=CU_Names., colour=CU_Names.)) +
+cuAgeData <-  cuAges %>% filter(CU_Names!="Westcoast_Vancouver_Island")
+cuAgeData$Age <- factor(cuAgeData$Age, 
+                        levels=c("age2", "age3", "age4", "age5"), 
+                        labels=c("âge2", "âge3", "âge4", "âge5")) 
+
+cuAgeData %>% ggplot(aes(BroodYear, Proportion, group=CU_Names., colour=CU_Names.)) +
   geom_line() +
+  xlab("Année d’éclosion") + 
+  labs(colour="UC Noms") + 
+  # scale_fill_discrete(name="UC Noms",
+  #                        breaks=c("Southwest_Vancouver_Island", "Nookta_Kyuoquot", "Northwest_Vancouver_Island"),
+  #                        labels=c("Sud-ouest_île_Vancouver", "Nookta_Kyuoquot" ,"Nord-ouest_île_Vancouver")) +
+ # or change CUAges$CU_Names. above to incldue a names argument with french versions
+  
   facet_wrap(~Age, ncol=1)
 #If required, consider adding geom_density of pairwise correlations in estimated age ppns of recruits
 
@@ -543,7 +562,7 @@ Les projections des PRL ont été élaborées selon les hypothèses du scénario
 
 ```{r chinook-baseCaseProjLRP, echo=FALSE, fig.cap="Probabilité que toutes les populations d’inlet se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 50 000 essais de simulation (MCCM). Chaque point correspond à la proportion d’essais de simulation où toutes les populations d’inlet se situaient au-dessus de leur PRI. Les PRL possibles à p = 0,5 (jaune) et p = 0,66 (bleu) sont mis en évidence, où p est la probabilité que toutes les populations d’inlet soient au-dessus de leur PRI.", out.width = '60%', fig.pos='!ht'}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/baseER-ProjLRPCurve-ALLp.png', './figure/chinook-baseER-ProjLRPCurve-ALLp.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/baseER-ProjLRPCurve-ALLpFR.png', './figure/chinook-baseER-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics("figure/chinook-baseER-ProjLRPCurve-ALLp.png")
 
@@ -567,7 +586,7 @@ Nous avons examiné des analyses de sensibilité sur la variabilité interannuel
 
 ```{r chinook-projLRPcvER, echo=FALSE, fig.cap="Probabilité que toutes les populations d’inlet se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 50 000 essais de simulation (MCCM). Les projections ont supposé une variabilité des taux d’exploitation entre les inlets ayant un CV de 0, 0,085 et 0,17.", out.width = '80%'}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/cvER-ProjLRPCurve-ALLp.png', './figure/chinook-cvER-ProjLRPCurve-ALLp.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/cvER-ProjLRPCurve-ALLpFR.png', './figure/chinook-cvER-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics("figure/chinook-cvER-ProjLRPCurve-ALLp.png")
 
@@ -580,7 +599,7 @@ Nous avons également examiné les analyses de sensibilité des taux d’exploit
 
 ```{r chinook-projLRPER, echo=FALSE, warning=FALSE, fig.cap="Probabilité que toutes les populations d’inlet se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 50 000 essais de simulation (MCCM) en fonction d’une gamme de taux d’exploitation moyens de 5 à 45\\%. Les PRL possibles à p = 0,5 (jaune) et p = 0,66 (bleu) sont en surbrillance."}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERs-ProjLRPCurve-ALLp.png', './figure/chinook-ERs-ProjLRPCurve-ALLp.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERs-ProjLRPCurve-ALLpFR.png', './figure/chinook-ERs-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics("figure/chinook-ERs-ProjLRPCurve-ALLp.png")
 
@@ -597,9 +616,9 @@ Compte tenu de l’incertitude de la productivité actuelle et prévue, les PRL 
 Les PRL de projection avaient tendance à augmenter en cas de faible productivité et vice versa (figure \@ref(fig:chinook-projLRPsAlpha)), une tendance à laquelle on s’attendait en raison de la relation inverse entre la productivité et les valeurs G~gén~ propres aux inlets [@holtCautionsUsingPercentilebased2015]. À faible productivité, G~gén~  tend à augmenter, devenant ainsi plus prudent. La sensibilité des PRL à la productivité met en évidence la valeur de la mise à jour des points de référence et des PRL de projection à mesure que la productivité change. Nos résultats montrent également que l’incertitude dans les projections a augmenté lorsque la productivité était faible, ce qui a probablement nécessité des essais de simulation plus aléatoires pour la stabilisation à p = 0,5. La probabilité que toutes les populations d’inlet soient au-dessus de leur PRI a rarement atteint ou dépassé 0,66 (catégorie « probable », @mastrandreaGuidanceNoteLead2010) lorsque la productivité était faible, de sorte qu’il n’a pas été possible d’estimer les PRL à ce niveau. Lorsque la productivité était élevée, la probabilité que toutes les populations d’inlet soient au-dessus de leur PRI tombait rarement sous 0,66. À productivité élevée, les PRL au niveau p = 0,5 n’ont pas pu être estimés. Des analyses plus détaillées des PRL dans l’ensemble de la gamme des productivités et de l’exploitation dépassaient la portée de cette étude de cas.
 
 
-```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="Projection LRPs estimated under assumptions of reduced productivity (0.75x of current levels) and increased productivity (1.5x current levels).  Candidate LRPs at p=0.5 (yellow) and p=0.66 (blue) are highlighted. More Monte Carlo trials are required for stabilization of LRPs at low productivity. LRPs at p=0.66 could not be estimated at low productivity, and LRPs at p=0.5 could not be estimated at high productivity", out.width = '80%'}
+```{r chinook-projLRPsAlpha, echo=FALSE, fig.cap="PRL de projection estimés selon des hypothèses de productivité réduite (0,75x niveaux actuels) et de productivité accrue (1,5x niveaux actuels). Les PRL possibles à p = 0,5 (jaune) et p = 0,66 (bleu) sont en surbrillance. Il faut davantage d’essais de simulation MCCM pour stabiliser les PRL à faible productivité. Les PRL à p = 0,66 n’ont pas pu être estimés à faible productivité, et les PRL à p = 0,5 n’ont pas pu être estimés à productivité élevée", out.width = '80%'}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/Alphas-ProjLRPCurve-ALLp.png', './figure/chinook-Alphas-ProjLRPCurve-ALLp.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/Alphas-ProjLRPCurve-ALLpFR.png', './figure/chinook-Alphas-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics("figure/chinook-Alphas-ProjLRPCurve-ALLp.png")
 
@@ -615,7 +634,7 @@ Toutes les méthodes indiquent que cette UGS se situe au-dessous de son PRL pour
 
 ```{r chinook-retro, echo=FALSE, fig.cap="Évaluation historique de l’état à l’aide des méthodes disponibles pour estimer les PRL. Les barres rouges indiquent des états sous le PRL; les x gris indiquent des états non disponibles.", out.width = '80%'}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/statusPlot-withBars2020.png', './figure/chinook-statusPlot-withBars2020.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/statusPlot-withBars2020FR.png', './figure/chinook-statusPlot-withBars2020.png',  mode="wb")
 
 knitr::include_graphics("figure/chinook-statusPlot-withBars2020.png")
 
