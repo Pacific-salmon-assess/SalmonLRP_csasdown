@@ -1,0 +1,112 @@
+# PRINCIPLES FOR LRP DEVELOPMENT {#principles}
+
+
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
+\subsection*{Key Points:}
+\begin{itemize}
+\item Principles for identifying Pacific salmon LRPs are adapted from national guidance on LRPs.%, as:
+\item \textbf{Principle 1.} LRPs should be selected based on the best available information. 
+\item \textbf{Principle 2.} LRPs should be consistent with the goal of avoiding serious harm. 
+\item \textbf{Principle 3.} LRPs should be operational, i.e., feasible to calculate and relevant to policy and management.
+\item \textbf{Principle 4.} LRPs should be reliably estimable and plausible. 
+\item \textbf{Principle 5.} When selecting among multiple methods for determining LRPs, the choice should take into account uncertainty. 
+\item \textbf{Principle 6.} Pacific salmon LRPs should be consistent with the goals and objectives of the WSP.
+\item These principles are intended to guide our approach for developing Pacific salmon LRPs while providing flexibility due to differences in local biological characteristics, data qualities and data quantities, among salmon species and stocks. 
+\end{itemize}
+\end{tcolorbox}
+
+## PRINCIPLES
+
+Here we outline principles for developing LRPs for Pacific salmon, adapted from those developed for national-level guidance on LRPs (Marentette et al. In revision). That guidance allows for flexibility in the development of LRPs to respect differences in species life-histories and data types, quantities, and qualities, and is not meant to be prescriptive. By following similar principles, Pacific salmon LRPs are aligned with national direction. 
+
+
+
+**Principle 1**. LRPs should be selected based on the best available information for the SMU, including evidence of serious harm, data and knowledge informing underlying biological processes, Indigenous Knowledge, and comparison with similar SMUs (Marentette et al. In revision). Criteria for evaluating best scientific information developed for US National Standards may be applicable here [@USCodeFederal2021]. These criteria are: relevance, inclusiveness, objectivity, transparency and openness, timeliness, verification and validation, and peer review.  In addition, scientific information should include an evaluation of uncertainties and identify gaps in our understanding or information. When uncertainty exists in identifying the most appropriate approach to define an LRP, these uncertainties should be acknowledged and considered when providing LRP recommendations. Where the weight-of-evidence supports a set of assumptions or hypotheses associated with a candidate LRP, then this LRP can be recommended. Where evidence is inconclusive, this uncertainty should be integrated into the estimation of status and the uncertainties should be clearly communicated.
+
+Within this principle, it is recognized that science is not static and new findings continually advance our understanding of best available information. In particular, peer-review is necessary to ensure that the quality and credibility of data and methods for LRP development meet the standards of the scientific community. When determining whether to conduct a peer review, the level of novelty and complexity, and any previous peer-reviewed stock assessments, should be considered. Although routine updates may not need formal peer review, new LRPs or the application of benchmarks and LRPs to new CUs and SMUs may require peer review.  
+
+Similarly, best practices, or practices that have been demonstrated to work well, can be used to inform reference points, as defined by @sainsburyBestPracticeReference2008: "The ‘best practice’ concept is based on the best practice that has been demonstrated through use, and recognizes that views of what is ‘best’ will continuously improve with experience. Best practice is not an absolute or fixed entity, or a guarantee of adequacy. It is based on experience to date and it is expected to evolve over time."
+
+
+**Principle 2**. LRPs should be consistent with the goal of avoiding serious harm to the SMU, as described in @dfoFisheryDecisionmakingFramework2009 and Section \@ref(intro) of this paper. The LRP should be set above the level where serious harm occurs and should avoid long-term losses that may accompany such undesirable states, such as those related to fishing and ecosystem components, e.g., dependent predators [@dfoFisheryDecisionmakingFramework2009; @dfoPolicyNewFisheries2009]. In addition, LRPs should be representative of the entire SMU.  In cases where only components of an SMU are monitored (e.g., CUs), the monitored component can be used to assess SMU status when it is thought to represent the entire SMU (Section \@ref(guidelines)). 
+
+
+<!--Marentette et al Principle 2:
+2.1	Indicators and LRPs should be at minimum conceptually linked to one or more interpretations of serious harm such as impaired recruitment, productivity, resilience or ability to recover from perturbation.  
+2.2	Indicators and LRPs should be representative of the entire stock.
+2.3	Indicators should generally be proportional to the stock attributes they are intended to represent.
+"Under a default assumption that loss of stock structure is serious harm and is to be avoided, the configuration of indicator(s) chosen should typically be representative of the entire “stock.” This could include scenarios where representative or index subcomponents are monitored or combined in various ways to represent the entire “stock.” Indicators should also proportionality with stock attributes they are intended to measure (e.g., CPUE should be an acceptable proxy for stock size), particularly when management measures respond but the relative importance of these characteristics in driving the choice of indicator may be context-dependent"-->
+<!--CH: collapse this principle  into principles 1 and 2 based on discussions with NHQ 14 Jan 2022-->
+
+<!--CH to consider further emphasizing possibility of using TK for identifying LRPs in other places in this WP?-->
+
+**Principle 3**. LRPs should be operational. They should be feasible to calculate based on data that are available and relevant to the policy context and management of fisheries on SMUs. <!--KH: do you need to say 'management of fisheries on SMUs', or can it just be 'management' more broadly?? Not sure. I'm leaing towards keeping as fisheries for now.--> Data availability varies widely among CUs and SMUs, requiring a variety of approaches for CU and SMU-level assessments. No one method will be operational across all cases.  Also, it is beneficial if LRPs are easy to communicate to managers, First Nations, and stakeholders in a way that informs decisions at time-scales relevant to management. Other operational considerations are cost-effectiveness and simplicity in understanding. 
+
+<!-- CW: How is this different from the previous principle, "based on best available information" I suggest we leave this principle with just the relevant to the policy and easy to communicate (although I think that "easy" is debatable, I would not say that Sgen and SPR40 are easy to communicate, I don't think most people understand them, but they can be used to inform decisions) 
+CH: this idea of 'feasible to calculate' came from Julie's recap at the TESA workshop where she mentioned how participants interpreted 'operational'. I'd prefer to leave in for now, but can take out in a later draft.
+-->
+
+<!--CH consider Marentette et al.: 
+
+"3.1	At minimum, indicators and LRPs should be feasible to estimate on time scales relevant for management.
+3.2	Consider what indicators are most useful for harvest strategies.
+3.3	While status relative to the LRP triggers the need for a rebuilding plan, reference points in general do not need to be operational control points in harvest control rules.
+3.4	Consider how often LRP estimates will be updated.
+3.5	Consider how advice on stock status will be given.
+3.6	While there is no universal choice, weigh benefits and challenges of less common indicators and LRPs.
+LRPs are part of harvest strategies and success in achieving an objective to avoid serious harm to the stock (and more broadly, the sustainability of the fishery) will depend on other elements such as target harvest rates, tolerable risks of breaching limits and over timeframes risks are considered, not just the LRP.
+At minimum, indicators, LRPs and therefore status should be feasible to measure or estimate. Other operational reasons to consider indicators, LRPs or status metrics may be: cost-effectiveness (impacting the ease and frequency of estimating stock status), communicability (affecting the ease of understanding), simplicity, the role that LRPs or stock status may play in HCRs or triggering the need for a rebuilding plan, or the need to estimate stock status to evaluate either trends over time or performance of management measures. These reasons are not mutually exclusive, and the relative priority of reasons that make a choice of indicator, LRP or metric of status “operationally useful” will be context-dependent, both within or across traditional versus procedural paradigms."
+-->
+
+**Principle 4**. LRPs should be reliably estimated. To the extent possible, LRPs should indicate a level above where serious harm occurs with acceptable accuracy and precision, instead of capturing random noise or observation errors. Reliable estimation will depend on the quality and frequency of data collection, model specification, and the evidence to support underlying relationships and population dynamics used to derive LRPs. Reliability can be addressed by checking the sensitivity of LRPs to uncertainties in underlying data, models, or assumptions via sensitivity analyses or simulation-evaluation, or simply by assessing plausibility given biological or life-history information about the SMU (Marentette et al. In revision).
+
+LRPs can be derived using multiple analytical approaches. If LRPs cannot be estimated reliably using one method or approach, then it is advisable to consider alternative approaches based on different sets of assumptions and/or data. When LRP estimates converge using different approaches, this increases support that the methods capture underlying population dynamics despite differing assumptions and use of available data.
+
+<!--RE: pgh below
+CW: 'statistically integrated' or sequential Bayes? i.e. sampling from posterior. 
+CH: I think the point of Staton et al. 2017 is that for salmon, statistical integration wasn't always essential and the standard sequential approach may be sufficient in many cases (though underestimating uncertainty). I don't think they necessarily recommended Bayes over frequentest. For the watershed-area model, I used TMB, but draw random draws from 95%CI of SREP to get uncertainties in benchmarks. We used TMB to minimize estimation time as we thought we would be running simulation evaluations.  So, I'd prefer not to include recommendation on Bayes vs Freq analyses. However, instead of recommending integrated analyses always,  we could recommend that it be considered. 
+ÇW: agreed. --> 
+
+Where possible, a statistically integrated approach for estimating LRPs should be considered in order to propagate uncertainties throughout analyses and to be consistent with current best practices in fisheries stock assessments [@puntEssentialFeaturesNextgeneration2020]. @statonSequentialIntegratedBayesian2017a and @defilippoImprovingShorttermRecruitment2021 provide recent examples of integrated models used for salmon assessments. Both studies show that uncertainty propagation increases realism of model estimates and associated uncertainty. However, @statonSequentialIntegratedBayesian2017a demonstrated that similar point estimates of current status can be achieved by using sequential estimation approaches and the benefits of statistically integrated approaches may not be large enough to warrant an integrated analysis in all cases. 
+
+
+<!--CH: consider Marentette et al: 
+"4.1	Check for consistency and robustness of estimates to uncertainties.
+4.2	Consider whether estimates are plausible given other information about the stock.
+4.3	Consider using historical or empirical proxies if direct estimates are unreliable.
+4.4	Consider the quality of input data.
+4.5	Consider smoothing to address inter-annual variability.
+4.6	Consider simulation testing of estimability.
+Reliable estimation of limit reference points or stock status metrics can mean acceptable consistency, accuracy or precision of estimates (i.e., acceptably low variance or low bias),  and robustness to a range of possible uncertainties (assumptions, stock scale, data points and/or model structure). Reliability of reference points or status may also depend on reliable and consistent data collection. Reliability may be evaluated by examining uncertainty in estimates, sensitivity tests, evaluating the reasonableness of assumptions, simulation testing and/or by comparison to other similar stocks.
+"
+-->
+
+**Principle 5**. When selecting among multiple methods for defining LRPs, the choice should take into account uncertainty<!-- CW: Risk or uncertainty? I think of risk as associated with FM and objectives. i.e. prob of achieving something. LW: Ya I'm not sure on risk vs. uncertainty here. I understand the intent of accounting for uncertainty in data/assumptions. At the same time when I think of risk I think of probability*magnitude of something happening, e.g., risk of climate change impacts on productivity. Uncertainty/assumptions in data and methods result in a risk of an LRP not being set above the point where serious harm occurs. Also, I think of setting an LRP at a certain probability of the SMU not reaching the point of serious harm (as mentioned in Ch 1 and in Kronlund et al. 2018). Is what we're trying to get at here that selection of methods should be precautionary, as in http://publications.gc.ca/collections/Collection/CP22-70-2003E.pdf ?  -->. Candidate methods for LRPs vary in how and the extent to which they account for uncertainty in underlying data, modelled population dynamics (parameter assumptions and model structure), and derivation of CU-level statuses. These uncertainties create risks of LRPs providing a misleading threshold of serious harm. All else being equal, methods that rely on high quality data, include fewer assumptions, and explicitly account for underlying uncertainties should be preferred<!-- KH: not clear on the remainder of this sentence, so suggest removing ".., and explicitly account for underlying uncertainties should be preferred". CH. I think a comma after high-qulaity data was missing before which changed the meaning of the sentence. I've kept the last phrase in, with the new comma.-->. 
+
+When considering LRPs under alternative model assumptions, LRPs can be chosen based on strength of evidence for underlying assumptions or averaged when alternative assumptions are equally plausible. Further, the sensitivity of LRPs to various underlying model assumptions or data qualities and quantities can be evaluated in simulation, where LRPs that are less sensitive to key uncertainties would be preferred.
+
+
+<!--CH: This principle supports use of ppn-based LRPs over aggregate abundance-based LRPs (b/c of uncertain assumptions in LR), with some justification for considering aggregate abundance-based LRPs that are statistically integrated so account of uncertainty in CU benchmarks. I have added to chapter on guidelines  -->
+
+<!--CH: from Marentette et al:
+Principle 5: When selecting from multiple alternatives, the choice of stock status indicators and LRPs should take into account risk.
+5.1	If working with fixed values?, consider averaging among plausible alternatives.
+5.2	Consider the highest of several plausible alternatives.
+5.3	Evaluate plausible LRPs with simulation.
+
+-->
+
+
+**Principle 6**.  In addition to principles derived for marine species in general (Principles 1-5) and to meet the goal of avoiding serious harm under DFO's Precautionary Approach Policy (Principle 2), Pacific salmon LRPs should be consistent with the goals and objectives of the WSP. The WSP requires both the definition of biological units and an assessment of their status along biological metrics, with lower benchmarks used to represent the level that avoids risk of extinction. This approach is consistent with avoiding serious harm to the CU. Above the lower benchmarks (above Red status), irreversible or slowly reversible impacts are avoided.  Ignoring CU-level status by focusing solely on SMU-level status can result in serial depletion (or loss) of weak component CUs within an SMU, resulting in a possibly misleading indication status and serious harm. Therefore, to be consistent with the WSP, LRPs should consider status of component CUs.
+
+## APPLYING THE PRINCIPLES TO LRP DEVELOPMENT
+
+Our goal is to provide overall guidelines on LRP development following the principles listed above while providing flexibility due to differences in biological characteristics and types, qualities and quantities of data among Pacific salmon species and SMUs. We indicate the extent to which candidate LRP methods proposed here are aligned with these principles. <!--KH: can you be more specific on how / where we demonstrate this? - or, would it be more correct to say "We demonstrate the application of candidate LRP methods that are aligned with these principles? CH: I explain alignment to principles in the text of the next section. I think it's okay to leave as is, though I changed 'demonstrate' to 'indicate'--> Additional LRP methods may be developed in the future to capture a broader range of data availability, quality, and types, and/or dimensions of biological status; the development of these additional methods should be aligned with the key principles summarized here.
+
+
+In the next section, methods for estimating CU status are described, as implemented in previous status assessments under the WSP, and candidate LRPs are proposed. Guidelines on how to choose among LRPs is described in Section \@ref(guidelines). 
+
+
+
+

@@ -1,0 +1,14 @@
+book_filename: "resdoc"
+rmd_files: ["index.Rmd",
+            "01-chap1.Rmd",
+            "01.5-reviewRPs.Rmd",
+            "02-chap2.Rmd",
+            "03-chap3.Rmd",
+            "05-chap5.Rmd",
+            "06-chap6.Rmd",
+            "06.5-Acknowledgements.Rmd",
+            "07-references.Rmd",
+            "10-appendixCaseStudies.Rmd",
+            "08-appendix.Rmd",
+            "09-appendix.Rmd"]
+delete_merged_file: true
