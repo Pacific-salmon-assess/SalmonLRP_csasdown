@@ -1,101 +1,98 @@
-\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
 \thispagestyle {fancy}
-\contentsline {section}{ABSTRACT}{iv}{section*.1}%
+\contentsline {section}{R\'ESUM\'E}{v}{section*.1}%
 \contentsline {section}{\numberline {1}INTRODUCTION}{1}{section.0.1}%
-\contentsline {section}{\numberline {2}LRP ESTIMATION METHODS}{2}{section.0.2}%
-\contentsline {subsection}{\numberline {2.1}OVERVIEW}{3}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {2.2}CU STATUS-BASED LRPS}{4}{subsection.0.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}MULTIDIMENSIONAL APPROACH TO CU STATUS ASSESSMENTS WITHIN THE PACIFIC SALMON STATUS SCANNER}{4}{subsubsection.0.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}AGGREGATE ABUNDANCE LRPS}{5}{subsection.0.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Logistic regression LRPs}{7}{subsubsection.0.2.3.1}%
-\contentsline {paragraph}{\numberline {2.3.1.1}Logistic Regression Model Diagnostics}{9}{paragraph.0.2.3.1.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}PROJECTION LRPS}{11}{subsubsection.0.2.3.2}%
-\contentsline {section}{\numberline {3}CASE STUDY 1: INTERIOR FRASER COHO SALMON}{13}{section.0.3}%
-\contentsline {subsection}{\numberline {3.1}CONTEXT}{13}{subsection.0.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Previous assessments}{15}{subsubsection.0.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}History of aggregate-abundance based reference points}{16}{subsubsection.0.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}DATA}{16}{subsection.0.3.2}%
-\contentsline {subsection}{\numberline {3.3}CU STATUS ESTIMATION}{17}{subsection.0.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Estimation of Sgen}{18}{subsubsection.0.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}LRP ESTIMATION: CU STATUS BASED}{22}{subsection.0.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Methods}{22}{subsubsection.0.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Results}{22}{subsubsection.0.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}LRP ESTIMATION: AGGREGATE ABUNDANCE, LOGISTIC REGRESSION LRPS}{24}{subsection.0.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Methods}{24}{subsubsection.0.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Results}{26}{subsubsection.0.3.5.2}%
-\contentsline {subsection}{\numberline {3.6}LRP ESTIMATION: AGGREGATE ABUNDANCE, PROJECTION LRPS}{32}{subsection.0.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Methods}{32}{subsubsection.0.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Results}{37}{subsubsection.0.3.6.2}%
-\contentsline {subsection}{\numberline {3.7}HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS}{39}{subsection.0.3.7}%
-\contentsline {subsection}{\numberline {3.8}DISCUSSION}{43}{subsection.0.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}CU status-based vs.~Aggregate Abundance LRP Methods}{43}{subsubsection.0.3.8.1}%
-\contentsline {subsubsection}{\numberline {3.8.2}Structural Uncertainty in Spawner-Recruitment Dynamics}{44}{subsubsection.0.3.8.2}%
-\contentsline {subsubsection}{\numberline {3.8.3}Logisic Regression LRPs}{45}{subsubsection.0.3.8.3}%
-\contentsline {subsubsection}{\numberline {3.8.4}Projection LRPs}{45}{subsubsection.0.3.8.4}%
-\contentsline {subsubsection}{\numberline {3.8.5}Distributional-based benchmarks}{46}{subsubsection.0.3.8.5}%
-\contentsline {section}{\numberline {4}CASE STUDY 2: WEST COAST VANCOUVER ISLAND CHINOOK}{47}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}CONTEXT}{47}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Previous assessments}{48}{subsubsection.0.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}DATA}{49}{subsection.0.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Spatial scale}{49}{subsubsection.0.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Watershed Areas}{50}{subsubsection.0.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Spawner Abundances}{50}{subsubsection.0.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}Proportionate Natural Influence, PNI}{51}{subsubsection.0.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}INLET AND CU STATUS ESTIMATION}{52}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {4.4}LRP ESTIMATION: CU STATUS BASED}{54}{subsection.0.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Methods}{54}{subsubsection.0.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Results}{55}{subsubsection.0.4.4.2}%
-\contentsline {subsection}{\numberline {4.5}LRP ESTIMATION: AGGREGATE ABUNDANCE, LOGISTIC REGRESSION LRPS}{55}{subsection.0.4.5}%
-\contentsline {subsection}{\numberline {4.6}LRP ESTIMATION: AGGREGATE ABUNDANCE, PROJECTION LRPS}{55}{subsection.0.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Methods}{55}{subsubsection.0.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Results}{60}{subsubsection.0.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Sensitivity Analyses}{61}{subsubsection.0.4.6.3}%
-\contentsline {subsection}{\numberline {4.7}HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS}{64}{subsection.0.4.7}%
-\contentsline {subsection}{\numberline {4.8}DISCUSSION}{65}{subsection.0.4.8}%
-\contentsline {section}{\numberline {5}CASE STUDY 3: INSIDE SOUTH COAST CHUM - NON-FRASER}{67}{section.0.5}%
-\contentsline {subsection}{\numberline {5.1}CONTEXT}{67}{subsection.0.5.1}%
-\contentsline {subsection}{\numberline {5.2}DATA}{69}{subsection.0.5.2}%
-\contentsline {subsection}{\numberline {5.3}CU STATUS ESTIMATION}{70}{subsection.0.5.3}%
-\contentsline {subsection}{\numberline {5.4}LRP ESTIMATION: CU STATUS BASED}{71}{subsection.0.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Methods}{71}{subsubsection.0.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Results}{73}{subsubsection.0.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}LRP ESTIMATION: AGGREGATE ABUNDANCE, LOGISTIC REGRESSION LRPS}{73}{subsection.0.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Methods}{73}{subsubsection.0.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Results}{75}{subsubsection.0.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}HISTORICAL EVALUATION OF STATUS ACROSS LRP METHODS}{77}{subsection.0.5.6}%
-\contentsline {subsection}{\numberline {5.7}DISCUSSION}{80}{subsection.0.5.7}%
-\contentsline {section}{\numberline {6}LESSONS LEARNED FROM CASE STUDY APPLICATIONS}{83}{section.0.6}%
-\contentsline {section}{\numberline {7}ACKNOWLEDGEMENTS}{86}{section.0.7}%
-\contentsline {section}{\numberline {8}REFERENCES CITED}{87}{section.0.8}%
+\contentsline {section}{\numberline {2}MÉTHODES D'ESTIMATION DES PRL}{2}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}APERÇU}{2}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}PRL FONDÉS SUR L'ÉTAT DES UC}{4}{subsection.0.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}APPROCHE MULTIDIMENSIONNELLE DES ÉVALUATIONS DE L'ÉTAT DES UC SELON L'EXPLORATEUR DE L'ÉTAT DES SAUMONS DU PACIFIQUE}{5}{subsubsection.0.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}PRL de régression logistique}{8}{subsubsection.0.2.2.2}%
+\contentsline {paragraph}{\numberline {2.2.2.1}Diagnostics du modèle de régression logistique}{10}{paragraph.0.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.3}PRL DE PROJECTION}{12}{subsubsection.0.2.2.3}%
+\contentsline {section}{\numberline {3}CASE STUDY 1: INTERIOR FRASER COHO SALMON}{15}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}CONTEXTE}{15}{subsection.0.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Évaluations précédentes}{17}{subsubsection.0.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Historique des points de référence fondés sur l'abondance agrégée}{18}{subsubsection.0.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}DONNÉES}{19}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}ESTIMATION DE L'ÉTAT DES UC}{20}{subsection.0.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Estimation de G\textsubscript {gén}}{21}{subsubsection.0.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{24}{subsection.0.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Méthodes}{24}{subsubsection.0.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Résultats}{24}{subsubsection.0.3.4.2}%
+\contentsline {subsection}{\numberline {3.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{28}{subsection.0.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Méthodes}{28}{subsubsection.0.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Résultats}{29}{subsubsection.0.3.5.2}%
+\contentsline {subsection}{\numberline {3.6}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR PROJECTION}{36}{subsection.0.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Méthodes}{36}{subsubsection.0.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Résultats}{43}{subsubsection.0.3.6.2}%
+\contentsline {subsection}{\numberline {3.7}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{45}{subsection.0.3.7}%
+\contentsline {subsection}{\numberline {3.8}DISCUSSION}{50}{subsection.0.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Méthode des PRL fondés sur l'état des UC par rapport à celle des PRL fondés sur l'abondance agrégée}{50}{subsubsection.0.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Incertitude structurelle de la dynamique géniteurs-recrutement}{51}{subsubsection.0.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}PRL de régression logistique}{52}{subsubsection.0.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}PRL de projection}{53}{subsubsection.0.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Points de référence fondés sur la répartition}{53}{subsubsection.0.3.8.5}%
+\contentsline {section}{\numberline {4}ÉTUDE DE CAS 2~: SAUMON CHINOOK DE LA CÔTE OUEST DE L'ÎLE DE VANCOUVER}{55}{section.0.4}%
+\contentsline {subsubsection}{\numberline {4.0.1}Évaluations précédentes}{57}{subsubsection.0.4.0.1}%
+\contentsline {subsection}{\numberline {4.1}DONNÉES}{58}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Échelle spatiale}{58}{subsubsection.0.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Zones du bassin hydrographique}{58}{subsubsection.0.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Abondance des géniteurs}{59}{subsubsection.0.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Influence naturelle proportionnelle}{59}{subsubsection.0.4.1.4}%
+\contentsline {subsection}{\numberline {4.2}ESTIMATION DE L'ÉTAT À L'ÉCHELLE DES INLETS ET DES UC}{61}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {4.3}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{64}{subsection.0.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Méthodes}{64}{subsubsection.0.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Résultats}{64}{subsubsection.0.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{64}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {4.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR PROJECTION}{64}{subsection.0.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Méthodes}{64}{subsubsection.0.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Résultats}{72}{subsubsection.0.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Analyses de sensibilité}{72}{subsubsection.0.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{75}{subsection.0.4.6}%
+\contentsline {subsection}{\numberline {4.7}DISCUSSION}{76}{subsection.0.4.7}%
+\contentsline {section}{\numberline {5}ÉTUDE DE CAS 3~: SAUMON KÉTA DE LA CÔTE SUD INTÉRIEURE, À L'EXCLUSION DES UC DU FLEUVE FRASER}{79}{section.0.5}%
+\contentsline {subsection}{\numberline {5.1}CONTEXTE}{79}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {5.2}DONNÉES}{82}{subsection.0.5.2}%
+\contentsline {subsection}{\numberline {5.3}ESTIMATION DE L'ÉTAT DES UC}{83}{subsection.0.5.3}%
+\contentsline {subsection}{\numberline {5.4}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{85}{subsection.0.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Méthodes}{85}{subsubsection.0.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Résultats}{87}{subsubsection.0.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{89}{subsection.0.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Méthodes}{89}{subsubsection.0.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Résultats}{89}{subsubsection.0.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{95}{subsection.0.5.6}%
+\contentsline {subsection}{\numberline {5.7}DISCUSSION}{95}{subsection.0.5.7}%
+\contentsline {section}{\numberline {6}LEÇONS APPRISES DES APPLICATIONS DANS LE CADRE DES ÉTUDES DE CAS}{100}{section.0.6}%
+\contentsline {section}{\numberline {7}REMERCIEMENTS}{104}{section.0.7}%
+\contentsline {section}{\numberline {8}RÉFÉRENCES CITÉES}{105}{section.0.8}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{APPENDIX~A. DATA AND ANALYSIS LINKS}{92}{section*.3}%
-\contentsline {chapter}{APPENDIX~B. samSim MODEL DOCUMENTATION}{93}{section*.5}%
-\contentsline {section}{\numberline {B.1}MODEL PRIMING}{97}{section.B.1}%
-\contentsline {subsection}{\numberline {B.1.1}Recruitment data are available}{97}{subsection.B.1.1}%
-\contentsline {subsection}{\numberline {B.1.2}Recruitment data are not available}{97}{subsection.B.1.2}%
-\contentsline {subsection}{\numberline {B.1.3}Compute management quantities and benchmarks}{99}{subsection.B.1.3}%
-\contentsline {subsection}{\numberline {B.1.4}Infill missing data}{100}{subsection.B.1.4}%
-\contentsline {section}{\numberline {B.2}MODEL PROJECTIONS}{100}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Specify stock recruitment parameters}{100}{subsection.B.2.1}%
-\contentsline {subsection}{\numberline {B.2.2}Project management benchmarks}{100}{subsection.B.2.2}%
-\contentsline {subsection}{\numberline {B.2.3}Project observed recruitment}{101}{subsection.B.2.3}%
-\contentsline {subsection}{\numberline {B.2.4}Project recruitment forecast}{101}{subsection.B.2.4}%
-\contentsline {subsection}{\numberline {B.2.5}Project realized catches}{101}{subsection.B.2.5}%
-\contentsline {subsection}{\numberline {B.2.6}Project observed data}{102}{subsection.B.2.6}%
-\contentsline {subsection}{\numberline {B.2.7}Run stock assessment and calculate management quantities}{103}{subsection.B.2.7}%
-\contentsline {subsection}{\numberline {B.2.8}Project population dynamics}{104}{subsection.B.2.8}%
-\contentsline {chapter}{APPENDIX~C. SUPPORTING INFORMATION FOR INTERIOR FRASER COHO CASE STUDY}{105}{section*.7}%
-\contentsline {section}{\numberline {C.1}Assessment of CU Representativeness Based on Guidelines Criteria}{105}{section.C.1}%
-\contentsline {section}{\numberline {C.2}Bayesian Stock-Recruitment Model Parameter Estimates}{107}{section.C.2}%
-\contentsline {section}{\numberline {C.3}Projected Spawner Abundances used for the Projection LRP Method}{113}{section.C.3}%
-\contentsline {chapter}{APPENDIX~D. SENSITIVITY OF PROJECTION-BASED LRPS TO EXPLOITATION RATES}{115}{section*.9}%
-\contentsline {chapter}{APPENDIX~E. SUPPORTING INFORMATION FOR INSIDE SOUTH COAST CHUM SALMON CASE STUDY}{122}{section*.11}%
-\contentsline {section}{\numberline {E.1}Data Sources and Treatment}{122}{section.E.1}%
-\contentsline {subsection}{\numberline {E.1.1}Spawner Escapement}{122}{subsection.E.1.1}%
-\contentsline {subsection}{\numberline {E.1.2}Fishery Harvest, Genetics, and Age}{122}{subsection.E.1.2}%
-\contentsline {subsection}{\numberline {E.1.3}Data Selection and Infilling}{122}{subsection.E.1.3}%
-\contentsline {subsection}{\numberline {E.1.4}Infilling of Spawner Escapement Data}{123}{subsection.E.1.4}%
-\contentsline {subsubsection}{\numberline {E.1.4.1}Infilling by Stream}{123}{subsubsection.E.1.4.1}%
-\contentsline {subsubsection}{\numberline {E.1.4.2}Infilling by CU}{123}{subsubsection.E.1.4.2}%
-\contentsline {subsection}{\numberline {E.1.5}Run Reconstruction to Estimate Recruitment}{124}{subsection.E.1.5}%
-\contentsline {section}{\numberline {E.2}Retrospective Analysis of CU Benchmarks}{125}{section.E.2}%
+\contentsline {chapter}{ANNEXE~A. LIENS MENANT AUX DONNÉES ET AUX ANALYSES}{110}{section*.3}%
+\contentsline {chapter}{ANNEXE~B. DOCUMENTATION DU MODÈLE SAMSIM}{111}{section*.5}%
+\contentsline {section}{\numberline {B.1.}AMORÇAGE DU MODÈLE}{115}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1.}Des données sur le recrutement sont disponibles}{115}{subsection.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2.}Des données sur le recrutement ne sont pas disponibles}{115}{subsection.B.1.2}%
+\contentsline {subsection}{\numberline {B.1.3.}Calcul des quantités et des points de référence de gestion}{117}{subsection.B.1.3}%
+\contentsline {subsection}{\numberline {B.1.4.}Remplissage des données manquantes}{118}{subsection.B.1.4}%
+\contentsline {section}{\numberline {B.2.}PROJECTIONS DU MODÈLE}{118}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1.}Préciser les paramètres de stock-recrutement}{118}{subsection.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2.}Points de référence de gestion du projet}{119}{subsection.B.2.2}%
+\contentsline {subsection}{\numberline {B.2.3.}Recrutement observé du projet}{119}{subsection.B.2.3}%
+\contentsline {subsection}{\numberline {B.2.4.}Prévision du recrutement du projet}{119}{subsection.B.2.4}%
+\contentsline {subsection}{\numberline {B.2.5.}Prises réalisées du projet}{120}{subsection.B.2.5}%
+\contentsline {subsection}{\numberline {B.2.6.}Données observées du projet}{121}{subsection.B.2.6}%
+\contentsline {subsection}{\numberline {B.2.7.}Exécution de l'évaluation des stocks et calcul des quantités de gestion}{122}{subsection.B.2.7}%
+\contentsline {subsection}{\numberline {B.2.8.}Dynamique des populations du projet}{122}{subsection.B.2.8}%
+\contentsline {chapter}{ANNEXE~C. RENSEIGNEMENTS À L'APPUI DE L'ÉTUDE DE CAS SUR LE SAUMON COHO DU FRASER INTÉRIEUR}{123}{section*.7}%
+\contentsline {section}{\numberline {C.1.}Évaluation de la représentativité des UC selon les critères des lignes directrices}{123}{section.C.1}%
+\contentsline {section}{\numberline {C.2.}Estimations des paramètres du modèle bayésien de stock-recrutement}{125}{section.C.2}%
+\contentsline {chapter}{ANNEXE~D. SENSIBILITÉ DES PRL DE PROJECTION AUX TAUX D'EXPLOITATION}{128}{section*.9}%
+\contentsline {chapter}{ANNEXE~E. RENSEIGNEMENTS À L'APPUI DE L'ÉTUDE DE CAS SUR LE SAUMON KÉTA DE LA CÔTE SUD INTÉRIEURE}{135}{section*.11}%
+\contentsline {section}{\numberline {E.1.}Sources et traitement des données}{135}{section.E.1}%
+\contentsline {subsection}{\numberline {E.1.1.}Échappées de géniteurs}{135}{subsection.E.1.1}%
+\contentsline {subsection}{\numberline {E.1.2.}\#\#\# Prises des pêches, génétique et âge}{135}{subsection.E.1.2}%
+\contentsline {subsection}{\numberline {E.1.3.}Sélection et remplissage des données}{135}{subsection.E.1.3}%
+\contentsline {subsection}{\numberline {E.1.4.}Remplissage des données sur les échappées de géniteurs}{136}{subsection.E.1.4}%
+\contentsline {subsubsection}{\numberline {E.1.4.1.}Remplissage par cours d'eau}{136}{subsubsection.E.1.4.1}%
+\contentsline {subsubsection}{\numberline {E.1.4.2.}Remplissage par UC}{137}{subsubsection.E.1.4.2}%
+\contentsline {subsection}{\numberline {E.1.5.}Reconstitution des remontes pour estimer le recrutement}{137}{subsection.E.1.5}%
+\contentsline {section}{\numberline {E.2.}Analyse rétrospective des points de référence à l'échelle de l'UC}{138}{section.E.2}%

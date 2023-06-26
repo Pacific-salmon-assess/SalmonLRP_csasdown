@@ -145,7 +145,7 @@ The priming phase, or model initialization, represents the past data for CUs bei
 
 If spawner-recruitment data are available, the number of initialization years 'nPrime' is defined based on the length of the longest CU time series available. The spawners, recruits, catch and exploitation rate objects are populated with the input data. If catch and/or exploitation rate data are not available, those values are set to zero.
 
-### Recruitment data are not available
+### Recruitment data are not available{#recruitment-data-are-not-available}
 
 When Recruitment data are not available, the 'nPrime' is set to 10 times the maximum age of recruits. The first step on this routine is to retrieve the stock-recruitment parameters. The user has the option of providing either one set of values to be used across all trials or many sets of parameter estimates, typically from MCMC samples. If MCMC samples are provided, a different set of parameters is used for each simulation trial.
 
@@ -255,7 +255,7 @@ Recruitment numbers produced with either formulation of the Ricker model are cap
 <!--CH addition below-->
 Although in our implementation of `samSim` for Interior Fraser Coho with smolt-to-adult survival covariate, data were used to prime the model, equations for simulating dynamics during this period are provided here for completeness. The equations for simulating population dynamics are also used in the projection phase of the model (see below).
 
-### Compute management quantities and benchmarks
+### Compute management quantities and benchmarks{#compute-management-quantities-and-benchmarks}
 
 In the priming loop, the management quantities and benchmarks are only calculated in the last two generations. The management benchmarks are calculated according to three options: "stockRecruit", "percentile" and "habitat". `samSim` has the capability of estimating management quantities and benchmarks on a yearly basis, relying on the data obtained from the beginning of the time series to the current simulation year. However for the purpose of the LRP study cases, time invariant management benchmarks were used. For this reason we omit the time index, $y$, from the notation used for the management quantities. 
 
@@ -522,7 +522,7 @@ u_{y,i,n} \sim logN(0,\sigma_{C})
 \end{equation}
 
 
-### Run stock assessment and calculate management quantities
+### Run stock assessment and calculate management quantities{#run-stock-assessment-and-calculate-management-quantities}
 
 This next phase of the projection loop simulates salmon stock assessment analysis. The linearized simple Ricker stock-recruit curve is fit to the observed data and $\hat{a}_{y,i}$ and $\hat{b}_{y,i}$ are estimated. Again, this step was not implemented for LRP analyses, which used benchmarks calculated from true underlying parameters provided as inputs (i.e., from a normative period).<!--CH: moved this sentence up  from below to here-->
 
