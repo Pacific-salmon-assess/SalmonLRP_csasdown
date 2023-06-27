@@ -1,0 +1,419 @@
+
+# GUIDELINES FOR APPLYING LRPS {#guidelines}
+
+## STEPWISE APPROACH FOR SELECTING LRPS
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
+\subsection*{Key Points:}
+\begin{itemize} 
+\item We recommend a step-wise approach for developing LRPs that highlights the important steps, considerations and decisions when identifying LRPs. These steps form our guidelines on the choice and implementation of candidate LRP methods.
+\item  \textbf{Step 1.} Compile data 
+\item  \textbf{Step 2.} Assess CU data deficiencies
+\item  \textbf{Step 3.} Evaluate if data-deficient CUs be represented by CUs with data
+\item  \textbf{Step 4.} Identify what proportion of CUs above red status (among those with data) is required to avoid serious harm. We recommend 100\% as the default.
+\item  \textbf{Step 5.} Assess SMU status relative to CU status-based LRP
+\item  \textbf{Step 6.} Peer-review status relative to CU status-based LRP
+\item  \textbf{Step 7.} Identify if aggregate abundance LRPs are required for fisheries management. 
+\item  \textbf{Step 8.} If yes, estimate aggregate abundance LRPs and evaluate the extent to which underlying assumptions are met.
+\item  \textbf{Step 9.} If yes, apply aggregate abundance LRPs to derive SMU-level status.
+\end{itemize}
+\end{tcolorbox}
+
+
+
+We recommend a step-wise approach for identifying LRPs, with the proportion of component CUs with status above Red as the default method (Fig. \@ref(fig:flowchart)). This is the method recommended to meet the *Fisheries Act* requirement for LRPs, and being based on the biological unit of CU, can be applied to numerous aspects of salmon management, including hatchery, harvest, and habitat management. Aggregate abundance LRPs are presented as an option for cases in which they are required for fisheries management (e.g., locally or internationally), but are considered supplemental to the proportion of CUs with status above Red. The step-wise approach presented below considers data availability for candidate LRP methods and provides guidance when inconsistencies in status occur from applying multiple LRP methods. These steps can be adapted in the future as more methods are developed and/or these methods are further applied and evaluated across additional SMUs and contexts. These steps were developed to be consistent with the principles described in Section \@ref(principles).
+<!-- CH: old colours: fill=yellow!10, fill=cyan!10, fill=magenta!10, fill=brown!10, fill=green!10, boxgray, intead of box,-->
+
+
+\begin{figure}[ht]
+\centering
+\tikzstyle{box} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black]
+\tikzstyle{boxgray} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm, text width = 10cm, draw=black, fill=gray!10]
+\tikzstyle{boxno} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, text width = 4cm, draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{tikzpicture} [node distance = 1.5cm]
+\node(1) [box, fill=yellow!10] {1. Data compilation};
+\node(2) [box, fill=yellow!10, below of=1] {2. Assess CU data deficiency};
+\node(3) [box, fill=yellow!10, below of= 2] {3. Determine whether status of data-deficient CUs can be inferred from CUs with data};
+\node(4) [box, fill=yellow!10, below of= 3] {4. What proportion of CUs above Red status is required to avoid serious harm? Default = 100\%};
+\node(5) [box, fill=yellow!10, below of=4] {5. Assess status relative to CU status-based LRP};
+\node(6) [box, fill=yellow!10, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
+\node(7) [box, below of=6, fill=blue!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
+\node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
+\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely solely on CU status-based LRP (step 5)};
+\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from CU status-based LRPs  (step 5)};
+\node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Aggregate abundance LRPs cannot be estimated};
+\draw[arrow] (1) -- (2);
+\draw[arrow] (2) -- (3);
+\draw[arrow] (3) -- (4);
+\draw[arrow] (4) -- (5);
+\draw[arrow] (5) -- (6);
+\draw[arrow] (6) -- (7);
+\draw[arrow] (7) -- node[anchor=east] {Yes} (8);
+\draw[arrow] (7) -| node[anchor=west] {No} (8n);
+\draw[arrow] (8) -- node[anchor=east] {Assumptions met} (9);
+\draw[arrow] (8) -| node[anchor=west] {Assumptions not met} (9n);
+\end{tikzpicture}
+\caption{Steps for setting LRPs and assessing status. Pale yellow boxes indicate those for estimating CU status-based LRPs. Blue boxes indicate those for aggregate abundance LRPs. White boxes indicate when aggregate abundance LRP methods are not recommended.} 
+(\#fig:flowchart)
+\end{figure}
+
+
+### Step 1: Data Compilation
+
+
+The first step is to compile CU-level data to support biological status assessments as described under the WSP [@holtIndicatorsStatusBenchmarks2009; @holtEvaluatingBenchmarksBiological2018]. These data include (but are not limited to) time-series of spawner abundances, recruitment, hatchery contributions, productivity, and biological benchmarks on spawner abundances. This step generally includes aggregating data at the spawning site or stream level to the CU level. 
+
+In some cases, finer spatial scales than CU (e.g., watersheds or sub-populations within CUs) may be considered to define serious harm to an SMU. Although CUs are the population unit of assessment and conservation required under the WSP, the distribution of spawning within CUs (e.g., among watersheds or sub-populations) can be an important component of status [@holtIndicatorsStatusBenchmarks2009] and these finer scales can be considered when data or supporting information allows. Distribution is a commonly cited component of salmon viability and recovery [@mcelhanyViableSalmonidPopulations2000]. When applied to the identification of recovery targets for Pacific salmon, @bradfordReviewBiologicalPrinciples2004 defined the relevant scale of distribution in units of sub-populations that are demographically independent, where population dynamics of one sub-population is unlikely to affect the dynamics of another. Genetic exchange among sub-populations is expected to occur at greater rates than observed among CUs (or populations), and would likely exceed 10 effective migrants per generation. When applying these criteria to Interior Fraser River Coho salmon, @bradfordReviewBiologicalPrinciples2004 defined sub-populations on the basis of large watersheds or lakes, or partial barriers to migration. 
+
+We recommend that the decision on distribution and spatial scale of conservation for biological assessments be part of the peer-review process for CU and SMU assessments, and be based on biological principles of conservation and viability [e.g., as reviewed in @bradfordReviewBiologicalPrinciples2004; @mcelhanyViableSalmonidPopulations2000]. 
+
+
+Within this step, information on hatchery enhancement is used to identify populations where production is dominated by hatchery-origin fish. These populations (identified by PNI values $<$ 0.5, or expert opinion when data on the proportion of hatchery-origin spawners are not available) are generally excluded from analyses, while those that are dominated by natural-origin fish (e.g., PNI values are $\geqslant$ 0.5), are generally included [@withlerGeneticallyBasedTargets2018]. Further, where time-series of the proportion of hatchery-origin salmon on the spawning grounds are available and production is dominated by natural-origin fish, these proportions can be used to generate time-series of natural-origin recruitment for benchmark estimation and natural-origin spawners for status assessment against benchmarks. When the influence of hatchery production is removed in this way, the assessments are less sensitive to the presence of hatcheries and annual variation in hatchery practices.  
+
+Infilling among streams or spawning sites for years with missing data is commonly used when compiling CU-level spawner abundance series [e.g., see @grantEvaluationUncertaintyFraser2012; @brown2020SummaryAbundance2020]. When infilled time series are used to estimate LRPs and monitor stock status relative to LRPs, consideration should be given to the scale at which infilling is done. If LRPs are based on maintaining CU-level diversity, infilling of missing data should generally not be based on escapements from outside of the CU. Infilling among CUs increases uncertainty and may provide misleading status for the CU being infilled, if CUs diverge in status and trends (see Step 3). In addition, hatchery enhancement should be carefully accounted for when infilling to avoid overestimating abundances when infilled numbers are based on sites that are artificially enhanced and when enhancement levels vary during the time series. 
+
+
+### Step 2: Assessing CU Data Deficiency
+
+Second, CUs with data to support biological assessments are identified; those without sufficient data are considered data deficient. CUs are assessed based on a variety of metrics including abundances and trends, and data requirements for these metrics vary. At a minimum, a CU must have an index of spawner abundance time-series. These data can be used to estimate trends over time against benchmarks that are common across CUs [@holtIndicatorsStatusBenchmarks2009]. For short-term trend analyses, data are considered insufficient when they include less than half of available years in the last three generations or are of low quality representing only presence/absence. These criteria for trend detection are similar to criteria described in @brown2020SummaryAbundance2020 and applied to spawning sites of Chinook Salmon in Southern BC. 
+
+In addition, current spawner abundances can be compared to abundance-based benchmarks, where current spawner abundances are generally defined as the geometric average spawner abundances over the most recent generation.  For this metric, at least one year of spawner abundances is required in the current generation to compare against benchmarks. CU-specific benchmarks on spawner abundances can be derived from spawner-recruitment models, percentiles of spawner time-series, or habitat characteristics. Data requirements for benchmark estimation on spawner abundances differ according to the methods applied and are not explicitly defined here. Local biological expertise is required to review available data and benchmarks prior to assessments to identify data deficiencies. For example, <!--spawner-recruitment benchmarks developed from hierarchical multi-stock models require fewer years of data than those based on individual stock-recruitment models. In addition, -->changes in environmental conditions over time may result in historical data that are no longer representative of current conditions, resulting in data deficiencies. 
+
+<!--In addition, a CU may be data deficient when data to resolve the existence of the CU are insufficient. For example, @holtbyConservationUnitsPacific2007 describe provisional CUs pending acquisition of genetic samples to differentiate them from neighbouring CUs. Further work verifying, expanding, and updating these guidelines for data deficiencies in the context of different salmon species, life-histories, and assessment metrics is warranted. -->
+
+
+### Step 3: Determine whether status of data-deficient CUs can be inferred from CUs with data
+
+
+Third, the extent to which status of data deficient CUs can be inferred from CUs with data is evaluated. By definition, data deficient CUs do not have data on population dynamics to rigorously evaluate the extent to which other CUs with data could be used to represent their status, though information on threats and biological characteristics may be available. To infer status for data deficient CUs, at a minimum we recommend providing evidence that: (i) the threats impacting data deficient CUs are likely to be the same as for CUs with data and their magnitudes are similar,  (ii) dominant environmental drivers are similar among CUs, e.g., as reflected by the distribution of CUs across freshwater and marine ecosystems, (iii) biological characteristics, such as life-history type and dominant age-at-maturity of data-deficient CUs are represented in the CUs with data, and (iv) the carrying capacity of data deficient CUs is likely in the range of those represented by CUs with data. Evidence supporting these criteria should be clearly documented and reviewed by local experts. The burden of proof is to identify that data deficient CUs have similar properties to neighbouring CUs, with the default assumption that each CU represents unique biodiversity whose status and trends cannot be represented by other CUs. We provide an overview of the four criteria in Table \@ref(tab:CUrepres) and describe each one in more detail below.
+
+
+\renewcommand*{\arraystretch}{1.3}
+\begin{longtable}[]{p{2.1cm} p{5.1cm} p{3.9cm} p{4cm}}
+\caption{Criteria to evaluate CU representativeness within SMUs.}\\
+\hline
+Criteria & Rationale & Example characteristics & Example sources of information \\ 
+\hline
+\endhead
+Threats & CU-specific threats may impact survival rates, growth, and/or reproductive success and therefore statuses and trends & Ecosystem modifications including water extraction, forestry, fires, agriculture, and development, fishing, pollution, aquaculture, and genetic impacts from hatcheries & Published threats and habitat assessments by CU \\
+Environmental drivers & CU-specific climatic conditions may impact survival, growth, maturation, or reproductive success and hence status and trends, either due to environmental drivers themselves or the interaction of different environments with common anthropogenic threats & Freshwater: river gradient, connectivity, macroclimate of spawning and rearing habitat, hydrological regime (e.g., (1) for Chinook Salmon). Marine: upwelling, currents, productivity of nearshore environment at ocean entry & Distribution of Freshwater and and Marine Adaptive Zones (2), biogeolclimatic zones describing macroclimates, as in (3), habitat characteristics provided in CU-specific stock assessments, Indigenous Knowledge\\
+Life-history characteristics & CUs with the same life-history characteristics such as age-at-ocean-entry are more likely to overlap in spatial and temporal distribution and therefore respond similarly to common threats and environmental drivers compared to those with divergent characteristics & Life-history type (stream vs ocean for Chinook Salmon), age-at-ocean entry, age-at-return, migration timing & CU-specific biological information from stock assessments, Indigenous Knowledge \\
+Carrying capacity & Population size is related to the probability of dropping below critical conservation thresholds and hence vulnerability to threats and/or random perturbations & Spawner abundances & CU-specific biological information from stock assessments, watershed size (4), Indigenous Knowledge\\
+\hline
+(\#tab:CUrepres)
+\end{longtable}
+\footnotesize (1) [@beechieHydrologicRegimeConservation2006]
+(2) [@holtbyConservationUnitsPacific2007]
+(3) [@medingerEcosystemsBritishColumbia1991]
+(4) [@parkenHabitatbasedMethodsEstimate2006]
+\normalsize
+
+**Threats** are defined here as any human activity or process that causes harm, death, or behavioural changes to a species, or the destruction, degradation, and/or impairment of its habitat, to the extent that population-level effects occur [@dfoGuidanceAssessingThreats2014]. CUs that are exposed to different threats in freshwater and marine environment within an SMU may diverge in biological characteristics such as survival, growth, and reproductive success and therefore statuses and trends. 
+
+CUs can vary in their exposure to **environmental conditions**, related to variability in freshwater and marine ecosystems, macroclimate, and hydrology within an SMU. Although SMUs are usually defined to be spatially cohesive groups of CUs, differences in environmental conditions among neighbouring CUs can result in differences in status and trends.
+
+CUs with similar **life-history characteristics** are more likely to respond to common threats and environmental drivers in the same way compared to those with divergent characteristics. Differences in life-history characteristics have evolved among CUs as a consequence of exposure to different environmental conditions and food availability [e.g., @bourretDiversityJuvenileChinook2016]. In some cases, SMUs have been defined to align CUs with similar life-histories (e.g., Fraser Chinook where SMUs are defined in part based on dominant ages at maturity and adult run timing). In other SMUs, CUs with various life-history types are combined based on their geographic location (e.g., the Mainland Inlet Chinook SMU which contains CUs with ocean- and stream-type fish).
+
+CUs with different **carrying capacities** may respond differently to similar threats. For example, very small CUs may be more vulnerable to moderate fishing pressure if abundances decline below critical conservation thresholds (e.g., 1500 fish, an abundance threshold within the Pacific Salmon Status Scanner), whereas larger CUs may be more resilient to common threats.  
+
+Covariation in intrinsic productivity is well documented among spatially proximate populations across Pacific salmon species [@petermanPatternsCovariationSurvival1998; @pyperSpatialCovariationSurvival2002; @dornerSpatialTemporalPatterns2018], providing some support for the use of data-rich CUs to inform CUs without data. In a meta-analysis of spawner time-series across Pacific salmon species throughout BC using data extracted from the Pacific Salmon Explorer Tool (Pacific Salmon Foundation 2020), pairwise correlations in spawner abundances among CUs within SMUs tended to be positive (Appendix \@ref(app:meta-analysis-appendix), Fig. \@ref(fig:lrp-smu-corr-plot)). 
+
+
+
+Overall, we suggest caution when representing SMU status with only a subset of CUs, and recommend evaluating and documenting the risks of incorrectly assigning status of data deficient CUs based on neighboring CUs. We also recommend further quantitative evaluation of these criteria using empirical data disaggregated into groups of CUs with similar environmental conditions, life-history types and management intensity, among other variables. These criteria are not meant to be prescriptive, but are intended to provide general guidelines for drawing inference for data deficient CUs. 
+
+If data-deficient CUs do not meet the criteria for inference from the remaining CUs within an SMU, we recommend collection of CU-level data to inform biological assessments. Data collection would therefore be prioritized for CUs that diverge in threats, environmental drivers, life-history characteristics and/or carrying capacities from neighbouring CUs. 
+
+
+### Step 4: What Proportion of CUs Above Red Status is Required to Avoid Serious Harm?
+
+In order to apply CU status-based LRPs, a lower limit on the proportion of CUs above Red status needs to be defined. @dfoFisheryDecisionmakingFramework2009 indicates that LRPs are based on biological criteria identified by Science, independent of management processes. Given the goal of the WSP is to protect the biodiversity of Pacific salmon in part by maintaining CUs above lower biological benchmarks, we have identified a threshold of 100% of CUs above Red status as an LRP that will avoid serious harm. Exceptions to this LRP may occur where there is uncertainty or misidentification in the delineation of CUs [e.g., as for some transboundary CUs, @holtbyConservationUnitsPacific2007] or CUs are designated extinct. Those CUs would be omitted from the total number of (extant) CUs within the SMU. <!--LW: question, so if a CU goes extinct it doesn't count in the 100% LRP for the SMU anymore? Wouldn't a CU going extinct represent serious harm/impaired productivity?- CH: but when it's extinct by definition it can't be recovered so a rebuliding plan is moot; unlike extirpated or critically endangered. CH: if it's extinct it cannot be rebuilt by definition. I think out goal is to  assess serious harm on extant CUs. Proof of extinction takes a long time (.e., 30-50 years under COSEWIC), so I don't think this the case for many; Until it's designated extinct it would still be considered serious harm. -->
+
+This step omits decisions about how to prioritize CUs for conservation given variability in their capacity to rebuild. For some CUs the potential for rebuilding to above the Red zone may be extremely low due to natural conditions or anthropogenic threats. For example, some CUs are naturally more vulnerable to threats because of their biological characteristics (e.g., limited habitat availability) placing them in the Red zone. However, that natural vulnerability does not diminish the serious harm associated with the biodiversity loss if that CU is lost. Rebuilding may also be limited due anthropogenic threats such as climate change. Recent vulnerability assessments indicate that many salmon populations will not be resilient to climate change in the coming decades [@crozierClimateVulnerabilityAssessment2019; @crozierClimateChangeThreatens2021]. These considerations can be identified in  rebuilding potential analyses to inform decisions about where resources should be allocated in any subsequent rebuilding plan that is developed [e.g., @carwardinePriorityThreatManagement2019]. <!--CH omit: Considerations on rebuilding potential should be part of the management objectives [@kronlundConsiderationsDesignRebuilding2021] and are outside the scope of identifying LRPs. Those analyses can then inform decisions about prioritizing CUs and management actions, with various sectors, First Nations, and stakeholders.-->
+
+
+Furthermore, unlike many other marine fisheries, threats and management levers for Pacific salmon extend beyond those associated with the fisheries that underlie the definition of SMUs and LRPs. The scale of SMUs is often incongruent with the scale of dominant threats and management levers. As a result, LRPs based on 100% of CUs being above Red status may trigger the development of rebuilding plans under the Fish Stocks provisions when only a component (e.g., a single CU) requires intervention. Furthermore, the most appropriate CU-level interventions may not be related to harvest (e.g., hatcheries or habitat amelioration).  Nevertheless, we have identified 100% of CUs within the SMU should be above their benchmarks to avoid serious harm under the Fish Stocks provisions. Triggers and interventions at finer and coarser spatial scales will also be essential to sustain Pacific salmon.<!--CH: This is meant to capture the concern that we might trigger RP when CU is already being managed in other ways, and at a different scales-->
+
+
+<!--CH: not needed??
+Once LRPs are identified, SMU-level objectives can be specified and management procedures evaluated to identify approaches that best meet objectives, including the prioritization of CU-specific interventions. Furthermore, objectives and management actions can be adapted to a range of spatial scales from CU to regional or multi-SMU scales and then evaluated in a hierarchical context. Deriving LRPs through this approach (100% of component CUs above Red status within an SMU) is a first step in that process.
+-->
+
+### Step 5: Assess Status Relative to a CU status-based LRP
+
+We recommend CU status-based LRPs as the default approach for identifying LRPs for Pacific salmon. This method provides consistency with assessments previously published under the WSP [@dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020; @grantIntegratedBiologicalStatus2013] and allows for the evaluation of status at a hierarchy of scales relevant to salmon rebuilding <!--KH: suggest removing the next part of this sentence as I don;t think it will make sense without more description: " by aggregating CUs as appropriate"-->. 
+
+Using this approach, the status of individual CUs is assessed and the proportion of CUs with status above Red is then compared to the LRP identified from Step 4.  Where available, we recommend applying CU assessments from recent peer-reviewed WSP status assessments, in which multiple metrics, such as abundances and short- and long-term trends, are integrated to assign CU status within an expert-driven process [@holtIndicatorsStatusBenchmarks2009; @dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016; @grant2017FraserSockeye2020]. As a general guideline,  we suggest that 'recent' should mean within the most recent generation, though major perturbations such as landslide events may make even recent assessments unrepresentative of current status. <!--CH remove: Over time-periods longer than a generation, the extent to which the assessment is still representative depends on the dynamics of the specific system.-->
+
+
+Because formal, peer-reviewed WSP status assessments are resources-intensive processes involving large groups of experts over multiple days [@grantIntegratedBiologicalStatus2013] and are not available for most CUs, we demonstrate the application of a tool to quickly determine status, the Pacific Salmon Status Scanner (Pestal et al. In revision). Within this multidimensional framework, CU status depends on a variety of population metrics, where the choice of metrics depends on data availability and may differ among CUs within an SMU. The Salmon Scanner integrates status on available metrics to derive an overall status that is comparable among CUs. 
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Status of SMUs with data-deficient CUs**
+
+CU status-based LRPs are considered breached when at least one CU has Red status regardless of whether the status of component data-deficient CUs can be inferred from data-rich CUs or not (Table \@ref(tab:GuidanceDDCUs), right column). A single CU with Red status can trigger a rebuilding plan under the Fish Stocks provisions since improved monitoring of data-deficient CUs alone will not result in an increase in SMU status to 100% (all CUs above Red status). Further monitoring of data-deficient CUs is still warranted in this case to inform status of remaining components of the SMU and associated rebuilding efforts. 
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Provisional SMU status**
+
+When data deficient CUs are represented by CUs with data we refer to the resulting status as 'provisional' if all CUs included in the assessment are above Red status (Table \@ref(tab:GuidanceDDCUs)). This status has higher uncertainty and is therefore considered provisional until all component CUs can be assessed directly. In some cases natural variability alone may result in unassessed CUs having Red status even if the criteria listed for CU representativeness in Step 3 are met. 
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Data-deficient SMU status**
+
+In contrast, where data deficient CUs are not represented by CUs with data (i.e., criteria in Step 3 are not met), and all CUs included in the assessment are above Red status, then the SMU is considered data deficient and SMU status cannot be evaluated. In this case, we recommend improved monitoring and assessment to fill CU-level assessment gaps.
+
+
+
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}[]{p{5cm} p{3.5cm} p{3.5cm}}
+\caption{Guidelines on assessing status for CU status-based LRPs of 100\% of CUs being above Red status, when at least one CU is data-deficient}\\
+\hline
+ & Status of data-rich CUs: all above Red status &  Status of data-rich CUs: at least one Red status \\ 
+\hline
+\endhead
+Status of data-deficient CUs can be inferred from data-rich CUs  &  Provisional SMU status  above LRP with high uncertainty& SMU status = below LRP\\
+Status of data-deficient CUs {\it cannot} be inferred from data-rich CUs  &  SMU Status = data deficient & SMU status = below LRP\\
+
+\hline
+(\#tab:GuidanceDDCUs)
+\end{longtable}
+
+
+
+<!--
++--------------------------+-------------------------+-------------------------+
+|                          | Status of data-rich CUs:| Status of data-rich CUs:                         
+|                          | all above red status    | at least one red status 
++==========================+=========================+=========================+
+| Status of data-deficient | Interim SMU status=     | SMU Status = below LRP  
+| CUs can be inferred from | above LRP               |                         
+| data-rich CUs            |                         |                         
++--------------------------+-------------------------+-------------------------+
+| Status of data-deficient | SMU status = data-      | SMU Status = below LRP  
+| CUs cannot be inferred   | deficient               |                         
+| from data-rich CUs       |                         |                         
++--------------------------+-------------------------+-------------------------+
+
+
+Table: (\#tab:GuidanceDDCUs2) Guidelines on assessing status for CU status-based LRPs of 100\% of CUs being above red status, when at least one CU is data-deficient. 
+
+-->
+
+<!--CW: From the PA Policy:
+
+"In resource management, the PA is, in general, about being cautious when scientific information is uncertain, unreliable or inadequate and not using the absence of adequate scientific information as a reason to postpone or fail to take action to avoid serious harm to the resource."
+But also:
+"In data deficient cases, priority should go to monitoring the stock and establishing data time series to support the identification of an LRP. When developing reference points efforts should be made to take into consideration the range of factors which may affect the productivity of the stock including changes in ocean conditions, where information is available."
+
+The PA policy also suggests that when a stock is DD, a meta analysis approach should be used to set LRPs (see annex 1b). 
+
+This may be a bit out there but: maybe we could suggest the establishment of a data collection plan that would be analogous to the recovery plan but to address data deficiency. -This plan would include a list of data that could be collected (e.g. monitoring of spawning grounds, establishment of genetic markers, catch sampling, ageing, etc.) and potential costs associated with everything? -- Also this plan could clearly indicate if spawning grounds are too remote, inaccessible, or too costly to monitor. -- I think that having that kind of information documented would go a long way in establishing priorities. 
+
+LW: I agree, that would be useful!
+-->
+
+
+
+### Step 6: Peer-review of Status Relative to CU status-based LRP
+
+
+We recommend peer-review of the CU data and assessments used in steps 1 (Data compilation), 2 (Assess CU data deficiency) and 5 (Assess status relative to CU status-based LRP) if CU assessment are developed outside of an existing published, peer-reviewed process. Also, we recommend peer-review of decisions on SMU-scale aggregation from steps 3 (Representation of data-deficient CUs) and 4 (Proportion of CUs required to be above Red status). <!--KH: note that I added descriptions in brackets after each step as a refresher. Is this ok? --> This peer review can occur, at least in part, through DFO's State of the Salmon Program's annual implementation of the Pacific Salmon Status Scanner. The Salmon Scanner will be applied annually as part of a process integrating outputs with local expertise to provide statuses for CUs. Expert review is required to vet statuses derived from the application of the Salmon Scanner to ensure they are consistent with underlying biological categories given the multiple and sometimes conflicting dimensions of status. <!--CH: Ann-Marie suggested an example from Fraser Sockeye Shuswap here, but I wonder if it might make the flow of this section awkward? Happy to consider an inclusion from Ann-Marie--> The outputs from that process can be the basis for developing CU-level statuses to inform SMU-level LRPs. We emphasize the importance of documented, peer-review of LRPs and status assessments of SMUs prescribed under regulation, either as part the annual application of the Salmon Scanner or in any separate SMU-specific peer-review process. Peer review could be documented, for example, in a CSAS Research Document, CSAS Science Response, and/or CSAS Science Advice Report.<!--CH question: Is this requirement for CSAS documentation okay? We should ask Julie/Jason to what extent this is consistent with out marine species, and then mention the consistency here. Some TWG participants suggested LRP identification could occur in the rebuilding plan, but this seems awkward as rebuilding objectives may be related to LRPs, or at least they will in other species, so best to keep the 2 processes separate I think.
+CW: Agree with keeping rebuilding plan and LRP separate. 
+LW: I agree as well.-->
+
+
+
+<!--SG comment: if status is approximated with the algorithm and the status on the metric is red, this could trigger an integrated status assessment to derive a formal WSP status prior to triggering LRP. -->
+
+The frequency of SMU-scale peer reviews outside of the annual implementation of the Salmon Scanner will depend on variability in CU-level population dynamics over time and how LRPs and SMU-level assessments are used to inform decision making (e.g., if an SMU is batched under the *Fisheries Act*), among other factors. In the future, management procedures with various frequencies of assessments could be evaluated in a simulation framework to identify risks of delaying assessments relative to costs of implementing them. 
+
+### Step 7: Are Aggregate Abundance LRPs Required For Fisheries Management?
+
+Although CU status-based LRPs may meet requirements under the Fish Stocks provisions for Pacific salmon, abundance-based LRPs may be needed for fisheries management decisions (Section \@ref(roleLRPs)).  For SMUs where harvest at the aggregate scale is a dominant driver of population dynamics and restricting fisheries harvest is a principal management lever, an LRP along the metric of SMU-level abundances may support precautionary management. For example, when LRPs are used to inform a harvest control rule, fishing pressure can be gradually curtailed as aggregate abundances decline towards the LRP to avoid depletion below that level. Aggregate abundance-based benchmarks may in some cases be required for local or international management. For example, aggregate escapement goals are required for Nass and Skeena Sockeye under Pacific Salmon Treaty provisions (2019)<!--@TreatyGovernmentCanada2019 . Have to figure out how to reference this without having the full name of the treaty here-->, although to comply with WSP objectives, the aggregate escapement goal must consider CU-level diversity. 
+
+However, when LRPs are defined within the context of a Management Procedure framework (Section \@ref(roleLRPs)), then an aggregate abundance LRP may not be required if the framework can demonstrate the probability of individual CUs having status above Red for various management options. For Pacific salmon, management procedures may extend beyond harvest control rules to include time-area closures, gear restrictions, habitat enhancement or hatchery supplementation to protect individual CUs. Therefore, the choice to develop an aggregate abundance LRP depends on the decision context, and should be made in collaboration with various sectors and First Nations responsible for management decisions that affect the SMU. If aggregate abundance LRPs are not required, assessment of the SMU would be provided from steps 1-6. The following steps (8-9) are relevant if aggregate abundance LRPs are required, and build on CU status-based LRPs derived in the previous steps. Uncertainties introduced by the inclusion of models to relate aggregate abundances to CU-level statuses should be considered when choosing LRP methods (Principle 5 in Section \@ref(principles)). 
+
+
+In the context described here, aggregate abundance LRPs are scientifically derived quantities that delineate serious harm to an SMU following the principles outlined in Section \@ref(principles). In particular, aggregate abundance LRPs are defined to be consistent with the WSP objective of maintaining biodiversity at the scale of CUs.  Although these LRPs can inform harvest control rules, harvest management decisions require consideration of multiple objectives beyond those associated with conservation and serious harm (e.g., socioeconomic objectives). 
+
+
+
+### Step 8: Estimate Aggregate Abundance LRPs
+
+**What is an Acceptable Probability of CU Statuses Being Above Red?**
+
+
+To define aggregate abundance LRPs, first, an acceptable probability of having all component CU statuses above Red is identified. While a 100% or nearly 100% probability of all component CUs being above Red may be desirable from a conservation perspective, inherent uncertainties in population dynamics make this choice impractical. Often, LRPs above the highest observed aggregate spawner abundances are required to achieve a near 100% probability of components being above Red status. Instead, we recommend applying a probability of at least 50% of all CUs being above Red status to align with WSP objectives. As outlined in Section \@ref(est-methods), we provide LRPs associated with a range of probabilities, 50%, 66%, 90%, and 99% (where analytically possible) derived from categories of likelihoods used by the International Panel on Climate Change [Table \@ref(tab:LikelihoodsIPCC), @mastrandreaGuidanceNoteLead2010], instead of specifying a single probability. We distinguish *the probability of all* CUs being above Red from *the proportion of* CUs above Red (identified as 100% in Step 4). Both CU status-based and aggregate abundance LRPs are set at levels where all CUs are above Red status, but aggregate abundance LRPs assign a probability to this occurrence.
+
+<!--CH omit entire pgh after considering KH's comment about repetition with above pgh:
+In our case studies, we provide aggregate abundance LRPs for the four probability thresholds described above, and focus sensitivity analyses on a 50% probability of all component CUs having status above Red. This approach to delineating serious harm could be considered risk neutral, where risks can be accounted for directly and explicitly in harvest control rules that consider trade-offs among multiple objectives.    
+-->
+
+<!-- from ch 6. Does this belonw here? reword?-->
+
+<!--KH: I found the second half of the paragraph below (starting with "Alternatively ....") difficult to follow.  I understand the point being made, but I think it will be lost of most readers.  I wonder if this section could come out entirely? I feel like this type of work is a long way off, and mentioning it as part of this step 8 will just complicate things (i.e., we're telling people to choose a probablity for estimating an aggrgegate abundance LRP at this step, but then telling them that using CU status-based LRPs in a MSE may be better). If we do keep this text, it would benefit from some re-wording to make sentences shorter. Alternatively - maybe it could be put in the roles of LRP section??? -->
+
+Although DFO's Precautionary Approach Framework (2009) states that LRPs under the Fish Stocks provisions be identified by Science, we were unable to identify a specific probability level for all CUs being above Red status that aligned with scientific principles. Although it may be possible to select a probability level based on the IPCC likelihood categorization scheme (e.g., more likely than not, likely, very likely, virtually certain) further guidance on choosing among these options is required. <!--Alternatively, CU status-based LRPs can be used as the basis for serious harm instead of identifying a specific probability for aggregate abundance LRPs, where biological objectives for SMUs can be derived from the probability of achieving those CU status-based LRPs over a specified time frame to inform the performance of various candidate management procedures. The probability and time frame required within the objective are identified with managers, First Nations, and stakeholders. When used as part of Management Procedure Framework [e.g.,  @dfoManagementProcedureFramework2021] or management strategy evaluation (MSE), the performance of a variety of management procedures can be evaluated against objectives, where management procedures can extend beyond aggregate abundance-based harvest control rules to include time-area closures, habitat enhancement or hatchery supplementation. Therefore, CU status-based LRPs may be preferred as the biological basis of serious harm to clearly distinguish the biologically derived component from desired probability which requires input from managers, First Nations and stakeholders.-->
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Choose among aggregate abundance LRPs**
+
+Guidelines for choosing among two types of aggregate abundance LRPs are described here: logistic regression LRPs and projection LRPs. These methods use either historical or projected data, respectively to identify the relationship between aggregate abundances and the probability that all CUs are above Red status. The guidelines presented at this step are based on the separate assumptions required for each method. If assumptions are not met for either method, then developing aggregate abundance LRPs that are aligned with the WSP may not be possible for the SMU. <!--However, developing and evaluating management procedures that account for CU-level status is still prudent even in the absence of aggregate abundance LRPs (Section \@ref(recommendations)).-->
+
+Both methods rely on an assumption of positive covariation in population dynamics among component CUs. If this assumption is met, then when one CU has depleted status and contributes relatively few spawners to the aggregate, it is likely that other component CUs will also have depleted status contributing few spawners to the aggregate. Similarly, if one CU is considered healthy and contributes many spawners, other CUs are more likely to be healthy.  
+
+Given the range of uncertainties and limitations associated with each method, the application and comparison of both methods may be prudent instead of limiting analyses to a single approach (see Step 9).
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Logistic Regression LRPs**
+
+Empirical logistic regression LRPs are derived from historical time-series of the proportion of CUs above Red status, indicated by a single metric on spawner abundances or distribution.  
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+LRPs based on logistic regressions may be appropriate when the following assumptions are met:
+
+- CU assessments are derived primarily from abundances relative to benchmarks or distribution of spawners instead of time trends, or status on spawner abundances relative to benchmarks are considered a suitable approximation. It is possible to combine two or more types of abundance-based benchmarks to assess CUs within an SMU (e.g., use both percentile and S~gen~ benchmarks to assess different CUs). 
+
+- As required for CU status-based LRPs, data-deficient CUs meet criteria outlined in Step 3 such that their status can be represented by CUs with data. 
+
+- Time-series of the proportion of CUs above the lower benchmark contain contrast such that all CUs are above their lower benchmark in at least one year and at least one CU is below its lower benchmark in at least one year. <!--CW: I suspect we would not get the model to converge if there was only one year with one of the outcomes, could we change it to a few:
+ Time-series of the proportion of CUs above the lower benchmark contain contrast such that all CUs are above their lower benchmark in a few years and at least 1 CU is below its lower benchmark in a few years.
+ 
+CH: you're probably right, but I'm unsure how much a few is, and wonder if some (possibly rare) case having one year might work..?
+-   -->
+
+- There is a statistically significant positive relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark without influential outliers, as supported by model diagnostics described in @holtCaseStudyApplicationsInpress. This relationship tends to be significant and positive when pairwise correlations in spawner abundances among CUs are strong and positive. For example, for our case study on Interior Fraser Coho, goodness-of-fit diagnostics identified a significant relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmarks (p<0.01) and the average pairwise spawner correlations among CUs was relatively high, 0.56. In contrast, for our case study on Inside South Coast Chum, *Oncorhynchus keta*, the same goodness-of-fit diagnostic was not statistically significant (p=0.13) and average pairwise spawner correlations was relatively weak, 0.12. 
+
+- Residuals for logistic regression model fit are independent (i.e., not temporally autocorrelated). <!--CH: "Or if autocorrelation is present in residuals, it is accounted for in the model with an AR(1) term."  Don't think we need it though  KH: agree - not needed.-->
+
+- Environmental drivers and threats among CUs have remained stable over the available time-series, or have changed in the same way across CUs such that covariance in population dynamics among CUs is likely to have remained stable over time. As a result, the relationship between aggregate abundances and log-odds of all CUs being above lower benchmarks is also likely to have remained stable. 
+
+- CU-level population dynamics are not undergoing directional changes resulting in declines or increases in population dynamic parameters and associated benchmarks.
+
+
+In preliminary analyses for the Interior Fraser Coho case study, we considered CU status based on multidimensional status from the Salmon Scanner, but have chosen to focus on the single metric approach for several reasons. First, the Salmon Scanner includes status on smoothed abundance data (running generational geometric mean) relative to abundance-based benchmarks, and therefore the status in one year depends on the status in the previous year. Autocorrelation violates the assumption of independence of observations required in the logistic regression. Although logistic regressions can be revised to account for autocorrelated residuals, when autocorrelation is detected the available degrees of freedom are often insufficient given the relatively short time-series of CU assessments. <!--CH remove: "and changes in environmental conditions which sometimes precludes including older data."--> <!--CH: also sometimes skew in data points towards most years with all CUs above lower benchmarks which limits power of LR-->In addition, the Salmon Scanner includes metrics on short- and long-term trends in spawner abundances which are less directly related to, and may be completely unrelated to, aggregate abundances. For CUs that rely on time trends for status assessments, aggregate abundance-based metrics are likely not appropriate (see below). <!--CH remove: "However, future analyses could explore the possibility of including CU statuses derived from the Salmon Scanner that rely primarily on abundance-based benchmarks with alternative logistic regression model forms that include autocorrelation.-->
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+LRPs based on logistic regressions may not be appropriate when:
+
+- CU assessments are derived from trends in spawner abundances over time (e.g., as part of the Salmon Scanner), and not abundance-based benchmarks.
+
+- Data-deficient CUs do not meet criteria outlined in Step 3 such that their status cannot be represented by CUs with data.
+
+- Time-series of the proportion of CUs above their lower benchmarks lack contrast (i.e., are equal to 100% for all years, or less than 100% for all years).
+
+- The relationship between aggregate abundances and log-odds of all component CUs being above their lower benchmark is not statistically significant or contains influential outliers. In other words, model diagnostics do not support the use of logistic regression. 
+
+- Residuals for logistic regression model fit are temporally autocorrelated such that status in one year depends on the status in the previous year.
+
+- Threats and/or environmental drivers have changed such that CU-level benchmarks estimated from historical data are no longer meaningful, and there is no expectation that these changes will revert naturally to their preexisting state, or be achievable through management. Or, environmental drivers and threats among CUs have changed over the available time-series such that covariance in population dynamics among CUs is likely to have changed. 
+
+
+- There is only one CU in the SMU. In this case, the CU-level status represents the SMU-level status.
+
+<!--CH Tentative exclusion b/c may be implied by stepwise order, but happy to add back in:
+- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended to supplement CU status-based LRPs and not replace them. In this case, there may be risk of loss of CU-level biodiversity due to infrequent extreme events not captured in the model.
+
+CW: Agree with the exclusion, otherwise we would also have to point out that aggregate abundance methods may not be appropriate when one or more CU's are missing data. -->
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+
+\
+&nbsp;
+**Projection LRPs**
+
+Projection LRPs are derived from projections of CU-level population dynamics and associated time-series of CUs above Red status as indicated by a single metric, spawner abundances relative to a lower benchmark.  CU status derived from multidimensional assessments within the Salmon Scanner were not considered for projection LRPs because the projection model identifies long-term equilibrium aggregate abundances associated with specified probabilities of component CUs being above lower benchmarks and is not structured to reflect time trends. Time trends can be assessed in simulation models that evaluate the impacts of management procedures on population dynamics from current status, as in MSEs.
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+Projection LRPs may be appropriate when:
+
+- CU-specific stock assessment models have been developed including parameterization of spawner-recruitment models and the covariance in recruitment residuals among CUs. These models and their parameters account for hatchery contributions when populations are influenced by hatcheries, are peer reviewed, and represent current dynamics of natural spawners and recruitment.
+<!--KH: The above suggests that a peer-review of SR models is required, however, the next bullet goes in to say that it is not. Perhaps just remove the mention of peer-review in the first bullet? In general, any application of projection LRPs will need to go through peer-review, so having previously peer-reviewed models is not needed  -->
+- Where peer-reviewed population dynamics parameters are not available or are no longer current, plausible bounds can be placed on uncertain parameters (e.g., productivity and capacity), including those that may have changed over the time-series to represent a best-estimate of current conditions. These bounds can be derived from neighbouring CUs, meta-analyses, or expert opinion.
+
+- These CU-specific parameters are available for representative CUs within the SMU (as identified in step 3)
+
+<!--CH: extra text I don't think is needed (but this point can be highlighted in Case Study paper): 
+For example, if there is a high probability that any one CU will be below the lower benchmark in a given year due to asynchronous dynamics, there is also a high probability that aggregate abundances are below the aggregate abundance LRP.  In contrast, when correlations in population dynamics and status assessments are relatively high among CUs, aggregate abundance LRPs tend to be lower. -->
+
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+Projection LRPs may be inappropriate when:
+
+- Population dynamics parameters cannot be estimated, and/or plausible ranges are not known.
+
+- Projection LRPs are used to evaluate status under a new management procedure that is not considered in the projection model. Projection LRPs depend on the specific management procedure applied in the projections, implemented as a constant exploitation strategy for our case studies. However, sensitivity analyses of projection LRPs to various exploitation rates or management procedures can demonstrate aggregate abundances required to maintain CUs above their lower benchmarks under a variety of possible management scenarios, and the sensitivity of management choice to the aggregate abundance LRP.
+
+- There is only one CU in the SMU. In this case, the CU-level status equates to the SMU-level status.
+
+<!--CH: this bullet was tentatively removed from logistic regression LRP, so removing here:
+
+- Current CU-level assessments are not available. Aggregate-abundance LRPs are intended to supplement CU status-based LRPs and not replace them. There may be risk of loss of CU-level biodiversity when relying on projection LRPs alone due to unforeseen processes (e.g., infrequent extreme events) not captured in the projection model that are reflected in current CU statuses. 
+-->
+Furthermore, projection LRPs may be more appropriate when pairwise correlations in spawner abundances among CUs are positive and strong, but this is not a requirement. It is possible to estimate projection LRPs for an SMU with component CUs that vary independently. However, when correlations between CUs are low, the aggregate abundance LRP will be high because there is a higher probability of any one CU having Red status. In these cases, CU status-based LRPs and harvest control rules that manage CUs independently may be more appropriate. <!--CH omit? : When used to inform operational control points, very high aggregate abundance LRPs may conflict with harvest or other socioeconomic objectives.--> Although higher LRPs under asynchronous dynamics may initially be counter-intuitive due to the stability asynchrony provides to aggregate time-series [@schindlerPopulationDiversityPortfolio2010a], independent trajectories among components increases risks of individual component CUs dropping below lower benchmarks in mixed-CU fisheries necessitating higher LRPs. 
+
+
+<!--KH: Next paragraph added as a revision after CSAS meeting -->
+Model evaluation for projection LRPs is more subjective than for logistic regression LRPs.  The suitability of logistic regression model fits can be evaluated using statistical model fit diagnostics, which makes the evaluation process relatively objective and repeatable. However, the added assumptions and analytical decisions required to parameterize projection models is a more subjective process in which outcomes may vary among analysts.  Peer review, as described in step 6 above, will be required to support the development of projection LRPs.
+
+### Step 9: Apply aggregate abundance LRPs to derive SMU-level status and compare to status against CU status-based LRPs
+        
+Aggregate abundance methods are then applied to derive LRPs based on the guidance above. See Appendix \@ref(app:case-studies) and @holtCaseStudyApplicationsInpress for example applications. When status of an SMU is inferred from aggregate abundance LRPs using a subset of CUs that are considered representative of the remaining data-deficient CUs, then the resulting status should be considered 'provisional' (i.e., with increased uncertainty) until the status of all component CUs can be assessed. When status of data-deficient CUs cannot be inferred from data-rich CUs, status cannot be assessed with aggregate abundance LRPs.
+
+We use generational mean spawner abundances as a basis for determining whether the SMU is above or below its LRP. A generational mean integrates status over cohorts within a generation, which are generally independent of each other because of the anadromous, semelparous life-history of Pacific salmon and the dominance of a single age-at-maturity for many stocks [@holtIndicatorsStatusBenchmarks2009; @porsztReliabilityIndicatorsDecline2012]. As a result, generational smoothing reduces noise in annual CU status determination arising from both interannual variability in CU abundances from different cohorts and annual observation error in estimated spawner abundances. It also makes our determination of LRP status consistent with the approach taken for abundance-based benchmarks in published WSP assessments [e.g., @grant2017FraserSockeye2020] and the Salmon Scanner at the CU level. Further, we recommend that SMU status be evaluated approximately every salmon generation to align with guidance for generational CU assessments under the WSP [@grantIntegratedBiologicalStatus2013; @grant2017FraserSockeye2020].
+
+
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+**Compare Aggregate Abundance LRPs**
+
+Using multiple analytical approaches to define LRPs is consistent with the principle of using the best available information if evidence to support one method over the other is lacking. Statuses that converge among methods provide a stronger weight-of-evidence that the chosen LRP represents a level above where serious harm may occur. Although LRPs that converge may be based on assumptions that are coincidentally incorrect, the principle of Occam's razor supports explanations with fewer exceptions. When LRPs diverge, the underlying assumptions causing those divergences should be explored and further reviewed. <!--CH repeated above: We suggest comparing aggregate abundance LRPs to current generational (geometric) average spawner abundances instead of annual abundances to integrate across independent cohorts within a generation when deriving SMU status. This approach is consistent with methods used in formal WSP assessments of CUs [e.g., @grant2017FraserSockeye2020]. -->
+
+<!--CH: the following 2 lines give a line break before the next heading-->
+\
+&nbsp;
+
+**Compare Status from Aggregate Abundance LRPs to that from CU status-based LRPs**
+
+In this step, we recommend comparing status from aggregate abundance LRPs to that obtained from CU status-based LRPs identified in Step 5. While aggregate abundance LRPs exploit observed covariation in population dynamics among component CUs, several factors can lead to a break-down in that relationship (e.g., observation errors, temporal variation in covariation, and/or infrequent extreme events). Hence, statuses from aggregate abundance LRPs may differ from those based on CU status-based LRPs. We recommend CU status-based LRPs as the default LRP to implement the Fish Stocks provisions, with aggregate abundance LRPs supplemental where required for harvest management purposes. 
+
+<!-- CW: Can we say how often these comparisons should happen? 
+Is it realistic to suggest that comparisons will be done every year? Or would these comparisons be done every X years?
+CH: We had recommended generationally (~4yrs) for WSP assessments, but this is really a resource-availability vs management-need question that is specific to species and stock.
+ -->
+
+
+<!-- CW: Could the sections below be moved to another chapter? I think it would be good to have the steps as their own chapter to reflect their importance
+Maybe "Time-varying parameters and impacts on LRPs"  could go under chapter 5 (after editing to be more recommendation based?)
+and " Consistency with National Guidance on LRPs" can go under Chapter 2?
+I moved the sections to the chapters listed above.
+ -->
+
+
+
+
+
+
+

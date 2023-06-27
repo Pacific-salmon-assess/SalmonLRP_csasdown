@@ -1,0 +1,121 @@
+---
+title: "Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units"
+author: |
+  Carrie. A. Holt^1^
+  Kendra Holt^2^
+  Luke Warkentin^1^ 
+  Catarina Wor^1^ 
+  Brendan Connors^2^ 
+  Sue Grant^3^
+  Ann-Marie Huang^3^ 
+  Julie Marentette^4^
+author_list: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S., Huang, A.-M., and Marentette, J."
+address: |
+  ^1^Pacific Biological Station\
+     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
+     Nanaimo, BC, V9T 6N7, Canada\
+     \
+  ^2^Institute of Ocean Sciences\
+     Fisheries and Oceans Canada, Sidney, BC, Canada\
+     \
+  ^3^Annacis Island Regional Office\
+     Fisheries and Oceans Canada, Delta, BC, Canada\
+     \
+  ^4^National Headquarters\
+     Fisheries and Oceans Canada, Ottawa, ON, Canada\
+
+month: Month # fill in
+year: 2022
+report_number: nnn
+region: Pacific Region
+citation_other_language: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S. et Huang, A.-M.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2022/nnn. iv + 13 p."
+abstract: |
+
+  Limit reference points, LRPs, define the stock status below which serious harm is expected to occur to a stock. LRPs are required for major fish stocks, or Stock Management Units (SMUs) that are prescribed by regulation under amendments to the Canadian *Fisheries Act* (2019). Pacific salmon are unique among marine fish stocks due to their high levels of intraspecific diversity which gives rise to a large range in data availability, considerations, and approaches for assessments and LRP development. In this paper, we identify six principles for developing LRPs for Pacific salmon that are adapted from principles used more broadly among marine species. One principle unique to Pacific salmon is that LRPs should be aligned with Canada’s Wild Salmon Policy (WSP) objective of preserving biodiversity of salmon at the scale of Conservation Units (CUs), which are nested within SMUs. We developed methods for calculating LRPs, and established guidelines on how to implement them including under which conditions they should or should not be applied. We propose that LRPs be identified from the proportion of CUs that have status above the Red zone for WSP status assessments, as a default approach. This provides some consistency with status assessments already produced under the WSP, and can inform management decisions for harvest, habitat and hatcheries that often occur at finer, CU scales. To supplement the default approach, we provide LRPs based on metrics of aggregate abundances for the entire SMU, which may be required for fisheries management purposes in some cases. These latter LRPs are derived to have a desired probability of all component CUs being above Red status given an assumed relationship between aggregate abundance and the probability that all CUs will be above Red status. We identify uncertainties associated with each approach, and describe how they can be applied across a range of data types, qualities and quantities. Analyses to support our development of guidelines has been informed by three cases studies: Interior Fraser Coho Salmon *Oncorhynchus kisutch*, West Coast Vancouver Island Chinook Salmon, *O. tshawytscha*, and Inside South Coast Chum Salmon, *O. keta*, excluding the Fraser River.
+  
+header: "" # or "" to omit
+output:
+ csasdown::resdoc_pdf:
+   french: true
+   copy_sty: true
+   line_nums: false
+   line_nums_mod: 1
+   lot_lof: false
+# ------------ resdoc_word or resdoc_pdf
+# End of options to set
+knit: bookdown::render_book
+link-citations: true
+bibliography: bib/refs.bib
+# Any extra LaTeX code for the header:
+header-includes:
+  -  \usepackage{amsmath}   \usepackage{tcolorbox} \usepackage{tikz} \usetikzlibrary{shapes, arrows.meta, shapes.arrows, shapes.geometric, positioning}
+---
+
+```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
+library(knitr)
+if (is_latex_output()) {
+  knitr_figs_dir <- "knitr-figs-pdf/"
+  knitr_cache_dir <- "knitr-cache-pdf/"
+  fig_out_type <- "png"
+} else {
+  knitr_figs_dir <- "knitr-figs-docx/"
+  knitr_cache_dir <- "knitr-cache-docx/"
+  fig_out_type <- "png"
+}
+fig_asp <- 0.618
+fig_width <- 9
+fig_out_width <- "6in"
+fig_dpi <- 180
+fig_align <- "center"
+fig_pos <- "htb"
+opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>",
+  fig.path = knitr_figs_dir,
+  cache.path = knitr_cache_dir,
+  fig.asp = fig_asp,
+  fig.width = fig_width,
+  out.width = fig_out_width,
+  echo = FALSE,
+  #  autodep = TRUE,
+  #  cache = TRUE,
+  cache.comments = FALSE,
+  dev = fig_out_type,
+  dpi = fig_dpi,
+  fig.align = fig_align,
+  fig.pos = fig_pos
+)
+options(xtable.comment = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+```
+
+```{r load-libraries, cache=FALSE}
+# `french` and `prepub` variables are extracted from the YAML headers above and
+#  are used throughout the document. To make the document all in french, change
+#  the line in the YAML header above to `french: true`
+meta <- rmarkdown::metadata$output
+if(length(grep("pdf", names(meta)))){
+  french <- meta$`csasdown::resdoc_pdf`$french
+  prepub <- meta$`csasdown::resdoc_pdf`$prepub
+}else if(length(grep("word", names(meta)))){
+  french <- meta$`csasdown::resdoc_word`$french
+  prepub <- meta$`csasdown::resdoc_word`$prepub
+}
+csl <- "csl/csas.csl"
+if(french){
+  csl <- "csl/csas-french.csl"
+  options(OutDec =  ",")
+}
+
+# add other packages here:
+library(dplyr)
+library(readr)
+library(tibble)
+library(csasdown)
+```
+
+---
+csl: `r csl`    
+---

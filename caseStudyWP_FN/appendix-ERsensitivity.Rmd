@@ -26,7 +26,7 @@ Nous avons constaté que la sensibilité des PRL de projection aux taux d’expl
 
 ```{r chinook-SRHistEven, fig.cap="Distribution (a) de la productivité (log alpha) et (b) de l’abondance des géniteurs au remplacement, G~REM~, entre les essais de MCCM, ombrée selon que l’abondance dans cet essai est demeurée au-dessus du PRI (rouge) ou non (bleu), selon un taux d’exploitation de 45\\%. La productivité et G~REM~ ont varié entre les inlets et les essais et ont été tirés de distributions communes. ", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/evenhCor-SRHist.png', './figure/evenhCor-SRHist.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/evenhCor-SRHistFR.png', './figure/evenhCor-SRHist.png',  mode="wb")
 
 knitr::include_graphics("figure/evenhCor-SRHist.png")
 # knitr::include_graphics("C:/github/SalmonLRP_RetroEval/WCVIChinookStudy/Figures/evenhCor-SRHist.png")
@@ -41,7 +41,7 @@ Les populations d’inlet et les essais de MCCM à faible productivité ont tend
 
 ```{r chinook-ProjLRPs-Even, fig.cap="Probabilité que toutes les populations d’inlet se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 10 000 essais de MCCM en fonction d’une gamme de taux d’exploitation moyens de 5 à 45\\%, en supposant que la productivité et G~REM~ variaient entre les inlets et les essais, et qu’ils sont tirés de distributions communes. Les lignes horizontales pointillées sont à 50\\% et 66\\% Les lignes verticales orange et vert pâle représentent les PRL associées à une probabilité de 50\\% et 66\\% que toutes les populations d’inlet soient au-dessus de leur PRI, respectivement. Les PRL à 66\\% de probabilité ne sont pas indiqués pour les taux d’exploitation supérieurs à 30\\% en raison de la grande incertitude dans les projections à forte abondance agrégée.", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsEven-hCor-ProjLRPCurve-ALLp.png', './figure/ERsEven-hCor-ProjLRPCurve-ALLp.png',  mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsEven-hCor-ProjLRPCurve-ALLpFR.png', './figure/ERsEven-hCor-ProjLRPCurve-ALLp.png',  mode="wb")
 
 knitr::include_graphics("figure/ERsEven-hCor-ProjLRPCurve-ALLp.png")
 
@@ -56,7 +56,7 @@ Lorsque la productivité a été fixée à la valeur moyenne parmi les essais al
 
 ```{r chinook-SRHistSameProd, fig.cap="Distribution (a) de la productivité (log alpha) et (b) de l’abondance des géniteurs au remplacement, G~REM~, entre les essais de MCCM, colorées selon que l’abondance dans cet essai est demeurée au-dessus du PRI (rouge) ou non (bleu), selon une exploitation de 45\\% et une productivité constante entre les inlets et les essais. G~REM~ a été tiré d’une distribution commune entre les inlets et les essais. ", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/sameProdhCor-SRHist.png', './figure/sameProdhCor-SRHist.png', mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/sameProdhCor-SRHistFR.png', './figure/sameProdhCor-SRHist.png', mode="wb")
 
 knitr::include_graphics("figure/sameProdhCor-SRHist.png")
 # knitr::include_graphics("C:/github/SalmonLRP_RetroEval/WCVIChinookStudy/Figures/sameProdhCor_SRHist.png")
@@ -65,7 +65,7 @@ knitr::include_graphics("figure/sameProdhCor-SRHist.png")
 
 ```{r chinook-ProjLRPs-SameProd, fig.cap="Probabilité que toutes les populations d’inlet se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 10 000 essais de MCCM en fonction d’une gamme de taux d’exploitation moyens de 5 à 45\\% (dans les neuf panneaux), en supposant la même productivité pour chaque inlet et essai et un G~REM~ qui varie entre les inlets et les essais, tiré d’une distribution commune. Les lignes horizontales pointillées sont à 50\\% et 66\\%. Les lignes verticales orange et vert pâle représentent les PRL associées à une probabilité de 50\\% et 66\\% que toutes les populations d’inlet soient au-dessus de leur PRI, mais ils sont indifférenciables ici. ", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameProd-hCor-ProjLRPCurve-ALLp.png', './figure/ERsSameProd-hCor-ProjLRPCurve-ALLp.png', mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameProd-hCor-ProjLRPCurve-ALLpFR.png', './figure/ERsSameProd-hCor-ProjLRPCurve-ALLp.png', mode="wb")
 
 knitr::include_graphics("figure/ERsSameProd-hCor-ProjLRPCurve-ALLp.png")
 # knitr::include_graphics("C:/github/SalmonLRP_RetroEval/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameProd_hCor-ProjLRPCurve-ALLp.png")
@@ -81,7 +81,7 @@ Lorsque G~REM~ était fixé à la valeur moyenne entre les inlets et les essais 
 
 ```{r chinook-SRHistSameSREP, fig.cap="Distribution (a) de la productivité (log alpha) et (b) de l’abondance des géniteurs au remplacement, G~REM~, entre les essais de MCCM, colorées selon que l’abondance dans cet essai est demeurée au-dessus du PRI (rouge) ou non (bleu), selon une exploitation de 45\\% et G~REM~ constant entre les inlets et les essais. La productivité a été tirée d’une distribution commune entre les inlets et les essais. ", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/sameSREPhCor-SRHist.png', './figure/sameSREPhCor-SRHist.png', mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/sameSREPhCor-SRHistFR.png', './figure/sameSREPhCor-SRHist.png', mode="wb")
 
 knitr::include_graphics("figure/sameSREPhCor-SRHist.png")
 # knitr::include_graphics("C:/github/SalmonLRP_RetroEval/WCVIChinookStudy/Figures/sameSREPhCor_SRHist.png")
@@ -91,7 +91,7 @@ knitr::include_graphics("figure/sameSREPhCor-SRHist.png")
 
 ```{r chinook-ProjLRPs-SameSREP, fig.cap="Probabilité que toutes les populations d’inlets se trouvent au-dessus de leur PRI le long d’un gradient de l’abondance agrégée dans les tranches de 200 poissons, obtenue des projections sur 30 ans et de 10 000 essais de MCCM en fonction d’une gamme de taux d’exploitation moyens de 5 à 45\\% (dans les neuf panneaux), en supposant le même G~REM~ pour chaque inlet et essai et une productivité qui varie entre les inlets et les essais, tirée d’une distribution commune. Les lignes horizontales pointillées sont à 50\\% et 66\\%. Les lignes verticales orange et vert pâle représentent les PRL associées à une probabilité de 50\\% et 66\\% que toutes les populations d’inlet soient au-dessus de leur PRI, respectivement. ", fig.align="center"}
 
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameSREP-hCor-ProjLRPCurve-ALLp.png', './figure/ERsSameSREP-hCor-ProjLRPCurve-ALLp.png', mode="wb")
+download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameSREP-hCor-ProjLRPCurve-ALLpFR.png', './figure/ERsSameSREP-hCor-ProjLRPCurve-ALLp.png', mode="wb")
 
 knitr::include_graphics("figure/ERsSameSREP-hCor-ProjLRPCurve-ALLp.png")
 # knitr::include_graphics("C:/github/SalmonLRP_RetroEval/WCVIChinookStudy/Figures/ProjectedLRPs/ERsSameSREP_hCor-ProjLRPCurve-ALLp.png")

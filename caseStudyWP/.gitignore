@@ -39,3 +39,5 @@ resdoc.tex
 *.shp
 *.xml
 *.shx
+!CO_CU_BOUYNDARY_En_edit.shp
+!CO_CU_BOUYNDARY_En_edit.dbf

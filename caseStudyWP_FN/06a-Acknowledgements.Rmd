@@ -1,0 +1,41 @@
+# REMERCIEMENTS
+
+Nous sommes reconnaissants du soutien considérable qu’ont fourni les membres du groupe de travail technique sur les PRL pour les saumons au cours des trois années qui ont précédé cet examen, c’est-à-dire (par ordre alphabétique de nom de famille, à l’exclusion des coauteurs) : Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Brendan Connors, Steve Cox-Rogers, Shaun Davies, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Ann-Marie Huang, Pete Nicklin, Chuck Parken, Mike Staley, Pieter Van Will, Antonio Velez-Espino et Ryan Whitmore. 
+
+Le programme sur l’état des saumons du MPO, dirigé par Sue Grant, a fourni des conseils utiles sur l’Explorateur de l’état des saumons du Pacifique. Merci à Bronwyn MacDonald et à Gottfried Pestal pour leur travail d’analyse sur cet outil et pour avoir répondu à nos questions à son sujet. 
+
+Nous remercions également Chuck Parken, Brendan Connors et Mary Thiess pour leurs commentaires utiles sur les versions préliminaires de ce document. Enfin, nous remercions Mike Bradford (MPO) et Will Atlas (Wild Salmon Center) pour les commentaires détaillés qu’ils ont fournis dans le cadre du processus d’examen du Secrétariat canadien des avis scientifiques, lesquels ont contribué à améliorer le présent document de recherche.
+
+
+<!-- Full list of TWG members:
+Michael Arbeider,
+Jessy Bokvist,
+Nicholas Brown,
+Charmaine Carr-Harris,
+Kelsey Campbell,
+Brendan Connors,
+Steve Cox-Rogers,
+Sabrina Crowley,
+Shaun Davies,
+Brooke Davis,
+Diana Dobson,
+Michael Folkes
+Aaron Foos,
+Nicole Frederickson,
+Sue Grant,
+Carrie Holt,
+Kendra Holt,
+Wilf Luedke,
+Ann-Marie Huang,
+Diana McHugh,
+Pete Nicklin,
+Chuck Parken,
+Candace Picco,
+Mike Staley,
+Pieter Van Will,
+Antonio Velez-Espino,
+Luke Warkentin,
+Ryan Whitmore,
+Catarina Wor,
+-->
+
