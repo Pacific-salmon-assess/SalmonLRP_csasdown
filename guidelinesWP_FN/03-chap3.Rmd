@@ -115,18 +115,18 @@ CH: the challenge is I had original text saying the Salmon Scanner did not incor
 \begin{table}[!htbp]
 \centering
 \footnotesize   
-\caption{Metrics currently used in the Pacific Salmon Status Scanner}
+\caption{Paramètres actuellement utilisés dans l’explorateur de l’état du saumon du Pacifique}
 \begin{tabular}{p{4.2cm} p{4.2cm} p{4.2cm} p{4.2cm} p{4.2cm} p{3.2cm} }
 \multicolumn{3}{l}{}\\
 \toprule
-\multicolumn{3}{l}{Category} & Metrics & Example benchmarks (citations demonstrating levels above serious harm)\\
+\multicolumn{3}{l}{Catégorie} & Paramètres & Exemples de points de référence (citations démontrant des niveaux supérieurs à ceux associés à un dommage grave)\\
 \midrule
-\multicolumn{3}{l}{Metrics on abundances} & Absolute spawner abundances relative to absolute abundance benchmark & 1000 spawners (1,2) \\
+\multicolumn{3}{l}{Paramètres relatifs à l’abondance} & Abondance absolue de géniteurs par rapport au point de référence d’abondance absolue & 1 000 géniteurs (1,2)\\
 
-\multicolumn{3}{l}{} & Absolute or index of spawner abundances relative to estimated benchmarks & Sgen (3) or 25th percentile of observed spawner abundances (4)\\
+\multicolumn{3}{l}{} & Abondance absolue ou indice d’abondance de géniteurs par rapport aux points de référence estimés & Ggén (3) ou 25e centile des abondances de géniteurs observées (4)\\
 \midrule
-\multicolumn{3}{l}{Metrics on trends} & Percent change in spawner abundances over the most recent 3 generations & 25 percent decline (1,5)\\
-\multicolumn{3}{l}{} & Ratio of the current generational geometric mean to the geometric mean over the time-series & 0.5 (5,6,7) \\
+\multicolumn{3}{l}{Paramètres relatifs à la tendance} & Variation en pourcentage de l’abondance des géniteurs au cours des trois dernières générations & déclin de 25\% (1,5)\\
+\multicolumn{3}{l}{} & Rapport entre la moyenne géométrique de la génération actuelle et la moyenne géométrique de la série chronologique & 0,5 (5,6,7) \\
 
 \bottomrule
 \end{tabular}
@@ -189,14 +189,14 @@ Dans cette section, des PRL qui intègrent les états des UC composantes sont pr
 \begin{tikzpicture}
 \tikzstyle{box} = [rectangle, rounded corners, text centered, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
-\node(1) [box, minimum width=10 cm, minimum height=1 cm, fill=yellow!10] at(0,0) {CU status-based LRP};
-\node(2) [box,  minimum width=10 cm, minimum height=1 cm, fill=blue!10] at(0,-2) {Aggregate Abundance LRP};
-\node(2a) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(-3,-3.5) {Logistic Regression LRP};
-\node(2b) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(3,-3.5) {Projection LRP};
+\node(1) [box, minimum width=10 cm, minimum height=1 cm, fill=yellow!10] at(0,0) {PRL fondés sur l’état des UC};
+\node(2) [box,  minimum width=10 cm, minimum height=1 cm, fill=blue!10] at(0,-2) {PRL fondés sur l’abondance globale};
+\node(2a) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(-3,-3.5) {PRL de régression logistique};
+\node(2b) [box, minimum width=4 cm, minimum height=1 cm, fill=blue!10] at(3,-3.5) {PRL de projection};
 \draw[arrow] (2.south -| 2a) -- (2a);
 \draw[arrow] (2.south -| 2b) -- (2b);
 \end{tikzpicture}
-\caption{Types of LRPs for Pacific Salmon, showing the nested nature of logistic regression and projection LRPs within the category of aggregate abundance LRPs.} 
+\caption{Types de PRL pour le saumon du Pacifique, montrant la nature imbriquée des PRL de régression logistique et de projection dans la catégorie des PRL d’abondance globale.}  
 (\#fig:LRP-types)
 \end{figure}
 
@@ -234,12 +234,12 @@ En plus des PRL fondés sur l’état des UC, nous avons élaboré des PRL le lo
 \tikzstyle{astatf} = [circle, minimum width = 0.9 cm, fill=orange!10]
 \tikzstyle{rstat} = [circle, minimum width = 0.9 cm, fill=red!90]
 \tikzstyle{rstatf} = [circle, minimum width = 0.9 cm, fill=red!5]
-\tikzstyle{SMU} = [rectangle, rounded corners, dashed, draw=gray]
+\tikzstyle{UGS} = [rectangle, rounded corners, dashed, draw=gray]
 
-\node at (2,4.75) {CU1}; 
-\node at (3,4.75) {CU2}; 
-\node at (4,4.75) {CU3}; 
-\node at (5,4.75) {CU4}; 
+\node at (2,4.75) {UC1}; 
+\node at (3,4.75) {UC2}; 
+\node at (4,4.75) {UC3}; 
+\node at (5,4.75) {UC4}; 
 
 \node() [gstat] at (2,4) {};
 \node() [gstat] at (3,4) {};
@@ -256,19 +256,19 @@ En plus des PRL fondés sur l’état des UC, nous avons élaboré des PRL le lo
 \node() [rstat] at (4,2) {};
 \node() [rstatf] at (5,2) {};
 
-\node() [SMU, minimum width=5cm, minimum height=4.5 cm] at (3.5, 3.25) {};
-\node at (3.5,5.75) {Stock Management Unit A}; 
+\node() [UGS, minimum width=5cm, minimum height=4.5 cm] at (3.5, 3.25) {};
+\node at (3.5,5.75) {Unité de gestion des stocks A};  
 
 \draw [line width = 1 mm] (1,2.5) -- (6,2.5);
-\node() [align=center] at (7,2.5) {CU status-\\based LRP};
+\node() [align=center] at (7,2.5) {PRL-\\fondés sur l’état des UC};
 
 
 \node() [single arrow, shape border rotate=270, draw, minimum height=0.6 cm, minimum width=0.7 cm, single arrow head extend=0.1cm] at (3.5, 0.65) {}; 
-\node() at (3.5, 0) {SMU status = below LRP};
+\node() at (3.5, 0) {État de l’UGS = inférieur au PRL};
 
-\node at (9,4.75) {CU5}; 
-\node at (10,4.75) {CU6}; 
-\node at (11,4.75) {CU7}; 
+\node at (9,4.75) {UC5}; 
+\node at (10,4.75) {UC6}; 
+\node at (11,4.75) {UC7}; 
 
 \node() [gstatf] at (9,4) {};
 \node() [gstat] at (10,4) {};
@@ -282,17 +282,17 @@ En plus des PRL fondés sur l’état des UC, nous avons élaboré des PRL le lo
 \node() [rstatf] at (10,2) {};
 \node() [rstatf] at (11,2) {};
 
-\node() [SMU, minimum width=4cm, minimum height=4.5 cm] at (10, 3.25) {};
-\node at (10,5.75) {Stock Management Unit B}; 
+\node() [UGS, minimum width=4cm, minimum height=4.5 cm] at (10, 3.25) {};
+\node at (10,5.75) {Unité de gestion des stocks B}; 
 
 \draw [line width = 1 mm] (8,2.5) -- (12,2.5);
 
 \node() [single arrow, shape border rotate=270, draw, minimum height=0.6 cm, minimum width=0.7 cm, single arrow head extend=0.1cm] at (10, 0.65) {}; 
-\node() at (10, 0) {SMU status = above LRP};
+\node() at (10, 0) {État de l’UGS = supérieur au PRL};
 
 
 \end{tikzpicture}
-\caption{Schematic of ‘CU status-based LRP’ applied two example SMUs. ‘Stock Management Unit A’ (left) consists of four component CUs, of which two are Green status, one is Amber status, and one is Red status. ‘Stock Management Unit B’ (right) consists of three component CUs of which two are Green status and one is Amber status.  ‘Stock Management Unit A’ would be assessed as below the LRP while ‘Stock Management Unit B’ would be assessed as above the LRP.} 
+\caption{Schéma du « PRL fondé sur l’état des UC » appliqué à deux exemples d’UGS. L’unité de gestion des stocks A (à gauche) se compose de quatre UC, dont deux ont un état vert, une un état orange et une un état rouge. L’unité de gestion des stocks B (à droite) se compose de trois UC, dont deux ont un état vert et une un état ambre. L’« unité de gestion des stocks A » serait évaluée comme étant inférieure au PRL, tandis que l’« unité de gestion des stocks B » serait évaluée comme étant supérieure au PRL.}
 (\#fig:CU-status-based-LRP)
 \end{figure}
 
@@ -331,17 +331,18 @@ CH: I think the inital description covers this? ".5, 0.66, 0.90, 0.99, represent
 
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{3.7cm} p{6.3cm}}
-\caption{Likelihood definitions adapted from the Intergovernmental Panel on Climate Change.}\\
+\caption{Définitions des probabilités adaptées du Groupe d’experts intergouvernemental sur l’évolution du climat.}\\
 \hline
-Probability & Definition \\ 
+Probabilité & Définition \\ 
 \hline
 \endhead
-33\%-66\%  &  range covering, 'about as likely as not' that all CUs are above their lower benchmark \\
-50\%  &  mid-point of the 33\%-66\% range \\
-$>$ 50\%  &  more likely than not that all CUs are above their lower benchmark \\
-$>$ 66\%  &  likely that all CUs are above their lower benchmark\\
-$>$ 90\%  &  very likely that all CUs are above their lower benchmark\\
-$>$ 99\%  &  virtually certain that all CUs are above their lower benchmark\\
+33\%-66\% & fourchette correspondant à « environ aussi probable qu’improbable » que toutes les UC soient au-dessus de leur point de référence inférieur\\
+50\% & point central de la fourchette 33\%-66\%\\
+$>$50\% & plus probable qu’improbable que toutes les UC soient au-dessus de leur point de référence inférieur \\
+$>$66\% & probable que toutes les UC soient au-dessus de leur point de référence inférieur\\
+$>$90\% & très probable que toutes les UC soient au-dessus de leur point de référence inférieur\\
+$>$99\% & pratiquement certain que toutes les UC sont au-dessus de leur point de référence inférieur\\
+
 \hline
 (\#tab:LikelihoodsIPCC)
 \end{longtable}

@@ -28,29 +28,29 @@ Nous recommandons une approche progressive pour déterminer les PRL, avec la pro
 \tikzstyle{boxno} = [rectangle, rounded corners, minimum width=4cm, minimum height=1cm, text centered, text width = 4cm, draw=black]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 \begin{tikzpicture} [node distance = 1.5cm]
-\node(1) [box, fill=yellow!10] {1. Data compilation};
-\node(2) [box, fill=yellow!10, below of=1] {2. Assess CU data deficiency};
-\node(3) [box, fill=yellow!10, below of= 2] {3. Determine whether status of data-deficient CUs can be inferred from CUs with data};
-\node(4) [box, fill=yellow!10, below of= 3] {4. What proportion of CUs above Red status is required to avoid serious harm? Default = 100\%};
-\node(5) [box, fill=yellow!10, below of=4] {5. Assess status relative to CU status-based LRP};
-\node(6) [box, fill=yellow!10, below of=5] {6. Peer-review of CU statuses informing CU status-based LRP (including review of steps 1-5)};
-\node(7) [box, below of=6, fill=blue!10] {7. Are aggregate abundance LRPs required for fisheries management decisions?};
-\node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimate aggregate abundance LRPs\\(a) Identity acceptable probability of all CUs $>$ lower benchmarks\\(b) Choose logistic regression LRP and/or projection LRP, depending on which assumptions are met\\(c) Estimate LRP(s)};
-\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {Rely solely on CU status-based LRP (step 5)};
-\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Assess status relative to aggregate abundance LRP(s), and compare to that from CU status-based LRPs  (step 5)};
-\node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Aggregate abundance LRPs cannot be estimated};
+\node(1) [box, fill=yellow!10] {1. Compiler les données};
+\node(2) [box, fill=yellow!10, below of=1] {2. Évaluer les lacunes dans les données des UC};
+\node(3) [box, fill=yellow!10, below of= 2] {3. Déterminer si l’état des UC manquant de données peut être déduit des UC avec des données};
+\node(4) [box, fill=yellow!10, below of= 3] {4. Quelle proportion d’UC au-dessus de l’état rouge est nécessaire pour éviter des dommages graves? Valeur par défaut  = 100\%};
+\node(5) [box, fill=yellow!10, below of=4] {5. Évaluer l’état par rapport au PRL fondé sur l’état des UC};
+\node(6) [box, fill=yellow!10, below of=5] {6. Effectuer un examen par les pairs des états des UC étayant le PRL fondé sur l’état des UC (y compris l’examen des étapes 1-5)};
+\node(7) [box, below of=6, fill=blue!10] {7. Les PRL fondés sur l’abondance globale sont-ils nécessaires pour les décisions de gestion des pêches?};
+\node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimer les PRL de l’abondance globale\\(a) Établir la probabilité acceptable que tous les UC $>$ points de référence inférieurs \\b) Choisir le PRL de régression logistique et/ou le PRL de projection, selon les hypothèses qui sont satisfaites\\c) Estimer les PRL};
+\node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {S’appuyer uniquement sur les PRL fondés sur l’état des UC (étape 5)};
+\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Évaluer l’état par rapport aux PRL d’abondance globale et le comparer à celui des PRL fondés sur l’état des UC (étape 5)};
+\node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Les PRL fondés sur l’abondance globale ne peuvent être estimés};
 \draw[arrow] (1) -- (2);
 \draw[arrow] (2) -- (3);
 \draw[arrow] (3) -- (4);
 \draw[arrow] (4) -- (5);
 \draw[arrow] (5) -- (6);
 \draw[arrow] (6) -- (7);
-\draw[arrow] (7) -- node[anchor=east] {Yes} (8);
-\draw[arrow] (7) -| node[anchor=west] {No} (8n);
-\draw[arrow] (8) -- node[anchor=east] {Assumptions met} (9);
-\draw[arrow] (8) -| node[anchor=west] {Assumptions not met} (9n);
+\draw[arrow] (7) -- node[anchor=east] {Oui} (8);
+\draw[arrow] (7) -| node[anchor=west] {Non} (8n);
+\draw[arrow] (8) -- node[anchor=east] {Hypothèses confirmées} (9);
+\draw[arrow] (8) -| node[anchor=west] {Hypothèses non confirmées} (9n);
 \end{tikzpicture}
-\caption{Steps for setting LRPs and assessing status. Pale yellow boxes indicate those for estimating CU status-based LRPs. Blue boxes indicate those for aggregate abundance LRPs. White boxes indicate when aggregate abundance LRP methods are not recommended.} 
+\caption{Étapes de l’établissement des PRL et de l’évaluation de l’état. Les cases jaune pâle indiquent celles pour l’estimation des PRL fondés sur l’état des UC. Les cases bleues indiquent celles des PRL fondés sur l’abondance globale. Les cases blanches indiquent les cas où il n’est pas recommandé d’utiliser une méthode du PRL fondé sur l’abondance globale.}
 (\#fig:flowchart)
 \end{figure}
 
@@ -158,13 +158,13 @@ En revanche, lorsque les UC dont les données sont insuffisantes ne sont pas rep
 
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}[]{p{5cm} p{3.5cm} p{3.5cm}}
-\caption{Guidelines on assessing status for CU status-based LRPs of 100\% of CUs being above Red status, when at least one CU is data-deficient}\\
+\caption{Lignes directrices sur l’évaluation de l’état pour les PRL fondés sur l’état des UC correspondant à 100\% des UC étant au-dessus de l’état rouge, lorsqu’au moins une UC est dépourvue de données.}\\
 \hline
- & Status of data-rich CUs: all above Red status &  Status of data-rich CUs: at least one Red status \\ 
+& État des UC riches en données : tous les états supérieurs à rouge & État des UC riches en données : au moins un état rouge\\ 
 \hline
 \endhead
-Status of data-deficient CUs can be inferred from data-rich CUs  &  Provisional SMU status  above LRP with high uncertainty& SMU status = below LRP\\
-Status of data-deficient CUs {\it cannot} be inferred from data-rich CUs  &  SMU Status = data deficient & SMU status = below LRP\\
+L’état des UC manquant de données peut être déduit de celui des UC riches en données & État provisoire de l’UGS au-dessus du PRL avec une grande incertitude & État de l’UGS = inférieur au PRL\\
+L’état des UC manquant de données {\it ne peut pas} être déduit des UC riches en données & État de l’UGS = données insuffisantes & État de l’UGS = inférieur au PRL\\
 
 \hline
 (\#tab:GuidanceDDCUs)
@@ -214,7 +214,7 @@ LW: I agree as well.-->
 
 La fréquence des examens par les pairs à l'échelle de l'UGS en dehors de la mise en œuvre annuelle de l'explorateur des saumons dépendra de la variabilité de la dynamique de la population au niveau des UC au fil du temps et de la façon dont les PRL et les évaluations au niveau de l'UGS sont utilisés pour éclairer la prise de décisions (par exemple, si une UGS est classée par lots en vertu de la *Loi sur les pêches*), entre autres facteurs. À l'avenir, les procédures de gestion avec diverses fréquences d'évaluation pourraient être évaluées dans un cadre de simulation afin de déterminer les risques de retarder les évaluations par rapport aux coûts de leur mise en œuvre.
 
-###Étape 7: Les PRL fondés sur l'abondance globale sont-ils nécessaires pour la gestion des pêches?
+### Étape 7: Les PRL fondés sur l'abondance globale sont-ils nécessaires pour la gestion des pêches?
 
 Bien que les PRL fondés sur l'état des UC puissent répondre aux exigences des dispositions sur les stocks de poissons pour le saumon du Pacifique, les PRL fondés sur l'abondance peuvent être nécessaires pour les décisions de gestion des pêches (section \@ref(roleLRPs)). Pour les UGS où la récolte à l'échelle globale est un facteur dominant de la dynamique de la population et où la restriction des prises dans les pêches est un levier de gestion principal, un PRL selon la mesure de l'abondance au niveau de l'UGS peut soutenir une gestion de précaution. Par exemple, lorsque les PRL sont utilisés pour éclairer une règle de contrôle des prises, la pression de pêche peut être progressivement réduite à mesure que les abondances globales diminuent vers le PRL afin d'éviter l'épuisement en dessous de ce niveau. Des points de référence fondés sur l'abondance globale peuvent dans certains cas être nécessaires pour la gestion locale ou internationale. Par exemple, des objectifs d'échappées globales sont requis pour le saumon rouge des rivières Nass et Skeena en vertu des dispositions du Traité sur le saumon du Pacifique (2019)<!--@TreatyGovernmentCanada2019. Have to figure out how to reference this without having the full name of the treaty here-->, bien que pour se conformer aux objectifs de la PSS, l'objectif d'échappées globales doive tenir compte de la diversité au niveau des UC.
 
@@ -366,7 +366,7 @@ De plus, les PRL de projection peuvent être plus appropriés lorsque les corré
 
 L'évaluation du modèle pour le PRL de projection est plus subjective que pour le PRL de régression logistique. La pertinence des ajustements du modèle de régression logistique peut être évaluée à l'aide de diagnostics statistiques d'ajustement du modèle, ce qui rend le processus d'évaluation relativement objectif et reproductible. Cependant, l'ajout d'hypothèses et de décisions analytiques nécessaires pour paramétrer les modèles de projection est un processus plus subjectif dans lequel les résultats peuvent varier d'un analyste à l'autre. L'examen par les pairs, tel que décrit à l'étape 6 ci-dessus, sera nécessaire pour soutenir l'élaboration des PRL de projection.
 
-###Étape 9: Appliquer les PRL fondés sur l'abondance globale pour obtenir l'état au niveau de l'UGS et comparer cet état avec les PRL fondés sur l'état des UC.
+### Étape 9: Appliquer les PRL fondés sur l'abondance globale pour obtenir l'état au niveau de l'UGS et comparer cet état avec les PRL fondés sur l'état des UC.
 
 Les méthodes d'abondance globale sont ensuite appliquées pour calculer les PRL selon les orientations ci-dessus. Voir l'annexe \@ref(app:case-studies) et @holtCaseStudyApplicationsInpress pour des exemples d'applications. Lorsque l'état d'une UGS est déduit des PRL de l'abondance globale en utilisant un sous-ensemble d'UC considérées comme représentatives des UC restantes dont les données sont insuffisantes, l'état résultant doit être considéré comme « provisoire » (c'est-à-dire avec une incertitude accrue) jusqu'à ce que l'état de toutes les UC composantes puisse être évalué. Lorsque l'état des UC dont les données sont insuffisantes ne peut pas être déduit des UC riches en données, l'état ne peut pas être évalué avec des PRL fondés sur l'abondance globale.
 
