@@ -207,7 +207,7 @@ Les diagnostics de la régression logistique ont indiqué que l’ajustement du 
 
 ```{r chum-logistic-perc, fig.cap="Régression logistique de la question de savoir si les échappées de toutes les UC constituantes étaient supérieures à leurs points de référence fondés sur le centile en fonction de l’abondance agrégée, pour l’UGS de saumon kéta de la CSI. Comprend les UC pour lesquelles des points de référence fondés sur le centile étaient appropriés (sans les UC de l’inlet Bute, de l’inlet Knight supérieur et des cours d’eau de la côte sud).", warning=FALSE, out.width = '80%', echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-logistic-perc.pdf'))
-  download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
+#  download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.Percentile_noCUinfill_90/LogisticMod_2018.pdf', './figure/chum-logistic-perc.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-perc.pdf')
 ```
 
@@ -236,7 +236,7 @@ Plusieurs facteurs ont mené à ces mauvais ajustements du modèle. L’UGS de s
 
 ```{r chum-spawner-corr, fig.cap="Corrélations par paires de l’abondance des géniteurs entre les unités de conservation du saumon kéta de la CSI.", warning=FALSE, out.width='80%',echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-spawners-corr.png'))
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_chum_spawners_corr.png', './figure/chum-spawners-corr.png', mode="wb")
 knitr::include_graphics('figure/chum-spawners-corr.png')
 ```
 &nbsp;
@@ -251,7 +251,7 @@ L’UGS de saumon kéta de la CSI se situait constamment au-dessous du PRL pour 
 
 ```{r chum-LRP-compare, fig.cap="Comparaison de l’état fondé sur le PRL (rouge = inférieur au PRL, gris = supérieur au PRL) pour six scénarios. La ligne noire montre l’abondance agrégée. Les scénarios 1 à 3 et 6 ne comprennent pas les UC de l’inlet Bute ou des cours d’eau de la côte sud (aucun point de référence fondé sur le centile approprié). Les scénarios « complets » utilisent seulement les années avec des séries chronologiques ayant fait l’objet d’un remplissage (pas d’UC ayant fait l’objet d’un remplissage à l’échelle de l’UC) et les scénarios « partiels » comprennent les UC ayant fait l’objet d’un remplissage à l’échelle de l’UC, mais ils laissent tomber les années avec un remplissage à l’échelle de l’UC pour ces UC.", echo=FALSE, fig.align="center"}
 #if(!file.exists('figure/chum-compare-LRP-methods.png'))
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_LRP_methods.png', './figure/chum-compare-LRP-methods.png', mode="wb")
 knitr::include_graphics('figure/chum-compare-LRP-methods.png')
 ```
 &nbsp;
