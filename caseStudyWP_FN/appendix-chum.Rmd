@@ -58,7 +58,7 @@ S’il n’y avait eu aucun dénombrement dans les cours d’eau utilisés par u
 
 
 ```{r chum-escapement-infill, fig.cap="Échappées des sept unités de conservation de saumon kéta. Les points noirs indiquent les dénombrements réels, les points bleus ont fait l’objet d’un remplissage par cours d’eau et les points rouges ont fait l’objet d’un remplissage par unité de conservation.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_actual_infill_by_stream_and_CU.png', './figure/chum-escapement-infill.png', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_compare_actual_infill_by_stream_and_CU.png', './figure/chum-escapement-infill.png', mode="wb")
 knitr::include_graphics("figure/chum-escapement-infill.png")
 ```
 
@@ -74,7 +74,7 @@ Pour obtenir ces estimations, on a calculé le nombre total de géniteurs (d’o
 À noter que les deux UC nécessitant un remplissage à l’échelle de l’UC ne correspondent qu’à un seul secteur d’exploitation des pêches chacune, ce qui permet la reconstitution des remontes à l’aide des données sur les prises à cette échelle.
 
 ```{r chum-spawner-distribution, fig.cap="Densité (histogramme lissé) des échappées pour les sept unités de conservation de saumon kéta. À noter que l’axe des x est à l’échelle logarithmique.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_spawner_dist.png', './figure/fig-spawner-dist.png', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_spawner_dist.png', './figure/fig-spawner-dist.png', mode="wb")
 knitr::include_graphics("figure/fig-spawner-dist.png")
 ```
 
@@ -84,7 +84,7 @@ Nous avons effectué une analyse rétrospective à l’aide des données sur le 
 
 
 ```{r chum-a-b-SMSY-Sgen-retro, fig.cap="Estimations rétrospectives de $\\alpha$, $\\beta$, $G_{gén}$ (ligne noire avec intervalles de confiance en gris) et $G_{RMD}$ (ligne bleue) pour cinq UC dans l’UGS de saumon kéta de la CSI. À noter que l’axe des y est identique d’une UC à l’autre pour $\\alpha$, mais qu’il varie pour d’autres paramètres.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_SMSY_Sgen_retro.png', './figure/chum-a-b-SMSY-Sgen-retro.png',  mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_a_b_SMSY_Sgen_retro.png', './figure/chum-a-b-SMSY-Sgen-retro.png',  mode="wb")
 knitr::include_graphics('figure/chum-a-b-SMSY-Sgen-retro.png')
 ```
 
@@ -97,7 +97,7 @@ Malgré les grandes incertitudes entourant les données sous-jacentes sur le rec
 
 
 ```{r chum-logistic-sgen, fig.cap="Régression logistique de la question de savoir si les échappées de toutes les UC constituantes se situaient au-dessus des points de référence fondés sur $G_{gén}$ d’après l’abondance agrégée, pour l’UGS de saumon kéta de la CSI. Comprend les cinq UC sans remplissage à l’échelle de l’UC (sans l’inlet Bute ni l’inlet Knight supérieur)", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/AnnualRetrospective/Bern.IndivRicker_NoSurv_noCUinfill_90/LogisticMod_2012.pdf', './figure/chum-logistic-sgen.pdf', mode="wb")
 knitr::include_graphics('figure/chum-logistic-sgen.pdf')
 ```
 
@@ -106,7 +106,7 @@ Nous avons évalué l’état de façon rétrospective en fonction de points de 
 
 
 ```{r chum-perc-retro, fig.cap="Les échappées avec des points de référence fondés sur les 25e et 50e centiles sont indiquées par des lignes en pointillé grises et noires, respectivement. Les points de référence sont calculés à partir des échappées jusqu’à l’année donnée. Les valeurs qui suivent les noms des UC indiquent le point de référence fondé sur le centile approprié. Les points verts et rouges indiquent l’état au-dessus ou au-dessous du point de référence, respectivement. Les points transparents sont des années avec remplissage à l’échelle de l’UC.", warning=FALSE, echo=FALSE, fig.align="center"}
-download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
+#download.file('https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/Figures/fig_perc_benchmarks_annual_retro.png', './figure/chum-perc-retro.png', mode="wb")
 knitr::include_graphics('figure/chum-perc-retro.png')
 ```
 
