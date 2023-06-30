@@ -1,17 +1,17 @@
 
 
-# RESOURCES FOR THE IMPLEMENTATION OF LRPS {#app:links}
+# RESSOURCES POUR LA MISE EN ŒUVRE DE POINTS DE RÉFÉRENCE LIMITES (PRL) {#app:links}
 
 
-- For single metrics of status used under the Wild Salmon Policy, see the Github repository [WSP Metrics](https://github.com/Pacific-salmon-assess/WSP-Metrics-Pkg)
+- Pour les paramètres uniques de l’état utilisés dans le cadre de la Politique concernant le saumon sauvage, voir le dépôt GitHub [paramètres de la PSS.](https://github.com/Pacific-salmon-assess/WSP-Metrics-Pkg)
 <!--CH remove for now, as they are private:
 - For watershed-area model, link to Carrie's repository (currently private due to data concerns)
 -	For multi-dimensional CU-status, link to Rapid Multidimensional Scanner Tool 
 -->
-- For implementation of CU status-based and aggregate abundance LRPs to three case studies, see the Github repository on [case studies](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
-- For estimation of correlations among CUs within SMUs, see the Github repository on [CU correlations](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
-- For write-up of this working paper, see the Github repository in [csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
+- For implementation of CU status-based and aggregate abundance LRPs to three case studies, see the Github repository on [études de cas](https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval)
+- Pour l’estimation des corrélations entre les unités de conservation (UC) au sein des unités de gestion des stocks (UGS), voir le dépôt GitHub [corrélations de l’UC](https://github.com/Pacific-salmon-assess/lrp-smu-corr)
+- Pour la rédaction de ce document de travail, voir le dépôt GitHub [csasdown](https://github.com/Pacific-salmon-assess/SalmonLRP_csasdown)
 
-All data manipulation and projections were performed in R.  TMB and TMBStan were used for estimation of stock-recruitment parameters and benchmarks for logistic regression and projection LRPs.
+Toutes les manipulations et projections de données ont été effectuées en R. TMB et TMBStan ont été utilisés pour l’estimation des paramètres de stock-recrutement et les points de référence pour la régression logistique et les PRL de projection.
 
 <!--CH: ask Sue is we can add Scanner git repo? Probably not yet...-->

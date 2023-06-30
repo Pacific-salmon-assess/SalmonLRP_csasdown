@@ -1,16 +1,16 @@
-# ACKNOWLEDGEMENTS
+# REMERCIEMENTS
 
-We gratefully acknowledge the considerable support provided by our Technical Working Group on Salmon LRPs over the three years leading up to this review, who are (alphabetical order by last name, excluding co-authors): Michael Arbeider, Jessy Bokvist, Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Steve Cox-Rogers, Sabrina Crowley, Shaun Davies, Brooke Davis, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Wilf Luedke, Diana McHugh, Pete Nicklin, Chuck Parken, Candace Picco, Mike Staley, Pieter Van Will, Antonio Velez-Espino, and Ryan Whitmore.
+Nous tenons à remercier le groupe de travail technique sur les PRL pour le saumon pour le soutien considérable qu’il nous a apporté au cours des trois années qui ont mené au présent examen. Les membres de ce groupe sont (par ordre alphabétique de nom de famille, à l’exception des co-auteurs) Michael Arbeider, Jessy Bokvist, Nicholas Brown, Charmaine Carr-Harris, Kelsey Campbell, Steve Cox-Rogers, Sabrina Crowley, Shaun Davies, Brooke Davis, Diana Dobson, Michael Folkes Aaron Foos, Nicole Frederickson, Wilf Luedke, Diana McHugh, Pete Nicklin, Chuck Parken, Candace Picco, Mike Staley, Pieter Van Will, Antonio Velez-Espino, et Ryan Whitmore.
 
-We especially thank the contributions of the First Nations members of the Technical Working Group who brought unique perspectives and insights to our discussions.
+Nous aimerions particulièrement remercier de leur contribution les membres des Premières Nations du groupe de travail technique, qui ont apporté des perspectives et des idées uniques à nos discussions.
 
-The State of the Salmon Program, led by Sue Grant, provided helpful leadership and guidance on the Pacific Salmon Status Scanner. Thank you to Bronwyn MacDonald and Gottfried Pestal for their analytical work on this tool, and answering our questions about it.<!--CH: although I'd like to thank Sue directly, it feels funny as she's a co-author. I could revise anyways...?-->
+Le programme sur l’état du saumon, dirigé par Sue Grant, a fourni un leadership et des conseils utiles sur l’explorateur de l’état des saumons du Pacifique. Merci à Bronwyn MacDonald et à Gottfried Pestal pour leur travail d’analyse sur cet outil, et pour avoir répondu à nos questions à son sujet.<!--CH: although I’d like to thank Sue directly, it feels funny as she’s a co-author. I could revise anyways...? -->
 
-In addition, Brooke Davis provided invaluable help developing early versions of the code for the integrated logistic regression model, for which we are extremely grateful.
+En outre, Brooke Davis a fourni une aide précieuse en élaborant les premières versions du code du modèle de régression logistique intégré, ce dont nous lui sommes extrêmement reconnaissants.
 
-We also thank Julie Marentette, Tim Barrett, Mary Thiess, Jason Ladell, and Danny Ings for their perspectives on LRPs nationally and as applied to other taxonomic groups.  Julie Marentette, Tim Barrett, and Mary Thiess also provided helpful comments on an earlier draft.
+Nous remercions également Julie Marentette, Tim Barrett, Mary Thiess, Jason Ladell et Danny Ings pour leurs points de vue sur les PRL à l’échelle nationale et appliqués à d’autres groupes taxonomiques. Julie Marentette, Tim Barrett et Mary Thiess ont également fourni des commentaires utiles sur une version antérieure.
 
-Finally, we thank Mike Bradford (DFO) and Will Atlas (Wild Salmon Center) for detailed comments as part of the CSAP review process that improved this Research Document.
+Enfin, nous remercions Mike Bradford (MPO) et Will Atlas (Wild Salmon Center) pour leurs commentaires détaillés dans le cadre du processus d’examen du CSAP, qui ont contribué à améliorer le présent document de recherche.
 
 <!-- Full list of TWG members:
 Michael Arbeider,
