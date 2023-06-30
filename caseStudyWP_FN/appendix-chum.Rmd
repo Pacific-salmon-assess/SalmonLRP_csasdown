@@ -12,7 +12,7 @@ Nous avons utilisé les données sur les échappées de géniteurs de 1953 à 20
 
 
 
-### ### Prises des pêches, génétique et âge
+### Prises des pêches, génétique et âge
 
 
 Le nombre de saumons kétas capturés dans la région de la côte sud intérieure a été tiré de la base de données Clockwork du MPO, qui comprend le système d’exploitation des pêches du MPO, les bases de données des bordereaux de vente et les données d’identification génétique des stocks. Les distributions par âge pour chaque année ont été tirées de l’agrégat des pêches du détroit de Johnstone, car les données sur l’âge pour des UC ou des cours d’eau précis n’étaient pas disponibles. Les données sur les prises étaient disponibles pour la période allant de 1954 à 2019. Les données sur la composition par âge étaient disponibles pour la période allant de 1958 à 2018.

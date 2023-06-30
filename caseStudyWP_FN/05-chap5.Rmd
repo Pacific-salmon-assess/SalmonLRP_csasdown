@@ -11,6 +11,11 @@ output:
 L’UGS de saumon kéta de la côte sud intérieure à l’exclusion des UC du fleuve Fraser (ci-après appelé «~saumon kéta de la CSI~») comprend sept UC de saumon kéta provenant de rivières qui se déversent dans le détroit de Johnstone et la mer des Salish le long de la partie continentale de la Colombie-Britannique et de la côte est de l’île de Vancouver (figure \@ref(fig:chum-map); @holtbyConservationUnitsPacific2007). Cette zone comprend des fjords profonds, des glaciers, de grandes rivières et de petits cours d’eau côtiers. Les UC de saumon kéta frayant dans le bassin hydrographique du fleuve Fraser ne sont pas incluses dans cette UGS. Elles ont été classées comme appartenant à une UGS particulière appelée «~UGS de saumon kéta de la côte sud intérieure – Fraser~». Bien que ces deux UGS présentent un chevauchement important dans les pêches en mer, elles ont été séparées en fonction des différences relatives aux répercussions de la pêche en zone terminale et aux habitats d’eau douce.
 
 
+<!-- ```{r chum-map, fig.cap="Les sept unités de conservation qui composent l'unité de gestion des stocks de saumon kéta de la côte sud intérieure (à l'exclusion des unités de conservation du bas Fraser et du canyon du Fraser).", warning=FALSE, echo=FALSE, fig.align="center", out.width = '80%'} -->
+<!-- knitr::include_graphics("figure/chum-map.png") -->
+<!-- ``` -->
+
+
 ```{r chum-map, fig.cap="Les sept unités de conservation qui composent l’unité de gestion des stocks de saumon kéta de la côte sud intérieure (à l’exclusion des unités de conservation du bas Fraser et du canyon du Fraser).", warning=FALSE, echo=FALSE, fig.align="center"}
 knitr::include_graphics("figure/chum-map.png")
 ```
@@ -32,50 +37,20 @@ Les facteurs environnementaux, les caractéristiques biologiques et la capacité
 
 
 
-\needspace{0.35\textheight}
-
 ```{r CU-summary, echo=FALSE}
- d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
+
+d <- read.csv("data/CU_summary_table_report.csv", check.names = FALSE)
 
 # Add french table captions:
 names(d)<-c("UC", "montaison d’automne", "montaison d’été", "PRI","PRS")
 
-
  csasdown::csas_table(d,
     align = c('l', 'c', 'c','c','c'),
-    caption = #ifelse(french,
-                    #"French goes here",
-                    "Les sept unités de conservation dans l’UGS de saumon kéta de la CSI (autre que les UC du Fraser), et le nombre de cours d’eau empruntés lors des montaisons d’automne et d’été. À noter que seuls les cours d’eau de montaison d’automne ont été utilisés dans cette étude en raison des méthodes de reconstitution des montaisons. PRI = point de référence inférieur, PRS = point de référence supérieur obtenu au moyen de la méthode fondée sur le centile.")
-             #)
+    caption = "Les sept unités de conservation dans l’UGS de saumon kéta de la CSI (autre que les UC du Fraser), et le nombre de cours d’eau empruntés lors des montaisons d’automne et d’été. À noter que seuls les cours d’eau de montaison d’automne ont été utilisés dans cette étude en raison des méthodes de reconstitution des montaisons. PRI = point de référence inférieur, PRS = point de référence supérieur obtenu au moyen de la méthode fondée sur le centile.")
+
 ```
 
-\afterpage{\clearpage}
 
-
-
-<!-- \begin{center} -->
-<!-- \begin{longtable}{ l c c c c } -->
-<!-- \caption{The seven Conservation Units in the Inside South Coast Chum Non-Fraser Stock Management Unit. Note that only fall run streams were used in this study due to run reconstruction methods. LBM = Lower Benchmark, UBM = Upper Benchmark derived using the percentile method.} \label{tab:CU-summary} \\ -->
-<!-- \hline -->
-<!-- CU Name & Fall run streams & Summer run streams & LBM & UBM  \\ -->
-<!-- \hline -->
-<!-- Southern Coastal Streams & 23 & 8 & NA & NA \\ -->
-<!-- North East Vancouver Island & 17 & 0 & 50\% & 50\% \\ -->
-<!-- Upper Knight & 3 & 2 & 50\% & 50\% \\ -->
-<!-- Loughborough & 37 & 0 & 50\% & 50\% \\ -->
-<!-- Bute Inlet & 4 & 1 & NA & NA \\ -->
-<!-- Georgia Strait & 125 & 1 & 25\% & 50\% \\ -->
-<!-- Howe Sound-Burrard Inlet & 66 & 0 & 25\% & 50\% \\ -->
-<!-- \hline -->
-<!-- \end{longtable} -->
-<!-- \end{center} -->
-
-<!-- LW: should alpha and exploitation rate be added to this table as justification for which percentile benchmarks were chosen? Also available in Holt et al. 2018.
-  CW: I suggest removin the UBM estimates, as we do not use them. And I like the idea of adding alpha and ER.
-  KH: Do the UBM ever get used in the Salmon Scanner tool? If so, you could leave, but if not, remove.  Also - I like the idea of including the productivity and ER values (even if a range) used to justify which percentile to use.
-  LW: We do use the UBM for the salmon scanner tool. 
-  
--->
 
 Des évaluations antérieures selon la PSS des points de référence pour le saumon kéta de de la côte sud ont montré que les points de référence fondés sur le centile peuvent être comparables à ceux fondés sur les relations stock-recrutement lorsque la productivité est relativement élevée et la récolte, relativement faible [@holtEvaluatingBenchmarksBiological2018]. Cependant, dans certains cas, les points de référence fondés sur le centile peuvent être inappropriés en raison d’une faible productivité ou d’une récolte élevée, ce qui entraîne une base de référence changeante [@holtEvaluatingBenchmarksBiological2018].
 
@@ -106,27 +81,23 @@ Des points de référence fondés sur le centile peuvent être appliqués pour �
 
 
 Pour cette étude de cas, les points de référence fondés sur le centile ont été calculés à l’aide de la série chronologique brute (c’est‑à‑dire non lissée) n’ayant pas fait l’objet d’un remplissage de l’échappée annuelle. En revanche, l’état pour l’année $i$ a été déterminé en comparant l’abondance moyenne générationnelle (moyenne géométrique sur une période de quatre ans, se terminant par l’année $i$) des géniteurs avec le point de référence. Cette approche qui consiste à utiliser les échappées brutes (non lissées) pour calculer les points de référence, et les échappées générationnelles lissées pour estimer l’état des UC par rapport aux points de référence, est conforme aux approches adoptées pour nos deux autres études de cas pour les PRL fondés sur l’abondance proportionnelle.
-\needspace{0.35\textheight}
+
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
 \centering
 \caption{Certains PRI et PRS fondés sur le centile ont été déterminés comme ayant une valeur semblable ou supérieure aux points de référence fondés sur le stock-recrutement selon la PSS, ainsi que des gradients de productivité (Ricker $\alpha$) et des taux de récolte moyens. * Désigne le scénario de faible productivité où les PRI et PRS fondés sur le modèle de Ricker sont très proches les uns des autres, ce qui donne des PRI et PRS fondés sur le centile qui sont les mêmes. Adapté du tableau 6, Holt et al. 2018.}
 \begin{tabular}{l l p{2.5cm} p{2.5cm} p{2.5cm}}
-\hline       &     & \multicolumn{3}{l}{Taux d’exploitation }\\
+\hline       &     & \multicolumn{3}{l}{Taux d'exploitation }\\
 & & <20\% & 20-40\% & 40-60 \% \\
 \hline
 Productivité (Ricker $\alpha$) & >4 & 25 (inférieur)  50 (supérieur) & 25 (inférieur) 50 (supérieur) & 25 (inférieur) 50 (supérieur) \\
-& 2.5-4 & 25 (inférieur) 50 (supérieur) & 25 (inférieur) 50 (supérieur) & Évaluation plus poussée requise \\
-& 1.5-2.5 & *50 (lower and upper) & Évaluation plus poussée requise & Évaluation plus poussée requise \\
+& 2,5-4 & 25 (inférieur) 50 (supérieur) & 25 (inférieur) 50 (supérieur) & Évaluation plus poussée requise \\
+& 1,5-2,5 & *50 (lower and upper) & Évaluation plus poussée requise & Évaluation plus poussée requise \\
 \hline
 \end{tabular}
 (\#tab:holt-tab6)
 \end{table}
-
-\afterpage{\clearpage}
-
-
 
 D’après les recommandations formulées dans@ holtEvaluatingBenchmarksBiological2018 (tableau \@ref(tab:holt-tab6)), les UC du détroit de Géorgie et de la baie Howe et de l’inlet Burrard entrent dans la catégorie de l’utilisation de 25 % comme PRI et de 50 % comme PRS (Ricker $\alpha$ 2,5 à 4, taux de récolte 20 à 40 %). Les UC de Loughborough, du nord-est de l’île de Vancouver et de l’inlet Knight supérieur ($\alpha$  1,5 à 2,5 et taux de récolte de 0 à 20 %) affichaient un PRI et PRS recommandés de 50 %. L’UC de l’inlet Bute ($\alpha$ 1,5 à 2,5, taux de récolte de 20 à 40 %) a dû faire l’objet d’une évaluation plus poussée et des points de référence fondés sur le centile n’ont pas été recommandés. Les points de référence fondés sur le centile n’ont pas été recommandés pour l’UC des cours d’eau de la côte sud en raison d’une faible productivité ($\alpha$ < 1,5; tableau \@ref(tab:CU-summary)).
 
@@ -138,14 +109,13 @@ Les méthodes d’évaluation multidimensionnelles de l’Explorateur sont décr
 ## ESTIMATION DES PRL FONDÉS SUR L’ÉTAT DES UC
 
 
-###  Méthodes
+### Méthodes
 
 Pour obtenir les PRL fondés sur l’état des UC, nous avons calculé la proportion d’UC dont l’estimation de l’état se situait au-dessus de la zone rouge (ou au-dessus des PRI fondés sur le centile). Comme pour les études de cas du saumon coho du Fraser intérieur et du saumon chinook de la COIV, nous avons exigé que toutes les UC se situent au-dessus de la zone rouge pour que l’UGS de saumon kéta de la CSI soit classée au-dessus du PRL.
 
 
 L’approche à paramètre unique pour évaluer l’état des UC fondé sur le centile comporte des exigences particulières en matière de données [@holtEvaluatingBenchmarksBiological2018] tandis que l’approche multidimensionnelle peut être appliquée à n’importe quelle UC ayant au moins une série chronologique cohérente de l’abondance des géniteurs. Pour comparer les PRL en fonction de l’évaluation de l’UC à partir de ces deux approches, nous avons comparé les sous-ensembles de données, y compris ceux qui utilisaient les mêmes données pour chaque méthode, et toutes les données appropriées pour chaque méthode. Nous avons évalué six combinaisons différentes de données et de méthodes relatives aux PRL (tableau \@ref(tab:LRP-scenarios)).
 
-\needspace{0.35\textheight}
 
 \renewcommand*{\arraystretch}{1.5}
 \begin{table}[ht]
@@ -167,7 +137,6 @@ Nom du scénario &   \rotatebox{90}{Cours d’eau de la côte sud } &   \rotateb
 (\#tab:LRP-scenarios)
 \end{table}
 
-\afterpage{\clearpage}
 
 
 Lorsque nous décrivons les scénarios de PRL pour le saumon kéta de la CSI dans le tableau \@ref(tab:LRP-scenarios) et tout au long de cette étude de cas, nous utilisons la convention d’étiquetage suivante : * Paramètre : Méthode pour déterminer l’état des UC : Scénario de données*. « Paramètre » désigne le choix de baser tous les PRL du saumon kéta de la CSI sur la proportion d’UC dont l’état se situe au-dessus de la zone rouge de l’UC (ÉtatUC). La « méthode pour déterminer l’état des UC » peut être fondée sur l’algorithme multidimensionnel de l’Explorateur ou sur un point de référence unique fondé sur le centile utilisé pour caractériser l’état des UC (centile). Enfin, le « scénario de données » indique à la fois le nombre d’UC représentées (4, 5 ou 7) et l’intégralité de la série chronologique (complète ou partielle). Les scénarios complets ne comprenaient que les UC dotés de séries chronologiques complètes (aucune UC ayant des années manquantes). Les scénarios partiels comprenaient des UC dont les séries chronologiques étaient incomplètes (les années pour lesquelles il n’y avait pas d’observations dans ces UC ont été omises). Lorsque nous avons utilisé des points de référence fondés sur le centile dans ces scénarios, nous avons utilisé des centiles fondés sur @holtEvaluatingBenchmarksBiological2018. Les points de référence ont été estimés à l’aide de la série chronologique complète.
@@ -201,13 +170,9 @@ knitr::include_graphics('figure/fig_status_by_CU_perc_RelAbd.png')
 Deux UC sur quatre se trouvaient au-dessous de leur PRI fondé sur le centile en 2018 (figure \@ref(fig:chum-perc-status-static)). L’état des UC de la baie Howe-inlet Burrard et du détroit de Géorgie se situait au-dessus du PRI, et l’UC de l’inlet Knight supérieur n’avait pas fait l’objet d’observations en 2018. L’état des UC du nord-est de l’île de Vancouver et de Loughborough était à l’occasion au-dessus de la zone rouge avant les années 2000, mais il a été principalement en zone rouge au cours des $\sim$ 20 dernières années. L’état des UC du détroit de Géorgie et de la baie Howe et de l’inlet Burrard est au-dessus de la zone rouge chaque année depuis $\sim$  1970. L’état de l’UC de l’inlet Knight supérieur a été principalement classé en zone rouge, sauf pendant deux courtes périodes dans les années 1960 et 1970, et il n’y a eu aucune observation depuis 2004.
 
 
-
 ```{r chum-perc-status-static, fig.cap="Échappées de géniteurs (ligne noire pleine) avec la moyenne générationnelle (moyenne géométrique mobile sur quatre ans) des échappées représentée par des points. Les lignes pointillées indiquent des PRI fondés sur le centile. Les points rouges indiquent les années où la moyenne générationnelle de l’abondance était inférieure au PRI, et les points gris indiquent le moment où elle était supérieure. Les UC des cours d’eau de la côte sud et de l’inlet Bute sont omises parce qu’elles n’ont pas de points de référence fondés sur le centile appropriés en raison d’une faible productivité et d’une récolte modérée à élevée. À noter que des observations sont manquantes pour l’UC de l’inlet Knight supérieur en 1979, 1980, 1982, 1984, 1989, 1991, 1996 et 2004 à 2018.", warning=FALSE, echo=FALSE, fig.align="center", height=8}
 knitr::include_graphics('figure/fig_percentile_bm_rel_abd.png')
 ```
-
-<!-- LW: note this figure is created in SOLV-Code/TEMP-Chum-Synoptic repo right now -->
-
 
 Dans des analyses supplémentaires, nous avons évalué rétrospectivement les points de référence fondés sur le centile pour chaque année de la série chronologique en utilisant uniquement les données antérieures à cette année-là. À mesure que d’autres années de données étaient incluses, les points de référence fondés sur le centile ont augmenté au fil du temps pour l’UC du détroit de Géorgie (en particulier le 50^e^ centile) et ont connu des augmentations modestes pour l’UC de la baie Howe et de l’inlet Burrard (figure \@ref(fig:chum-perc-retro)). Les points de référence fondés sur le centile ont un peu diminué pour les UC de Loughborough et du nord-est de l’île de Vancouver. L’UC des cours d’eau côtiers du sud montrent des signes de bases de référence changeante, car les centiles diminuent au fil du temps à la suite d’une diminution générale de l’abondance (figure \@ref(fig:chum-perc-retro)). L’UC de l’inlet Knight supérieur montre également cette tendance, mais dans une moindre mesure.
 
@@ -247,37 +212,25 @@ knitr::include_graphics('figure/chum-logistic-perc.pdf')
 ```
 
 
-<!--
-Download diagnostic info for checking
-```{r logistic-fit-diag-perc, echo=FALSE}
-#download.file("https://github.com/Pacific-salmon-assess/SalmonLRP_RetroEval/raw/master/SCChumStudy/DataOut/logisticFit_2018Output.rda",'./data/chum-diagnostics.rda', mode="wb" )
-#load("data/chum-diagnostics.rda")
-#LRdiagOut
-```
--->
-\needspace{0.35\textheight}
-
 +-------------------------------------+--------------+
 | Test de diagnostic                  | Valeur       |
 +=====================================+==============+
-| Valeur p de Box-Tidwell             | 0.02         |
+| Valeur p de Box-Tidwell             | 0,02         |
 +-------------------------------------+--------------+
-| Valeur résiduelle maximale          | 1.69         |
+| Valeur résiduelle maximale          | 1,69         |
 +-------------------------------------+--------------+
-| AR-1                                | 0.14         |
+| AR-1                                | 0,14         |
 +-------------------------------------+--------------+
-| Valeur p de Wald                    | 0.19         |
+| Valeur p de Wald                    | 0,19         |
 +-------------------------------------+--------------+
-| Valeur p de la qualité d’ajustement | 0.13         |
+| Valeur p de la qualité d’ajustement | 0,13         |
 +-------------------------------------+--------------+
-| Pseudo-$R^2$                        | 0.03         |
+| Pseudo-$R^2$                        | 0,03         |
 +-------------------------------------+--------------+
-| Taux de réussite (p = 50 %)         | 0.7          |
+| Taux de réussite (p = 50 %)         | 0,7          |
 +-------------------------------------+--------------+
 
 Table: (\#tab:logistic-diag-chum) Statistiques diagnostiques modèles à partir du PRL de régression logistique à l’aide de points de référence fondés sur le centile. Une description des tests de diagnostic est fournie à la section 2. Les taux de réussite sont indiqués pour p = 0,5.
-
-\afterpage{\clearpage}
 
 Plusieurs facteurs ont mené à ces mauvais ajustements du modèle. L’UGS de saumon kéta de la CSI est composée de sept UC dont l’abondance des échappées varie. Depuis de nombreuses années, les échappées dans le détroit de Géorgie et dans la baie Howe et l’inlet Burrard sont de deux ordres de grandeur supérieure à celles des autres UC (figure \@ref(fig:chum-spawner-distribution)). De plus, la corrélation des échappées entre ces sept UC est faible (figure \@ref(fig:chum-spawner-corr)). Ces caractéristiques signifient que l’abondance agrégée peut être élevée en raison d’une ou de plusieurs UC ayant des échappées élevées, tandis qu’une UC plus petite si situe au-dessous de son point de référence. Les échappées agrégées élevées ne signifient pas que toutes les UC sont au-dessus de leur point de référence. Les faibles corrélations par paires dans les échappées des UC sont probablement dues au fait que l’UGS couvre une vaste zone, avec des nombres variables de populations touchées par des facteurs locaux et régionaux, comme décrit dansSection \@ref(chum-context).
 
@@ -291,7 +244,7 @@ knitr::include_graphics('figure/chum-spawners-corr.png')
 Dans une analyse rétrospective préliminaire, les ajustements du modèle logistique étaient plus appropriés en utilisant une partie tronquée des données qui ont pris fin dans les années 1980. Bien que la régression logistique puisse être utilisée pour estimer les PRL en fonction de l’abondance agrégée dans les UGS où l’abondance est plus égale entre les UC et où les échappées sont plus corrélées, ces relations peuvent ne pas demeurer statiques et pourraient se rompre au fil du temps.
 
 
-##   ÉVALUATION HISTORIQUE DE L’ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL
+## ÉVALUATION HISTORIQUE DE L’ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL
 
 L’UGS de saumon kéta de la CSI se situait constamment au-dessous du PRL pour de grandes parties de la série chronologique historique, peu importe la méthode d’estimation du PRL (figure \@ref(fig:chum-LRP-compare)). Bien que l’abondance agrégée à l’échelle de l’UGS ait augmenté au fil du temps, l’état à l’échelle de l’UGS est demeuré inférieur au PRL chaque année au cours des deux dernières décennies, à l’exception de 2004 pour toutes les méthodes d’estimation. Ces résultats étaient principalement attribuables à la tendance des UC du détroit de Géorgie et de l’inlet Burrard et de la baie Howe d’avoir des abondances élevées et croissantes, tandis que les UC plus petites, comme celles du nord-est de l’île de Vancouver, de Loughborough et des cours d’eau de la côte sud, sont demeurées faibles (figures \@ref(fig:chum-perc-status-static), \@ref(fig:chum-escapement-infill)).
 
@@ -310,6 +263,7 @@ Dans cette étude de cas, l’ajout de données supplémentaires a modifié le n
 
 Nous avons constaté que l’état à l’échelle de l’UGS peut être inférieur au PRL même si l’abondance agrégée augmente (figure \@ref(fig:chum-LRP-compare)). Dans le cas du saumon kéta de la CSI, cela est principalement attribuable aux années où il y avait de fortes abondances dans le détroit de Géorgie et dans la baie Howe et l’inlet Burrard, et de faibles abondances et un état en zone rouge dans d’autres UC plus petites, comme l’UC des cours d’eau de la côte sud. La corrélation modérée de l’abondance des géniteurs dans les UC du détroit de Géorgie et de la baie Howe et de l’inlet Burrard exacerbe cette tendance (figure  \@ref(fig:chum-spawner-corr)). Cela souligne l’importance d’inclure des paramètres de l’état à l’échelle de l’UC, qui influent sur l’état global de l’UGS.
 
+\pagebreak
 
 ## DISCUSSION
 
@@ -342,3 +296,5 @@ Nous n’avons pas été en mesure d’estimer les PRL de régression logistique
 
 
 Les UC dont des observations étaient manquantes certaines années et qui nécessitaient un remplissage à l’échelle de l’UC (inlet Knight supérieur et inlet Bute) n’ont pas été utilisés dans l’analyse du PRL fondé sur l’abondance agrégée parce que l’hypothèse selon laquelle les échappées sont corrélées entre les UC ne tient pas compte de la diversité entre les UC et du potentiel d’échappées non corrélées. Contrairement aux PRL fondés sur l’état des UC, nous n’avons pas tenu compte de l’état fondé sur l’algorithme multidimensionnel de l’Explorateur pour les PRL fondés sur l’abondance agrégée. Il convient également de noter que les UC de l’inlet Knight supérieur et de l’inlet Bute ne représentent pas un sous-ensemble aléatoire des sept UC de l’UGS de saumon kéta de la CSI en raison de leur emplacement, des caractéristiques du bassin hydrographique, du milieu marin à proximité du littoral, des menaces et des conditions environnementales (section \@ref(chum-context)).
+
+\pagebreak

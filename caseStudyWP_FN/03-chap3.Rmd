@@ -337,10 +337,10 @@ Lorsque l’état des UC était fondé sur la cible de répartition de l’ERCFI
 \hline  
  Probabilité & Ggén-Ricker  & Ggén-aprioriCap & ERCFI \\
 \hline  
-50\% (Aussi probable qu’improbable) & 21,190 (16,383-25,996) &23,245 (17,456-29,034) & 17,515 (9,695-25,336) \\
-66\% (Probable) & 23,289 (17,364-29,215)&  25,547 (18,158-32,937) & 21,396 (13,418-29,375) \\
-90\% (Très probable) & 28,145 (17,566-38,725) & 30,874 (18,129-43,620) & 30,372 (15,711-45,033)\\
-99\% (Pratiquement certain) &  35,737 (16,525-54,949) & 39,200 (16,922-61,479) & 44,403 (15,102-73,703) \\
+50\% (Aussi probable qu’improbable) & 21 190 (16 383-25 996) &23 245 (17 456-29 034) & 17 515 (9 695-25 336) \\
+66\% (Probable) & 23 289 (17 364-29 215)&  25 547 (18 158-32 937) & 21 396 (13 418-29 375) \\
+90\% (Très probable) & 28 145 (17 566-38 725) & 30 874 (18 129-43 620) & 30 372 (15 711-45 033)\\
+99\% (Pratiquement certain) &  35 737 (16 525-54 949) & 39 200 (16 922-61 479) & 44 403 (15 102-73 703) \\
 \hline
 \end{tabular}
 (\#tab:logisticLRPs2020)
@@ -364,13 +364,13 @@ Le test de Wald a montré que le coefficient du modèle logistique pour l’abon
 \hline  
  Test de diagnostic  & Ggén-Ricker  & Ggén-aprioriCap & ERCFI \\
 \hline  
- Valeur p de Box-Tidwell     & 0.44  & 0.94  & 0.79   \\
- Valeur résiduelle maximale  & 1.98  & 1.81  & 1.66   \\
- AR-1                    & -0.07 & 0.09  & 0.05   \\
- Valeur p de Wald & $0.07^*$ & $0.06^*$& $0.09^*$ \\
- Valeur p de la qualité d’ajustement & <0.01 & <0.01 & <0.01  \\
- Pseudo-$R^2$            & 0.60  & 0.61  & 0.40   \\
- Taux de réussite (p= 50\%, 66\%, 90\%, 99\%) & 0.87, 0.83, 0.74, 0.70  & 0.83, 0.83, 0.83, 0.74 &  0.76, 0.71, 0.76, 0.52 \\
+ Valeur p de Box-Tidwell     & 0,44  & 0,94  & 0,79   \\
+ Valeur résiduelle maximale  & 1,98  & 1,81  & 1,66   \\
+ AR-1                    & -0,07 & 0,09  & 0.,05   \\
+ Valeur p de Wald & $0,07^*$ & $0,06^*$& $0,09^*$ \\
+ Valeur p de la qualité d’ajustement & <0,01 & <0,01 & <0,01  \\
+ Pseudo-$R^2$            & 0,60  & 0,61  & 0,40   \\
+ Taux de réussite (p= 50\%, 66\%, 90\%, 99\%) & 0,87, 0,83, 0,74, 0,70  & 0,83, 0,83, 0,83, 0,74 &  0,76, 0,71, 0,76, 0,52 \\
 \hline
 \end{tabular}
 (\#tab:logisticDiagIFC2020)
@@ -543,10 +543,10 @@ knitr::include_graphics("figure/coho-projLRPCurve-byOM.png")
 \hline  
 Probabilité & Ricker & Ricker\_aprioriCap & Combinés \\
 \hline  
- 50\%        & 20,100        & 32,700      & 26,500 \\
- 66\%        & 24,900        & 40,100      & 33,500 \\
- 90\%        & 41,100        & 68,900      & 65,300 \\
- 99\%        & 75,100        & 87,300      & 83,500 \\
+ 50\%        & 20 100        & 32 700      & 26 500 \\
+ 66\%        & 24 900        & 40 100      & 33 500 \\
+ 90\%        & 41 100        & 68 900      & 65 300 \\
+ 99\%        & 75 100        & 87 300      & 83 500 \\
 \hline
 \end{tabular}
 (\#tab:projectedLRPs2020)
@@ -560,8 +560,8 @@ L’abondance moyenne générationnelle des géniteurs (fondée sur une moyenne 
 knitr::include_graphics("figure/coho-EscpSeries-wProjLRP.png")
 ```
 
-\linebreak
-&nbsp;
+\pagebreak
+
 
 ***Analyses de sensibilité***
 

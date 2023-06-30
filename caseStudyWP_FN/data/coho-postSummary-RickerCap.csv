@@ -1,4 +1,4 @@
-CU_Name,Variable,Mean,P05,P50,P95
+CU,Variable,Mean,P05,P50,P95
 Middle Fraser,adjProd,2.29,1.64,2.22,3.19
 ,alpha,2.58,1.87,2.57,3.35
 ,beta,0.00008,0.00004,0.00008,0.00013

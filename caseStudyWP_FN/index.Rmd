@@ -64,7 +64,7 @@ region: "Pacific Region"
 french_region: "Région du Pacifique"
 isbn: "978-0-660-38322-4"
 cat_no: "Fs70-6/2021-012E-PDF"
-citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P. Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/10. iv + 129 p."
+citation_other_language: "Holt, K.R., Holt, C.A., Warkentin, L., Wor, C., Davis, B., Arbeider, M., Bokvist, J., Crowley, S., Grant, S., Luedke, W., McHugh, D., Picco, C., and Van Will, P. 2023. Case Study Applications of LRP Estimation Methods to Pacific Salmon Stock Management Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2023/10. iv + 129 p."
 
 abstract: |
   Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

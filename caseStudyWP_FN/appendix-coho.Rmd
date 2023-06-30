@@ -13,7 +13,9 @@ After that, all subsequent sections will be turned into appendices. -->
 
 ## Évaluation de la représentativité des UC selon les critères des lignes directrices
 
-Nous avons tenu compte des quatre critères définis dans @holtGuidelinesDefiningLimitInpress pour évaluer si l’état de n’importe quelle UC dans cette UGS pouvait être déduit des autres UC; ces critères comprenaient la similarité dans (i) les menaces, (ii) les conditions et les facteurs environnementaux, (iii) le cycle biologique; (iv) la capacité de la population. Bien que des états soient disponibles pour toutes les UC de cette UGS, nous examinons l’application de ces critères pour évaluer comment les décisions sur la question de savoir si l’état d’une UC peut être déduit de celui d’autres UC en fonction de ces critères diffèrent des résultats des analyses de sensibilité présentées dans le document principal. Dans le cadre de ces analyses de sensibilité, nous avons examiné comment le retrait d’une ou de deux UC a eu une incidence sur l’estimation du PRL et les évaluations de l’état par rapport au PRL.
+Nous avons tenu compte des quatre critères définis dans @holtGuidelinesDefiningLimitInpress pour évaluer si l’état de n’importe quelle UC dans cette UGS pouvait être déduit des autres UC; ces critères comprenaient la similarité dans (i) les menaces, (ii) les conditions et les facteurs
+\linebreak
+environnementaux, (iii) le cycle biologique; (iv) la capacité de la population. Bien que des états soient disponibles pour toutes les UC de cette UGS, nous examinons l’application de ces critères pour évaluer comment les décisions sur la question de savoir si l’état d’une UC peut être déduit de celui d’autres UC en fonction de ces critères diffèrent des résultats des analyses de sensibilité présentées dans le document principal. Dans le cadre de ces analyses de sensibilité, nous avons examiné comment le retrait d’une ou de deux UC a eu une incidence sur l’estimation du PRL et les évaluations de l’état par rapport au PRL.
 
 Dans une évaluation des menaces pour le saumon coho du Fraser intérieur réalisée dans le cadre de l’évaluation du potentiel de rétablissement de 2018, @arbeiderInteriorFraserCoho2020 ont classé un ensemble complet de menaces sur une échelle allant d’élevée à moyenne, faible et inconnue. Les principales menaces qui pèsent sur cette UGS sont les activités liées à la foresterie, aux feux de forêt, à l’agriculture et au développement urbain et rural. Les menaces particulières découlant de ces activités comprenaient la modification des surfaces de captage, les effluents de l’agriculture et de la foresterie, et le développement linéaire, qui est défini comme le redressement et la canalisation des cours d’eau [@arbeiderInteriorFraserCoho2020]. Bien que les répercussions d’une activité donnée puissent être plus élevées pour certaines UC que pour d’autres, les menaces interreliées découlant d’activités multiples, ainsi que les effets cumulatifs, signifient qu’il est difficile d’isoler une UC qui subit des menaces différemment des autres. De plus, un développement agricole et linéaire important dans le cours inférieur du Fraser, que tous les saumons cohos du Fraser intérieur empruntent lors de la dévalaison en tant que smolts et où une proportion de juvéniles se développent, signifie qu’il est possible que toutes les UC soient touchées par les menaces découlant de l’agriculture et du développement linéaire.
 
@@ -61,3 +63,68 @@ dat[dat$Variable == "gamma",3:6]<-round(dat[dat$Variable == "gamma",3:6],digits=
 
  
 ```
+
+
+\newpage
+
+```{r coho-postSummary-RickerCap, warning=FALSE, echo=FALSE}
+
+dat <- as.data.frame(read.csv("data/coho-postSummary-RickerCap.csv"))
+
+dat$CU[dat$CU == "Middle Fraser"]<- "Moyen Fraser"
+dat$CU[dat$CU == "Fraser Canyon"]<- "Canyon du Fraser"
+dat$CU[dat$CU == "North Thompson"]<- "Thompson Nord"
+dat$CU[dat$CU == "South Thompson"]<- "Thompson Sud"
+dat$CU[dat$CU == "Lower Thompson"]<- "Thompson inférieure"
+
+options(scipen=999, digits=2)
+
+csasdown::csas_table(dat, digits=2, booktabs = T, caption = "Résumé des moyennes de distribution a posteriori et des quantiles (5 %, 50 % et 95 %) pour les paramètres du modèle de stock-recrutement et le PRI fondé sur Ggén selon l’ajustement du modèle de Ricker\\_aprioriCap. Le paramètre « adjProd » est la productivité effective, $\\alpha$', de l’équation 15 dans le document principal.")
+ 
+```
+
+```{r coho-Ricker-alphaPosts, fig.cap="Distributions a posteriori des paramètres de Ricker $\\alpha$, par UC, obtenues en ajustant le modèle stock-recrutement de base de Ricker.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
+knitr::include_graphics("figure/coho-alphaPosts.png")
+```
+<!--Posterior distributions for Ricker $\\alpha$ parameters, by CU, obtained from fitting the base Ricker stock-recruitment model-->
+
+\newpage
+
+```{r coho-Ricker-adjProdPosts, fig.cap="Distributions a posteriori des paramètres de productivité effective ($\\alpha$'), par UC, obtenues en ajustant le modèle stock-recrutement de base de Ricker.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
+knitr::include_graphics("figure/coho-adjProdPosts.png")
+```
+
+\newpage
+
+```{r coho-priorCap-alphaPosts, fig.cap="Distributions a posteriori des paramètres de Ricker $\\alpha$, par UC, obtenues en ajustant le modèle stock-recrutement de Ricker\\_aprioriCap.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
+knitr::include_graphics("figure/coho-alphaPosts-priorCap.png")
+```
+
+\newpage
+
+```{r coho-priorCap-adjProdPosts, fig.cap="Distributions a posteriori des paramètres de productivité effective ($\\alpha$'), par UC, obtenues en ajustant le modèle stock-recrutement de Ricker\\_aprioriCap.", warning=FALSE, echo=FALSE, out.width = '90%',  fig.align="center"}
+knitr::include_graphics("figure/coho-adjProdPosts-priorCap.png")
+```
+
+\
+&nbsp;
+&nbsp;
+\newpage
+
+## L’abondance des géniteurs projetée utilisées pour des méthodes du PRL de projection
+
+```{r coho-CUProjections-Ricker, fig.cap="L’abondance des géniteurs projetée, pour chacun des cinq cohos du Fraser intérieur UCs, utilisé pour développer la PRL de projection sous le modèle de base Ricker. La ligne continue montre la médiane abondance des géniteurs dans une année de projection tandis que l'ombrage gris montre les 10e et 90e centiles d'abondance des géniteurs.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+knitr::include_graphics("figure/coho-CUSpawnerProj-Ricker.png")
+```
+
+
+
+
+
+```{r coho-CUProjections-Ricker-priorCap, fig.cap="L’abondance des géniteurs projetée, pour chacun des cinq cohos du Fraser intérieur UCs, utilisé pour développer la PRL de projection sous le modèle de Ricker\\_aprioriCap. La ligne continue montre la médiane abondance des géniteurs dans une année de projection tandis que l'ombrage gris montre les 10e et 90e centiles d'abondance des géniteurs.", warning=FALSE, echo=FALSE, out.width = '80%',  fig.align="center"}
+knitr::include_graphics("figure/coho-CUSpawnerProj-Ricker_priorCap.png")
+```
+
+
+
+

@@ -34,11 +34,11 @@ Dans la présente section, nous donnons un aperçu des méthodes utilisées pour
 \multicolumn{5}{l}{ \bf{Évaluation à l’échelle de l’UGS } }\\
 \toprule
 
-\multicolumn{2}{l}{PRL fondés sur l’état des UC (requis selon la \textit{Loi sur les pêches})} &  \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui\\
+\multicolumn{2}{l}{PRL fondés sur l’état des UC (pour \textit{Loi sur les pêches})} &  \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui &   \cellcolor{gray!10}Oui\\
 \midrule
 \multirow{2}{*}{\parbox{3.2cm}{PRL fondés sur l’abondance agrégée (supplémentaires)}} & Régression logistique & \cellcolor{gray!10}Oui & \textit{Tentative, données insuffisantes} &  \textit{Tentative, données non fiables} \\ 
 \cline{2-5}
- & Projection & \cellcolor{gray!10}Yes  & \cellcolor{gray!10}Oui &  \textit{Aucune tentative, données jugées non fiables} \\
+ & Projection & \cellcolor{gray!10}Oui  & \cellcolor{gray!10}Oui &  \textit{Aucune tentative, données jugées non fiables} \\
 \bottomrule
 \end{tabular}
 (\#tab:lrpapproaches)
@@ -89,7 +89,7 @@ Les entrées de données et les résultats des processus d’évaluation antéri
 
 Pour les paramètres de l’abondance absolue ou relative, l’Explorateur utilise l’abondance moyenne générationnelle des géniteurs la plus récente (calculée comme moyenne géométrique mobile) pour comparer les points de référence, y compris les seuils d’abondance absolus (p. ex., 1 500 géniteurs), les points de référence inférieurs fondés sur l’abondance (p. ex., G~gén~ ou centile) et les points de référence supérieurs fondés sur l’abondance (p. ex., 0,8G~RMD~ ou centiles). L’abondance moyenne générationnelle des géniteurs est également utilisée pour calculer les tendances de l’abondance des géniteurs au fil du temps (Pestal et al. en préparation).
 
-##PRL FONDÉS SUR L’ABONDANCE AGRÉGÉE{#aggAbundMethods}
+## PRL FONDÉS SUR L’ABONDANCE AGRÉGÉE{#aggAbundMethods}
 
 Les PRL fondés sur l’abondance agrégée se basent sur l’hypothèse qu’il existe une relation prévisible entre l’abondance à l’échelle de l’UGS et la probabilité que l’état de toutes les UC se situe au-dessus de la zone rouge. Pour estimer les PRL fondés sur l’abondance agrégée, on utilise l’état relatif à un seul PRI comme indicateur de l’état au-dessus de la zone rouge. On estime ensuite les PRL fondés sur l’abondance agrégée à l’aide de la relation prévue pour trouver l’abondance à l’échelle de l’UGS à laquelle il y a une probabilité prescrite que 100 % des UC (la même proportion utilisée pour les PRL fondés sur l’état des UC) se situent au-dessus du PRI. 
 
@@ -203,8 +203,6 @@ L’ampleur de l’autocorrélation du décalage-1 a ensuite été estimée entr
 
 Nous recommandons de repérer les valeurs aberrantes influentes au moyen de statistiques à effet de levier, dans la mesure du possible. Pour nos études de cas, nous avons détecté les valeurs aberrantes indépendantes de leur influence parce que le logiciel utilisé pour estimer les paramètres du modèle (TMB) ne fournit pas la matrice chapeau requise pour évaluer l’influence de points individuels. Nous nous sommes plutôt concentrés sur la détermination des valeurs aberrantes en nous fondant sur la règle empirique générale selon laquelle les sommes des carrés résiduelles supérieures à 2 sont considérées comme des valeurs aberrantes parce que 95\% de la répartition devrait se situer à l’intérieur de 2 écarts-types de la moyenne. Il est recommandé d’effectuer d’autres travaux pour déterminer les valeurs aberrantes influentes lorsque d’autres outils d’ajustement du modèle statistique sont employés. 
 
-\
-&nbsp;
 
 **Signification statistique des coefficients du modèle**
 
