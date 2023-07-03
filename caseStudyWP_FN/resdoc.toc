@@ -6,10 +6,11 @@
 \contentsline {subsection}{\numberline {2.1}APERÇU}{2}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {2.2}PRL FONDÉS SUR L'ÉTAT DES UC}{4}{subsection.0.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}APPROCHE MULTIDIMENSIONNELLE DES ÉVALUATIONS DE L'ÉTAT DES UC SELON L'EXPLORATEUR DE L'ÉTAT DES SAUMONS DU PACIFIQUE}{5}{subsubsection.0.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}PRL de régression logistique}{8}{subsubsection.0.2.2.2}%
-\contentsline {paragraph}{\numberline {2.2.2.1}Diagnostics du modèle de régression logistique}{10}{paragraph.0.2.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.3}PRL DE PROJECTION}{12}{subsubsection.0.2.2.3}%
-\contentsline {section}{\numberline {3}CASE STUDY 1: INTERIOR FRASER COHO SALMON}{15}{section.0.3}%
+\contentsline {subsection}{\numberline {2.3}PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE}{5}{subsection.0.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}PRL de régression logistique}{8}{subsubsection.0.2.3.1}%
+\contentsline {paragraph}{\numberline {2.3.1.1}Diagnostics du modèle de régression logistique}{10}{paragraph.0.2.3.1.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}PRL DE PROJECTION}{12}{subsubsection.0.2.3.2}%
+\contentsline {section}{\numberline {3}ÉTUDE DE CAS 1~: SAUMON COHO DU FRASER INTÉRIEUR}{15}{section.0.3}%
 \contentsline {subsection}{\numberline {3.1}CONTEXTE}{15}{subsection.0.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Évaluations précédentes}{17}{subsubsection.0.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Historique des points de référence fondés sur l'abondance agrégée}{18}{subsubsection.0.3.1.2}%
@@ -33,23 +34,24 @@
 \contentsline {subsubsection}{\numberline {3.8.4}PRL de projection}{53}{subsubsection.0.3.8.4}%
 \contentsline {subsubsection}{\numberline {3.8.5}Points de référence fondés sur la répartition}{53}{subsubsection.0.3.8.5}%
 \contentsline {section}{\numberline {4}ÉTUDE DE CAS 2~: SAUMON CHINOOK DE LA CÔTE OUEST DE L'ÎLE DE VANCOUVER}{55}{section.0.4}%
-\contentsline {subsubsection}{\numberline {4.0.1}Évaluations précédentes}{57}{subsubsection.0.4.0.1}%
-\contentsline {subsection}{\numberline {4.1}DONNÉES}{58}{subsection.0.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Échelle spatiale}{58}{subsubsection.0.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Zones du bassin hydrographique}{58}{subsubsection.0.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Abondance des géniteurs}{59}{subsubsection.0.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.4}Influence naturelle proportionnelle}{59}{subsubsection.0.4.1.4}%
-\contentsline {subsection}{\numberline {4.2}ESTIMATION DE L'ÉTAT À L'ÉCHELLE DES INLETS ET DES UC}{61}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{64}{subsection.0.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Méthodes}{64}{subsubsection.0.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Résultats}{64}{subsubsection.0.4.3.2}%
-\contentsline {subsection}{\numberline {4.4}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{64}{subsection.0.4.4}%
-\contentsline {subsection}{\numberline {4.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR PROJECTION}{64}{subsection.0.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Méthodes}{64}{subsubsection.0.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Résultats}{72}{subsubsection.0.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.3}Analyses de sensibilité}{72}{subsubsection.0.4.5.3}%
-\contentsline {subsection}{\numberline {4.6}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{75}{subsection.0.4.6}%
-\contentsline {subsection}{\numberline {4.7}DISCUSSION}{76}{subsection.0.4.7}%
+\contentsline {subsection}{\numberline {4.1}CONTEXTE}{55}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Évaluations précédentes}{57}{subsubsection.0.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}DONNÉES}{58}{subsection.0.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Échelle spatiale}{58}{subsubsection.0.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Zones du bassin hydrographique}{58}{subsubsection.0.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Abondance des géniteurs}{59}{subsubsection.0.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Influence naturelle proportionnelle}{59}{subsubsection.0.4.2.4}%
+\contentsline {subsection}{\numberline {4.3}ESTIMATION DE L'ÉTAT À L'ÉCHELLE DES INLETS ET DES UC}{61}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4.4}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{64}{subsection.0.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Méthodes}{64}{subsubsection.0.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Résultats}{64}{subsubsection.0.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{64}{subsection.0.4.5}%
+\contentsline {subsection}{\numberline {4.6}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR PROJECTION}{64}{subsection.0.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Méthodes}{64}{subsubsection.0.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Résultats}{72}{subsubsection.0.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Analyses de sensibilité}{72}{subsubsection.0.4.6.3}%
+\contentsline {subsection}{\numberline {4.7}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{75}{subsection.0.4.7}%
+\contentsline {subsection}{\numberline {4.8}DISCUSSION}{76}{subsection.0.4.8}%
 \contentsline {section}{\numberline {5}ÉTUDE DE CAS 3~: SAUMON KÉTA DE LA CÔTE SUD INTÉRIEURE, À L'EXCLUSION DES UC DU FLEUVE FRASER}{79}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}CONTEXTE}{79}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}DONNÉES}{82}{subsection.0.5.2}%
@@ -57,13 +59,13 @@
 \contentsline {subsection}{\numberline {5.4}ESTIMATION DES PRL FONDÉS SUR L'ÉTAT DES UC}{85}{subsection.0.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Méthodes}{85}{subsubsection.0.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Résultats}{87}{subsubsection.0.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{89}{subsection.0.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Méthodes}{89}{subsubsection.0.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Résultats}{89}{subsubsection.0.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{95}{subsection.0.5.6}%
-\contentsline {subsection}{\numberline {5.7}DISCUSSION}{95}{subsection.0.5.7}%
-\contentsline {section}{\numberline {6}LEÇONS APPRISES DES APPLICATIONS DANS LE CADRE DES ÉTUDES DE CAS}{100}{section.0.6}%
-\contentsline {section}{\numberline {7}REMERCIEMENTS}{104}{section.0.7}%
+\contentsline {subsection}{\numberline {5.5}ESTIMATION DES PRL FONDÉS SUR L'ABONDANCE AGRÉGÉE PAR RÉGRESSION LOGISTIQUE}{88}{subsection.0.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Méthodes}{88}{subsubsection.0.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Résultats}{88}{subsubsection.0.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}ÉVALUATION HISTORIQUE DE L'ÉTAT SELON LES MÉTHODES RELATIVES AUX PRL}{90}{subsection.0.5.6}%
+\contentsline {subsection}{\numberline {5.7}DISCUSSION}{92}{subsection.0.5.7}%
+\contentsline {section}{\numberline {6}LEÇONS APPRISES DES APPLICATIONS DANS LE CADRE DES ÉTUDES DE CAS}{96}{section.0.6}%
+\contentsline {section}{\numberline {7}REMERCIEMENTS}{100}{section.0.7}%
 \contentsline {section}{\numberline {8}RÉFÉRENCES CITÉES}{105}{section.0.8}%
 \setcounter {tocdepth}{0}
 \contentsline {chapter}{ANNEXE~A. LIENS MENANT AUX DONNÉES ET AUX ANALYSES}{110}{section*.3}%
@@ -85,14 +87,15 @@
 \contentsline {chapter}{ANNEXE~C. RENSEIGNEMENTS À L'APPUI DE L'ÉTUDE DE CAS SUR LE SAUMON COHO DU FRASER INTÉRIEUR}{123}{section*.7}%
 \contentsline {section}{\numberline {C.1.}Évaluation de la représentativité des UC selon les critères des lignes directrices}{123}{section.C.1}%
 \contentsline {section}{\numberline {C.2.}Estimations des paramètres du modèle bayésien de stock-recrutement}{125}{section.C.2}%
-\contentsline {chapter}{ANNEXE~D. SENSIBILITÉ DES PRL DE PROJECTION AUX TAUX D'EXPLOITATION}{128}{section*.9}%
-\contentsline {chapter}{ANNEXE~E. RENSEIGNEMENTS À L'APPUI DE L'ÉTUDE DE CAS SUR LE SAUMON KÉTA DE LA CÔTE SUD INTÉRIEURE}{135}{section*.11}%
-\contentsline {section}{\numberline {E.1.}Sources et traitement des données}{135}{section.E.1}%
-\contentsline {subsection}{\numberline {E.1.1.}Échappées de géniteurs}{135}{subsection.E.1.1}%
-\contentsline {subsection}{\numberline {E.1.2.}\#\#\# Prises des pêches, génétique et âge}{135}{subsection.E.1.2}%
-\contentsline {subsection}{\numberline {E.1.3.}Sélection et remplissage des données}{135}{subsection.E.1.3}%
-\contentsline {subsection}{\numberline {E.1.4.}Remplissage des données sur les échappées de géniteurs}{136}{subsection.E.1.4}%
-\contentsline {subsubsection}{\numberline {E.1.4.1.}Remplissage par cours d'eau}{136}{subsubsection.E.1.4.1}%
-\contentsline {subsubsection}{\numberline {E.1.4.2.}Remplissage par UC}{137}{subsubsection.E.1.4.2}%
-\contentsline {subsection}{\numberline {E.1.5.}Reconstitution des remontes pour estimer le recrutement}{137}{subsection.E.1.5}%
-\contentsline {section}{\numberline {E.2.}Analyse rétrospective des points de référence à l'échelle de l'UC}{138}{section.E.2}%
+\contentsline {section}{\numberline {C.3.}L'abondance des géniteurs projetée utilisées pour des méthodes du PRL de projection}{133}{section.C.3}%
+\contentsline {chapter}{ANNEXE~D. SENSIBILITÉ DES PRL DE PROJECTION AUX TAUX D'EXPLOITATION}{135}{section*.9}%
+\contentsline {chapter}{ANNEXE~E. RENSEIGNEMENTS À L'APPUI DE L'ÉTUDE DE CAS SUR LE SAUMON KÉTA DE LA CÔTE SUD INTÉRIEURE}{142}{section*.11}%
+\contentsline {section}{\numberline {E.1.}Sources et traitement des données}{142}{section.E.1}%
+\contentsline {subsection}{\numberline {E.1.1.}Échappées de géniteurs}{142}{subsection.E.1.1}%
+\contentsline {subsection}{\numberline {E.1.2.}Prises des pêches, génétique et âge}{142}{subsection.E.1.2}%
+\contentsline {subsection}{\numberline {E.1.3.}Sélection et remplissage des données}{142}{subsection.E.1.3}%
+\contentsline {subsection}{\numberline {E.1.4.}Remplissage des données sur les échappées de géniteurs}{143}{subsection.E.1.4}%
+\contentsline {subsubsection}{\numberline {E.1.4.1.}Remplissage par cours d'eau}{143}{subsubsection.E.1.4.1}%
+\contentsline {subsubsection}{\numberline {E.1.4.2.}Remplissage par UC}{144}{subsubsection.E.1.4.2}%
+\contentsline {subsection}{\numberline {E.1.5.}Reconstitution des remontes pour estimer le recrutement}{144}{subsection.E.1.5}%
+\contentsline {section}{\numberline {E.2.}Analyse rétrospective des points de référence à l'échelle de l'UC}{145}{section.E.2}%

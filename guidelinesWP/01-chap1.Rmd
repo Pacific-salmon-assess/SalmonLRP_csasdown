@@ -142,7 +142,7 @@ The goals of this Research Document as outlined in the Terms of Reference, were 
 
 - Develop candidate methods for identifying SMU-level LRPs for Pacific salmon that are consistent with the WSP objective of conserving biodiversity by maintaining CUs above lower biological benchmarks.  These candidate methods include LRPs based on the status of component CUs and aggregate abundance over multiple CUs, where CU assessments can be developed using a multidimensional or single-metric approaches, as appropriate. (Section \@ref(est-methods))
 
-- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (Section \@ref(est-methods) and Appendix \@ref(app:links)). More details are provided in @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->.
+- Document candidate methods for developing LRPs at the SMU-level, including data requirements and assumptions. (Section \@ref(est-methods) and Appendix \@ref(app:links)). More details are provided in @holtCaseStudyApplications2023<!--Holt et al. (In review)-->.
 
 - Document key uncertainties that affect LRP estimates for each method considered, including uncertainties arising from missing or limited CU-level data. (Section \@ref(recommendations))
 
@@ -150,7 +150,7 @@ The goals of this Research Document as outlined in the Terms of Reference, were 
 
 ### What's in this Research Document?
 
-This Research Document addresses these four goals, while the companion Research Document [@holtCaseStudyApplicationsInpress]<!--(Holt et al. In review)--> provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies. Summaries of methods are included here for the completeness of these guidelines.
+This Research Document addresses these four goals, while the companion Research Document [@holtCaseStudyApplications2023]<!--(Holt et al. In review)--> provides a more detailed and technical descriptions of candidate methods for developing LRPs and more fully demonstrates their implementation on three case studies. Summaries of methods are included here for the completeness of these guidelines.
 
 
 In particular, this paper has six sections: 
@@ -161,7 +161,7 @@ In particular, this paper has six sections:
 
 3. Principles for the development of LRPs for Pacific salmon
 
-4. A description of candidate LRP methods, with further details in @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->. Appendix \@ref(app:case-studies) summarizes their application to three case studies.
+4. A description of candidate LRP methods, with further details in @holtCaseStudyApplications2023<!--Holt et al. (In review)-->. Appendix \@ref(app:case-studies) summarizes their application to three case studies.
 
 5. Guidelines on the implementation of LRPs including recommendations on when, and when not to use each candidate LRP method
 
