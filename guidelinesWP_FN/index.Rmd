@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units"
+title: "Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique"
 author: |
   Carrie. A. Holt^1^
   Kendra Holt^2^
@@ -11,27 +11,43 @@ author: |
   Julie Marentette^4^
 author_list: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S., Huang, A.-M., and Marentette, J."
 address: |
-  ^1^Pacific Biological Station\
-     Fisheries and Oceans Canada, 3190 Hammond Bay Road\
-     Nanaimo, BC, V9T 6N7, Canada\
-     \
-  ^2^Institute of Ocean Sciences\
-     Fisheries and Oceans Canada, Sidney, BC, Canada\
-     \
-  ^3^Annacis Island Regional Office\
-     Fisheries and Oceans Canada, Delta, BC, Canada\
-     \
-  ^4^National Headquarters\
-     Fisheries and Oceans Canada, Ottawa, ON, Canada\
+  ^1^Station biologique du Pacifique\
+     Pêches et Océans Canada, 3190, chemin Hammond Bay\
+     Nanaimo (Colombie-Britannique)  V9T 6N7\
+  \smallskip
+  ^2^Institut des sciences de la mer\
+     Pêches et Océans Canada, Sidney (Colombie-Britannique), Canada\
+  \smallskip
+  ^3^Bureau régional de l’île d’Annacis\
+     Pêches et Océans Canada, Delta (Colombie-Britannique), Canada\
+  \smallskip
+  ^4^Administration centrale nationale\
+     Pêches et Océans Canada, Ottawa (Ont.), Canada\
 
-month: Month # fill in
-year: 2022
+french_address: |
+  ^1^Station biologique du Pacifique\
+     Pêches et Océans Canada, 3190, chemin Hammond Bay\
+     Nanaimo (Colombie-Britannique)  V9T 6N7\
+  \smallskip
+  ^2^Institut des sciences de la mer\
+     Pêches et Océans Canada, Sidney (Colombie-Britannique), Canada\
+  \smallskip
+  ^3^Bureau régional de l’île d’Annacis\
+     Pêches et Océans Canada, Delta (Colombie-Britannique), Canada\
+  \smallskip
+  ^4^Administration centrale nationale\
+     Pêches et Océans Canada, Ottawa (Ont.), Canada\
+
+month: "July" # fill in
+french_month: "Juillet"
+year: 2023
 report_number: nnn
-region: Pacific Region
+region: "Région du Pacifique"
+french_region: "Région du Pacifique"
 citation_other_language: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S. et Huang, A.-M.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Secr. can. de consult. sci. du MPO. Doc. de rech 2022/nnn. iv + 13 p."
-abstract: |
 
-  Limit reference points, LRPs, define the stock status below which serious harm is expected to occur to a stock. LRPs are required for major fish stocks, or Stock Management Units (SMUs) that are prescribed by regulation under amendments to the Canadian *Fisheries Act* (2019). Pacific salmon are unique among marine fish stocks due to their high levels of intraspecific diversity which gives rise to a large range in data availability, considerations, and approaches for assessments and LRP development. In this paper, we identify six principles for developing LRPs for Pacific salmon that are adapted from principles used more broadly among marine species. One principle unique to Pacific salmon is that LRPs should be aligned with Canada’s Wild Salmon Policy (WSP) objective of preserving biodiversity of salmon at the scale of Conservation Units (CUs), which are nested within SMUs. We developed methods for calculating LRPs, and established guidelines on how to implement them including under which conditions they should or should not be applied. We propose that LRPs be identified from the proportion of CUs that have status above the Red zone for WSP status assessments, as a default approach. This provides some consistency with status assessments already produced under the WSP, and can inform management decisions for harvest, habitat and hatcheries that often occur at finer, CU scales. To supplement the default approach, we provide LRPs based on metrics of aggregate abundances for the entire SMU, which may be required for fisheries management purposes in some cases. These latter LRPs are derived to have a desired probability of all component CUs being above Red status given an assumed relationship between aggregate abundance and the probability that all CUs will be above Red status. We identify uncertainties associated with each approach, and describe how they can be applied across a range of data types, qualities and quantities. Analyses to support our development of guidelines has been informed by three cases studies: Interior Fraser Coho Salmon *Oncorhynchus kisutch*, West Coast Vancouver Island Chinook Salmon, *O. tshawytscha*, and Inside South Coast Chum Salmon, *O. keta*, excluding the Fraser River.
+french_abstract: |
+  Les points de référence limites (PRL) définissent l’état du stock en deçà duquel on s’attend à ce que le stock subisse des dommages graves. Les PRL sont requis pour les principaux stocks de poissons, ou unités de gestion des stocks (UGS), qui sont prescrits par règlement en vertu des modifications apportées à la *Loi sur les pêches* (2019) du Canada. Les saumons du Pacifique sont uniques parmi les stocks de poissons marins en raison de leur haut niveau de diversité intraspécifique, ce qui donne lieu à un large éventail de données disponibles, de considérations et d’approches pour les évaluations et l’élaboration du PRL. Dans ce document, nous présentons six principes pour l’élaboration de PRL pour le saumon du Pacifique, qui sont adaptés de principes utilisés plus largement parmi les espèces marines. Un principe propre au saumon du Pacifique est que les PRL doivent être harmonisés avec l’objectif de la Politique concernant le saumon sauvage (PSS) du Canada de préserver la biodiversité du saumon à l’échelle des unités de conservation (UC), qui sont souvent imbriquées dans les UGS. Nous avons élaboré des méthodes de calcul des PRL et établi des lignes directrices sur la manière de les mettre en œuvre, y compris les conditions dans lesquelles elles doivent ou ne doivent pas être appliquées. Nous proposons que les PRL soient déterminés à partir de la proportion d’UC dont l’état est supérieur à la zone rouge pour les évaluations de l’état prévues par la PSS, comme approche par défaut. Cela permet d’assurer une certaine cohérence avec les évaluations de l’état déjà produites dans le cadre de la PSS, et peut éclairer les décisions de gestion concernant la récolte, l’habitat et les écloseries qui se prennent souvent à des échelles plus fines, celles des UC. Pour compléter l’approche par défaut, nous fournissons des PRL fondés sur des mesures d’abondances agrégées (globales) pour l’ensemble de l’UGS, ce qui peut être nécessaire à des fins de gestion des pêches dans certains cas. Ces derniers PRL sont dérivés pour avoir une probabilité souhaitée que toutes les UC composantes soient au-dessus de l’état rouge étant donné une relation supposée entre l’abondance globale et la probabilité que toutes les UC soient au-dessus de l’état rouge. Nous cernons les incertitudes associées à chaque approche, et décrivons comment elles peuvent être appliquées à une gamme de types, de qualités et de quantités de données. Les analyses visant à soutenir l’élaboration de lignes directrices se sont appuyées sur trois études de cas : le saumon coho du Fraser intérieur *Oncorhynchus kisutch*, le saumon chinook de la côte ouest de l’île de Vancouver, *O. tshawytscha*, et le saumon kéta de la côte sud intérieure, *O. keta*, à l’exclusion du fleuve Fraser.
   
 header: "" # or "" to omit
 output:
@@ -44,6 +60,9 @@ output:
 # ------------ resdoc_word or resdoc_pdf
 # End of options to set
 knit: bookdown::render_book
+# knit: (function(input, ...) {
+#        csasdown::render('_bookdown.yml')
+#       })
 link-citations: true
 bibliography: bib/refs.bib
 # Any extra LaTeX code for the header:
