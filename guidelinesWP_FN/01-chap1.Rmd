@@ -144,7 +144,7 @@ Les objectifs du présent document de recherche décrits dans le cadre de réfé
 
 - Mettre au point des méthodes possibles de détermination des PRL à l’échelle de l’UGS pour les saumons du Pacifique qui sont compatibles avec l’objectif de la PSS de conserver la biodiversité en maintenant les UC au-dessus des points de référence biologiques inférieurs. Ces méthodes possibles comprennent des PRL fondés sur l’état des UC visées et sur l’abondance agrégée dans plusieurs UC, et où les évaluations des UC pourront être élaborées au moyen d’approches multidimensionnelles ou à mesure unique, selon le cas. (Section \@ref(est-methods))
 
-- Documenter les méthodes potentielles de détermination de PRL à l’échelle des UGS, y compris les exigences et les hypothèses en matière de données. (Section \@ref(est-methods) et annexe \@ref(app:links)). Plus de détails sont fournis dans @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->.
+- Documenter les méthodes potentielles de détermination de PRL à l’échelle des UGS, y compris les exigences et les hypothèses en matière de données. (Section \@ref(est-methods) et annexe \@ref(app:links)). Plus de détails sont fournis dans @holtCaseStudyApplications2023<!--Holt et al. (In review)-->.
 
 - Documenter les principales incertitudes qui influent sur les estimations du PRL pour chaque méthode envisagée, notamment les incertitudes découlant de données manquantes à l’échelle des UC. (Section \@ref(recommendations))
 
@@ -152,7 +152,7 @@ Les objectifs du présent document de recherche décrits dans le cadre de réfé
 
 ### Que contient le présent document de recherche? 
 
-Le présent document de recherche aborde ces quatre objectifs, tandis que le document de recherche complémentaire [@holtCaseStudyApplicationsInpress]<!--(Holt et al. In review)--> fournit une description plus détaillée et technique des méthodes possibles pour l’élaboration des PRL et démontre de manière plus complète leur mise en œuvre dans trois études de cas. Les résumés des méthodes sont inclus ici pour l’exhaustivité de ces directives.
+Le présent document de recherche aborde ces quatre objectifs, tandis que le document de recherche complémentaire [@holtCaseStudyApplications2023]<!--(Holt et al. In review)--> fournit une description plus détaillée et technique des méthodes possibles pour l’élaboration des PRL et démontre de manière plus complète leur mise en œuvre dans trois études de cas. Les résumés des méthodes sont inclus ici pour l’exhaustivité de ces directives.
 
 
 En particulier, ce document comporte six sections: 
@@ -164,7 +164,7 @@ En particulier, ce document comporte six sections:
 
 3. Principes d’élaboration des PRL pour le saumon du Pacifique
 
-4. Une description des méthodes potentielles de détermination des PRL, avec plus de détails dans @holtCaseStudyApplicationsInpress<!--Holt et al. (In review)-->. L’annexe \@ref(app:case-studies) résume leur application à trois études de cas.
+4. Une description des méthodes potentielles de détermination des PRL, avec plus de détails dans @holtCaseStudyApplications2023<!--Holt et al. (In review)-->. L’annexe \@ref(app:case-studies) résume leur application à trois études de cas.
 
 5. Lignes directrices sur la mise en œuvre des PRL, y compris des recommandations concernant le choix d’utiliser ou non chaque méthode potentielle de détermination des PRL.
 
