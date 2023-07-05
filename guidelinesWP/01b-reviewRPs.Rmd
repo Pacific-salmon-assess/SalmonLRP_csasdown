@@ -1,0 +1,95 @@
+
+# REVIEW OF REFERENCE POINTS AND THEIR ROLES FOR PACIFIC SALMON {#review}
+
+## INDICATORS AND REFERENCE POINTS FOR PACIFIC SALMON
+
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
+\subsection*{Key Points:}
+\begin{itemize}
+\item LRPs have been widely adopted in Canadian fisheries.
+\item LRPs can be identified along a variety of indicators, and those indicators can be categorized as natural metrics, proxies for natural metrics, or composites of metrics.
+\item Under Canada's WSP, a composite of metrics ('multidimensional approach') is used in status assessments, including metrics on current spawner abundances, short and long-term trends in abundances, and the distribution of spawning, among others.
+\item DFO has recently developed the Pacific Salmon Status Scanner tool to rapidly approximate the multidimensional approach for salmon assessments.
+\item In some cases, single-metric approaches in which spawner abundances are compared with an abundance-based benchmark have been used as proxies for status under the WSP.
+\end{itemize}
+\end{tcolorbox}
+
+
+LRPs are common in the assessment and management of marine fisheries where they are used to identify and communicate status, as components of objectives, and to trigger changes in harvest rates among other roles
+[@marentetteSpecificationPrecautionaryApproach2021; @kronlundConsiderationsDesignRebuilding2021] (Section \@ref(roleLRPs)). <!--Reviews of the application of reference points and harvest control rules can be found in @kvamsdalHarvestControlRules2016,  @puntHarvestControlRules2010, and @dowlingEmpiricalHarvestStrategies2015 (the latter for data-poor fisheries). --><!--@sheltonLimitsOverfishingReference2002 provided an overview of the implementation of the precautionary approach and LRPs before the publication of DFO's Precautionary Approach Framework in 2009. They highlight that, at that point in time, there was limited evidence of the implementation of the precautionary approach in Canadian fisheries. In contrast, 12 years after the publication of DFO's Precautionary Approach Framework, a review by--> LRPs have been widely adopted in Canadian fisheries. A review based on a survey of 177 Canadian stocks excluding salmonids and transboundary stocks, found that 58% had adopted LRPs, although the methods used to estimate LRPs varied considerably among stocks [@marentetteSpecificationPrecautionaryApproach2021]. <!--@kronlundConsiderationsDesignRebuilding2021 also reviewed the use and definition of LRPs in the context of Canadian and international policy. They highlight the importance of embedding LRPs into management objectives with associated tolerance (probability) statements, e.g., "stock status should be maintained above the LRP 90% of the time", as the tolerance statement is required to render the LRP operational. Diagnosing where serious harm is occurring is a pervasive challenge when identifying LRPs, as is addressing the impacts of non-stationarity in underlying biological processes such as natural mortality [@kronlundConsiderationsDesignRebuilding2021].-->
+
+LRPs and indicators of status can be categorized in ways that demonstrate the diversity of approaches that are available across data types and species life-histories. In particular, LRPs can be derived from theoretical relationships (e.g., stock-recruitment based  reference points), historical patterns (e.g., abundance from which recovery has been observed in the past), or empirical analyses on abundances or life-history traits (Marentette et al. In revision). For marine fish species, LRPs are typically estimated as a minimum level of spawning biomass (or proxy) that should not be breached [@sheltonLimitsOverfishingReference2002; @kronlundSelectionRoleLimit2018; @marentetteSpecificationPrecautionaryApproach2021].  @dfoFisheryDecisionmakingFramework2009 identifies additional indicators such as catch rate indices, size and age profiles, and sex ratios that "can and should be considered for use in defining serious harm and guiding decision-making in relation to stock condition” [@dfoFisheryDecisionmakingFramework2009].  In general, indicators of status can be categorized as natural metrics (e.g., total abundances or other biological or population characteristics), a proxy for a natural metric (e.g., abundances of indicator stocks), or a composite of indicators that combine information over multiple dimensions or biological metrics of status (Marentette et al. In revision).  
+
+
+The composite or multidimensional approach for assessing status, sometimes called a "traffic light" approach [@sheltonLimitsOverfishingReference2002], is particularly useful when theoretical or historical abundance-based metrics are not estimable or applicable, or when data are limited [@dowlingEmpiricalHarvestStrategies2015]. Multidimensional approaches allow for consideration of numerous data sources often including expert knowledge to integrate conflicting metrics within assessments. For example, multidimensional reference points have been applied to Snow Crab, *Chionoecetes opilio*, in Canada, where data on catch per unit effort, egg clutches, and discards are integrated in stock assessments [@mullowneyBasisPrecautionaryApproach2018]. Multidimensional approaches can also be useful to address mismatches in scales among biological stocks, the unit of management, and the spatial scale of data collection, when metrics capture processes at a variety of scales. These scale mismatches are not uncommon among marine species, especially invertebrate and salmonid species [@dfoProceedingsNationalPeer2016; @mullowneyBiologicalPerspectivesComplexities2020]. They can create challenges when identifying LRPs at the scale of major stocks [@dfoScienceAdvicePrecautionary2021], and can make undesirable states in fish populations difficult to detect and mitigate.  <!--CH: I couldn't find any reference for American Lobster- i.e., Adam Cook's ppt from TESA workshop-->
+
+
+
+<!--KH: I think more context is needed for the above statement "Multidimensional approaches can also be useful to address mismatches in scales among biological stocks, the unit of management, and the spatial scale of data collection."  Can an example be given?  I could see how it would apply if the 'composite' of indicators was based on multiple indicators from different spatial scales, and all indicators needed to be above some specific level for the SMU to be 'above the LRP (i.e. our Proportional LRP). Is this what you were meaning?  This is different from how we use 'multidimensional' when talking about WSP.  In this case, all indicators are for the same spatial scale; they just use different characteristics.
+
+CH; added "when metrics capture processes at a variety of scales". Admittedly, it's more the type of metrics, e.g., using ppns of biological units above critical threshold instead of total BM, instead of the number of metrics that's most important.  However, these alternative metrics tend to be common in multidimenstional assessments.-->
+
+Methods for estimating reference points for Pacific salmon are diverse, often taking advantage of its semelparous and anadromous life-history and limits on capacity in freshwater, and other population characteristics [@portleyLimitReferencePoints2014; @chaputConsiderationsDefiningReference2012]. Under Canada's WSP, status assessments integrate data across numerous indicators or metrics representing different population characteristics, including current spawner abundances, short and long-term trends in abundances, distribution of spawning, and fishing mortality relative to population productivity [@holtIndicatorsStatusBenchmarks2009]. Benchmarks are established for each metric and an overall multidimensional estimate of CU status is obtained by integrating status among metrics [@grantIntegratedBiologicalStatus2013; @grant2017FraserSockeye2020; @dfoWildSalmonPolicy2015; @dfoIntegratedBiologicalStatus2016].  An advantage of this approach is that CUs missing data for any single metric can still be evaluated against remaining metrics, making the framework applicable across a relatively broad range of data types and hence CUs. Expert-driven processes to integrate often conflicting metrics within the multidimensional framework have been implemented for numerous Pacific salmon CUs in Canada, such as Fraser River Sockeye Salmon [@grantEvaluationUncertaintyFraser2012; @grantIntegratedBiologicalStatus2013; @grant2017FraserSockeye2020], Interior Fraser River Coho Salmon, *Oncorhynchus kisutch* [@dfoWildSalmonPolicy2015], and Southern BC Chinook Salmon [@dfoIntegratedBiologicalStatus2016]. However, these expert-driven processes can be challenging to implement on a broad and timely basis due to the high demand they place on time and staff resources. Based on the consistencies that emerged from assessments where the integration of multiple metrics has been applied, Pestal et al. (In revision) developed an algorithm to approximate overall WSP status by combining those metrics in a decision tree, at the scale of CUs. This algorithm was incorporated into DFO's Pacific Salmon Status Scanner and then verified by local assessment experts and tested with 'out-of-sample' CUs not included in the original formulation (Pestal et al. In revision). 
+
+
+In some cases, single-metric approaches in which spawner abundances are compared with an abundance-based benchmark have been used as proxies for WSP status both by organizations external to DFO [@pacificsalmonfoundationMethodsAssessingStatus2020; @pacificsalmoncommissionChapterPerformanceEvaluation2016]  and occasionally within DFO [e.g., Barkley Sockeye Salmon, @chaputConsiderationsDefiningReference2012]. One recommended lower benchmark on spawning abundances under Canada's WSP is S~gen~, the abundance resulting in recovery to S~MSY~ in one salmon generation under equilibrium conditions [@holtEvaluationBenchmarksConservation2009]. Benchmarks on spawner abundances for data-limited contexts have also been identified in recognition that the data required to estimate spawner-recruitment based benchmarks are often not available [e.g., @parkenHabitatbasedMethodsEstimate2006, Section \@ref(cu-est-methods)]. Biological benchmarks under the WSP are distinguished from triggers in harvest control rules that incorporate additional socioeconomic considerations beyond biological considerations [@holtDistinguishingBenchmarksBiological2013a].
+
+<!--CH omit: @portleyLimitReferencePoints2014 reviewed the use of LRPs and biological benchmarks in the US (Alaska and Pacific Northwest), Canada, Russia, and Japan. They highlight the role of LRPs and lower benchmarks in allowing for cross-jurisdictional comparisons of sustainability. In Canada, @chaputConsiderationsDefiningReference2012 reviewed the use of reference points, including lower benchmarks and LRPs, in the assessment and management of salmonids and other semelparous species. 
+-->
+
+
+
+
+
+## ROLES OF LRPS IN CANADA {#roleLRPs}
+
+\begin{tcolorbox}[standard jigsaw,opacityback=0.8,colframe=black,boxrule=0.7pt,left=0.1in, sharp corners]
+\subsection*{Key Points:}
+\begin{itemize}
+\item The roles of LRPs for marine fish stocks in Canada can include:
+\begin{itemize}
+\item triggering rebuilding plans under the Fish Stocks provisions,
+\item communicating conservation risks to decision makers and the public,
+\item informing management decisions about fisheries as part of measurable objectives or operational control points, and
+\item as a component of performance metrics within a Management Procedure Framework.
+\end{itemize}
+\item Identifying LRPs is the responsibility of DFO's Science Sector.
+\item For Pacific salmon the application of LRPs has been limited, as fisheries management is often based on a wide range of management decisions made at different spatial scales (e.g., stream-level escapement goals, time-area closures, exploitation limits on aggregates).
+\end{itemize}
+\end{tcolorbox}
+
+
+For marine fish stocks in Canada, LRPs have several roles including triggering rebuilding plans under DFO's Precautionary Approach Framework [@dfoFisheryDecisionmakingFramework2009] and the *Fisheries Act*, communicating conservation risks to decision makers and the public, and informing management decisions about fisheries. For example, LRPs can be used as part of measurable objectives and can also be applied as operational control points which are points where management actions are triggered within harvest control rules. A conservation goal might be to avoid low biomass levels where serious harm is expected to occur which can be translated to a measurable objective to avoid spawner abundances lower than an LRP with a high probability (e.g., 95%) over a specified time period.  This objective can then inform the placement of operational control points within the harvest control rule. However, there can be several operational control points in the harvest control rule and these can be positioned to achieve a suite of biological and socioeconomic objectives beyond those associated with serious harm, usually by a diverse range of managers, First Nations, and stakeholders. In contrast, DFO's Science Sector is responsible for identifying LRPs based only on biological considerations [@dfoScienceAdvicePrecautionary2021].<!--SUe suggested omitting these last 4  sentences, but I think this is relevant for aggregate abundance LRPs-->
+
+
+In addition, LRPs can be used in performance metrics within a Management Procedure Framework (or Management Strategy Evaluation) to identify candidate procedures that achieve conservation objectives (e.g., 95% probability of staying above a LRP over a specified period) among other objectives<!--, without being explicitly estimated--> [@dfoManagementProcedureFramework2021]. This approach explicitly accounts for a range of uncertainties in the biology of the stock, dynamics of the fleet, observations of abundances and ages at return, and the implementation of management decisions. Simulation evaluation of management procedures is widely viewed as a best practice for informing management decisions under uncertainty [@puntEssentialFeaturesNextgeneration2020]. For fisheries in which management procedures have been simulation tested, assessment of stock status relative to an LRP is not necessary so long as the management procedure selected has been demonstrated to meet conservation (and possibly other) objectives over a range of uncertainties (i.e., modelled scenarios) about stock and fishery dynamics. 
+One advantage of this approach is that a single best underlying model (or LRP) describing the population and fleet dynamics need not be identified. Instead, management procedures can be evaluated against a suite of plausible underlying models or assumptions. 
+
+
+For Pacific salmon, the application of LRPs at the SMU-level has been more limited. Fisheries management for Pacific salmon is often based on a wide range of management decisions made at different spatial scales (e.g., stream-level escapement goals, time-area closures, exploitation limits on aggregates), instead of LRPs *per se*.
+Also, the application of Management Procedure Frameworks is not common for Pacific salmon where the impact of diverse management levers and their interactions are often difficult to quantify [e.g., hatcheries and harvest, though see the AHA <!--LW comment: maybe take out AHA if you don't define it?-->model documented by @hsrghatcheryscientificreviewgroupColumbiaRiverHatchery2009]. <!--CH: omitted as it seems out of place here: "In addition, salmon stock assessments have typically not integrated uncertainties in estimates of spawner abundances for reference point derivation [but see @scheuerellIntegratedPopulationModel2021 and @statonIncorporatingDemographicInformation2021]."  should be staton2017-->
+The roles of LRPs will likely evolve for Pacific salmon over time, and an exhaustive review is beyond the scope of this paper.
+
+
+<!--KH: 
+
+Comments on firt sentence of above paragraph:
+For Pacific salmon, the application of LRPs is more limited. Fisheries management for Pacific salmon is often based on alternative management approaches, such as escapement goals, exploitation limits, and time-area closures at a variety of spatial scales, instead of LRPs *per se*. 
+
+
+- The term 'management approach' might be too vague; the following list includes a combination of metrics that reference points are based on (e.g., escapement goals based on escapement as a metric, ER limits based on ERs as a metric) and management actions (time area closures), where the latter could be used in conjunction with an LRP (e.g., our forecast says we going to be below our LRP, so let's put in additional time-area closures this year).  
+
+Perhaps the text here (and in the key point bullet above) could be revised to something like:
+For Pacific salmon, the application of LRPs at the SMU-level has been more limited due to the wide range of management decisions made at different spatial scales for each individual SMU and the wide range of indicators used to make decisions at each scale (e.g., aggregate-abundance for mixed-stock fisheries, stream-level escapement goals, exploitation limits).
+
+???
+CH: revised taking some wording from both options.
+
+-->
+
+
+<!--CH side note:  DFO's Fisheries Sustainability checklist shows LRPs that usually management operational control points, and not biological LRPs per se-->
+
+
+
