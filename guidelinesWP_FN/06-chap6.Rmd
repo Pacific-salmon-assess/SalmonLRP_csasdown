@@ -67,7 +67,7 @@ For logistic regression LRPs derived from CU assessments that are independent of
 <!--CH: the following 2 lines give a line break before the next heading-->
 
 \
-  **PRL de projection**
+&nbsp; **PRL de projection**
 
 Les PRL fondés sur la projection tiennent compte explicitement des incertitudes sous-jacentes dans les paramètres de la population et de l'exploitation, comme la productivité et la capacité au niveau des UC, la structure selon l'âge, la covariance dans les écarts de recrutement et la variabilité dans la mise en œuvre des stratégies d'exploitation au fil du temps et entre les UC. L'inclusion de l'incertitude structurelle sous la forme de différentes relations stock-recrutement est démontrée pour l'étude de cas sur le saumon coho du Fraser intérieur. Nous recommandons un examen approfondi des hypothèses et nous recommandons de les inclure directement dans l'échantillonnage aléatoire des projections ou de les inclure en tant qu'analyses de sensibilité.
 
