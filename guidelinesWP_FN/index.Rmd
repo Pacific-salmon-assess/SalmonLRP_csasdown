@@ -40,15 +40,15 @@ french_address: |
   \smallskip
   ^4^Administration centrale nationale\
      Pêches et Océans Canada, Ottawa (Ont.), Canada\
-month: "July" # fill in
-french_month: "Juillet"
+month: "August" # fill in
+french_month: "Août"
 year: 2023
 report_number: 009
 isbn: "978-0-660-46976-8"
 cat_no: "Fs70-5/2023-009F-PDF"
 region: "Pacific Region"
 french_region: "Région du Pacifique"
-citation_other_language: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S. and Huang, A.-M.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/009. iv + 78 p."
+citation_other_language: "Holt, C.A., Holt, K., Warkentin, L., Wor, C., Connors, B., Grant, S. and Huang, A.-M.. Guidelines for Defining Limit Reference Points for Pacific Salmon Stock Management Units. DFO Can. Sci. Advis. Sec. Res. Doc. 2022/009. iv + 66 p."
 
 abstract: |
   Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
