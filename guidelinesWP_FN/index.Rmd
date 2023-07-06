@@ -1,7 +1,7 @@
 ---
 title: |
-  "Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique"
-french_title: "Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique"
+  Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique
+french_title: Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique
 author: |
   Carrie. A. Holt^1^
   Kendra Holt^2^
