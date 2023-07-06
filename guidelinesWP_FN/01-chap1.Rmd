@@ -104,7 +104,7 @@ knitr::include_graphics("figure/DiversitySchematic.png")
 <!--CH: the following 2 lines give a line break before the next pgh after figure-->
 
 \
- 
+&nbsp;
 
 Le cadre existant pour les évaluations des UC comprend la prise en compte de la répartition à petite échelle des géniteurs au sein des UC, par exemple au niveau des cours d’eau [@dfoIntegratedBiologicalStatus2016]. Nous prenons également en compte la répartition des populations au sein des UC dans l’évaluation lorsqu’elle est considérée comme importante pour la durabilité de l’UC ou de l’UGS. La détermination d’échelles spatiales pertinentes au sein des UC lors de l’évaluation de l’état peut s’avérer difficile en raison de l’incertitude et de la variabilité temporelle de la dynamique des métapopulations et des répercussions de cette dynamique sur la viabilité à long terme, ce qui représente une source d’incertitude clé lors de la définition des PRL.
 

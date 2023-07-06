@@ -1,7 +1,9 @@
 ---
 title: |
   Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique
-french_title: Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique
+
+french_title: |
+  Lignes directrices pour la définition des points de référence limites pour les unités de gestion des stocks de saumons du Pacifique
 author: |
   Carrie. A. Holt^1^
   Kendra Holt^2^
@@ -38,7 +40,7 @@ french_address: |
   \smallskip
   ^4^Administration centrale nationale\
      Pêches et Océans Canada, Ottawa (Ont.), Canada\
-month: "Juillet" # fill in
+month: "July" # fill in
 french_month: "Juillet"
 year: 2023
 report_number: 009
@@ -90,6 +92,8 @@ output:
    highlight: tango
 # End of options to set
 knit: bookdown::render_book
+#knit: csasdown::render()
+# New knit function according to: https://github.com/pbs-assess/csasdown/blob/main/NEWS.md
 # knit: (function(input, ...) {
 #        csasdown::render('_bookdown.yml')
 #       })
@@ -147,6 +151,7 @@ opts_chunk$set(
 #  are used throughout the document. To make the document all in french, change
 #  the line in the YAML header above to `french: true`
 
+# Commented out the following according to: https://github.com/pbs-assess/csasdown/blob/main/NEWS.md
 meta <- rmarkdown::metadata$output
 if(length(grep("pdf", names(meta)))){
   french <- meta$`csasdown::resdoc_pdf`$french
@@ -160,6 +165,7 @@ if(french){
   csl <- "csl/csas-french.csl"
   options(OutDec =  ",")
 }
+# END Comment section
 
 # add other packages here:
 # library(dplyr)
@@ -177,6 +183,6 @@ library(viridis)
 library(tidyr)
 ```
 
-<!-- --- -->
-<!-- csl: `r csl`     -->
-<!-- --- -->
+---
+csl: `r csl`
+---
