@@ -38,7 +38,21 @@ df_coho <- data.frame(cor=coho$amongCUCorr, SMU="IFR Coho")
 
 df <- df %>% add_row(df_chum) %>% add_row(df_coho)
 ggplot(df, aes(cor, fill=SMU, colour=SMU)) + geom_density(alpha=0.1) + 
-  xlim(-1,1) + xlab("Corrélation de Pearson par paires dans l’abondance des géniteurs")
+  xlim(-1,1) + xlab("Corrélation de Pearson par paires dans l’abondance des géniteurs") + 
+  ylab("Densité") + #theme(legend.position="none") + 
+  scale_fill_discrete(name = "UGS", 
+                      breaks=c("IFR Coho", "ISC Chum", "WCVI Chinook"),
+                      labels=c("Saumon coho du Fraser intérieur", 
+                               "Saumon kéta de la côte sud intérieure", 
+                               "Saumon chinook – côte ouest de l’île de Vancouver")) + 
+    scale_colour_discrete(name = "UGS", 
+                      breaks=c("IFR Coho", "ISC Chum", "WCVI Chinook"),
+                      labels=c("Saumon coho du Fraser intérieur", 
+                               "Saumon kéta de la côte sud intérieure", 
+                               "Saumon chinook – côte ouest de l’île de Vancouver")) #+
+  # theme(axis.title=element_text(size=10)
+
+
 
 ```
 

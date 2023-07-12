@@ -40,7 +40,7 @@ french_address: |
   \smallskip
   ^4^Administration centrale nationale\
      Pêches et Océans Canada, Ottawa (Ont.), Canada\
-month: "August" # fill in
+month: "Août" # fill in
 french_month: "Août"
 year: 2023
 report_number: 009

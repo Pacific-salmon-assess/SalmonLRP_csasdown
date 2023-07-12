@@ -402,9 +402,9 @@ Après avoir fourni des répartitions de paramètres décrivant la dynamique de 
    
 2. Pour chaque combinaison année-essai simulée après initialisation, caractérisez les abondances comme suit:
 
-      *Attribuer l’abondance globale des géniteurs au niveau de l’UGS pour chaque combinaison année-essai à une case d’abondance basée sur des intervalles de 200 poissons, par exemple, 0:200, 201:400, 401:600, etc.
+      * Attribuer l’abondance globale des géniteurs au niveau de l’UGS pour chaque combinaison année-essai à une case d’abondance basée sur des intervalles de 200 poissons, par exemple, 0:200, 201:400, 401:600, etc.
 
-      *Déterminer si toutes les UC pour chaque combinaison année-essai étaient au-dessus de leurs points de référence inférieurs au niveau des UC sur les abondances, ou non.
+      * Déterminer si toutes les UC pour chaque combinaison année-essai étaient au-dessus de leurs points de référence inférieurs au niveau des UC sur les abondances, ou non.
       
 3. Pour chaque case d’abondance globale, calculez la proportion des combinaisons d’essais annuels où toutes les UC étaient supérieures à leur point de référence inférieur par rapport à toutes les combinaisons d’essais annuels tombant dans cette case. Ces proportions sont ensuite tracées par rapport aux abondances agrégées pour la case annuelle (prise comme point médian de la case).
       

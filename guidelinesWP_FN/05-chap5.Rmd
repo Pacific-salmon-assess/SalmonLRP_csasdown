@@ -31,13 +31,13 @@ Nous recommandons une approche progressive pour déterminer les PRL, avec la pro
 \node(1) [box, fill=yellow!10] {1. Compiler les données};
 \node(2) [box, fill=yellow!10, below of=1] {2. Évaluer les lacunes dans les données des UC};
 \node(3) [box, fill=yellow!10, below of= 2] {3. Déterminer si l’état des UC manquant de données peut être déduit des UC avec des données};
-\node(4) [box, fill=yellow!10, below of= 3] {4. Quelle proportion d’UC au-dessus de l’état rouge est nécessaire pour éviter des dommages graves? Valeur par défaut  = 100\%};
-\node(5) [box, fill=yellow!10, below of=4] {5. Évaluer l’état par rapport au PRL fondé sur l’état des UC};
-\node(6) [box, fill=yellow!10, below of=5] {6. Effectuer un examen par les pairs des états des UC étayant le PRL fondé sur l’état des UC (y compris l’examen des étapes 1-5)};
+\node(4) [box, fill=yellow!10, below of= 3] {4. Quelle proportion d’UC au-dessus de l’état rouge est nécessaire pour éviter des dommages graves?};
+\node(5) [box, fill=yellow!10, below of=4] {5. Évaluer l’état par rapport au PRL fondé sur des UC};
+\node(6) [box, fill=yellow!10, below of=5] {6. Effectuer un examen par les pairs des états des UC étayant  le PRL fondé sur des UC (y compris l'examenen des étapes 1-5)};
 \node(7) [box, below of=6, fill=blue!10] {7. Les PRL fondés sur l’abondance globale sont-ils nécessaires pour les décisions de gestion des pêches?};
 \node(8) [box, below of=7, fill=blue!10, yshift=-1.7cm] {8. Estimer les PRL de l’abondance globale\\(a) Établir la probabilité acceptable que tous les UC $>$ points de référence inférieurs \\b) Choisir le PRL de régression logistique et/ou le PRL de projection, selon les hypothèses qui sont satisfaites\\c) Estimer les PRL};
 \node(8n) [boxno, right of=8, xshift=6cm, yshift=2.0cm] {S’appuyer uniquement sur les PRL fondés sur l’état des UC (étape 5)};
-\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Évaluer l’état par rapport aux PRL d’abondance globale et le comparer à celui des PRL fondés sur l’état des UC (étape 5)};
+\node(9) [box, fill=blue!10, below of=8, yshift=-1.7cm] {9. Évaluer l’état par rapport aux PRL d’abondance globale et le comparer à celui des PRL fondés sur des UC};
 \node(9n) [boxno, right of=9, xshift=6cm, yshift=1.0cm] {Les PRL fondés sur l’abondance globale ne peuvent être estimés};
 \draw[arrow] (1) -- (2);
 \draw[arrow] (2) -- (3);
@@ -50,7 +50,7 @@ Nous recommandons une approche progressive pour déterminer les PRL, avec la pro
 \draw[arrow] (8) -- node[anchor=east] {Hypothèses confirmées} (9);
 \draw[arrow] (8) -| node[anchor=west] {Hypothèses non confirmées} (9n);
 \end{tikzpicture}
-\caption{Étapes de l’établissement des PRL et de l’évaluation de l’état. Les cases jaune pâle indiquent celles pour l’estimation des PRL fondés sur l’état des UC. Les cases bleues indiquent celles des PRL fondés sur l’abondance globale. Les cases blanches indiquent les cas où il n’est pas recommandé d’utiliser une méthode du PRL fondé sur l’abondance globale.}
+\caption{Étapes de l’établissement des PRL et de l’évaluation de l’état. Les cases jaune et bleues indiquent celles pour l'estimation des PRL fondés sur les UC et sur l'abondance globale, respectivement.}
 (\#fig:flowchart)
 \end{figure}
 
